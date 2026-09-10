@@ -149,25 +149,25 @@ api document of method getValueType(char):
 dependent classes: 
 class `org.apache.commons.cli.PatternOptionBuilder`:
 	dependent fields:
-		java.lang.Class<java.io.FileInputStream> org.apache.commons.cli.PatternOptionBuilder.EXISTING_FILE_VALUE;
-		java.lang.Class<java.net.URL> org.apache.commons.cli.PatternOptionBuilder.URL_VALUE;
-		java.lang.Class<java.io.File[]> org.apache.commons.cli.PatternOptionBuilder.FILES_VALUE;
-		java.lang.Class<java.lang.Object> org.apache.commons.cli.PatternOptionBuilder.OBJECT_VALUE;
 		java.lang.Class<java.util.Date> org.apache.commons.cli.PatternOptionBuilder.DATE_VALUE;
-		java.lang.Class<?> org.apache.commons.cli.PatternOptionBuilder.CLASS_VALUE;
+		java.lang.Class<java.io.File[]> org.apache.commons.cli.PatternOptionBuilder.FILES_VALUE;
 		java.lang.Class<java.lang.String> org.apache.commons.cli.PatternOptionBuilder.STRING_VALUE;
-		java.lang.Class<java.lang.Number> org.apache.commons.cli.PatternOptionBuilder.NUMBER_VALUE;
+		java.lang.Class<?> org.apache.commons.cli.PatternOptionBuilder.CLASS_VALUE;
+		java.lang.Class<java.io.FileInputStream> org.apache.commons.cli.PatternOptionBuilder.EXISTING_FILE_VALUE;
 		java.lang.Class<java.io.File> org.apache.commons.cli.PatternOptionBuilder.FILE_VALUE;
+		java.lang.Class<java.lang.Object> org.apache.commons.cli.PatternOptionBuilder.OBJECT_VALUE;
+		java.lang.Class<java.lang.Number> org.apache.commons.cli.PatternOptionBuilder.NUMBER_VALUE;
+		java.lang.Class<java.net.URL> org.apache.commons.cli.PatternOptionBuilder.URL_VALUE;
 	related functions:
+		method `public static void registerTypes()` returns `void`, related with `org.apache.commons.cli.PatternOptionBuilder.getValueType(char)`, api document: 
+     * Registers custom {@code Converter}s with the {@code TypeHandler}.
+     * @since 1.7.0
+     ;
 		method `public static Class<?> getValueType(char)` returns `java.lang.Class<?>`, related with `org.apache.commons.cli.PatternOptionBuilder.getValueType(char)`, api document: 
      * Retrieve the class that {@code ch} represents.
      *
      * @param ch the specified character
      * @return The class that {@code ch} represents
-     * @since 1.7.0
-     ;
-		method `public static void registerTypes()` returns `void`, related with `org.apache.commons.cli.PatternOptionBuilder.getValueType(char)`, api document: 
-     * Registers custom {@code Converter}s with the {@code TypeHandler}.
      * @since 1.7.0
      ;
 class `org.apache.commons.cli.AlreadySelectedException`:

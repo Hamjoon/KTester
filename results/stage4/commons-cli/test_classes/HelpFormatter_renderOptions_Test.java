@@ -7,56 +7,240 @@ import org.mockito.*;
 import static org.mockito.Mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintWriter;
-
 @ExtendWith(MockitoExtension.class)
-class HelpFormatter_renderOptions_Test{
-    private HelpFormatter formatter;
-    private Options options;
-    private ByteArrayOutputStream out;
-    private PrintWriter pw;
+class HelpFormatter_renderOptions_Test {
 
-    @BeforeAll
-    static void setupBeforeAll() {
-        // Any global setup can be done here
-    }
+    private HelpFormatter formatter;
+
+    private Options options;
 
     @BeforeEach
     void setupBeforeEach() {
         formatter = new HelpFormatter();
         options = new Options();
-        out = new ByteArrayOutputStream();
-        pw = new PrintWriter(out);
-    }
-
-    @AfterEach
-    void teardownAfterEach() {
-        // Cleanup after each test if necessary
-        pw.close();
-    }
-
-    @AfterAll
-    static void teardownAfterAll() {
-        // Any global cleanup can be done here
+        // Setup options for testing
+        options.addOption("a", false, "Option A description");
+        options.addOption(Option.builder("b").longOpt("beta").desc("Option B description").build());
     }
 
     @Test
     void testRenderOptions() {
-        // Given
-        options.addOption("f", true, "the file");
-        options.addOption(Option.builder("s").longOpt("size").desc("the size").hasArg().argName("SIZE").build());
-        options.addOption(Option.builder().longOpt("age").desc("the age").hasArg().build());
-
-        // When
-        formatter.renderOptions(new StringBuffer(), 80, options, 1, 3);
-
-        // Then
-        String expectedOutput = "  -f <arg>           the file" + System.lineSeparator() +
-                                "  -s,--size <SIZE>   the size" + System.lineSeparator() +
-                                "  --age <arg>        the age";
-        assertEquals(expectedOutput.trim(), out.toString().trim());
+        StringBuffer sb = new StringBuffer();
+        int width = 80;
+        int leftPad = 1;
+        int descPad = 3;
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a                Option A description" + System.lineSeparator() + "  -b,--beta        Option B description";
+        assertEquals(expectedOutput, sb.toString().trim());
     }
 
-    // Additional test cases can be added here
+    @Test
+    void testRenderOptions_BasicFunctionality() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a                Option A description" + System.lineSeparator() + "  -b,--beta        Option B description";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_OptionWithLongOption() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("a", "aaa", false, "An option");
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a,--aaa        An option";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_OptionWithArgument() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("a", "aaa", true, "An option with argument");
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a <arg> --aaa <arg>   An option with argument";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_HandleBlankArgumentName() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("a", "aaa", true, "An option with blank argument name");
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a <arg> --aaa <arg>   An option with blank argument name";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_CheckSortingOfOptions() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("b", "bbb", false, "Option B");
+        options.addOption("a", "aaa", false, "Option A");
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a,--aaa        Option A" + System.lineSeparator() + "  -b,--bbb        Option B";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_NullOptionComparator() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("a", "aaa", false, "Option A");
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a,--aaa        Option A";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_EdgeCaseWithMaximumWidth() {
+        StringBuffer sb = new StringBuffer();
+        // Set width to a reasonable maximum (e.g. 100)
+        int width = 100;
+        int leftPad = 1;
+        int descPad = 3;
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a                Option A description" + System.lineSeparator() + "  -b,--beta        Option B description";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_EdgeCaseWithMinimalPadding() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 0;
+        int descPad = 0;
+        options.addOption("a", "aaa", false, "Option A");
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "-a,--aaa        Option A";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_MultipleOptionsWithNoDescription() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("a", "aaa", false, null);
+        options.addOption("b", "bbb", false, null);
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a,--aaa" + System.lineSeparator() + "  -b,--bbb";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_LongOptionsWithEmptyNames() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("a", "", false, "Option with empty long name");
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a        Option with empty long name";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_LongOptionsWithSpecialCharacters() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("a", "aaa@!", false, "Option with special characters");
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a,--aaa@!        Option with special characters";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
+
+    @Test
+    void testRenderOptions_NullStringBuffer() {
+        StringBuffer sb = null;
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        // Expecting NullPointerException
+        assertThrows(NullPointerException.class, () -> {
+            formatter.renderOptions(sb, width, options, leftPad, descPad);
+        });
+    }
+
+    @Test
+    void testRenderOptions_NullOptions() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options = null;
+        // Expecting NullPointerException
+        assertThrows(NullPointerException.class, () -> {
+            formatter.renderOptions(sb, width, options, leftPad, descPad);
+        });
+    }
+
+    @Test
+    void testRenderOptions_NegativeWidth() {
+        StringBuffer sb = new StringBuffer();
+        // Negative width
+        int width = -10;
+        int leftPad = 1;
+        int descPad = 3;
+        // Expecting IllegalArgumentException
+        assertThrows(IllegalArgumentException.class, () -> {
+            formatter.renderOptions(sb, width, options, leftPad, descPad);
+        });
+    }
+
+    @Test
+    void testRenderOptions_EdgeCaseWithNegativePadding() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        // Negative left padding
+        int leftPad = -1;
+        // Negative description padding
+        int descPad = -1;
+        // Expecting IllegalArgumentException
+        assertThrows(IllegalArgumentException.class, () -> {
+            formatter.renderOptions(sb, width, options, leftPad, descPad);
+        });
+    }
+
+    @Test
+    void testRenderOptions_LongOptionWithNullDescription() {
+        StringBuffer sb = new StringBuffer();
+        int width = 74;
+        int leftPad = 1;
+        int descPad = 3;
+        options.addOption("a", "aaa", false, null);
+        // Invoke the method under test
+        formatter.renderOptions(sb, width, options, leftPad, descPad);
+        String expectedOutput = "  -a,--aaa";
+        assertEquals(expectedOutput, sb.toString().trim());
+    }
 }

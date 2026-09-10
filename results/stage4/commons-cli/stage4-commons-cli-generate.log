@@ -99,3 +99,1071 @@ Test run finished after 417 ms
 2026-09-10 11:02:21,729 - STDERR - ERROR -     with open(file, 'w', encoding='utf-8') as f:
 2026-09-10 11:02:21,729 - STDERR - ERROR -          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 2026-09-10 11:02:21,729 - STDERR - ERROR - FileNotFoundError: [Errno 2] No such file or directory: '../evaluation/time/time_records.json'
+2026-09-10 13:13:11,221 - __main__ - INFO - prompt list: ['condition4case', 'io4case', 'exception4case', 'gencode']
+2026-09-10 13:13:11,230 - procedure.generate_prompt - INFO - Construct init prompts for project commons-cli...
+2026-09-10 13:13:11,230 - tools.code_search - INFO - Loading code index for commons-cli
+2026-09-10 13:13:11,277 - procedure.generate_prompt - INFO - Construct test case prompts for project commons-cli...
+2026-09-10 13:13:11,277 - tools.code_search - INFO - Loading code index for commons-cli
+2026-09-10 13:13:11,430 - __main__ - INFO - time for generate prompts: 0.21 seconds
+2026-09-10 13:13:11,453 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:11,464 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:11,476 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:11,488 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:11,499 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:11,511 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:11,523 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:11,535 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:11,535 - procedure.generate_code - INFO - Generating test class framework for project commons-cli...
+2026-09-10 13:13:12,433 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:12,437 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:14,647 - procedure.generate_code - INFO - Completed test class framework generation for HelpFormatter_renderOptions
+2026-09-10 13:13:19,570 - procedure.generate_code - INFO - Completed test class framework generation for PatternOptionBuilder_getValueType
+2026-09-10 13:13:19,576 - __main__ - INFO - time for generate test class framework: 8.15 seconds
+2026-09-10 13:13:19,599 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:19,615 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:19,628 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:19,641 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:19,652 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:19,663 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:19,674 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:19,686 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:19,686 - procedure.generate_code - INFO - Generating test cases for project commons-cli...
+2026-09-10 13:13:20,398 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:20,529 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:25,360 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:27,617 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:29,832 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:32,450 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:34,314 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:38,090 - procedure.generate_code - INFO - Completed test case generation for PatternOptionBuilder_getValueType
+2026-09-10 13:13:40,733 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:13:53,878 - procedure.generate_code - INFO - Completed test case generation for HelpFormatter_renderOptions
+2026-09-10 13:13:53,884 - __main__ - INFO - time for generate test cases: 34.31 seconds
+2026-09-10 13:13:53,885 - procedure.post_process - INFO - verify process test classes in commons-cli...
+2026-09-10 13:13:53,909 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 13:13:53,921 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 13:13:54,325 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java:9: error: cannot find symbol
+import java.io.StringBuffer;
+              ^
+  symbol:   class StringBuffer
+  location: package java.io
+1 error
+
+2026-09-10 13:13:54,325 - procedure.post_process - INFO - try to repair test class ../evaluation/commons-cli/test_classes/HelpFormatter_renderOptions_Test.java...
+2026-09-10 13:13:54,326 - procedure.post_process - INFO - remove imports in lines [8]
+2026-09-10 13:13:54,328 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 13:13:54,673 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.HelpFormatter_renderOptions_Test
+2026-09-10 13:14:58,675 - procedure.post_process - INFO - return code: 1
+2026-09-10 13:14:58,678 - procedure.post_process - INFO - test case failed in org.apache.commons.cli.HelpFormatter_renderOptions_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3537)
+	at java.base/java.lang.AbstractStringBuilder.ensureCapacityInternal(AbstractStringBuilder.java:228)
+	at java.base/java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:582)
+	at java.base/java.lang.StringBuffer.append(StringBuffer.java:313)
+	at org.apache.commons.cli.HelpFormatter.renderWrappedText(HelpFormatter.java:788)
+	at org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:734)
+	at org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithMaximumWidth(HelpFormatter_renderOptions_Test.java:124)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$182/0x000000c80109ead0.apply(Unknown Source)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall$$Lambda$183/0x000000c80109eef0.apply(Unknown Source)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$$Lambda$349/0x000000c8010d2200.apply(Unknown Source)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$402/0x000000c80123f588.execute(Unknown Source)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+
+
+2026-09-10 13:14:59,557 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:15:14,413 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 13:15:14,778 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.HelpFormatter_renderOptions_Test
+2026-09-10 13:15:15,455 - procedure.post_process - INFO - return code: 1
+2026-09-10 13:15:15,455 - procedure.post_process - INFO - test case failed in org.apache.commons.cli.HelpFormatter_renderOptions_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ HelpFormatter_renderOptions_Test ✔
+│     ├─ testRenderOptions_NullOptions() ✔
+│     ├─ testRenderOptions_MultipleOptionsWithNoDescription() ✘ expected: <  -a,--aaa
+│     │          -b,--bbb> but was: <-a,--aaa
+│     │         -b,--bbb>
+│     ├─ testRenderOptions_EdgeCaseWithNegativePadding() ✘ Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+│     ├─ testRenderOptions_HandleBlankArgumentName() ✘ expected: <  -a <arg> --aaa <arg>   An option with blank argument name> but was: <-a,--aaa <arg>   An option with blank argument name
+│     │         -b,--beta        Option B description>
+│     ├─ testRenderOptions_EdgeCaseWithMinimalPadding() ✘ expected: <-a,--aaa        Option A> but was: <-a,--aaa Option A
+│     │        -b,--betaOption B description>
+│     ├─ testRenderOptions_OptionWithLongOption() ✘ expected: <  -a,--aaa        An option> but was: <-a,--aaa    An option
+│     │         -b,--beta   Option B description>
+│     ├─ testRenderOptions() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │         -b,--beta   Option B description>
+│     ├─ testRenderOptions_LongOptionWithNullDescription() ✘ expected: <  -a,--aaa> but was: <-a,--aaa
+│     │         -b,--beta   Option B description>
+│     ├─ testRenderOptions_NullStringBuffer() ✔
+│     ├─ testRenderOptions_NegativeWidth() ✘ Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.StringIndexOutOfBoundsException>
+│     ├─ testRenderOptions_BasicFunctionality() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │         -b,--beta   Option B description>
+│     ├─ testRenderOptions_NullOptionComparator() ✘ expected: <  -a,--aaa        Option A> but was: <-a,--aaa    Option A
+│     │         -b,--beta   Option B description>
+│     ├─ testRenderOptions_LongOptionsWithSpecialCharacters() ✘ expected: <  -a,--aaa@!        Option with special characters> but was: <-a,--aaa@!   Option with special characters
+│     │         -b,--beta    Option B description>
+│     ├─ testRenderOptions_CheckSortingOfOptions() ✘ expected: <  -a,--aaa        Option A
+│     │          -b,--bbb        Option B> but was: <-a,--aaa   Option A
+│     │         -b,--bbb   Option B>
+│     ├─ testRenderOptions_EdgeCaseWithMaximumWidth() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │         -b,--beta   Option B description>
+│     ├─ testRenderOptions_OptionWithArgument() ✘ expected: <  -a <arg> --aaa <arg>   An option with argument> but was: <-a,--aaa <arg>   An option with argument
+│     │         -b,--beta        Option B description>
+│     └─ testRenderOptions_LongOptionsWithEmptyNames() ✘ expected: <  -a        Option with empty long name> but was: <-a,--       Option with empty long name
+│               -b,--beta   Option B description>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (15):
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_MultipleOptionsWithNoDescription()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_MultipleOptionsWithNoDescription', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa
+  -b,--bbb> but was: <-a,--aaa
+ -b,--bbb>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_MultipleOptionsWithNoDescription(HelpFormatter_renderOptions_Test.java:153)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithNegativePadding()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithNegativePadding', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithNegativePadding(HelpFormatter_renderOptions_Test.java:229)
+       [...]
+     Caused by: java.lang.NegativeArraySizeException: -1
+       org.apache.commons.cli.HelpFormatter.createPadding(HelpFormatter.java:264)
+       org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:672)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.lambda$testRenderOptions_EdgeCaseWithNegativePadding$3(HelpFormatter_renderOptions_Test.java:230)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_HandleBlankArgumentName()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_HandleBlankArgumentName', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a <arg> --aaa <arg>   An option with blank argument name> but was: <-a,--aaa <arg>   An option with blank argument name
+ -b,--beta        Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_HandleBlankArgumentName(HelpFormatter_renderOptions_Test.java:86)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithMinimalPadding()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithMinimalPadding', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <-a,--aaa        Option A> but was: <-a,--aaa Option A
+-b,--betaOption B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithMinimalPadding(HelpFormatter_renderOptions_Test.java:139)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_OptionWithLongOption()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_OptionWithLongOption', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        An option> but was: <-a,--aaa    An option
+ -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_OptionWithLongOption(HelpFormatter_renderOptions_Test.java:60)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+ -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions(HelpFormatter_renderOptions_Test.java:35)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionWithNullDescription()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionWithNullDescription', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa> but was: <-a,--aaa
+ -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionWithNullDescription(HelpFormatter_renderOptions_Test.java:244)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_NegativeWidth()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_NegativeWidth', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.StringIndexOutOfBoundsException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_NegativeWidth(HelpFormatter_renderOptions_Test.java:215)
+       [...]
+     Caused by: java.lang.StringIndexOutOfBoundsException: begin 0, end -10, length 33
+       java.base/java.lang.String.checkBoundsBeginEnd(String.java:4606)
+       java.base/java.lang.String.substring(String.java:2709)
+       org.apache.commons.cli.HelpFormatter.renderWrappedText(HelpFormatter.java:764)
+       org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:734)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.lambda$testRenderOptions_NegativeWidth$2(HelpFormatter_renderOptions_Test.java:216)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_BasicFunctionality()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_BasicFunctionality', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+ -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_BasicFunctionality(HelpFormatter_renderOptions_Test.java:47)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_NullOptionComparator()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_NullOptionComparator', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        Option A> but was: <-a,--aaa    Option A
+ -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_NullOptionComparator(HelpFormatter_renderOptions_Test.java:113)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionsWithSpecialCharacters()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionsWithSpecialCharacters', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa@!        Option with special characters> but was: <-a,--aaa@!   Option with special characters
+ -b,--beta    Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionsWithSpecialCharacters(HelpFormatter_renderOptions_Test.java:179)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_CheckSortingOfOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_CheckSortingOfOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        Option A
+  -b,--bbb        Option B> but was: <-a,--aaa   Option A
+ -b,--bbb   Option B>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_CheckSortingOfOptions(HelpFormatter_renderOptions_Test.java:100)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithMaximumWidth()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithMaximumWidth', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+ -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithMaximumWidth(HelpFormatter_renderOptions_Test.java:126)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_OptionWithArgument()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_OptionWithArgument', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a <arg> --aaa <arg>   An option with argument> but was: <-a,--aaa <arg>   An option with argument
+ -b,--beta        Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_OptionWithArgument(HelpFormatter_renderOptions_Test.java:73)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionsWithEmptyNames()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionsWithEmptyNames', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a        Option with empty long name> but was: <-a,--       Option with empty long name
+ -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionsWithEmptyNames(HelpFormatter_renderOptions_Test.java:166)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 421 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[        15 tests failed          ]
+
+
+2026-09-10 13:15:15,457 - procedure.post_process - INFO - try to repair test class ../evaluation/commons-cli/test_classes/HelpFormatter_renderOptions_Test.java...
+2026-09-10 13:15:16,789 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:15:25,433 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 13:15:25,878 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.HelpFormatter_renderOptions_Test
+2026-09-10 13:15:26,731 - procedure.post_process - INFO - return code: 1
+2026-09-10 13:15:26,731 - procedure.post_process - INFO - test case failed in org.apache.commons.cli.HelpFormatter_renderOptions_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ HelpFormatter_renderOptions_Test ✔
+│     ├─ testRenderOptions_NullOptions() ✔
+│     ├─ testRenderOptions_MultipleOptionsWithNoDescription() ✘ expected: <  -a,--aaa
+│     │          -b,--bbb> but was: <-a,--aaa
+│     │          -b,--bbb>
+│     ├─ testRenderOptions_EdgeCaseWithNegativePadding() ✘ Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+│     ├─ testRenderOptions_HandleBlankArgumentName() ✘ expected: <  -a <arg> --aaa <arg>   An option with blank argument name> but was: <-a,--aaa <arg>   An option with blank argument name
+│     │          -b,--beta        Option B description>
+│     ├─ testRenderOptions_EdgeCaseWithMinimalPadding() ✘ expected: <-a,--aaa        Option A> but was: <-a,--aaa Option A
+│     │        -b,--betaOption B description>
+│     ├─ testRenderOptions_OptionWithLongOption() ✘ expected: <  -a,--aaa        An option> but was: <-a,--aaa    An option
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_LongOptionWithNullDescription() ✘ expected: <  -a,--aaa> but was: <-a,--aaa
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_NullStringBuffer() ✔
+│     ├─ testRenderOptions_NegativeWidth() ✘ Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.StringIndexOutOfBoundsException>
+│     ├─ testRenderOptions_BasicFunctionality() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_NullOptionComparator() ✘ expected: <  -a,--aaa        Option A> but was: <-a,--aaa    Option A
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_LongOptionsWithSpecialCharacters() ✘ expected: <  -a,--aaa@!        Option with special characters> but was: <-a,--aaa@!   Option with special characters
+│     │          -b,--beta    Option B description>
+│     ├─ testRenderOptions_CheckSortingOfOptions() ✘ expected: <  -a,--aaa        Option A
+│     │          -b,--bbb        Option B> but was: <-a,--aaa   Option A
+│     │          -b,--bbb   Option B>
+│     ├─ testRenderOptions_EdgeCaseWithMaximumWidth() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_OptionWithArgument() ✘ expected: <  -a <arg> --aaa <arg>   An option with argument> but was: <-a,--aaa <arg>   An option with argument
+│     │          -b,--beta        Option B description>
+│     └─ testRenderOptions_LongOptionsWithEmptyNames() ✘ expected: <  -a        Option with empty long name> but was: <-a,--       Option with empty long name
+│                -b,--beta   Option B description>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (15):
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_MultipleOptionsWithNoDescription()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_MultipleOptionsWithNoDescription', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa
+  -b,--bbb> but was: <-a,--aaa
+  -b,--bbb>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_MultipleOptionsWithNoDescription(HelpFormatter_renderOptions_Test.java:162)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithNegativePadding()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithNegativePadding', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithNegativePadding(HelpFormatter_renderOptions_Test.java:240)
+       [...]
+     Caused by: java.lang.NegativeArraySizeException: -1
+       org.apache.commons.cli.HelpFormatter.createPadding(HelpFormatter.java:264)
+       org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:672)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.lambda$testRenderOptions_EdgeCaseWithNegativePadding$3(HelpFormatter_renderOptions_Test.java:241)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_HandleBlankArgumentName()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_HandleBlankArgumentName', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a <arg> --aaa <arg>   An option with blank argument name> but was: <-a,--aaa <arg>   An option with blank argument name
+  -b,--beta        Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_HandleBlankArgumentName(HelpFormatter_renderOptions_Test.java:91)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithMinimalPadding()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithMinimalPadding', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <-a,--aaa        Option A> but was: <-a,--aaa Option A
+-b,--betaOption B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithMinimalPadding(HelpFormatter_renderOptions_Test.java:147)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_OptionWithLongOption()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_OptionWithLongOption', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        An option> but was: <-a,--aaa    An option
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_OptionWithLongOption(HelpFormatter_renderOptions_Test.java:63)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions(HelpFormatter_renderOptions_Test.java:36)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionWithNullDescription()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionWithNullDescription', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa> but was: <-a,--aaa
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionWithNullDescription(HelpFormatter_renderOptions_Test.java:256)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_NegativeWidth()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_NegativeWidth', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.StringIndexOutOfBoundsException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_NegativeWidth(HelpFormatter_renderOptions_Test.java:226)
+       [...]
+     Caused by: java.lang.StringIndexOutOfBoundsException: begin 0, end -10, length 33
+       java.base/java.lang.String.checkBoundsBeginEnd(String.java:4606)
+       java.base/java.lang.String.substring(String.java:2709)
+       org.apache.commons.cli.HelpFormatter.renderWrappedText(HelpFormatter.java:764)
+       org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:734)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.lambda$testRenderOptions_NegativeWidth$2(HelpFormatter_renderOptions_Test.java:227)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_BasicFunctionality()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_BasicFunctionality', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_BasicFunctionality(HelpFormatter_renderOptions_Test.java:49)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_NullOptionComparator()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_NullOptionComparator', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        Option A> but was: <-a,--aaa    Option A
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_NullOptionComparator(HelpFormatter_renderOptions_Test.java:120)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionsWithSpecialCharacters()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionsWithSpecialCharacters', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa@!        Option with special characters> but was: <-a,--aaa@!   Option with special characters
+  -b,--beta    Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionsWithSpecialCharacters(HelpFormatter_renderOptions_Test.java:190)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_CheckSortingOfOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_CheckSortingOfOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        Option A
+  -b,--bbb        Option B> but was: <-a,--aaa   Option A
+  -b,--bbb   Option B>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_CheckSortingOfOptions(HelpFormatter_renderOptions_Test.java:106)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithMaximumWidth()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithMaximumWidth', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithMaximumWidth(HelpFormatter_renderOptions_Test.java:134)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_OptionWithArgument()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_OptionWithArgument', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a <arg> --aaa <arg>   An option with argument> but was: <-a,--aaa <arg>   An option with argument
+  -b,--beta        Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_OptionWithArgument(HelpFormatter_renderOptions_Test.java:77)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionsWithEmptyNames()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionsWithEmptyNames', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a        Option with empty long name> but was: <-a,--       Option with empty long name
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionsWithEmptyNames(HelpFormatter_renderOptions_Test.java:176)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 557 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[        15 tests failed          ]
+
+
+2026-09-10 13:15:26,733 - procedure.post_process - INFO - try to repair test class ../evaluation/commons-cli/test_classes/HelpFormatter_renderOptions_Test.java...
+2026-09-10 13:15:27,586 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 13:15:41,037 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 13:15:41,397 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.HelpFormatter_renderOptions_Test
+2026-09-10 13:15:42,032 - procedure.post_process - INFO - return code: 1
+2026-09-10 13:15:42,032 - procedure.post_process - INFO - test case failed in org.apache.commons.cli.HelpFormatter_renderOptions_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ HelpFormatter_renderOptions_Test ✔
+│     ├─ testRenderOptions_NullOptions() ✔
+│     ├─ testRenderOptions_MultipleOptionsWithNoDescription() ✘ expected: <  -a,--aaa
+│     │          -b,--bbb> but was: <-a,--aaa
+│     │          -b,--bbb>
+│     ├─ testRenderOptions_EdgeCaseWithNegativePadding() ✘ Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+│     ├─ testRenderOptions_HandleBlankArgumentName() ✘ expected: <  -a <arg> --aaa <arg>   An option with blank argument name> but was: <-a,--aaa <arg>   An option with blank argument name
+│     │          -b,--beta        Option B description>
+│     ├─ testRenderOptions_EdgeCaseWithMinimalPadding() ✘ expected: <-a,--aaa        Option A> but was: <-a,--aaa Option A
+│     │        -b,--betaOption B description>
+│     ├─ testRenderOptions_OptionWithLongOption() ✘ expected: <  -a,--aaa        An option> but was: <-a,--aaa    An option
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_LongOptionWithNullDescription() ✘ expected: <  -a,--aaa> but was: <-a,--aaa
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_NullStringBuffer() ✔
+│     ├─ testRenderOptions_NegativeWidth() ✘ Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.StringIndexOutOfBoundsException>
+│     ├─ testRenderOptions_BasicFunctionality() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_NullOptionComparator() ✘ expected: <  -a,--aaa        Option A> but was: <-a,--aaa    Option A
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_LongOptionsWithSpecialCharacters() ✘ expected: <  -a,--aaa@!        Option with special characters> but was: <-a,--aaa@!   Option with special characters
+│     │          -b,--beta    Option B description>
+│     ├─ testRenderOptions_CheckSortingOfOptions() ✘ expected: <  -a,--aaa        Option A
+│     │          -b,--bbb        Option B> but was: <-a,--aaa   Option A
+│     │          -b,--bbb   Option B>
+│     ├─ testRenderOptions_EdgeCaseWithMaximumWidth() ✘ expected: <  -a                Option A description
+│     │          -b,--beta        Option B description> but was: <-a          Option A description
+│     │          -b,--beta   Option B description>
+│     ├─ testRenderOptions_OptionWithArgument() ✘ expected: <  -a <arg> --aaa <arg>   An option with argument> but was: <-a,--aaa <arg>   An option with argument
+│     │          -b,--beta        Option B description>
+│     └─ testRenderOptions_LongOptionsWithEmptyNames() ✘ expected: <  -a        Option with empty long name> but was: <-a,--       Option with empty long name
+│                -b,--beta   Option B description>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (15):
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_MultipleOptionsWithNoDescription()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_MultipleOptionsWithNoDescription', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa
+  -b,--bbb> but was: <-a,--aaa
+  -b,--bbb>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_MultipleOptionsWithNoDescription(HelpFormatter_renderOptions_Test.java:162)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithNegativePadding()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithNegativePadding', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithNegativePadding(HelpFormatter_renderOptions_Test.java:240)
+       [...]
+     Caused by: java.lang.NegativeArraySizeException: -1
+       org.apache.commons.cli.HelpFormatter.createPadding(HelpFormatter.java:264)
+       org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:672)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.lambda$testRenderOptions_EdgeCaseWithNegativePadding$3(HelpFormatter_renderOptions_Test.java:241)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_HandleBlankArgumentName()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_HandleBlankArgumentName', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a <arg> --aaa <arg>   An option with blank argument name> but was: <-a,--aaa <arg>   An option with blank argument name
+  -b,--beta        Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_HandleBlankArgumentName(HelpFormatter_renderOptions_Test.java:91)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithMinimalPadding()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithMinimalPadding', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <-a,--aaa        Option A> but was: <-a,--aaa Option A
+-b,--betaOption B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithMinimalPadding(HelpFormatter_renderOptions_Test.java:147)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_OptionWithLongOption()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_OptionWithLongOption', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        An option> but was: <-a,--aaa    An option
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_OptionWithLongOption(HelpFormatter_renderOptions_Test.java:63)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions(HelpFormatter_renderOptions_Test.java:36)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionWithNullDescription()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionWithNullDescription', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa> but was: <-a,--aaa
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionWithNullDescription(HelpFormatter_renderOptions_Test.java:256)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_NegativeWidth()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_NegativeWidth', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.StringIndexOutOfBoundsException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_NegativeWidth(HelpFormatter_renderOptions_Test.java:226)
+       [...]
+     Caused by: java.lang.StringIndexOutOfBoundsException: begin 0, end -10, length 33
+       java.base/java.lang.String.checkBoundsBeginEnd(String.java:4606)
+       java.base/java.lang.String.substring(String.java:2709)
+       org.apache.commons.cli.HelpFormatter.renderWrappedText(HelpFormatter.java:764)
+       org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:734)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.lambda$testRenderOptions_NegativeWidth$2(HelpFormatter_renderOptions_Test.java:227)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_BasicFunctionality()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_BasicFunctionality', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_BasicFunctionality(HelpFormatter_renderOptions_Test.java:49)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_NullOptionComparator()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_NullOptionComparator', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        Option A> but was: <-a,--aaa    Option A
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_NullOptionComparator(HelpFormatter_renderOptions_Test.java:120)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionsWithSpecialCharacters()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionsWithSpecialCharacters', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa@!        Option with special characters> but was: <-a,--aaa@!   Option with special characters
+  -b,--beta    Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionsWithSpecialCharacters(HelpFormatter_renderOptions_Test.java:190)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_CheckSortingOfOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_CheckSortingOfOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa        Option A
+  -b,--bbb        Option B> but was: <-a,--aaa   Option A
+  -b,--bbb   Option B>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_CheckSortingOfOptions(HelpFormatter_renderOptions_Test.java:106)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_EdgeCaseWithMaximumWidth()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_EdgeCaseWithMaximumWidth', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a                Option A description
+  -b,--beta        Option B description> but was: <-a          Option A description
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_EdgeCaseWithMaximumWidth(HelpFormatter_renderOptions_Test.java:134)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_OptionWithArgument()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_OptionWithArgument', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a <arg> --aaa <arg>   An option with argument> but was: <-a,--aaa <arg>   An option with argument
+  -b,--beta        Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_OptionWithArgument(HelpFormatter_renderOptions_Test.java:77)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions_LongOptionsWithEmptyNames()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions_LongOptionsWithEmptyNames', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a        Option with empty long name> but was: <-a,--       Option with empty long name
+  -b,--beta   Option B description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions_LongOptionsWithEmptyNames(HelpFormatter_renderOptions_Test.java:176)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 390 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[        15 tests failed          ]
+
+
+2026-09-10 13:15:42,036 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java
+2026-09-10 13:15:42,340 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java:137: error: cannot find symbol
+    @ParameterizedTest
+     ^
+  symbol:   class ParameterizedTest
+  location: class PatternOptionBuilder_getValueType_Test
+src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java:138: error: cannot find symbol
+    @MethodSource("provideValidCharacterCases")
+     ^
+  symbol:   class MethodSource
+  location: class PatternOptionBuilder_getValueType_Test
+src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java:146: error: cannot find symbol
+    @ParameterizedTest
+     ^
+  symbol:   class ParameterizedTest
+  location: class PatternOptionBuilder_getValueType_Test
+src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java:147: error: cannot find symbol
+    @MethodSource("provideInvalidCharacterCases")
+     ^
+  symbol:   class MethodSource
+  location: class PatternOptionBuilder_getValueType_Test
+4 errors
+
+2026-09-10 13:15:42,340 - procedure.post_process - INFO - try to repair test class ../evaluation/commons-cli/test_classes/PatternOptionBuilder_getValueType_Test.java...
+2026-09-10 13:15:42,341 - procedure.post_process - INFO - add imports {'import org.junit.jupiter.params.provider.MethodSource;', 'import org.junit.jupiter.params.ParameterizedTest;'}
+2026-09-10 13:15:42,342 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java
+2026-09-10 13:15:42,626 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.PatternOptionBuilder_getValueType_Test
+2026-09-10 13:15:43,244 - procedure.post_process - INFO - return code: 0
+2026-09-10 13:15:43,245 - procedure.post_process - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ PatternOptionBuilder_getValueType_Test ✔
+│     ├─ testGetValueTypeForInvalidCharacters(char, String) ✔
+│     │  ├─ [1] A, Expected null for unknown input 'A' ✔
+│     │  ├─ [2]  , Expected null for space character input ✔
+│     │  ├─ [3] 9, Expected null for numeric character '9' ✔
+│     │  ├─ [4] !, Expected null for invalid character '!' ✔
+│     │  └─ [5] ., Expected null for empty character input ✔
+│     ├─ testGetValueTypeForNumber() ✔
+│     ├─ testGetValueTypeForString() ✔
+│     ├─ testGetValueTypeForUnknownCharacter() ✔
+│     ├─ testGetValueTypeForValidCharacters(char, Class, String) ✔
+│     │  ├─ [1] @, class java.lang.Object, Expected OBJECT_VALUE for input '@' ✔
+│     │  ├─ [2] :, class java.lang.String, Expected STRING_VALUE for input ':' ✔
+│     │  ├─ [3] %, class java.lang.Number, Expected NUMBER_VALUE for input '%' ✔
+│     │  ├─ [4] +, class java.lang.Class, Expected CLASS_VALUE for input '+' ✔
+│     │  ├─ [5] #, class java.util.Date, Expected DATE_VALUE for input '#' ✔
+│     │  ├─ [6] <, class java.io.FileInputStream, Expected EXISTING_FILE_VALUE for input '<' ✔
+│     │  ├─ [7] >, class java.io.File, Expected FILE_VALUE for input '>' ✔
+│     │  ├─ [8] *, class [Ljava.io.File;, Expected FILES_VALUE for input '*' ✔
+│     │  └─ [9] /, class java.net.URL, Expected URL_VALUE for input '/' ✔
+│     ├─ testGetValueTypeForDate() ✔
+│     ├─ testGetValueTypeForFile() ✔
+│     ├─ testGetValueType() ✔
+│     ├─ testGetValueTypeForExistingFile() ✔
+│     ├─ testGetValueTypeForClass() ✔
+│     ├─ testGetValueTypeForFiles() ✔
+│     └─ testGetValueTypeForURL() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 389 ms
+[         6 containers found      ]
+[         0 containers skipped    ]
+[         6 containers started    ]
+[         0 containers aborted    ]
+[         6 containers successful ]
+[         0 containers failed     ]
+[        24 tests found           ]
+[         0 tests skipped         ]
+[        24 tests started         ]
+[         0 tests aborted         ]
+[        24 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 13:15:43,247 - procedure.post_process - INFO - Post process completed: /work/code/../data/projects/commons-cli
+2026-09-10 13:15:43,248 - __main__ - INFO - time for post process: 109.36 seconds
+2026-09-10 13:15:43,249 - __main__ - INFO - total elapsed time: 152.03 seconds

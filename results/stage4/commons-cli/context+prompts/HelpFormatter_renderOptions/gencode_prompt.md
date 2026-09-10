@@ -213,27 +213,6 @@ class `org.apache.commons.cli.HelpFormatter`:
 	dependent fields:
 		java.lang.String org.apache.commons.cli.HelpFormatter.longOptSeparator;
 	related functions:
-		method `private void appendOptionGroup(StringBuffer, OptionGroup)` returns `void`, related with `org.apache.commons.cli.HelpFormatter.renderOptions(StringBuffer, int, Options, int, int)`, api document: 
-     * Appends the usage clause for an OptionGroup to a StringBuffer. The clause is wrapped in square brackets if the group
-     * is required. The display of the options is handled by appendOption
-     *
-     * @param buff the StringBuffer to append to
-     * @param group the group to append
-     * @see #appendOption(StringBuffer,Option,boolean)
-     ;
-		method `public String getLongOptSeparator()` returns `java.lang.String`, related with `org.apache.commons.cli.HelpFormatter.renderOptions(StringBuffer, int, Options, int, int)`, api document: 
-     * Gets the separator displayed between a long option and its value.
-     *
-     * @return the separator
-     * @since 1.3
-     ;
-		method `private void appendOption(StringBuffer, Option, boolean)` returns `void`, related with `org.apache.commons.cli.HelpFormatter.renderOptions(StringBuffer, int, Options, int, int)`, api document: 
-     * Appends the usage clause for an Option to a StringBuffer.
-     *
-     * @param buff the StringBuffer to append to
-     * @param option the Option to append
-     * @param required whether the Option is required or not
-     ;
 		method `private Appendable renderWrappedTextBlock(StringBuffer, int, int, String)` returns `java.lang.Appendable`, related with `org.apache.commons.cli.HelpFormatter.renderOptions(StringBuffer, int, Options, int, int)`, api document: 
      * Renders the specified text width a maximum width. This method differs from renderWrappedText by not removing leading
      * spaces after a new line.
@@ -243,6 +222,20 @@ class `org.apache.commons.cli.HelpFormatter`:
      * @param nextLineTabStop The position on the next line for the first tab.
      * @param text The text to be rendered.
      ;
+		method `public String getLongOptSeparator()` returns `java.lang.String`, related with `org.apache.commons.cli.HelpFormatter.renderOptions(StringBuffer, int, Options, int, int)`, api document: 
+     * Gets the separator displayed between a long option and its value.
+     *
+     * @return the separator
+     * @since 1.3
+     ;
+		method `private void appendOptionGroup(StringBuffer, OptionGroup)` returns `void`, related with `org.apache.commons.cli.HelpFormatter.renderOptions(StringBuffer, int, Options, int, int)`, api document: 
+     * Appends the usage clause for an OptionGroup to a StringBuffer. The clause is wrapped in square brackets if the group
+     * is required. The display of the options is handled by appendOption
+     *
+     * @param buff the StringBuffer to append to
+     * @param group the group to append
+     * @see #appendOption(StringBuffer,Option,boolean)
+     ;
 		method `public void printUsage(PrintWriter, int, String, Options)` returns `void`, related with `org.apache.commons.cli.HelpFormatter.renderOptions(StringBuffer, int, Options, int, int)`, api document: 
      * Prints the usage statement for the specified application.
      *
@@ -250,6 +243,13 @@ class `org.apache.commons.cli.HelpFormatter`:
      * @param width The number of characters to display per line
      * @param app The application name
      * @param options The command line Options
+     ;
+		method `private void appendOption(StringBuffer, Option, boolean)` returns `void`, related with `org.apache.commons.cli.HelpFormatter.renderOptions(StringBuffer, int, Options, int, int)`, api document: 
+     * Appends the usage clause for an Option to a StringBuffer.
+     *
+     * @param buff the StringBuffer to append to
+     * @param option the Option to append
+     * @param required whether the Option is required or not
      ;
 class `org.apache.commons.cli.OptionGroup`:
 	related functions:

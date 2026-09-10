@@ -1,0 +1,125 @@
+{
+    "group": "getValueType",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "@"
+                }
+            ],
+            "expected": "OBJECT_VALUE",
+            "description": "Test for the character '@', which should return the OBJECT_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": ":"
+                }
+            ],
+            "expected": "STRING_VALUE",
+            "description": "Test for the character ':', which should return the STRING_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "%"
+                }
+            ],
+            "expected": "NUMBER_VALUE",
+            "description": "Test for the character '%', which should return the NUMBER_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "+"
+                }
+            ],
+            "expected": "CLASS_VALUE",
+            "description": "Test for the character '+', which should return the CLASS_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "#"
+                }
+            ],
+            "expected": "DATE_VALUE",
+            "description": "Test for the character '#', which should return the DATE_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "<"
+                }
+            ],
+            "expected": "EXISTING_FILE_VALUE",
+            "description": "Test for the character '<', which should return the EXISTING_FILE_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": ">"
+                }
+            ],
+            "expected": "FILE_VALUE",
+            "description": "Test for the character '>', which should return the FILE_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "*"
+                }
+            ],
+            "expected": "FILES_VALUE",
+            "description": "Test for the character '*', which should return the FILES_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "/"
+                }
+            ],
+            "expected": "URL_VALUE",
+            "description": "Test for the character '/', which should return the URL_VALUE class."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "A"
+                }
+            ],
+            "expected": null,
+            "description": "Test for an invalid character 'A', which should return null."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": " "
+                }
+            ],
+            "expected": null,
+            "description": "Test for a space character, which should return null."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "ch",
+                    "value": "9"
+                }
+            ],
+            "expected": null,
+            "description": "Test for a numeric character '9', which should return null."
+        }
+    ]
+}
