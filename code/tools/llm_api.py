@@ -48,6 +48,7 @@ class LLMCaller:
             messages=messages,
             response_format = rps_format,  # pyright: ignore[reportArgumentType]
             temperature=self.temperature,
+            extra_body={"provider": {"order": ["OpenAI"], "allow_fallbacks": False}},
             # add more parameters
         )
         if response.choices[0].message.content:
