@@ -1,0 +1,442 @@
+2026-09-10 10:32:51,790 - __main__ - INFO - prompt list: ['condition4case', 'io4case', 'exception4case', 'gencode']
+2026-09-10 10:32:51,799 - procedure.generate_prompt - INFO - Construct init prompts for project commons-cli...
+2026-09-10 10:32:51,799 - tools.code_search - INFO - Loading code index for commons-cli
+2026-09-10 10:32:51,834 - procedure.generate_prompt - INFO - Construct test case prompts for project commons-cli...
+2026-09-10 10:32:51,834 - tools.code_search - INFO - Loading code index for commons-cli
+2026-09-10 10:32:52,006 - __main__ - INFO - time for generate prompts: 0.22 seconds
+2026-09-10 10:32:52,027 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:52,039 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:52,050 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:52,062 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:52,073 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:52,099 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:52,120 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:52,132 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:52,132 - procedure.generate_code - INFO - Generating test class framework for project commons-cli...
+2026-09-10 10:32:54,527 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:32:54,752 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:32:58,988 - procedure.generate_code - INFO - Completed test class framework generation for PatternOptionBuilder_getValueType
+2026-09-10 10:32:59,803 - procedure.generate_code - INFO - Completed test class framework generation for HelpFormatter_renderOptions
+2026-09-10 10:32:59,807 - __main__ - INFO - time for generate test class framework: 7.80 seconds
+2026-09-10 10:32:59,826 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:59,841 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:59,853 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:59,865 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:59,876 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:59,888 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:59,899 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:59,911 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:32:59,911 - procedure.generate_code - INFO - Generating test cases for project commons-cli...
+2026-09-10 10:33:00,685 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:01,433 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:09,245 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:10,168 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:12,213 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:15,186 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:15,271 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:16,837 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:25,419 - procedure.generate_code - INFO - Completed test case generation for PatternOptionBuilder_getValueType
+2026-09-10 10:33:29,907 - procedure.generate_code - INFO - Completed test case generation for HelpFormatter_renderOptions
+2026-09-10 10:33:29,911 - __main__ - INFO - time for generate test cases: 30.10 seconds
+2026-09-10 10:33:29,912 - procedure.post_process - INFO - verify process test classes in commons-cli...
+2026-09-10 10:33:29,935 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 10:33:29,947 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 10:33:30,302 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java:81: error: cannot find symbol
+        options.addOption("a", "aaa", true, "description").setArgName("");
+                                                          ^
+  symbol:   method setArgName(String)
+  location: class Options
+src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java:106: error: cannot find symbol
+        formatter.setOptionComparator(Comparator.comparing(Option::getOpt));
+                                      ^
+  symbol:   variable Comparator
+  location: class HelpFormatter_renderOptions_Test
+2 errors
+
+2026-09-10 10:33:30,302 - procedure.post_process - INFO - try to repair test class ../evaluation/commons-cli/test_classes/HelpFormatter_renderOptions_Test.java...
+2026-09-10 10:33:30,303 - procedure.post_process - INFO - add imports {'import java.util.Comparator;'}
+2026-09-10 10:33:30,304 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 10:33:30,649 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java:82: error: cannot find symbol
+        options.addOption("a", "aaa", true, "description").setArgName("");
+                                                          ^
+  symbol:   method setArgName(String)
+  location: class Options
+1 error
+
+2026-09-10 10:33:31,308 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:33:40,834 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 10:33:41,269 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java:82: error: cannot find symbol
+        options.addOption("a", "aaa", true, "description").setArgName(" ");
+                                                          ^
+  symbol:   method setArgName(String)
+  location: class Options
+1 error
+
+2026-09-10 10:33:41,270 - procedure.post_process - INFO - try to repair test class ../evaluation/commons-cli/test_classes/HelpFormatter_renderOptions_Test.java...
+2026-09-10 10:33:41,271 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 10:33:41,667 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java:82: error: cannot find symbol
+        options.addOption("a", "aaa", true, "description").setArgName(" ");
+                                                          ^
+  symbol:   method setArgName(String)
+  location: class Options
+1 error
+
+2026-09-10 10:33:43,033 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:34:02,724 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 10:34:03,146 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java:83: error: cannot find symbol
+        options.addOption("a", "aaa", true, "description").setArgName("");
+                                                          ^
+  symbol:   method setArgName(String)
+  location: class Options
+1 error
+
+2026-09-10 10:34:03,147 - procedure.post_process - INFO - clean error cases in lines [82, [78, 88]]
+2026-09-10 10:34:03,148 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 10:34:03,526 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.HelpFormatter_renderOptions_Test
+2026-09-10 10:34:04,319 - procedure.post_process - INFO - return code: 1
+2026-09-10 10:34:04,319 - procedure.post_process - INFO - test case failed in org.apache.commons.cli.HelpFormatter_renderOptions_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ HelpFormatter_renderOptions_Test ✔
+│     ├─ testRenderOptionsWithOnlyLongForm() ✘ expected: <  --longOpt <arg>   description> but was: <--longOpt <arg>   description>
+│     ├─ testRenderOptionsWithCustomOptionComparator() ✘ expected: <  -a,--aaa <arg>   another description
+│     │          -b,--bbb <arg>   description> but was: <-a,--aaa <arg>   another description
+│     │         -b,--bbb <arg>   description>
+│     ├─ testRenderOptionsWithNoShortForm() ✘ expected: <  --aaa <arg>   description> but was: <--aaa <arg>   description>
+│     ├─ testRenderOptions() ✘ expected: <  -a,--option-a    Description for option A
+│     │          -b,--option-b <arg>   Description for option B with an argument> but was: <-a,--option-a         Description for option A
+│     │         -b,--option-b <arg>   Description for option B with an argument>
+│     ├─ testRenderOptionsWithMultipleOptions() ✘ expected: <  -a,--aaa <arg>   description
+│     │          -b,--bbb    another description> but was: <-a,--aaa <arg>   description
+│     │         -b,--bbb         another description>
+│     ├─ testRenderOptionsWithEmptyOptions() ✔
+│     ├─ testRenderOptionsWithSingleValidOption() ✘ expected: <  -a,--aaa <arg>   description> but was: <-a,--aaa <arg>   description>
+│     └─ testRenderOptionsWithNullStringBuffer() ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (7):
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithOnlyLongForm()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithOnlyLongForm', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  --longOpt <arg>   description> but was: <--longOpt <arg>   description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithOnlyLongForm(HelpFormatter_renderOptions_Test.java:124)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithCustomOptionComparator()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithCustomOptionComparator', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa <arg>   another description
+  -b,--bbb <arg>   description> but was: <-a,--aaa <arg>   another description
+ -b,--bbb <arg>   description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithCustomOptionComparator(HelpFormatter_renderOptions_Test.java:113)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithNoShortForm()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithNoShortForm', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  --aaa <arg>   description> but was: <--aaa <arg>   description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithNoShortForm(HelpFormatter_renderOptions_Test.java:76)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--option-a    Description for option A
+  -b,--option-b <arg>   Description for option B with an argument> but was: <-a,--option-a         Description for option A
+ -b,--option-b <arg>   Description for option B with an argument>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions(HelpFormatter_renderOptions_Test.java:44)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithMultipleOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithMultipleOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa <arg>   description
+  -b,--bbb    another description> but was: <-a,--aaa <arg>   description
+ -b,--bbb         another description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithMultipleOptions(HelpFormatter_renderOptions_Test.java:100)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithSingleValidOption()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithSingleValidOption', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa <arg>   description> but was: <-a,--aaa <arg>   description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithSingleValidOption(HelpFormatter_renderOptions_Test.java:55)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithNullStringBuffer()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithNullStringBuffer', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithNullStringBuffer(HelpFormatter_renderOptions_Test.java:132)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 477 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         7 tests failed          ]
+
+
+2026-09-10 10:34:04,320 - procedure.post_process - INFO - try to repair test class ../evaluation/commons-cli/test_classes/HelpFormatter_renderOptions_Test.java...
+2026-09-10 10:34:06,338 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 10:34:27,975 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 10:34:28,331 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java:130: error: cannot find symbol
+        options.addOption("a", "aaa", true, "description").setArgName("");
+                                                          ^
+  symbol:   method setArgName(String)
+  location: class Options
+1 error
+
+2026-09-10 10:34:28,333 - procedure.post_process - INFO - clean error cases in lines [129, [126, 135]]
+2026-09-10 10:34:28,333 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 10:34:28,666 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.HelpFormatter_renderOptions_Test
+2026-09-10 10:34:29,290 - procedure.post_process - INFO - return code: 1
+2026-09-10 10:34:29,290 - procedure.post_process - INFO - test case failed in org.apache.commons.cli.HelpFormatter_renderOptions_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ HelpFormatter_renderOptions_Test ✔
+│     ├─ testRenderOptionsWithOnlyLongForm() ✘ expected: <  --longOpt <arg>   description> but was: <--longOpt <arg>   description>
+│     ├─ testRenderOptionsWithCustomOptionComparator() ✘ expected: <  -a,--aaa <arg>   another description
+│     │          -b,--bbb <arg>   description> but was: <-a,--aaa <arg>   another description
+│     │         -b,--bbb <arg>   description>
+│     ├─ testRenderOptionsWithNoShortForm() ✘ expected: <  --aaa <arg>   description> but was: <--aaa <arg>   description>
+│     ├─ testRenderOptions() ✘ expected: <  -a,--option-a    Description for option A
+│     │          -b,--option-b <arg>   Description for option B with an argument> but was: <-a,--option-a         Description for option A
+│     │         -b,--option-b <arg>   Description for option B with an argument>
+│     ├─ testRenderOptionsWithMultipleOptions() ✘ expected: <  -a,--aaa <arg>   description
+│     │          -b,--bbb    another description> but was: <-a,--aaa <arg>   description
+│     │         -b,--bbb         another description>
+│     ├─ testRenderOptionsWithEmptyOptions() ✔
+│     ├─ testRenderOptionsWithSingleValidOption() ✘ expected: <  -a,--aaa <arg>   description> but was: <-a,--aaa <arg>   description>
+│     └─ testRenderOptionsWithNullStringBuffer() ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (7):
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithOnlyLongForm()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithOnlyLongForm', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  --longOpt <arg>   description> but was: <--longOpt <arg>   description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithOnlyLongForm(HelpFormatter_renderOptions_Test.java:112)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithCustomOptionComparator()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithCustomOptionComparator', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa <arg>   another description
+  -b,--bbb <arg>   description> but was: <-a,--aaa <arg>   another description
+ -b,--bbb <arg>   description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithCustomOptionComparator(HelpFormatter_renderOptions_Test.java:101)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithNoShortForm()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithNoShortForm', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  --aaa <arg>   description> but was: <--aaa <arg>   description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithNoShortForm(HelpFormatter_renderOptions_Test.java:76)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--option-a    Description for option A
+  -b,--option-b <arg>   Description for option B with an argument> but was: <-a,--option-a         Description for option A
+ -b,--option-b <arg>   Description for option B with an argument>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions(HelpFormatter_renderOptions_Test.java:44)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithMultipleOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithMultipleOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa <arg>   description
+  -b,--bbb    another description> but was: <-a,--aaa <arg>   description
+ -b,--bbb         another description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithMultipleOptions(HelpFormatter_renderOptions_Test.java:88)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithSingleValidOption()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithSingleValidOption', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <  -a,--aaa <arg>   description> but was: <-a,--aaa <arg>   description>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithSingleValidOption(HelpFormatter_renderOptions_Test.java:55)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithNullStringBuffer()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithNullStringBuffer', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithNullStringBuffer(HelpFormatter_renderOptions_Test.java:120)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 388 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         7 tests failed          ]
+
+
+2026-09-10 10:34:29,294 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java
+2026-09-10 10:34:29,616 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.PatternOptionBuilder_getValueType_Test
+2026-09-10 10:34:30,233 - procedure.post_process - INFO - return code: 0
+2026-09-10 10:34:30,233 - procedure.post_process - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ PatternOptionBuilder_getValueType_Test ✔
+│     ├─ testGetValueTypeWithInvalidChars() ✔
+│     ├─ testGetValueTypeWithInvalidChar() ✔
+│     └─ testGetValueType() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 374 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 10:34:30,236 - procedure.post_process - INFO - Post process completed: /work/code/../data/projects/commons-cli
+2026-09-10 10:34:30,238 - __main__ - INFO - time for post process: 60.33 seconds
+2026-09-10 10:34:30,239 - __main__ - INFO - total elapsed time: 98.45 seconds

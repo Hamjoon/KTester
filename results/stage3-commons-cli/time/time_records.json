@@ -1,0 +1,26 @@
+{
+  "details": {
+    "PatternOptionBuilder_getValueType": {
+      "process_init_response": 6.853689670562744,
+      "process_case_response": 25.507211685180664,
+      "check_test_class": 0.9411518573760986
+    },
+    "HelpFormatter_renderOptions": {
+      "process_init_response": 7.669379711151123,
+      "process_case_response": 29.995391130447388,
+      "check_test_class": 59.34700107574463
+    }
+  },
+  "statistics": {
+    "average_total": 65.16,
+    "average_detail": {
+      "process_init_response": 7.26,
+      "process_case_response": 27.75,
+      "check_test_class": 30.14
+    },
+    "median_time": 97.01,
+    "min_time": 33.3,
+    "max_time": 97.01,
+    "std_time": 31.85
+  }
+}
