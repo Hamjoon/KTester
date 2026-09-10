@@ -1,0 +1,492 @@
+[
+  {
+    "group": "addEndOfMatch - Wildcard Match",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('*')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXACT)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "new NameState()",
+        "description": "Test case where the only character is a wildcard '*'. It should create a new start state match."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Shortcut Transition",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('a'), new InputCharacter('b')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXACT)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "new NameState() with specific transitions",
+        "description": "Test case to verify behavior when a shortcut transition is encountered with an exact match."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - No Shortcut Needed",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('c'), new InputCharacter('d')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.SUFFIX)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "new NameState() with extended transitions",
+        "description": "Test case when no shortcut is eligible and should extend all characters to the byte state path."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Last Character Wildcard",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('e'), new InputCharacter('*')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXISTS)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "new NameState() with specific transitions",
+        "description": "Test case to check behavior when the last character is a wildcard, preventing reuse of state."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Empty Transition",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('f')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.ANYTHING_BUT_SUFFIX)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "new NameState() with transitions created",
+        "description": "Test case to verify behavior when an empty transition is encountered."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Single Character Match",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('g')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXACT)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "new NameState() with specific transitions",
+        "description": "Test case where there is a single character 'g' and expects a new NameState with transitions for an exact match."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Multiple Characters with Wildcard",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('h'), new InputCharacter('*')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXISTS)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "new NameState() with specific transitions",
+        "description": "Test case to check behavior when there are multiple characters with the last being a wildcard."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Transition with Non-Wildcard Last Character",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('i'), new InputCharacter('j')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXACT)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "new NameState() with specific transitions",
+        "description": "Test case to verify behavior when both characters are non-wildcard and should create a new transition path."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Empty Input Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXISTS)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "new NameState()",
+        "description": "Test case to check behavior when no input characters are provided."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Boundary Condition - Max Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('k'), new InputCharacter('l'), new InputCharacter('m'), new InputCharacter('n')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXACT)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "new NameState() with specific transitions",
+        "description": "Test case to check behavior when maximum characters are provided for exact match."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Invalid Pattern",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('a')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "null"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case to check behavior when the pattern is null, which should trigger a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Invalid Characters Array",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('a'), null]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXACT)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case to check behavior when the characters array contains a null InputCharacter, which should trigger an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Invalid CharIndex",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('a')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "1"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXACT)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "Test case to check behavior when charIndex exceeds the length of the characters array, which should trigger an ArrayIndexOutOfBoundsException."
+      }
+    ]
+  },
+  {
+    "group": "addEndOfMatch - Invalid Previous State",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "new ByteState()"
+          },
+          {
+            "parameter": "prevState",
+            "value": "null"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('a')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": "0"
+          },
+          {
+            "parameter": "pattern",
+            "value": "new Patterns(MatchType.EXACT)"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "new NameState()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case to check behavior when prevState is null, which should trigger a NullPointerException."
+      }
+    ]
+  }
+]

@@ -1,0 +1,584 @@
+[
+  {
+    "group": "matches - EXACT case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"test\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "EXACT",
+              "pattern": "\"test\""
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for EXACT pattern matching where the value matches exactly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"test\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "EXACT",
+              "pattern": "\"example\""
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for EXACT pattern matching where the value does not match the pattern."
+      }
+    ]
+  },
+  {
+    "group": "matches - PREFIX case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"testValue\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "PREFIX",
+              "pattern": "\"test\""
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for PREFIX pattern matching where the value starts with the pattern."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"exampleValue\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "PREFIX",
+              "pattern": "\"test\""
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for PREFIX pattern matching where the value does not start with the pattern."
+      }
+    ]
+  },
+  {
+    "group": "matches - ANYTHING_BUT case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"test\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ANYTHING_BUT",
+              "values": [
+                "\"test\"",
+                "\"example\""
+              ]
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for ANYTHING_BUT pattern where the value matches one of the excluded patterns."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"sample\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ANYTHING_BUT",
+              "values": [
+                "\"test\"",
+                "\"example\""
+              ]
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for ANYTHING_BUT pattern where the value does not match any excluded patterns."
+      }
+    ]
+  },
+  {
+    "group": "matches - ANYTHING_BUT_IGNORE_CASE case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"TEST\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ANYTHING_BUT_IGNORE_CASE",
+              "values": [
+                "\"test\""
+              ]
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for ANYTHING_BUT_IGNORE_CASE pattern where the value matches an excluded pattern case-insensitively."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"example\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ANYTHING_BUT_IGNORE_CASE",
+              "values": [
+                "\"test\""
+              ]
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for ANYTHING_BUT_IGNORE_CASE pattern where the value does not match any excluded patterns case-insensitively."
+      }
+    ]
+  },
+  {
+    "group": "matches - NUMERIC_EQ case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": 5
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_EQ",
+              "pattern": 5
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for NUMERIC_EQ pattern where the value is equal to the pattern."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": 3
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_EQ",
+              "pattern": 5
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for NUMERIC_EQ pattern where the value is not equal to the pattern."
+      }
+    ]
+  },
+  {
+    "group": "matches - EXISTS and ABSENT cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": null
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "EXISTS"
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for EXISTS pattern which should always return true regardless of the value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": null
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ABSENT"
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for ABSENT pattern which should always return false."
+      }
+    ]
+  },
+  {
+    "group": "matches - NUMERIC_RANGE case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": 5
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_RANGE",
+              "bottom": 1,
+              "top": 10,
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for NUMERIC_RANGE where the value is within the inclusive range."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": 11
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_RANGE",
+              "bottom": 1,
+              "top": 10,
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for NUMERIC_RANGE where the value is outside the inclusive range."
+      }
+    ]
+  },
+  {
+    "group": "matches - EQUALS_IGNORE_CASE case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"TEST\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "EQUALS_IGNORE_CASE",
+              "pattern": "\"test\""
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for EQUALS_IGNORE_CASE where the value matches the pattern case-insensitively."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"hello\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "EQUALS_IGNORE_CASE",
+              "pattern": "\"test\""
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for EQUALS_IGNORE_CASE where the value does not match the pattern case-insensitively."
+      }
+    ]
+  },
+  {
+    "group": "matches - WILDCARD case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"testValue\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "WILDCARD",
+              "pattern": "\"test*\""
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for WILDCARD pattern where the value matches the wildcard pattern."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"exampleValue\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "WILDCARD",
+              "pattern": "\"test*\""
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for WILDCARD pattern where the value does not match the wildcard pattern."
+      }
+    ]
+  },
+  {
+    "group": "matches - Unsupported Pattern case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"value\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "UNKNOWN"
+            }
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test case for unsupported pattern type which should throw a RuntimeException."
+      }
+    ]
+  },
+  {
+    "group": "matches - ANYTHING_BUT_SUFFIX case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"testSuffix\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ANYTHING_BUT_SUFFIX",
+              "pattern": "\"Suffix\""
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for ANYTHING_BUT_SUFFIX pattern where the value ends with the suffix pattern."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"testValue\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ANYTHING_BUT_SUFFIX",
+              "pattern": "\"Suffix\""
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for ANYTHING_BUT_SUFFIX pattern where the value does not end with the suffix pattern."
+      }
+    ]
+  },
+  {
+    "group": "matches - ANYTHING_BUT_PREFIX case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"testValue\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ANYTHING_BUT_PREFIX",
+              "pattern": "\"test\""
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for ANYTHING_BUT_PREFIX pattern where the value starts with the prefix pattern."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"exampleValue\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "ANYTHING_BUT_PREFIX",
+              "pattern": "\"test\""
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for ANYTHING_BUT_PREFIX pattern where the value does not start with the prefix pattern."
+      }
+    ]
+  },
+  {
+    "group": "matches - NUMERIC_RANGE case with open boundaries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": 1
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_RANGE",
+              "bottom": 1,
+              "top": 10,
+              "openBottom": true,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for NUMERIC_RANGE where the value is equal to the open bottom boundary."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": 10
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_RANGE",
+              "bottom": 1,
+              "top": 10,
+              "openBottom": false,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for NUMERIC_RANGE where the value is equal to the open top boundary."
+      }
+    ]
+  },
+  {
+    "group": "matches - CIDR case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"192.168.1.1\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_RANGE",
+              "isCIDR": true,
+              "bottom": "192.168.1.0",
+              "top": "192.168.1.255",
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": true,
+        "description": "Test case for NUMERIC_RANGE with CIDR where the value is within the CIDR range."
+      },
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"192.169.1.1\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_RANGE",
+              "isCIDR": true,
+              "bottom": "192.168.1.0",
+              "top": "192.168.1.255",
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for NUMERIC_RANGE with CIDR where the value is outside the CIDR range."
+      }
+    ]
+  },
+  {
+    "group": "matches - NUMERIC_RANGE case with invalid CIDR",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "val",
+            "value": "\"invalidCIDR\""
+          },
+          {
+            "parameter": "pattern",
+            "value": {
+              "type": "NUMERIC_RANGE",
+              "isCIDR": true,
+              "bottom": "192.168.1.0",
+              "top": "192.168.1.255",
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": false,
+        "description": "Test case for NUMERIC_RANGE with CIDR where the value is an invalid CIDR format."
+      }
+    ]
+  }
+]

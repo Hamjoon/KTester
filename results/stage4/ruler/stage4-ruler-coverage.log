@@ -1,0 +1,1532 @@
+2026-09-10 11:40:28,799 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-10 11:40:28,799 - evaluations.coverage_test - INFO - Running tests for project: ruler
+2026-09-10 11:40:28,801 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/ByteMachine_doTransitionOn_Test.java
+2026-09-10 11:40:29,152 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.ByteMachine_doTransitionOn_Test
+2026-09-10 11:40:30,232 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:40:30,232 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.ByteMachine_doTransitionOn_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ByteMachine_doTransitionOn_Test ✔
+│     ├─ testDoTransitionOn_StandardAlphabetical() ✔
+│     ├─ testDoTransitionOn_InvalidStringWithNumericFlag() ✔
+│     ├─ testDoTransitionOn() ✔
+│     ├─ testDoTransitionOn_SpecialCharacters() ✔
+│     ├─ testDoTransitionOn_ValidString() ✔
+│     ├─ testDoTransitionOn_NormalString() ✔
+│     ├─ testDoTransitionOn_LongString() ✔
+│     ├─ testDoTransitionOn_LongNumericInput() ✔
+│     ├─ testDoTransitionOn_Whitespace() ✔
+│     ├─ testDoTransitionOn_MixedInput() ✔
+│     ├─ testDoTransitionOn_NullInput() ✘ Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testDoTransitionOn_NumericString() ✔
+│     ├─ testDoTransitionOn_DecimalNumericInput() ✔
+│     ├─ testDoTransitionOn_NumericInput() ✔
+│     ├─ testDoTransitionOn_NonNumericWithFlagSet() ✔
+│     ├─ testDoTransitionOn_EmptyString() ✔
+│     ├─ testDoTransitionOn_InvalidString() ✔
+│     ├─ testDoTransitionOn_NullFieldValueIsNumeric() ✘ expected: <fieldValueIsNumeric cannot be null> but was: <Cannot invoke "java.lang.Boolean.booleanValue()" because "<parameter3>" is null>
+│     └─ testDoTransitionOn_NullTransitionTo() ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:ByteMachine_doTransitionOn_Test:testDoTransitionOn_NullInput()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_doTransitionOn_Test', methodName = 'testDoTransitionOn_NullInput', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.ByteMachine_doTransitionOn_Test.testDoTransitionOn_NullInput(ByteMachine_doTransitionOn_Test.java:203)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.ByteMachine_doTransitionOn_Test.invokeDoTransitionOn(ByteMachine_doTransitionOn_Test.java:28)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "valString" is null
+       software.amazon.event.ruler.ByteMachine.doTransitionOn(ByteMachine.java:449)
+       [...]
+  JUnit Jupiter:ByteMachine_doTransitionOn_Test:testDoTransitionOn_NullFieldValueIsNumeric()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_doTransitionOn_Test', methodName = 'testDoTransitionOn_NullFieldValueIsNumeric', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <fieldValueIsNumeric cannot be null> but was: <Cannot invoke "java.lang.Boolean.booleanValue()" because "<parameter3>" is null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       software.amazon.event.ruler.ByteMachine_doTransitionOn_Test.testDoTransitionOn_NullFieldValueIsNumeric(ByteMachine_doTransitionOn_Test.java:230)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ByteMachine_doTransitionOn_Test:testDoTransitionOn_NullTransitionTo()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_doTransitionOn_Test', methodName = 'testDoTransitionOn_NullTransitionTo', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.ByteMachine_doTransitionOn_Test.testDoTransitionOn_NullTransitionTo(ByteMachine_doTransitionOn_Test.java:215)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+
+Test run finished after 519 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        19 tests found           ]
+[         0 tests skipped         ]
+[        19 tests started         ]
+[         0 tests aborted         ]
+[        16 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-10 11:40:30,517 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_StandardAlphabetical --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_InvalidStringWithNumericFlag --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_SpecialCharacters --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_ValidString --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_NormalString --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_LongString --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_LongNumericInput --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_Whitespace --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_MixedInput --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_NumericString --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_DecimalNumericInput --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_NumericInput --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_NonNumericWithFlagSet --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_EmptyString --select-method software.amazon.event.ruler.ByteMachine_doTransitionOn_Test#testDoTransitionOn_InvalidString
+2026-09-10 11:40:31,629 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ByteMachine_doTransitionOn_Test ✔
+│     ├─ testDoTransitionOn_StandardAlphabetical() ✔
+│     ├─ testDoTransitionOn_InvalidStringWithNumericFlag() ✔
+│     ├─ testDoTransitionOn() ✔
+│     ├─ testDoTransitionOn_SpecialCharacters() ✔
+│     ├─ testDoTransitionOn_ValidString() ✔
+│     ├─ testDoTransitionOn_NormalString() ✔
+│     ├─ testDoTransitionOn_LongString() ✔
+│     ├─ testDoTransitionOn_LongNumericInput() ✔
+│     ├─ testDoTransitionOn_Whitespace() ✔
+│     ├─ testDoTransitionOn_MixedInput() ✔
+│     ├─ testDoTransitionOn_NumericString() ✔
+│     ├─ testDoTransitionOn_DecimalNumericInput() ✔
+│     ├─ testDoTransitionOn_NumericInput() ✔
+│     ├─ testDoTransitionOn_NonNumericWithFlagSet() ✔
+│     ├─ testDoTransitionOn_EmptyString() ✔
+│     └─ testDoTransitionOn_InvalidString() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 524 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        16 tests found           ]
+[         0 tests skipped         ]
+[        16 tests started         ]
+[         0 tests aborted         ]
+[        16 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:40:31,922 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_evaluate_Test.java
+2026-09-10 11:40:32,267 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.MachineComplexityEvaluator_evaluate_Test
+2026-09-10 11:40:33,600 - evaluations.coverage_test - INFO - return code: 0
+2026-09-10 11:40:33,600 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ MachineComplexityEvaluator_evaluate_Test ✔
+│     ├─ testEvaluate_withNoTransitions() ✔
+│     ├─ testEvaluate_withNullState() ✔
+│     ├─ testEvaluate_withTransitionsLeadingToNull() ✔
+│     ├─ testEvaluate_withSingleTransitionNoMatches() ✔
+│     └─ testEvaluate_withValidState() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 708 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:40:33,871 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method software.amazon.event.ruler.MachineComplexityEvaluator_evaluate_Test#testEvaluate_withNoTransitions --select-method software.amazon.event.ruler.MachineComplexityEvaluator_evaluate_Test#testEvaluate_withNullState --select-method software.amazon.event.ruler.MachineComplexityEvaluator_evaluate_Test#testEvaluate_withTransitionsLeadingToNull --select-method software.amazon.event.ruler.MachineComplexityEvaluator_evaluate_Test#testEvaluate_withSingleTransitionNoMatches --select-method software.amazon.event.ruler.MachineComplexityEvaluator_evaluate_Test#testEvaluate_withValidState
+2026-09-10 11:40:35,133 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ MachineComplexityEvaluator_evaluate_Test ✔
+│     ├─ testEvaluate_withNoTransitions() ✔
+│     ├─ testEvaluate_withNullState() ✔
+│     ├─ testEvaluate_withTransitionsLeadingToNull() ✔
+│     ├─ testEvaluate_withSingleTransitionNoMatches() ✔
+│     └─ testEvaluate_withValidState() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 671 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:40:35,410 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/ByteMachine_findRangePattern_Test.java
+2026-09-10 11:40:35,725 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.ByteMachine_findRangePattern_Test
+2026-09-10 11:40:36,790 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:40:36,790 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.ByteMachine_findRangePattern_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ByteMachine_findRangePattern_Test ✔
+│     ├─ testFindRangePattern_BoundaryConditions() ✘ Expected a valid NameState object for minimum values ==> expected: not <null>
+│     ├─ testFindRangePattern_EdgeCases() ✘ Expected a valid NameState object ==> expected: not <null>
+│     ├─ testFindRangePattern_BasicFunctionality() ✘ Expected a valid NameState object ==> expected: not <null>
+│     ├─ testFindRangePattern_NullAndInvalidInputs() ✘ Index 0 out of bounds for length 0
+│     └─ testFindRangePattern() ✘ Expected a valid NameState object ==> expected: not <null>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (5):
+  JUnit Jupiter:ByteMachine_findRangePattern_Test:testFindRangePattern_BoundaryConditions()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_findRangePattern_Test', methodName = 'testFindRangePattern_BoundaryConditions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected a valid NameState object for minimum values ==> expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:312)
+       software.amazon.event.ruler.ByteMachine_findRangePattern_Test.testFindRangePattern_BoundaryConditions(ByteMachine_findRangePattern_Test.java:119)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:ByteMachine_findRangePattern_Test:testFindRangePattern_EdgeCases()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_findRangePattern_Test', methodName = 'testFindRangePattern_EdgeCases', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected a valid NameState object ==> expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:312)
+       software.amazon.event.ruler.ByteMachine_findRangePattern_Test.testFindRangePattern_EdgeCases(ByteMachine_findRangePattern_Test.java:81)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:ByteMachine_findRangePattern_Test:testFindRangePattern_BasicFunctionality()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_findRangePattern_Test', methodName = 'testFindRangePattern_BasicFunctionality', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected a valid NameState object ==> expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:312)
+       software.amazon.event.ruler.ByteMachine_findRangePattern_Test.testFindRangePattern_BasicFunctionality(ByteMachine_findRangePattern_Test.java:56)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:ByteMachine_findRangePattern_Test:testFindRangePattern_NullAndInvalidInputs()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_findRangePattern_Test', methodName = 'testFindRangePattern_NullAndInvalidInputs', methodParameterTypes = '']
+    => java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+       software.amazon.event.ruler.ByteMachine.findRangePattern(ByteMachine.java:956)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.ByteMachine_findRangePattern_Test.invokeFindRangePattern(ByteMachine_findRangePattern_Test.java:38)
+       software.amazon.event.ruler.ByteMachine_findRangePattern_Test.testFindRangePattern_NullAndInvalidInputs(ByteMachine_findRangePattern_Test.java:105)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ByteMachine_findRangePattern_Test:testFindRangePattern()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_findRangePattern_Test', methodName = 'testFindRangePattern', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected a valid NameState object ==> expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:312)
+       software.amazon.event.ruler.ByteMachine_findRangePattern_Test.testFindRangePattern(ByteMachine_findRangePattern_Test.java:47)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 492 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         5 tests failed          ]
+
+
+2026-09-10 11:40:37,072 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/ByteMachine_addEndOfMatch_Test.java
+2026-09-10 11:40:37,372 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.ByteMachine_addEndOfMatch_Test
+2026-09-10 11:40:38,566 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:40:38,566 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.ByteMachine_addEndOfMatch_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ByteMachine_addEndOfMatch_Test ✔
+│     └─ testAddEndOfMatch_withEmptyCharacters() ✘ java.lang.reflect.InvocationTargetException
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:ByteMachine_addEndOfMatch_Test:testAddEndOfMatch_withEmptyCharacters()
+    MethodSource [className = 'software.amazon.event.ruler.ByteMachine_addEndOfMatch_Test', methodName = 'testAddEndOfMatch_withEmptyCharacters', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+       software.amazon.event.ruler.ByteMachine_addEndOfMatch_Test.invokeAddEndOfMatch(ByteMachine_addEndOfMatch_Test.java:42)
+       software.amazon.event.ruler.ByteMachine_addEndOfMatch_Test.testAddEndOfMatch_withEmptyCharacters(ByteMachine_addEndOfMatch_Test.java:96)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.ByteMachine_addEndOfMatch_Test.invokeAddEndOfMatch(ByteMachine_addEndOfMatch_Test.java:40)
+       [...]
+     Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+       software.amazon.event.ruler.ByteMachine.addEndOfMatch(ByteMachine.java:1348)
+       [...]
+
+Test run finished after 602 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-10 11:40:38,838 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/JsonRuleCompiler_processMatchExpression_Test.java
+2026-09-10 11:40:39,189 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test
+2026-09-10 11:40:40,448 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:40:40,448 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonRuleCompiler_processMatchExpression_Test ✔
+│     ├─ testProcessMatchExpression_withSuffixMatch_nonStringValue() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testProcessMatchExpression_withPrefixMatch_nonStringValue() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testProcessMatchExpression_withExactMatch_nonStringValue() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testProcessMatchExpression_withNumericMatch() ✘ Match expression name not found
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     └─ testProcessMatchExpression_withNumericMatch_nonArrayValue() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (5):
+  JUnit Jupiter:JsonRuleCompiler_processMatchExpression_Test:testProcessMatchExpression_withSuffixMatch_nonStringValue()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test', methodName = 'testProcessMatchExpression_withSuffixMatch_nonStringValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.testProcessMatchExpression_withSuffixMatch_nonStringValue(JsonRuleCompiler_processMatchExpression_Test.java:124)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.invokeProcessMatchExpression(JsonRuleCompiler_processMatchExpression_Test.java:47)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match expression name not found
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.JsonRuleCompiler.barf(JsonRuleCompiler.java:712)
+       software.amazon.event.ruler.JsonRuleCompiler.processMatchExpression(JsonRuleCompiler.java:350)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_processMatchExpression_Test:testProcessMatchExpression_withPrefixMatch_nonStringValue()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test', methodName = 'testProcessMatchExpression_withPrefixMatch_nonStringValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.testProcessMatchExpression_withPrefixMatch_nonStringValue(JsonRuleCompiler_processMatchExpression_Test.java:97)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.invokeProcessMatchExpression(JsonRuleCompiler_processMatchExpression_Test.java:47)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match expression name not found
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.JsonRuleCompiler.barf(JsonRuleCompiler.java:712)
+       software.amazon.event.ruler.JsonRuleCompiler.processMatchExpression(JsonRuleCompiler.java:350)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_processMatchExpression_Test:testProcessMatchExpression_withExactMatch_nonStringValue()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test', methodName = 'testProcessMatchExpression_withExactMatch_nonStringValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.testProcessMatchExpression_withExactMatch_nonStringValue(JsonRuleCompiler_processMatchExpression_Test.java:84)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.invokeProcessMatchExpression(JsonRuleCompiler_processMatchExpression_Test.java:47)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match expression name not found
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.JsonRuleCompiler.barf(JsonRuleCompiler.java:712)
+       software.amazon.event.ruler.JsonRuleCompiler.processMatchExpression(JsonRuleCompiler.java:350)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_processMatchExpression_Test:testProcessMatchExpression_withNumericMatch()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test', methodName = 'testProcessMatchExpression_withNumericMatch', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match expression name not found
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.JsonRuleCompiler.barf(JsonRuleCompiler.java:712)
+       software.amazon.event.ruler.JsonRuleCompiler.processMatchExpression(JsonRuleCompiler.java:350)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.invokeProcessMatchExpression(JsonRuleCompiler_processMatchExpression_Test.java:47)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.testProcessMatchExpression_withNumericMatch(JsonRuleCompiler_processMatchExpression_Test.java:137)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_processMatchExpression_Test:testProcessMatchExpression_withNumericMatch_nonArrayValue()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test', methodName = 'testProcessMatchExpression_withNumericMatch_nonArrayValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.testProcessMatchExpression_withNumericMatch_nonArrayValue(JsonRuleCompiler_processMatchExpression_Test.java:149)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.JsonRuleCompiler_processMatchExpression_Test.invokeProcessMatchExpression(JsonRuleCompiler_processMatchExpression_Test.java:47)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match expression name not found
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.JsonRuleCompiler.barf(JsonRuleCompiler.java:712)
+       software.amazon.event.ruler.JsonRuleCompiler.processMatchExpression(JsonRuleCompiler.java:350)
+       [...]
+
+Test run finished after 649 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         5 tests failed          ]
+
+
+2026-09-10 11:40:40,728 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/ByteMachine_addMatchReferences_Test.java
+2026-09-10 11:40:41,039 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.ByteMachine_addMatchReferences_Test
+2026-09-10 11:40:41,503 - evaluations.coverage_test - INFO - return code: 2
+2026-09-10 11:40:41,503 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.ByteMachine_addMatchReferences_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 23 ms
+[         3 containers found      ]
+[         0 containers skipped    ]
+[         3 containers started    ]
+[         0 containers aborted    ]
+[         3 containers successful ]
+[         0 containers failed     ]
+[         0 tests found           ]
+[         0 tests skipped         ]
+[         0 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:40:41,765 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/JsonRuleCompiler_writeRules_Test.java
+2026-09-10 11:40:42,188 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test
+2026-09-10 11:40:43,630 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:40:43,630 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonRuleCompiler_writeRules_Test ✔
+│     ├─ testWriteRulesWithValidInput() ✘ Unrecognized match type source
+│     │         at [Source: (StringReader); line: 1, column: 14]
+│     ├─ testWriteRulesWithInvalidTokens() ✘ Expected JsonParseException for unexpected token. ==> Expected com.fasterxml.jackson.core.JsonParseException to be thrown, but nothing was thrown.
+│     ├─ testWriteRulesWithNumberTokens() ✘ Expected 1 pattern for number. ==> expected: <1> but was: <2>
+│     ├─ testWriteRulesWithNullTokens() ✘ Expected pattern for 'null' not found. ==> expected: <null> but was: <VP:null (T:EXACT)>
+│     ├─ testWriteRulesWithEmptyArray() ✘ Expected JsonParseException for empty array. ==> Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     └─ testWriteRulesWithBooleanTokens() ✘ Expected pattern for 'true' not found. ==> expected: <true> but was: <VP:true (T:EXACT)>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (6):
+  JUnit Jupiter:JsonRuleCompiler_writeRules_Test:testWriteRulesWithValidInput()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test', methodName = 'testWriteRulesWithValidInput', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Unrecognized match type source
+ at [Source: (StringReader); line: 1, column: 14]
+       software.amazon.event.ruler.JsonRuleCompiler.barf(JsonRuleCompiler.java:712)
+       software.amazon.event.ruler.JsonRuleCompiler.processMatchExpression(JsonRuleCompiler.java:503)
+       software.amazon.event.ruler.JsonRuleCompiler.writeRules(JsonRuleCompiler.java:289)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test.invokeWriteRules(JsonRuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test.testWriteRulesWithValidInput(JsonRuleCompiler_writeRules_Test.java:61)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_writeRules_Test:testWriteRulesWithInvalidTokens()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test', methodName = 'testWriteRulesWithInvalidTokens', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected JsonParseException for unexpected token. ==> Expected com.fasterxml.jackson.core.JsonParseException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+       software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test.testWriteRulesWithInvalidTokens(JsonRuleCompiler_writeRules_Test.java:135)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_writeRules_Test:testWriteRulesWithNumberTokens()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test', methodName = 'testWriteRulesWithNumberTokens', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected 1 pattern for number. ==> expected: <1> but was: <2>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+       software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test.testWriteRulesWithNumberTokens(JsonRuleCompiler_writeRules_Test.java:124)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_writeRules_Test:testWriteRulesWithNullTokens()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test', methodName = 'testWriteRulesWithNullTokens', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected pattern for 'null' not found. ==> expected: <null> but was: <VP:null (T:EXACT)>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+       org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNull(Assertions.java:287)
+       software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test.testWriteRulesWithNullTokens(JsonRuleCompiler_writeRules_Test.java:90)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_writeRules_Test:testWriteRulesWithEmptyArray()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test', methodName = 'testWriteRulesWithEmptyArray', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected JsonParseException for empty array. ==> Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+       software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test.testWriteRulesWithEmptyArray(JsonRuleCompiler_writeRules_Test.java:72)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test.invokeWriteRules(JsonRuleCompiler_writeRules_Test.java:54)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (String)"[]"; line: 1, column: 2]
+       software.amazon.event.ruler.JsonRuleCompiler.barf(JsonRuleCompiler.java:712)
+       software.amazon.event.ruler.JsonRuleCompiler.writeRules(JsonRuleCompiler.java:328)
+       [...]
+  JUnit Jupiter:JsonRuleCompiler_writeRules_Test:testWriteRulesWithBooleanTokens()
+    MethodSource [className = 'software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test', methodName = 'testWriteRulesWithBooleanTokens', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected pattern for 'true' not found. ==> expected: <true> but was: <VP:true (T:EXACT)>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       software.amazon.event.ruler.JsonRuleCompiler_writeRules_Test.testWriteRulesWithBooleanTokens(JsonRuleCompiler_writeRules_Test.java:102)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 804 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         6 tests failed          ]
+
+
+2026-09-10 11:40:43,917 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/Ruler_matches_Test.java
+2026-09-10 11:40:44,269 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/software/amazon/event/ruler/Ruler_matches_Test.java:107: error: constructor AnythingButEqualsIgnoreCase in class AnythingButEqualsIgnoreCase cannot be applied to given types;
+        testPattern = new AnythingButEqualsIgnoreCase(Set.of("test"), false);
+                      ^
+  required: Set<String>
+  found:    Set<String>,boolean
+  reason: actual and formal argument lists differ in length
+1 error
+
+2026-09-10 11:40:44,271 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java
+2026-09-10 11:40:44,609 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:23: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0 }, true, new double[] { 10 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:44: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 0, 2, 9 }, false, new double[] { 0, 0, 5, 0 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:48: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 1, 0 }, true, new double[] { 0, 1, 5 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:52: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 1, 2 }, false, new double[] { 0, 1, 3 }, true);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:56: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 1, 0 }, true, new double[] { 1, 2 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:64: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 0, 9 }, false, new double[] { 0, 1, 0 }, true);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:68: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 0, 0 }, false, new double[] { 0, 0, 0 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:72: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 0, 8 }, false, new double[] { 0, 1, 0 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:76: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 2, 0 }, true, new double[] { 0, 2, 0 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:84: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 2, 0 }, false, new double[] { 0, 1, 5 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:87: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 1, 5 }, true, new double[] { 0, 1, 5 }, true);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:90: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 2, 5 }, false, new double[] { 0, 2, 5 }, true);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:93: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 1, 9 }, false, new double[] { 0, 2, 0 }, true);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:100: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 0, 2, 9 }, false, new double[] { 0, 0, 2, 9 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:103: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 2, 5 }, true, new double[] { 0, 2, 5 }, false);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:106: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 1, 0 }, true, new double[] { 0, 1, 0 }, true);
+                          ^
+src/test/java/software/amazon/event/ruler/ByteMachine_addRangePattern_Test.java:109: error: incompatible types: double[] cannot be converted to double
+        range = new Range(new double[] { 0, 1, 9 }, false, new double[] { 0, 2, 0 }, true);
+                          ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+17 errors
+
+2026-09-10 11:40:44,611 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test.java
+2026-09-10 11:40:44,953 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test
+2026-09-10 11:40:46,249 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:40:46,250 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test ✔
+│     ├─ testGetMatchesAccessibleFromEachTransition_InvalidMatchTypes() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     └─ testGetMatchesAccessibleFromEachTransition_ExceptionState() ✘ Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test:testGetMatchesAccessibleFromEachTransition_InvalidMatchTypes()
+    MethodSource [className = 'software.amazon.event.ruler.MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test', methodName = 'testGetMatchesAccessibleFromEachTransition_InvalidMatchTypes', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test.testGetMatchesAccessibleFromEachTransition_InvalidMatchTypes(MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test.java:214)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test:testGetMatchesAccessibleFromEachTransition_ExceptionState()
+    MethodSource [className = 'software.amazon.event.ruler.MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test', methodName = 'testGetMatchesAccessibleFromEachTransition_ExceptionState', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test.testGetMatchesAccessibleFromEachTransition_ExceptionState(MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition_Test.java:202)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+
+Test run finished after 704 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:40:46,532 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/ByteMachine_updateMatchReferences_Test.java
+2026-09-10 11:40:46,860 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.ByteMachine_updateMatchReferences_Test
+2026-09-10 11:40:48,084 - evaluations.coverage_test - INFO - return code: 0
+2026-09-10 11:40:48,085 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ByteMachine_updateMatchReferences_Test ✔
+│     ├─ testUpdateMatchReferencesWithExactPattern() ✔
+│     ├─ testUpdateMatchReferencesWithSuffixPattern() ✔
+│     └─ testUpdateMatchReferencesWithNumericEqPattern() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 641 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:40:48,360 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method software.amazon.event.ruler.ByteMachine_updateMatchReferences_Test#testUpdateMatchReferencesWithExactPattern --select-method software.amazon.event.ruler.ByteMachine_updateMatchReferences_Test#testUpdateMatchReferencesWithSuffixPattern --select-method software.amazon.event.ruler.ByteMachine_updateMatchReferences_Test#testUpdateMatchReferencesWithNumericEqPattern
+2026-09-10 11:40:49,698 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ByteMachine_updateMatchReferences_Test ✔
+│     ├─ testUpdateMatchReferencesWithExactPattern() ✔
+│     ├─ testUpdateMatchReferencesWithSuffixPattern() ✔
+│     └─ testUpdateMatchReferencesWithNumericEqPattern() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 681 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:40:49,981 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/ByteMachine_deleteRangePattern_Test.java
+2026-09-10 11:40:50,280 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.ByteMachine_deleteRangePattern_Test
+2026-09-10 11:40:50,773 - evaluations.coverage_test - INFO - return code: 2
+2026-09-10 11:40:50,773 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.ByteMachine_deleteRangePattern_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 30 ms
+[         3 containers found      ]
+[         0 containers skipped    ]
+[         3 containers started    ]
+[         0 containers aborted    ]
+[         3 containers successful ]
+[         0 containers failed     ]
+[         0 tests found           ]
+[         0 tests skipped         ]
+[         0 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:40:51,050 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/RuleCompiler_processMatchExpression_Test.java
+2026-09-10 11:40:51,387 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/software/amazon/event/ruler/RuleCompiler_processMatchExpression_Test.java:55: error: cannot find symbol
+        assertEquals("value", result.getPatternValue());
+                                    ^
+  symbol:   method getPatternValue()
+  location: variable result of type Patterns
+src/test/java/software/amazon/event/ruler/RuleCompiler_processMatchExpression_Test.java:65: error: cannot find symbol
+        assertEquals("prefixValue", result.getPatternValue());
+                                          ^
+  symbol:   method getPatternValue()
+  location: variable result of type Patterns
+src/test/java/software/amazon/event/ruler/RuleCompiler_processMatchExpression_Test.java:75: error: cannot find symbol
+        assertEquals("suffixValue", result.getPatternValue());
+                                          ^
+  symbol:   method getPatternValue()
+  location: variable result of type Patterns
+3 errors
+
+2026-09-10 11:40:51,388 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_Test.java
+2026-09-10 11:40:51,702 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_Test.java:32: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+src/test/java/software/amazon/event/ruler/ByteMachine_findMatchPattern_Test.java:41: error: cannot find symbol
+            return InputCharacterType.CHARACTER;
+                                     ^
+  symbol:   variable CHARACTER
+  location: class InputCharacterType
+2 errors
+
+2026-09-10 11:40:51,704 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/GenericMachine_deleteStep_Test.java
+2026-09-10 11:40:52,092 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.GenericMachine_deleteStep_Test
+2026-09-10 11:40:53,438 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:40:53,438 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.GenericMachine_deleteStep_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ GenericMachine_deleteStep_Test ✔
+│     ├─ testDeleteStep_EmptyKeysList() ✘ software.amazon.event.ruler.GenericMachine.deleteStep(software.amazon.event.ruler.NameState,java.util.List,int,java.util.Map,java.lang.String,java.util.List)
+│     ├─ testDeleteStep_LastStepWithNoRules() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testDeleteStep_KeyIndexOutOfBounds() ✘ software.amazon.event.ruler.GenericMachine.deleteStep(software.amazon.event.ruler.NameState,java.util.List,int,java.util.Map,java.lang.String,java.util.List)
+│     ├─ testDeleteStep_MultiplePatternsForKey() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testDeleteStep_KeyWithExistingRules() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testDeleteStep_NoMatchers() ✘ software.amazon.event.ruler.GenericMachine.deleteStep(software.amazon.event.ruler.NameState,java.util.List,int,java.util.Map,java.lang.String,java.util.List)
+│     ├─ testDeleteStep() ✘ Index 0 out of bounds for length 0
+│     ├─ testDeleteStep_NoPatternsForKey() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testDeleteStep_PatternFoundInByteMachine() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testDeleteStep_PatternFoundInNameMatcher() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     └─ testDeleteStep_RecursiveDeletion() ✘ 
+│              when() requires an argument which has to be 'a method call on a mock'.
+│              For example:
+│                  when(mock.getArticles()).thenReturn(articles);
+│           
+│              Also, this error might show up because:
+│              1. you stub either of: final/private/equals()/hashCode() methods.
+│                 Those methods *cannot* be stubbed/verified.
+│                 Mocking methods declared on non-public parent classes is not supported.
+│              2. inside when() you don't call method on mock but on some other object.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (11):
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_EmptyKeysList()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_EmptyKeysList', methodParameterTypes = '']
+    => java.lang.NoSuchMethodException: software.amazon.event.ruler.GenericMachine.deleteStep(software.amazon.event.ruler.NameState,java.util.List,int,java.util.Map,java.lang.String,java.util.List)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.invokeDeleteStep(GenericMachine_deleteStep_Test.java:32)
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_EmptyKeysList(GenericMachine_deleteStep_Test.java:149)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_LastStepWithNoRules()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_LastStepWithNoRules', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_LastStepWithNoRules(GenericMachine_deleteStep_Test.java:107)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_KeyIndexOutOfBounds()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_KeyIndexOutOfBounds', methodParameterTypes = '']
+    => java.lang.NoSuchMethodException: software.amazon.event.ruler.GenericMachine.deleteStep(software.amazon.event.ruler.NameState,java.util.List,int,java.util.Map,java.lang.String,java.util.List)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.invokeDeleteStep(GenericMachine_deleteStep_Test.java:32)
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_KeyIndexOutOfBounds(GenericMachine_deleteStep_Test.java:160)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_MultiplePatternsForKey()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_MultiplePatternsForKey', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_MultiplePatternsForKey(GenericMachine_deleteStep_Test.java:184)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_KeyWithExistingRules()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_KeyWithExistingRules', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_KeyWithExistingRules(GenericMachine_deleteStep_Test.java:204)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_NoMatchers()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_NoMatchers', methodParameterTypes = '']
+    => java.lang.NoSuchMethodException: software.amazon.event.ruler.GenericMachine.deleteStep(software.amazon.event.ruler.NameState,java.util.List,int,java.util.Map,java.lang.String,java.util.List)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.invokeDeleteStep(GenericMachine_deleteStep_Test.java:32)
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_NoMatchers(GenericMachine_deleteStep_Test.java:58)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep', methodParameterTypes = '']
+    => java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+       java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+       java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+       java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+       java.base/java.util.Objects.checkIndex(Objects.java:361)
+       java.base/java.util.ArrayList.get(ArrayList.java:427)
+       software.amazon.event.ruler.GenericMachine.deleteStep(GenericMachine.java:261)
+       software.amazon.event.ruler.GenericMachine.deletePatternRule(GenericMachine.java:238)
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep(GenericMachine_deleteStep_Test.java:44)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_NoPatternsForKey()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_NoPatternsForKey', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_NoPatternsForKey(GenericMachine_deleteStep_Test.java:170)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_PatternFoundInByteMachine()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_PatternFoundInByteMachine', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_PatternFoundInByteMachine(GenericMachine_deleteStep_Test.java:88)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_PatternFoundInNameMatcher()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_PatternFoundInNameMatcher', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_PatternFoundInNameMatcher(GenericMachine_deleteStep_Test.java:69)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:GenericMachine_deleteStep_Test:testDeleteStep_RecursiveDeletion()
+    MethodSource [className = 'software.amazon.event.ruler.GenericMachine_deleteStep_Test', methodName = 'testDeleteStep_RecursiveDeletion', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       software.amazon.event.ruler.GenericMachine_deleteStep_Test.testDeleteStep_RecursiveDeletion(GenericMachine_deleteStep_Test.java:125)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+
+Test run finished after 742 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[        11 tests failed          ]
+
+
+2026-09-10 11:40:53,720 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/software/amazon/event/ruler/RuleCompiler_writeRules_Test.java
+2026-09-10 11:40:54,088 - evaluations.coverage_test - INFO - Running single unit test, testclass: software.amazon.event.ruler.RuleCompiler_writeRules_Test
+2026-09-10 11:40:55,250 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:40:55,250 - evaluations.coverage_test - INFO - test case failed in software.amazon.event.ruler.RuleCompiler_writeRules_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ RuleCompiler_writeRules_Test ✔
+│     ├─ testWriteRules_SingleObject() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_NumericValue() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_SpecialCharacters() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_BooleanValue() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_MalformedJson() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testWriteRules_EmptyArray() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testWriteRules_NullValue() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_ValidInput() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_MultipleStringValues() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_InvalidValue() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testWriteRules_MixedTypes() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_StringValueWithQuotes() ✘ Match value must be String, number, true, false, or null
+│     │         at [Source: (StringReader); line: 1, column: 2]
+│     ├─ testWriteRules_InvalidNumberFormat() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testWriteRules_ExtraComma() ✘ Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+│     └─ testWriteRules_LargeNumberValue() ✘ Match value must be String, number, true, false, or null
+│               at [Source: (StringReader); line: 1, column: 2]
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (15):
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_SingleObject()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_SingleObject', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_SingleObject(RuleCompiler_writeRules_Test.java:92)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_NumericValue()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_NumericValue', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_NumericValue(RuleCompiler_writeRules_Test.java:119)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_SpecialCharacters()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_SpecialCharacters', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_SpecialCharacters(RuleCompiler_writeRules_Test.java:211)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_BooleanValue()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_BooleanValue', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_BooleanValue(RuleCompiler_writeRules_Test.java:132)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_MalformedJson()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_MalformedJson', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_MalformedJson(RuleCompiler_writeRules_Test.java:238)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_EmptyArray()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_EmptyArray', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_EmptyArray(RuleCompiler_writeRules_Test.java:78)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_NullValue()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_NullValue', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_NullValue(RuleCompiler_writeRules_Test.java:145)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_ValidInput()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_ValidInput', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_ValidInput(RuleCompiler_writeRules_Test.java:63)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_MultipleStringValues()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_MultipleStringValues', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_MultipleStringValues(RuleCompiler_writeRules_Test.java:172)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_InvalidValue()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_InvalidValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_InvalidValue(RuleCompiler_writeRules_Test.java:158)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_MixedTypes()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_MixedTypes', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_MixedTypes(RuleCompiler_writeRules_Test.java:185)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_StringValueWithQuotes()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_StringValueWithQuotes', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_StringValueWithQuotes(RuleCompiler_writeRules_Test.java:106)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_InvalidNumberFormat()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_InvalidNumberFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_InvalidNumberFormat(RuleCompiler_writeRules_Test.java:224)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_ExtraComma()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_ExtraComma', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.fasterxml.jackson.core.JsonParseException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_ExtraComma(RuleCompiler_writeRules_Test.java:252)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       [...]
+     Caused by: com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       [...]
+  JUnit Jupiter:RuleCompiler_writeRules_Test:testWriteRules_LargeNumberValue()
+    MethodSource [className = 'software.amazon.event.ruler.RuleCompiler_writeRules_Test', methodName = 'testWriteRules_LargeNumberValue', methodParameterTypes = '']
+    => com.fasterxml.jackson.core.JsonParseException: Match value must be String, number, true, false, or null
+ at [Source: (StringReader); line: 1, column: 2]
+       software.amazon.event.ruler.RuleCompiler.barf(RuleCompiler.java:609)
+       software.amazon.event.ruler.RuleCompiler.writeRules(RuleCompiler.java:231)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.invokeWriteRules(RuleCompiler_writeRules_Test.java:54)
+       software.amazon.event.ruler.RuleCompiler_writeRules_Test.testWriteRules_LargeNumberValue(RuleCompiler_writeRules_Test.java:198)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+
+Test run finished after 582 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[        15 tests failed          ]
+
+
+2026-09-10 11:40:55,525 - evaluations.coverage_test - INFO - {'software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set<NameState>, boolean)': {'test_cases': 19, 'passed_cases': 16}, 'software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)': {'test_cases': 5, 'passed_cases': 5}, 'software.amazon.event.ruler.ByteMachine#findRangePattern(Range)': {'test_cases': 5, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)': {'test_cases': 1, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)': {'test_cases': 5, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'software.amazon.event.ruler.ByteMachine#addMatchReferences(ByteMatch)': {'test_cases': 0, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'software.amazon.event.ruler.JsonRuleCompiler#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)': {'test_cases': 6, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)': {'error_type': 'compile error'}, 'software.amazon.event.ruler.ByteMachine#addRangePattern(Range)': {'error_type': 'compile error'}, 'software.amazon.event.ruler.MachineComplexityEvaluator#getMatchesAccessibleFromEachTransition(ByteState)': {'test_cases': 2, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'software.amazon.event.ruler.ByteMachine#updateMatchReferences(ByteMatch)': {'test_cases': 3, 'passed_cases': 3}, 'software.amazon.event.ruler.ByteMachine#deleteRangePattern(Range)': {'test_cases': 0, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)': {'error_type': 'compile error'}, 'software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)': {'error_type': 'compile error'}, 'software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)': {'test_cases': 11, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'software.amazon.event.ruler.RuleCompiler#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)': {'test_cases': 15, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}}
+2026-09-10 11:40:55,525 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/ByteMachine_doTransitionOn/software.amazon.event.ruler/ByteMachine.html, method: doTransitionOn(String, Set<NameState>, boolean)
+2026-09-10 11:40:55,535 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/ByteMachine_doTransitionOn_correct/software.amazon.event.ruler/ByteMachine.html, method: doTransitionOn(String, Set<NameState>, boolean)
+2026-09-10 11:40:55,543 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/MachineComplexityEvaluator_evaluate/software.amazon.event.ruler/MachineComplexityEvaluator.html, method: evaluate(ByteState)
+2026-09-10 11:40:55,545 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/MachineComplexityEvaluator_evaluate_correct/software.amazon.event.ruler/MachineComplexityEvaluator.html, method: evaluate(ByteState)
+2026-09-10 11:40:55,547 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/ByteMachine_findRangePattern/software.amazon.event.ruler/ByteMachine.html, method: findRangePattern(Range)
+2026-09-10 11:40:55,554 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/ByteMachine_addEndOfMatch/software.amazon.event.ruler/ByteMachine.html, method: addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)
+2026-09-10 11:40:55,565 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/JsonRuleCompiler_processMatchExpression/software.amazon.event.ruler/JsonRuleCompiler.html, method: processMatchExpression(JsonParser)
+2026-09-10 11:40:55,569 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/ByteMachine_addMatchReferences/software.amazon.event.ruler/ByteMachine.html, method: addMatchReferences(ByteMatch)
+2026-09-10 11:40:55,577 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/JsonRuleCompiler_writeRules/software.amazon.event.ruler/JsonRuleCompiler.html, method: writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)
+2026-09-10 11:40:55,582 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition/software.amazon.event.ruler/MachineComplexityEvaluator.html, method: getMatchesAccessibleFromEachTransition(ByteState)
+2026-09-10 11:40:55,584 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/ByteMachine_updateMatchReferences/software.amazon.event.ruler/ByteMachine.html, method: updateMatchReferences(ByteMatch)
+2026-09-10 11:40:55,591 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/ByteMachine_updateMatchReferences_correct/software.amazon.event.ruler/ByteMachine.html, method: updateMatchReferences(ByteMatch)
+2026-09-10 11:40:55,599 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/ByteMachine_deleteRangePattern/software.amazon.event.ruler/ByteMachine.html, method: deleteRangePattern(Range)
+2026-09-10 11:40:55,611 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/GenericMachine_deleteStep/software.amazon.event.ruler/GenericMachine.html, method: deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)
+2026-09-10 11:40:55,616 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/ruler/reports/jacoco-report-html/RuleCompiler_writeRules/software.amazon.event.ruler/RuleCompiler.html, method: writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)
+2026-09-10 11:40:55,619 - evaluations.coverage_test - INFO - report data:
+{'software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set<NameState>, boolean)': {'test_cases': 19, 'passed_cases': 19, 'inst_cov': 0.31, 'bran_cov': 0.16, 'correct_inst_cov': 0.31, 'correct_bran_cov': 0.16}, 'software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)': {'test_cases': 5, 'passed_cases': 5, 'inst_cov': 0.53, 'bran_cov': 0.38, 'correct_inst_cov': 0.53, 'correct_bran_cov': 0.38}, 'software.amazon.event.ruler.ByteMachine#findRangePattern(Range)': {'test_cases': 5, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.14, 'bran_cov': 0.06}, 'software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)': {'test_cases': 1, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.03, 'bran_cov': 0.03}, 'software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)': {'test_cases': 5, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.01, 'bran_cov': 0.01}, 'software.amazon.event.ruler.ByteMachine#addMatchReferences(ByteMatch)': {'test_cases': 0, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.0, 'bran_cov': 0.0}, 'software.amazon.event.ruler.JsonRuleCompiler#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)': {'test_cases': 6, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.72, 'bran_cov': 0.6}, 'software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)': {'error_type': 'compile error', 'test_cases': 7, 'passed_cases': 0}, 'software.amazon.event.ruler.ByteMachine#addRangePattern(Range)': {'error_type': 'compile error', 'test_cases': 5, 'passed_cases': 0}, 'software.amazon.event.ruler.MachineComplexityEvaluator#getMatchesAccessibleFromEachTransition(ByteState)': {'test_cases': 2, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.52, 'bran_cov': 0.4}, 'software.amazon.event.ruler.ByteMachine#updateMatchReferences(ByteMatch)': {'test_cases': 3, 'passed_cases': 3, 'inst_cov': 0.25, 'bran_cov': 0.23, 'correct_inst_cov': 0.25, 'correct_bran_cov': 0.23}, 'software.amazon.event.ruler.ByteMachine#deleteRangePattern(Range)': {'test_cases': 0, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.0, 'bran_cov': 0.0}, 'software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)': {'error_type': 'compile error', 'test_cases': 9, 'passed_cases': 0}, 'software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)': {'error_type': 'compile error', 'test_cases': 13, 'passed_cases': 0}, 'software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)': {'test_cases': 11, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.0, 'bran_cov': 0.0}, 'software.amazon.event.ruler.RuleCompiler#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)': {'test_cases': 15, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.11, 'bran_cov': 0.07}, 'compile_pass_rate': 0.6792452830188679, 'execution_pass_rate': 0.25471698113207547, 'average_instruction_coverage': 0.16374999999999998, 'average_branch_coverage': 0.12125000000000001, 'average_correct_instruction_coverage': 0.068125, 'average_correct_branch_coverage': 0.048125}

@@ -1,0 +1,169 @@
+{
+    "test cases": [
+        {
+            "group": "addMatchReferences - Exact, Prefix, Exists, Equals Ignore Case, Wildcard",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Patterns(MatchType.EXACT))"
+                        }
+                    ],
+                    "expected": "No changes in hasNumeric, hasIP, or hasSuffix.",
+                    "description": "Test that adding a match with EXACT type does not modify any counters."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Patterns(MatchType.PREFIX))"
+                        }
+                    ],
+                    "expected": "No changes in hasNumeric, hasIP, or hasSuffix.",
+                    "description": "Test that adding a match with PREFIX type does not modify any counters."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Patterns(MatchType.EXISTS))"
+                        }
+                    ],
+                    "expected": "No changes in hasNumeric, hasIP, or hasSuffix.",
+                    "description": "Test that adding a match with EXISTS type does not modify any counters."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Patterns(MatchType.EQUALS_IGNORE_CASE))"
+                        }
+                    ],
+                    "expected": "No changes in hasNumeric, hasIP, or hasSuffix.",
+                    "description": "Test that adding a match with EQUALS_IGNORE_CASE type does not modify any counters."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Patterns(MatchType.WILDCARD))"
+                        }
+                    ],
+                    "expected": "No changes in hasNumeric, hasIP, or hasSuffix.",
+                    "description": "Test that adding a match with WILDCARD type does not modify any counters."
+                }
+            ]
+        },
+        {
+            "group": "addMatchReferences - Suffix",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Patterns(MatchType.SUFFIX))"
+                        }
+                    ],
+                    "expected": "hasSuffix should be incremented by 1.",
+                    "description": "Test that adding a match with SUFFIX type increments the hasSuffix counter."
+                }
+            ]
+        },
+        {
+            "group": "addMatchReferences - Numeric Equal and Numeric Range",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Patterns(MatchType.NUMERIC_EQ))"
+                        }
+                    ],
+                    "expected": "hasNumeric should be incremented by 1.",
+                    "description": "Test that adding a match with NUMERIC_EQ type increments the hasNumeric counter."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Range(MatchType.NUMERIC_RANGE, false))"
+                        }
+                    ],
+                    "expected": "hasNumeric should be incremented by 1.",
+                    "description": "Test that adding a match with NUMERIC_RANGE type increments the hasNumeric counter when isCIDR is false."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Range(MatchType.NUMERIC_RANGE, true))"
+                        }
+                    ],
+                    "expected": "hasIP should be incremented by 1.",
+                    "description": "Test that adding a match with NUMERIC_RANGE type increments the hasIP counter when isCIDR is true."
+                }
+            ]
+        },
+        {
+            "group": "addMatchReferences - Anything But Types",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new AnythingBut(MatchType.ANYTHING_BUT))"
+                        }
+                    ],
+                    "expected": "anythingButs should include match.getNextNameState() and hasNumeric should be unchanged.",
+                    "description": "Test that adding a match with ANYTHING_BUT type adds to anythingButs and increments hasNumeric if isNumeric is true."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new AnythingBut(MatchType.ANYTHING_BUT_IGNORE_CASE))"
+                        }
+                    ],
+                    "expected": "anythingButs should include match.getNextNameState() and hasNumeric should be unchanged.",
+                    "description": "Test that adding a match with ANYTHING_BUT_IGNORE_CASE type adds to anythingButs without modifying counters."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new AnythingBut(MatchType.ANYTHING_BUT_SUFFIX))"
+                        }
+                    ],
+                    "expected": "anythingButs should include match.getNextNameState() and hasSuffix should be incremented by 1.",
+                    "description": "Test that adding a match with ANYTHING_BUT_SUFFIX type adds to anythingButs and increments hasSuffix."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new AnythingBut(MatchType.ANYTHING_BUT_PREFIX))"
+                        }
+                    ],
+                    "expected": "anythingButs should include match.getNextNameState.",
+                    "description": "Test that adding a match with ANYTHING_BUT_PREFIX type adds to anythingButs without modifying counters."
+                }
+            ]
+        },
+        {
+            "group": "addMatchReferences - Default Case",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Patterns(MatchType.UNDEFINED))"
+                        }
+                    ],
+                    "expected": "An AssertionError should be thrown.",
+                    "description": "Test that adding a match with an undefined pattern type throws an AssertionError."
+                }
+            ]
+        }
+    ]
+}

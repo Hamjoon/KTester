@@ -1,0 +1,124 @@
+{
+  "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set<NameState>, boolean)": {
+    "test_cases": 19,
+    "passed_cases": 19,
+    "inst_cov": 0.31,
+    "bran_cov": 0.16,
+    "correct_inst_cov": 0.31,
+    "correct_bran_cov": 0.16
+  },
+  "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)": {
+    "test_cases": 5,
+    "passed_cases": 5,
+    "inst_cov": 0.53,
+    "bran_cov": 0.38,
+    "correct_inst_cov": 0.53,
+    "correct_bran_cov": 0.38
+  },
+  "software.amazon.event.ruler.ByteMachine#findRangePattern(Range)": {
+    "test_cases": 5,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.14,
+    "bran_cov": 0.06
+  },
+  "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)": {
+    "test_cases": 1,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.03,
+    "bran_cov": 0.03
+  },
+  "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)": {
+    "test_cases": 5,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.01,
+    "bran_cov": 0.01
+  },
+  "software.amazon.event.ruler.ByteMachine#addMatchReferences(ByteMatch)": {
+    "test_cases": 0,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)": {
+    "test_cases": 6,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.72,
+    "bran_cov": 0.6
+  },
+  "software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)": {
+    "error_type": "compile error",
+    "test_cases": 7,
+    "passed_cases": 0
+  },
+  "software.amazon.event.ruler.ByteMachine#addRangePattern(Range)": {
+    "error_type": "compile error",
+    "test_cases": 5,
+    "passed_cases": 0
+  },
+  "software.amazon.event.ruler.MachineComplexityEvaluator#getMatchesAccessibleFromEachTransition(ByteState)": {
+    "test_cases": 2,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.52,
+    "bran_cov": 0.4
+  },
+  "software.amazon.event.ruler.ByteMachine#updateMatchReferences(ByteMatch)": {
+    "test_cases": 3,
+    "passed_cases": 3,
+    "inst_cov": 0.25,
+    "bran_cov": 0.23,
+    "correct_inst_cov": 0.25,
+    "correct_bran_cov": 0.23
+  },
+  "software.amazon.event.ruler.ByteMachine#deleteRangePattern(Range)": {
+    "test_cases": 0,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)": {
+    "error_type": "compile error",
+    "test_cases": 9,
+    "passed_cases": 0
+  },
+  "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)": {
+    "error_type": "compile error",
+    "test_cases": 13,
+    "passed_cases": 0
+  },
+  "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)": {
+    "test_cases": 11,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "software.amazon.event.ruler.RuleCompiler#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)": {
+    "test_cases": 15,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.11,
+    "bran_cov": 0.07
+  },
+  "compile_pass_rate": 0.6792452830188679,
+  "execution_pass_rate": 0.25471698113207547,
+  "average_instruction_coverage": 0.16374999999999998,
+  "average_branch_coverage": 0.12125000000000001,
+  "average_correct_instruction_coverage": 0.068125,
+  "average_correct_branch_coverage": 0.048125
+}

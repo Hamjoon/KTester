@@ -1,0 +1,337 @@
+[
+  {
+    "group": "writeRules",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithEmptyArray"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "JsonParseException with message 'Empty arrays are not allowed'",
+        "description": "Test case where the parser points to an empty JSON array, expecting a JsonParseException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithSingleObject"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "rule contains 'testRule' with a list of Patterns",
+        "description": "Test case where the parser points to a JSON array with a single object, expecting the rule to contain the processed Patterns."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithStringValue"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": true
+          }
+        ],
+        "expected": "rule contains 'testRule' with Patterns that has quoted string",
+        "description": "Test case where the parser points to a JSON array with a string value and withQuotes is true, expecting the string to be quoted."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithNumberValue"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "rule contains 'testRule' with Patterns for numeric match",
+        "description": "Test case where the parser points to a JSON array with a numeric value, expecting the rule to contain numeric match patterns."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithBooleanValue"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "rule contains 'testRule' with Patterns for boolean match",
+        "description": "Test case where the parser points to a JSON array with a boolean value, expecting the rule to contain boolean match patterns."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithNullValue"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "rule contains 'testRule' with Patterns for null match",
+        "description": "Test case where the parser points to a JSON array with a null value, expecting the rule to contain patterns for null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithInvalidValue"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "JsonParseException with message 'Match value must be String, number, true, false, or null'",
+        "description": "Test case where the parser points to an invalid value, expecting a JsonParseException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithMultipleStringValues"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "rule contains 'testRule' with Patterns for multiple string values",
+        "description": "Test case where the parser points to a JSON array with multiple string values, expecting the rule to contain patterns for each string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithMixedTypes"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": true
+          }
+        ],
+        "expected": "rule contains 'testRule' with Patterns for mixed types including quoted strings",
+        "description": "Test case where the parser points to a JSON array with mixed types (strings, numbers, booleans), expecting the rule to handle each type appropriately with quoted strings."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithEmptyObject"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "JsonParseException with message 'Match value must be String, number, true, false, or null'",
+        "description": "Test case where the parser points to a JSON array with an empty object, expecting a JsonParseException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithLargeNumberValue"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "rule contains 'testRule' with Patterns for large numeric match",
+        "description": "Test case where the parser points to a JSON array with a large numeric value, expecting the rule to contain a pattern for the large number."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithSpecialCharacters"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": true
+          }
+        ],
+        "expected": "rule contains 'testRule' with Patterns that has quoted special characters",
+        "description": "Test case where the parser points to a JSON array with strings containing special characters, expecting the rule to handle them correctly with quotes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithInvalidNumber"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "JsonParseException with message 'Invalid number format'",
+        "description": "Test case where the parser points to a JSON array with an invalid number format, expecting a JsonParseException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithMalformedJson"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "JsonParseException with message 'Unexpected end-of-input'",
+        "description": "Test case where the parser points to a malformed JSON input, expecting a JsonParseException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "rule",
+            "value": {}
+          },
+          {
+            "parameter": "name",
+            "value": "testRule"
+          },
+          {
+            "parameter": "parser",
+            "value": "mockParserWithExtraComma"
+          },
+          {
+            "parameter": "withQuotes",
+            "value": false
+          }
+        ],
+        "expected": "JsonParseException with message 'Unexpected character encountered while parsing value'",
+        "description": "Test case where the parser points to a JSON array with an extra comma, expecting a JsonParseException."
+      }
+    ]
+  }
+]

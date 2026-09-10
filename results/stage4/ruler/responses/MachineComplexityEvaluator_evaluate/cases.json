@@ -1,0 +1,217 @@
+[
+  {
+    "group": "evaluate method - basic functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions"
+          }
+        ],
+        "expected": "expected complexity value based on transitions",
+        "description": "Test the evaluate method with a mocked ByteState that has a set of transitions, ensuring the complexity calculated matches the expected complexity based on the transitions."
+      }
+    ]
+  },
+  {
+    "group": "evaluate method - edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with no transitions"
+          }
+        ],
+        "expected": "0",
+        "description": "Test the evaluate method with a mocked ByteState that has no transitions to ensure it returns 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with single transition having no matches"
+          }
+        ],
+        "expected": "0",
+        "description": "Test the evaluate method with a mocked ByteState that has a single transition but no matches to ensure it returns 0."
+      }
+    ]
+  },
+  {
+    "group": "evaluate method - complexity boundaries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to maxComplexity"
+          }
+        ],
+        "expected": "maxComplexity",
+        "description": "Test the evaluate method with a mocked ByteState that leads to the maximum complexity threshold to ensure it returns maxComplexity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to complexity greater than maxComplexity"
+          }
+        ],
+        "expected": "maxComplexity",
+        "description": "Test the evaluate method with a mocked ByteState that leads to a complexity greater than maxComplexity to ensure it returns maxComplexity."
+      }
+    ]
+  },
+  {
+    "group": "evaluate method - recursive complexity evaluation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to multiple NameStates"
+          }
+        ],
+        "expected": "calculated maxSize from NameStates",
+        "description": "Test the evaluate method with a mocked ByteState that has transitions leading to multiple NameStates to verify it correctly evaluates the maximum size from those NameStates."
+      }
+    ]
+  },
+  {
+    "group": "evaluate method - visited transitions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with complex transitions"
+          }
+        ],
+        "expected": "calculated complexity based on unique transitions",
+        "description": "Test the evaluate method with a mocked ByteState that has complex transitions to ensure it correctly handles visited transitions and does not count them multiple times."
+      }
+    ]
+  },
+  {
+    "group": "evaluate method - additional edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to an empty nextNameState"
+          }
+        ],
+        "expected": "0",
+        "description": "Test the evaluate method with a mocked ByteState that has transitions but leads to an empty nextNameState, ensuring it returns 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to a single NameState with no matches"
+          }
+        ],
+        "expected": "0",
+        "description": "Test the evaluate method with a mocked ByteState that has transitions leading to a single NameState that has no matches, ensuring it returns 0."
+      }
+    ]
+  },
+  {
+    "group": "evaluate method - complexity variations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with multiple transitions having varying complexity"
+          }
+        ],
+        "expected": "calculated complexity based on varying transitions",
+        "description": "Test the evaluate method with a mocked ByteState that has multiple transitions with varying complexity to ensure the calculated complexity reflects the maximum size from those transitions."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions that include wildcards"
+          }
+        ],
+        "expected": "calculated complexity including wildcard patterns",
+        "description": "Test the evaluate method with a mocked ByteState that includes transitions with wildcards to ensure it correctly calculates the complexity including the wildcard patterns."
+      }
+    ]
+  },
+  {
+    "group": "evaluate method - edge cases with complex transitions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions that lead to a cycle"
+          }
+        ],
+        "expected": "calculated complexity avoiding infinite loops",
+        "description": "Test the evaluate method with a mocked ByteState that has transitions leading to a cycle to ensure it calculates the complexity without entering an infinite loop."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions that include both single and wildcard transitions"
+          }
+        ],
+        "expected": "calculated complexity from both single and wildcard transitions",
+        "description": "Test the evaluate method with a mocked ByteState that has both single and wildcard transitions to ensure it correctly evaluates the complexity from both types of transitions."
+      }
+    ]
+  },
+  {
+    "group": "evaluate method - exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test the evaluate method with a null ByteState to ensure it throws a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to null SingleByteTransition"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test the evaluate method with a mocked ByteState that has transitions leading to a null SingleByteTransition to ensure it throws a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions that lead to a null nextNameState"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test the evaluate method with a mocked ByteState that has transitions leading to a SingleByteTransition that results in a null nextNameState to ensure it throws a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions that lead to a cycle with null transitions"
+          }
+        ],
+        "expected": "StackOverflowError",
+        "description": "Test the evaluate method with a mocked ByteState that has transitions leading to a cycle with null transitions to ensure it throws a StackOverflowError."
+      }
+    ]
+  }
+]
