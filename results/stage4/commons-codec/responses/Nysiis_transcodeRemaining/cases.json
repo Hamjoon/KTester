@@ -1,0 +1,548 @@
+[
+  {
+    "group": "transcodeRemaining - Vowel Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "E"
+          },
+          {
+            "parameter": "next",
+            "value": "V"
+          },
+          {
+            "parameter": "aNext",
+            "value": "X"
+          }
+        ],
+        "expected": "['A', 'F']",
+        "description": "Test case for 'E' followed by 'V' to ensure it returns ['A', 'F']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "A"
+          },
+          {
+            "parameter": "next",
+            "value": "C"
+          },
+          {
+            "parameter": "aNext",
+            "value": "D"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for vowel 'A' to ensure it returns ['A']."
+      }
+    ]
+  },
+  {
+    "group": "transcodeRemaining - Character Mapping",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "Q"
+          },
+          {
+            "parameter": "next",
+            "value": "X"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['G']",
+        "description": "Test case for 'Q' to ensure it returns ['G']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "Z"
+          },
+          {
+            "parameter": "next",
+            "value": "X"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['S']",
+        "description": "Test case for 'Z' to ensure it returns ['S']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "M"
+          },
+          {
+            "parameter": "next",
+            "value": "X"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['N']",
+        "description": "Test case for 'M' to ensure it returns ['N']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "K"
+          },
+          {
+            "parameter": "next",
+            "value": "N"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['N', 'N']",
+        "description": "Test case for 'K' followed by 'N' to ensure it returns ['N', 'N']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "K"
+          },
+          {
+            "parameter": "next",
+            "value": "X"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['C']",
+        "description": "Test case for 'K' not followed by 'N' to ensure it returns ['C']."
+      }
+    ]
+  },
+  {
+    "group": "transcodeRemaining - Special Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "S"
+          },
+          {
+            "parameter": "next",
+            "value": "C"
+          },
+          {
+            "parameter": "aNext",
+            "value": "H"
+          }
+        ],
+        "expected": "['S', 'S', 'S']",
+        "description": "Test case for 'S' followed by 'C' and then 'H' to ensure it returns ['S', 'S', 'S']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "P"
+          },
+          {
+            "parameter": "next",
+            "value": "H"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['F', 'F']",
+        "description": "Test case for 'P' followed by 'H' to ensure it returns ['F', 'F']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "A"
+          },
+          {
+            "parameter": "aNext",
+            "value": "B"
+          }
+        ],
+        "expected": "['B']",
+        "description": "Test case for 'H' with non-vowel previous to ensure it returns ['B']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "W"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for 'W' with vowel previous to ensure it returns ['A']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "X"
+          },
+          {
+            "parameter": "next",
+            "value": "Y"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Z"
+          }
+        ],
+        "expected": "['X']",
+        "description": "Test case for a character not matching any special cases to ensure it returns ['X']."
+      }
+    ]
+  },
+  {
+    "group": "transcodeRemaining - Additional Vowel Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "I"
+          },
+          {
+            "parameter": "next",
+            "value": "X"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for vowel 'I' to ensure it returns ['A']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "O"
+          },
+          {
+            "parameter": "next",
+            "value": "X"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for vowel 'O' to ensure it returns ['A']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "U"
+          },
+          {
+            "parameter": "next",
+            "value": "X"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for vowel 'U' to ensure it returns ['A']."
+      }
+    ]
+  },
+  {
+    "group": "transcodeRemaining - Additional Character Mapping",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "X"
+          },
+          {
+            "parameter": "next",
+            "value": "Y"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Z"
+          }
+        ],
+        "expected": "['X']",
+        "description": "Test case for character 'X' to ensure it returns ['X']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "J"
+          },
+          {
+            "parameter": "next",
+            "value": "K"
+          },
+          {
+            "parameter": "aNext",
+            "value": "L"
+          }
+        ],
+        "expected": "['J']",
+        "description": "Test case for character 'J' to ensure it returns ['J']."
+      }
+    ]
+  },
+  {
+    "group": "transcodeRemaining - Additional Special Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "S"
+          },
+          {
+            "parameter": "next",
+            "value": "H"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Y"
+          }
+        ],
+        "expected": "['S']",
+        "description": "Test case for 'S' followed by 'H' to ensure it returns ['S']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "E"
+          },
+          {
+            "parameter": "aNext",
+            "value": "F"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for 'H' with vowel previous to ensure it returns ['A']."
+      }
+    ]
+  },
+  {
+    "group": "transcodeRemaining - Edge Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": " "
+          },
+          {
+            "parameter": "curr",
+            "value": " "
+          },
+          {
+            "parameter": "next",
+            "value": " "
+          },
+          {
+            "parameter": "aNext",
+            "value": " "
+          }
+        ],
+        "expected": "[' ']",
+        "description": "Test case for all parameters being spaces to ensure it returns [' ']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": " "
+          },
+          {
+            "parameter": "aNext",
+            "value": " "
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for 'H' with vowel previous and space next to ensure it returns ['A']."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": " "
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "[' ']",
+        "description": "Test case for 'H' with non-vowel previous to ensure it returns [' ']."
+      }
+    ]
+  },
+  {
+    "group": "transcodeRemaining - Invalid Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "#"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['#']",
+        "description": "Test case for invalid character '#' as previous to ensure it returns ['#']."
+      }
+    ]
+  }
+]

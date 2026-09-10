@@ -1,0 +1,305 @@
+{
+    "group": "metaphone",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "A"
+                }
+            ],
+            "expected": "A",
+            "description": "Test with single character input 'A', should return 'A'."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "K"
+                }
+            ],
+            "expected": "K",
+            "description": "Test with single character input 'K', should return 'K'."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "KNIGHT"
+                }
+            ],
+            "expected": "NJT",
+            "description": "Test with input 'KNIGHT', should handle 'K' followed by 'N' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "WHISTLE"
+                }
+            ],
+            "expected": "WSTL",
+            "description": "Test with input 'WHISTLE', should handle 'W' followed by 'H' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "AEON"
+                }
+            ],
+            "expected": "N",
+            "description": "Test with input 'AEON', should handle 'A' followed by 'E' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "CHURCH"
+                }
+            ],
+            "expected": "KX",
+            "description": "Test with input 'CHURCH', should handle 'CH' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "SCHOOL"
+                }
+            ],
+            "expected": "SKL",
+            "description": "Test with input 'SCHOOL', should handle 'SC' followed by 'H' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "THOMAS"
+                }
+            ],
+            "expected": "T0MS",
+            "description": "Test with input 'THOMAS', should handle 'TH' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "SILVER"
+                }
+            ],
+            "expected": "SLFR",
+            "description": "Test with input 'SILVER', should handle 'S' followed by 'I' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "GHOST"
+                }
+            ],
+            "expected": "KST",
+            "description": "Test with input 'GHOST', should handle 'G' followed by 'H' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "KILLED"
+                }
+            ],
+            "expected": "KLT",
+            "description": "Test with input 'KILLED', should handle 'K' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "BOMB"
+                }
+            ],
+            "expected": "BM",
+            "description": "Test with input 'BOMB', should handle silent 'B' at the end."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "PHOENIX"
+                }
+            ],
+            "expected": "FNKS",
+            "description": "Test with input 'PHOENIX', should handle 'PH' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "XENON"
+                }
+            ],
+            "expected": "SNN",
+            "description": "Test with input 'XENON', should handle initial 'X' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "AEONIC"
+                }
+            ],
+            "expected": "NNC",
+            "description": "Test with input 'AEONIC', should handle 'A' followed by 'E' correctly and also consider the consonants."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "SHEEP"
+                }
+            ],
+            "expected": "S",
+            "description": "Test with input 'SHEEP', should handle 'SH' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "KNOW"
+                }
+            ],
+            "expected": "NO",
+            "description": "Test with input 'KNOW', should handle 'K' followed by 'N' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "GHASTLY"
+                }
+            ],
+            "expected": "KSTL",
+            "description": "Test with input 'GHASTLY', should handle 'GH' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "CIPHER"
+                }
+            ],
+            "expected": "SFR",
+            "description": "Test with input 'CIPHER', should handle 'C' followed by 'I' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "THROUGH"
+                }
+            ],
+            "expected": "T0R",
+            "description": "Test with input 'THROUGH', should handle 'TH' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "QUICK"
+                }
+            ],
+            "expected": "K",
+            "description": "Test with input 'QUICK', should handle 'Q' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "WATER"
+                }
+            ],
+            "expected": "WTR",
+            "description": "Test with input 'WATER', should handle 'W' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "BEE"
+                }
+            ],
+            "expected": "B",
+            "description": "Test with input 'BEE', should handle vowel 'E' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "SCHOOLING"
+                }
+            ],
+            "expected": "SKLN",
+            "description": "Test with input 'SCHOOLING', should handle 'SC' followed by 'H' and other consonants."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "JUMP"
+                }
+            ],
+            "expected": "JMP",
+            "description": "Test with input 'JUMP', should handle 'J' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "FISH"
+                }
+            ],
+            "expected": "F",
+            "description": "Test with input 'FISH', should handle 'F' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "YELLOW"
+                }
+            ],
+            "expected": "YL",
+            "description": "Test with input 'YELLOW', should handle 'Y' followed by a vowel correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "ZEBRA"
+                }
+            ],
+            "expected": "SBR",
+            "description": "Test with input 'ZEBRA', should handle 'Z' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "MATH"
+                }
+            ],
+            "expected": "MT",
+            "description": "Test with input 'MATH', should handle 'TH' correctly."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "txt",
+                    "value": "KNOT"
+                }
+            ],
+            "expected": "NT",
+            "description": "Test with input 'KNOT', should handle 'K' followed by 'N' correctly."
+        }
+    ]
+}

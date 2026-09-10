@@ -1,0 +1,548 @@
+[
+  {
+    "group": "hash128x64Internal - Full Length Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 16
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          1234567890123456789,
+          9876543210987654321
+        ],
+        "description": "Test case with full length of 16 bytes to check hash output."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 32
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          1234567890123456789,
+          9876543210987654321
+        ],
+        "description": "Test case with length greater than 16 bytes to verify handling of multiple blocks."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64Internal - Tail Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 15
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          1234567890123456789,
+          9876543210987654321
+        ],
+        "description": "Test case with length of 15 bytes to validate tail processing."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 9
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          1234567890123456789,
+          9876543210987654321
+        ],
+        "description": "Test case with length of 9 bytes to check tail processing with less than 10 bytes."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64Internal - Edge Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": []
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 0
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          0,
+          0
+        ],
+        "description": "Test case with empty data to ensure method handles zero-length input correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 1
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          1234567890123456789,
+          9876543210987654321
+        ],
+        "description": "Test case with a single byte to test minimal input processing."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64Internal - Partial Length Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 8
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          1234567890123456789,
+          9876543210987654321
+        ],
+        "description": "Test case with length of 8 bytes to verify hash output for a single block."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 9
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          1234567890123456789,
+          9876543210987654321
+        ],
+        "description": "Test case with length of 9 bytes to check processing of less than a full block."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64Internal - Negative Offset Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": -1
+          },
+          {
+            "parameter": "length",
+            "value": 8
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case with a negative offset to ensure the method handles invalid input correctly."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64Internal - Large Seed Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 10
+          },
+          {
+            "parameter": "seed",
+            "value": 999999999999999999
+          }
+        ],
+        "expected": [
+          1234567890123456789,
+          9876543210987654321
+        ],
+        "description": "Test case with a very large seed value to check hash output consistency."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64Internal - Zero Length with Non-zero Offset",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 3
+          },
+          {
+            "parameter": "length",
+            "value": 0
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": [
+          0,
+          0
+        ],
+        "description": "Test case with non-zero offset and zero length to ensure method handles this scenario correctly."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64Internal - Invalid Length Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": -1
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case with a negative length to ensure the method handles invalid input correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "length",
+            "value": 20
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "Test case with a length greater than the available data size to check for out-of-bounds access."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64Internal - Invalid Offset Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 10
+          },
+          {
+            "parameter": "length",
+            "value": 5
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "Test case with an offset greater than the data length to check for out-of-bounds access."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "parameter": "offset",
+            "value": 8
+          },
+          {
+            "parameter": "length",
+            "value": 1
+          },
+          {
+            "parameter": "seed",
+            "value": 104729
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "Test case with an offset that points to the end of the data array to ensure it handles out-of-bounds correctly."
+      }
+    ]
+  }
+]

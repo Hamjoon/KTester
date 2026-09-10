@@ -1,0 +1,403 @@
+[
+  {
+    "group": "handleG Method Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GHOST"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 1,
+        "description": "Tests the case where the next character is 'H', which should invoke handleGH."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "KNOT"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the case where the next character is 'N', and the previous character is a vowel, without slavoGermanic."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "LINDA"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the case where the next characters are 'LI', and slavoGermanic is false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "YELLOW"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the case where the index is 0 and the next character is 'Y'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GERMAN"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the case where the next characters are 'ER', and the previous characters are not 'DANGER', 'RANGER', 'MANGER'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "BIAGGI"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the Italian case where the next character is 'I', and checks for 'VAN ', 'VON ', or 'SCH'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GAG"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 1,
+        "description": "Tests the case where the next character is 'G', which should increment index by 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "G"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 1,
+        "description": "Tests the default case where no conditions are met, incrementing index by 1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "KNIGHT"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the case where the next character is 'N', and the previous character is a vowel, without slavoGermanic."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "LIEUTENANT"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the case where the next characters are 'LI', and slavoGermanic is false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "YANG"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the case where the index is 0 and the next character is 'Y'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "DANGER"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 1,
+        "description": "Tests the case where the next characters are 'ER', and the previous characters are 'DANGER', which should not append 'K'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "OGGI"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the Italian case where the next character is 'I', and checks for 'VAN ', 'VON ', or 'SCH'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GIGGLE"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": 2,
+        "description": "Tests the case where the next character is 'G', which should increment index by 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "G"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": true
+          }
+        ],
+        "expected": 1,
+        "description": "Tests the default case where no conditions are met, incrementing index by 1, with slavoGermanic set to true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GHOST"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(0)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Tests the case where the maxLength of DoubleMetaphoneResult is 0, which should throw an IndexOutOfBoundsException when trying to append."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": ""
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Tests the case where the input string is empty, which should throw an IndexOutOfBoundsException when trying to access characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "A"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(1)"
+          },
+          {
+            "parameter": "index",
+            "value": 1
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Tests the case where the index is greater than the string length, which should throw an IndexOutOfBoundsException."
+      }
+    ]
+  }
+]

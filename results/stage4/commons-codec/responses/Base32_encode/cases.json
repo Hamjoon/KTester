@@ -1,0 +1,518 @@
+[
+  {
+    "group": "encode method - EOF handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": []
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": -1
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "context.eof should be true",
+        "description": "Test that when inAvail is -1, the context.eof is set to true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": []
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": -1
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "no leftovers to process and not using chunking",
+        "description": "Test that if context.modulus is 0 and lineLength is 0, the method returns early."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 0
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "context.eof remains false",
+        "description": "Test that when inAvail is 0, the context.eof remains false."
+      }
+    ]
+  },
+  {
+    "group": "encode method - processing based on modulus",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 1,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "correctly encodes based on modulus 1",
+        "description": "Test encoding when modulus is 1, ensuring the correct bytes are written to the buffer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 2,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "correctly encodes based on modulus 2",
+        "description": "Test encoding when modulus is 2, ensuring the correct bytes are written to the buffer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 3,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "correctly encodes based on modulus 3",
+        "description": "Test encoding when modulus is 3, ensuring the correct bytes are written to the buffer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 4,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "correctly encodes based on modulus 4",
+        "description": "Test encoding when modulus is 4, ensuring the correct bytes are written to the buffer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "correctly encodes based on modulus 0",
+        "description": "Test encoding when modulus is 0, ensuring the correct bytes are written to the buffer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 3
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "correctly encodes based on modulus 0 with fewer bytes",
+        "description": "Test encoding when modulus is 0 with fewer than 5 bytes, ensuring no output is produced."
+      }
+    ]
+  },
+  {
+    "group": "encode method - line separator handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 8,
+              "lbitWorkArea": 0,
+              "currentLinePos": 8
+            }
+          }
+        ],
+        "expected": "line separator is added to the buffer",
+        "description": "Test that when currentLinePos exceeds lineLength, a line separator is added."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 8,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "no line separator added to the buffer",
+        "description": "Test that when currentLinePos is 0, no line separator is added."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 8,
+              "lbitWorkArea": 0,
+              "currentLinePos": 8
+            }
+          }
+        ],
+        "expected": "line separator is added to the buffer",
+        "description": "Test that when currentLinePos exceeds lineLength, a line separator is added."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 8,
+              "lbitWorkArea": 0,
+              "currentLinePos": 7
+            }
+          }
+        ],
+        "expected": "no line separator added to the buffer",
+        "description": "Test that when currentLinePos is less than lineLength, no line separator is added."
+      }
+    ]
+  },
+  {
+    "group": "encode method - exception handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 0,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "IllegalStateException is thrown for impossible modulus",
+        "description": "Test that an IllegalStateException is thrown when an impossible modulus is encountered."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "parameter": "inPos",
+            "value": 0
+          },
+          {
+            "parameter": "inAvail",
+            "value": 5
+          },
+          {
+            "parameter": "context",
+            "value": {
+              "eof": false,
+              "modulus": 5,
+              "pos": 0,
+              "lbitWorkArea": 0,
+              "currentLinePos": 0
+            }
+          }
+        ],
+        "expected": "IllegalStateException is thrown for impossible modulus",
+        "description": "Test that an IllegalStateException is thrown when an impossible modulus (5) is encountered."
+      }
+    ]
+  }
+]
