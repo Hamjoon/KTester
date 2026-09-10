@@ -54,3 +54,11 @@ class BaseLine:
     BASELINE_PATH = "../evaluation/baseline"
     UTGEN_DATA = "../data/UTGen_replication"
     CHATUNITEST_DATA = "../evaluation/ChatUniTest_replication/projects"
+
+class TimeRecord:
+    """
+    Time recording settings (used by tools/time_agent.py)
+    """
+    TIME_RECORD_PATH = "../evaluation/time"
+    TIME_FILE_NAME = "time_records.json"
+    START_RECORD = True
