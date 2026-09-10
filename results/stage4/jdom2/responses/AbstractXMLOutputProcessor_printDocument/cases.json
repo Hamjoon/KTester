@@ -1,0 +1,392 @@
+[
+  {
+    "group": "printDocument - No Root Element",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document()"
+          }
+        ],
+        "expected": "empty output",
+        "description": "Test case where the Document has no root element, expecting no output to be written."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Empty Document",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root'))"
+          }
+        ],
+        "expected": "output contains the root element",
+        "description": "Test case where the Document contains an empty root element, expecting the root element to be written out."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Comments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new Comment('This is a comment')))"
+          }
+        ],
+        "expected": "output contains the comment",
+        "description": "Test case where the Document contains a comment, expecting the comment to be written out."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Text Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new Text('Some text content')))"
+          }
+        ],
+        "expected": "output contains 'Some text content'",
+        "description": "Test case where the Document contains text content, expecting the text to be written out."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Processing Instruction",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new ProcessingInstruction('xml-stylesheet', 'type=\"text/xsl\" href=\"style.xsl\"')))"
+          }
+        ],
+        "expected": "output contains the processing instruction",
+        "description": "Test case where the Document contains a processing instruction, expecting it to be written out."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Multiple Content Types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new Comment('Comment')).addContent(new Text('Text content')).addContent(new ProcessingInstruction('pi', 'data')))"
+          }
+        ],
+        "expected": "output contains comment, text content, and processing instruction",
+        "description": "Test case where the Document contains multiple content types, expecting all to be written out correctly."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with CDATA",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new CDATA('Some CDATA content'))) "
+          }
+        ],
+        "expected": "output contains CDATA section",
+        "description": "Test case where the Document contains CDATA, expecting the CDATA to be written out correctly."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Entity Reference",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new EntityRef('entityName'))) "
+          }
+        ],
+        "expected": "output contains entity reference",
+        "description": "Test case where the Document contains an entity reference, expecting the entity reference to be written out."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Mixed Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new Text('Text')).addContent(new Comment('Comment')).addContent(new ProcessingInstruction('pi', 'data')).addContent(new CDATA('CDATA content')))"
+          }
+        ],
+        "expected": "output contains text, comment, processing instruction, and CDATA",
+        "description": "Test case where the Document contains mixed content types, expecting all to be written out correctly."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Whitespace",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new Text('   ')))"
+          }
+        ],
+        "expected": "output contains whitespace",
+        "description": "Test case where the Document contains only whitespace text, expecting the whitespace to be written out."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Nested Elements",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new Element('child1')).addContent(new Element('child2'))) "
+          }
+        ],
+        "expected": "output contains nested elements",
+        "description": "Test case where the Document contains nested elements, expecting both child elements to be written out."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Exception Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "null"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root'))"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test case where the Writer is null, expecting an IOException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root').addContent(new Comment('Comment')))"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test case where the Writer fails to write during the process, expecting an IOException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "null"
+          },
+          {
+            "parameter": "nstack",
+            "value": "new NamespaceStack()"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root'))"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the FormatStack is null, expecting a NullPointerException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "fstack",
+            "value": "new FormatStack()"
+          },
+          {
+            "parameter": "nstack",
+            "value": "null"
+          },
+          {
+            "parameter": "doc",
+            "value": "new Document(new Element('root'))"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the NamespaceStack is null, expecting a NullPointerException to be thrown."
+      }
+    ]
+  }
+]

@@ -1,0 +1,163 @@
+{
+    "test cases": [
+        {
+            "group": "Locate Method Test Cases",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "hash",
+                            "value": 6
+                        },
+                        {
+                            "parameter": "value",
+                            "value": "banana"
+                        },
+                        {
+                            "parameter": "bucket",
+                            "value": ["apple", "cherry", "date", "fig", "grape"]
+                        },
+                        {
+                            "parameter": "length",
+                            "value": 5
+                        }
+                    ],
+                    "expected": -1,
+                    "description": "Test case where the hash does not match any element in the bucket and 'banana' is not found."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "hash",
+                            "value": 3
+                        },
+                        {
+                            "parameter": "value",
+                            "value": "banana"
+                        },
+                        {
+                            "parameter": "bucket",
+                            "value": ["banana", "banana", "banana", "banana", "banana"]
+                        },
+                        {
+                            "parameter": "length",
+                            "value": 5
+                        }
+                    ],
+                    "expected": 0,
+                    "description": "Test case where the value 'banana' is found at the start of the bucket with all elements being 'banana'."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "hash",
+                            "value": 2
+                        },
+                        {
+                            "parameter": "value",
+                            "value": "apple"
+                        },
+                        {
+                            "parameter": "bucket",
+                            "value": ["apple", "banana", "cherry", "date", "fig"]
+                        },
+                        {
+                            "parameter": "length",
+                            "value": 5
+                        }
+                    ],
+                    "expected": 0,
+                    "description": "Test case where the value 'apple' is found at the start of the bucket."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "hash",
+                            "value": 2
+                        },
+                        {
+                            "parameter": "value",
+                            "value": "fig"
+                        },
+                        {
+                            "parameter": "bucket",
+                            "value": ["apple", "banana", "cherry", "date", "fig"]
+                        },
+                        {
+                            "parameter": "length",
+                            "value": 5
+                        }
+                    ],
+                    "expected": 4,
+                    "description": "Test case where the value 'fig' is found at the end of the bucket."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "hash",
+                            "value": 3
+                        },
+                        {
+                            "parameter": "value",
+                            "value": "kiwi"
+                        },
+                        {
+                            "parameter": "bucket",
+                            "value": ["banana", "banana", "banana", "cherry", "date"]
+                        },
+                        {
+                            "parameter": "length",
+                            "value": 5
+                        }
+                    ],
+                    "expected": -4,
+                    "description": "Test case where the value 'kiwi' is not found, and the insertion point is returned."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "hash",
+                            "value": 1
+                        },
+                        {
+                            "parameter": "value",
+                            "value": "cherry"
+                        },
+                        {
+                            "parameter": "bucket",
+                            "value": ["apple", "banana", "banana", "cherry", "date"]
+                        },
+                        {
+                            "parameter": "length",
+                            "value": 5
+                        }
+                    ],
+                    "expected": 3,
+                    "description": "Test case where the value 'cherry' is found in the middle of the bucket."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "hash",
+                            "value": 10
+                        },
+                        {
+                            "parameter": "value",
+                            "value": "orange"
+                        },
+                        {
+                            "parameter": "bucket",
+                            "value": ["apple", "banana", "cherry", "date", "fig"]
+                        },
+                        {
+                            "parameter": "length",
+                            "value": 5
+                        }
+                    ],
+                    "expected": -6,
+                    "description": "Test case where the hash does not match any element in the bucket, and 'orange' is not found."
+                }
+            ]
+        }
+    ]
+}

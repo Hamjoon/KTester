@@ -1,0 +1,166 @@
+{
+    "testCases": [
+        {
+            "group": "printDocument - Omit Declaration",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "XMLStreamWriter",
+                            "value": "mocked XMLStreamWriter that captures output"
+                        },
+                        {
+                            "parameter": "FormatStack",
+                            "value": "mocked FormatStack with omitDeclaration = true"
+                        },
+                        {
+                            "parameter": "NamespaceStack",
+                            "value": "mocked NamespaceStack"
+                        },
+                        {
+                            "parameter": "Document",
+                            "value": "mocked Document with a root element"
+                        }
+                    ],
+                    "expected": "Start document written without declaration",
+                    "description": "Test when omitDeclaration is true, ensuring the start document is written correctly without a declaration."
+                }
+            ]
+        },
+        {
+            "group": "printDocument - Omit Encoding",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "XMLStreamWriter",
+                            "value": "mocked XMLStreamWriter that captures output"
+                        },
+                        {
+                            "parameter": "FormatStack",
+                            "value": "mocked FormatStack with omitEncoding = true"
+                        },
+                        {
+                            "parameter": "NamespaceStack",
+                            "value": "mocked NamespaceStack"
+                        },
+                        {
+                            "parameter": "Document",
+                            "value": "mocked Document with a root element"
+                        }
+                    ],
+                    "expected": "Start document written with version 1.0",
+                    "description": "Test when omitEncoding is true, ensuring the start document is written with version 1.0 only."
+                }
+            ]
+        },
+        {
+            "group": "printDocument - Full Declaration",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "XMLStreamWriter",
+                            "value": "mocked XMLStreamWriter that captures output"
+                        },
+                        {
+                            "parameter": "FormatStack",
+                            "value": "mocked FormatStack with encoding and line separator set"
+                        },
+                        {
+                            "parameter": "NamespaceStack",
+                            "value": "mocked NamespaceStack"
+                        },
+                        {
+                            "parameter": "Document",
+                            "value": "mocked Document with a root element"
+                        }
+                    ],
+                    "expected": "Start document written with encoding and version 1.0",
+                    "description": "Test when both encoding and line separator are set, ensuring the start document is written correctly."
+                }
+            ]
+        },
+        {
+            "group": "printDocument - Empty Document",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "XMLStreamWriter",
+                            "value": "mocked XMLStreamWriter that captures output"
+                        },
+                        {
+                            "parameter": "FormatStack",
+                            "value": "mocked FormatStack"
+                        },
+                        {
+                            "parameter": "NamespaceStack",
+                            "value": "mocked NamespaceStack"
+                        },
+                        {
+                            "parameter": "Document",
+                            "value": "mocked Document with no root element"
+                        }
+                    ],
+                    "expected": "No content written, but end document is called",
+                    "description": "Test when the document has no root element, ensuring that no content is written but the end document is correctly called."
+                }
+            ]
+        },
+        {
+            "group": "printDocument - Walker Iteration",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "XMLStreamWriter",
+                            "value": "mocked XMLStreamWriter that captures output"
+                        },
+                        {
+                            "parameter": "FormatStack",
+                            "value": "mocked FormatStack"
+                        },
+                        {
+                            "parameter": "NamespaceStack",
+                            "value": "mocked NamespaceStack"
+                        },
+                        {
+                            "parameter": "Document",
+                            "value": "mocked Document with multiple content types (Comment, Element, Text)"
+                        }
+                    ],
+                    "expected": "All content types processed correctly",
+                    "description": "Test when the document has multiple content types, ensuring that all are processed correctly by the walker."
+                }
+            ]
+        },
+        {
+            "group": "printDocument - Padding Handling",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "XMLStreamWriter",
+                            "value": "mocked XMLStreamWriter that captures output"
+                        },
+                        {
+                            "parameter": "FormatStack",
+                            "value": "mocked FormatStack"
+                        },
+                        {
+                            "parameter": "NamespaceStack",
+                            "value": "mocked NamespaceStack"
+                        },
+                        {
+                            "parameter": "Document",
+                            "value": "mocked Document with whitespace content"
+                        }
+                    ],
+                    "expected": "Whitespace content written correctly",
+                    "description": "Test when the document contains whitespace content, ensuring that it is written correctly."
+                }
+            ]
+        }
+    ]
+}

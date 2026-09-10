@@ -1,0 +1,427 @@
+[
+  {
+    "group": "startElement with suppress flag set to true",
+    "cases": [
+      {
+        "input": [],
+        "expected": null,
+        "description": "Verify that the method returns immediately without doing anything when the suppress flag is true."
+      }
+    ]
+  },
+  {
+    "group": "startElement with valid QName and localName",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "Element instance created and set as currentElement",
+        "description": "Test the scenario where a valid QName and localName are provided, ensuring that the currentElement is set correctly."
+      }
+    ]
+  },
+  {
+    "group": "startElement with empty localName",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": ""
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "Element instance created with localName derived from qName",
+        "description": "Test the scenario where localName is empty, ensuring it is derived from the QName correctly."
+      }
+    ]
+  },
+  {
+    "group": "startElement with no QName",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": null
+          },
+          {
+            "parameter": "qName",
+            "value": ""
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "Element instance created with localName as default",
+        "description": "Test the scenario where both localName and QName are not provided, ensuring the method handles this case appropriately."
+      }
+    ]
+  },
+  {
+    "group": "startElement with declared namespaces",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance with xmlns attributes"
+          }
+        ],
+        "expected": "Element instance created without xmlns attributes",
+        "description": "Test the scenario where declared namespaces are present, ensuring that xmlns attributes are skipped."
+      }
+    ]
+  },
+  {
+    "group": "startElement at root",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "rootElement"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:rootElement"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "Root element set in the current document",
+        "description": "Test the scenario where the element is at the root level, ensuring it is set as the root of the current document."
+      }
+    ]
+  },
+  {
+    "group": "startElement not at root",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "childElement"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:childElement"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "Child element added to the current element",
+        "description": "Test the scenario where the element is not at the root level, ensuring it is added as a child to the current element."
+      }
+    ]
+  },
+  {
+    "group": "startElement with null namespaceURI",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": null
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "Element instance created with null namespace",
+        "description": "Test the scenario where namespaceURI is null, ensuring that the element is created correctly with a null namespace."
+      }
+    ]
+  },
+  {
+    "group": "startElement with empty qName",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": ""
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "Element instance created with localName as 'element'",
+        "description": "Test the scenario where qName is empty, ensuring the element is created with the provided localName."
+      }
+    ]
+  },
+  {
+    "group": "startElement with attributes containing empty values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance with empty values"
+          }
+        ],
+        "expected": "Element instance created with attributes set to empty values",
+        "description": "Test the scenario where attributes contain empty values, ensuring that they are handled correctly."
+      }
+    ]
+  },
+  {
+    "group": "startElement with multiple attributes",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance with multiple attributes"
+          }
+        ],
+        "expected": "Element instance created with all attributes set correctly",
+        "description": "Test the scenario where multiple attributes are provided, ensuring they are all set on the element."
+      }
+    ]
+  },
+  {
+    "group": "startElement with invalid QName format",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "invalidQNameFormat"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "Element instance created with localName as 'element'",
+        "description": "Test the scenario where qName does not follow the expected format, ensuring that the localName is still set correctly."
+      }
+    ]
+  },
+  {
+    "group": "startElement with suppress flag set to false",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Method processes normally",
+        "description": "Verify that the method processes normally when the suppress flag is false."
+      }
+    ]
+  },
+  {
+    "group": "startElement with invalid namespaceURI",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "invalidNamespaceURI"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "SAXException due to invalid namespace URI",
+        "description": "Test the scenario where an invalid namespaceURI is provided, ensuring that the method throws a SAXException."
+      }
+    ]
+  },
+  {
+    "group": "startElement with null localName",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": null
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance"
+          }
+        ],
+        "expected": "SAXException due to null localName",
+        "description": "Test the scenario where localName is null, ensuring that the method throws a SAXException."
+      }
+    ]
+  },
+  {
+    "group": "startElement with attributes that cause SAXException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance with invalid attributes"
+          }
+        ],
+        "expected": "SAXException due to invalid attributes",
+        "description": "Test the scenario where attributes contain invalid values that lead to a SAXException being thrown."
+      }
+    ]
+  },
+  {
+    "group": "startElement with attributes that contain unsupported types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mocked Attributes instance with unsupported types"
+          }
+        ],
+        "expected": "SAXException due to unsupported attribute types",
+        "description": "Test the scenario where attributes contain unsupported types, ensuring that the method throws a SAXException."
+      }
+    ]
+  }
+]

@@ -1,0 +1,220 @@
+As a professional Java software testing expert, your task is to generate test cases for a focal method.
+
+Guidelines:
+1. Analyze the method's functionality and identify possible input combinations including normal cases and boundary conditions.
+2. Review the provided existing test cases. Avoid duplication and create new test cases for untested input combinations.
+
+Context Provided:
+1. The focal method that needs testing.
+2. Relevant code and metadata for the class containing the method, including fields and other methods.
+3. The existing test cases (in JSON format) to help avoid redundancy.
+
+Output Instructions:
+- Organize the test cases by the name of the test function (group).
+- Each test case must include:
+    - input: A list of parameter names and values. Use an empty list `[]` if no input is required.
+    - expected: The return value or expected observable behavior.
+    - description: A clear and concise explanation of the scenario and the intent of the test case.
+
+Maintain the following strict JSON format:
+```json
+[
+    {
+        "group": "test name",
+        "cases": [
+            {
+                "input": [
+                    {
+                        "parameter": "param name",
+                        "value": "param value"
+                    }
+                ],
+                "expected": "expected exception or behavior",
+                "description": "test scenario description"
+            }
+        ]
+    },
+    {...}
+]
+```
+
+@input{focal method and target class}
+Here is the code of focal method, `getNamespace(String)`, with the focal class `Element`:
+```Java
+package org.jdom2;
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import org.jdom2.ContentList.FilterList;
+import java.net.URI;
+import java.io.ObjectOutputStream;
+import java.util.TreeMap;
+import java.util.Comparator;
+import org.jdom2.filter.Filter;
+import org.jdom2.filter.ElementFilter;
+import org.jdom2.util.IteratorIterable;
+import static org.jdom2.JDOMConstants.NS_PREFIX_XML;
+import java.io.ObjectInputStream;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import static org.jdom2.JDOMConstants.NS_PREFIX_DEFAULT;
+import java.util.Collections;
+public class Element extends Content implements Parent {
+    protected String name;
+    protected Namespace namespace;
+    transient List<Namespace> additionalNamespaces = null;
+    transient AttributeList attributes = null;
+    transient ContentList content = new ContentList(this);
+    public Namespace getNamespace(final String prefix) {
+        if (prefix == null) {
+            return null;
+        }
+        if (NS_PREFIX_XML.equals(prefix)) {
+            // Namespace "xml" is always bound.
+            return Namespace.XML_NAMESPACE;
+        }
+        // Check if the prefix is the prefix for this element
+        if (prefix.equals(getNamespacePrefix())) {
+            return getNamespace();
+        }
+        // Scan the additional namespaces
+        if (additionalNamespaces != null) {
+            for (int i = 0; i < additionalNamespaces.size(); i++) {
+                final Namespace ns = additionalNamespaces.get(i);
+                if (prefix.equals(ns.getPrefix())) {
+                    return ns;
+                }
+            }
+        }
+        if (attributes != null) {
+            for (final Attribute a : attributes) {
+                if (prefix.equals(a.getNamespacePrefix())) {
+                    return a.getNamespace();
+                }
+            }
+        }
+        // If we still don't have a match, ask the parent
+        if (parent instanceof Element) {
+            return ((Element) (parent)).getNamespace(prefix);
+        }
+        return null;
+    }
+@Override
+public Element addContent(final int index, final Collection<? extends Content> newContent);
+    @Override
+public Element addContent(final int index, final Content child);
+    public Element addContent(final String str);
+    @Override
+public Element addContent(final Collection<? extends Content> newContent);
+    @Override
+public Element addContent(final Content child);
+    public boolean addNamespaceDeclaration(final Namespace additionalNamespace);
+    @Override
+public void canContainContent(Content child, int index, boolean replace) throws IllegalAddException;
+    @Override
+public Element clone();
+    @Override
+public List<Content> cloneContent();
+    public boolean coalesceText(boolean recursively);
+    @Override
+public Element detach();
+    public List<Namespace> getAdditionalNamespaces();
+    public Attribute getAttribute(final String attname);
+    public Attribute getAttribute(final String attname, final Namespace ns);
+    AttributeList getAttributeList();
+    public String getAttributeValue(final String attname);
+    public String getAttributeValue(final String attname, final String def);
+    public String getAttributeValue(final String attname, final Namespace ns);
+    public String getAttributeValue(final String attname, final Namespace ns, final String def);
+    public List<Attribute> getAttributes();
+    public Element getChild(final String cname);
+    public Element getChild(final String cname, final Namespace ns);
+    public String getChildText(final String cname);
+    public String getChildText(final String cname, final Namespace ns);
+    public String getChildTextNormalize(final String cname);
+    public String getChildTextNormalize(final String cname, final Namespace ns);
+    public String getChildTextTrim(final String cname);
+    public String getChildTextTrim(final String cname, final Namespace ns);
+    public List<Element> getChildren();
+    public List<Element> getChildren(final String cname);
+    public List<Element> getChildren(final String cname, final Namespace ns);
+    @Override
+public List<Content> getContent();
+    @Override
+public Content getContent(final int index);
+    @Override
+public <E extends Content> List<E> getContent(final Filter<E> filter);
+    @Override
+public int getContentSize();
+    @Override
+public IteratorIterable<Content> getDescendants();
+    @Override
+public <F extends Content> IteratorIterable<F> getDescendants(final Filter<F> filter);
+    public String getName();
+    public Namespace getNamespace();
+    public String getNamespacePrefix();
+    public String getNamespaceURI();
+    @Override
+public List<Namespace> getNamespacesInScope();
+    @Override
+public List<Namespace> getNamespacesInherited();
+    @Override
+public List<Namespace> getNamespacesIntroduced();
+    public String getQualifiedName();
+    public String getText();
+    public String getTextNormalize();
+    public String getTextTrim();
+    @Override
+public String getValue();
+    public URI getXMLBaseURI() throws URISyntaxException;
+    public boolean hasAdditionalNamespaces();
+    public boolean hasAttributes();
+    @Override
+public int indexOf(final Content child);
+    public boolean isAncestor(final Element element);
+    public boolean isRootElement();
+    public boolean removeAttribute(final String attname);
+    public boolean removeAttribute(final String attname, final Namespace ns);
+    public boolean removeAttribute(final Attribute attribute);
+    public boolean removeChild(final String cname);
+    public boolean removeChild(final String cname, final Namespace ns);
+    public boolean removeChildren(final String cname);
+    public boolean removeChildren(final String cname, final Namespace ns);
+    @Override
+public List<Content> removeContent();
+    @Override
+public Content removeContent(final int index);
+    @Override
+public boolean removeContent(final Content child);
+    @Override
+public <F extends Content> List<F> removeContent(final Filter<F> filter);
+    public void removeNamespaceDeclaration(final Namespace additionalNamespace);
+    public Element setAttribute(final String name, final String value);
+    public Element setAttribute(final String name, final String value, final Namespace ns);
+    public Element setAttribute(final Attribute attribute);
+    public Element setAttributes(final Collection<? extends Attribute> newAttributes);
+    public Parent setContent(final int index, final Collection<? extends Content> newContent);
+    public Element setContent(final int index, final Content child);
+    public Element setContent(final Collection<? extends Content> newContent);
+    public Element setContent(final Content child);
+    public Element setName(final String name);
+    public Element setNamespace(Namespace namespace);
+    public Element setText(final String text);
+    public void sortAttributes(Comparator<? super Attribute> comparator);
+    public void sortChildren(Comparator<? super Element> comparator);
+    public void sortContent(Comparator<? super Content> comparator);
+    public <E extends Content> void sortContent(Filter<E> filter, Comparator<? super E> comparator);
+    @Override
+public String toString();
+}
+```
+
+@input{existing test case}
+here's the existing test cases:
+```json
+<cases_json>
+```
+
+@output{test cases}: output the test cases in the JSON format:

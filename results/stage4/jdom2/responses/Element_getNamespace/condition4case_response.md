@@ -1,0 +1,79 @@
+{
+    "testCases": [
+        {
+            "group": "getNamespace",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "prefix",
+                            "value": null
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test when the prefix is null, should return null."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "prefix",
+                            "value": "xml"
+                        }
+                    ],
+                    "expected": "Namespace.XML_NAMESPACE",
+                    "description": "Test when the prefix is 'xml', should return the XML namespace."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "prefix",
+                            "value": "customPrefix"
+                        }
+                    ],
+                    "expected": "element's namespace",
+                    "description": "Test when the prefix matches the element's namespace prefix, should return the element's namespace."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "prefix",
+                            "value": "additionalPrefix"
+                        }
+                    ],
+                    "expected": "namespace from additionalNamespaces",
+                    "description": "Test when the prefix matches an additional namespace in additionalNamespaces, should return the corresponding namespace."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "prefix",
+                            "value": "attributePrefix"
+                        }
+                    ],
+                    "expected": "namespace from attributes",
+                    "description": "Test when the prefix matches an attribute's namespace prefix, should return the corresponding namespace."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "prefix",
+                            "value": "nonExistentPrefix"
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test when the prefix does not match any known namespaces, should return null."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "prefix",
+                            "value": "parentPrefix"
+                        }
+                    ],
+                    "expected": "namespace from parent element",
+                    "description": "Test when the prefix does not match the current element but matches a prefix in the parent element's namespace, should return the parent's namespace."
+                }
+            ]
+        }
+    ]
+}
