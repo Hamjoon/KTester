@@ -1,0 +1,571 @@
+{
+  "details": {
+    "AntPathMatcher_isMatch": {
+      "process_init_response": 4.883774518966675,
+      "process_case_response": 30.51851749420166,
+      "check_test_class": 37.62196707725525
+    },
+    "AbstractRouterGroup_matchRouter": {
+      "process_init_response": 5.367743492126465,
+      "process_case_response": 21.957369565963745,
+      "check_test_class": 39.87632632255554
+    },
+    "CSVParser_createHeaders": {
+      "process_init_response": 3.09891939163208,
+      "process_case_response": 23.389148473739624,
+      "check_test_class": 40.070253133773804
+    },
+    "CSVFormat_toString": {
+      "process_init_response": 3.224195718765259,
+      "process_case_response": 16.76518750190735,
+      "check_test_class": 30.755393505096436
+    },
+    "CSVParser_nextRecord": {
+      "process_init_response": 3.7302658557891846,
+      "process_case_response": 15.095239639282227,
+      "check_test_class": 28.374173402786255
+    },
+    "Lexer_parseEncapsulatedToken": {
+      "process_init_response": 4.8616883754730225,
+      "process_case_response": 22.828876972198486,
+      "check_test_class": 197.71256065368652
+    },
+    "CSVFormat_printWithQuotes": {
+      "process_init_response": 6.565361499786377,
+      "process_case_response": 26.284143686294556,
+      "check_test_class": 28.81138253211975
+    },
+    "Lexer_nextToken": {
+      "process_init_response": 8.405036449432373,
+      "process_case_response": 23.093496799468994,
+      "check_test_class": 32.6955201625824
+    },
+    "FakeValuesService_resolveExpression_2": {
+      "process_init_response": 4.506153345108032,
+      "process_case_response": 21.653831481933594,
+      "check_test_class": 28.777430772781372
+    },
+    "FakeValuesService_bothify": {
+      "process_init_response": 4.889436721801758,
+      "process_case_response": 23.898618936538696,
+      "check_test_class": 35.780125856399536
+    },
+    "SqlTransformer_handlePrimitivesInArray": {
+      "process_init_response": 5.221032619476318,
+      "process_case_response": 30.2255756855011,
+      "check_test_class": 37.44551420211792
+    },
+    "FakeValuesService_javaNameToYamlName": {
+      "process_init_response": 5.273670196533203,
+      "process_case_response": 14.807815313339233,
+      "check_test_class": 30.77332067489624
+    },
+    "FakeValuesService_resolveExpression": {
+      "process_init_response": 5.3136045932769775,
+      "process_case_response": 26.01057505607605,
+      "check_test_class": 32.62262678146362
+    },
+    "FakeValues_toJavaNames": {
+      "process_init_response": 5.364504098892212,
+      "process_case_response": 28.975945711135864,
+      "check_test_class": 0.9605588912963867
+    },
+    "SparkPodSpec_copyFrom": {
+      "process_init_response": 4.692255973815918,
+      "process_case_response": 34.74087619781494,
+      "check_test_class": 30.426004886627197
+    },
+    "SubmissionSummary_copyFrom": {
+      "process_init_response": 5.031446933746338,
+      "process_case_response": 30.107107639312744,
+      "check_test_class": 61.781991958618164
+    },
+    "ApplicationSubmissionHelper_getExecutorSpec": {
+      "process_init_response": 5.167679786682129,
+      "process_case_response": 30.11926817893982,
+      "check_test_class": 31.656994581222534
+    },
+    "ApplicationSubmissionHelper_getDriverSpec": {
+      "process_init_response": 5.344712972640991,
+      "process_case_response": 25.563019514083862,
+      "check_test_class": 35.29415464401245
+    },
+    "ApplicationSubmissionHelper_getSparkConf": {
+      "process_init_response": 5.516293525695801,
+      "process_case_response": 29.516737699508667,
+      "check_test_class": 50.94106316566467
+    },
+    "ApplicationSubmissionHelper_populateEnv": {
+      "process_init_response": 6.3591718673706055,
+      "process_case_response": 32.59775686264038,
+      "check_test_class": 37.70198369026184
+    },
+    "Flat3Map_get": {
+      "process_init_response": 3.554365634918213,
+      "process_case_response": 17.449683904647827,
+      "check_test_class": 9.989207744598389
+    },
+    "SequencesComparator_getMiddleSnake": {
+      "process_init_response": 4.6026952266693115,
+      "process_case_response": 31.207516193389893,
+      "check_test_class": 36.821587562561035
+    },
+    "AbstractPatriciaTrie_put": {
+      "process_init_response": 4.604340553283691,
+      "process_case_response": 20.58180856704712,
+      "check_test_class": 41.59601593017578
+    },
+    "IteratorUtils_getIterator": {
+      "process_init_response": 4.824124813079834,
+      "process_case_response": 19.346248388290405,
+      "check_test_class": 1.4622368812561035
+    },
+    "Flat3Map_equals": {
+      "process_init_response": 4.992270469665527,
+      "process_case_response": 24.336050033569336,
+      "check_test_class": 25.35423469543457
+    },
+    "Flat3Map_containsKey": {
+      "process_init_response": 5.078486204147339,
+      "process_case_response": 19.347103118896484,
+      "check_test_class": 30.55016779899597
+    },
+    "Flat3Map_remove": {
+      "process_init_response": 5.684494733810425,
+      "process_case_response": 20.40314531326294,
+      "check_test_class": 26.397114992141724
+    },
+    "AbstractPatriciaTrie_nextEntryImpl": {
+      "process_init_response": 5.860262632369995,
+      "process_case_response": 19.486427545547485,
+      "check_test_class": 37.33596158027649
+    },
+    "Flat3Map_containsValue": {
+      "process_init_response": 3.2729384899139404,
+      "process_case_response": 15.578676462173462,
+      "check_test_class": 1.0186212062835693
+    },
+    "AbstractPatriciaTrie_removeInternalEntry": {
+      "process_init_response": 5.134312391281128,
+      "process_case_response": 15.60680866241455,
+      "check_test_class": 35.04156136512756
+    },
+    "TreeBidiMap_doRedBlackDelete": {
+      "process_init_response": 5.698688983917236,
+      "process_case_response": 21.468340396881104,
+      "check_test_class": 34.57508373260498
+    },
+    "TreeBidiMap_swapPosition": {
+      "process_init_response": 5.875925540924072,
+      "process_case_response": 24.93147921562195,
+      "check_test_class": 40.17750597000122
+    },
+    "AbstractPatriciaTrie_higherEntry": {
+      "process_init_response": 5.5854644775390625,
+      "process_case_response": 21.73575758934021,
+      "check_test_class": 29.18004822731018
+    },
+    "Flat3Map_put": {
+      "process_init_response": 5.756443500518799,
+      "process_case_response": 26.308860540390015,
+      "check_test_class": 26.304673671722412
+    },
+    "MachineComplexityEvaluator_evaluate": {
+      "process_init_response": 2.773862600326538,
+      "process_case_response": 19.750906944274902,
+      "check_test_class": 25.85536241531372
+    },
+    "ByteMachine_doTransitionOn": {
+      "process_init_response": 2.7788925170898438,
+      "process_case_response": 30.649758100509644,
+      "check_test_class": 42.303505659103394
+    },
+    "ByteMachine_findRangePattern": {
+      "process_init_response": 2.9776463508605957,
+      "process_case_response": 31.63500165939331,
+      "check_test_class": 33.083723306655884
+    },
+    "Ruler_matches": {
+      "process_init_response": 3.4467074871063232,
+      "process_case_response": 31.638926029205322,
+      "check_test_class": 34.32954406738281
+    },
+    "JsonRuleCompiler_processMatchExpression": {
+      "process_init_response": 4.180378675460815,
+      "process_case_response": 27.436914920806885,
+      "check_test_class": 29.174018144607544
+    },
+    "JsonRuleCompiler_writeRules": {
+      "process_init_response": 5.451662302017212,
+      "process_case_response": 20.72089982032776,
+      "check_test_class": 34.06718921661377
+    },
+    "ByteMachine_addEndOfMatch": {
+      "process_init_response": 5.7256128787994385,
+      "process_case_response": 28.356856107711792,
+      "check_test_class": 28.98023796081543
+    },
+    "ByteMachine_deleteRangePattern": {
+      "process_init_response": 2.459197759628296,
+      "process_case_response": 23.838507175445557,
+      "check_test_class": 32.44774007797241
+    },
+    "ByteMachine_addMatchReferences": {
+      "process_init_response": 6.071025371551514,
+      "process_case_response": 22.800684928894043,
+      "check_test_class": 38.076621294021606
+    },
+    "ByteMachine_addRangePattern": {
+      "process_init_response": 3.490199327468872,
+      "process_case_response": 24.694963216781616,
+      "check_test_class": 38.239352226257324
+    },
+    "ByteMachine_updateMatchReferences": {
+      "process_init_response": 4.78995418548584,
+      "process_case_response": 22.552100896835327,
+      "check_test_class": 26.794339656829834
+    },
+    "MachineComplexityEvaluator_getMatchesAccessibleFromEachTransition": {
+      "process_init_response": 5.014265775680542,
+      "process_case_response": 22.612589836120605,
+      "check_test_class": 49.04645037651062
+    },
+    "RuleCompiler_processMatchExpression": {
+      "process_init_response": 3.7143914699554443,
+      "process_case_response": 32.7344856262207,
+      "check_test_class": 27.753028631210327
+    },
+    "ByteMachine_findMatchPattern": {
+      "process_init_response": 3.483285903930664,
+      "process_case_response": 20.880739450454712,
+      "check_test_class": 34.76939845085144
+    },
+    "GenericMachine_deleteStep": {
+      "process_init_response": 3.9486544132232666,
+      "process_case_response": 32.69852423667908,
+      "check_test_class": 44.53082633018494
+    },
+    "RuleCompiler_writeRules": {
+      "process_init_response": 4.475697994232178,
+      "process_case_response": 25.347100496292114,
+      "check_test_class": 39.55854105949402
+    },
+    "Base64_encode": {
+      "process_init_response": 2.7702558040618896,
+      "process_case_response": 26.46747350692749,
+      "check_test_class": 31.07054591178894
+    },
+    "Rule_pattern": {
+      "process_init_response": 2.7714691162109375,
+      "process_case_response": 23.29696822166443,
+      "check_test_class": 28.9815673828125
+    },
+    "Base32_decode": {
+      "process_init_response": 3.241370439529419,
+      "process_case_response": 34.19133496284485,
+      "check_test_class": 33.032811641693115
+    },
+    "Base64_decode": {
+      "process_init_response": 3.2451112270355225,
+      "process_case_response": 28.253966331481934,
+      "check_test_class": 41.742499351501465
+    },
+    "Base32_encode": {
+      "process_init_response": 3.550031900405884,
+      "process_case_response": 26.358639240264893,
+      "check_test_class": 26.3006649017334
+    },
+    "DoubleMetaphone_handleS": {
+      "process_init_response": 5.044905662536621,
+      "process_case_response": 21.93900418281555,
+      "check_test_class": 33.03937530517578
+    },
+    "Nysiis_nysiis": {
+      "process_init_response": 2.5744919776916504,
+      "process_case_response": 27.83813714981079,
+      "check_test_class": 30.965607166290283
+    },
+    "DoubleMetaphone_handleG": {
+      "process_init_response": 5.904604434967041,
+      "process_case_response": 23.698649406433105,
+      "check_test_class": 30.734230995178223
+    },
+    "QuotedPrintableCodec_encodeQuotedPrintable": {
+      "process_init_response": 5.9573211669921875,
+      "process_case_response": 26.086987733840942,
+      "check_test_class": 39.16659116744995
+    },
+    "MurmurHash3_hash128x64Internal": {
+      "process_init_response": 2.721705198287964,
+      "process_case_response": 23.848670482635498,
+      "check_test_class": 30.896576404571533
+    },
+    "DaitchMokotoffSoundex_soundex": {
+      "process_init_response": 4.348568439483643,
+      "process_case_response": 15.445960760116577,
+      "check_test_class": 29.22434377670288
+    },
+    "Nysiis_transcodeRemaining": {
+      "process_init_response": 4.809952020645142,
+      "process_case_response": 26.38273024559021,
+      "check_test_class": 11.70785641670227
+    },
+    "Md5Crypt_md5Crypt": {
+      "process_init_response": 3.8752126693725586,
+      "process_case_response": 17.880126476287842,
+      "check_test_class": 1.3786563873291016
+    },
+    "Metaphone_metaphone": {
+      "process_init_response": 4.3967461585998535,
+      "process_case_response": 30.873759031295776,
+      "check_test_class": 30.441922903060913
+    },
+    "DoubleMetaphone_handleC": {
+      "process_init_response": 4.373308897018433,
+      "process_case_response": 21.535913228988647,
+      "check_test_class": 22.642576456069946
+    },
+    "DoubleMetaphone_doubleMetaphone": {
+      "process_init_response": 4.895322561264038,
+      "process_case_response": 23.699019193649292,
+      "check_test_class": 36.22967600822449
+    },
+    "Sha2Crypt_sha2Crypt": {
+      "process_init_response": 5.737875938415527,
+      "process_case_response": 29.41506338119507,
+      "check_test_class": 1356.905559539795
+    },
+    "ColognePhonetic_colognePhonetic": {
+      "process_init_response": 8.369162321090698,
+      "process_case_response": 22.733089685440063,
+      "check_test_class": 37.35607409477234
+    },
+    "Primitives_unwrap": {
+      "process_init_response": 4.457117080688477,
+      "process_case_response": 16.123307943344116,
+      "check_test_class": 1.0290651321411133
+    },
+    "JsonReader_doPeek": {
+      "process_init_response": 5.910158395767212,
+      "process_case_response": 23.083419799804688,
+      "check_test_class": 29.498214721679688
+    },
+    "JsonReader_peekNumber": {
+      "process_init_response": 6.0428454875946045,
+      "process_case_response": 24.50709819793701,
+      "check_test_class": 29.475610733032227
+    },
+    "JsonReader_skipValue": {
+      "process_init_response": 6.1240074634552,
+      "process_case_response": 22.110354900360107,
+      "check_test_class": 38.96101450920105
+    },
+    "$Gson$Types_resolve": {
+      "process_init_response": 6.214924335479736,
+      "process_case_response": 28.222163915634155,
+      "check_test_class": 29.940084218978882
+    },
+    "JsonTreeReader_peek": {
+      "process_init_response": 6.959610939025879,
+      "process_case_response": 25.147461891174316,
+      "check_test_class": 36.51250600814819
+    },
+    "ConstructorConstructor_newDefaultImplementationConstructor": {
+      "process_init_response": 7.294576406478882,
+      "process_case_response": 22.88253355026245,
+      "check_test_class": 34.62850618362427
+    },
+    "JsonReader_peek": {
+      "process_init_response": 7.883501291275024,
+      "process_case_response": 28.216760396957397,
+      "check_test_class": 50.60347938537598
+    },
+    "Excluder_excludeField": {
+      "process_init_response": 2.8701658248901367,
+      "process_case_response": 28.021982192993164,
+      "check_test_class": 34.04348611831665
+    },
+    "JsonReader_nextUnquotedValue": {
+      "process_init_response": 5.4456822872161865,
+      "process_case_response": 21.975199222564697,
+      "check_test_class": 30.56248927116394
+    },
+    "LinkedTreeMap_find": {
+      "process_init_response": 5.62542462348938,
+      "process_case_response": 19.243639945983887,
+      "check_test_class": 22.76940083503723
+    },
+    "ObjectTypeAdapter_read": {
+      "process_init_response": 2.8458902835845947,
+      "process_case_response": 125.24897360801697,
+      "check_test_class": 413.73069071769714
+    },
+    "LinkedTreeMap_rebalance": {
+      "process_init_response": 4.5607218742370605,
+      "process_case_response": 24.911140203475952,
+      "check_test_class": 36.78595280647278
+    },
+    "JsonReader_nextNonWhitespace": {
+      "process_init_response": 6.358971118927002,
+      "process_case_response": 23.233178853988647,
+      "check_test_class": 42.2324116230011
+    },
+    "TypeToken_isAssignableFrom": {
+      "process_init_response": 7.1662092208862305,
+      "process_case_response": 29.431806087493896,
+      "check_test_class": 41.95954084396362
+    },
+    "Primitives_wrap": {
+      "process_init_response": 6.748405694961548,
+      "process_case_response": 20.518231630325317,
+      "check_test_class": 1.9080424308776855
+    },
+    "ReflectiveTypeAdapterFactory_getBoundFields": {
+      "process_init_response": 6.331603288650513,
+      "process_case_response": 29.106468439102173,
+      "check_test_class": 38.48698854446411
+    },
+    "$Gson$Types_getGenericSupertype": {
+      "process_init_response": 4.774522304534912,
+      "process_case_response": 29.40640926361084,
+      "check_test_class": 39.65461564064026
+    },
+    "$Gson$Types_equals": {
+      "process_init_response": 4.844543933868408,
+      "process_case_response": 28.518256902694702,
+      "check_test_class": 28.36079216003418
+    },
+    "JsonReader_readEscapeCharacter": {
+      "process_init_response": 6.972356796264648,
+      "process_case_response": 18.57466459274292,
+      "check_test_class": 37.09833478927612
+    },
+    "AbstractStAXStreamProcessor_printContent": {
+      "process_init_response": 3.1340794563293457,
+      "process_case_response": 33.81938171386719,
+      "check_test_class": 54.16088342666626
+    },
+    "AbstractXMLOutputProcessor_printDocument": {
+      "process_init_response": 3.507931709289551,
+      "process_case_response": 33.364140033721924,
+      "check_test_class": 44.514204263687134
+    },
+    "WalkerNORMALIZE_analyzeMultiText": {
+      "process_init_response": 3.603517770767212,
+      "process_case_response": 28.154699325561523,
+      "check_test_class": 31.971115827560425
+    },
+    "AbstractStAXStreamProcessor_printDocument": {
+      "process_init_response": 4.158051252365112,
+      "process_case_response": 28.669750690460205,
+      "check_test_class": 45.22431755065918
+    },
+    "DTDParser_formatInternal": {
+      "process_init_response": 5.687999486923218,
+      "process_case_response": 24.06325936317444,
+      "check_test_class": 39.81783747673035
+    },
+    "StringBin_locate": {
+      "process_init_response": 5.774805307388306,
+      "process_case_response": 22.80579948425293,
+      "check_test_class": 27.433924913406372
+    },
+    "XPathHelper_getSingleStep": {
+      "process_init_response": 5.907352924346924,
+      "process_case_response": 21.355900764465332,
+      "check_test_class": 36.106860876083374
+    },
+    "AbstractSAXOutputProcessor_printContent": {
+      "process_init_response": 5.94576358795166,
+      "process_case_response": 27.211793422698975,
+      "check_test_class": 276.25374364852905
+    },
+    "AbstractFormattedWalker_next": {
+      "process_init_response": 4.256270885467529,
+      "process_case_response": 15.68011736869812,
+      "check_test_class": 35.137903928756714
+    },
+    "Element_getNamespacesInScope": {
+      "process_init_response": 3.764357566833496,
+      "process_case_response": 17.024610996246338,
+      "check_test_class": 29.55370044708252
+    },
+    "Element_getNamespace": {
+      "process_init_response": 4.380448579788208,
+      "process_case_response": 12.894204139709473,
+      "check_test_class": 30.277653694152832
+    },
+    "StAXStreamBuilder_processPrunableElement": {
+      "process_init_response": 4.488206386566162,
+      "process_case_response": 31.617429494857788,
+      "check_test_class": 55.72262239456177
+    },
+    "Verifier_isXMLPublicIDCharacter": {
+      "process_init_response": 3.694654941558838,
+      "process_case_response": 26.944205045700073,
+      "check_test_class": 23.97852849960327
+    },
+    "Format_escapeText": {
+      "process_init_response": 4.266595363616943,
+      "process_case_response": 26.71172523498535,
+      "check_test_class": 35.07280874252319
+    },
+    "AbstractStAXEventProcessor_printContent": {
+      "process_init_response": 4.1105451583862305,
+      "process_case_response": 28.46000361442566,
+      "check_test_class": 127.06753849983215
+    },
+    "Verifier_isXMLExtender": {
+      "process_init_response": 3.3226516246795654,
+      "process_case_response": 16.631574392318726,
+      "check_test_class": 9.345173597335815
+    },
+    "WalkerTRIM_analyzeMultiText": {
+      "process_init_response": 2.860764980316162,
+      "process_case_response": 21.59972381591797,
+      "check_test_class": 30.883588314056396
+    },
+    "SAXHandler_startElement": {
+      "process_init_response": 2.8752598762512207,
+      "process_case_response": 35.110297203063965,
+      "check_test_class": 55.93833827972412
+    },
+    "AbstractXMLOutputProcessor_printContent": {
+      "process_init_response": 5.367010116577148,
+      "process_case_response": 28.76702117919922,
+      "check_test_class": 114.36743569374084
+    },
+    "AbstractStAXEventProcessor_printDocument": {
+      "process_init_response": 3.6401779651641846,
+      "process_case_response": 22.0649573802948,
+      "check_test_class": 43.77974319458008
+    },
+    "Format_escapeAttribute": {
+      "process_init_response": 3.557612419128418,
+      "process_case_response": 22.99529504776001,
+      "check_test_class": 35.96167826652527
+    },
+    "HelpFormatter_renderOptions": {
+      "process_init_response": 3.1088736057281494,
+      "process_case_response": 34.19129037857056,
+      "check_test_class": 108.11638331413269
+    },
+    "PatternOptionBuilder_getValueType": {
+      "process_init_response": 8.032227993011475,
+      "process_case_response": 18.403970956802368,
+      "check_test_class": 1.2109863758087158
+    }
+  },
+  "statistics": {
+    "average_total": 83.96,
+    "average_detail": {
+      "process_init_response": 4.79,
+      "process_case_response": 25.6,
+      "check_test_class": 53.58
+    },
+    "median_time": 64.19,
+    "min_time": 19.87,
+    "max_time": 1392.06,
+    "std_time": 136.9
+  }
+}
