@@ -14,7 +14,7 @@ class JavaRunner:
     def __init__(self, project_url:str, dep_fd=""):
         self.cd_cmd = ['cd', project_url, '&&']
         self.dependency_fd = dep_fd
-        test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
+        test_dependencies = os.pathsep.join(["libs/*", "target/test-classes", "target/classes", f"{self.dependency_fd}/*"])
         self.test_base_cmd = [
             'java',
             '-cp', test_dependencies,
@@ -28,9 +28,8 @@ class JavaRunner:
     
     def compile_test(self, class_path):
         compile_cmd = ["javac", "-cp", "@dependencies.txt","-d","target/test-classes", class_path]
-        script = self.cd_cmd + compile_cmd
         self.logger.info(" ".join(compile_cmd))
-        result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8")
+        result = subprocess.run(compile_cmd, capture_output=True, text=True, cwd=self.cd_cmd[1], encoding="utf-8")
         if result.returncode!= 0:
             self.logger.error(f"error occured in compile test class, info:\n{result.stderr}")
             return (False, result.stderr)
@@ -105,12 +104,11 @@ class JavaRunner:
         test_cmd.insert(test_cmd.index('-cp'), java_agent)
         for method in methods:
             test_cmd += ['--select-method', method]
-        script = self.cd_cmd + test_cmd
         self.logger.info(' '.join(test_cmd))
-        result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
+        result = subprocess.run(test_cmd, capture_output=True, text=True, cwd=self.cd_cmd[1], encoding="utf-8", errors='ignore')
         if result.returncode == -1: 
             test_info = f"{result.stderr}\n{result.stdout}"
-            self.logger.error(f"error occured in execute:{' '.join(script)}\n info:\n{test_info}")
+            self.logger.error(f"error occured in execute:{' '.join(test_cmd)}\n info:\n{test_info}")
             return False
         else:
             self.logger.info(f"test execution info: {result.stdout}")
@@ -123,9 +121,7 @@ class JavaRunner:
         self.logger.debug(' '.join(report_cmd))
         if csv_report is not None:
             report_cmd += ["--csv", csv_report]
-        script = self.cd_cmd + report_cmd
-
-        result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
+        result = subprocess.run(report_cmd, capture_output=True, text=True, cwd=self.cd_cmd[1], encoding="utf-8", errors='ignore')
         if result.returncode!= 0:
             self.logger.error(f"error occured in generate report, info:\n{result.stderr}")
             return False
