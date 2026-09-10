@@ -1,0 +1,4 @@
+{
+  "api document of class com.google.gson.internal.Primitives": "\n * Contains static utility methods pertaining to primitive types and their\n * corresponding wrapper types.\n *\n * @author Kevin Bourrillion\n ",
+  "constructors for class `com.google.gson.internal.Primitives`": "params: \nbody:\n```java\n  Primitives() {}\n\n```"
+}

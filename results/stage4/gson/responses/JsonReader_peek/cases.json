@@ -1,0 +1,182 @@
+[
+  {
+    "group": "test peek with no prior peeking",
+    "cases": [
+      {
+        "input": [],
+        "expected": "JsonToken.BEGIN_OBJECT",
+        "description": "Test peek when no prior peeking has been done and the next token is a begin object."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.END_OBJECT",
+        "description": "Test peek when no prior peeking has been done and the next token is an end object."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test peek when no prior peeking has been done and the next token is a begin array."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.END_ARRAY",
+        "description": "Test peek when no prior peeking has been done and the next token is an end array."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.NULL",
+        "description": "Test peek when no prior peeking has been done and the next token is null."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.BOOLEAN",
+        "description": "Test peek when no prior peeking has been done and the next token is a boolean."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.STRING",
+        "description": "Test peek when no prior peeking has been done and the next token is a string."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.NUMBER",
+        "description": "Test peek when no prior peeking has been done and the next token is a number."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.END_DOCUMENT",
+        "description": "Test peek when no prior peeking has been done and the next token is end of document."
+      }
+    ]
+  },
+  {
+    "group": "test peek with prior peeking",
+    "cases": [
+      {
+        "input": [],
+        "expected": "JsonToken.BEGIN_OBJECT",
+        "description": "Test peek when prior peeking has set the state to BEGIN_OBJECT."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.END_OBJECT",
+        "description": "Test peek when prior peeking has set the state to END_OBJECT."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test peek when prior peeking has set the state to BEGIN_ARRAY."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.END_ARRAY",
+        "description": "Test peek when prior peeking has set the state to END_ARRAY."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.NULL",
+        "description": "Test peek when prior peeking has set the state to NULL."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.BOOLEAN",
+        "description": "Test peek when prior peeking has set the state to BOOLEAN."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.STRING",
+        "description": "Test peek when prior peeking has set the state to STRING."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.NUMBER",
+        "description": "Test peek when prior peeking has set the state to NUMBER."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.END_DOCUMENT",
+        "description": "Test peek when prior peeking has set the state to END_DOCUMENT."
+      }
+    ]
+  },
+  {
+    "group": "test peek with assertion error",
+    "cases": [
+      {
+        "input": [],
+        "expected": "AssertionError",
+        "description": "Test peek when the state is set to an unexpected value, triggering an AssertionError."
+      }
+    ]
+  },
+  {
+    "group": "test peek with edge cases",
+    "cases": [
+      {
+        "input": [],
+        "expected": "JsonToken.BEGIN_OBJECT",
+        "description": "Test peek when the input JSON starts with a begin object token."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.END_ARRAY",
+        "description": "Test peek when the input JSON ends with an end array token."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.NUMBER",
+        "description": "Test peek when the input JSON has a number token at the beginning."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.STRING",
+        "description": "Test peek when the input JSON has a string token at the beginning."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.BOOLEAN",
+        "description": "Test peek when the input JSON has a boolean token at the beginning."
+      }
+    ]
+  },
+  {
+    "group": "test peek with complex JSON structures",
+    "cases": [
+      {
+        "input": [],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test peek when the input JSON is a complex structure that starts with a begin array token."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.END_OBJECT",
+        "description": "Test peek when the input JSON is a complex structure that ends with an end object token."
+      }
+    ]
+  },
+  {
+    "group": "test peek after multiple operations",
+    "cases": [
+      {
+        "input": [],
+        "expected": "JsonToken.END_DOCUMENT",
+        "description": "Test peek after reading all tokens in the input JSON, expecting an end document token."
+      },
+      {
+        "input": [],
+        "expected": "JsonToken.NULL",
+        "description": "Test peek after reading a null token in the input JSON."
+      }
+    ]
+  },
+  {
+    "group": "test peek with IO exceptions",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IOException",
+        "description": "Test peek when an IOException occurs during the doPeek() method call."
+      }
+    ]
+  }
+]

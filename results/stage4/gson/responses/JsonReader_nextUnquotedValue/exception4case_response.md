@@ -1,0 +1,1 @@
+{"group": "nextUnquotedValue - Exception Scenarios", "cases": [{"input": [], "expected": "IOException", "description": "Test for IOException when an unexpected error occurs during buffer reading."}, {"input": [], "expected": "IOException", "description": "Test for IOException when the buffer is improperly initialized or corrupted."}]}

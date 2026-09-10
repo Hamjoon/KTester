@@ -1,0 +1,277 @@
+[
+  {
+    "group": "peek method - stackSize == 0",
+    "cases": [
+      {
+        "input": [],
+        "expected": "JsonToken.END_DOCUMENT",
+        "description": "Test when stackSize is 0, should return END_DOCUMENT"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains Iterator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "Iterator with next element"
+          }
+        ],
+        "expected": "JsonToken.NAME",
+        "description": "Test when the top of the stack is an Iterator and isObject is true, should return NAME"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "Iterator without next element"
+          }
+        ],
+        "expected": "JsonToken.END_OBJECT",
+        "description": "Test when the top of the stack is an Iterator and isObject is true but has no next element, should return END_OBJECT"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "Iterator with next element, isObject false"
+          }
+        ],
+        "expected": "JsonToken.END_ARRAY",
+        "description": "Test when the top of the stack is an Iterator and isObject is false, should return END_ARRAY"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains JsonObject",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonObject"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_OBJECT",
+        "description": "Test when the top of the stack is a JsonObject, should return BEGIN_OBJECT"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains JsonArray",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonArray"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test when the top of the stack is a JsonArray, should return BEGIN_ARRAY"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains JsonPrimitive",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with string"
+          }
+        ],
+        "expected": "JsonToken.STRING",
+        "description": "Test when the top of the stack is a JsonPrimitive that is a string, should return STRING"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with boolean"
+          }
+        ],
+        "expected": "JsonToken.BOOLEAN",
+        "description": "Test when the top of the stack is a JsonPrimitive that is a boolean, should return BOOLEAN"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with number"
+          }
+        ],
+        "expected": "JsonToken.NUMBER",
+        "description": "Test when the top of the stack is a JsonPrimitive that is a number, should return NUMBER"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with unsupported type"
+          }
+        ],
+        "expected": "AssertionError",
+        "description": "Test when the top of the stack is a JsonPrimitive with an unsupported type, should throw AssertionError"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains JsonNull",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonNull"
+          }
+        ],
+        "expected": "JsonToken.NULL",
+        "description": "Test when the top of the stack is JsonNull, should return NULL"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains SENTINEL_CLOSED",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "SENTINEL_CLOSED"
+          }
+        ],
+        "expected": "IllegalStateException with message 'JsonReader is closed'",
+        "description": "Test when the top of the stack is SENTINEL_CLOSED, should throw IllegalStateException"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains unsupported type",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "UnsupportedType"
+          }
+        ],
+        "expected": "MalformedJsonException with appropriate message",
+        "description": "Test when the top of the stack is an unsupported type, should throw MalformedJsonException"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "Custom JsonElement subclass"
+          }
+        ],
+        "expected": "MalformedJsonException with appropriate message",
+        "description": "Test when the top of the stack is a Custom JsonElement subclass that is not supported, should throw MalformedJsonException."
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains multiple elements",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonArray with JsonPrimitive and JsonObject"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test when the top of the stack is a JsonArray containing JsonPrimitive and JsonObject, should return BEGIN_ARRAY"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonObject with JsonPrimitive"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_OBJECT",
+        "description": "Test when the top of the stack is a JsonObject containing JsonPrimitive, should return BEGIN_OBJECT"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains empty collections",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "empty JsonArray"
+          }
+        ],
+        "expected": "JsonToken.END_ARRAY",
+        "description": "Test when the top of the stack is an empty JsonArray, should return END_ARRAY"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "empty JsonObject"
+          }
+        ],
+        "expected": "JsonToken.END_OBJECT",
+        "description": "Test when the top of the stack is an empty JsonObject, should return END_OBJECT"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains mixed types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonArray with JsonNull and JsonPrimitive"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test when the top of the stack is a JsonArray containing JsonNull and JsonPrimitive, should return BEGIN_ARRAY"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonObject with JsonNull"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_OBJECT",
+        "description": "Test when the top of the stack is a JsonObject containing JsonNull, should return BEGIN_OBJECT"
+      }
+    ]
+  },
+  {
+    "group": "peek method - stack contains various JsonPrimitive types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with character"
+          }
+        ],
+        "expected": "AssertionError",
+        "description": "Test when the top of the stack is a JsonPrimitive with a character type, should throw AssertionError"
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with empty string"
+          }
+        ],
+        "expected": "JsonToken.STRING",
+        "description": "Test when the top of the stack is a JsonPrimitive with an empty string, should return STRING"
+      }
+    ]
+  }
+]

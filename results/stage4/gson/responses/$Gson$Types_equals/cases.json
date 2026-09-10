@@ -1,0 +1,398 @@
+[
+  {
+    "group": "equals method basic equality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "null"
+          },
+          {
+            "parameter": "b",
+            "value": "null"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when both parameters are null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "String.class"
+          },
+          {
+            "parameter": "b",
+            "value": "String.class"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when both parameters are the same class."
+      }
+    ]
+  },
+  {
+    "group": "equals method class comparison",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "String.class"
+          },
+          {
+            "parameter": "b",
+            "value": "Integer.class"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing different classes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "String.class"
+          },
+          {
+            "parameter": "b",
+            "value": "String.class"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when comparing the same class."
+      }
+    ]
+  },
+  {
+    "group": "equals method parameterized type comparison",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new ParameterizedTypeImpl(List.class, String.class)"
+          },
+          {
+            "parameter": "b",
+            "value": "new ParameterizedTypeImpl(List.class, Integer.class)"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing parameterized types with different actual type arguments."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new ParameterizedTypeImpl(List.class, String.class)"
+          },
+          {
+            "parameter": "b",
+            "value": "new ParameterizedTypeImpl(List.class, String.class)"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when comparing parameterized types with the same actual type arguments."
+      }
+    ]
+  },
+  {
+    "group": "equals method generic array type comparison",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new GenericArrayTypeImpl(String.class)"
+          },
+          {
+            "parameter": "b",
+            "value": "new GenericArrayTypeImpl(Integer.class)"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing generic array types with different component types."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new GenericArrayTypeImpl(String.class)"
+          },
+          {
+            "parameter": "b",
+            "value": "new GenericArrayTypeImpl(String.class)"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when comparing generic array types with the same component types."
+      }
+    ]
+  },
+  {
+    "group": "equals method wildcard type comparison",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new WildcardTypeImpl(new Type[]{String.class}, new Type[]{})"
+          },
+          {
+            "parameter": "b",
+            "value": "new WildcardTypeImpl(new Type[]{Integer.class}, new Type[]{})"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing wildcard types with different upper bounds."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new WildcardTypeImpl(new Type[]{String.class}, new Type[]{})"
+          },
+          {
+            "parameter": "b",
+            "value": "new WildcardTypeImpl(new Type[]{String.class}, new Type[]{})"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when comparing wildcard types with the same upper bounds."
+      }
+    ]
+  },
+  {
+    "group": "equals method type variable comparison",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new TypeVariableImpl(String.class, 'T')"
+          },
+          {
+            "parameter": "b",
+            "value": "new TypeVariableImpl(Integer.class, 'T')"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing type variables with different declarations."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new TypeVariableImpl(String.class, 'T')"
+          },
+          {
+            "parameter": "b",
+            "value": "new TypeVariableImpl(String.class, 'T')"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when comparing type variables with the same declaration and name."
+      }
+    ]
+  },
+  {
+    "group": "equals method unsupported types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new Object()"
+          },
+          {
+            "parameter": "b",
+            "value": "new Object()"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing unsupported types."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new Object()"
+          },
+          {
+            "parameter": "b",
+            "value": "new GenericArrayTypeImpl(String.class)"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing an unsupported type with a supported type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new Object()"
+          },
+          {
+            "parameter": "b",
+            "value": "new WildcardTypeImpl(new Type[]{String.class}, new Type[]{})"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing an unsupported type with a wildcard type."
+      }
+    ]
+  },
+  {
+    "group": "equals method parameterized type owner comparison",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new ParameterizedTypeImpl(List.class, String.class, String.class)"
+          },
+          {
+            "parameter": "b",
+            "value": "new ParameterizedTypeImpl(List.class, String.class, Integer.class)"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing parameterized types with different owner types."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new ParameterizedTypeImpl(Map.class, String.class, Integer.class)"
+          },
+          {
+            "parameter": "b",
+            "value": "new ParameterizedTypeImpl(Map.class, String.class, Integer.class)"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when comparing parameterized types with the same owner and actual type arguments."
+      }
+    ]
+  },
+  {
+    "group": "equals method generic array type comparison with wildcards",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new GenericArrayTypeImpl(new WildcardTypeImpl(new Type[]{String.class}, new Type[]{}))"
+          },
+          {
+            "parameter": "b",
+            "value": "new GenericArrayTypeImpl(new WildcardTypeImpl(new Type[]{Integer.class}, new Type[]{}))"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing generic array types that have wildcard component types with different upper bounds."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new GenericArrayTypeImpl(new WildcardTypeImpl(new Type[]{String.class}, new Type[]{}))"
+          },
+          {
+            "parameter": "b",
+            "value": "new GenericArrayTypeImpl(new WildcardTypeImpl(new Type[]{String.class}, new Type[]{}))"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when comparing generic array types that have the same wildcard component types."
+      }
+    ]
+  },
+  {
+    "group": "equals method type variable comparison with different names",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new TypeVariableImpl(String.class, 'X')"
+          },
+          {
+            "parameter": "b",
+            "value": "new TypeVariableImpl(String.class, 'Y')"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing type variables with different names."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new TypeVariableImpl(String.class, 'X')"
+          },
+          {
+            "parameter": "b",
+            "value": "new TypeVariableImpl(String.class, 'X')"
+          }
+        ],
+        "expected": true,
+        "description": "Test that equals returns true when comparing type variables with the same declaration and name."
+      }
+    ]
+  },
+  {
+    "group": "equals method unsupported types edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new Object()"
+          },
+          {
+            "parameter": "b",
+            "value": "new String('test')"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing an unsupported type with a supported type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new Object()"
+          },
+          {
+            "parameter": "b",
+            "value": "new Object()"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing two different instances of unsupported types."
+      }
+    ]
+  },
+  {
+    "group": "equals method generic array type comparison with unsupported types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "new GenericArrayTypeImpl(new TypeVariableImpl(String.class, 'T'))"
+          },
+          {
+            "parameter": "b",
+            "value": "new GenericArrayTypeImpl(new Object())"
+          }
+        ],
+        "expected": false,
+        "description": "Test that equals returns false when comparing a generic array type with an unsupported type."
+      }
+    ]
+  }
+]

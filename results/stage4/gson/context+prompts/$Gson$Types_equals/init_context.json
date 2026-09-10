@@ -1,0 +1,5 @@
+{
+  "api document of class com.google.gson.internal.$Gson$Types": "\n * Static methods for working with types.\n *\n * @author Bob Lee\n * @author Jesse Wilson\n ",
+  "constructors for class `com.google.gson.internal.$Gson$Types`": "params: \nbody:\n```java\n  private $Gson$Types() {\n    throw new UnsupportedOperationException();\n  }\n\n```",
+  "invoke examples of focal method": "example 1:\n```java\n  @Override public final boolean equals(Object o) {\n    return o instanceof TypeToken<?>\n        && $Gson$Types.equals(type, ((TypeToken<?>) o).type);\n  }\n```\nexample 2:\n```java\n  public static boolean equals(Type a, Type b) {\n    if (a == b) {\n    } else if (a instanceof Class) {\n    } else if (a instanceof ParameterizedType) {\n    } else if (a instanceof GenericArrayType) {\n      if (!(b instanceof GenericArrayType)) {\n      GenericArrayType ga = (GenericArrayType) a;\n      GenericArrayType gb = (GenericArrayType) b;\n      return equals(ga.getGenericComponentType(), gb.getGenericComponentType());\n  }\n```"
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "group": "read method - basic functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with a simple JSON object {\"key\":\"value\"}"
+          }
+        ],
+        "expected": "{\"key\":\"value\"}",
+        "description": "Test reading a simple JSON object to ensure correct parsing of a terminal value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with a simple JSON array [1, 2, 3]"
+          }
+        ],
+        "expected": "[1, 2, 3]",
+        "description": "Test reading a simple JSON array to ensure correct parsing of terminal values in an array."
+      }
+    ]
+  },
+  {
+    "group": "read method - nested structures",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with nested JSON object {\"outer\":{\"inner\":\"value\"}}"
+          }
+        ],
+        "expected": "{\"outer\":{\"inner\":\"value\"}}",
+        "description": "Test reading a nested JSON object to ensure correct handling of nested structures."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with nested JSON array [[1, 2], [3, 4]]"
+          }
+        ],
+        "expected": "[[1, 2], [3, 4]]",
+        "description": "Test reading a nested JSON array to ensure correct handling of nested arrays."
+      }
+    ]
+  },
+  {
+    "group": "read method - conditional branches",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with an empty JSON object {}"
+          }
+        ],
+        "expected": "{}",
+        "description": "Test reading an empty JSON object to verify handling of empty structures."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with an empty JSON array []"
+          }
+        ],
+        "expected": "[]",
+        "description": "Test reading an empty JSON array to verify handling of empty structures."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with a JSON object containing multiple entries {\"key1\":\"value1\", \"key2\":\"value2\"}"
+          }
+        ],
+        "expected": "{\"key1\":\"value1\", \"key2\":\"value2\"}",
+        "description": "Test reading a JSON object with multiple key-value pairs to verify correct parsing."
+      }
+    ]
+  },
+  {
+    "group": "read method - error handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with invalid JSON input"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading invalid JSON input to verify that an IOException is thrown."
+      }
+    ]
+  },
+  {
+    "group": "read method - exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with a malformed JSON object {key:value}"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a malformed JSON object to verify that an IOException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with a JSON object that has a trailing comma {\"key1\":\"value1\",}"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a JSON object with a trailing comma to verify that an IOException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with a JSON object containing a non-terminating string {\"key\":\"value"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a JSON object with a non-terminating string to verify that an IOException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with an unexpected end of JSON input"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading JSON input that ends unexpectedly to verify that an IOException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "JsonReader with a JSON object that has an invalid type for a key {\"key\":{}}"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a JSON object with an invalid type for a key to verify that an IOException is thrown."
+      }
+    ]
+  }
+]

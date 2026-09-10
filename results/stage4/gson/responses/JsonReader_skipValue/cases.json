@@ -1,0 +1,157 @@
+[
+  {
+    "group": "skipValue - Basic Cases",
+    "cases": [
+      {
+        "input": [],
+        "expected": "No exception thrown, state updated correctly",
+        "description": "Test skipValue when peeked is PEEKED_NONE, should call doPeek and proceed without exceptions."
+      },
+      {
+        "input": [],
+        "expected": "Stack size increased by 1 and count incremented",
+        "description": "Test skipValue when peeked is PEEKED_BEGIN_ARRAY, should push new state and increment count."
+      },
+      {
+        "input": [],
+        "expected": "Stack size increased by 1 and count incremented",
+        "description": "Test skipValue when peeked is PEEKED_BEGIN_OBJECT, should push new state and increment count."
+      },
+      {
+        "input": [],
+        "expected": "Stack size decreased by 1 and count decremented",
+        "description": "Test skipValue when peeked is PEEKED_END_ARRAY, should decrement stack size and count."
+      },
+      {
+        "input": [],
+        "expected": "Stack size decreased by 1 and count decremented",
+        "description": "Test skipValue when peeked is PEEKED_END_OBJECT, should decrement stack size and count."
+      }
+    ]
+  },
+  {
+    "group": "skipValue - Quoted and Unquoted Values",
+    "cases": [
+      {
+        "input": [],
+        "expected": "No exception thrown, correctly skips unquoted value",
+        "description": "Test skipValue when peeked is PEEKED_UNQUOTED, should call skipUnquotedValue and continue without exceptions."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, correctly skips single quoted value",
+        "description": "Test skipValue when peeked is PEEKED_SINGLE_QUOTED, should call skipQuotedValue with single quote."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, correctly skips double quoted value",
+        "description": "Test skipValue when peeked is PEEKED_DOUBLE_QUOTED, should call skipQuotedValue with double quote."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, correctly skips unquoted name",
+        "description": "Test skipValue when peeked is PEEKED_UNQUOTED_NAME, should call skipUnquotedValue and update pathNames."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, correctly skips single quoted name",
+        "description": "Test skipValue when peeked is PEEKED_SINGLE_QUOTED_NAME, should call skipQuotedValue with single quote and update pathNames."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, correctly skips double quoted name",
+        "description": "Test skipValue when peeked is PEEKED_DOUBLE_QUOTED_NAME, should call skipQuotedValue with double quote and update pathNames."
+      }
+    ]
+  },
+  {
+    "group": "skipValue - Numbers and EOF",
+    "cases": [
+      {
+        "input": [],
+        "expected": "No exception thrown, pos updated correctly",
+        "description": "Test skipValue when peeked is PEEKED_NUMBER, should update pos with peekedNumberLength."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, method returns without state change",
+        "description": "Test skipValue when peeked is PEEKED_EOF, should exit the method without any changes."
+      }
+    ]
+  },
+  {
+    "group": "skipValue - Edge Cases",
+    "cases": [
+      {
+        "input": [],
+        "expected": "No exception thrown, pathNames updated correctly",
+        "description": "Test skipValue when count is 0 and peeked is PEEKED_END_OBJECT, should set last pathName to null."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, pathNames updated correctly",
+        "description": "Test skipValue when count is 0 and peeked is PEEKED_UNQUOTED_NAME, should set last pathName to '<skipped>'."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, pathNames updated correctly",
+        "description": "Test skipValue when count is 0 and peeked is PEEKED_SINGLE_QUOTED_NAME, should set last pathName to '<skipped>'."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, pathNames updated correctly",
+        "description": "Test skipValue when count is 0 and peeked is PEEKED_DOUBLE_QUOTED_NAME, should set last pathName to '<skipped>'."
+      }
+    ]
+  },
+  {
+    "group": "skipValue - Additional Cases",
+    "cases": [
+      {
+        "input": [],
+        "expected": "No exception thrown, correctly handles unexpected token",
+        "description": "Test skipValue when peeked is an unexpected token, should not throw an exception and handle gracefully."
+      },
+      {
+        "input": [],
+        "expected": "Stack size remains the same, count remains the same",
+        "description": "Test skipValue when peeked is PEEKED_NONE after a series of skip operations, should maintain the current stack size and count."
+      },
+      {
+        "input": [],
+        "expected": "Stack size remains the same, count remains the same",
+        "description": "Test skipValue when peeked is PEEKED_EOF after multiple nested structures, should not change stack size or count."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, state updated correctly for multiple nested arrays",
+        "description": "Test skipValue when peeked is PEEKED_BEGIN_ARRAY followed by PEEKED_END_ARRAY, should handle nested arrays correctly."
+      },
+      {
+        "input": [],
+        "expected": "No exception thrown, state updated correctly for multiple nested objects",
+        "description": "Test skipValue when peeked is PEEKED_BEGIN_OBJECT followed by PEEKED_END_OBJECT, should handle nested objects correctly."
+      }
+    ]
+  },
+  {
+    "group": "skipValue - Exception Scenarios",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IOException thrown",
+        "description": "Test skipValue when an IOException is thrown during doPeek, should propagate the exception."
+      },
+      {
+        "input": [],
+        "expected": "IOException thrown",
+        "description": "Test skipValue when an IOException is thrown during skipUnquotedValue, should propagate the exception."
+      },
+      {
+        "input": [],
+        "expected": "IOException thrown",
+        "description": "Test skipValue when an IOException is thrown during skipQuotedValue, should propagate the exception."
+      }
+    ]
+  }
+]

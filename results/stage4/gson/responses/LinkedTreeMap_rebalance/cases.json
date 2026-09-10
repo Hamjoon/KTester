@@ -1,0 +1,306 @@
+[
+  {
+    "group": "rebalance - Right-Right Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 1, right height 3"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node is rotated left",
+        "description": "Test case for the right-right case where the tree is unbalanced with a right-heavy node."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Right-Left Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 1, right height 2"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node is rotated right followed by a left rotation",
+        "description": "Test case for the right-left case where the tree requires two rotations to balance."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Left-Left Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 3, right height 1"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node is rotated right",
+        "description": "Test case for the left-left case where the tree is unbalanced with a left-heavy node."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Left-Right Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 2, right height 1"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node is rotated left followed by a right rotation",
+        "description": "Test case for the left-right case where the tree requires two rotations to balance."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Height Equal Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with equal left and right height"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node height is updated, no rotation occurs",
+        "description": "Test case where the heights of left and right children are equal, and the insert causes a height update."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Height Difference of One Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 2, right height 1"
+          },
+          {
+            "parameter": "insert",
+            "value": "false"
+          }
+        ],
+        "expected": "Node height is updated, no rotation occurs",
+        "description": "Test case where the height difference is one, and the insert flag is false."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - No Change Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 1, right height 1"
+          },
+          {
+            "parameter": "insert",
+            "value": "false"
+          }
+        ],
+        "expected": "Node height remains unchanged, no rotation occurs",
+        "description": "Test case where the tree is balanced and the insert flag is false, ensuring no changes occur."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Insert with Left-Heavy Node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 3, right height 2"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node height is updated, no rotation occurs",
+        "description": "Test case for a left-heavy node where the insert causes a height update but no rotation is necessary."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Insert with Right-Heavy Node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 2, right height 3"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node height is updated, no rotation occurs",
+        "description": "Test case for a right-heavy node where the insert causes a height update but no rotation is necessary."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Insert with Balanced Node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 2, right height 2"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node height is updated, no rotation occurs",
+        "description": "Test case for a balanced node where the insert causes a height update but no rotation is necessary."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Remove from Right-Right Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 1, right height 3"
+          },
+          {
+            "parameter": "insert",
+            "value": "false"
+          }
+        ],
+        "expected": "Node is rotated left",
+        "description": "Test case for the right-right case where the tree is unbalanced with a right-heavy node and an element is removed."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Remove from Left-Left Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 3, right height 1"
+          },
+          {
+            "parameter": "insert",
+            "value": "false"
+          }
+        ],
+        "expected": "Node is rotated right",
+        "description": "Test case for the left-left case where the tree is unbalanced with a left-heavy node and an element is removed."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - No Rotation on Insert with Height Equal",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with equal left and right height"
+          },
+          {
+            "parameter": "insert",
+            "value": "false"
+          }
+        ],
+        "expected": "Node height remains unchanged, no rotation occurs",
+        "description": "Test case where the heights of left and right children are equal, and the insert flag is false, ensuring no changes occur."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Height Difference of Two Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 2, right height 4"
+          },
+          {
+            "parameter": "insert",
+            "value": "false"
+          }
+        ],
+        "expected": "Node is rotated left",
+        "description": "Test case for a node with a height difference of two where no insert occurs, triggering a left rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Height Difference of Negative Two Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height 4, right height 2"
+          },
+          {
+            "parameter": "insert",
+            "value": "false"
+          }
+        ],
+        "expected": "Node is rotated right",
+        "description": "Test case for a node with a height difference of negative two where no insert occurs, triggering a right rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - No Rotation on Insert with Height Equal and Insert True",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with equal left and right height"
+          },
+          {
+            "parameter": "insert",
+            "value": "true"
+          }
+        ],
+        "expected": "Node height is updated, no rotation occurs",
+        "description": "Test case where the heights of left and right children are equal, and the insert causes a height update but no rotation."
+      }
+    ]
+  }
+]

@@ -1,0 +1,90 @@
+{
+    "group": "doPeek Method Test Cases",
+    "cases": [
+        {
+            "input": [],
+            "expected": "PEEKED_END_ARRAY",
+            "description": "Test case for an empty array. Expecting to peek an end array."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_END_OBJECT",
+            "description": "Test case for an empty object. Expecting to peek an end object."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_DOUBLE_QUOTED_NAME",
+            "description": "Test case for a valid double-quoted name in a non-empty object. Expecting to peek a double-quoted name."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_SINGLE_QUOTED_NAME",
+            "description": "Test case for a valid single-quoted name in a non-empty object. Expecting to peek a single-quoted name."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_UNQUOTED_NAME",
+            "description": "Test case for a valid unquoted name in a non-empty object. Expecting to peek an unquoted name."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_EOF",
+            "description": "Test case for end of file in a non-empty document. Expecting to peek EOF."
+        },
+        {
+            "input": [],
+            "expected": "throw syntaxError(\"Unterminated array\")",
+            "description": "Test case for an unterminated array. Expecting a syntax error."
+        },
+        {
+            "input": [],
+            "expected": "throw syntaxError(\"Unterminated object\")",
+            "description": "Test case for an unterminated object. Expecting a syntax error."
+        },
+        {
+            "input": [],
+            "expected": "throw syntaxError(\"Expected name\")",
+            "description": "Test case where a name was expected but not found. Expecting a syntax error."
+        },
+        {
+            "input": [],
+            "expected": "throw new IllegalStateException(\"JsonReader is closed\")",
+            "description": "Test case where the JsonReader is closed. Expecting an IllegalStateException."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_NULL",
+            "description": "Test case for a null value in a lenient mode. Expecting to peek null."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_SINGLE_QUOTED",
+            "description": "Test case for a valid single-quoted string value. Expecting to peek a single-quoted string."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_DOUBLE_QUOTED",
+            "description": "Test case for a valid double-quoted string value. Expecting to peek a double-quoted string."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_BEGIN_ARRAY",
+            "description": "Test case for a valid beginning of an array. Expecting to peek a begin array."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_BEGIN_OBJECT",
+            "description": "Test case for a valid beginning of an object. Expecting to peek a begin object."
+        },
+        {
+            "input": [],
+            "expected": "throw syntaxError(\"Unexpected value\")",
+            "description": "Test case for an unexpected value encountered. Expecting a syntax error."
+        },
+        {
+            "input": [],
+            "expected": "throw syntaxError(\"Expected value\")",
+            "description": "Test case for an expected value not found. Expecting a syntax error."
+        }
+    ]
+}

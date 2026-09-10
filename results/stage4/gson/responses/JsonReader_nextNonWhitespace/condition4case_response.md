@@ -1,0 +1,94 @@
+{
+    "testCases": [
+        {
+            "group": "nextNonWhitespace with EOF handling",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "throwOnEof",
+                            "value": true
+                        }
+                    ],
+                    "expected": "EOFException with message 'End of input'",
+                    "description": "Test case where the method reaches the end of input and throws EOFException when throwOnEof is true."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "throwOnEof",
+                            "value": false
+                        }
+                    ],
+                    "expected": "-1",
+                    "description": "Test case where the method reaches the end of input and returns -1 when throwOnEof is false."
+                }
+            ]
+        },
+        {
+            "group": "nextNonWhitespace with whitespace handling",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "throwOnEof",
+                            "value": false
+                        }
+                    ],
+                    "expected": "first non-whitespace character",
+                    "description": "Test case where the input contains only whitespace characters, expecting the first non-whitespace character to be returned."
+                }
+            ]
+        },
+        {
+            "group": "nextNonWhitespace with comments handling",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "throwOnEof",
+                            "value": false
+                        }
+                    ],
+                    "expected": "first non-comment character",
+                    "description": "Test case where the input contains a single-line comment, expecting to skip the comment and return the first non-comment character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "throwOnEof",
+                            "value": false
+                        }
+                    ],
+                    "expected": "first non-comment character",
+                    "description": "Test case where the input contains a multi-line comment, expecting to skip the comment and return the first non-comment character."
+                }
+            ]
+        },
+        {
+            "group": "nextNonWhitespace with invalid input handling",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "throwOnEof",
+                            "value": true
+                        }
+                    ],
+                    "expected": "IOException with message 'Unterminated comment'",
+                    "description": "Test case where the input contains an unterminated multi-line comment, expecting a syntax error to be thrown."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "throwOnEof",
+                            "value": true
+                        }
+                    ],
+                    "expected": "IOException with message 'Invalid character'",
+                    "description": "Test case where the input contains an invalid character, expecting a syntax error to be thrown."
+                }
+            ]
+        }
+    ]
+}

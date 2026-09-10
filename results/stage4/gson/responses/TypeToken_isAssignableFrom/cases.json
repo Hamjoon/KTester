@@ -1,0 +1,376 @@
+[
+  {
+    "group": "isAssignableFrom - Null Type",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": null
+          },
+          {
+            "parameter": "to",
+            "value": "SomeParameterizedType"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' is null. The method should return false."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Equal Types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeParameterizedType"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeParameterizedType"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' and 'to' are equal types. The method should return true."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Parameterized Type Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeParameterizedType<SomeType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeParameterizedType<SomeOtherType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' is a parameterized type with different type arguments than 'to'. The method should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeParameterizedType<SomeType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeParameterizedType<SomeType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' and 'to' are parameterized types with the same type arguments. The method should return true."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Interface Assignment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeClassImplementsInterface"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeInterface"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' is a class that implements an interface. The method should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeClassDoesNotImplementInterface"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeInterface"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' is a class that does not implement the interface 'to'. The method should return false."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Superclass Assignment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SubClass"
+          },
+          {
+            "parameter": "to",
+            "value": "SuperClass"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' is a subclass of 'to'. The method should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "UnrelatedClass"
+          },
+          {
+            "parameter": "to",
+            "value": "SuperClass"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' has no relationship with 'to'. The method should return false."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Generic Array Type Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeGenericArrayType<SomeType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeGenericArrayType<SomeOtherType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' is a generic array type with different type arguments than 'to'. The method should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeGenericArrayType<SomeType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeGenericArrayType<SomeType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' and 'to' are generic array types with the same type arguments. The method should return true."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Nested Parameterized Types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeOuterType<SomeInnerType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeOuterType<SomeOtherInnerType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' is a nested parameterized type with different inner types than 'to'. The method should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeOuterType<SomeInnerType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeOuterType<SomeInnerType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' and 'to' are nested parameterized types with the same inner types. The method should return true."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Wildcard Type Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeWildcardType<? extends SomeBaseType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeWildcardType<? extends SomeOtherBaseType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' is a wildcard type with a different upper bound than 'to'. The method should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeWildcardType<? extends SomeBaseType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeWildcardType<? extends SomeBaseType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' and 'to' are wildcard types with the same upper bounds. The method should return true."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Empty Type Var Map",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeParameterizedType<SomeType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeParameterizedType<SomeType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' and 'to' are the same parameterized type with an empty type variable map. The method should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeParameterizedType<SomeType>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeParameterizedType<AnotherType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' and 'to' are parameterized types with different type arguments and an empty type variable map. The method should return false."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom - Type Variable Resolution",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeParameterizedType<T>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeParameterizedType<SomeType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{\"T\":\"SomeType\"}"
+          }
+        ],
+        "expected": true,
+        "description": "Test when 'from' is a parameterized type with a type variable that maps to the type in 'to'. The method should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "SomeParameterizedType<T>"
+          },
+          {
+            "parameter": "to",
+            "value": "SomeParameterizedType<SomeOtherType>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{\"T\":\"SomeType\"}"
+          }
+        ],
+        "expected": false,
+        "description": "Test when 'from' is a parameterized type with a type variable that maps to one type, but 'to' has a different type. The method should return false."
+      }
+    ]
+  }
+]

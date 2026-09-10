@@ -1,0 +1,398 @@
+You are tasked with creating a framework for a test class in Java. Now analyze the following information carefully:
+
+1. The method that needs to be tested and its parameters.
+2. The constructor of the target class and its parameters.
+3. Any dependencies or external resources used by the target class.
+
+Based on this analysis, complete the test class template in the provided structure:
+
+1. Initialize necessary fields and dependencies within setupBeforeAll() and setupBeforeEach().
+2. Handle any required cleanup in teardownAfterEach() and teardownAfterAll().
+3. Make sure not to invoke any private methods or fields of the target class and dependent class.
+4. Refer to the "given" phase in the existing test class for guidance.
+5. Add necessary import statements and ensure there are no syntax errors in the generated code.
+
+@input{focal method and target class}
+Here is the code of focal method, `rebalance(Node<K, V>, boolean)`, with the focal class `LinkedTreeMap_rebalance_Test`:
+```Java
+package com.google.gson.internal;
+import java.util.Set;
+import java.util.ConcurrentModificationException;
+import java.io.IOException;
+import java.util.AbstractSet;
+import java.util.LinkedHashMap;
+import java.util.Comparator;
+import java.util.AbstractMap;
+import java.io.ObjectInputStream;
+import java.io.InvalidObjectException;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import java.io.ObjectStreamException;
+import java.io.Serializable;
+@SuppressWarnings("serial")
+public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Serializable {
+    Node<K, V> root;
+    int size = 0;
+    int modCount = 0;
+    final Node<K, V> header;
+    private void rebalance(Node<K, V> unbalanced, boolean insert) {
+        for (Node<K, V> node = unbalanced; node != null; node = node.parent) {
+            Node<K, V> left = node.left;
+            Node<K, V> right = node.right;
+            int leftHeight = (left != null) ? left.height : 0;
+            int rightHeight = (right != null) ? right.height : 0;
+            int delta = leftHeight - rightHeight;
+            if (delta == (-2)) {
+                Node<K, V> rightLeft = right.left;
+                Node<K, V> rightRight = right.right;
+                int rightRightHeight = (rightRight != null) ? rightRight.height : 0;
+                int rightLeftHeight = (rightLeft != null) ? rightLeft.height : 0;
+                int rightDelta = rightLeftHeight - rightRightHeight;
+                if ((rightDelta == (-1)) || ((rightDelta == 0) && (!insert))) {
+                    rotateLeft(node);// AVL right right
+    
+                } else {
+                    assert rightDelta == 1;
+                    rotateRight(right);// AVL right left
+    
+                    rotateLeft(node);
+                }
+                if (insert) {
+                    break;// no further rotations will be necessary
+    
+                }
+            } else if (delta == 2) {
+                Node<K, V> leftLeft = left.left;
+                Node<K, V> leftRight = left.right;
+                int leftRightHeight = (leftRight != null) ? leftRight.height : 0;
+                int leftLeftHeight = (leftLeft != null) ? leftLeft.height : 0;
+                int leftDelta = leftLeftHeight - leftRightHeight;
+                if ((leftDelta == 1) || ((leftDelta == 0) && (!insert))) {
+                    rotateRight(node);// AVL left left
+    
+                } else {
+                    assert leftDelta == (-1);
+                    rotateLeft(left);// AVL left right
+    
+                    rotateRight(node);
+                }
+                if (insert) {
+                    break;// no further rotations will be necessary
+    
+                }
+            } else if (delta == 0) {
+                node.height = leftHeight + 1;// leftHeight == rightHeight
+    
+                if (insert) {
+                    break;// the insert caused balance, so rebalancing is done!
+    
+                }
+            } else {
+                assert (delta == (-1)) || (delta == 1);
+                node.height = Math.max(leftHeight, rightHeight) + 1;
+                if (!insert) {
+                    break;// the height hasn't changed, so rebalancing is done!
+    
+                }
+            }
+        }
+    }
+@Override
+public void clear();
+    @Override
+public boolean containsKey(Object key);
+    @Override
+public Set<Entry<K, V>> entrySet();
+    Node<K, V> find(K key, boolean create);
+    Node<K, V> findByEntry(Entry<?, ?> entry);
+    @SuppressWarnings("unchecked")
+Node<K, V> findByObject(Object key);
+    @Override
+public V get(Object key);
+    @Override
+public Set<K> keySet();
+    @Override
+public V put(K key, V value);
+    @Override
+public V remove(Object key);
+    void removeInternal(Node<K, V> node, boolean unlink);
+    Node<K, V> removeInternalByKey(Object key);
+    private void rotateLeft(Node<K, V> root);
+    private void rotateRight(Node<K, V> root);
+    @Override
+public int size();
+}
+```
+
+
+@input{context information}
+
+api document of class com.google.gson.internal.LinkedTreeMap: 
+
+ * A map of comparable keys to values. Unlike {@code TreeMap}, this class uses
+ * insertion order for iteration order. Comparison order is only used as an
+ * optimization for efficient insertion and removal.
+ *
+ * <p>This implementation was derived from Android 4.1's TreeMap class.
+ 
+
+constructors for class `com.google.gson.internal.LinkedTreeMap`: 
+params: 
+body:
+```java
+  @SuppressWarnings("unchecked") // unsafe! this assumes K is comparable
+  public LinkedTreeMap() {
+    this((Comparator<? super K>) NATURAL_ORDER, true);
+  }
+
+```
+params: 
+body:
+```java
+  @SuppressWarnings("unchecked") // unsafe! this assumes K is comparable
+  public LinkedTreeMap(boolean allowNullValues) {
+    this((Comparator<? super K>) NATURAL_ORDER, allowNullValues);
+  }
+
+```
+params: 
+body:
+```java
+  @SuppressWarnings({ "unchecked", "rawtypes" }) // unsafe! if comparator is null, this assumes K is comparable
+  public LinkedTreeMap(Comparator<? super K> comparator, boolean allowNullValues) {
+    this.comparator = comparator != null
+        ? comparator
+        : (Comparator) NATURAL_ORDER;
+    this.allowNullValues = allowNullValues;
+    this.header = new Node<>(allowNullValues);
+  }
+
+```
+
+existing test class: 
+```java
+/*
+ * Copyright (C) 2012 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.google.gson.internal;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import com.google.gson.common.MoreAsserts;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Random;
+import org.junit.Test;
+
+public final class LinkedTreeMapTest {
+
+  @Test
+  public void testIterationOrder() {
+    LinkedTreeMap<String, String> map = new LinkedTreeMap<>();
+    map.put("a", "android");
+    map.put("c", "cola");
+    map.put("b", "bbq");
+    assertIterationOrder(map.keySet(), "a", "c", "b");
+    assertIterationOrder(map.values(), "android", "cola", "bbq");
+  }
+
+  @Test
+  public void testRemoveRootDoesNotDoubleUnlink() {
+    LinkedTreeMap<String, String> map = new LinkedTreeMap<>();
+    map.put("a", "android");
+    map.put("c", "cola");
+    map.put("b", "bbq");
+    Iterator<Map.Entry<String,String>> it = map.entrySet().iterator();
+    it.next();
+    it.next();
+    it.next();
+    it.remove();
+    assertIterationOrder(map.keySet(), "a", "c");
+  }
+
+  @Test
+  public void testPutNullKeyFails() {
+    LinkedTreeMap<String, String> map = new LinkedTreeMap<>();
+    try {
+      map.put(null, "android");
+      fail();
+    } catch (NullPointerException expected) {
+    }
+  }
+
+  @Test
+  public void testPutNonComparableKeyFails() {
+    LinkedTreeMap<Object, String> map = new LinkedTreeMap<>();
+    try {
+      map.put(new Object(), "android");
+      fail();
+    } catch (ClassCastException expected) {}
+  }
+
+  @Test
+  public void testPutNullValue() {
+    LinkedTreeMap<String, String> map = new LinkedTreeMap<>();
+    map.put("a", null);
+    assertEquals(1, map.size());
+    assertTrue(map.containsKey("a"));
+    assertTrue(map.containsValue(null));
+    assertNull(map.get("a"));
+  }
+
+  @Test
+  public void testPutNullValue_Forbidden() {
+    LinkedTreeMap<String, String> map = new LinkedTreeMap<>(false);
+    try {
+      map.put("a", null);
+      fail();
+......
+    map.put("a", "android");
+    map.put("c", "cola");
+    map.put("b", "bbq");
+    map.clear();
+    assertIterationOrder(map.keySet());
+    assertEquals(0, map.size());
+  }
+
+  @Test
+  public void testEqualsAndHashCode() throws Exception {
+    LinkedTreeMap<String, Integer> map1 = new LinkedTreeMap<>();
+    map1.put("A", 1);
+    map1.put("B", 2);
+    map1.put("C", 3);
+    map1.put("D", 4);
+
+    LinkedTreeMap<String, Integer> map2 = new LinkedTreeMap<>();
+    map2.put("C", 3);
+    map2.put("B", 2);
+    map2.put("D", 4);
+    map2.put("A", 1);
+
+    MoreAsserts.assertEqualsAndHashCode(map1, map2);
+  }
+
+  @Test
+  public void testJavaSerialization() throws IOException, ClassNotFoundException {
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    ObjectOutputStream objOut = new ObjectOutputStream(out);
+    Map<String, Integer> map = new LinkedTreeMap<>();
+    map.put("a", 1);
+    objOut.writeObject(map);
+    objOut.close();
+
+    ObjectInputStream objIn = new ObjectInputStream(new ByteArrayInputStream(out.toByteArray()));
+    @SuppressWarnings("unchecked")
+    Map<String, Integer> deserialized = (Map<String, Integer>) objIn.readObject();
+    assertEquals(Collections.singletonMap("a", 1), deserialized);
+  }
+
+  @SuppressWarnings("varargs")
+  @SafeVarargs
+  private final <T> void assertIterationOrder(Iterable<T> actual, T... expected) {
+    ArrayList<T> actualList = new ArrayList<>();
+    for (T t : actual) {
+      actualList.add(t);
+    }
+    assertEquals(Arrays.asList(expected), actualList);
+  }
+}
+```
+
+invoke examples of focal method: 
+example 1:
+```java
+  Node<K, V> find(K key, boolean create) {
+    Comparator<? super K> comparator = this.comparator;
+    Node<K, V> nearest = root;
+    int comparison = 0;
+    if (nearest != null) {
+    if (!create) {
+    Node<K, V> header = this.header;
+    Node<K, V> created;
+    if (nearest == null) {
+      created = new Node<>(allowNullValues, nearest, key, header, header.prev);
+      if (comparison < 0) { // nearest.key is higher
+        nearest.left = created;
+        nearest.right = created;
+      rebalance(nearest, true);
+  }
+```
+example 2:
+```java
+  void removeInternal(Node<K, V> node, boolean unlink) {
+    if (unlink) {
+    Node<K, V> left = node.left;
+    Node<K, V> right = node.right;
+    Node<K, V> originalParent = node.parent;
+    if (left != null && right != null) {
+    } else if (left != null) {
+      replaceInParent(node, left);
+      node.left = null;
+    } else if (right != null) {
+      replaceInParent(node, null);
+    rebalance(originalParent, false);
+  }
+```
+
+
+
+@input{test class template}
+```java
+package com.google.gson.internal;
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import static org.junit.jupiter.api.Assertions.*;
+import org.mockito.*;
+import static org.mockito.Mockito.*;
+import org.mockito.junit.jupiter.MockitoExtension;
+// Add other imports if necessary
+
+@ExtendWith(MockitoExtension.class)
+class LinkedTreeMap_rebalance_Test {
+    @BeforeAll
+    static void setupBeforeAll() {
+    }
+
+    @BeforeEach
+    void setupBeforeEach() {
+    }
+
+    @AfterEach
+    void teardownAfterEach() {
+    }
+
+    @AfterAll
+    static void teardownAfterAll() {
+    }
+}
+```
+
+@output{initial test class}: now consider the invoke examples output the code wrapped in a Markdown code block ```java at the beginning and ``` at the end.
