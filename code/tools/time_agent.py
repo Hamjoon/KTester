@@ -75,6 +75,6 @@ class TimeRecorder:
             old_records = {"details":{}}
         new_records = old_records.copy()
         for id_value in TimeRecorder.records:
-            new_records["details"][id_value].update(TimeRecorder.records[id_value])
+            new_records["details"].setdefault(id_value, {}).update(TimeRecorder.records[id_value])
         io_utils.write_json(time_path, new_records)
         return
