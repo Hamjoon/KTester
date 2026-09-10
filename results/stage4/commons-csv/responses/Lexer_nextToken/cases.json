@@ -1,0 +1,325 @@
+[
+  {
+    "group": "nextToken - Empty Lines Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF"
+        },
+        "description": "Test when the input contains only empty lines and ignoreEmptyLines is true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF"
+        },
+        "description": "Test when the input contains only empty lines and ignoreEmptyLines is false."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - End of File Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF"
+        },
+        "description": "Test when the last read character is EOF."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF"
+        },
+        "description": "Test when the current character read is EOF."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Comment Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "COMMENT",
+          "content": "This is a comment"
+        },
+        "description": "Test when the current character is a comment start and the line has a comment."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF"
+        },
+        "description": "Test when the line is empty after a comment."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Token Parsing",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "sampleToken"
+        },
+        "description": "Test when a valid token is read."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EORecord"
+        },
+        "description": "Test when an end of record is reached."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF",
+          "isReady": true
+        },
+        "description": "Test when EOF is reached with valid content."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Whitespace Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "trimmedToken"
+        },
+        "description": "Test when surrounding spaces are ignored and a valid token is read."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EORecord"
+        },
+        "description": "Test when only whitespace is encountered and eol is true."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Token Parsing with Encapsulated Tokens",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "encapsulatedToken"
+        },
+        "description": "Test when an encapsulated token is read from the input."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling of Escape Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "escapedToken"
+        },
+        "description": "Test when a token contains escape characters."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling of Mixed Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "mixedContentToken"
+        },
+        "description": "Test when the input contains mixed content including tokens and comments."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling of Quotes",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "quotedToken"
+        },
+        "description": "Test when the input contains a quoted token."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - End of Line Handling with Non-Empty Lines",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EORecord"
+        },
+        "description": "Test when the end of line is reached with non-empty content."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling of Initial Whitespace",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "tokenWithLeadingWhitespace"
+        },
+        "description": "Test when the input starts with leading whitespace before a valid token."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Exception Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test when an IOException is thrown during character reading from the reader."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test when an IOException occurs during the parsing of encapsulated tokens."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test when an IOException occurs during the parsing of simple tokens."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test when an IOException is thrown during the end of line reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test when an IOException is thrown when checking if the character is a delimiter."
+      }
+    ]
+  }
+]

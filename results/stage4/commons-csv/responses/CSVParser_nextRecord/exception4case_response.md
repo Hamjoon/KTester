@@ -1,0 +1,1 @@
+{"group": "nextRecord - Lexer State Handling", "cases": [{"input": [], "expected": "IOException when lexer is in an invalid state", "description": "Test nextRecord when the lexer is in an invalid state to ensure an IOException is thrown."}] }

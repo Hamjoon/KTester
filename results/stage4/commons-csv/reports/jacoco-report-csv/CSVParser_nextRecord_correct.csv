@@ -1,0 +1,17 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+JaCoCo Coverage Report,org.apache.commons.csv,Constants,0,7,0,0,0,2,0,1,0,1
+JaCoCo Coverage Report,org.apache.commons.csv,ExtendedBufferedReader,144,110,34,16,32,27,26,11,5,7
+JaCoCo Coverage Report,org.apache.commons.csv,CSVFormat.Builder,148,211,15,5,36,62,23,20,13,20
+JaCoCo Coverage Report,org.apache.commons.csv,CSVParser.CSVRecordIterator,76,6,12,0,18,1,10,1,4,1
+JaCoCo Coverage Report,org.apache.commons.csv,CSVRecord,236,32,31,1,37,10,35,4,19,4
+JaCoCo Coverage Report,org.apache.commons.csv,Token,17,26,0,0,1,8,1,2,1,2
+JaCoCo Coverage Report,org.apache.commons.csv,CSVParser,291,344,49,41,51,88,54,22,20,9
+JaCoCo Coverage Report,org.apache.commons.csv,CSVParser.Headers,0,9,0,0,0,4,0,1,0,1
+JaCoCo Coverage Report,org.apache.commons.csv,QuoteMode,0,33,0,0,0,6,0,1,0,1
+JaCoCo Coverage Report,org.apache.commons.csv,DuplicateHeaderMode,0,21,0,0,0,4,0,1,0,1
+JaCoCo Coverage Report,org.apache.commons.csv,Lexer,475,300,93,53,96,72,66,32,8,14
+JaCoCo Coverage Report,org.apache.commons.csv,CSVFormat.Predefined,98,0,0,0,17,0,3,0,3,0
+JaCoCo Coverage Report,org.apache.commons.csv,Token.Type,0,33,0,0,0,6,0,1,0,1
+JaCoCo Coverage Report,org.apache.commons.csv,IOUtils,62,0,4,0,14,0,7,0,5,0
+JaCoCo Coverage Report,org.apache.commons.csv,CSVFormat,1789,514,272,37,343,150,219,37,72,28
+JaCoCo Coverage Report,org.apache.commons.csv,CSVPrinter,334,0,47,0,95,0,44,0,20,0

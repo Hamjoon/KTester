@@ -1,0 +1,222 @@
+[
+  {
+    "group": "parseEncapsulatedToken - Escape Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.content contains escaped delimiter",
+        "description": "Test when an escape character is followed by an escape delimiter, ensuring the delimiter is added to the token content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.content contains the unescaped character",
+        "description": "Test when an escape character is followed by a valid character, ensuring that the unescaped character is added to the token content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException with message indicating unexpected char after escape",
+        "description": "Test when an escape character is followed by the end of stream to ensure an IOException is thrown with the correct message."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken - Quoting Logic",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.content contains the character read after a quote character",
+        "description": "Test when a quote character is encountered followed by another quote character to ensure the character is added to the token content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.type is TOKEN",
+        "description": "Test when a quote character is followed by a delimiter to ensure the token is correctly marked as finished."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.type is EOF and token.isReady is true",
+        "description": "Test when a quote character is followed by end of file to ensure the token marks EOF correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException with message indicating invalid char between token and delimiter",
+        "description": "Test when a non-whitespace character is found between the token and the next delimiter to ensure an IOException is thrown."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken - End of File Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException with message indicating EOF reached before token finished",
+        "description": "Test when the end of file is reached before the encapsulated token is finished to ensure an IOException is thrown."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken - General Character Consumption",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.content contains the consumed characters",
+        "description": "Test the normal flow where characters are read and appended to the token content until a delimiter is reached."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken - Edge Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException with message indicating invalid char between token and delimiter",
+        "description": "Test when a character that is neither whitespace nor a delimiter is found directly after a quote character, ensuring an IOException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.content is empty",
+        "description": "Test when an empty token is passed to the method, ensuring that the content remains empty and no exceptions are thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.content contains characters before EOF and token.type is EOF",
+        "description": "Test when characters are consumed until EOF is reached, ensuring that the token content is correctly populated and the type is set to EOF."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken - Special Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.content contains special characters",
+        "description": "Test when special characters (e.g., newline, tab) are included in the token content, ensuring they are correctly appended."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException with message indicating invalid escape sequence",
+        "description": "Test when an invalid escape sequence is encountered, ensuring an IOException is thrown with the correct message."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken - Multiple Quotes",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "token.content contains all characters between quotes",
+        "description": "Test when multiple quote characters are used in succession, ensuring that the content between them is correctly captured."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException with message indicating unmatched quotes",
+        "description": "Test when an opening quote is present without a matching closing quote, ensuring an IOException is thrown."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken - Exception Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException with message indicating invalid char between token and delimiter",
+        "description": "Test when a non-whitespace character is found between the token and the next delimiter after a quote character, ensuring an IOException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException with message indicating EOF reached before token finished",
+        "description": "Test when the end of file is reached before the encapsulated token is finished to ensure an IOException is thrown."
+      }
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "group": "toString method",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Delimiter=<,> SkipHeaderRecord:false",
+        "description": "Test default CSVFormat with default delimiter and skipHeaderRecord set to false."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<,> Escape=<\\> QuoteChar=<\"> QuoteMode=<MINIMAL> CommentStart=<null> NullString=<null> RecordSeparator=<\\n> EmptyLines:ignored SurroundingSpaces:ignored IgnoreHeaderCase:ignored SkipHeaderRecord:false",
+        "description": "Test the CSVFormat with escape character, quote character, and minimal quote mode."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<|> Escape=<\\> QuoteChar=<\"> QuoteMode=<MINIMAL> CommentStart=<null> NullString=<null> RecordSeparator=<\\n> EmptyLines:ignored SurroundingSpaces:ignored IgnoreHeaderCase:ignored SkipHeaderRecord:false",
+        "description": "Test the INFORMIX_UNLOAD CSVFormat with pipe delimiter."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<,> Escape=<\\> QuoteChar=<\"> RecordSeparator=<\\n> SkipHeaderRecord:false",
+        "description": "Test the INFORMIX_UNLOAD_CSV CSVFormat with comma delimiter."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<\\t> Escape=<\\> QuoteChar=<\"> SkipHeaderRecord:false",
+        "description": "Test the MONGODB_TSV CSVFormat with tab delimiter."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<\\t> Escape=<\\> QuoteChar=<\"> SkipHeaderRecord:false",
+        "description": "Test the MYSQL CSVFormat with tab delimiter."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<,> Escape=<\\> QuoteChar=<\"> SkipHeaderRecord:false",
+        "description": "Test the ORACLE CSVFormat with comma delimiter."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<,> Escape=<null> QuoteChar=<null> SkipHeaderRecord:false",
+        "description": "Test the POSTGRESQL_CSV CSVFormat with comma delimiter."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<\\t> Escape=<\\> QuoteChar=<null> SkipHeaderRecord:false",
+        "description": "Test the POSTGRESQL_TEXT CSVFormat with tab delimiter."
+      },
+      {
+        "input": [],
+        "expected": "Delimiter=<\\t> SkipHeaderRecord:false",
+        "description": "Test the TDF CSVFormat with tab delimiter."
+      }
+    ]
+  }
+]

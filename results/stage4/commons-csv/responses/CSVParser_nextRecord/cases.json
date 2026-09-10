@@ -1,0 +1,132 @@
+[
+  {
+    "group": "nextRecord - Valid Token Parsing",
+    "cases": [
+      {
+        "input": [],
+        "expected": "CSVRecord object with populated recordList and null comment",
+        "description": "Test nextRecord when there are valid tokens present to ensure a CSVRecord is created with the correct values."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - End of Record Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "CSVRecord object with populated recordList and null comment",
+        "description": "Test nextRecord when an end of record (EORECORD) token is encountered to ensure the record is properly added."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - End of File Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "CSVRecord object with trailerComment set correctly",
+        "description": "Test nextRecord when an EOF token is encountered and the reusable token is ready, ensuring the last record is added."
+      },
+      {
+        "input": [],
+        "expected": "trailerComment should contain the last comment read before EOF",
+        "description": "Test nextRecord when EOF is encountered without a ready token to ensure the trailerComment is set."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Invalid Token Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IOException with message indicating invalid parse sequence",
+        "description": "Test nextRecord when an INVALID token is encountered to ensure an IOException is thrown."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Unexpected Token Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IllegalStateException with message indicating unexpected token type",
+        "description": "Test nextRecord when an unexpected token type is encountered to ensure an IllegalStateException is thrown."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Comment Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "CSVRecord object with comment containing the parsed comment",
+        "description": "Test nextRecord when a COMMENT token is encountered to ensure comments are appended correctly."
+      },
+      {
+        "input": [],
+        "expected": "CSVRecord object with null comment if no comments were read",
+        "description": "Test nextRecord when no COMMENT tokens are encountered to ensure the comment is null."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Empty Input Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "null",
+        "description": "Test nextRecord when there are no tokens available to ensure it returns null."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Multiple Tokens Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "CSVRecord object with multiple values in recordList",
+        "description": "Test nextRecord when multiple valid tokens are present to ensure all values are captured in the recordList."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Mixed Token Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "CSVRecord object with correct values and comments",
+        "description": "Test nextRecord when a mix of TOKEN, COMMENT, and EORECORD tokens are encountered to ensure proper parsing."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Large Input Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "CSVRecord object with populated recordList and correct comments",
+        "description": "Test nextRecord with a large input to ensure it handles large records without issues."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Trailing Comments Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "CSVRecord object with trailerComment containing trailing comments",
+        "description": "Test nextRecord when there are trailing comments after the EOF token to ensure they are captured correctly."
+      }
+    ]
+  },
+  {
+    "group": "nextRecord - Lexer State Handling",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IOException when lexer is in an invalid state",
+        "description": "Test nextRecord when the lexer is in an invalid state to ensure an IOException is thrown."
+      }
+    ]
+  }
+]

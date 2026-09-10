@@ -1,0 +1,646 @@
+2026-09-10 11:11:00,544 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-10 11:11:00,544 - evaluations.coverage_test - INFO - Running tests for project: commons-csv
+2026-09-10 11:11:00,545 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/csv/Lexer_parseEncapsulatedToken_Test.java
+2026-09-10 11:11:00,914 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.csv.Lexer_parseEncapsulatedToken_Test
+2026-09-10 11:12:28,054 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:12:28,055 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.csv.Lexer_parseEncapsulatedToken_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.commons.csv.Lexer_parseEncapsulatedToken_Test.invokeParseEncapsulatedToken(Lexer_parseEncapsulatedToken_Test.java:43)
+	at org.apache.commons.csv.Lexer_parseEncapsulatedToken_Test.testParseEncapsulatedToken_GeneralCharacterConsumption(Lexer_parseEncapsulatedToken_Test.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$186/0x000000e0010a9200.apply(Unknown Source)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall$$Lambda$187/0x000000e0010a9620.apply(Unknown Source)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$$Lambda$348/0x000000e001103868.apply(Unknown Source)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor$$Lambda$404/0x000000e0012723b0.execute(Unknown Source)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+
+
+2026-09-10 11:12:28,057 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/csv/Lexer_nextToken_Test.java
+2026-09-10 11:12:28,394 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.csv.Lexer_nextToken_Test
+2026-09-10 11:12:29,555 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:12:29,557 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.csv.Lexer_nextToken_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Lexer_nextToken_Test ✔
+│     ├─ testNextTokenWithSurroundingSpaces() ✘ expected: <leadingSpaces> but was: <noSpaces>
+│     ├─ testNextTokenCommentHandling() ✘ expected: <COMMENT> but was: <EORECORD>
+│     ├─ testNextTokenWithoutEscaping() ✘ expected: <\> but was: <a>
+│     ├─ testNextTokenParsing() ✘ expected: <EORECORD> but was: <TOKEN>
+│     ├─ testNextTokenWithEscaping() ✘ expected: <,> but was: <a>
+│     ├─ testNextTokenEmptyLinesHandling() ✔
+│     ├─ testNextTokenWhitespaceHandling() ✘ expected: <EORECORD> but was: <TOKEN>
+│     └─ testNextTokenEndOfFileHandling() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (6):
+  JUnit Jupiter:Lexer_nextToken_Test:testNextTokenWithSurroundingSpaces()
+    MethodSource [className = 'org.apache.commons.csv.Lexer_nextToken_Test', methodName = 'testNextTokenWithSurroundingSpaces', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <leadingSpaces> but was: <noSpaces>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+       org.apache.commons.csv.Lexer_nextToken_Test.assertToken(Lexer_nextToken_Test.java:44)
+       org.apache.commons.csv.Lexer_nextToken_Test.testNextTokenWithSurroundingSpaces(Lexer_nextToken_Test.java:79)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:Lexer_nextToken_Test:testNextTokenCommentHandling()
+    MethodSource [className = 'org.apache.commons.csv.Lexer_nextToken_Test', methodName = 'testNextTokenCommentHandling', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <COMMENT> but was: <EORECORD>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+       org.apache.commons.csv.Lexer_nextToken_Test.assertToken(Lexer_nextToken_Test.java:43)
+       org.apache.commons.csv.Lexer_nextToken_Test.testNextTokenCommentHandling(Lexer_nextToken_Test.java:120)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:Lexer_nextToken_Test:testNextTokenWithoutEscaping()
+    MethodSource [className = 'org.apache.commons.csv.Lexer_nextToken_Test', methodName = 'testNextTokenWithoutEscaping', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <\> but was: <a>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+       org.apache.commons.csv.Lexer_nextToken_Test.assertToken(Lexer_nextToken_Test.java:44)
+       org.apache.commons.csv.Lexer_nextToken_Test.testNextTokenWithoutEscaping(Lexer_nextToken_Test.java:66)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:Lexer_nextToken_Test:testNextTokenParsing()
+    MethodSource [className = 'org.apache.commons.csv.Lexer_nextToken_Test', methodName = 'testNextTokenParsing', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <EORECORD> but was: <TOKEN>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+       org.apache.commons.csv.Lexer_nextToken_Test.assertToken(Lexer_nextToken_Test.java:43)
+       org.apache.commons.csv.Lexer_nextToken_Test.testNextTokenParsing(Lexer_nextToken_Test.java:135)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:Lexer_nextToken_Test:testNextTokenWithEscaping()
+    MethodSource [className = 'org.apache.commons.csv.Lexer_nextToken_Test', methodName = 'testNextTokenWithEscaping', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <,> but was: <a>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+       org.apache.commons.csv.Lexer_nextToken_Test.assertToken(Lexer_nextToken_Test.java:44)
+       org.apache.commons.csv.Lexer_nextToken_Test.testNextTokenWithEscaping(Lexer_nextToken_Test.java:53)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:Lexer_nextToken_Test:testNextTokenWhitespaceHandling()
+    MethodSource [className = 'org.apache.commons.csv.Lexer_nextToken_Test', methodName = 'testNextTokenWhitespaceHandling', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <EORECORD> but was: <TOKEN>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+       org.apache.commons.csv.Lexer_nextToken_Test.assertToken(Lexer_nextToken_Test.java:43)
+       org.apache.commons.csv.Lexer_nextToken_Test.testNextTokenWhitespaceHandling(Lexer_nextToken_Test.java:151)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+
+Test run finished after 573 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         6 tests failed          ]
+
+
+2026-09-10 11:12:29,793 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.csv.Lexer_nextToken_Test#testNextTokenEmptyLinesHandling --select-method org.apache.commons.csv.Lexer_nextToken_Test#testNextTokenEndOfFileHandling
+2026-09-10 11:12:31,053 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Lexer_nextToken_Test ✔
+│     ├─ testNextTokenEmptyLinesHandling() ✔
+│     └─ testNextTokenEndOfFileHandling() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 549 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:12:31,272 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java
+2026-09-10 11:12:31,800 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:35: error: cannot find symbol
+    private Headers invokeCreateHeaders() throws IOException {
+            ^
+  symbol:   class Headers
+  location: class CSVParser_createHeaders_Test
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:88: error: cannot find symbol
+        assertEquals(3, headers.size(), "Expected three header names");
+                               ^
+  symbol:   method size()
+  location: variable headers of type Headers
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:89: error: cannot find symbol
+        assertTrue(headers.contains("Column1"));
+                          ^
+  symbol:   method contains(String)
+  location: variable headers of type Headers
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:90: error: cannot find symbol
+        assertTrue(headers.contains("Column2"));
+                          ^
+  symbol:   method contains(String)
+  location: variable headers of type Headers
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:91: error: cannot find symbol
+        assertTrue(headers.contains("Column3"));
+                          ^
+  symbol:   method contains(String)
+  location: variable headers of type Headers
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:112: error: cannot find symbol
+        csvFormat = CSVFormat.DEFAULT.withHeader("Column1", "").withDuplicateHeaderMode(DuplicateHeaderMode.ALLOW_EMPTY);
+                                                               ^
+  symbol:   method withDuplicateHeaderMode(DuplicateHeaderMode)
+  location: class CSVFormat
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:122: error: cannot find symbol
+        csvFormat = CSVFormat.DEFAULT.withHeader("Column1", "Column1").withDuplicateHeaderMode(DuplicateHeaderMode.ALLOW_ALL);
+                                                                      ^
+  symbol:   method withDuplicateHeaderMode(DuplicateHeaderMode)
+  location: class CSVFormat
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:128: error: cannot find symbol
+        assertEquals(2, headers.size(), "Expected two header names when all duplicates are allowed");
+                               ^
+  symbol:   method size()
+  location: variable headers of type Headers
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:180: error: cannot find symbol
+        csvFormat = CSVFormat.DEFAULT.withHeader("Column1", "Column1").withDuplicateHeaderMode(DuplicateHeaderMode.ALLOW_ALL);
+                                                                      ^
+  symbol:   method withDuplicateHeaderMode(DuplicateHeaderMode)
+  location: class CSVFormat
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:186: error: cannot find symbol
+        assertEquals(2, headers.size(), "Expected two header names when duplicates are allowed");
+                               ^
+  symbol:   method size()
+  location: variable headers of type Headers
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:192: error: cannot find symbol
+        csvFormat = CSVFormat.DEFAULT.withHeader("Column1", "").withDuplicateHeaderMode(DuplicateHeaderMode.ALLOW_EMPTY);
+                                                               ^
+  symbol:   method withDuplicateHeaderMode(DuplicateHeaderMode)
+  location: class CSVFormat
+src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java:198: error: cannot find symbol
+        assertEquals(2, headers.size(), "Expected two header names when empty names are allowed");
+                               ^
+  symbol:   method size()
+  location: variable headers of type Headers
+Note: src/test/java/org/apache/commons/csv/CSVParser_createHeaders_Test.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+12 errors
+
+2026-09-10 11:12:31,802 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/csv/CSVFormat_printWithQuotes_Test.java
+2026-09-10 11:12:32,170 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.csv.CSVFormat_printWithQuotes_Test
+2026-09-10 11:12:33,358 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:12:33,359 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.csv.CSVFormat_printWithQuotes_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ CSVFormat_printWithQuotes_Test ✔
+│     ├─ testPrintWithQuotes_DelimiterCharacter() ✔
+│     ├─ testPrintWithQuotes_EmptyString() ✔
+│     ├─ testPrintWithQuotes_SingleQuote() ✔
+│     ├─ testPrintWithQuotes_NullValue() ✘ expected: <"value"> but was: <value>
+│     └─ testPrintWithQuotes_SpecialCharacters() ✘ expected: <"Line1\nLine2"> but was: <"Line1
+│              Line2">
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:CSVFormat_printWithQuotes_Test:testPrintWithQuotes_NullValue()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_printWithQuotes_Test', methodName = 'testPrintWithQuotes_NullValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <"value"> but was: <value>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+       org.apache.commons.csv.CSVFormat_printWithQuotes_Test.testPrintWithQuotes_NullValue(CSVFormat_printWithQuotes_Test.java:56)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:CSVFormat_printWithQuotes_Test:testPrintWithQuotes_SpecialCharacters()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_printWithQuotes_Test', methodName = 'testPrintWithQuotes_SpecialCharacters', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <"Line1\nLine2"> but was: <"Line1
+Line2">
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+       org.apache.commons.csv.CSVFormat_printWithQuotes_Test.testPrintWithQuotes_SpecialCharacters(CSVFormat_printWithQuotes_Test.java:95)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 577 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:12:33,567 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.csv.CSVFormat_printWithQuotes_Test#testPrintWithQuotes_DelimiterCharacter --select-method org.apache.commons.csv.CSVFormat_printWithQuotes_Test#testPrintWithQuotes_EmptyString --select-method org.apache.commons.csv.CSVFormat_printWithQuotes_Test#testPrintWithQuotes_SingleQuote
+2026-09-10 11:12:34,664 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ CSVFormat_printWithQuotes_Test ✔
+│     ├─ testPrintWithQuotes_DelimiterCharacter() ✔
+│     ├─ testPrintWithQuotes_EmptyString() ✔
+│     └─ testPrintWithQuotes_SingleQuote() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 516 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:12:34,883 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/csv/CSVParser_nextRecord_Test.java
+2026-09-10 11:12:35,283 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.csv.CSVParser_nextRecord_Test
+2026-09-10 11:12:36,671 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:12:36,672 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.csv.CSVParser_nextRecord_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ CSVParser_nextRecord_Test ✔
+│     ├─ testNextRecord() ✔
+│     ├─ testNextRecord_InvalidTokenHandling() ✘ Expected java.io.IOException to be thrown, but nothing was thrown.
+│     ├─ testNextRecord_EmptyInputHandling() ✔
+│     ├─ testNextRecord_EndOfFileHandling() ✔
+│     ├─ testNextRecord_CommentHandling() ✔
+│     ├─ testNextRecord_EndOfRecordHandling() ✔
+│     ├─ testNextRecord_UnexpectedTokenHandling() ✘ Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+│     └─ testNextRecord_ValidTokenParsing() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:CSVParser_nextRecord_Test:testNextRecord_InvalidTokenHandling()
+    MethodSource [className = 'org.apache.commons.csv.CSVParser_nextRecord_Test', methodName = 'testNextRecord_InvalidTokenHandling', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+       org.apache.commons.csv.CSVParser_nextRecord_Test.testNextRecord_InvalidTokenHandling(CSVParser_nextRecord_Test.java:104)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:CSVParser_nextRecord_Test:testNextRecord_UnexpectedTokenHandling()
+    MethodSource [className = 'org.apache.commons.csv.CSVParser_nextRecord_Test', methodName = 'testNextRecord_UnexpectedTokenHandling', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+       org.apache.commons.csv.CSVParser_nextRecord_Test.testNextRecord_UnexpectedTokenHandling(CSVParser_nextRecord_Test.java:116)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+
+Test run finished after 646 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:12:36,999 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.csv.CSVParser_nextRecord_Test#testNextRecord --select-method org.apache.commons.csv.CSVParser_nextRecord_Test#testNextRecord_EmptyInputHandling --select-method org.apache.commons.csv.CSVParser_nextRecord_Test#testNextRecord_EndOfFileHandling --select-method org.apache.commons.csv.CSVParser_nextRecord_Test#testNextRecord_CommentHandling --select-method org.apache.commons.csv.CSVParser_nextRecord_Test#testNextRecord_EndOfRecordHandling --select-method org.apache.commons.csv.CSVParser_nextRecord_Test#testNextRecord_ValidTokenParsing
+2026-09-10 11:12:38,271 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ CSVParser_nextRecord_Test ✔
+│     ├─ testNextRecord() ✔
+│     ├─ testNextRecord_EmptyInputHandling() ✔
+│     ├─ testNextRecord_EndOfFileHandling() ✔
+│     ├─ testNextRecord_CommentHandling() ✔
+│     ├─ testNextRecord_EndOfRecordHandling() ✔
+│     └─ testNextRecord_ValidTokenParsing() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 573 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:12:38,482 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/csv/CSVFormat_toString_Test.java
+2026-09-10 11:12:38,792 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.csv.CSVFormat_toString_Test
+2026-09-10 11:12:39,867 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:12:39,867 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.csv.CSVFormat_toString_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ CSVFormat_toString_Test ✔
+│     ├─ testPostgreSQLTextFormat() ✘ toString() did not return expected format for POSTGRESQL_TEXT CSVFormat. ==> expected: <true> but was: <false>
+│     ├─ testToStringWithRecordSeparator() ✔
+│     ├─ testToString() ✔
+│     ├─ testCSVFormatWithEscapeAndQuoteCharacters() ✔
+│     ├─ testMySQLFormat() ✘ toString() did not return expected format for MYSQL CSVFormat. ==> expected: <true> but was: <false>
+│     ├─ testTDFFormat() ✘ toString() did not return expected format for TDF CSVFormat. ==> expected: <true> but was: <false>
+│     ├─ testOracleFormat() ✘ toString() did not return expected format for ORACLE CSVFormat. ==> expected: <true> but was: <false>
+│     ├─ testPostgreSQLCSVFormat() ✘ toString() did not return expected format for POSTGRESQL_CSV CSVFormat. ==> expected: <true> but was: <false>
+│     ├─ testInformixUnloadCSVFormat() ✘ toString() did not return expected format for INFORMIX_UNLOAD CSVFormat. ==> expected: <true> but was: <false>
+│     ├─ testMongoDBTSVFormat() ✘ toString() did not return expected format for MONGODB_TSV CSVFormat. ==> expected: <true> but was: <false>
+│     ├─ testInformixUnloadCSVFormatWithCommaDelimiter() ✘ toString() did not return expected format for INFORMIX_UNLOAD_CSV CSVFormat. ==> expected: <true> but was: <false>
+│     ├─ testToStringWithQuoteCharacter() ✔
+│     └─ testDefaultCSVFormat() ✘ toString() did not return expected format for default CSVFormat. ==> expected: <true> but was: <false>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (9):
+  JUnit Jupiter:CSVFormat_toString_Test:testPostgreSQLTextFormat()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testPostgreSQLTextFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for POSTGRESQL_TEXT CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testPostgreSQLTextFormat(CSVFormat_toString_Test.java:125)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:CSVFormat_toString_Test:testMySQLFormat()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testMySQLFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for MYSQL CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testMySQLFormat(CSVFormat_toString_Test.java:98)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:CSVFormat_toString_Test:testTDFFormat()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testTDFFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for TDF CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testTDFFormat(CSVFormat_toString_Test.java:134)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:CSVFormat_toString_Test:testOracleFormat()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testOracleFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for ORACLE CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testOracleFormat(CSVFormat_toString_Test.java:107)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:CSVFormat_toString_Test:testPostgreSQLCSVFormat()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testPostgreSQLCSVFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for POSTGRESQL_CSV CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testPostgreSQLCSVFormat(CSVFormat_toString_Test.java:116)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:CSVFormat_toString_Test:testInformixUnloadCSVFormat()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testInformixUnloadCSVFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for INFORMIX_UNLOAD CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testInformixUnloadCSVFormat(CSVFormat_toString_Test.java:71)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:CSVFormat_toString_Test:testMongoDBTSVFormat()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testMongoDBTSVFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for MONGODB_TSV CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testMongoDBTSVFormat(CSVFormat_toString_Test.java:89)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:CSVFormat_toString_Test:testInformixUnloadCSVFormatWithCommaDelimiter()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testInformixUnloadCSVFormatWithCommaDelimiter', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for INFORMIX_UNLOAD_CSV CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testInformixUnloadCSVFormatWithCommaDelimiter(CSVFormat_toString_Test.java:80)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:CSVFormat_toString_Test:testDefaultCSVFormat()
+    MethodSource [className = 'org.apache.commons.csv.CSVFormat_toString_Test', methodName = 'testDefaultCSVFormat', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: toString() did not return expected format for default CSVFormat. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
+       org.apache.commons.csv.CSVFormat_toString_Test.testDefaultCSVFormat(CSVFormat_toString_Test.java:53)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 486 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        13 tests found           ]
+[         0 tests skipped         ]
+[        13 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         9 tests failed          ]
+
+
+2026-09-10 11:12:40,069 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.csv.CSVFormat_toString_Test#testToStringWithRecordSeparator --select-method org.apache.commons.csv.CSVFormat_toString_Test#testToString --select-method org.apache.commons.csv.CSVFormat_toString_Test#testCSVFormatWithEscapeAndQuoteCharacters --select-method org.apache.commons.csv.CSVFormat_toString_Test#testToStringWithQuoteCharacter
+2026-09-10 11:12:41,167 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ CSVFormat_toString_Test ✔
+│     ├─ testToStringWithRecordSeparator() ✔
+│     ├─ testToString() ✔
+│     ├─ testCSVFormatWithEscapeAndQuoteCharacters() ✔
+│     └─ testToStringWithQuoteCharacter() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 525 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:12:41,374 - evaluations.coverage_test - INFO - {'org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)': {'error_type': 'execution error'}, 'org.apache.commons.csv.Lexer#nextToken(Token)': {'test_cases': 8, 'passed_cases': 2}, 'org.apache.commons.csv.CSVParser#createHeaders()': {'error_type': 'compile error'}, 'org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)': {'test_cases': 5, 'passed_cases': 3}, 'org.apache.commons.csv.CSVParser#nextRecord()': {'test_cases': 8, 'passed_cases': 6}, 'org.apache.commons.csv.CSVFormat#toString()': {'test_cases': 13, 'passed_cases': 4}}
+2026-09-10 11:12:41,375 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-csv/reports/jacoco-report-html/Lexer_nextToken/org.apache.commons.csv/Lexer.html, method: nextToken(Token)
+2026-09-10 11:12:41,380 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-csv/reports/jacoco-report-html/Lexer_nextToken_correct/org.apache.commons.csv/Lexer.html, method: nextToken(Token)
+2026-09-10 11:12:41,385 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-csv/reports/jacoco-report-html/CSVFormat_printWithQuotes/org.apache.commons.csv/CSVFormat.html, method: printWithQuotes(Object, CharSequence, Appendable, boolean)
+2026-09-10 11:12:41,396 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-csv/reports/jacoco-report-html/CSVFormat_printWithQuotes_correct/org.apache.commons.csv/CSVFormat.html, method: printWithQuotes(Object, CharSequence, Appendable, boolean)
+2026-09-10 11:12:41,408 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-csv/reports/jacoco-report-html/CSVParser_nextRecord/org.apache.commons.csv/CSVParser.html, method: nextRecord()
+2026-09-10 11:12:41,415 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-csv/reports/jacoco-report-html/CSVParser_nextRecord_correct/org.apache.commons.csv/CSVParser.html, method: nextRecord()
+2026-09-10 11:12:41,418 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-csv/reports/jacoco-report-html/CSVFormat_toString/org.apache.commons.csv/CSVFormat.html, method: toString()
+2026-09-10 11:12:41,429 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-csv/reports/jacoco-report-html/CSVFormat_toString_correct/org.apache.commons.csv/CSVFormat.html, method: toString()
+2026-09-10 11:12:41,439 - evaluations.coverage_test - INFO - report data:
+{'org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)': {'error_type': 'execution error', 'test_cases': 3, 'passed_cases': 0}, 'org.apache.commons.csv.Lexer#nextToken(Token)': {'test_cases': 8, 'passed_cases': 2, 'inst_cov': 0.71, 'bran_cov': 0.71, 'correct_inst_cov': 0.44, 'correct_bran_cov': 0.36}, 'org.apache.commons.csv.CSVParser#createHeaders()': {'error_type': 'compile error', 'test_cases': 16, 'passed_cases': 0}, 'org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)': {'test_cases': 5, 'passed_cases': 3, 'inst_cov': 0.7, 'bran_cov': 0.6, 'correct_inst_cov': 0.61, 'correct_bran_cov': 0.48}, 'org.apache.commons.csv.CSVParser#nextRecord()': {'test_cases': 8, 'passed_cases': 8, 'inst_cov': 0.73, 'bran_cov': 0.77, 'correct_inst_cov': 0.73, 'correct_bran_cov': 0.77}, 'org.apache.commons.csv.CSVFormat#toString()': {'test_cases': 13, 'passed_cases': 4, 'inst_cov': 0.75, 'bran_cov': 0.77, 'correct_inst_cov': 0.65, 'correct_bran_cov': 0.59}, 'compile_pass_rate': 0.6981132075471698, 'execution_pass_rate': 0.32075471698113206, 'average_instruction_coverage': 0.48166666666666663, 'average_branch_coverage': 0.47500000000000003, 'average_correct_instruction_coverage': 0.405, 'average_correct_branch_coverage': 0.36666666666666664}
