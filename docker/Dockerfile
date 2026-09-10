@@ -27,6 +27,6 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /work
 COPY code/requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt lxml==6.1.3
 
 CMD ["bash"]
