@@ -188,3 +188,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Local evaluation artifacts
+evaluation_results/
+results/**/jacoco-report-html/
