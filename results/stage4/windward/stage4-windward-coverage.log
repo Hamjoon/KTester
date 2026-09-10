@@ -1,0 +1,111 @@
+2026-09-10 11:04:20,455 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-10 11:04:20,455 - evaluations.coverage_test - INFO - Running tests for project: windward
+2026-09-10 11:04:20,456 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/util/AntPathMatcher_isMatch_Test.java
+2026-09-10 11:04:21,030 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.flmelody.util.AntPathMatcher_isMatch_Test
+2026-09-10 11:04:22,415 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:04:22,415 - evaluations.coverage_test - INFO - test case failed in org.flmelody.util.AntPathMatcher_isMatch_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ AntPathMatcher_isMatch_Test ✔
+│     ├─ testIsMatchWithFileExtensions() ✔
+│     ├─ testIsMatchWithBasicFunctionality() ✔
+│     ├─ testIsMatchWithWildcardFunctionality() ✔
+│     ├─ testIsMatchWithEdgeCases() ✔
+│     ├─ testIsMatchWithNonMatchingPaths() ✔
+│     ├─ testIsMatchWithExceptionScenarios() ✘ Expected to return true for pattern '/*' and non-empty path. ==> expected: <true> but was: <false>
+│     ├─ testIsMatchWithQuestionMarkFunctionality() ✘ Expected to return true for pattern 'te??t' with matching path. ==> expected: <true> but was: <false>
+│     └─ testIsMatchWithAsterisk() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:AntPathMatcher_isMatch_Test:testIsMatchWithExceptionScenarios()
+    MethodSource [className = 'org.flmelody.util.AntPathMatcher_isMatch_Test', methodName = 'testIsMatchWithExceptionScenarios', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected to return true for pattern '/*' and non-empty path. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       org.flmelody.util.AntPathMatcher_isMatch_Test.testIsMatchWithExceptionScenarios(AntPathMatcher_isMatch_Test.java:122)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:AntPathMatcher_isMatch_Test:testIsMatchWithQuestionMarkFunctionality()
+    MethodSource [className = 'org.flmelody.util.AntPathMatcher_isMatch_Test', methodName = 'testIsMatchWithQuestionMarkFunctionality', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected to return true for pattern 'te??t' with matching path. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       org.flmelody.util.AntPathMatcher_isMatch_Test.testIsMatchWithQuestionMarkFunctionality(AntPathMatcher_isMatch_Test.java:86)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 524 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:04:22,753 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.flmelody.util.AntPathMatcher_isMatch_Test#testIsMatchWithFileExtensions --select-method org.flmelody.util.AntPathMatcher_isMatch_Test#testIsMatchWithBasicFunctionality --select-method org.flmelody.util.AntPathMatcher_isMatch_Test#testIsMatchWithWildcardFunctionality --select-method org.flmelody.util.AntPathMatcher_isMatch_Test#testIsMatchWithEdgeCases --select-method org.flmelody.util.AntPathMatcher_isMatch_Test#testIsMatchWithNonMatchingPaths --select-method org.flmelody.util.AntPathMatcher_isMatch_Test#testIsMatchWithAsterisk
+2026-09-10 11:04:24,448 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ AntPathMatcher_isMatch_Test ✔
+│     ├─ testIsMatchWithFileExtensions() ✔
+│     ├─ testIsMatchWithBasicFunctionality() ✔
+│     ├─ testIsMatchWithWildcardFunctionality() ✔
+│     ├─ testIsMatchWithEdgeCases() ✔
+│     ├─ testIsMatchWithNonMatchingPaths() ✔
+│     └─ testIsMatchWithAsterisk() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 695 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:04:24,815 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-10 11:04:25,501 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:18: error: cannot find symbol
+    private M manager;
+            ^
+  symbol:   class M
+  location: class AbstractRouterGroup_matchRouter_Test
+1 error
+
+2026-09-10 11:04:25,502 - evaluations.coverage_test - INFO - {'org.flmelody.util.AntPathMatcher#isMatch(String, String)': {'test_cases': 8, 'passed_cases': 6}, 'org.flmelody.core.AbstractRouterGroup#matchRouter(String, String)': {'error_type': 'compile error'}}
+2026-09-10 11:04:25,502 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/windward/reports/jacoco-report-html/AntPathMatcher_isMatch/org.flmelody.util/AntPathMatcher.html, method: isMatch(String, String)
+2026-09-10 11:04:25,509 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/windward/reports/jacoco-report-html/AntPathMatcher_isMatch_correct/org.flmelody.util/AntPathMatcher.html, method: isMatch(String, String)
+2026-09-10 11:04:25,512 - evaluations.coverage_test - INFO - report data:
+{'org.flmelody.util.AntPathMatcher#isMatch(String, String)': {'test_cases': 8, 'passed_cases': 6, 'inst_cov': 0.98, 'bran_cov': 0.94, 'correct_inst_cov': 0.98, 'correct_bran_cov': 0.91}, 'org.flmelody.core.AbstractRouterGroup#matchRouter(String, String)': {'error_type': 'compile error', 'test_cases': 17, 'passed_cases': 0}, 'compile_pass_rate': 0.32, 'execution_pass_rate': 0.24, 'average_instruction_coverage': 0.49, 'average_branch_coverage': 0.47, 'average_correct_instruction_coverage': 0.49, 'average_correct_branch_coverage': 0.455}

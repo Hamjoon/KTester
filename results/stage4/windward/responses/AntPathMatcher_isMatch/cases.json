@@ -1,0 +1,461 @@
+[
+  {
+    "group": "isMatch method basic functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": ""
+          },
+          {
+            "parameter": "path",
+            "value": ""
+          }
+        ],
+        "expected": true,
+        "description": "Test case where both pattern and path are empty strings. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/*"
+          },
+          {
+            "parameter": "path",
+            "value": ""
+          }
+        ],
+        "expected": false,
+        "description": "Test case where pattern has a leading wildcard and path is empty. Expected to return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "*"
+          },
+          {
+            "parameter": "path",
+            "value": "anyPath"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern is a single wildcard and path is a non-empty string. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "test"
+          },
+          {
+            "parameter": "path",
+            "value": "test"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern matches the path exactly. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "test"
+          },
+          {
+            "parameter": "path",
+            "value": "testing"
+          }
+        ],
+        "expected": false,
+        "description": "Test case where pattern does not match the path. Expected to return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "test/*"
+          },
+          {
+            "parameter": "path",
+            "value": "test/folder"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern matches a path with a wildcard at the end. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "test/*"
+          },
+          {
+            "parameter": "path",
+            "value": "test/"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern matches a path with a wildcard at the end and path ends with a separator. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "test/*"
+          },
+          {
+            "parameter": "path",
+            "value": "testing/folder"
+          }
+        ],
+        "expected": false,
+        "description": "Test case where pattern does not match the path due to differing prefixes. Expected to return false."
+      }
+    ]
+  },
+  {
+    "group": "isMatch method wildcard functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "*/"
+          },
+          {
+            "parameter": "path",
+            "value": "folder/"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern has a wildcard followed by a separator and path ends with a separator. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "*/file.txt"
+          },
+          {
+            "parameter": "path",
+            "value": "folder/file.txt"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern matches a path with a wildcard followed by a specific file name. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "file.txt"
+          },
+          {
+            "parameter": "path",
+            "value": "folder/file.txt"
+          }
+        ],
+        "expected": false,
+        "description": "Test case where pattern does not include any wildcards and path includes a folder. Expected to return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "**"
+          },
+          {
+            "parameter": "path",
+            "value": "any/path/to/somewhere"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern is a double wildcard. Expected to return true for any path."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "*/**/file.txt"
+          },
+          {
+            "parameter": "path",
+            "value": "folder/subfolder/file.txt"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern includes a wildcard followed by a double wildcard and matches the path. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "**/file.txt"
+          },
+          {
+            "parameter": "path",
+            "value": "file.txt"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern is a double wildcard followed by a specific file name and the path is the file itself. Expected to return true."
+      }
+    ]
+  },
+  {
+    "group": "isMatch method question mark functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "te?t"
+          },
+          {
+            "parameter": "path",
+            "value": "test"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern includes a question mark that matches any single character. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "te?t"
+          },
+          {
+            "parameter": "path",
+            "value": "teat"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern includes a question mark and path matches. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "te?t"
+          },
+          {
+            "parameter": "path",
+            "value": "te"
+          }
+        ],
+        "expected": false,
+        "description": "Test case where pattern requires a character to match but path is too short. Expected to return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "te??t"
+          },
+          {
+            "parameter": "path",
+            "value": "text"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern includes two question marks that match any two characters. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "te??t"
+          },
+          {
+            "parameter": "path",
+            "value": "teat"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern includes two question marks and path matches. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "te??t"
+          },
+          {
+            "parameter": "path",
+            "value": "testt"
+          }
+        ],
+        "expected": false,
+        "description": "Test case where pattern requires two characters to match but path has extra characters. Expected to return false."
+      }
+    ]
+  },
+  {
+    "group": "isMatch method edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/*"
+          },
+          {
+            "parameter": "path",
+            "value": "/"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern is a wildcard with a leading separator and path is a single separator. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/**"
+          },
+          {
+            "parameter": "path",
+            "value": "/some/path"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern is a double wildcard with a leading separator and path has multiple segments. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/*"
+          },
+          {
+            "parameter": "path",
+            "value": "folder/test"
+          }
+        ],
+        "expected": false,
+        "description": "Test case where pattern is a wildcard with a leading separator but path has additional segments. Expected to return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/folder/*"
+          },
+          {
+            "parameter": "path",
+            "value": "/folder/test"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern matches a path with a leading separator and a wildcard at the end. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/**/test"
+          },
+          {
+            "parameter": "path",
+            "value": "/some/folder/test"
+          }
+        ],
+        "expected": true,
+        "description": "Test case where pattern is a double wildcard with a leading separator and path has multiple segments leading to the test. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/*/test"
+          },
+          {
+            "parameter": "path",
+            "value": "/folder/test/extra"
+          }
+        ],
+        "expected": false,
+        "description": "Test case where pattern matches a single segment but path has extra segments. Expected to return false."
+      }
+    ]
+  },
+  {
+    "group": "isMatch method exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": null
+          },
+          {
+            "parameter": "path",
+            "value": "validPath"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where pattern is null. Expected to throw NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "validPattern"
+          },
+          {
+            "parameter": "path",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where path is null. Expected to throw NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "invalid*pattern"
+          },
+          {
+            "parameter": "path",
+            "value": ""
+          }
+        ],
+        "expected": "false",
+        "description": "Test case where pattern is invalid but path is empty. Expected to return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/*"
+          },
+          {
+            "parameter": "path",
+            "value": "nonEmptyPath"
+          }
+        ],
+        "expected": "true",
+        "description": "Test case where pattern is a wildcard with a leading separator and path is non-empty. Expected to return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/*"
+          },
+          {
+            "parameter": "path",
+            "value": ""
+          }
+        ],
+        "expected": "false",
+        "description": "Test case where pattern is a wildcard with a leading separator and path is empty. Expected to return false."
+      }
+    ]
+  }
+]
