@@ -1,0 +1,708 @@
+[
+  {
+    "group": "Test populateEnv method with SparkCluster driver environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR1=value1",
+                  "VAR2=value2"
+                ]
+              },
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster has a driver environment, and sparkSpec initially has no driver. The driver environment should be copied to sparkSpec."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": {
+                "env": []
+              },
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR1=value1"
+                ]
+              },
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster has a driver environment, and sparkSpec driver already exists but is empty. The environment should be populated."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with SubmitApplicationRequest driver environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR3=value3"
+                ]
+              },
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SubmitApplicationRequest has a driver environment, and sparkSpec initially has no driver. The driver environment should be copied to sparkSpec."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR1=value1"
+                ]
+              },
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR2=value2"
+                ]
+              },
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SubmitApplicationRequest has a driver environment, and sparkSpec driver already exists. The environment should be merged."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with SparkCluster executor environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": [
+                  "VAR4=value4"
+                ]
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster has an executor environment, and sparkSpec initially has no executor. The executor environment should be copied to sparkSpec."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": []
+              }
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": [
+                  "VAR5=value5"
+                ]
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster has an executor environment, and sparkSpec executor already exists but is empty. The environment should be populated."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with SubmitApplicationRequest executor environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": [
+                  "VAR6=value6"
+                ]
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SubmitApplicationRequest has an executor environment, and sparkSpec initially has no executor. The executor environment should be copied to sparkSpec."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": [
+                  "VAR1=value1"
+                ]
+              }
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": [
+                  "VAR2=value2"
+                ]
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SubmitApplicationRequest has an executor environment, and sparkSpec executor already exists. The environment should be merged."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with both SparkCluster and SubmitApplicationRequest driver environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR1=value1"
+                ]
+              },
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR2=value2"
+                ]
+              },
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where both SparkCluster and SubmitApplicationRequest have driver environments, and sparkSpec driver already exists. The environment should be merged."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with empty environments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": {
+                "env": []
+              },
+              "executor": {
+                "env": []
+              }
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": {
+                "env": []
+              },
+              "executor": {
+                "env": []
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": {
+                "env": []
+              },
+              "executor": {
+                "env": []
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where all environments (sparkSpec, request, sparkCluster) are empty. No changes should occur to sparkSpec."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with mixed environments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR1=value1"
+                ]
+              },
+              "executor": {
+                "env": []
+              }
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": [
+                  "VAR2=value2"
+                ]
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": {
+                "env": [
+                  "VAR3=value3"
+                ]
+              },
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster driver has an environment, request executor has an environment, and sparkSpec driver already has an environment. The environments should be merged appropriately."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with null values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": null
+          },
+          {
+            "parameter": "request",
+            "value": null
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": null
+          }
+        ],
+        "expected": null,
+        "description": "Test case where all parameters are null. The method should handle null values gracefully."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with null driver in SparkCluster",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": {
+                "env": null
+              },
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster driver is null. The method should handle this gracefully without any exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with null driver in SubmitApplicationRequest",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": {
+                "env": null
+              },
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SubmitApplicationRequest driver is null. The method should handle this gracefully without any exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with null executor in SparkCluster",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": {
+                "env": []
+              },
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster executor is null. The method should handle this gracefully without any exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with null executor in SubmitApplicationRequest",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": null
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SubmitApplicationRequest executor is null. The method should handle this gracefully without any exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with empty SparkCluster driver environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": {
+                "env": []
+              },
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster driver environment is empty. The method should handle this gracefully without any exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with empty SubmitApplicationRequest driver environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": {
+                "env": []
+              },
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SubmitApplicationRequest driver environment is empty. The method should handle this gracefully without any exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with empty SparkCluster executor environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": []
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SparkCluster executor environment is empty. The method should handle this gracefully without any exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test populateEnv method with empty SubmitApplicationRequest executor environment",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkSpec",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "driver": null,
+              "executor": {
+                "env": []
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "driver": null,
+              "executor": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test case where SubmitApplicationRequest executor environment is empty. The method should handle this gracefully without any exceptions."
+      }
+    ]
+  }
+]

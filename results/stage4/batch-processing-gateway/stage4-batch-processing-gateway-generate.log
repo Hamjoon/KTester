@@ -1,0 +1,2230 @@
+2026-09-10 11:16:26,834 - __main__ - INFO - prompt list: ['condition4case', 'io4case', 'exception4case', 'gencode']
+2026-09-10 11:16:26,844 - procedure.generate_prompt - INFO - Construct init prompts for project batch-processing-gateway...
+2026-09-10 11:16:26,844 - tools.code_search - INFO - Loading code index for batch-processing-gateway
+2026-09-10 11:16:26,894 - procedure.generate_prompt - INFO - Construct test case prompts for project batch-processing-gateway...
+2026-09-10 11:16:26,894 - tools.code_search - INFO - Loading code index for batch-processing-gateway
+2026-09-10 11:16:27,080 - __main__ - INFO - time for generate prompts: 0.25 seconds
+2026-09-10 11:16:27,100 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:27,111 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:27,123 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:27,134 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:27,146 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:27,158 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:27,170 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:27,181 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:27,181 - procedure.generate_code - INFO - Generating test class framework for project batch-processing-gateway...
+2026-09-10 11:16:27,944 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:27,945 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:27,965 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:27,980 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:28,164 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:28,993 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:31,874 - procedure.generate_code - INFO - Completed test class framework generation for SparkPodSpec_copyFrom
+2026-09-10 11:16:32,214 - procedure.generate_code - INFO - Completed test class framework generation for SubmissionSummary_copyFrom
+2026-09-10 11:16:32,351 - procedure.generate_code - INFO - Completed test class framework generation for ApplicationSubmissionHelper_getExecutorSpec
+2026-09-10 11:16:32,527 - procedure.generate_code - INFO - Completed test class framework generation for ApplicationSubmissionHelper_getDriverSpec
+2026-09-10 11:16:32,699 - procedure.generate_code - INFO - Completed test class framework generation for ApplicationSubmissionHelper_getSparkConf
+2026-09-10 11:16:33,542 - procedure.generate_code - INFO - Completed test class framework generation for ApplicationSubmissionHelper_populateEnv
+2026-09-10 11:16:33,545 - __main__ - INFO - time for generate test class framework: 6.46 seconds
+2026-09-10 11:16:33,567 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:33,582 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:33,597 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:33,610 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:33,623 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:33,635 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:33,647 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:33,659 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:16:33,659 - procedure.generate_code - INFO - Generating test cases for project batch-processing-gateway...
+2026-09-10 11:16:34,341 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:34,372 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:34,400 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:34,441 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:34,441 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:34,509 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:41,585 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:41,975 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:42,177 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:42,625 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:42,934 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:47,737 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:47,867 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:48,108 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:48,652 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:48,706 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:49,103 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:49,538 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:50,911 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:51,223 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:55,729 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:55,737 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:57,189 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:58,007 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:16:59,223 - procedure.generate_code - INFO - Completed test case generation for ApplicationSubmissionHelper_getDriverSpec
+2026-09-10 11:17:03,176 - procedure.generate_code - INFO - Completed test case generation for ApplicationSubmissionHelper_getSparkConf
+2026-09-10 11:17:03,767 - procedure.generate_code - INFO - Completed test case generation for SubmissionSummary_copyFrom
+2026-09-10 11:17:03,780 - procedure.generate_code - INFO - Completed test case generation for ApplicationSubmissionHelper_getExecutorSpec
+2026-09-10 11:17:06,258 - procedure.generate_code - INFO - Completed test case generation for ApplicationSubmissionHelper_populateEnv
+2026-09-10 11:17:08,400 - procedure.generate_code - INFO - Completed test case generation for SparkPodSpec_copyFrom
+2026-09-10 11:17:08,403 - __main__ - INFO - time for generate test cases: 34.86 seconds
+2026-09-10 11:17:08,403 - procedure.post_process - INFO - verify process test classes in batch-processing-gateway...
+2026-09-10 11:17:08,426 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:17:08,437 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java
+2026-09-10 11:17:09,361 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java:188: error: incompatible types: int cannot be converted to Long
+        securityContext.setRunAsUser(1000);
+                                     ^
+src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java:189: error: cannot find symbol
+        securityContext.setFsGroup(2000);
+                       ^
+  symbol:   method setFsGroup(int)
+  location: variable securityContext of type SecurityContext
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+2 errors
+2 warnings
+
+2026-09-10 11:17:09,362 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/SparkPodSpec_copyFrom_Test.java...
+2026-09-10 11:17:09,364 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java
+2026-09-10 11:17:10,101 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java:188: error: incompatible types: int cannot be converted to Long
+        securityContext.setRunAsUser(1000);
+                                     ^
+src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java:189: error: cannot find symbol
+        securityContext.setFsGroup(2000);
+                       ^
+  symbol:   method setFsGroup(int)
+  location: variable securityContext of type SecurityContext
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+2 errors
+2 warnings
+
+2026-09-10 11:17:10,708 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:17:22,612 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java
+2026-09-10 11:17:23,327 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java:191: error: cannot find symbol
+        securityContext.setFsGroup(2000L);
+                       ^
+  symbol:   method setFsGroup(long)
+  location: variable securityContext of type SecurityContext
+1 error
+2 warnings
+
+2026-09-10 11:17:23,327 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/SparkPodSpec_copyFrom_Test.java...
+2026-09-10 11:17:23,328 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java
+2026-09-10 11:17:23,994 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java:191: error: cannot find symbol
+        securityContext.setFsGroup(2000L);
+                       ^
+  symbol:   method setFsGroup(long)
+  location: variable securityContext of type SecurityContext
+1 error
+2 warnings
+
+2026-09-10 11:17:24,672 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:17:37,348 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/operator/SparkPodSpec_copyFrom_Test.java
+2026-09-10 11:17:38,162 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.operator.SparkPodSpec_copyFrom_Test
+2026-09-10 11:17:38,859 - procedure.post_process - INFO - return code: 0
+2026-09-10 11:17:38,859 - procedure.post_process - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ SparkPodSpec_copyFrom_Test ✔
+│     ├─ testCopyFrom_HandleNullCoreLimitGracefully() ✔
+│     ├─ testCopyFrom_EnvironmentVariables() ✔
+│     ├─ testCopyFrom_Memory() ✔
+│     ├─ testCopyFrom_Affinity() ✔
+│     ├─ testCopyFrom_VolumeMounts() ✔
+│     ├─ testCopyFrom_SecurityContext() ✔
+│     ├─ testCopyFrom_MemoryOverhead() ✔
+│     ├─ testCopyFrom() ✔
+│     ├─ testCopyFrom_NullPointerException() ✔
+│     ├─ testCopyFrom_CoreRequest() ✔
+│     ├─ testCopyFrom_ServiceAccount() ✔
+│     ├─ testCopyFrom_CoreLimit() ✔
+│     ├─ testCopyFrom_Cores() ✔
+│     ├─ testCopyFrom_LabelsAndAnnotations() ✔
+│     └─ testCopyFrom_OtherFields() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 361 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:17:38,862 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getSparkConf_Test.java
+2026-09-10 11:17:39,489 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getSparkConf_Test.java:14: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+1 error
+2 warnings
+
+2026-09-10 11:17:39,489 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getSparkConf_Test.java...
+2026-09-10 11:17:39,491 - procedure.post_process - INFO - add imports {'import org.mockito.junit.jupiter.MockitoExtension;'}
+2026-09-10 11:17:39,492 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getSparkConf_Test.java
+2026-09-10 11:17:40,212 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test
+2026-09-10 11:17:41,098 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:17:41,098 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_getSparkConf_Test ✔
+│     ├─ testGetSparkConf_DefaultAndFixedConfigurations() ✔
+│     ├─ testGetSparkConf_OnlyFixedConfiguration() ✔
+│     ├─ testGetSparkConf_MixedConfigurations() ✔
+│     ├─ testGetSparkConf_NullParameters() ✘ Cannot invoke "java.lang.CharSequence.toString()" because "replacement" is null
+│     ├─ testGetSparkConf_DefaultSparkConfiguration() ✔
+│     ├─ testGetSparkConf() ✔
+│     ├─ testGetSparkConf_MultipleConfigurations() ✔
+│     ├─ testGetSparkConf_FixedSparkConfiguration() ✔
+│     ├─ testGetSparkConf_EmptyConfigurations() ✘ expected: not <null>
+│     ├─ testGetSparkConf_ApplicationNameOnly() ✔
+│     ├─ testGetSparkConf_SparkClusterConfiguration() ✔
+│     └─ testGetSparkConf_RequestSparkConfiguration() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:ApplicationSubmissionHelper_getSparkConf_Test:testGetSparkConf_NullParameters()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test', methodName = 'testGetSparkConf_NullParameters', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.lang.CharSequence.toString()" because "replacement" is null
+       java.base/java.lang.String.replace(String.java:2961)
+       com.apple.spark.core.ApplicationSubmissionHelper.substitutionSparkConfigValue(ApplicationSubmissionHelper.java:350)
+       com.apple.spark.core.ApplicationSubmissionHelper.getSparkConf(ApplicationSubmissionHelper.java:165)
+       com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test.testGetSparkConf_NullParameters(ApplicationSubmissionHelper_getSparkConf_Test.java:225)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getSparkConf_Test:testGetSparkConf_EmptyConfigurations()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test', methodName = 'testGetSparkConf_EmptyConfigurations', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:300)
+       com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test.testGetSparkConf_EmptyConfigurations(ApplicationSubmissionHelper_getSparkConf_Test.java:135)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 540 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:17:41,764 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:17:55,424 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getSparkConf_Test.java
+2026-09-10 11:17:56,115 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test
+2026-09-10 11:17:57,040 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:17:57,040 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_getSparkConf_Test ✔
+│     ├─ testGetSparkConf_DefaultAndFixedConfigurations() ✔
+│     ├─ testGetSparkConf_OnlyFixedConfiguration() ✔
+│     ├─ testGetSparkConf_MixedConfigurations() ✔
+│     ├─ testGetSparkConf_NullParameters() ✘ Cannot invoke "java.lang.CharSequence.toString()" because "replacement" is null
+│     ├─ testGetSparkConf_DefaultSparkConfiguration() ✔
+│     ├─ testGetSparkConf() ✔
+│     ├─ testGetSparkConf_MultipleConfigurations() ✔
+│     ├─ testGetSparkConf_FixedSparkConfiguration() ✔
+│     ├─ testGetSparkConf_EmptyConfigurations() ✘ expected: not <null>
+│     ├─ testGetSparkConf_ApplicationNameOnly() ✔
+│     ├─ testGetSparkConf_SparkClusterConfiguration() ✔
+│     └─ testGetSparkConf_RequestSparkConfiguration() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:ApplicationSubmissionHelper_getSparkConf_Test:testGetSparkConf_NullParameters()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test', methodName = 'testGetSparkConf_NullParameters', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.lang.CharSequence.toString()" because "replacement" is null
+       java.base/java.lang.String.replace(String.java:2961)
+       com.apple.spark.core.ApplicationSubmissionHelper.substitutionSparkConfigValue(ApplicationSubmissionHelper.java:350)
+       com.apple.spark.core.ApplicationSubmissionHelper.getSparkConf(ApplicationSubmissionHelper.java:165)
+       com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test.testGetSparkConf_NullParameters(ApplicationSubmissionHelper_getSparkConf_Test.java:224)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getSparkConf_Test:testGetSparkConf_EmptyConfigurations()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test', methodName = 'testGetSparkConf_EmptyConfigurations', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:300)
+       com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test.testGetSparkConf_EmptyConfigurations(ApplicationSubmissionHelper_getSparkConf_Test.java:134)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 555 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:17:57,041 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getSparkConf_Test.java...
+2026-09-10 11:17:57,735 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:18:11,850 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getSparkConf_Test.java
+2026-09-10 11:18:12,589 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test
+2026-09-10 11:18:13,485 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:18:13,485 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_getSparkConf_Test ✔
+│     ├─ testGetSparkConf_DefaultAndFixedConfigurations() ✔
+│     ├─ testGetSparkConf_OnlyFixedConfiguration() ✔
+│     ├─ testGetSparkConf_MixedConfigurations() ✔
+│     ├─ testGetSparkConf_NullParameters() ✘ Cannot invoke "java.lang.CharSequence.toString()" because "replacement" is null
+│     ├─ testGetSparkConf_DefaultSparkConfiguration() ✔
+│     ├─ testGetSparkConf() ✔
+│     ├─ testGetSparkConf_MultipleConfigurations() ✔
+│     ├─ testGetSparkConf_FixedSparkConfiguration() ✔
+│     ├─ testGetSparkConf_EmptyConfigurations() ✘ expected: not <null>
+│     ├─ testGetSparkConf_ApplicationNameOnly() ✔
+│     ├─ testGetSparkConf_SparkClusterConfiguration() ✔
+│     └─ testGetSparkConf_RequestSparkConfiguration() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:ApplicationSubmissionHelper_getSparkConf_Test:testGetSparkConf_NullParameters()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test', methodName = 'testGetSparkConf_NullParameters', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.lang.CharSequence.toString()" because "replacement" is null
+       java.base/java.lang.String.replace(String.java:2961)
+       com.apple.spark.core.ApplicationSubmissionHelper.substitutionSparkConfigValue(ApplicationSubmissionHelper.java:350)
+       com.apple.spark.core.ApplicationSubmissionHelper.getSparkConf(ApplicationSubmissionHelper.java:165)
+       com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test.testGetSparkConf_NullParameters(ApplicationSubmissionHelper_getSparkConf_Test.java:224)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getSparkConf_Test:testGetSparkConf_EmptyConfigurations()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test', methodName = 'testGetSparkConf_EmptyConfigurations', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:300)
+       com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test.testGetSparkConf_EmptyConfigurations(ApplicationSubmissionHelper_getSparkConf_Test.java:134)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 547 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:18:13,486 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getSparkConf_Test.java...
+2026-09-10 11:18:14,950 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:18:28,188 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getSparkConf_Test.java
+2026-09-10 11:18:28,938 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test
+2026-09-10 11:18:29,799 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:18:29,799 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_getSparkConf_Test ✔
+│     ├─ testGetSparkConf_DefaultAndFixedConfigurations() ✔
+│     ├─ testGetSparkConf_OnlyFixedConfiguration() ✔
+│     ├─ testGetSparkConf_MixedConfigurations() ✔
+│     ├─ testGetSparkConf_NullParameters() ✘ Cannot invoke "java.lang.CharSequence.toString()" because "replacement" is null
+│     ├─ testGetSparkConf_DefaultSparkConfiguration() ✔
+│     ├─ testGetSparkConf() ✔
+│     ├─ testGetSparkConf_MultipleConfigurations() ✔
+│     ├─ testGetSparkConf_FixedSparkConfiguration() ✔
+│     ├─ testGetSparkConf_EmptyConfigurations() ✘ expected: not <null>
+│     ├─ testGetSparkConf_ApplicationNameOnly() ✔
+│     ├─ testGetSparkConf_SparkClusterConfiguration() ✔
+│     └─ testGetSparkConf_RequestSparkConfiguration() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:ApplicationSubmissionHelper_getSparkConf_Test:testGetSparkConf_NullParameters()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test', methodName = 'testGetSparkConf_NullParameters', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.lang.CharSequence.toString()" because "replacement" is null
+       java.base/java.lang.String.replace(String.java:2961)
+       com.apple.spark.core.ApplicationSubmissionHelper.substitutionSparkConfigValue(ApplicationSubmissionHelper.java:350)
+       com.apple.spark.core.ApplicationSubmissionHelper.getSparkConf(ApplicationSubmissionHelper.java:165)
+       com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test.testGetSparkConf_NullParameters(ApplicationSubmissionHelper_getSparkConf_Test.java:224)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getSparkConf_Test:testGetSparkConf_EmptyConfigurations()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test', methodName = 'testGetSparkConf_EmptyConfigurations', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:300)
+       com.apple.spark.core.ApplicationSubmissionHelper_getSparkConf_Test.testGetSparkConf_EmptyConfigurations(ApplicationSubmissionHelper_getSparkConf_Test.java:134)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 524 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:18:29,803 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:18:30,434 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:42: error: cannot find symbol
+    private Metadata mockMetadata(String name, Map<String, String> labels) {
+            ^
+  symbol:   class Metadata
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:49: error: cannot find symbol
+    private DriverSpec mockDriver(String memory, int cores, String dagName) {
+            ^
+  symbol:   class DriverSpec
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:61: error: cannot find symbol
+    private ExecutorSpec mockExecutor(Integer cores, Integer instances, String memory) {
+            ^
+  symbol:   class ExecutorSpec
+  location: class SubmissionSummary_copyFrom_Test
+3 errors
+2 warnings
+
+2026-09-10 11:18:30,434 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/SubmissionSummary_copyFrom_Test.java...
+2026-09-10 11:18:30,436 - procedure.post_process - INFO - add imports {'import com.apple.spark.operator.DriverSpec;', 'import com.apple.spark.operator.ExecutorSpec;'}
+2026-09-10 11:18:30,437 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:18:31,080 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:44: error: cannot find symbol
+    private Metadata mockMetadata(String name, Map<String, String> labels) {
+            ^
+  symbol:   class Metadata
+  location: class SubmissionSummary_copyFrom_Test
+1 error
+2 warnings
+
+2026-09-10 11:18:32,030 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:18:51,016 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:18:51,729 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:17: error: cannot find symbol
+import com.apple.spark.core.Metadata;
+                           ^
+  symbol:   class Metadata
+  location: package com.apple.spark.core
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:46: error: cannot find symbol
+    private Metadata mockMetadata(String name, Map<String, String> labels) {
+            ^
+  symbol:   class Metadata
+  location: class SubmissionSummary_copyFrom_Test
+2 errors
+2 warnings
+
+2026-09-10 11:18:51,730 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/SubmissionSummary_copyFrom_Test.java...
+2026-09-10 11:18:51,731 - procedure.post_process - INFO - remove imports in lines [16]
+2026-09-10 11:18:51,733 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:18:52,406 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:45: error: cannot find symbol
+    private Metadata mockMetadata(String name, Map<String, String> labels) {
+            ^
+  symbol:   class Metadata
+  location: class SubmissionSummary_copyFrom_Test
+1 error
+2 warnings
+
+2026-09-10 11:18:53,042 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:19:11,684 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:19:12,368 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:18: error: cannot find symbol
+import com.apple.spark.core.Metadata;
+                           ^
+  symbol:   class Metadata
+  location: package com.apple.spark.core
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:47: error: cannot find symbol
+    private Metadata mockMetadata(String name, Map<String, String> labels) {
+            ^
+  symbol:   class Metadata
+  location: class SubmissionSummary_copyFrom_Test
+2 errors
+2 warnings
+
+2026-09-10 11:19:12,370 - procedure.post_process - INFO - clean error cases in lines [17, 46, [46, 51]]
+2026-09-10 11:19:12,371 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:19:13,111 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:60: error: cannot find symbol
+            labels.put(Constants.DAG_NAME_LABEL, dagName);
+                       ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:95: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user1");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:96: error: cannot find symbol
+        labels.put(Constants.QUEUE_LABEL, "queue1");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:97: error: cannot find symbol
+        labels.put(Constants.DAG_NAME_LABEL, "dag1");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:98: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app1", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:122: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app2", null));
+                                                        ^
+  symbol:   method mockMetadata(String,<null>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:137: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user3");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:138: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app3", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:152: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user4");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:153: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app4", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:166: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user5");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:167: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app5", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:185: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user6");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:186: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app6", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:190: error: cannot find symbol
+        sparkConf.put(SparkConstants.SPARK_APP_NAME_CONFIG, "ApplicationName");
+                      ^
+  symbol:   variable SparkConstants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:201: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app7", new HashMap<>()));
+                                                        ^
+  symbol:   method mockMetadata(String,HashMap<Object,Object>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:216: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user8");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:217: error: cannot find symbol
+        labels.put(Constants.QUEUE_LABEL, "queue8");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:218: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app8", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:234: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user9");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:235: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app9", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:249: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user10");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:250: error: cannot find symbol
+        labels.put(Constants.QUEUE_LABEL, "queue10");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:251: error: cannot find symbol
+        labels.put(Constants.DAG_NAME_LABEL, "dag10");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:252: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app10", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:267: error: cannot find symbol
+        labels.put(Constants.PROXY_USER_LABEL, "user11");
+                   ^
+  symbol:   variable Constants
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:268: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app11", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+27 errors
+2 warnings
+
+2026-09-10 11:19:13,112 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/SubmissionSummary_copyFrom_Test.java...
+2026-09-10 11:19:13,113 - procedure.post_process - INFO - remove imports in lines [17]
+2026-09-10 11:19:13,114 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:19:13,720 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:46: error: cannot find symbol
+    private Metadata mockMetadata(String name, Map<String, String> labels) {
+            ^
+  symbol:   class Metadata
+  location: class SubmissionSummary_copyFrom_Test
+1 error
+2 warnings
+
+2026-09-10 11:19:14,383 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:19:30,099 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:19:30,817 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:18: error: cannot find symbol
+import com.apple.spark.operator.Metadata;
+                               ^
+  symbol:   class Metadata
+  location: package com.apple.spark.operator
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:50: error: cannot find symbol
+    private Metadata mockMetadata(String name, Map<String, String> labels) {
+            ^
+  symbol:   class Metadata
+  location: class SubmissionSummary_copyFrom_Test
+2 errors
+2 warnings
+
+2026-09-10 11:19:30,819 - procedure.post_process - INFO - clean error cases in lines [17, 49, [49, 54]]
+2026-09-10 11:19:30,821 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java
+2026-09-10 11:19:31,582 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:101: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app1", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:125: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app2", null));
+                                                        ^
+  symbol:   method mockMetadata(String,<null>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:141: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app3", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:156: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app4", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:170: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app5", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:189: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app6", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:204: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app7", new HashMap<>()));
+                                                        ^
+  symbol:   method mockMetadata(String,HashMap<Object,Object>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:221: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app8", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:238: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app9", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:255: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app10", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+src/test/java/com/apple/spark/api/SubmissionSummary_copyFrom_Test.java:271: error: cannot find symbol
+        when(sparkApplication.getMetadata()).thenReturn(mockMetadata("app11", labels));
+                                                        ^
+  symbol:   method mockMetadata(String,Map<String,String>)
+  location: class SubmissionSummary_copyFrom_Test
+11 errors
+2 warnings
+
+2026-09-10 11:19:31,585 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java
+2026-09-10 11:19:32,194 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:22: error: cannot find symbol
+    private SparkCluster sparkCluster;
+            ^
+  symbol:   class SparkCluster
+  location: class ApplicationSubmissionHelper_getDriverSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:15: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+3 errors
+2 warnings
+
+2026-09-10 11:19:32,194 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getDriverSpec_Test.java...
+2026-09-10 11:19:32,195 - procedure.post_process - INFO - add imports {'import com.apple.spark.AppConfig.SparkCluster;', 'import org.mockito.junit.jupiter.MockitoExtension;', 'import static com.apple.spark.AppConfig.SparkCluster;'}
+2026-09-10 11:19:32,196 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java
+2026-09-10 11:19:32,886 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+1 error
+2 warnings
+
+2026-09-10 11:19:33,540 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:19:42,497 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java
+2026-09-10 11:19:43,253 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:15: error: cannot find symbol
+import com.apple.spark.operator.SparkCluster;
+                               ^
+  symbol:   class SparkCluster
+  location: package com.apple.spark.operator
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:24: error: cannot find symbol
+    private SparkCluster sparkCluster;
+            ^
+  symbol:   class SparkCluster
+  location: class ApplicationSubmissionHelper_getDriverSpec_Test
+2 errors
+2 warnings
+
+2026-09-10 11:19:43,254 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getDriverSpec_Test.java...
+2026-09-10 11:19:43,256 - procedure.post_process - INFO - remove imports in lines [14]
+2026-09-10 11:19:43,256 - procedure.post_process - INFO - add imports {'import com.apple.spark.AppConfig.SparkCluster;', 'import static com.apple.spark.AppConfig.SparkCluster;'}
+2026-09-10 11:19:43,257 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java
+2026-09-10 11:19:44,050 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:86: error: no suitable method found for thenReturn(String[])
+        when(driver.getVolumeMounts()).thenReturn(new String[] { "mount1" });
+                                      ^
+    method OngoingStubbing.thenReturn(List<VolumeMount>) is not applicable
+      (argument mismatch; String[] cannot be converted to List<VolumeMount>)
+    method OngoingStubbing.thenReturn(List<VolumeMount>,List<VolumeMount>...) is not applicable
+      (argument mismatch; String[] cannot be converted to List<VolumeMount>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:88: error: no suitable method found for thenReturn(String[])
+        when(request.getVolumes()).thenReturn(new String[] { "volume1" });
+                                  ^
+    method OngoingStubbing.thenReturn(List<Volume>) is not applicable
+      (argument mismatch; String[] cannot be converted to List<Volume>)
+    method OngoingStubbing.thenReturn(List<Volume>,List<Volume>...) is not applicable
+      (argument mismatch; String[] cannot be converted to List<Volume>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:93: error: no suitable method found for assertArrayEquals(String[],List<VolumeMount>)
+        assertArrayEquals(new String[] { "mount1" }, driverSpec.getVolumeMounts());
+        ^
+    method Assertions.assertArrayEquals(Object[],Object[]) is not applicable
+      (argument mismatch; List<VolumeMount> cannot be converted to Object[])
+    method Assertions.assertArrayEquals(double[],double[]) is not applicable
+      (argument mismatch; String[] cannot be converted to double[])
+    method Assertions.assertArrayEquals(float[],float[]) is not applicable
+      (argument mismatch; String[] cannot be converted to float[])
+    method Assertions.assertArrayEquals(long[],long[]) is not applicable
+      (argument mismatch; String[] cannot be converted to long[])
+    method Assertions.assertArrayEquals(int[],int[]) is not applicable
+      (argument mismatch; String[] cannot be converted to int[])
+    method Assertions.assertArrayEquals(short[],short[]) is not applicable
+      (argument mismatch; String[] cannot be converted to short[])
+    method Assertions.assertArrayEquals(byte[],byte[]) is not applicable
+      (argument mismatch; String[] cannot be converted to byte[])
+    method Assertions.assertArrayEquals(char[],char[]) is not applicable
+      (argument mismatch; String[] cannot be converted to char[])
+    method Assertions.assertArrayEquals(boolean[],boolean[]) is not applicable
+      (argument mismatch; String[] cannot be converted to boolean[])
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:101: error: no suitable method found for thenReturn(String[])
+        when(sparkCluster.getDriver().getVolumeMounts()).thenReturn(new String[] { "mount2" });
+                                                        ^
+    method OngoingStubbing.thenReturn(List<VolumeMount>) is not applicable
+      (argument mismatch; String[] cannot be converted to List<VolumeMount>)
+    method OngoingStubbing.thenReturn(List<VolumeMount>,List<VolumeMount>...) is not applicable
+      (argument mismatch; String[] cannot be converted to List<VolumeMount>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:102: error: no suitable method found for thenReturn(String[])
+        when(request.getVolumes()).thenReturn(new String[] { "volume1" });
+                                  ^
+    method OngoingStubbing.thenReturn(List<Volume>) is not applicable
+      (argument mismatch; String[] cannot be converted to List<Volume>)
+    method OngoingStubbing.thenReturn(List<Volume>,List<Volume>...) is not applicable
+      (argument mismatch; String[] cannot be converted to List<Volume>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:106: error: no suitable method found for assertArrayEquals(String[],List<VolumeMount>)
+        assertArrayEquals(new String[] { "mount2" }, driverSpec.getVolumeMounts());
+        ^
+    method Assertions.assertArrayEquals(Object[],Object[]) is not applicable
+      (argument mismatch; List<VolumeMount> cannot be converted to Object[])
+    method Assertions.assertArrayEquals(double[],double[]) is not applicable
+      (argument mismatch; String[] cannot be converted to double[])
+    method Assertions.assertArrayEquals(float[],float[]) is not applicable
+      (argument mismatch; String[] cannot be converted to float[])
+    method Assertions.assertArrayEquals(long[],long[]) is not applicable
+      (argument mismatch; String[] cannot be converted to long[])
+    method Assertions.assertArrayEquals(int[],int[]) is not applicable
+      (argument mismatch; String[] cannot be converted to int[])
+    method Assertions.assertArrayEquals(short[],short[]) is not applicable
+      (argument mismatch; String[] cannot be converted to short[])
+    method Assertions.assertArrayEquals(byte[],byte[]) is not applicable
+      (argument mismatch; String[] cannot be converted to byte[])
+    method Assertions.assertArrayEquals(char[],char[]) is not applicable
+      (argument mismatch; String[] cannot be converted to char[])
+    method Assertions.assertArrayEquals(boolean[],boolean[]) is not applicable
+      (argument mismatch; String[] cannot be converted to boolean[])
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+6 errors
+2 warnings
+
+2026-09-10 11:19:44,669 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:19:54,220 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java
+2026-09-10 11:19:55,112 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:93: error: no suitable constructor found for VolumeMount(String)
+        when(driver.getVolumeMounts()).thenReturn(List.of(new VolumeMount("mount1")));
+                                                          ^
+    constructor VolumeMount.VolumeMount() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor VolumeMount.VolumeMount(String,String) is not applicable
+      (actual and formal argument lists differ in length)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:95: error: no suitable constructor found for Volume(String)
+        when(request.getVolumes()).thenReturn(List.of(new Volume("volume1")));
+                                                      ^
+    constructor Volume.Volume() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor Volume.Volume(String,HostPathVolumeSource) is not applicable
+      (actual and formal argument lists differ in length)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:101: error: no suitable constructor found for VolumeMount(String)
+        assertEquals(List.of(new VolumeMount("mount1")), driverSpec.getVolumeMounts());
+                             ^
+    constructor VolumeMount.VolumeMount() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor VolumeMount.VolumeMount(String,String) is not applicable
+      (actual and formal argument lists differ in length)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:110: error: no suitable constructor found for VolumeMount(String)
+        when(sparkCluster.getDriver().getVolumeMounts()).thenReturn(List.of(new VolumeMount("mount2")));
+                                                                            ^
+    constructor VolumeMount.VolumeMount() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor VolumeMount.VolumeMount(String,String) is not applicable
+      (actual and formal argument lists differ in length)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:112: error: no suitable constructor found for Volume(String)
+        when(request.getVolumes()).thenReturn(List.of(new Volume("volume1")));
+                                                      ^
+    constructor Volume.Volume() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor Volume.Volume(String,HostPathVolumeSource) is not applicable
+      (actual and formal argument lists differ in length)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:117: error: no suitable constructor found for VolumeMount(String)
+        assertEquals(List.of(new VolumeMount("mount2")), driverSpec.getVolumeMounts());
+                             ^
+    constructor VolumeMount.VolumeMount() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor VolumeMount.VolumeMount(String,String) is not applicable
+      (actual and formal argument lists differ in length)
+6 errors
+2 warnings
+
+2026-09-10 11:19:55,114 - procedure.post_process - INFO - clean error cases in lines [92, 94, 100, 109, 111, 116, [87, 101], [87, 101], [87, 101], [103, 117], [103, 117], [103, 117]]
+2026-09-10 11:19:55,115 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java
+2026-09-10 11:19:55,855 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test
+2026-09-10 11:19:56,846 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:19:56,847 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_getDriverSpec_Test ✔
+│     ├─ testGetDriverSpec_withAffinitySettings() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     ├─ testGetDriverSpec_withValidRequest() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     ├─ testGetDriverSpec_withNullDriver() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     ├─ testGetDriverSpec_withDriverCoreAndMemory() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     ├─ testGetDriverSpec_withLargeCoreAndMemoryValues() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     └─ testGetDriverSpec_withDriverAndLabels() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (6):
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withAffinitySettings()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withAffinitySettings', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withAffinitySettings(ApplicationSubmissionHelper_getDriverSpec_Test.java:143)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withValidRequest()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withValidRequest', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withValidRequest(ApplicationSubmissionHelper_getDriverSpec_Test.java:52)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withNullDriver()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withNullDriver', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withNullDriver(ApplicationSubmissionHelper_getDriverSpec_Test.java:64)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withDriverCoreAndMemory()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withDriverCoreAndMemory', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withDriverCoreAndMemory(ApplicationSubmissionHelper_getDriverSpec_Test.java:129)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withLargeCoreAndMemoryValues()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withLargeCoreAndMemoryValues', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withLargeCoreAndMemoryValues(ApplicationSubmissionHelper_getDriverSpec_Test.java:158)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withDriverAndLabels()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withDriverAndLabels', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withDriverAndLabels(ApplicationSubmissionHelper_getDriverSpec_Test.java:81)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+
+Test run finished after 583 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         6 tests failed          ]
+
+
+2026-09-10 11:19:56,848 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getDriverSpec_Test.java...
+2026-09-10 11:19:57,656 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:20:04,400 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java
+2026-09-10 11:20:05,151 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java:44: error: cannot find symbol
+        appConfig.setQueues(new ArrayList<>());
+                                ^
+  symbol:   class ArrayList
+  location: class ApplicationSubmissionHelper_getDriverSpec_Test
+1 error
+2 warnings
+
+2026-09-10 11:20:05,152 - procedure.post_process - INFO - clean error cases in lines [43]
+2026-09-10 11:20:05,153 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getDriverSpec_Test.java
+2026-09-10 11:20:05,897 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test
+2026-09-10 11:20:06,876 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:20:06,876 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_getDriverSpec_Test ✔
+│     ├─ testGetDriverSpec_withAffinitySettings() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     ├─ testGetDriverSpec_withValidRequest() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     ├─ testGetDriverSpec_withNullDriver() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     ├─ testGetDriverSpec_withDriverCoreAndMemory() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     ├─ testGetDriverSpec_withLargeCoreAndMemoryValues() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+│     └─ testGetDriverSpec_withDriverAndLabels() ✘ Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (6):
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withAffinitySettings()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withAffinitySettings', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withAffinitySettings(ApplicationSubmissionHelper_getDriverSpec_Test.java:112)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withValidRequest()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withValidRequest', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withValidRequest(ApplicationSubmissionHelper_getDriverSpec_Test.java:55)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withNullDriver()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withNullDriver', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withNullDriver(ApplicationSubmissionHelper_getDriverSpec_Test.java:66)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withDriverCoreAndMemory()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withDriverCoreAndMemory', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withDriverCoreAndMemory(ApplicationSubmissionHelper_getDriverSpec_Test.java:99)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withLargeCoreAndMemoryValues()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withLargeCoreAndMemoryValues', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withLargeCoreAndMemoryValues(ApplicationSubmissionHelper_getDriverSpec_Test.java:126)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_getDriverSpec_Test:testGetDriverSpec_withDriverAndLabels()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test', methodName = 'testGetDriverSpec_withDriverAndLabels', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "com.apple.spark.AppConfig.getQueues()" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverCPUBufferForQueue(ApplicationSubmissionHelper.java:507)
+       com.apple.spark.core.ApplicationSubmissionHelper.getDriverSpec(ApplicationSubmissionHelper.java:438)
+       com.apple.spark.core.ApplicationSubmissionHelper_getDriverSpec_Test.testGetDriverSpec_withDriverAndLabels(ApplicationSubmissionHelper_getDriverSpec_Test.java:83)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+
+Test run finished after 548 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         6 tests failed          ]
+
+
+2026-09-10 11:20:06,879 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java
+2026-09-10 11:20:07,515 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:18: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+1 error
+2 warnings
+
+2026-09-10 11:20:07,515 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_populateEnv_Test.java...
+2026-09-10 11:20:07,516 - procedure.post_process - INFO - add imports {'import org.junit.jupiter.api.extension.ExtendWith;'}
+2026-09-10 11:20:07,517 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java
+2026-09-10 11:20:08,189 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:45: error: no suitable method found for thenReturn(List<String>)
+        when(sparkCluster.getDriver().getEnv()).thenReturn(driverEnv);
+                                               ^
+    method OngoingStubbing.thenReturn(List<EnvVar>) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+    method OngoingStubbing.thenReturn(List<EnvVar>,List<EnvVar>...) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:60: error: no suitable method found for thenReturn(List<String>)
+        when(submitApplicationRequest.getDriver().getEnv()).thenReturn(requestDriverEnv);
+                                                           ^
+    method OngoingStubbing.thenReturn(List<EnvVar>) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+    method OngoingStubbing.thenReturn(List<EnvVar>,List<EnvVar>...) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:75: error: no suitable method found for thenReturn(List<String>)
+        when(sparkCluster.getExecutor().getEnv()).thenReturn(executorEnv);
+                                                 ^
+    method OngoingStubbing.thenReturn(List<EnvVar>) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+    method OngoingStubbing.thenReturn(List<EnvVar>,List<EnvVar>...) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:90: error: no suitable method found for thenReturn(List<String>)
+        when(submitApplicationRequest.getExecutor().getEnv()).thenReturn(requestExecutorEnv);
+                                                             ^
+    method OngoingStubbing.thenReturn(List<EnvVar>) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+    method OngoingStubbing.thenReturn(List<EnvVar>,List<EnvVar>...) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:105: error: no suitable method found for thenReturn(List<String>)
+        when(sparkCluster.getDriver().getEnv()).thenReturn(driverEnv);
+                                               ^
+    method OngoingStubbing.thenReturn(List<EnvVar>) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+    method OngoingStubbing.thenReturn(List<EnvVar>,List<EnvVar>...) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:109: error: no suitable method found for thenReturn(List<String>)
+        when(submitApplicationRequest.getExecutor().getEnv()).thenReturn(requestExecutorEnv);
+                                                             ^
+    method OngoingStubbing.thenReturn(List<EnvVar>) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+    method OngoingStubbing.thenReturn(List<EnvVar>,List<EnvVar>...) is not applicable
+      (argument mismatch; List<String> cannot be converted to List<EnvVar>)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:116: error: incompatible types: List<EnvVar> cannot be converted to Collection<? extends String>
+        mergedDriverEnv.addAll(sparkApplicationSpec.getDriver().getEnv());
+                                                                      ^
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:119: error: incompatible types: List<EnvVar> cannot be converted to Collection<? extends String>
+        mergedExecutorEnv.addAll(sparkApplicationSpec.getExecutor().getEnv());
+                                                                          ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+8 errors
+2 warnings
+
+2026-09-10 11:20:09,215 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:20:19,487 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java
+2026-09-10 11:20:20,192 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:41: error: cannot find symbol
+        List<EnvVar> driverEnv = new ArrayList<>();
+             ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:42: error: cannot find symbol
+        driverEnv.add(new EnvVar("VAR1", "value1"));
+                          ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:43: error: cannot find symbol
+        driverEnv.add(new EnvVar("VAR2", "value2"));
+                          ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:57: error: cannot find symbol
+        List<EnvVar> requestDriverEnv = new ArrayList<>();
+             ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:58: error: cannot find symbol
+        requestDriverEnv.add(new EnvVar("VAR3", "value3"));
+                                 ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:72: error: cannot find symbol
+        List<EnvVar> executorEnv = new ArrayList<>();
+             ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:73: error: cannot find symbol
+        executorEnv.add(new EnvVar("VAR4", "value4"));
+                            ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:87: error: cannot find symbol
+        List<EnvVar> requestExecutorEnv = new ArrayList<>();
+             ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:88: error: cannot find symbol
+        requestExecutorEnv.add(new EnvVar("VAR5", "value5"));
+                                   ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:102: error: cannot find symbol
+        List<EnvVar> driverEnv = new ArrayList<>();
+             ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:103: error: cannot find symbol
+        driverEnv.add(new EnvVar("VAR1", "value1"));
+                          ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:106: error: cannot find symbol
+        List<EnvVar> requestExecutorEnv = new ArrayList<>();
+             ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:107: error: cannot find symbol
+        requestExecutorEnv.add(new EnvVar("VAR2", "value2"));
+                                   ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:115: error: cannot find symbol
+        List<EnvVar> mergedDriverEnv = new ArrayList<>(driverEnv);
+             ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java:118: error: cannot find symbol
+        List<EnvVar> mergedExecutorEnv = new ArrayList<>(requestExecutorEnv);
+             ^
+  symbol:   class EnvVar
+  location: class ApplicationSubmissionHelper_populateEnv_Test
+15 errors
+2 warnings
+
+2026-09-10 11:20:20,193 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_populateEnv_Test.java...
+2026-09-10 11:20:20,194 - procedure.post_process - INFO - add imports {'import com.apple.spark.operator.EnvVar;'}
+2026-09-10 11:20:20,194 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java
+2026-09-10 11:20:20,920 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test
+2026-09-10 11:20:21,826 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:20:21,826 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_populateEnv_Test ✔
+│     ├─ testPopulateEnv_withExecutorEnvFromCluster() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:35)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withExecutorEnvFromRequest() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:35)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withDriverEnvFromCluster() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:36)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withNullValues() ✘ Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+│     ├─ testPopulateEnv_withDriverEnvFromRequest() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:36)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withEmptyEnvironments() ✘ expected: not <null>
+│     └─ testPopulateEnv_withMixedEnvironments() ✘ expected: <[com.apple.spark.operator.EnvVar@65c33b92, com.apple.spark.operator.EnvVar@65c33b92]> but was: <[com.apple.spark.operator.EnvVar@65c33b92]>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (7):
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withExecutorEnvFromCluster()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withExecutorEnvFromCluster', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:35)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withExecutorEnvFromRequest()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withExecutorEnvFromRequest', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:35)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withDriverEnvFromCluster()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withDriverEnvFromCluster', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:36)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withNullValues()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withNullValues', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+       org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3135)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.populateEnv(ApplicationSubmissionHelper.java:249)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.lambda$testPopulateEnv_withNullValues$0(ApplicationSubmissionHelper_populateEnv_Test.java:131)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withDriverEnvFromRequest()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withDriverEnvFromRequest', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:36)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withEmptyEnvironments()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withEmptyEnvironments', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:300)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.testPopulateEnv_withEmptyEnvironments(ApplicationSubmissionHelper_populateEnv_Test.java:142)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withMixedEnvironments()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withMixedEnvironments', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <[com.apple.spark.operator.EnvVar@65c33b92, com.apple.spark.operator.EnvVar@65c33b92]> but was: <[com.apple.spark.operator.EnvVar@65c33b92]>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.testPopulateEnv_withMixedEnvironments(ApplicationSubmissionHelper_populateEnv_Test.java:118)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 560 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         7 tests failed          ]
+
+
+2026-09-10 11:20:22,459 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:20:30,715 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java
+2026-09-10 11:20:31,508 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test
+2026-09-10 11:20:32,445 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:20:32,445 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_populateEnv_Test ✔
+│     ├─ testPopulateEnv_withExecutorEnvFromCluster() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:34)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withExecutorEnvFromRequest() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:34)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withDriverEnvFromCluster() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:35)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withNullValues() ✘ Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+│     ├─ testPopulateEnv_withDriverEnvFromRequest() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:35)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withEmptyEnvironments() ✘ expected: not <null>
+│     └─ testPopulateEnv_withMixedEnvironments() ✘ expected: <[com.apple.spark.operator.EnvVar@42373389, com.apple.spark.operator.EnvVar@42373389]> but was: <[com.apple.spark.operator.EnvVar@42373389]>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (7):
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withExecutorEnvFromCluster()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withExecutorEnvFromCluster', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:34)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withExecutorEnvFromRequest()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withExecutorEnvFromRequest', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:34)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withDriverEnvFromCluster()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withDriverEnvFromCluster', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:35)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withNullValues()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withNullValues', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+       org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3135)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.populateEnv(ApplicationSubmissionHelper.java:249)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.lambda$testPopulateEnv_withNullValues$0(ApplicationSubmissionHelper_populateEnv_Test.java:129)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withDriverEnvFromRequest()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withDriverEnvFromRequest', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:35)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withEmptyEnvironments()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withEmptyEnvironments', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:300)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.testPopulateEnv_withEmptyEnvironments(ApplicationSubmissionHelper_populateEnv_Test.java:140)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withMixedEnvironments()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withMixedEnvironments', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <[com.apple.spark.operator.EnvVar@42373389, com.apple.spark.operator.EnvVar@42373389]> but was: <[com.apple.spark.operator.EnvVar@42373389]>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.testPopulateEnv_withMixedEnvironments(ApplicationSubmissionHelper_populateEnv_Test.java:116)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 576 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         7 tests failed          ]
+
+
+2026-09-10 11:20:32,446 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_populateEnv_Test.java...
+2026-09-10 11:20:33,137 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:20:42,778 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_populateEnv_Test.java
+2026-09-10 11:20:43,544 - procedure.post_process - INFO - Running single unit test, testclass: com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test
+2026-09-10 11:20:44,578 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:20:44,578 - procedure.post_process - INFO - test case failed in com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/work/data/projects/batch-processing-gateway/libs/logback-classic-1.2.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/work/code/dependencies/evosuite-1.2.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ApplicationSubmissionHelper_populateEnv_Test ✔
+│     ├─ testPopulateEnv_withExecutorEnvFromCluster() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:40)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withExecutorEnvFromRequest() ✘ expected: <[com.apple.spark.operator.EnvVar@5d51e129]> but was: <[]>
+│     ├─ testPopulateEnv_withDriverEnvFromCluster() ✘ 
+│     │        Unnecessary stubbings detected.
+│     │        Clean & maintainable test code requires zero unnecessary code.
+│     │        Following stubbings are unnecessary (click to navigate to relevant line of code):
+│     │          1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:41)
+│     │        Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+│     ├─ testPopulateEnv_withNullValues() ✘ Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+│     ├─ testPopulateEnv_withDriverEnvFromRequest() ✘ expected: <[com.apple.spark.operator.EnvVar@124ac145]> but was: <[]>
+│     ├─ testPopulateEnv_withEmptyEnvironments() ✘ expected: not <null>
+│     └─ testPopulateEnv_withMixedEnvironments() ✘ expected: <[com.apple.spark.operator.EnvVar@4e08acf9, com.apple.spark.operator.EnvVar@4e08acf9]> but was: <[com.apple.spark.operator.EnvVar@4e08acf9]>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (7):
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withExecutorEnvFromCluster()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withExecutorEnvFromCluster', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withExecutorEnvFromRequest()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withExecutorEnvFromRequest', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <[com.apple.spark.operator.EnvVar@5d51e129]> but was: <[]>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.testPopulateEnv_withExecutorEnvFromRequest(ApplicationSubmissionHelper_populateEnv_Test.java:99)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withDriverEnvFromCluster()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withDriverEnvFromCluster', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.setupBeforeEach(ApplicationSubmissionHelper_populateEnv_Test.java:41)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withNullValues()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withNullValues', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+       org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3135)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "com.apple.spark.AppConfig$SparkCluster.getDriver()" because "sparkCluster" is null
+       com.apple.spark.core.ApplicationSubmissionHelper.populateEnv(ApplicationSubmissionHelper.java:249)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.lambda$testPopulateEnv_withNullValues$0(ApplicationSubmissionHelper_populateEnv_Test.java:132)
+       org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withDriverEnvFromRequest()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withDriverEnvFromRequest', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <[com.apple.spark.operator.EnvVar@124ac145]> but was: <[]>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.testPopulateEnv_withDriverEnvFromRequest(ApplicationSubmissionHelper_populateEnv_Test.java:70)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withEmptyEnvironments()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withEmptyEnvironments', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:300)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.testPopulateEnv_withEmptyEnvironments(ApplicationSubmissionHelper_populateEnv_Test.java:143)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ApplicationSubmissionHelper_populateEnv_Test:testPopulateEnv_withMixedEnvironments()
+    MethodSource [className = 'com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test', methodName = 'testPopulateEnv_withMixedEnvironments', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <[com.apple.spark.operator.EnvVar@4e08acf9, com.apple.spark.operator.EnvVar@4e08acf9]> but was: <[com.apple.spark.operator.EnvVar@4e08acf9]>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+       com.apple.spark.core.ApplicationSubmissionHelper_populateEnv_Test.testPopulateEnv_withMixedEnvironments(ApplicationSubmissionHelper_populateEnv_Test.java:119)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 657 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         7 tests failed          ]
+
+
+2026-09-10 11:20:44,581 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:20:45,242 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:22: error: cannot find symbol
+    private SparkCluster sparkCluster;
+            ^
+  symbol:   class SparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+2 errors
+2 warnings
+
+2026-09-10 11:20:45,242 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getExecutorSpec_Test.java...
+2026-09-10 11:20:45,243 - procedure.post_process - INFO - add imports {'import com.apple.spark.AppConfig.SparkCluster;', 'import static com.apple.spark.AppConfig.SparkCluster;'}
+2026-09-10 11:20:45,244 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:20:45,892 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+1 error
+2 warnings
+
+2026-09-10 11:20:46,578 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:20:54,827 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:20:55,533 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:24: error: cannot find symbol
+    private SparkCluster sparkCluster;
+            ^
+  symbol:   class SparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+2 errors
+2 warnings
+
+2026-09-10 11:20:55,533 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getExecutorSpec_Test.java...
+2026-09-10 11:20:55,534 - procedure.post_process - INFO - add imports {'import com.apple.spark.AppConfig.SparkCluster;', 'import static com.apple.spark.AppConfig.SparkCluster;'}
+2026-09-10 11:20:55,535 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:20:56,258 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+1 error
+2 warnings
+
+2026-09-10 11:20:56,900 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:21:04,254 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:21:04,926 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:24: error: cannot find symbol
+    private SparkCluster sparkCluster;
+            ^
+  symbol:   class SparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+2 errors
+2 warnings
+
+2026-09-10 11:21:04,927 - procedure.post_process - INFO - clean error cases in lines [5, 23]
+2026-09-10 11:21:04,928 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:21:05,615 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:31: error: cannot find symbol
+        sparkCluster = mock(SparkCluster.class);
+        ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:31: error: cannot find symbol
+        sparkCluster = mock(SparkCluster.class);
+                            ^
+  symbol:   class SparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:41: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:57: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:71: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:84: error: incompatible types: inference variable T has incompatible bounds
+        request.setVolumes(Arrays.asList("volume1", "volume2"));
+               ^
+    equality constraints: Volume
+    lower bounds: String
+  where T is a type-variable:
+    T extends Object declared in method <T>asList(T...)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:86: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:97: error: cannot find symbol
+        when(sparkCluster.getVolumes()).thenReturn(Arrays.asList("volume3"));
+             ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:99: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:112: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:124: error: cannot find symbol
+        request.getExecutor().setSpotInstance(true);
+                             ^
+  symbol:   method setSpotInstance(boolean)
+  location: class ExecutorSpec
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:126: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:130: error: cannot find symbol
+        assertNotNull(executorSpec.getAffinity().getRequiredDuringSchedulingIgnoredDuringExecution());
+                                                ^
+  symbol:   method getRequiredDuringSchedulingIgnoredDuringExecution()
+  location: class Affinity
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:138: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+14 errors
+2 warnings
+
+2026-09-10 11:21:05,616 - procedure.post_process - INFO - try to repair test class ../evaluation/batch-processing-gateway/test_classes/ApplicationSubmissionHelper_getExecutorSpec_Test.java...
+2026-09-10 11:21:05,616 - procedure.post_process - INFO - add imports {'import com.apple.spark.AppConfig.SparkCluster;', 'import static com.apple.spark.AppConfig.SparkCluster;'}
+2026-09-10 11:21:05,617 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:21:06,227 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+1 error
+2 warnings
+
+2026-09-10 11:21:06,995 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:21:14,763 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:21:15,509 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:6: error: package com.apple.spark.operator.AppConfig does not exist
+import com.apple.spark.operator.AppConfig.SparkCluster;
+                                         ^
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:24: error: cannot find symbol
+    private SparkCluster sparkCluster;
+            ^
+  symbol:   class SparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+2 errors
+2 warnings
+
+2026-09-10 11:21:15,510 - procedure.post_process - INFO - clean error cases in lines [5, 23]
+2026-09-10 11:21:15,511 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java
+2026-09-10 11:21:16,236 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.sonatype.guice.bean.scanners.index.SisuIndexAPT6' less than -source '17'
+warning: Supported source version 'RELEASE_6' from annotation processor 'org.eclipse.sisu.scanners.index.SisuIndexAPT6' less than -source '17'
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:31: error: cannot find symbol
+        sparkCluster = mock(SparkCluster.class);
+        ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:31: error: cannot find symbol
+        sparkCluster = mock(SparkCluster.class);
+                            ^
+  symbol:   class SparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:41: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:57: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:71: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:84: error: incompatible types: inference variable T has incompatible bounds
+        request.setVolumes(Arrays.asList("volume1", "volume2"));
+               ^
+    equality constraints: Volume
+    lower bounds: String
+  where T is a type-variable:
+    T extends Object declared in method <T>asList(T...)
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:86: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:97: error: cannot find symbol
+        when(sparkCluster.getVolumes()).thenReturn(Arrays.asList("volume3"));
+             ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:99: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:112: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:124: error: cannot find symbol
+        request.getExecutor().setSpotInstance(true);
+                             ^
+  symbol:   method setSpotInstance(boolean)
+  location: class ExecutorSpec
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:126: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:130: error: cannot find symbol
+        assertNotNull(executorSpec.getAffinity().getRequiredDuringSchedulingIgnoredDuringExecution());
+                                                ^
+  symbol:   method getRequiredDuringSchedulingIgnoredDuringExecution()
+  location: class Affinity
+src/test/java/com/apple/spark/core/ApplicationSubmissionHelper_getExecutorSpec_Test.java:138: error: cannot find symbol
+        ExecutorSpec executorSpec = ApplicationSubmissionHelper.getExecutorSpec(request, appConfig, "parentQueue", sparkCluster);
+                                                                                                                   ^
+  symbol:   variable sparkCluster
+  location: class ApplicationSubmissionHelper_getExecutorSpec_Test
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+14 errors
+2 warnings
+
+2026-09-10 11:21:16,240 - procedure.post_process - INFO - Post process completed: /work/code/../data/projects/batch-processing-gateway
+2026-09-10 11:21:16,241 - __main__ - INFO - time for post process: 247.84 seconds
+2026-09-10 11:21:16,242 - __main__ - INFO - total elapsed time: 289.41 seconds

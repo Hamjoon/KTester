@@ -1,0 +1,529 @@
+[
+  {
+    "group": "getSparkConf - Default Spark Configuration",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": "TestApp"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "key1": "value1",
+                "key2": "value2"
+              },
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {
+          "key1": "value1",
+          "key2": "value2",
+          "spark.app.name": "TestApp"
+        },
+        "description": "Test case where defaultSparkConf is provided, and applicationName is set in request."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Spark Cluster Configuration",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {
+                "key3": "value3"
+              }
+            }
+          }
+        ],
+        "expected": {
+          "key3": "value3"
+        },
+        "description": "Test case where only sparkCluster's sparkConf is provided."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Request Spark Configuration",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "key4": "value4"
+              },
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {
+          "key4": "value4"
+        },
+        "description": "Test case where only request's sparkConf is provided."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Fixed Spark Configuration",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": {
+                "key5": "value5"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {
+          "key5": "value5"
+        },
+        "description": "Test case where fixedSparkConf is provided."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Empty Configurations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {},
+        "description": "Test case where all configurations are empty, expecting an empty map."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Multiple Configurations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "key6": "value6"
+              },
+              "applicationName": "TestApp2"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "key7": "value7"
+              },
+              "fixedSparkConf": {
+                "key8": "value8"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {
+                "key9": "value9"
+              }
+            }
+          }
+        ],
+        "expected": {
+          "key6": "value6",
+          "key7": "value7",
+          "key8": "value8",
+          "key9": "value9",
+          "spark.app.name": "TestApp2"
+        },
+        "description": "Test case where all types of configurations are provided, expecting a merged map."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Application Name Only",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": "OnlyAppName"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {
+          "spark.app.name": "OnlyAppName"
+        },
+        "description": "Test case where only applicationName is set in request, expecting the application name to be returned."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Mixed Configurations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "key10": "value10"
+              },
+              "applicationName": "MixedApp"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "key11": "value11"
+              },
+              "fixedSparkConf": {
+                "key12": "value12"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {
+                "key13": "value13"
+              }
+            }
+          }
+        ],
+        "expected": {
+          "key10": "value10",
+          "key11": "value11",
+          "key12": "value12",
+          "key13": "value13",
+          "spark.app.name": "MixedApp"
+        },
+        "description": "Test case where all types of configurations are mixed, expecting a merged map with all values included."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Only Fixed Configuration",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": {
+                "key14": "value14"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {
+          "key14": "value14"
+        },
+        "description": "Test case where only fixedSparkConf is provided, expecting the fixed configuration to be returned."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Default and Fixed Configurations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "key15": "value15"
+              },
+              "fixedSparkConf": {
+                "key16": "value16"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {
+          "key15": "value15",
+          "key16": "value16"
+        },
+        "description": "Test case where both defaultSparkConf and fixedSparkConf are provided, expecting both to be included in the result."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf - Null Parameters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": null
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {},
+        "description": "Test case where submissionId is null, expecting an empty map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": null
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {},
+        "description": "Test case where request is null, expecting an empty map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": null
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {},
+        "description": "Test case where appConfig is null, expecting an empty map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "test-submission-id"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": null
+          }
+        ],
+        "expected": {},
+        "description": "Test case where sparkCluster is null, expecting an empty map."
+      }
+    ]
+  }
+]
