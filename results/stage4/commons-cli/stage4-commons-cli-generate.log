@@ -1,0 +1,101 @@
+2026-09-10 11:02:10,975 - __main__ - INFO - prompt list: ['condition4case', 'io4case', 'exception4case', 'gencode']
+2026-09-10 11:02:10,988 - procedure.generate_prompt - INFO - Construct init prompts for project commons-cli...
+2026-09-10 11:02:10,988 - tools.code_search - INFO - Loading code index for commons-cli
+2026-09-10 11:02:11,024 - procedure.generate_prompt - INFO - Construct test case prompts for project commons-cli...
+2026-09-10 11:02:11,024 - tools.code_search - INFO - Loading code index for commons-cli
+2026-09-10 11:02:11,218 - __main__ - INFO - time for generate prompts: 0.24 seconds
+2026-09-10 11:02:11,243 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:11,255 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:11,267 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:11,279 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:11,291 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:11,303 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:11,325 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:11,351 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:11,352 - procedure.generate_code - INFO - Generating test class framework for project commons-cli...
+2026-09-10 11:02:12,217 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:02:12,235 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:02:14,796 - procedure.generate_code - ERROR - Error processing test framework for: [Errno 2] No such file or directory: '../evaluation/commons-cli/responses/HelpFormatter_renderOptions/init_response.md'
+2026-09-10 11:02:14,931 - procedure.generate_code - ERROR - Error processing test framework for: [Errno 2] No such file or directory: '../evaluation/commons-cli/responses/PatternOptionBuilder_getValueType/init_response.md'
+2026-09-10 11:02:14,931 - __main__ - INFO - time for generate test class framework: 3.71 seconds
+2026-09-10 11:02:14,950 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:14,964 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:14,976 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:14,988 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:15,001 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:15,013 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:15,025 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:15,036 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:15,037 - procedure.generate_code - INFO - Generating test cases for project commons-cli...
+2026-09-10 11:02:15,705 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:02:15,882 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 11:02:19,840 - procedure.generate_code - ERROR - Error processing test case: [Errno 2] No such file or directory: '../evaluation/commons-cli/responses/PatternOptionBuilder_getValueType/condition4case_response.md'
+2026-09-10 11:02:20,618 - procedure.generate_code - ERROR - Error processing test case: [Errno 2] No such file or directory: '../evaluation/commons-cli/responses/HelpFormatter_renderOptions/condition4case_response.md'
+2026-09-10 11:02:20,619 - __main__ - INFO - time for generate test cases: 5.69 seconds
+2026-09-10 11:02:20,619 - procedure.post_process - INFO - verify process test classes in commons-cli...
+2026-09-10 11:02:20,663 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-10 11:02:20,685 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-10 11:02:21,044 - procedure.post_process - INFO - Running single unit test, testclass: org.apache.commons.cli.HelpFormatter_renderOptions_Test
+2026-09-10 11:02:21,726 - procedure.post_process - INFO - return code: 1
+2026-09-10 11:02:21,726 - procedure.post_process - INFO - test case failed in org.apache.commons.cli.HelpFormatter_renderOptions_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ HelpFormatter_renderOptions_Test ✔
+│     └─ testRenderOptions() ✘ expected: <-f <arg>           the file
+│                -s,--size <SIZE>   the size
+│                --age <arg>        the age> but was: <>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <-f <arg>           the file
+  -s,--size <SIZE>   the size
+  --age <arg>        the age> but was: <>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptions(HelpFormatter_renderOptions_Test.java:58)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 417 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-10 11:02:21,726 - procedure.post_process - ERROR - Error in post process: [Errno 2] No such file or directory: '../evaluation/commons-cli/test_classes/temp//HelpFormatter_renderOptions_Test_0.java'
+2026-09-10 11:02:21,726 - __main__ - INFO - time for post process: 1.11 seconds
+2026-09-10 11:02:21,728 - STDERR - ERROR - Traceback (most recent call last):
+2026-09-10 11:02:21,729 - STDERR - ERROR -   File "/work/code/generate_unit_test.py", line 114, in <module>
+2026-09-10 11:02:21,729 - STDERR - ERROR -     run()
+2026-09-10 11:02:21,729 - STDERR - ERROR -     ~~~^^
+2026-09-10 11:02:21,729 - STDERR - ERROR -   File "/work/code/generate_unit_test.py", line 93, in run
+2026-09-10 11:02:21,729 - STDERR - ERROR -     TimeRecorder.update_records()
+2026-09-10 11:02:21,729 - STDERR - ERROR -     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+2026-09-10 11:02:21,729 - STDERR - ERROR -   File "/work/code/tools/time_agent.py", line 79, in update_records
+2026-09-10 11:02:21,729 - STDERR - ERROR -     io_utils.write_json(time_path, new_records)
+2026-09-10 11:02:21,729 - STDERR - ERROR -     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-10 11:02:21,729 - STDERR - ERROR -   File "/work/code/tools/io_utils.py", line 31, in write_json
+2026-09-10 11:02:21,729 - STDERR - ERROR -     with open(file, 'w', encoding='utf-8') as f:
+2026-09-10 11:02:21,729 - STDERR - ERROR -          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-10 11:02:21,729 - STDERR - ERROR - FileNotFoundError: [Errno 2] No such file or directory: '../evaluation/time/time_records.json'
