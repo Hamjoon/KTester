@@ -1,0 +1,53 @@
+{
+  "net.datafaker.transformations.sql.SqlTransformer#handlePrimitivesInArray(Class<?>, Object)": {
+    "error_type": "compile error",
+    "test_cases": 23,
+    "passed_cases": 0
+  },
+  "net.datafaker.service.FakeValuesService#javaNameToYamlName(String)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 0.98,
+    "bran_cov": 0.95,
+    "correct_inst_cov": 0.98,
+    "correct_bran_cov": 0.95
+  },
+  "net.datafaker.service.FakeValuesService#resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)": {
+    "test_cases": 5,
+    "passed_cases": 2,
+    "inst_cov": 0.61,
+    "bran_cov": 0.56,
+    "correct_inst_cov": 0.02,
+    "correct_bran_cov": 0.02
+  },
+  "net.datafaker.service.FakeValues#toJavaNames(String, boolean)": {
+    "test_cases": 22,
+    "passed_cases": 20,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 1.0,
+    "bran_cov": 0.9
+  },
+  "net.datafaker.service.FakeValuesService#bothify(String, FakerContext, boolean, boolean, boolean)": {
+    "test_cases": 13,
+    "passed_cases": 13,
+    "inst_cov": 0.77,
+    "bran_cov": 0.78,
+    "correct_inst_cov": 0.77,
+    "correct_bran_cov": 0.78
+  },
+  "net.datafaker.service.FakeValuesService#resolveExpression(String, Object, ProviderRegistration, FakerContext)": {
+    "test_cases": 8,
+    "passed_cases": 8,
+    "inst_cov": 0.79,
+    "bran_cov": 0.66,
+    "correct_inst_cov": 0.79,
+    "correct_bran_cov": 0.66
+  },
+  "compile_pass_rate": 0.7325581395348837,
+  "execution_pass_rate": 0.6744186046511628,
+  "average_instruction_coverage": 0.6916666666666668,
+  "average_branch_coverage": 0.6416666666666667,
+  "average_correct_instruction_coverage": 0.4266666666666667,
+  "average_correct_branch_coverage": 0.40166666666666667
+}

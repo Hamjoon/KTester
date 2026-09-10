@@ -1,0 +1,359 @@
+[
+  {
+    "group": "resolveExpression",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "simple text"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "simple text",
+        "description": "Test with a simple string input that does not contain any expressions. The output should be the same as the input."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved first name",
+        "description": "Test with a valid expression that should resolve to a first name. The output should be the resolved first name."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{address.city}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved city name",
+        "description": "Test with a valid expression that should resolve to a city name. The output should be the resolved city name."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{invalid.directive}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test with an invalid expression that cannot be resolved. The method should throw a RuntimeException indicating the inability to resolve the directive."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved full name",
+        "description": "Test with a complex expression that combines multiple expressions. The output should be a resolved full name consisting of a first name and last name."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{address.streetName} #{address.streetSuffix}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved street name",
+        "description": "Test with an expression that resolves to a street name and suffix. The output should be a resolved street name."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName} #{address.city}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved full name and city",
+        "description": "Test with an expression that combines first name, last name, and city. The output should be a resolved string containing a full name and city."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName} #{invalid.directive}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test with a mixture of valid and invalid expressions. The method should throw a RuntimeException due to the invalid directive."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName} #{address.streetName} #{address.streetSuffix}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved full name and street name",
+        "description": "Test with an expression that combines first name, last name, street name, and street suffix. The output should be a resolved string containing a full name and street name."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName} #{address.city} #{address.zipCode}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved full name and zip code",
+        "description": "Test with an expression that combines first name, last name, city, and zip code. The output should be a resolved string containing a full name and zip code."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName} #{address.streetName} #{address.streetSuffix} #{address.city} #{address.zipCode}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved full address",
+        "description": "Test with a complex expression that combines first name, last name, street name, street suffix, city, and zip code. The output should be a resolved string containing a full address."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName} #{name.firstName} #{name.lastName}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "resolved repeated full name",
+        "description": "Test with an expression that repeats the first name and last name. The output should be a resolved string containing repeated full names."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test with an empty expression directive. The method should throw a RuntimeException indicating the inability to resolve the empty directive."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName} #{invalid.directive} #{invalid.directive2}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test with multiple invalid directives in the expression. The method should throw a RuntimeException due to the invalid directives."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{name.lastName} #{address.city} #{address.invalidField}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test with a valid expression and an invalid field at the end. The method should throw a RuntimeException due to the invalid directive."
+      },
+      {
+        "input": [
+          {
+            "parameter": "expression",
+            "value": "#{name.firstName} #{address.invalidField} #{name.lastName}"
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "ProviderRegistration instance"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance"
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test with an expression where the invalid field is in the middle. The method should throw a RuntimeException due to the invalid directive."
+      }
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+{
+    "group": "javaNameToYamlName Tests",
+    "cases": []
+}

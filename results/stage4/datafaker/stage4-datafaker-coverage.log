@@ -1,0 +1,664 @@
+2026-09-10 11:16:05,382 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-10 11:16:05,382 - evaluations.coverage_test - INFO - Running tests for project: datafaker
+2026-09-10 11:16:05,383 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/net/datafaker/transformations/sql/SqlTransformer_handlePrimitivesInArray_Test.java
+2026-09-10 11:16:05,756 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/net/datafaker/transformations/sql/SqlTransformer_handlePrimitivesInArray_Test.java:26: error: cannot find symbol
+        casing = Casing.DEFAULT;
+                       ^
+  symbol:   variable DEFAULT
+  location: class Casing
+src/test/java/net/datafaker/transformations/sql/SqlTransformer_handlePrimitivesInArray_Test.java:28: error: cannot find symbol
+        sqlDialect = SqlDialect.DEFAULT;
+                               ^
+  symbol:   variable DEFAULT
+  location: class SqlDialect
+src/test/java/net/datafaker/transformations/sql/SqlTransformer_handlePrimitivesInArray_Test.java:30: error: cannot find symbol
+        keywordCase = SqlTransformer.Case.DEFAULT;
+                                         ^
+  symbol:   variable DEFAULT
+  location: class Case
+src/test/java/net/datafaker/transformations/sql/SqlTransformer_handlePrimitivesInArray_Test.java:34: error: cannot find symbol
+            Constructor<?> constructor = clazz.getDeclaredConstructor(String.class, String.class, char.class, SqlDialect.class, String.class, Casing.class, boolean.class, int.class, SqlTransformer.Case.class, boolean.class);
+            ^
+  symbol:   class Constructor
+  location: class SqlTransformer_handlePrimitivesInArray_Test
+4 errors
+
+2026-09-10 11:16:05,757 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/net/datafaker/service/FakeValuesService_javaNameToYamlName_Test.java
+2026-09-10 11:16:06,099 - evaluations.coverage_test - INFO - Running single unit test, testclass: net.datafaker.service.FakeValuesService_javaNameToYamlName_Test
+2026-09-10 11:16:07,151 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:16:07,152 - evaluations.coverage_test - INFO - test case failed in net.datafaker.service.FakeValuesService_javaNameToYamlName_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValuesService_javaNameToYamlName_Test ✔
+│     ├─ testJavaNameToYamlNameWithEmptyString() ✔
+│     ├─ testJavaNameToYamlNameWithHTTPRequest() ✘ expected: <http_request> but was: <h_t_t_p_request>
+│     ├─ testJavaNameToYamlNameWithNoUpperCase() ✔
+│     ├─ testJavaNameToYamlNameWithCamelCaseExample() ✔
+│     ├─ testJavaNameToYamlNameWithMixedCase() ✘ expected: <xml_http_request> but was: <x_m_l_http_request>
+│     ├─ testJavaNameToYamlNameWithAlreadySnakeCase() ✔
+│     ├─ testJavaNameToYamlNameWithURLParser() ✘ expected: <url_parser> but was: <u_r_l_parser>
+│     ├─ testJavaNameToYamlNameWithSingleUpperCaseLetter() ✔
+│     ├─ testJavaNameToYamlNameWithJSONData() ✘ expected: <json_data> but was: <j_s_o_n_data>
+│     ├─ testJavaNameToYamlNameWithTestCase() ✔
+│     ├─ testJavaNameToYamlNameWithUpperCaseStart() ✔
+│     ├─ testJavaNameToYamlNameWithSnakeCaseWithUpperCase() ✘ expected: <a_b_c> but was: <a__b__c>
+│     ├─ testJavaNameToYamlNameWithSingleUpperCase() ✔
+│     ├─ testJavaNameToYamlNameWithComplexName() ✔
+│     └─ testJavaNameToYamlNameWithSimpleName() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (5):
+  JUnit Jupiter:FakeValuesService_javaNameToYamlName_Test:testJavaNameToYamlNameWithHTTPRequest()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_javaNameToYamlName_Test', methodName = 'testJavaNameToYamlNameWithHTTPRequest', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <http_request> but was: <h_t_t_p_request>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValuesService_javaNameToYamlName_Test.testJavaNameToYamlNameWithHTTPRequest(FakeValuesService_javaNameToYamlName_Test.java:120)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:FakeValuesService_javaNameToYamlName_Test:testJavaNameToYamlNameWithMixedCase()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_javaNameToYamlName_Test', methodName = 'testJavaNameToYamlNameWithMixedCase', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <xml_http_request> but was: <x_m_l_http_request>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValuesService_javaNameToYamlName_Test.testJavaNameToYamlNameWithMixedCase(FakeValuesService_javaNameToYamlName_Test.java:110)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:FakeValuesService_javaNameToYamlName_Test:testJavaNameToYamlNameWithURLParser()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_javaNameToYamlName_Test', methodName = 'testJavaNameToYamlNameWithURLParser', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <url_parser> but was: <u_r_l_parser>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValuesService_javaNameToYamlName_Test.testJavaNameToYamlNameWithURLParser(FakeValuesService_javaNameToYamlName_Test.java:130)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:FakeValuesService_javaNameToYamlName_Test:testJavaNameToYamlNameWithJSONData()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_javaNameToYamlName_Test', methodName = 'testJavaNameToYamlNameWithJSONData', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <json_data> but was: <j_s_o_n_data>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValuesService_javaNameToYamlName_Test.testJavaNameToYamlNameWithJSONData(FakeValuesService_javaNameToYamlName_Test.java:140)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:FakeValuesService_javaNameToYamlName_Test:testJavaNameToYamlNameWithSnakeCaseWithUpperCase()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_javaNameToYamlName_Test', methodName = 'testJavaNameToYamlNameWithSnakeCaseWithUpperCase', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <a_b_c> but was: <a__b__c>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValuesService_javaNameToYamlName_Test.testJavaNameToYamlNameWithSnakeCaseWithUpperCase(FakeValuesService_javaNameToYamlName_Test.java:180)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 499 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         5 tests failed          ]
+
+
+2026-09-10 11:16:07,733 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithEmptyString --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithNoUpperCase --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithCamelCaseExample --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithAlreadySnakeCase --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithSingleUpperCaseLetter --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithTestCase --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithUpperCaseStart --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithSingleUpperCase --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithComplexName --select-method net.datafaker.service.FakeValuesService_javaNameToYamlName_Test#testJavaNameToYamlNameWithSimpleName
+2026-09-10 11:16:08,859 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValuesService_javaNameToYamlName_Test ✔
+│     ├─ testJavaNameToYamlNameWithEmptyString() ✔
+│     ├─ testJavaNameToYamlNameWithNoUpperCase() ✔
+│     ├─ testJavaNameToYamlNameWithCamelCaseExample() ✔
+│     ├─ testJavaNameToYamlNameWithAlreadySnakeCase() ✔
+│     ├─ testJavaNameToYamlNameWithSingleUpperCaseLetter() ✔
+│     ├─ testJavaNameToYamlNameWithTestCase() ✔
+│     ├─ testJavaNameToYamlNameWithUpperCaseStart() ✔
+│     ├─ testJavaNameToYamlNameWithSingleUpperCase() ✔
+│     ├─ testJavaNameToYamlNameWithComplexName() ✔
+│     └─ testJavaNameToYamlNameWithSimpleName() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 519 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:16:09,395 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/net/datafaker/service/FakeValuesService_resolveExpression_Test.java
+2026-09-10 11:16:09,751 - evaluations.coverage_test - INFO - Running single unit test, testclass: net.datafaker.service.FakeValuesService_resolveExpression_Test
+2026-09-10 11:16:11,044 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:16:11,044 - evaluations.coverage_test - INFO - test case failed in net.datafaker.service.FakeValuesService_resolveExpression_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValuesService_resolveExpression_Test ✔
+│     ├─ resolveExpressionShouldReturnEmptyStringForEmptyDirective() ✔
+│     ├─ resolveExpressionShouldHandleEmptyDirective() ✔
+│     ├─ resolveExpressionShouldThrowExceptionForUnresolvableDirective() ✘ Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+│     ├─ resolveExpressionShouldReturnCorrectValue() ✘ expected: <John> but was: <null>
+│     └─ resolveExpressionShouldResolveNestedProviderMethod() ✘ 
+│              Invalid use of argument matchers!
+│              2 matchers expected, 1 recorded:
+│              -> at net.datafaker.service.FakeValuesService_resolveExpression_Test.resolveExpressionShouldResolveNestedProviderMethod(FakeValuesService_resolveExpression_Test.java:121)
+│           
+│              This exception may occur if matchers are combined with raw values:
+│                  //incorrect:
+│                  someMethod(any(), "raw String");
+│              When using matchers, all arguments have to be provided by matchers.
+│              For example:
+│                  //correct:
+│                  someMethod(any(), eq("String by matcher"));
+│           
+│              For more info see javadoc for Matchers class.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:FakeValuesService_resolveExpression_Test:resolveExpressionShouldThrowExceptionForUnresolvableDirective()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_resolveExpression_Test', methodName = 'resolveExpressionShouldThrowExceptionForUnresolvableDirective', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       net.datafaker.service.FakeValuesService_resolveExpression_Test.resolveExpressionShouldThrowExceptionForUnresolvableDirective(FakeValuesService_resolveExpression_Test.java:82)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:FakeValuesService_resolveExpression_Test:resolveExpressionShouldReturnCorrectValue()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_resolveExpression_Test', methodName = 'resolveExpressionShouldReturnCorrectValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <John> but was: <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValuesService_resolveExpression_Test.resolveExpressionShouldReturnCorrectValue(FakeValuesService_resolveExpression_Test.java:60)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:FakeValuesService_resolveExpression_Test:resolveExpressionShouldResolveNestedProviderMethod()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_resolveExpression_Test', methodName = 'resolveExpressionShouldResolveNestedProviderMethod', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.InvalidUseOfMatchersException: 
+Invalid use of argument matchers!
+2 matchers expected, 1 recorded:
+-> at net.datafaker.service.FakeValuesService_resolveExpression_Test.resolveExpressionShouldResolveNestedProviderMethod(FakeValuesService_resolveExpression_Test.java:121)
+
+This exception may occur if matchers are combined with raw values:
+    //incorrect:
+    someMethod(any(), "raw String");
+When using matchers, all arguments have to be provided by matchers.
+For example:
+    //correct:
+    someMethod(any(), eq("String by matcher"));
+
+For more info see javadoc for Matchers class.
+
+       net.datafaker.providers.base.ProviderRegistration.getProvider(ProviderRegistration.java:21)
+       net.datafaker.service.FakeValuesService_resolveExpression_Test.resolveExpressionShouldResolveNestedProviderMethod(FakeValuesService_resolveExpression_Test.java:121)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+
+Test run finished after 688 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-10 11:16:11,583 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method net.datafaker.service.FakeValuesService_resolveExpression_Test#resolveExpressionShouldReturnEmptyStringForEmptyDirective --select-method net.datafaker.service.FakeValuesService_resolveExpression_Test#resolveExpressionShouldHandleEmptyDirective
+2026-09-10 11:16:12,846 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValuesService_resolveExpression_Test ✔
+│     ├─ resolveExpressionShouldReturnEmptyStringForEmptyDirective() ✔
+│     └─ resolveExpressionShouldHandleEmptyDirective() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 649 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:16:13,378 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/net/datafaker/service/FakeValues_toJavaNames_Test.java
+2026-09-10 11:16:13,727 - evaluations.coverage_test - INFO - Running single unit test, testclass: net.datafaker.service.FakeValues_toJavaNames_Test
+2026-09-10 11:16:14,819 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:16:14,819 - evaluations.coverage_test - INFO - test case failed in net.datafaker.service.FakeValues_toJavaNames_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValues_toJavaNames_Test ✔
+│     └─ testToJavaNames(String, boolean, String) ✔
+│        ├─ [1] null, false, null ✔
+│        ├─ [2] , false,  ✔
+│        ├─ [3] helloWorld, false, HelloWorld ✔
+│        ├─ [4] hello_world, false, HelloWorld ✔
+│        ├─ [5] hello_world, true, helloWorld ✔
+│        ├─ [6] HelloWorld, false, HelloWorld ✔
+│        ├─ [7] hello_world_test, false, HelloWorldTest ✔
+│        ├─ [8] hello_world_test, true, helloWorldTest ✔
+│        ├─ [9] _leadingUnderscore, false, LeadingUnderscore ✔
+│        ├─ [10] _leadingUnderscore, true, leadingUnderscore ✘ expected: <leadingUnderscore> but was: <LeadingUnderscore>
+│        ├─ [11] alreadyCamelCase, true, alreadyCamelCase ✔
+│        ├─ [12] singleword, false, Singleword ✔
+│        ├─ [13] SINGLE_WORD, false, SingleWord ✘ expected: <SingleWord> but was: <SINGLEWORD>
+│        ├─ [14] another_example_here, false, AnotherExampleHere ✔
+│        ├─ [15] another_example_here, true, anotherExampleHere ✔
+│        ├─ [16] withNumbers123, false, WithNumbers123 ✔
+│        ├─ [17] with_numbers_123, false, WithNumbers123 ✔
+│        ├─ [18] with_numbers_123, true, withNumbers123 ✔
+│        ├─ [19] a, false, A ✔
+│        ├─ [20] a, true, a ✔
+│        ├─ [21] mixed_Case_Example, false, MixedCaseExample ✔
+│        └─ [22] mixed_Case_Example, true, mixedCaseExample ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:FakeValues_toJavaNames_Test:testToJavaNames(String, boolean, String):[10] _leadingUnderscore, true, leadingUnderscore
+    MethodSource [className = 'net.datafaker.service.FakeValues_toJavaNames_Test', methodName = 'testToJavaNames', methodParameterTypes = 'java.lang.String, boolean, java.lang.String']
+    => org.opentest4j.AssertionFailedError: expected: <leadingUnderscore> but was: <LeadingUnderscore>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValues_toJavaNames_Test.testToJavaNames(FakeValues_toJavaNames_Test.java:68)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:FakeValues_toJavaNames_Test:testToJavaNames(String, boolean, String):[13] SINGLE_WORD, false, SingleWord
+    MethodSource [className = 'net.datafaker.service.FakeValues_toJavaNames_Test', methodName = 'testToJavaNames', methodParameterTypes = 'java.lang.String, boolean, java.lang.String']
+    => org.opentest4j.AssertionFailedError: expected: <SingleWord> but was: <SINGLEWORD>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValues_toJavaNames_Test.testToJavaNames(FakeValues_toJavaNames_Test.java:68)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 542 ms
+[         5 containers found      ]
+[         0 containers skipped    ]
+[         5 containers started    ]
+[         0 containers aborted    ]
+[         5 containers successful ]
+[         0 containers failed     ]
+[        22 tests found           ]
+[         0 tests skipped         ]
+[        22 tests started         ]
+[         0 tests aborted         ]
+[        20 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:16:15,383 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/net/datafaker/service/FakeValuesService_bothify_Test.java
+2026-09-10 11:16:15,746 - evaluations.coverage_test - INFO - Running single unit test, testclass: net.datafaker.service.FakeValuesService_bothify_Test
+2026-09-10 11:16:16,950 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:16:16,950 - evaluations.coverage_test - INFO - test case failed in net.datafaker.service.FakeValuesService_bothify_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValuesService_bothify_Test ✔
+│     ├─ testBothifyWithNumerify() ✔
+│     ├─ testBothifyWithEmptyInput() ✔
+│     ├─ testBothifyWithNoReplacements() ✔
+│     ├─ testBothifyWithOnlyDigits() ✔
+│     ├─ testBothifyWithLowerCaseAndAllFlagsTrue() ✔
+│     ├─ testBothifyWithNoPlaceholders() ✔
+│     ├─ testBothifyWithUpperCaseAndNumerifyOnly() ✔
+│     ├─ testBothifyWithNullInput() ✔
+│     ├─ testBothifyWithAllFlagsTrue() ✔
+│     ├─ testBothifyWithUpperCaseAndLetterifyOnly() ✘ expected: <Hello D> but was: <Hello #D>
+│     ├─ testBothifyWithLetterify() ✔
+│     ├─ testBothifyWithNullContext() ✔
+│     └─ testBothifyWithLowerCaseAndLetterifyOnly() ✘ expected: <Hello f> but was: <Hello #f>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:FakeValuesService_bothify_Test:testBothifyWithUpperCaseAndLetterifyOnly()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_bothify_Test', methodName = 'testBothifyWithUpperCaseAndLetterifyOnly', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <Hello D> but was: <Hello #D>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValuesService_bothify_Test.testBothifyWithUpperCaseAndLetterifyOnly(FakeValuesService_bothify_Test.java:100)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:FakeValuesService_bothify_Test:testBothifyWithLowerCaseAndLetterifyOnly()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_bothify_Test', methodName = 'testBothifyWithLowerCaseAndLetterifyOnly', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <Hello f> but was: <Hello #f>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       net.datafaker.service.FakeValuesService_bothify_Test.testBothifyWithLowerCaseAndLetterifyOnly(FakeValuesService_bothify_Test.java:122)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 614 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        13 tests found           ]
+[         0 tests skipped         ]
+[        13 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-10 11:16:17,491 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithNumerify --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithEmptyInput --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithNoReplacements --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithOnlyDigits --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithLowerCaseAndAllFlagsTrue --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithNoPlaceholders --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithUpperCaseAndNumerifyOnly --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithNullInput --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithAllFlagsTrue --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithLetterify --select-method net.datafaker.service.FakeValuesService_bothify_Test#testBothifyWithNullContext
+2026-09-10 11:16:18,679 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValuesService_bothify_Test ✔
+│     ├─ testBothifyWithNumerify() ✔
+│     ├─ testBothifyWithEmptyInput() ✔
+│     ├─ testBothifyWithNoReplacements() ✔
+│     ├─ testBothifyWithOnlyDigits() ✔
+│     ├─ testBothifyWithLowerCaseAndAllFlagsTrue() ✔
+│     ├─ testBothifyWithNoPlaceholders() ✔
+│     ├─ testBothifyWithUpperCaseAndNumerifyOnly() ✔
+│     ├─ testBothifyWithNullInput() ✔
+│     ├─ testBothifyWithAllFlagsTrue() ✔
+│     ├─ testBothifyWithLetterify() ✔
+│     └─ testBothifyWithNullContext() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 597 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:16:19,216 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/net/datafaker/service/FakeValuesService_resolveExpression_2_Test.java
+2026-09-10 11:16:19,604 - evaluations.coverage_test - INFO - Running single unit test, testclass: net.datafaker.service.FakeValuesService_resolveExpression_2_Test
+2026-09-10 11:16:20,993 - evaluations.coverage_test - INFO - return code: 1
+2026-09-10 11:16:20,993 - evaluations.coverage_test - INFO - test case failed in net.datafaker.service.FakeValuesService_resolveExpression_2_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValuesService_resolveExpression_2_Test ✔
+│     ├─ testResolveExpressionWithSimpleText() ✔
+│     ├─ testResolveExpressionWithComplexExpression() ✘ Failed to invoke resolveExpression method
+│     ├─ testResolveExpressionWithInvalidDirective() ✔
+│     ├─ testResolveExpressionWithValidFirstName() ✘ Failed to invoke resolveExpression method
+│     ├─ testResolveExpressionWithValidInput() ✘ Failed to invoke resolveExpression method
+│     ├─ testResolveExpressionWithValidCityName() ✘ Failed to invoke resolveExpression method
+│     ├─ testResolveExpressionWithInvalidInput() ✔
+│     └─ testResolveExpressionWithMixedValidAndInvalid() ✘ 
+│              Unnecessary stubbings detected.
+│              Clean & maintainable test code requires zero unnecessary code.
+│              Following stubbings are unnecessary (click to navigate to relevant line of code):
+│                1. -> at net.datafaker.service.FakeValuesService_resolveExpression_2_Test.testResolveExpressionWithMixedValidAndInvalid(FakeValuesService_resolveExpression_2_Test.java:148)
+│                2. -> at net.datafaker.service.FakeValuesService_resolveExpression_2_Test.testResolveExpressionWithMixedValidAndInvalid(FakeValuesService_resolveExpression_2_Test.java:149)
+│              Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (5):
+  JUnit Jupiter:FakeValuesService_resolveExpression_2_Test:testResolveExpressionWithComplexExpression()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_resolveExpression_2_Test', methodName = 'testResolveExpressionWithComplexExpression', methodParameterTypes = '']
+    => java.lang.RuntimeException: Failed to invoke resolveExpression method
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.invokeResolveExpression(FakeValuesService_resolveExpression_2_Test.java:42)
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.testResolveExpressionWithComplexExpression(FakeValuesService_resolveExpression_2_Test.java:136)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.invokeResolveExpression(FakeValuesService_resolveExpression_2_Test.java:40)
+       [...]
+     Caused by: java.lang.RuntimeException: Unable to resolve #{name.firstName} directive for FakerContext FakerContext{, locale=net.datafaker.internal.helper.SingletonLocale@fb937828, randomService=Mock for RandomService, hashCode: 1322907569}.
+       net.datafaker.service.FakeValuesService.resolveExpression(FakeValuesService.java:572)
+       [...]
+  JUnit Jupiter:FakeValuesService_resolveExpression_2_Test:testResolveExpressionWithValidFirstName()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_resolveExpression_2_Test', methodName = 'testResolveExpressionWithValidFirstName', methodParameterTypes = '']
+    => java.lang.RuntimeException: Failed to invoke resolveExpression method
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.invokeResolveExpression(FakeValuesService_resolveExpression_2_Test.java:42)
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.testResolveExpressionWithValidFirstName(FakeValuesService_resolveExpression_2_Test.java:94)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.invokeResolveExpression(FakeValuesService_resolveExpression_2_Test.java:40)
+       [...]
+     Caused by: java.lang.RuntimeException: Unable to resolve #{name.firstName} directive for FakerContext FakerContext{, locale=net.datafaker.internal.helper.SingletonLocale@fb937828, randomService=Mock for RandomService, hashCode: 854795811}.
+       net.datafaker.service.FakeValuesService.resolveExpression(FakeValuesService.java:572)
+       [...]
+  JUnit Jupiter:FakeValuesService_resolveExpression_2_Test:testResolveExpressionWithValidInput()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_resolveExpression_2_Test', methodName = 'testResolveExpressionWithValidInput', methodParameterTypes = '']
+    => java.lang.RuntimeException: Failed to invoke resolveExpression method
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.invokeResolveExpression(FakeValuesService_resolveExpression_2_Test.java:42)
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.testResolveExpressionWithValidInput(FakeValuesService_resolveExpression_2_Test.java:56)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.invokeResolveExpression(FakeValuesService_resolveExpression_2_Test.java:40)
+       [...]
+     Caused by: java.lang.RuntimeException: Unable to resolve #{name.firstName} directive for FakerContext FakerContext{, locale=net.datafaker.internal.helper.SingletonLocale@fb937828, randomService=Mock for RandomService, hashCode: 257260599}.
+       net.datafaker.service.FakeValuesService.resolveExpression(FakeValuesService.java:572)
+       [...]
+  JUnit Jupiter:FakeValuesService_resolveExpression_2_Test:testResolveExpressionWithValidCityName()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_resolveExpression_2_Test', methodName = 'testResolveExpressionWithValidCityName', methodParameterTypes = '']
+    => java.lang.RuntimeException: Failed to invoke resolveExpression method
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.invokeResolveExpression(FakeValuesService_resolveExpression_2_Test.java:42)
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.testResolveExpressionWithValidCityName(FakeValuesService_resolveExpression_2_Test.java:109)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       net.datafaker.service.FakeValuesService_resolveExpression_2_Test.invokeResolveExpression(FakeValuesService_resolveExpression_2_Test.java:40)
+       [...]
+     Caused by: java.lang.RuntimeException: Unable to resolve #{address.city} directive for FakerContext FakerContext{, locale=net.datafaker.internal.helper.SingletonLocale@fb937828, randomService=Mock for RandomService, hashCode: 1320122626}.
+       net.datafaker.service.FakeValuesService.resolveExpression(FakeValuesService.java:572)
+       [...]
+  JUnit Jupiter:FakeValuesService_resolveExpression_2_Test:testResolveExpressionWithMixedValidAndInvalid()
+    MethodSource [className = 'net.datafaker.service.FakeValuesService_resolveExpression_2_Test', methodName = 'testResolveExpressionWithMixedValidAndInvalid', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at net.datafaker.service.FakeValuesService_resolveExpression_2_Test.testResolveExpressionWithMixedValidAndInvalid(FakeValuesService_resolveExpression_2_Test.java:148)
+  2. -> at net.datafaker.service.FakeValuesService_resolveExpression_2_Test.testResolveExpressionWithMixedValidAndInvalid(FakeValuesService_resolveExpression_2_Test.java:149)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+       org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:186)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$13(TestMethodTestDescriptor.java:260)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276)
+       org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$15(TestMethodTestDescriptor.java:276)
+       org.junit.platform.commons.util.CollectionUtils.forEachInReverseOrder(CollectionUtils.java:240)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144)
+       org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+       [...]
+
+Test run finished after 748 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         5 tests failed          ]
+
+
+2026-09-10 11:16:21,618 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method net.datafaker.service.FakeValuesService_resolveExpression_2_Test#testResolveExpressionWithSimpleText --select-method net.datafaker.service.FakeValuesService_resolveExpression_2_Test#testResolveExpressionWithInvalidDirective --select-method net.datafaker.service.FakeValuesService_resolveExpression_2_Test#testResolveExpressionWithInvalidInput
+2026-09-10 11:16:22,978 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ FakeValuesService_resolveExpression_2_Test ✔
+│     ├─ testResolveExpressionWithSimpleText() ✔
+│     ├─ testResolveExpressionWithInvalidDirective() ✔
+│     └─ testResolveExpressionWithInvalidInput() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 690 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-10 11:16:23,586 - evaluations.coverage_test - INFO - {'net.datafaker.transformations.sql.SqlTransformer#handlePrimitivesInArray(Class<?>, Object)': {'error_type': 'compile error'}, 'net.datafaker.service.FakeValuesService#javaNameToYamlName(String)': {'test_cases': 15, 'passed_cases': 10}, 'net.datafaker.service.FakeValuesService#resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)': {'test_cases': 5, 'passed_cases': 2}, 'net.datafaker.service.FakeValues#toJavaNames(String, boolean)': {'test_cases': 22, 'passed_cases': 20, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'net.datafaker.service.FakeValuesService#bothify(String, FakerContext, boolean, boolean, boolean)': {'test_cases': 13, 'passed_cases': 11}, 'net.datafaker.service.FakeValuesService#resolveExpression(String, Object, ProviderRegistration, FakerContext)': {'test_cases': 8, 'passed_cases': 3}}
+2026-09-10 11:16:23,589 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValuesService_javaNameToYamlName/net.datafaker.service/FakeValuesService.html, method: javaNameToYamlName(String)
+2026-09-10 11:16:23,598 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValuesService_javaNameToYamlName_correct/net.datafaker.service/FakeValuesService.html, method: javaNameToYamlName(String)
+2026-09-10 11:16:23,605 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValuesService_resolveExpression/net.datafaker.service/FakeValuesService.html, method: resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)
+2026-09-10 11:16:23,613 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValuesService_resolveExpression_correct/net.datafaker.service/FakeValuesService.html, method: resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)
+2026-09-10 11:16:23,620 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValues_toJavaNames/net.datafaker.service/FakeValues.html, method: toJavaNames(String, boolean)
+2026-09-10 11:16:23,625 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValuesService_bothify/net.datafaker.service/FakeValuesService.html, method: bothify(String, FakerContext, boolean, boolean, boolean)
+2026-09-10 11:16:23,632 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValuesService_bothify_correct/net.datafaker.service/FakeValuesService.html, method: bothify(String, FakerContext, boolean, boolean, boolean)
+2026-09-10 11:16:23,639 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValuesService_resolveExpression_2/net.datafaker.service/FakeValuesService.html, method: resolveExpression(String, Object, ProviderRegistration, FakerContext)
+2026-09-10 11:16:23,646 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/datafaker/reports/jacoco-report-html/FakeValuesService_resolveExpression_2_correct/net.datafaker.service/FakeValuesService.html, method: resolveExpression(String, Object, ProviderRegistration, FakerContext)
+2026-09-10 11:16:23,653 - evaluations.coverage_test - INFO - report data:
+{'net.datafaker.transformations.sql.SqlTransformer#handlePrimitivesInArray(Class<?>, Object)': {'error_type': 'compile error', 'test_cases': 23, 'passed_cases': 0}, 'net.datafaker.service.FakeValuesService#javaNameToYamlName(String)': {'test_cases': 15, 'passed_cases': 15, 'inst_cov': 0.98, 'bran_cov': 0.95, 'correct_inst_cov': 0.98, 'correct_bran_cov': 0.95}, 'net.datafaker.service.FakeValuesService#resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)': {'test_cases': 5, 'passed_cases': 2, 'inst_cov': 0.61, 'bran_cov': 0.56, 'correct_inst_cov': 0.02, 'correct_bran_cov': 0.02}, 'net.datafaker.service.FakeValues#toJavaNames(String, boolean)': {'test_cases': 22, 'passed_cases': 20, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 1.0, 'bran_cov': 0.9}, 'net.datafaker.service.FakeValuesService#bothify(String, FakerContext, boolean, boolean, boolean)': {'test_cases': 13, 'passed_cases': 13, 'inst_cov': 0.77, 'bran_cov': 0.78, 'correct_inst_cov': 0.77, 'correct_bran_cov': 0.78}, 'net.datafaker.service.FakeValuesService#resolveExpression(String, Object, ProviderRegistration, FakerContext)': {'test_cases': 8, 'passed_cases': 8, 'inst_cov': 0.79, 'bran_cov': 0.66, 'correct_inst_cov': 0.79, 'correct_bran_cov': 0.66}, 'compile_pass_rate': 0.7325581395348837, 'execution_pass_rate': 0.6744186046511628, 'average_instruction_coverage': 0.6916666666666668, 'average_branch_coverage': 0.6416666666666667, 'average_correct_instruction_coverage': 0.4266666666666667, 'average_correct_branch_coverage': 0.40166666666666667}

@@ -1,0 +1,4 @@
+{
+  "api document of method resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)": "\n     * Search Order\n     * <ul>\n     *  <li>Search for methods on the current object</li>\n     *  <li>local keys in Yaml File</li>\n     *  <li>Search for methods on faker child objects</li>\n     *   <li>Search for keys in yaml file by transforming object reference to yaml reference</li>\n     * </ul>\n     *\n     * @return null if unable to resolve\n     ",
+  "dependent classes": "class `net.datafaker.service.FakerContext`:\n\t\nclass `net.datafaker.providers.base.Finance`:\n\trelated functions:\n\t\tmethod `private static String calculateIbanChecksum(String, String)` returns `java.lang.String`, related with `net.datafaker.service.FakeValuesService.resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)`;"
+}
