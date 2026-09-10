@@ -90,7 +90,7 @@ class CodeRepairer(JavaRunner):
         '''
         rule_fixes = []
         llm_fixes = []
-        split_str = class_path.replace("/", "\\")
+        split_str = class_path.replace("/", os.sep)
         errors = feedback.split(f"{split_str}:")
         for error in errors:
             if str(error).find(": error: ")==-1: continue
