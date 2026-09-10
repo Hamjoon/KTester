@@ -1,0 +1,90 @@
+{
+    "test name": "containsValue Tests",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "null"
+                }
+            ],
+            "expected": true,
+            "description": "Test if containsValue returns true when value is null and size is 3 with value3 also null."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "null"
+                }
+            ],
+            "expected": true,
+            "description": "Test if containsValue returns true when value is null and size is 2 with value2 also null."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "null"
+                }
+            ],
+            "expected": true,
+            "description": "Test if containsValue returns true when value is null and size is 1 with value1 also null."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "non-null value"
+                }
+            ],
+            "expected": false,
+            "description": "Test if containsValue returns false when value is non-null and size is 3 with no matching value."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "value3"
+                }
+            ],
+            "expected": true,
+            "description": "Test if containsValue returns true when value matches value3 and size is 3."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "value2"
+                }
+            ],
+            "expected": true,
+            "description": "Test if containsValue returns true when value matches value2 and size is 2."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "value1"
+                }
+            ],
+            "expected": true,
+            "description": "Test if containsValue returns true when value matches value1 and size is 1."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "non-matching value"
+                }
+            ],
+            "expected": false,
+            "description": "Test if containsValue returns false when value is non-matching and size is 1."
+        },
+        {
+            "input": [],
+            "expected": false,
+            "description": "Test if containsValue returns false when the delegateMap is null and size is 0."
+        }
+    ]
+}

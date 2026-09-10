@@ -1,0 +1,1 @@
+{"group": "getIterator - Input is Empty Iterable", "cases": [{"input": [{"parameter": "obj", "value": "Collections.emptyList()"}], "expected": "An iterator over an empty collection", "description": "Test case where the input is an empty Iterable. The method should return an iterator that has no elements."}]}

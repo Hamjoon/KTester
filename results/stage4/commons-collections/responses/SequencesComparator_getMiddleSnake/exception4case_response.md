@@ -1,0 +1,247 @@
+{
+    "group": "getMiddleSnake",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 5
+                },
+                {
+                    "parameter": "start2",
+                    "value": 0
+                },
+                {
+                    "parameter": "end2",
+                    "value": 6
+                }
+            ],
+            "expected": "Snake object",
+            "description": "Test case where the first sequence has 5 elements and the second sequence has 6 elements. The method should return a Snake object."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 6
+                },
+                {
+                    "parameter": "start2",
+                    "value": 0
+                },
+                {
+                    "parameter": "end2",
+                    "value": 5
+                }
+            ],
+            "expected": "Snake object",
+            "description": "Test case where the first sequence has 6 elements and the second sequence has 5 elements. The method should return a Snake object."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 1
+                },
+                {
+                    "parameter": "end1",
+                    "value": 1
+                },
+                {
+                    "parameter": "start2",
+                    "value": 0
+                },
+                {
+                    "parameter": "end2",
+                    "value": 1
+                }
+            ],
+            "expected": null,
+            "description": "Test case where the first sequence has one element and the second sequence has one identical element. The method should return null because there is no range to evaluate."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 5
+                },
+                {
+                    "parameter": "start2",
+                    "value": 2
+                },
+                {
+                    "parameter": "end2",
+                    "value": 3
+                }
+            ],
+            "expected": null,
+            "description": "Test case where the first sequence has 5 elements and the second sequence has 1 element that does not match. The method should return null."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 5
+                },
+                {
+                    "parameter": "start2",
+                    "value": 0
+                },
+                {
+                    "parameter": "end2",
+                    "value": 5
+                }
+            ],
+            "expected": "Snake object",
+            "description": "Test case where both sequences have identical elements. The method should return a Snake object."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 5
+                },
+                {
+                    "parameter": "start2",
+                    "value": 0
+                },
+                {
+                    "parameter": "end2",
+                    "value": 5
+                }
+            ],
+            "expected": "Snake object",
+            "description": "Test case where both sequences have completely different elements. The method should return a Snake object."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 5
+                },
+                {
+                    "parameter": "start2",
+                    "value": 0
+                },
+                {
+                    "parameter": "end2",
+                    "value": 5
+                }
+            ],
+            "expected": "Snake object",
+            "description": "Test case where both sequences have elements and the method should return a Snake object based on the comparison."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 3
+                },
+                {
+                    "parameter": "start2",
+                    "value": 0
+                },
+                {
+                    "parameter": "end2",
+                    "value": 4
+                }
+            ],
+            "expected": "Snake object",
+            "description": "Test case where the first sequence has 3 elements and the second sequence has 4 elements. The method should return a Snake object representing the middle snake."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 4
+                },
+                {
+                    "parameter": "start2",
+                    "value": 0
+                },
+                {
+                    "parameter": "end2",
+                    "value": 4
+                }
+            ],
+            "expected": "Snake object",
+            "description": "Test case where both sequences have the same number of elements but different content. The method should return a Snake object."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 1
+                },
+                {
+                    "parameter": "end1",
+                    "value": 3
+                },
+                {
+                    "parameter": "start2",
+                    "value": 1
+                },
+                {
+                    "parameter": "end2",
+                    "value": 3
+                }
+            ],
+            "expected": null,
+            "description": "Test case where both sequences have identical elements but are evaluated with a range that does not include the entire sequence. The method should return null."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "start1",
+                    "value": 0
+                },
+                {
+                    "parameter": "end1",
+                    "value": 2
+                },
+                {
+                    "parameter": "start2",
+                    "value": 1
+                },
+                {
+                    "parameter": "end2",
+                    "value": 3
+                }
+            ],
+            "expected": "Snake object",
+            "description": "Test case where the first sequence has 2 elements and the second sequence has 3 elements with overlapping elements. The method should return a Snake object."
+        }
+    ]
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "group": "removeInternalEntry",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "root"
+          }
+        ],
+        "expected": "IllegalArgumentException with message 'Cannot delete root Entry!'",
+        "description": "Test removing the root entry, which should throw an IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "TrieEntry with isInternalNode() returning false"
+          }
+        ],
+        "expected": "IllegalArgumentException with message '<TrieEntry> is not an internal Entry!'",
+        "description": "Test removing an entry that is not an internal node, expecting an IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "valid internal TrieEntry"
+          }
+        ],
+        "expected": "TrieEntry has its predecessor and parent updated correctly",
+        "description": "Test removing a valid internal TrieEntry and check if its predecessor and parent are updated correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "valid internal TrieEntry with looping predecessor"
+          }
+        ],
+        "expected": "TrieEntry's predecessor should point to its parent after removal",
+        "description": "Test removing an internal TrieEntry that has itself as its predecessor, ensuring the predecessor points to its parent afterwards."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "valid internal TrieEntry with children"
+          }
+        ],
+        "expected": "Children of the removed entry should have their parent set to the correct new parent",
+        "description": "Test removing an internal TrieEntry that has children and verify the children have their parent updated correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "internal TrieEntry with null parent"
+          }
+        ],
+        "expected": "TrieEntry's predecessor should be set to itself",
+        "description": "Test removing an internal TrieEntry that has no parent, ensuring its predecessor is set correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "internal TrieEntry with two children"
+          }
+        ],
+        "expected": "Both children should have their parent set to the removed entry's predecessor",
+        "description": "Test removing an internal TrieEntry that has two children and verify both children have their parent set to the correct new parent."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "internal TrieEntry that is the only child of its parent"
+          }
+        ],
+        "expected": "Parent's left or right should be set to null after removal",
+        "description": "Test removing an internal TrieEntry that is the only child of its parent and verify the parent's reference to that child is set to null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "internal TrieEntry with complex tree structure"
+          }
+        ],
+        "expected": "Tree structure should remain valid after removal",
+        "description": "Test removing an internal TrieEntry from a complex tree structure and ensure the overall structure remains valid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "h",
+            "value": "internal TrieEntry with a deep hierarchy"
+          }
+        ],
+        "expected": "Hierarchy should be maintained correctly after removal",
+        "description": "Test removing an internal TrieEntry that is deep within a hierarchy and ensure the hierarchy remains intact."
+      }
+    ]
+  }
+]

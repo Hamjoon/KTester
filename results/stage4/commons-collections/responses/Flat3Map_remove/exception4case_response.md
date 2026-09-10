@@ -1,0 +1,1 @@
+{"group":"remove with key null and size 2","cases":[{"input":[{"parameter":"key","value":null}],"expected":"value2","description":"Test removal with key null and size 2; should return value2 and reduce size to 1."},{"input":[{"parameter":"key","value":null}],"expected":"value1","description":"Test removal with key null and size 1; should return value1 and reduce size to 0."}]}

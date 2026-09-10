@@ -1,0 +1,160 @@
+{
+    "group": "equals method tests",
+    "cases": [
+        {
+            "input": [],
+            "expected": true,
+            "description": "Test equality with the same Flat3Map instance."
+        },
+        {
+            "input": [],
+            "expected": false,
+            "description": "Test equality with null object."
+        },
+        {
+            "input": [],
+            "expected": false,
+            "description": "Test equality with a non-Map object."
+        },
+        {
+            "input": [],
+            "expected": false,
+            "description": "Test equality with an empty map when the Flat3Map is empty."
+        },
+        {
+            "input": [],
+            "expected": false,
+            "description": "Test equality with a non-empty map when the Flat3Map is empty."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "size",
+                    "value": 1
+                },
+                {
+                    "parameter": "key1",
+                    "value": "keyA"
+                },
+                {
+                    "parameter": "value1",
+                    "value": "valueA"
+                }
+            ],
+            "expected": false,
+            "description": "Test equality with a map containing a different key-value pair."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "size",
+                    "value": 1
+                },
+                {
+                    "parameter": "key1",
+                    "value": "keyA"
+                },
+                {
+                    "parameter": "value1",
+                    "value": "valueA"
+                }
+            ],
+            "expected": true,
+            "description": "Test equality with a map containing the same key-value pair."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "size",
+                    "value": 2
+                },
+                {
+                    "parameter": "key1",
+                    "value": "keyA"
+                },
+                {
+                    "parameter": "value1",
+                    "value": "valueA"
+                },
+                {
+                    "parameter": "key2",
+                    "value": "keyB"
+                },
+                {
+                    "parameter": "value2",
+                    "value": "valueB"
+                }
+            ],
+            "expected": false,
+            "description": "Test equality with a map missing key2."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "size",
+                    "value": 3
+                },
+                {
+                    "parameter": "key1",
+                    "value": "keyA"
+                },
+                {
+                    "parameter": "value1",
+                    "value": "valueA"
+                },
+                {
+                    "parameter": "key2",
+                    "value": "keyB"
+                },
+                {
+                    "parameter": "value2",
+                    "value": "valueB"
+                },
+                {
+                    "parameter": "key3",
+                    "value": "keyC"
+                },
+                {
+                    "parameter": "value3",
+                    "value": "valueC"
+                }
+            ],
+            "expected": false,
+            "description": "Test equality with a map missing key3."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "size",
+                    "value": 3
+                },
+                {
+                    "parameter": "key1",
+                    "value": "keyA"
+                },
+                {
+                    "parameter": "value1",
+                    "value": "valueA"
+                },
+                {
+                    "parameter": "key2",
+                    "value": "keyB"
+                },
+                {
+                    "parameter": "value2",
+                    "value": "valueB"
+                },
+                {
+                    "parameter": "key3",
+                    "value": "keyC"
+                },
+                {
+                    "parameter": "value3",
+                    "value": "valueC"
+                }
+            ],
+            "expected": true,
+            "description": "Test equality with a map containing all the same key-value pairs."
+        }
+    ]
+}

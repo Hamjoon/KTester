@@ -1,0 +1,207 @@
+[
+  {
+    "group": "getIterator - Null Input",
+    "cases": [
+      {
+        "input": [],
+        "expected": "EmptyIterator.RESETTABLE_INSTANCE",
+        "description": "Test case where the input is null. The method should return an empty iterator."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Iterator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "new ArrayList<>(Arrays.asList(1, 2, 3)).iterator()"
+          }
+        ],
+        "expected": "An iterator over the elements [1, 2, 3]",
+        "description": "Test case where the input is an Iterator. The method should return the same iterator."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Iterable",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "Arrays.asList(1, 2, 3)"
+          }
+        ],
+        "expected": "An iterator over the elements [1, 2, 3]",
+        "description": "Test case where the input is an Iterable. The method should return an iterator over its elements."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Object Array",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "new Object[]{1, 2, 3}"
+          }
+        ],
+        "expected": "An iterator over the elements [1, 2, 3]",
+        "description": "Test case where the input is an Object array. The method should return an ObjectArrayIterator."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Enumeration",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "Collections.enumeration(Arrays.asList(1, 2, 3))"
+          }
+        ],
+        "expected": "An iterator over the elements [1, 2, 3]",
+        "description": "Test case where the input is an Enumeration. The method should return an EnumerationIterator."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Map",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "Collections.singletonMap('key', 'value')"
+          }
+        ],
+        "expected": "An iterator over the values [value]",
+        "description": "Test case where the input is a Map. The method should return an iterator over the values of the map."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is NodeList",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "mock(NodeList.class)"
+          }
+        ],
+        "expected": "A NodeListIterator instance",
+        "description": "Test case where the input is a NodeList. The method should return a NodeListIterator."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "mock(Node.class)"
+          }
+        ],
+        "expected": "A NodeListIterator instance",
+        "description": "Test case where the input is a Node. The method should return a NodeListIterator."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Dictionary",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "new Hashtable<>(Collections.singletonMap('key', 'value'))"
+          }
+        ],
+        "expected": "An iterator over the elements [value]",
+        "description": "Test case where the input is a Dictionary. The method should return an EnumerationIterator."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Array",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "new int[]{1, 2, 3}"
+          }
+        ],
+        "expected": "An ArrayIterator instance",
+        "description": "Test case where the input is an array. The method should return an ArrayIterator."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input with iterator method",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "new CustomIterable()"
+          }
+        ],
+        "expected": "An iterator from CustomIterable",
+        "description": "Test case where the input is an object with an iterator method. The method should invoke the iterator method and return the result."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input with ReflectiveException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "new ObjectWithNoIterator()"
+          }
+        ],
+        "expected": "A singleton iterator containing the object",
+        "description": "Test case where the input causes a reflective operation exception. The method should return a singleton iterator for the object."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - Input is Empty Iterable",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "Collections.emptyList()"
+          }
+        ],
+        "expected": "An iterator over an empty collection",
+        "description": "Test case where the input is an empty Iterable. The method should return an iterator that has no elements."
+      }
+    ]
+  },
+  {
+    "group": "getIterator - ReflectiveOperationException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "obj",
+            "value": "new ObjectWithNoIterator()"
+          }
+        ],
+        "expected": "A singleton iterator containing the object",
+        "description": "Test case where the input causes a reflective operation exception. The method should return a singleton iterator for the object."
+      }
+    ]
+  }
+]

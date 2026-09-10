@@ -1,0 +1,257 @@
+[
+  {
+    "group": "doRedBlackDelete with both children",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Node with both left and right children"
+          }
+        ],
+        "expected": "Node is replaced by its next greater node",
+        "description": "Test case where the deleted node has both left and right children, ensuring the correct node is swapped."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with only left child",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Node with only left child"
+          }
+        ],
+        "expected": "Replacement node is set properly and parent-child relationships are maintained",
+        "description": "Test case where the deleted node has only a left child, ensuring proper reassignment of parent and child nodes."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with only right child",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Node with only right child"
+          }
+        ],
+        "expected": "Replacement node is set properly and parent-child relationships are maintained",
+        "description": "Test case where the deleted node has only a right child, ensuring proper reassignment of parent and child nodes."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with no children",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Node with no children"
+          }
+        ],
+        "expected": "Parent node's child reference is set to null",
+        "description": "Test case where the deleted node has no children, ensuring the parent node correctly removes the reference to the deleted node."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with root node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Root node with children"
+          }
+        ],
+        "expected": "Root is correctly replaced with the replacement node",
+        "description": "Test case where the deleted node is the root node, ensuring the root reference is updated correctly."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with empty tree",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Null node"
+          }
+        ],
+        "expected": "No changes made to the tree",
+        "description": "Test case where the deleted node is null, ensuring the method handles empty trees without errors."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with black node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Black node with children"
+          }
+        ],
+        "expected": "Red-black properties are maintained after deletion",
+        "description": "Test case where the deleted node is black and has children, ensuring the red-black properties are preserved after deletion."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with red node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Red node with children"
+          }
+        ],
+        "expected": "Red-black properties are maintained after deletion",
+        "description": "Test case where the deleted node is red and has children, ensuring the red-black properties are preserved after deletion."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with both children and black node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Black node with both left and right children"
+          }
+        ],
+        "expected": "Node is replaced by its next greater node and red-black properties are maintained",
+        "description": "Test case where the deleted node is black and has both left and right children, ensuring the correct node is swapped and red-black properties are preserved."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with both children and red node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Red node with both left and right children"
+          }
+        ],
+        "expected": "Node is replaced by its next greater node and red-black properties are maintained",
+        "description": "Test case where the deleted node is red and has both left and right children, ensuring the correct node is swapped and red-black properties are preserved."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with only left child and black node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Black node with only left child"
+          }
+        ],
+        "expected": "Replacement node is set properly and parent-child relationships are maintained, red-black properties are preserved",
+        "description": "Test case where the deleted node is black and has only a left child, ensuring proper reassignment of parent and child nodes while maintaining red-black properties."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with only right child and black node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Black node with only right child"
+          }
+        ],
+        "expected": "Replacement node is set properly and parent-child relationships are maintained, red-black properties are preserved",
+        "description": "Test case where the deleted node is black and has only a right child, ensuring proper reassignment of parent and child nodes while maintaining red-black properties."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with no children and black node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Black node with no children"
+          }
+        ],
+        "expected": "Parent node's child reference is set to null and red-black properties are maintained",
+        "description": "Test case where the deleted node is black and has no children, ensuring the parent node correctly removes the reference to the deleted node while maintaining red-black properties."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with no children and red node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Red node with no children"
+          }
+        ],
+        "expected": "Parent node's child reference is set to null and red-black properties are maintained",
+        "description": "Test case where the deleted node is red and has no children, ensuring the parent node correctly removes the reference to the deleted node while maintaining red-black properties."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with null node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Null node"
+          }
+        ],
+        "expected": "No changes made to the tree",
+        "description": "Test case where the deleted node is null, ensuring the method handles null input without errors."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with invalid node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Node with invalid structure (e.g., parent pointing to itself)"
+          }
+        ],
+        "expected": "Potential infinite loop or stack overflow",
+        "description": "Test case to check behavior when the deleted node has an invalid structure, ensuring the method can handle unexpected node configurations."
+      }
+    ]
+  },
+  {
+    "group": "doRedBlackDelete with concurrent modification",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "deletedNode",
+            "value": "Node being modified concurrently by another thread"
+          }
+        ],
+        "expected": "ConcurrentModificationException",
+        "description": "Test case to validate behavior when the tree is modified concurrently while deleting a node, ensuring proper exception handling."
+      }
+    ]
+  }
+]

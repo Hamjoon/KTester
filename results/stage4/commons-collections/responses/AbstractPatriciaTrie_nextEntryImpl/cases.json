@@ -1,0 +1,227 @@
+[
+  {
+    "group": "nextEntryImpl - Valid Left Child",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry with valid left child"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "returns the valid left child",
+        "description": "Test when the start entry has a valid left child and previous is null, it should return the left child."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl - Valid Right Child",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry with valid right child"
+          },
+          {
+            "parameter": "previous",
+            "value": "left child of start"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "returns the valid right child",
+        "description": "Test when the start entry has a valid right child and previous is the left child, it should return the right child."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl - No Left or Right Child",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry with no children"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "returns null",
+        "description": "Test when the start entry has no left or right child, it should return null."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl - Traversing Upwards",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry that is a right child"
+          },
+          {
+            "parameter": "previous",
+            "value": "left child of start"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "returns the next valid entry in the parent path",
+        "description": "Test when the start entry is a right child and previous is the left child, it should traverse upwards to find the next valid entry."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl - At Root with No Right Child",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "root TrieEntry"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "returns null",
+        "description": "Test when the start entry is the root and has no right child, it should return null."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl - Valid Right Child in Parent",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry with valid right child"
+          },
+          {
+            "parameter": "previous",
+            "value": "current left child"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "returns the valid right child of parent",
+        "description": "Test when the start entry has already returned the left child and the parent has a valid right child, it should return that right child."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl - Recursive Call to Right Subtree",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry with no valid left child but valid right subtree"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "returns the next valid entry from the right subtree",
+        "description": "Test when the start entry has no valid left child, it should call nextEntryImpl recursively on the right subtree to find the next valid entry."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl - Traversing to Left Child After Right",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry with valid right child that has a valid left child"
+          },
+          {
+            "parameter": "previous",
+            "value": "right child of start"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "returns the valid left child of right child",
+        "description": "Test when the start entry has a valid right child and the previous entry is that right child, it should return the left child of the right child."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl - Invalid Previous Parameter",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry with valid left child"
+          },
+          {
+            "parameter": "previous",
+            "value": "invalid TrieEntry"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "throws NullPointerException or IllegalArgumentException",
+        "description": "Test when the previous parameter is invalid or null, it should throw an appropriate exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "TrieEntry with valid right child"
+          },
+          {
+            "parameter": "previous",
+            "value": "invalid TrieEntry"
+          },
+          {
+            "parameter": "tree",
+            "value": "root TrieEntry"
+          }
+        ],
+        "expected": "throws NullPointerException or IllegalArgumentException",
+        "description": "Test when the previous parameter is invalid or null, it should throw an appropriate exception."
+      }
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "api document of class org.apache.commons.collections4.trie.AbstractPatriciaTrie": "\n * This class implements the base PATRICIA algorithm and everything that\n * is related to the {@link Map} interface.\n *\n * @param <K> the type of the keys in this map\n * @param <V> the type of the values in this map\n * @since 4.0\n ",
+  "constructors for class `org.apache.commons.collections4.trie.AbstractPatriciaTrie`": "params: \nbody:\n```java\n    protected AbstractPatriciaTrie(final KeyAnalyzer<? super K> keyAnalyzer) {\n        super(keyAnalyzer);\n    }\n\n```\nparams: \nbody:\n```java\n    protected AbstractPatriciaTrie(final KeyAnalyzer<? super K> keyAnalyzer,\n                                   final Map<? extends K, ? extends V> map) {\n        super(keyAnalyzer);\n        putAll(map);\n    }\n\n```",
+  "invoke examples of focal method": "example 1:\n```java\n    V removeEntry(final TrieEntry<K, V> h) {\n        if (h != root) {\n            if (h.isInternalNode()) {\n                removeInternalEntry(h);\n    }\n```"
+}

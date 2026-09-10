@@ -1,0 +1,162 @@
+As a professional Java software testing expert, your task is to generate test cases for a focal method.
+
+Guidelines:
+1. Analyze the method's functionality and identify possible input combinations including normal cases and boundary conditions.
+2. Review the provided existing test cases. Avoid duplication and create new test cases for untested input combinations.
+
+Context Provided:
+1. The focal method that needs testing.
+2. Relevant code and metadata for the class containing the method, including fields and other methods.
+3. The existing test cases (in JSON format) to help avoid redundancy.
+
+Output Instructions:
+- Organize the test cases by the name of the test function (group).
+- Each test case must include:
+    - input: A list of parameter names and values. Use an empty list `[]` if no input is required.
+    - expected: The return value or expected observable behavior.
+    - description: A clear and concise explanation of the scenario and the intent of the test case.
+
+Maintain the following strict JSON format:
+```json
+[
+    {
+        "group": "test name",
+        "cases": [
+            {
+                "input": [
+                    {
+                        "parameter": "param name",
+                        "value": "param value"
+                    }
+                ],
+                "expected": "expected exception or behavior",
+                "description": "test scenario description"
+            }
+        ]
+    },
+    {...}
+]
+```
+
+@input{focal method and target class}
+Here is the code of focal method, `equals(Object)`, with the focal class `Flat3Map`:
+```Java
+package org.apache.commons.collections4.map;
+import org.apache.commons.collections4.iterators.EmptyMapIterator;
+import java.util.Set;
+import org.apache.commons.collections4.iterators.EmptyIterator;
+import java.io.IOException;
+import java.util.AbstractCollection;
+import java.util.AbstractSet;
+import org.apache.commons.collections4.ResettableIterator;
+import java.io.ObjectOutputStream;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.MapIterator;
+import org.apache.commons.collections4.IterableMap;
+import java.io.ObjectInputStream;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import java.util.Map;
+import java.io.Serializable;
+public class Flat3Map<K, V> implements IterableMap<K, V> , Serializable , Cloneable {
+    private transient int size;
+    private transient K key1;
+    private transient K key2;
+    private transient K key3;
+    private transient V value1;
+    private transient V value2;
+    private transient V value3;
+    private transient AbstractHashedMap<K, V> delegateMap;
+    @Override
+    public boolean equals(final Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (delegateMap != null) {
+            return delegateMap.equals(obj);
+        }
+        if (!(obj instanceof Map)) {
+            return false;
+        }
+        final Map<?, ?> other = ((Map<?, ?>) (obj));
+        if (size != other.size()) {
+            return false;
+        }
+        if (size > 0) {
+            Object otherValue = null;
+            switch (size) {
+                // drop through
+                case 3 :
+                    if (!other.containsKey(key3)) {
+                        return false;
+                    }
+                    otherValue = other.get(key3);
+                    if (!Objects.equals(value3, otherValue)) {
+                        return false;
+                    }
+                case 2 :
+                    if (!other.containsKey(key2)) {
+                        return false;
+                    }
+                    otherValue = other.get(key2);
+                    if (!Objects.equals(value2, otherValue)) {
+                        return false;
+                    }
+                case 1 :
+                    if (!other.containsKey(key1)) {
+                        return false;
+                    }
+                    otherValue = other.get(key1);
+                    if (!Objects.equals(value1, otherValue)) {
+                        return false;
+                    }
+            }
+        }
+        return true;
+    }
+@Override
+public void clear();
+    @Override
+@SuppressWarnings("unchecked")
+public Flat3Map<K, V> clone();
+    @Override
+public boolean containsKey(final Object key);
+    @Override
+public boolean containsValue(final Object value);
+    protected AbstractHashedMap<K, V> createDelegateMap();
+    @Override
+public Set<Map.Entry<K, V>> entrySet();
+    @Override
+public V get(final Object key);
+    @Override
+public int hashCode();
+    @Override
+public boolean isEmpty();
+    @Override
+public Set<K> keySet();
+    @Override
+public MapIterator<K, V> mapIterator();
+    @Override
+public V put(final K key, final V value);
+    @Override
+public void putAll(final Map<? extends K, ? extends V> map);
+    @Override
+public V remove(final Object key);
+    @Override
+public int size();
+    @Override
+public String toString();
+    @Override
+public Collection<V> values();
+}
+```
+
+@input{existing test case}
+here's the existing test cases:
+```json
+<cases_json>
+```
+
+@output{test cases}: output the test cases in the JSON format:
