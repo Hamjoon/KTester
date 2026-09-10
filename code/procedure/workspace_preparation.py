@@ -25,22 +25,23 @@ class WorkSpacePreparation:
         if not os.path.exists(f"{project_path}/src/test-original"):
             os.rename(f"{project_path}/src/test", f"{project_path}/src/test-original")
             os.mkdir(f"{project_path}/src/test")
-        cd_cmd = ['cd', project_path]
         dependency_cmd = ['mvn', 'dependency:copy-dependencies', '-DoutputDirectory=libs']
         compile_cmd = ['mvn', 'compiler:compile']
-        script =  cd_cmd + ['&&'] + dependency_cmd + ['&&'] + compile_cmd
-        result = subprocess.run(script, shell=True)
+        result = subprocess.run(dependency_cmd, cwd=project_path)
+        if result.returncode == 0:
+            result = subprocess.run(compile_cmd, cwd=project_path)
         if result.returncode != 0:
             install_cmd = ['mvn', 'clean', 'install']
-            script = cd_cmd + ['&&'] + install_cmd + ['&&'] + dependency_cmd
-            result = subprocess.run(script, shell=True)
+            result = subprocess.run(install_cmd, cwd=project_path)
+            if result.returncode == 0:
+                result = subprocess.run(dependency_cmd, cwd=project_path)
             if result.returncode != 0:
                 print(f"Error: Failed to build project {project_path}.")
                 return
         # prepare classpath file for compiling test class
         libs_dic = f"{project_path}/libs"
         lib_list = [f"libs/{li}" for li in os.listdir(libs_dic)]
-        libs ="target/classes;"+ ';'.join(lib_list)
+        libs = os.pathsep.join(["target/classes"] + lib_list)
         utils.write_text(f"{project_path}/dependencies.txt", libs)
         return
     
@@ -53,10 +54,7 @@ class WorkSpacePreparation:
 
     def clean_project_workspace(self, project_path):
         # clean maven project
-        cd_cmd = ['cd', project_path]
-        clean_cmd = ['mvn', 'clean']
-        script = cd_cmd + ['&&'] + clean_cmd
-        result = subprocess.run(script, shell=True)
+        result = subprocess.run(['mvn', 'clean'], cwd=project_path)
         # remove test classes
         test_original = f"{project_path}/src/test-original"
         test_dir = f"{project_path}/src/test/java/"
