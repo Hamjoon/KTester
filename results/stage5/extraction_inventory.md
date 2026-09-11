@@ -55,6 +55,12 @@
 
 ## Layout and timing
 
+- Repetitions: 5.
+- Projects per repetition: 10.
+- Project summaries found: 50.
+- Tasks in each repetition: 111, 111, 111, 111, 111.
+- Missing task keys across all summaries: 0.
+- Extra task keys across all summaries: 0.
 - rep_1 batch-processing-gateway uses reports/, test_classes/, and fix/ directly.
 - rep_1 other projects use a gpt4o/ level under reports, test_classes, and fix.
 - rep_2 through rep_5 use the shallower directories without gpt4o/.

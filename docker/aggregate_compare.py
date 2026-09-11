@@ -195,6 +195,29 @@ def write_inventory(author_reps: list[dict]) -> None:
         "detail_count": len(time_data["details"]),
         "statistics": time_data["statistics"],
     }
+    inventory["totals"] = {
+        "repetitions": len(inventory["repetitions"]),
+        "projects_per_repetition": len(DATASET),
+        "summaries": sum(
+            value["summary_exists"]
+            for projects in inventory["repetitions"].values()
+            for value in projects.values()
+        ),
+        "tasks_per_repetition": [
+            sum(value["task_count"] for value in projects.values())
+            for projects in inventory["repetitions"].values()
+        ],
+        "missing_task_keys": sum(
+            len(value["missing_task_keys"])
+            for projects in inventory["repetitions"].values()
+            for value in projects.values()
+        ),
+        "extra_task_keys": sum(
+            len(value["extra_task_keys"])
+            for projects in inventory["repetitions"].values()
+            for value in projects.values()
+        ),
+    }
     (OUTPUT / "extraction_inventory.json").write_text(
         json.dumps(inventory, indent=2) + "\n", encoding="utf-8"
     )
@@ -218,6 +241,12 @@ def write_inventory(author_reps: list[dict]) -> None:
             "",
             "## Layout and timing",
             "",
+            f"- Repetitions: {inventory['totals']['repetitions']}.",
+            f"- Projects per repetition: {inventory['totals']['projects_per_repetition']}.",
+            f"- Project summaries found: {inventory['totals']['summaries']}.",
+            f"- Tasks in each repetition: {', '.join(map(str, inventory['totals']['tasks_per_repetition']))}.",
+            f"- Missing task keys across all summaries: {inventory['totals']['missing_task_keys']}.",
+            f"- Extra task keys across all summaries: {inventory['totals']['extra_task_keys']}.",
             *[f"- {note}." for note in inventory["archive_layout_note"]],
             f"- KTester time-record files found: 1.",
             f"- KTester time-record task details: {time['detail_count']}.",

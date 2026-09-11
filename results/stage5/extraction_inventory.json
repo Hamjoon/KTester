@@ -481,5 +481,19 @@
       "max_time": 1062.26,
       "std_time": 115.74
     }
+  },
+  "totals": {
+    "repetitions": 5,
+    "projects_per_repetition": 10,
+    "summaries": 50,
+    "tasks_per_repetition": [
+      111,
+      111,
+      111,
+      111,
+      111
+    ],
+    "missing_task_keys": 0,
+    "extra_task_keys": 0
   }
 }
