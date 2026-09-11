@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import sys
 from collections import Counter
 from pathlib import Path
 from statistics import mean
@@ -125,6 +126,80 @@ def generate_gap_analysis() -> None:
     for project in ours["projects"]:
         lines.append(f"- {project}: {flagged[project]} of {len(metrics)} metrics flagged.")
     (RESULTS / "gap_analysis.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def generate_gap_analysis_fixtries5() -> None:
+    with (RESULTS / "comparison_task_table_3way.csv").open(encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        for key in list(row):
+            if key not in {"project", "id"}:
+                row[key] = float(row[key])
+        row["gap"] = (
+            row["ours_fixtries5_correct_inst_cov"]
+            - row["authors_mean_correct_inst_cov"]
+        )
+        row["range_position"] = (
+            "inside"
+            if row["authors_min_correct_inst_cov"]
+            <= row["ours_fixtries5_correct_inst_cov"]
+            <= row["authors_max_correct_inst_cov"]
+            else "below"
+            if row["ours_fixtries5_correct_inst_cov"]
+            < row["authors_min_correct_inst_cov"]
+            else "above"
+        )
+
+    positions = Counter(row["range_position"] for row in rows)
+    lines = [
+        "# Stage 5 gap analysis: FIX_TRIES=5",
+        "",
+        "## Correct instruction coverage range position",
+        "",
+        f"- Inside the authors' five-repetition range: {positions['inside']} of {len(rows)} tasks.",
+        f"- Below the authors' range: {positions['below']} of {len(rows)} tasks.",
+        f"- Above the authors' range: {positions['above']} of {len(rows)} tasks.",
+        "",
+        "## Project-level gaps and repetition spread",
+        "",
+        "A flag means the absolute gap between ours and the authors' five-repetition mean is larger than the authors' maximum-minus-minimum spread.",
+        "",
+        "| Project | Metric | Ours (FIX_TRIES=5) | Authors mean | Authors min | Authors max | Gap | Authors spread | Flag |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+    ]
+    ours = load_json(RESULTS / "aggregate_ours_fixtries5.json")
+    author_reps = [
+        load_json(RESULTS / f"aggregate_authors_rep{i}.json") for i in range(1, 6)
+    ]
+    authors = load_json(RESULTS / "aggregate_authors_mean.json")
+    metrics = (
+        ("test_case_compile_rate", "TC compile"),
+        ("test_case_execution_rate", "TC execution"),
+        ("mean_correct_instruction_coverage", "Correct inst"),
+        ("mean_correct_branch_coverage", "Correct branch"),
+    )
+    flagged = Counter()
+    for project in ours["projects"]:
+        for key, label in metrics:
+            our_value = ours["projects"][project][key]
+            values = [rep["projects"][project][key] for rep in author_reps]
+            author_mean = authors["projects"][project][key]
+            gap = our_value - author_mean
+            spread = max(values) - min(values)
+            is_flagged = abs(gap) > spread
+            if is_flagged:
+                flagged[project] += 1
+            lines.append(
+                f"| {project} | {label} | {percent(our_value)} | {percent(author_mean)} | "
+                f"{percent(min(values))} | {percent(max(values))} | {gap * 100:+.2f} pp | "
+                f"{spread * 100:.2f} pp | {'yes' if is_flagged else 'no'} |"
+            )
+    lines.extend(["", "### Projects flagged", ""])
+    for project in ours["projects"]:
+        lines.append(f"- {project}: {flagged[project]} of {len(metrics)} metrics flagged.")
+    (RESULTS / "gap_analysis_fixtries5.md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8"
+    )
 
 
 FAILURE_CLASSIFICATIONS = {
@@ -300,6 +375,70 @@ def generate_compile_failures() -> None:
     (RESULTS / "compile_failures.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def generate_compile_failures_fixtries5() -> None:
+    roots = {
+        "FIX_TRIES=3": REPO / "results" / "stage4",
+        "FIX_TRIES=5": REPO / "results" / "stage4b",
+    }
+    task_lookup = {}
+    failures = {}
+    for label, root in roots.items():
+        failures[label] = set()
+        for project, info in DATASET.items():
+            summary = load_json(root / project / "reports" / "summary.json")
+            for task in info["focal-methods"]:
+                key = f"{task['class']}#{task['method-name']}"
+                task_lookup[(project, task["id"])] = key
+                if summary[key].get("error_type") == "compile error":
+                    failures[label].add((project, task["id"]))
+
+    original = failures["FIX_TRIES=3"]
+    current = failures["FIX_TRIES=5"]
+    lines = [
+        "# Stage 5 compile-failure follow-up: FIX_TRIES=5",
+        "",
+        f"Of the {len(original)} Stage 4 non-compiling tasks, {len(original - current)} compile in Stage 4b and {len(original & current)} remain non-compiling.",
+        "The repair round is reported as the highest `repair_prompt_N.md` present; its corresponding response is the last model repair applied before the final class.",
+        "",
+        "| Project | Task | Compiles in Stage 4b | Highest repair prompt | Final error type |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for project, task_id in sorted(original):
+        summary = load_json(roots["FIX_TRIES=5"] / project / "reports" / "summary.json")
+        item = summary[task_lookup[(project, task_id)]]
+        prompts = list(
+            (roots["FIX_TRIES=5"] / project / "fix" / task_id).glob(
+                "repair_prompt_*.md"
+            )
+        )
+        highest = (
+            max(prompts, key=lambda path: int(path.stem.rsplit("_", 1)[1])).name
+            if prompts
+            else "none"
+        )
+        lines.append(
+            f"| {project} | {task_id} | {'yes' if (project, task_id) not in current else 'no'} | "
+            f"{highest} | {item.get('error_type') or 'none'} |"
+        )
+
+    new_failures = sorted(current - original)
+    lines.extend(
+        [
+            "",
+            "## New non-compiling tasks in Stage 4b",
+            "",
+            f"- Count: {len(new_failures)}.",
+        ]
+    )
+    for project, task_id in new_failures:
+        lines.append(f"- {project}: {task_id}.")
+    if not new_failures:
+        lines.append("- None.")
+    (RESULTS / "compile_failures_fixtries5.md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8"
+    )
+
+
 def normalized_prompt_lines(path: Path) -> list[str]:
     text = path.read_text(encoding="utf-8", errors="replace").replace("\r\n", "\n").replace("\r", "\n")
     return [line.rstrip() for line in text.split("\n") if line.strip()]
@@ -436,6 +575,12 @@ def generate_environment_notes() -> None:
 
 
 def main() -> None:
+    if len(sys.argv) == 2 and sys.argv[1] == "--fixtries5":
+        generate_gap_analysis_fixtries5()
+        generate_compile_failures_fixtries5()
+        return
+    if len(sys.argv) != 1:
+        raise SystemExit(f"Usage: {Path(sys.argv[0]).name} [--fixtries5]")
     generate_gap_analysis()
     generate_compile_failures()
     generate_prompt_drift()

@@ -4,13 +4,12 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 
 REPO = Path(__file__).resolve().parent.parent
 DATASET_PATH = REPO / "data" / "dataset_info.json"
-RESULTS = REPO / "results" / "stage4"
-TIME_PATH = RESULTS / "time" / "time_records.json"
 METRICS = {
     "compile_pass_rate",
     "execution_pass_rate",
@@ -35,8 +34,13 @@ def task_key(task: dict) -> str:
 
 
 def main() -> None:
+    stage = sys.argv[1] if len(sys.argv) > 1 else "stage4"
+    if len(sys.argv) > 2:
+        raise SystemExit(f"Usage: {Path(sys.argv[0]).name} [results-stage]")
+    results = REPO / "results" / stage
+    time_path = results / "time" / "time_records.json"
     dataset = load_json(DATASET_PATH)
-    time_records = load_json(TIME_PATH)["details"]
+    time_records = load_json(time_path)["details"]
     rows = []
     all_items = []
     all_times = []
@@ -46,7 +50,7 @@ def main() -> None:
 
     for project, info in dataset.items():
         tasks = info["focal-methods"]
-        summary = load_json(RESULTS / project / "reports" / "summary.json")
+        summary = load_json(results / project / "reports" / "summary.json")
         items = {key: value for key, value in summary.items() if key not in METRICS}
         expected_keys = {task_key(task) for task in tasks}
         if set(items) != expected_keys:
@@ -54,7 +58,7 @@ def main() -> None:
             extra = sorted(set(items) - expected_keys)
             raise ValueError(f"{project}: summary mismatch; missing={missing}, extra={extra}")
 
-        test_dir = RESULTS / project / "test_classes"
+        test_dir = results / project / "test_classes"
         class_ids = {
             path.name.removesuffix("_Test.java")
             for path in test_dir.glob("*_Test.java")

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compare Stage 4 with the five published KTester repetitions."""
+"""Compare Stage 4 and Stage 4b with the five published KTester repetitions."""
 
 from __future__ import annotations
 
@@ -14,6 +14,7 @@ from aggregate_stage4 import METRICS, load_json, percent, task_key
 REPO = Path(__file__).resolve().parent.parent
 DATASET = load_json(REPO / "data" / "dataset_info.json")
 OURS_ROOT = REPO / "results" / "stage4"
+OURS_FIXTRIES5_ROOT = REPO / "results" / "stage4b"
 AUTHORS_ROOT = REPO / "evaluation_results" / "RQ1-ktester" / "RQ1" / "KTester-gpt4o"
 AUTHORS_TIME = (
     REPO
@@ -283,6 +284,39 @@ def write_task_table(ours_tasks: dict, author_tasks: list[dict]) -> None:
                 writer.writerow(row)
 
 
+def write_task_table_3way(
+    ours_tasks: dict, ours_fixtries5_tasks: dict, author_tasks: list[dict]
+) -> None:
+    columns = ["project", "id"]
+    for field in FIELDS:
+        columns.extend(
+            [
+                f"ours_fixtries3_{field}",
+                f"ours_fixtries5_{field}",
+                f"authors_mean_{field}",
+                f"authors_min_{field}",
+                f"authors_max_{field}",
+            ]
+        )
+    with (OUTPUT / "comparison_task_table_3way.csv").open(
+        "w", newline="", encoding="utf-8"
+    ) as handle:
+        writer = csv.DictWriter(handle, fieldnames=columns, lineterminator="\n")
+        writer.writeheader()
+        for project, info in DATASET.items():
+            for task in info["focal-methods"]:
+                task_id = task["id"]
+                row = {"project": project, "id": task_id}
+                for field in FIELDS:
+                    values = [rep[task_id][field] for rep in author_tasks]
+                    row[f"ours_fixtries3_{field}"] = ours_tasks[task_id][field]
+                    row[f"ours_fixtries5_{field}"] = ours_fixtries5_tasks[task_id][field]
+                    row[f"authors_mean_{field}"] = mean(values)
+                    row[f"authors_min_{field}"] = min(values)
+                    row[f"authors_max_{field}"] = max(values)
+                writer.writerow(row)
+
+
 def format_project_table(ours: dict, authors: dict) -> str:
     headers = (
         "Project",
@@ -353,10 +387,67 @@ def format_project_table(ours: dict, authors: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def format_project_table_3way(ours: dict, ours_fixtries5: dict, authors: dict) -> str:
+    headers = (
+        "Project",
+        "Side",
+        "Tasks",
+        "TC compile",
+        "TC execution",
+        "Task compile",
+        "Task all pass",
+        "Task any pass",
+        "Mean inst cov",
+        "Mean branch cov",
+        "Mean correct inst cov",
+        "Mean correct branch cov",
+        "Tests/class",
+    )
+    lines = [
+        "| " + " | ".join(headers) + " |",
+        "| " + " | ".join(["---", "---"] + ["---:"] * (len(headers) - 2)) + " |",
+    ]
+    sides = (
+        ("Ours (FIX_TRIES=3)", ours),
+        ("Ours (FIX_TRIES=5)", ours_fixtries5),
+        ("Authors mean", authors),
+    )
+    for project in [*DATASET, "Total"]:
+        key = "total" if project == "Total" else "projects"
+        for label, data in sides:
+            value = data[key] if key == "total" else data[key][project]
+            lines.append(
+                "| "
+                + " | ".join(
+                    [
+                        project,
+                        label,
+                        f"{value['tasks']:.0f}",
+                        percent(value["test_case_compile_rate"]),
+                        percent(value["test_case_execution_rate"]),
+                        percent(value["task_compile_rate"]),
+                        percent(value["task_all_pass_rate"]),
+                        percent(value["task_any_pass_rate"]),
+                        percent(value["mean_instruction_coverage"]),
+                        percent(value["mean_branch_coverage"]),
+                        percent(value["mean_correct_instruction_coverage"]),
+                        percent(value["mean_correct_branch_coverage"]),
+                        f"{value['mean_test_cases_per_class']:.2f}",
+                    ]
+                )
+                + " |"
+            )
+    return "\n".join(lines) + "\n"
+
+
 def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     ours, ours_tasks = load_run(OURS_ROOT, authors=False)
     add_times(ours, OURS_ROOT / "time" / "time_records.json")
+    ours_fixtries5, ours_fixtries5_tasks = load_run(OURS_FIXTRIES5_ROOT, authors=False)
+    add_times(
+        ours_fixtries5, OURS_FIXTRIES5_ROOT / "time" / "time_records.json"
+    )
     author_reps = []
     author_tasks = []
     for rep in range(1, 6):
@@ -371,13 +462,21 @@ def main() -> None:
     (OUTPUT / "aggregate_ours.json").write_text(
         json.dumps(ours, indent=2) + "\n", encoding="utf-8"
     )
+    (OUTPUT / "aggregate_ours_fixtries5.json").write_text(
+        json.dumps(ours_fixtries5, indent=2) + "\n", encoding="utf-8"
+    )
     (OUTPUT / "aggregate_authors_mean.json").write_text(
         json.dumps(authors_mean, indent=2) + "\n", encoding="utf-8"
     )
     write_inventory(author_reps)
     write_task_table(ours_tasks, author_tasks)
+    write_task_table_3way(ours_tasks, ours_fixtries5_tasks, author_tasks)
     (OUTPUT / "comparison_project_table.md").write_text(
         format_project_table(ours, authors_mean), encoding="utf-8"
+    )
+    (OUTPUT / "comparison_project_table_3way.md").write_text(
+        format_project_table_3way(ours, ours_fixtries5, authors_mean),
+        encoding="utf-8",
     )
 
 
