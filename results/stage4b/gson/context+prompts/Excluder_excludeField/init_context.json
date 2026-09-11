@@ -1,0 +1,4 @@
+{
+  "api document of class com.google.gson.internal.Excluder": "\n * This class selects which fields and types to omit. It is configurable,\n * supporting version attributes {@link Since} and {@link Until}, modifiers,\n * synthetic fields, anonymous and local classes, inner classes, and fields with\n * the {@link Expose} annotation.\n *\n * <p>This class is a type adapter factory; types that are excluded will be\n * adapted to null. It may delegate to another type adapter if only one\n * direction is excluded.\n *\n * @author Joel Leitch\n * @author Jesse Wilson\n ",
+  "invoke examples of focal method": "example 1:\n```java\n  private boolean includeField(Field f, boolean serialize) {\n    return !excluder.excludeClass(f.getType(), serialize) && !excluder.excludeField(f, serialize);\n  }\n```"
+}

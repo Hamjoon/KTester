@@ -1,0 +1,207 @@
+[
+  {
+    "group": "nextNonWhitespace - Basic Functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": true
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test case to verify that an EOFException is thrown when the end of input is reached and throwOnEof is true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "-1",
+        "description": "Test case to verify that -1 is returned when the end of input is reached and throwOnEof is false."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Whitespace Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "non-whitespace character",
+        "description": "Test case to verify that the method correctly skips over whitespace characters and returns the next non-whitespace character."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Comment Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "non-whitespace character",
+        "description": "Test case to verify that the method correctly skips over single-line comments (//) and returns the next non-whitespace character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "non-whitespace character",
+        "description": "Test case to verify that the method correctly skips over multi-line comments (/* */) and returns the next non-whitespace character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "non-whitespace character",
+        "description": "Test case to verify that the method correctly skips over hash comments (#) and returns the next non-whitespace character."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Edge Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": true
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test case to verify that an EOFException is thrown when an unexpected end of input is reached while processing comments."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Additional Whitespace Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "non-whitespace character",
+        "description": "Test case to verify that the method correctly returns the next non-whitespace character after multiple whitespace characters."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Handling Mixed Comments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "non-whitespace character",
+        "description": "Test case to verify that the method correctly skips over multiple types of comments (single-line, multi-line, and hash) interspersed with whitespace and returns the next non-whitespace character."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - EOF Handling with Comments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": true
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test case to verify that an EOFException is thrown when the end of input is reached while processing comments and throwOnEof is true."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Handling Valid Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "a valid non-whitespace character",
+        "description": "Test case to verify that the method returns a valid non-whitespace character when valid characters are present after whitespace and comments."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Multiple Consecutive Comments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "non-whitespace character",
+        "description": "Test case to verify that the method correctly handles multiple consecutive comments without throwing an exception and returns the next non-whitespace character."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Additional Edge Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": true
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test case to verify that an EOFException is thrown when an unexpected end of input is reached while processing comments."
+      },
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": false
+          }
+        ],
+        "expected": "non-whitespace character",
+        "description": "Test case to verify that the method correctly returns the next non-whitespace character after processing comments with EOF."
+      }
+    ]
+  },
+  {
+    "group": "nextNonWhitespace - Invalid Input Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": true
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test case to verify that an EOFException is thrown when the input ends unexpectedly during comment processing."
+      }
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+{"group": "skipValue - Handling Nested Structures", "cases": [{"input": [], "expected": "Internal state reflects the end of nested objects and arrays being skipped", "description": "Test skipValue when it encounters multiple layers of PEEKED_BEGIN_OBJECT and PEEKED_END_OBJECT, followed by PEEKED_BEGIN_ARRAY and PEEKED_END_ARRAY."}]}

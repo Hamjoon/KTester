@@ -1,0 +1,255 @@
+[
+  {
+    "group": "Test newDefaultImplementationConstructor for Collection types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<SortedSet<String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "SortedSet.class"
+          }
+        ],
+        "expected": "instance of TreeSet",
+        "description": "Test case to verify that a SortedSet type returns a TreeSet instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<Set<String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "Set.class"
+          }
+        ],
+        "expected": "instance of LinkedHashSet",
+        "description": "Test case to verify that a Set type returns a LinkedHashSet instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<Queue<String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "Queue.class"
+          }
+        ],
+        "expected": "instance of ArrayDeque",
+        "description": "Test case to verify that a Queue type returns an ArrayDeque instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<Collection<String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "Collection.class"
+          }
+        ],
+        "expected": "instance of ArrayList",
+        "description": "Test case to verify that a Collection type returns an ArrayList instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<List<String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "List.class"
+          }
+        ],
+        "expected": "instance of ArrayList",
+        "description": "Test case to verify that a List type returns an ArrayList instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<Deque<String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "Deque.class"
+          }
+        ],
+        "expected": "instance of ArrayDeque",
+        "description": "Test case to verify that a Deque type returns an ArrayDeque instance."
+      }
+    ]
+  },
+  {
+    "group": "Test newDefaultImplementationConstructor for Map types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<ConcurrentNavigableMap<String, String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "ConcurrentNavigableMap.class"
+          }
+        ],
+        "expected": "instance of ConcurrentSkipListMap",
+        "description": "Test case to verify that a ConcurrentNavigableMap type returns a ConcurrentSkipListMap instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<ConcurrentMap<String, String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "ConcurrentMap.class"
+          }
+        ],
+        "expected": "instance of ConcurrentHashMap",
+        "description": "Test case to verify that a ConcurrentMap type returns a ConcurrentHashMap instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<SortedMap<String, String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "SortedMap.class"
+          }
+        ],
+        "expected": "instance of TreeMap",
+        "description": "Test case to verify that a SortedMap type returns a TreeMap instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<Map<String, Integer>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "Map.class"
+          }
+        ],
+        "expected": "instance of LinkedHashMap",
+        "description": "Test case to verify that a Map type with non-String key returns a LinkedHashMap instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<Map<String, String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "Map.class"
+          }
+        ],
+        "expected": "instance of LinkedTreeMap",
+        "description": "Test case to verify that a Map type with String key returns a LinkedTreeMap instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<SortedMap<Integer, String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "SortedMap.class"
+          }
+        ],
+        "expected": "instance of TreeMap",
+        "description": "Test case to verify that a SortedMap type with Integer keys returns a TreeMap instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<Map<Integer, String>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "Map.class"
+          }
+        ],
+        "expected": "instance of LinkedHashMap",
+        "description": "Test case to verify that a Map type with Integer keys returns a LinkedHashMap instance."
+      }
+    ]
+  },
+  {
+    "group": "Test newDefaultImplementationConstructor for invalid types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<Object>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "Object.class"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case to verify that an invalid type returns null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<EnumSet<MyEnum>>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "EnumSet.class"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case to verify that an EnumSet type returns null due to special constructor handling."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<InterfaceType>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "InterfaceType.class"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case to verify that an interface type returns null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "type",
+            "value": "new TypeToken<SomeAbstractClass>()"
+          },
+          {
+            "parameter": "rawType",
+            "value": "SomeAbstractClass.class"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case to verify that an abstract class type returns null."
+      }
+    ]
+  }
+]

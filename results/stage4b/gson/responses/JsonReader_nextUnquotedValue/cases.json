@@ -1,0 +1,252 @@
+[
+  {
+    "group": "nextUnquotedValue - Valid Input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "validJsonString"
+          }
+        ],
+        "expected": "validJsonString",
+        "description": "Test case where the buffer contains a valid unquoted string value."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Non-Literal Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "1234, {"
+          }
+        ],
+        "expected": "1234",
+        "description": "Test case where the buffer contains numeric value followed by a comma and a non-literal character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc;}"
+          }
+        ],
+        "expected": "abc",
+        "description": "Test case where the buffer contains a string followed by a semicolon and a closing brace."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Buffer Overflow Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "veryLongStringThatExceedsBufferSize"
+          }
+        ],
+        "expected": "veryLongStringThatExceedsBufferSize",
+        "description": "Test case where the buffer contains a string that exceeds the buffer size, checking if it is handled correctly."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Empty Buffer",
+    "cases": [
+      {
+        "input": [],
+        "expected": "EOFException",
+        "description": "Test case where the buffer is empty, expecting an EOFException to be thrown."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Mixed Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "mixedValue; {"
+          }
+        ],
+        "expected": "mixedValue",
+        "description": "Test case where the buffer contains a mixed value followed by a semicolon and a non-literal character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "anotherValue, }"
+          }
+        ],
+        "expected": "anotherValue",
+        "description": "Test case where the buffer contains another value followed by a comma and a closing brace."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Check Lenient Mode",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "lenientValue#}"
+          }
+        ],
+        "expected": "lenientValue",
+        "description": "Test case to verify that in lenient mode, the method correctly processes a string followed by a hash character."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Valid Input with Whitespace",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "   validString   "
+          }
+        ],
+        "expected": "validString",
+        "description": "Test case where the buffer contains a valid unquoted string value surrounded by whitespace."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Special Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "special@Value$"
+          }
+        ],
+        "expected": "special@Value$",
+        "description": "Test case where the buffer contains a valid unquoted string with special characters."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Edge Case with Newline",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "newlineValue\n"
+          }
+        ],
+        "expected": "newlineValue",
+        "description": "Test case where the buffer contains a valid unquoted string followed by a newline character."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Buffer with Escape Sequences",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "escaped\\Value"
+          }
+        ],
+        "expected": "escaped\\Value",
+        "description": "Test case where the buffer contains a valid unquoted string with an escape sequence."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Multiple Non-Literal Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "value1, value2; value3#"
+          }
+        ],
+        "expected": "value1",
+        "description": "Test case where the buffer contains multiple non-literal characters and checks if the first unquoted value is returned."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Single Character Input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "a"
+          }
+        ],
+        "expected": "a",
+        "description": "Test case where the buffer contains a single character, expecting it to be returned as the unquoted value."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Long Input with Non-Literal Character",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "longInputStringThatHasNonLiteralCharacter#"
+          }
+        ],
+        "expected": "longInputStringThatHasNonLiteralCharacter",
+        "description": "Test case where the buffer contains a long input string followed by a non-literal character, checking if the whole valid string is returned."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue - Exception Scenarios",
+    "cases": [
+      {
+        "input": [],
+        "expected": "EOFException",
+        "description": "Test case where the buffer is empty, expecting an EOFException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "validString"
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test case where the buffer contains a valid string but the end of the stream is reached unexpectedly, expecting an EOFException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "value1, value2; value3#"
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test case where the buffer contains multiple non-literal characters and checks if an EOFException is thrown when the end of the stream is reached unexpectedly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "value1\\"
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test case where the buffer contains an escape character at the end and expects an EOFException when the next character is not available."
+      }
+    ]
+  }
+]

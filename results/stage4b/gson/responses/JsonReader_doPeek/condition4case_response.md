@@ -1,0 +1,85 @@
+{
+    "group": "JsonReader doPeek Method Tests",
+    "cases": [
+        {
+            "input": [],
+            "expected": "PEEKED_EOF",
+            "description": "Test when the JSON document is empty, expecting PEEKED_EOF."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_END_ARRAY",
+            "description": "Test when the current state is an empty array, expecting PEEKED_END_ARRAY."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_END_OBJECT",
+            "description": "Test when the current state is an empty object, expecting PEEKED_END_OBJECT."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_SINGLE_QUOTED_NAME",
+            "description": "Test when the next character is a single-quoted name, expecting PEEKED_SINGLE_QUOTED_NAME."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_DOUBLE_QUOTED_NAME",
+            "description": "Test when the next character is a double-quoted name, expecting PEEKED_DOUBLE_QUOTED_NAME."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_UNQUOTED_NAME",
+            "description": "Test when the next character is an unquoted name, expecting PEEKED_UNQUOTED_NAME."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_SINGLE_QUOTED",
+            "description": "Test when the next character is a single quote in lenient mode, expecting PEEKED_SINGLE_QUOTED."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_DOUBLE_QUOTED",
+            "description": "Test when the next character is a double quote, expecting PEEKED_DOUBLE_QUOTED."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_BEGIN_ARRAY",
+            "description": "Test when the next character is a '[' indicating the start of an array, expecting PEEKED_BEGIN_ARRAY."
+        },
+        {
+            "input": [],
+            "expected": "PEEKED_BEGIN_OBJECT",
+            "description": "Test when the next character is a '{' indicating the start of an object, expecting PEEKED_BEGIN_OBJECT."
+        },
+        {
+            "input": [],
+            "expected": "throws IOException with message 'Unterminated array'",
+            "description": "Test when there is an unexpected character in the array, expecting an IOException for 'Unterminated array'."
+        },
+        {
+            "input": [],
+            "expected": "throws IOException with message 'Unterminated object'",
+            "description": "Test when there is an unexpected character in the object, expecting an IOException for 'Unterminated object'."
+        },
+        {
+            "input": [],
+            "expected": "throws IllegalStateException with message 'JsonReader is closed'",
+            "description": "Test when the JsonReader is closed, expecting an IllegalStateException."
+        },
+        {
+            "input": [],
+            "expected": "throws IOException with message 'Expected name'",
+            "description": "Test when a name is expected but not found, expecting an IOException for 'Expected name'."
+        },
+        {
+            "input": [],
+            "expected": "throws IOException with message 'Expected value'",
+            "description": "Test when a value is expected but not found, expecting an IOException for 'Expected value'."
+        },
+        {
+            "input": [],
+            "expected": "throws IOException with message 'Unexpected value'",
+            "description": "Test when an unexpected value is encountered, expecting an IOException for 'Unexpected value'."
+        }
+    ]
+}

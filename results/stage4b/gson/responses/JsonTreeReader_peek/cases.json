@@ -1,0 +1,232 @@
+[
+  {
+    "group": "peek method - empty stack",
+    "cases": [
+      {
+        "input": [],
+        "expected": "JsonToken.END_DOCUMENT",
+        "description": "Test peek when the stack is empty, expecting END_DOCUMENT token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - iterator with next element",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonObject with an iterator that has next"
+          }
+        ],
+        "expected": "JsonToken.NAME",
+        "description": "Test peek when the top of the stack is an iterator of a JsonObject that has a next element, expecting NAME token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - iterator without next element",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonObject with an iterator that has no next"
+          }
+        ],
+        "expected": "JsonToken.END_OBJECT",
+        "description": "Test peek when the top of the stack is an iterator of a JsonObject that has no next element, expecting END_OBJECT token."
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonArray with an iterator that has no next"
+          }
+        ],
+        "expected": "JsonToken.END_ARRAY",
+        "description": "Test peek when the top of the stack is an iterator of a JsonArray that has no next element, expecting END_ARRAY token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - JsonObject",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonObject"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_OBJECT",
+        "description": "Test peek when the top of the stack is a JsonObject, expecting BEGIN_OBJECT token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - JsonArray",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonArray"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test peek when the top of the stack is a JsonArray, expecting BEGIN_ARRAY token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - JsonPrimitive",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with string"
+          }
+        ],
+        "expected": "JsonToken.STRING",
+        "description": "Test peek when the top of the stack is a JsonPrimitive representing a string, expecting STRING token."
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with boolean"
+          }
+        ],
+        "expected": "JsonToken.BOOLEAN",
+        "description": "Test peek when the top of the stack is a JsonPrimitive representing a boolean, expecting BOOLEAN token."
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with number"
+          }
+        ],
+        "expected": "JsonToken.NUMBER",
+        "description": "Test peek when the top of the stack is a JsonPrimitive representing a number, expecting NUMBER token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - JsonNull",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonNull"
+          }
+        ],
+        "expected": "JsonToken.NULL",
+        "description": "Test peek when the top of the stack is JsonNull, expecting NULL token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - closed reader",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "SENTINEL_CLOSED"
+          }
+        ],
+        "expected": "IllegalStateException with message 'JsonReader is closed'",
+        "description": "Test peek when the top of the stack is the SENTINEL_CLOSED object, expecting an IllegalStateException."
+      }
+    ]
+  },
+  {
+    "group": "peek method - unsupported type",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "Custom JsonElement subclass"
+          }
+        ],
+        "expected": "MalformedJsonException with appropriate message",
+        "description": "Test peek when the top of the stack is a custom JsonElement subclass, expecting a MalformedJsonException."
+      }
+    ]
+  },
+  {
+    "group": "peek method - iterator with no next element in JsonArray",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonArray with an iterator that has no next"
+          }
+        ],
+        "expected": "JsonToken.END_ARRAY",
+        "description": "Test peek when the top of the stack is an iterator of a JsonArray that has no next element, expecting END_ARRAY token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - iterator with next element in JsonArray",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonArray with an iterator that has next"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test peek when the top of the stack is an iterator of a JsonArray that has a next element, expecting BEGIN_ARRAY token."
+      }
+    ]
+  },
+  {
+    "group": "peek method - JsonPrimitive with unsupported type",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonPrimitive with unsupported type"
+          }
+        ],
+        "expected": "MalformedJsonException with appropriate message",
+        "description": "Test peek when the top of the stack is a JsonPrimitive of an unsupported type, expecting a MalformedJsonException."
+      }
+    ]
+  },
+  {
+    "group": "peek method - multiple types in stack",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonObject followed by JsonArray"
+          }
+        ],
+        "expected": "JsonToken.BEGIN_ARRAY",
+        "description": "Test peek when the stack contains a JsonObject followed by a JsonArray, expecting BEGIN_ARRAY token."
+      },
+      {
+        "input": [
+          {
+            "parameter": "stack",
+            "value": "JsonArray followed by JsonPrimitive"
+          }
+        ],
+        "expected": "JsonToken.NUMBER",
+        "description": "Test peek when the top of the stack is a JsonArray followed by a JsonPrimitive representing a number, expecting NUMBER token."
+      }
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "api document of class com.google.gson.internal.Primitives": "\n * Contains static utility methods pertaining to primitive types and their\n * corresponding wrapper types.\n *\n * @author Kevin Bourrillion\n ",
+  "api document of method unwrap(Class<T>)": "\n   * Returns the corresponding primitive type of {@code type} if it is a\n   * wrapper type; otherwise returns {@code type} itself. Idempotent.\n   * <pre>\n   *     unwrap(Integer.class) == int.class\n   *     unwrap(int.class) == int.class\n   *     unwrap(String.class) == String.class\n   * </pre>\n   ",
+  "dependent classes": "class `com.google.gson.FieldAttributes`:\n\trelated functions:\n\t\tmethod `public Class<?> getDeclaringClass()` returns `java.lang.Class<?>`, related with `com.google.gson.internal.Primitives.unwrap(Class<T>)`, api document: \n   * @return the declaring class that contains this field\n   ;"
+}

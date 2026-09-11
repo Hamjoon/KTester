@@ -1,0 +1,89 @@
+{
+  "test cases": [
+    {
+      "group": "skipValue - Basic Functionality",
+      "cases": [
+        {
+          "input": [],
+          "expected": "No exceptions, internal state changes as expected",
+          "description": "Test skipValue when called with no value to skip, ensuring it handles no-op correctly."
+        }
+      ]
+    },
+    {
+      "group": "skipValue - Handling Begin and End Objects",
+      "cases": [
+        {
+          "input": [],
+          "expected": "Internal state reflects the end of an object being skipped",
+          "description": "Test skipValue when it encounters a PEEKED_BEGIN_OBJECT followed by a PEEKED_END_OBJECT."
+        },
+        {
+          "input": [],
+          "expected": "Internal state reflects the end of an array being skipped",
+          "description": "Test skipValue when it encounters a PEEKED_BEGIN_ARRAY followed by a PEEKED_END_ARRAY."
+        }
+      ]
+    },
+    {
+      "group": "skipValue - Handling Quoted and Unquoted Values",
+      "cases": [
+        {
+          "input": [],
+          "expected": "Internal state updated correctly after skipping a single quoted value",
+          "description": "Test skipValue when it encounters a PEEKED_SINGLE_QUOTED value."
+        },
+        {
+          "input": [],
+          "expected": "Internal state updated correctly after skipping a double quoted value",
+          "description": "Test skipValue when it encounters a PEEKED_DOUBLE_QUOTED value."
+        },
+        {
+          "input": [],
+          "expected": "Internal state updated correctly after skipping an unquoted value",
+          "description": "Test skipValue when it encounters a PEEKED_UNQUOTED value."
+        }
+      ]
+    },
+    {
+      "group": "skipValue - Handling Names",
+      "cases": [
+        {
+          "input": [],
+          "expected": "Internal state updated correctly after skipping a single quoted name",
+          "description": "Test skipValue when it encounters a PEEKED_SINGLE_QUOTED_NAME."
+        },
+        {
+          "input": [],
+          "expected": "Internal state updated correctly after skipping a double quoted name",
+          "description": "Test skipValue when it encounters a PEEKED_DOUBLE_QUOTED_NAME."
+        },
+        {
+          "input": [],
+          "expected": "Internal state updated correctly after skipping an unquoted name",
+          "description": "Test skipValue when it encounters a PEEKED_UNQUOTED_NAME."
+        }
+      ]
+    },
+    {
+      "group": "skipValue - Handling Numbers",
+      "cases": [
+        {
+          "input": [],
+          "expected": "Internal state updated correctly after skipping a number",
+          "description": "Test skipValue when it encounters a PEEKED_NUMBER."
+        }
+      ]
+    },
+    {
+      "group": "skipValue - Handling EOF",
+      "cases": [
+        {
+          "input": [],
+          "expected": "No exceptions, method returns gracefully",
+          "description": "Test skipValue when it encounters a PEEKED_EOF."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+```java
+package com.google.gson.stream;
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import static org.junit.jupiter.api.Assertions.*;
+import org.mockito.*;
+import static org.mockito.Mockito.*;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.io.IOException;
+import java.io.StringReader;
+
+@ExtendWith(MockitoExtension.class)
+class JsonReader_nextUnquotedValue_Test {
+    private JsonReader jsonReader;
+
+    @BeforeAll
+    static void setupBeforeAll() {
+        // Any global setup can go here, if needed
+    }
+
+    @BeforeEach
+    void setupBeforeEach() {
+        // Initialize the JsonReader with a StringReader to provide input
+        // This will be reset in each test case
+    }
+
+    @Test
+    void testNextUnquotedValue_ValidInput() throws IOException {
+        // Given: A valid JSON string
+        String jsonInput = "validJsonString";
+        jsonReader = new JsonReader(new StringReader(jsonInput));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the input
+        assertEquals("validJsonString", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_NonLiteralCharacters() throws IOException {
+        // Test case for numeric value followed by a comma
+        jsonReader = new JsonReader(new StringReader("1234, {"));
+        String result = invokeNextUnquotedValue();
+        assertEquals("1234", result);
+
+        // Test case for string followed by a semicolon
+        jsonReader = new JsonReader(new StringReader("abc;}"));
+        result = invokeNextUnquotedValue();
+        assertEquals("abc", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_BufferOverflowHandling() throws IOException {
+        // Given: A long string that exceeds the buffer size
+        String jsonInput = "veryLongStringThatExceedsBufferSize";
+        jsonReader = new JsonReader(new StringReader(jsonInput));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the input
+        assertEquals("veryLongStringThatExceedsBufferSize", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_EmptyBuffer() {
+        // Given: An empty input
+        jsonReader = new JsonReader(new StringReader(""));
+
+        // When: Invoking the focal method, expecting an EOFException
+        assertThrows(EOFException.class, this::invokeNextUnquotedValue);
+    }
+
+    @Test
+    void testNextUnquotedValue_MixedCharacters() throws IOException {
+        // Test case for mixed value followed by a semicolon
+        jsonReader = new JsonReader(new StringReader("mixedValue; {"));
+        String result = invokeNextUnquotedValue();
+        assertEquals("mixedValue", result);
+
+        // Test case for another value followed by a comma
+        jsonReader = new JsonReader(new StringReader("anotherValue, }"));
+        result = invokeNextUnquotedValue();
+        assertEquals("anotherValue", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_CheckLenientMode() throws IOException {
+        // Given: A string in lenient mode
+        jsonReader = new JsonReader(new StringReader("lenientValue#}"));
+        jsonReader.setLenient(true); // Enable lenient mode
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the input up to the non-literal character
+        assertEquals("lenientValue", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_ValidInputWithWhitespace() throws IOException {
+        // Given: A valid string surrounded by whitespace
+        jsonReader = new JsonReader(new StringReader("   validString   "));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the trimmed input
+        assertEquals("validString", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_SpecialCharacters() throws IOException {
+        // Given: A string with special characters
+        jsonReader = new JsonReader(new StringReader("special@Value$"));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the input
+        assertEquals("special@Value$", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_EdgeCaseWithNewline() throws IOException {
+        // Given: A string followed by a newline
+        jsonReader = new JsonReader(new StringReader("newlineValue\n"));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the input
+        assertEquals("newlineValue", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_BufferWithEscapeSequences() throws IOException {
+        // Given: A string with escape sequences
+        jsonReader = new JsonReader(new StringReader("escaped\\Value"));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the input
+        assertEquals("escaped\\Value", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_MultipleNonLiteralCharacters() throws IOException {
+        // Given: A buffer with multiple non-literal characters
+        jsonReader = new JsonReader(new StringReader("value1, value2; value3#"));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The first unquoted value should be returned
+        assertEquals("value1", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_SingleCharacterInput() throws IOException {
+        // Given: A single character input
+        jsonReader = new JsonReader(new StringReader("a"));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the input
+        assertEquals("a", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_LongInputWithNonLiteralCharacter() throws IOException {
+        // Given: A long input string with a non-literal character
+        jsonReader = new JsonReader(new StringReader("longInputStringThatHasNonLiteralCharacter#"));
+
+        // When: Invoking the focal method
+        String result = invokeNextUnquotedValue();
+
+        // Then: The result should match the input up to the non-literal character
+        assertEquals("longInputStringThatHasNonLiteralCharacter", result);
+    }
+
+    @Test
+    void testNextUnquotedValue_ExceptionScenarios() {
+        // Given: An empty input
+        jsonReader = new JsonReader(new StringReader(""));
+        assertThrows(EOFException.class, this::invokeNextUnquotedValue);
+
+        // Given: A valid string but end of stream reached unexpectedly
+        jsonReader = new JsonReader(new StringReader("validString"));
+        assertThrows(EOFException.class, this::invokeNextUnquotedValue);
+
+        // Given: A buffer with multiple non-literal characters
+        jsonReader = new JsonReader(new StringReader("value1, value2; value3#"));
+        assertThrows(EOFException.class, this::invokeNextUnquotedValue);
+
+        // Given: A buffer with an escape character at the end
+        jsonReader = new JsonReader(new StringReader("value1\\"));
+        assertThrows(EOFException.class, this::invokeNextUnquotedValue);
+    }
+
+    private String invokeNextUnquotedValue() throws IOException {
+        // This method should call the private nextUnquotedValue method indirectly
+        // through a public method that uses it, for instance nextName or nextString.
+        return jsonReader.nextString(); // Assuming the input is valid for nextString
+    }
+
+    @AfterEach
+    void teardownAfterEach() {
+        // Clean up resources if needed
+        try {
+            jsonReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @AfterAll
+    static void teardownAfterAll() {
+        // Any global cleanup can go here, if needed
+    }
+}
+```

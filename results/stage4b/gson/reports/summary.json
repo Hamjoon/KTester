@@ -1,0 +1,150 @@
+{
+  "com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class<? super T>)": {
+    "test_cases": 18,
+    "passed_cases": 15,
+    "inst_cov": 0.97,
+    "bran_cov": 0.95,
+    "correct_inst_cov": 0.48,
+    "correct_bran_cov": 0.45
+  },
+  "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)": {
+    "test_cases": 8,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "com.google.gson.stream.JsonReader#doPeek()": {
+    "test_cases": 16,
+    "passed_cases": 3,
+    "inst_cov": 0.54,
+    "bran_cov": 0.46,
+    "correct_inst_cov": 0.39,
+    "correct_bran_cov": 0.33
+  },
+  "com.google.gson.stream.JsonReader#skipValue()": {
+    "test_cases": 18,
+    "passed_cases": 8,
+    "inst_cov": 0.59,
+    "bran_cov": 0.52,
+    "correct_inst_cov": 0.52,
+    "correct_bran_cov": 0.48
+  },
+  "com.google.gson.internal.bind.JsonTreeReader#peek()": {
+    "error_type": "execution error",
+    "test_cases": 14,
+    "passed_cases": 0
+  },
+  "com.google.gson.internal.Primitives#unwrap(Class<T>)": {
+    "test_cases": 6,
+    "passed_cases": 6,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "com.google.gson.stream.JsonReader#peek()": {
+    "test_cases": 4,
+    "passed_cases": 4,
+    "inst_cov": 0.52,
+    "bran_cov": 0.38,
+    "correct_inst_cov": 0.52,
+    "correct_bran_cov": 0.38
+  },
+  "com.google.gson.stream.JsonReader#peekNumber()": {
+    "test_cases": 6,
+    "passed_cases": 2,
+    "inst_cov": 0.86,
+    "bran_cov": 0.68,
+    "correct_inst_cov": 0.68,
+    "correct_bran_cov": 0.43
+  },
+  "com.google.gson.stream.JsonReader#nextUnquotedValue()": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 0.58,
+    "bran_cov": 0.53,
+    "correct_inst_cov": 0.58,
+    "correct_bran_cov": 0.53
+  },
+  "com.google.gson.internal.LinkedTreeMap#find(K, boolean)": {
+    "test_cases": 14,
+    "passed_cases": 12,
+    "inst_cov": 0.64,
+    "bran_cov": 0.63,
+    "correct_inst_cov": 0.64,
+    "correct_bran_cov": 0.59
+  },
+  "com.google.gson.stream.JsonReader#nextNonWhitespace(boolean)": {
+    "test_cases": 0,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "com.google.gson.internal.Excluder#excludeField(Field, boolean)": {
+    "error_type": "compile error",
+    "test_cases": 8,
+    "passed_cases": 0
+  },
+  "com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)": {
+    "error_type": "compile error",
+    "test_cases": 1,
+    "passed_cases": 0
+  },
+  "com.google.gson.internal.Primitives#wrap(Class<T>)": {
+    "test_cases": 17,
+    "passed_cases": 17,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "com.google.gson.internal.LinkedTreeMap#rebalance(Node<K, V>, boolean)": {
+    "error_type": "compile error",
+    "test_cases": 8,
+    "passed_cases": 0
+  },
+  "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)": {
+    "error_type": "compile error",
+    "test_cases": 12,
+    "passed_cases": 0
+  },
+  "com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "com.google.gson.internal.$Gson$Types#getGenericSupertype(Type, Class<?>, Class<?>)": {
+    "test_cases": 20,
+    "passed_cases": 6,
+    "inst_cov": 0.8,
+    "bran_cov": 0.66,
+    "correct_inst_cov": 0.67,
+    "correct_bran_cov": 0.61
+  },
+  "com.google.gson.stream.JsonReader#readEscapeCharacter()": {
+    "test_cases": 9,
+    "passed_cases": 6,
+    "inst_cov": 0.61,
+    "bran_cov": 0.48,
+    "correct_inst_cov": 0.6,
+    "correct_bran_cov": 0.38
+  },
+  "com.google.gson.internal.$Gson$Types#equals(Type, Type)": {
+    "error_type": "compile error",
+    "test_cases": 12,
+    "passed_cases": 0
+  },
+  "compile_pass_rate": 0.8144796380090498,
+  "execution_pass_rate": 0.49321266968325794,
+  "average_instruction_coverage": 0.40549999999999997,
+  "average_branch_coverage": 0.36449999999999994,
+  "average_correct_instruction_coverage": 0.354,
+  "average_correct_branch_coverage": 0.309
+}

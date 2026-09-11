@@ -1,0 +1,398 @@
+[
+  {
+    "group": "rebalance - Right-Right Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height < right height (-2) and right child has no left child"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "Node rotated left, tree balanced",
+        "description": "Test rebalancing where a Right-Right case occurs and insert is true, expecting a left rotation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height < right height (-2) and right child has no left child"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "Node rotated left, tree balanced",
+        "description": "Test rebalancing where a Right-Right case occurs and insert is false, expecting a left rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Right-Left Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height < right height (-2) and right child has a left child"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "Node rotated right then left, tree balanced",
+        "description": "Test rebalancing where a Right-Left case occurs and insert is true, expecting a right rotation followed by a left rotation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height < right height (-2) and right child has a left child"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "Node rotated right then left, tree balanced",
+        "description": "Test rebalancing where a Right-Left case occurs and insert is false, expecting a right rotation followed by a left rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Left-Left Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height > right height (2) and left child has no right child"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "Node rotated right, tree balanced",
+        "description": "Test rebalancing where a Left-Left case occurs and insert is true, expecting a right rotation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height > right height (2) and left child has no right child"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "Node rotated right, tree balanced",
+        "description": "Test rebalancing where a Left-Left case occurs and insert is false, expecting a right rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Left-Right Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height > right height (2) and left child has a right child"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "Node rotated left then right, tree balanced",
+        "description": "Test rebalancing where a Left-Right case occurs and insert is true, expecting a left rotation followed by a right rotation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height > right height (2) and left child has a right child"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "Node rotated left then right, tree balanced",
+        "description": "Test rebalancing where a Left-Right case occurs and insert is false, expecting a left rotation followed by a right rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Height Equal Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with equal left and right height (0)"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "Node height updated, no rotations",
+        "description": "Test rebalancing where heights are equal and insert is true, expecting height update without rotation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with equal left and right height (0)"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "Node height updated, no rotations",
+        "description": "Test rebalancing where heights are equal and insert is false, expecting height update without rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Height Difference Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height > right height (1) or left height < right height (-1)"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "Node height updated, no rotations",
+        "description": "Test rebalancing where heights differ by 1 and insert is true, expecting height update without rotation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with left height > right height (1) or left height < right height (-1)"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "Node height updated, no rotations",
+        "description": "Test rebalancing where heights differ by 1 and insert is false, expecting height update without rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Edge Cases for Null Node",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "null"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "No operation performed, tree remains unchanged",
+        "description": "Test rebalancing with a null node, expecting no changes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "null"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "No operation performed, tree remains unchanged",
+        "description": "Test rebalancing with a null node, expecting no changes."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Single Node Case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with no children (single node)"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "Height remains 1, no rotations",
+        "description": "Test rebalancing with a single node, expecting height update without rotation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with no children (single node)"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "Height remains 1, no rotations",
+        "description": "Test rebalancing with a single node, expecting height update without rotation."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Large Imbalanced Tree",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Deeply imbalanced node with height 5 on one side"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "Multiple rotations performed to balance the tree",
+        "description": "Test rebalancing with a deeply imbalanced tree, expecting rotations."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Deeply imbalanced node with height 5 on one side"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "Multiple rotations performed to balance the tree",
+        "description": "Test rebalancing with a deeply imbalanced tree, expecting rotations."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Concurrent Modification Exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node being modified while iterating"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "ConcurrentModificationException",
+        "description": "Test rebalancing where a concurrent modification occurs during the operation, expecting a ConcurrentModificationException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node being modified while iterating"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "ConcurrentModificationException",
+        "description": "Test rebalancing where a concurrent modification occurs during the operation, expecting a ConcurrentModificationException."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - Invalid Object Exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with invalid structure or state"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "InvalidObjectException",
+        "description": "Test rebalancing with an invalid node structure, expecting an InvalidObjectException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node with invalid structure or state"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "InvalidObjectException",
+        "description": "Test rebalancing with an invalid node structure, expecting an InvalidObjectException."
+      }
+    ]
+  },
+  {
+    "group": "rebalance - No Such Element Exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node that does not exist in the tree"
+          },
+          {
+            "parameter": "insert",
+            "value": true
+          }
+        ],
+        "expected": "NoSuchElementException",
+        "description": "Test rebalancing with a non-existent node, expecting a NoSuchElementException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "unbalanced",
+            "value": "Node that does not exist in the tree"
+          },
+          {
+            "parameter": "insert",
+            "value": false
+          }
+        ],
+        "expected": "NoSuchElementException",
+        "description": "Test rebalancing with a non-existent node, expecting a NoSuchElementException."
+      }
+    ]
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "group": "read method with JSON array input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithArray"
+          }
+        ],
+        "expected": "List<Object> containing parsed values",
+        "description": "Test the read method with a JSON array input to verify that it correctly parses and returns a List."
+      }
+    ]
+  },
+  {
+    "group": "read method with JSON object input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithObject"
+          }
+        ],
+        "expected": "Map<String, Object> containing parsed key-value pairs",
+        "description": "Test the read method with a JSON object input to verify that it correctly parses and returns a Map."
+      }
+    ]
+  },
+  {
+    "group": "read method with nested JSON structure",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithNestedStructure"
+          }
+        ],
+        "expected": "List<Object> containing nested values",
+        "description": "Test the read method with a nested JSON structure to ensure it handles multiple levels of nesting correctly."
+      }
+    ]
+  },
+  {
+    "group": "read method with terminal JSON values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithTerminalValue"
+          }
+        ],
+        "expected": "Parsed terminal value",
+        "description": "Test the read method with a JSON input that contains terminal values (like strings, numbers) to ensure it correctly parses them."
+      }
+    ]
+  },
+  {
+    "group": "read method with empty JSON input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithEmptyInput"
+          }
+        ],
+        "expected": "null",
+        "description": "Test the read method with an empty JSON input to verify that it returns null or handles it gracefully."
+      }
+    ]
+  },
+  {
+    "group": "read method with JSON array of mixed types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithMixedArray"
+          }
+        ],
+        "expected": "List<Object> containing mixed types (e.g., string, number, boolean)",
+        "description": "Test the read method with a JSON array containing mixed types to ensure it correctly parses and returns a List with various data types."
+      }
+    ]
+  },
+  {
+    "group": "read method with JSON object with nested arrays",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithObjectAndNestedArray"
+          }
+        ],
+        "expected": "Map<String, Object> containing a nested List",
+        "description": "Test the read method with a JSON object that includes nested arrays to verify that it correctly parses and returns a Map with nested List."
+      }
+    ]
+  },
+  {
+    "group": "read method with JSON object with empty array",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithEmptyArrayInObject"
+          }
+        ],
+        "expected": "Map<String, Object> containing an empty List",
+        "description": "Test the read method with a JSON object that has an empty array to ensure it correctly parses and represents it as an empty List."
+      }
+    ]
+  },
+  {
+    "group": "read method with JSON object with null values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithObjectAndNullValues"
+          }
+        ],
+        "expected": "Map<String, Object> containing keys with null values",
+        "description": "Test the read method with a JSON object that includes null values for some keys to verify that it correctly parses and returns a Map with null entries."
+      }
+    ]
+  },
+  {
+    "group": "read method with deeply nested JSON structure",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithDeeplyNestedStructure"
+          }
+        ],
+        "expected": "Map<String, Object> with deeply nested structure",
+        "description": "Test the read method with a deeply nested JSON structure to ensure it can handle multiple levels of nesting without errors."
+      }
+    ]
+  },
+  {
+    "group": "read method with invalid JSON input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithInvalidJson"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test the read method with an invalid JSON input to ensure it throws an IOException when the JSON format is incorrect."
+      }
+    ]
+  },
+  {
+    "group": "read method with unexpected token",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithUnexpectedToken"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test the read method when the JSON input contains an unexpected token to verify that it throws an IOException."
+      }
+    ]
+  },
+  {
+    "group": "read method with stack overflow due to excessive nesting",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "mockedJsonReaderWithExcessiveNesting"
+          }
+        ],
+        "expected": "StackOverflowError",
+        "description": "Test the read method with a deeply nested JSON structure that exceeds stack limits to ensure it throws a StackOverflowError."
+      }
+    ]
+  },
+  {
+    "group": "read method with null JsonReader",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test the read method with a null JsonReader to verify that it throws a NullPointerException."
+      }
+    ]
+  }
+]
