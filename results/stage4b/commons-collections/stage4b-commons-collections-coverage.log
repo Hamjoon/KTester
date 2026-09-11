@@ -1,0 +1,1357 @@
+2026-09-11 03:55:24,368 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-11 03:55:24,369 - evaluations.coverage_test - INFO - Running tests for project: commons-collections
+2026-09-11 03:55:24,370 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/map/Flat3Map_get_Test.java
+2026-09-11 03:55:24,900 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.map.Flat3Map_get_Test
+2026-09-11 03:55:26,537 - evaluations.coverage_test - INFO - return code: 0
+2026-09-11 03:55:26,537 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_get_Test ✔
+│     ├─ testGetWithDelegateMap() ✔
+│     ├─ testGetWithNonExistingKey() ✔
+│     ├─ testGetWithNullKeyWhenTwoElements() ✔
+│     ├─ testGetWithNullKeyWhenDelegateMode() ✔
+│     ├─ testGetWithExistingKey() ✔
+│     ├─ testGetWithNullKeyWhenEmpty() ✔
+│     ├─ testGetWithNullKeyWhenOneElement() ✔
+│     └─ testGetWithNullKeyWhenThreeElements() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 894 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:55:27,873 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.map.Flat3Map_get_Test#testGetWithDelegateMap --select-method org.apache.commons.collections4.map.Flat3Map_get_Test#testGetWithNonExistingKey --select-method org.apache.commons.collections4.map.Flat3Map_get_Test#testGetWithNullKeyWhenTwoElements --select-method org.apache.commons.collections4.map.Flat3Map_get_Test#testGetWithNullKeyWhenDelegateMode --select-method org.apache.commons.collections4.map.Flat3Map_get_Test#testGetWithExistingKey --select-method org.apache.commons.collections4.map.Flat3Map_get_Test#testGetWithNullKeyWhenEmpty --select-method org.apache.commons.collections4.map.Flat3Map_get_Test#testGetWithNullKeyWhenOneElement --select-method org.apache.commons.collections4.map.Flat3Map_get_Test#testGetWithNullKeyWhenThreeElements
+2026-09-11 03:55:29,706 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_get_Test ✔
+│     ├─ testGetWithDelegateMap() ✔
+│     ├─ testGetWithNonExistingKey() ✔
+│     ├─ testGetWithNullKeyWhenTwoElements() ✔
+│     ├─ testGetWithNullKeyWhenDelegateMode() ✔
+│     ├─ testGetWithExistingKey() ✔
+│     ├─ testGetWithNullKeyWhenEmpty() ✔
+│     ├─ testGetWithNullKeyWhenOneElement() ✔
+│     └─ testGetWithNullKeyWhenThreeElements() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 963 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:55:31,400 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/IteratorUtils_getIterator_Test.java
+2026-09-11 03:55:31,886 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.IteratorUtils_getIterator_Test
+2026-09-11 03:55:34,913 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 03:55:34,914 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.collections4.IteratorUtils_getIterator_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ IteratorUtils_getIterator_Test ✔
+│     ├─ testGetIteratorWithNodeList() ✔
+│     ├─ testGetIteratorWithMap() ✔
+│     ├─ testGetIteratorWithIterable() ✔
+│     ├─ testGetIteratorWithIterator() ✔
+│     ├─ testGetIteratorWithNoMatchingType() ✔
+│     ├─ testGetIteratorWithNode() ✔
+│     ├─ testGetIteratorWithNull() ✔
+│     ├─ testGetIteratorWithDictionary() ✘ First value should be 'a' ==> expected: <a> but was: <b>
+│     ├─ testGetIteratorWithArray() ✔
+│     ├─ testGetIteratorWithEnumeration() ✔
+│     ├─ testGetIteratorWithCustomIterable() ✔
+│     └─ testGetIteratorWithPrimitiveArray() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:IteratorUtils_getIterator_Test:testGetIteratorWithDictionary()
+    MethodSource [className = 'org.apache.commons.collections4.IteratorUtils_getIterator_Test', methodName = 'testGetIteratorWithDictionary', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: First value should be 'a' ==> expected: <a> but was: <b>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.collections4.IteratorUtils_getIterator_Test.testGetIteratorWithDictionary(IteratorUtils_getIterator_Test.java:111)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 1308 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-11 03:55:36,677 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithNodeList --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithMap --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithIterable --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithIterator --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithNoMatchingType --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithNode --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithNull --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithArray --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithEnumeration --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithCustomIterable --select-method org.apache.commons.collections4.IteratorUtils_getIterator_Test#testGetIteratorWithPrimitiveArray
+2026-09-11 03:55:38,519 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ IteratorUtils_getIterator_Test ✔
+│     ├─ testGetIteratorWithNodeList() ✔
+│     ├─ testGetIteratorWithMap() ✔
+│     ├─ testGetIteratorWithIterable() ✔
+│     ├─ testGetIteratorWithIterator() ✔
+│     ├─ testGetIteratorWithNoMatchingType() ✔
+│     ├─ testGetIteratorWithNode() ✔
+│     ├─ testGetIteratorWithNull() ✔
+│     ├─ testGetIteratorWithArray() ✔
+│     ├─ testGetIteratorWithEnumeration() ✔
+│     ├─ testGetIteratorWithCustomIterable() ✔
+│     └─ testGetIteratorWithPrimitiveArray() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 985 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:55:39,726 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/sequence/SequencesComparator_getMiddleSnake_Test.java
+2026-09-11 03:55:40,348 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/collections4/sequence/SequencesComparator_getMiddleSnake_Test.java:30: error: cannot find symbol
+    private Snake invokeGetMiddleSnake(int start1, int end1, int start2, int end2) {
+            ^
+  symbol:   class Snake
+  location: class SequencesComparator_getMiddleSnake_Test
+1 error
+
+2026-09-11 03:55:40,352 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/map/Flat3Map_containsKey_Test.java
+2026-09-11 03:55:41,077 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.map.Flat3Map_containsKey_Test
+2026-09-11 03:55:42,953 - evaluations.coverage_test - INFO - return code: 0
+2026-09-11 03:55:42,954 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_containsKey_Test ✔
+│     ├─ testContainsKeyWithSize3AndNonNullKeys() ✔
+│     ├─ testContainsKeyWithExistingKey() ✔
+│     ├─ testContainsKeyWithSize1AndNullKey() ✔
+│     ├─ testContainsKeyWithNullKey() ✔
+│     ├─ testContainsKeyWithEmptyFlat3Map() ✔
+│     ├─ testContainsKeyWithNonExistingKey() ✔
+│     ├─ testContainsKeyWithDelegateMap() ✔
+│     ├─ testContainsKeyWithSize2AndNonNullKeys() ✔
+│     ├─ testContainsKeyWithNonNullKey() ✔
+│     └─ testContainsKeyWithMoreThanThreeKeys() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 956 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:55:44,110 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithSize3AndNonNullKeys --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithExistingKey --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithSize1AndNullKey --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithNullKey --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithEmptyFlat3Map --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithNonExistingKey --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithDelegateMap --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithSize2AndNonNullKeys --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithNonNullKey --select-method org.apache.commons.collections4.map.Flat3Map_containsKey_Test#testContainsKeyWithMoreThanThreeKeys
+2026-09-11 03:55:45,527 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_containsKey_Test ✔
+│     ├─ testContainsKeyWithSize3AndNonNullKeys() ✔
+│     ├─ testContainsKeyWithExistingKey() ✔
+│     ├─ testContainsKeyWithSize1AndNullKey() ✔
+│     ├─ testContainsKeyWithNullKey() ✔
+│     ├─ testContainsKeyWithEmptyFlat3Map() ✔
+│     ├─ testContainsKeyWithNonExistingKey() ✔
+│     ├─ testContainsKeyWithDelegateMap() ✔
+│     ├─ testContainsKeyWithSize2AndNonNullKeys() ✔
+│     ├─ testContainsKeyWithNonNullKey() ✔
+│     └─ testContainsKeyWithMoreThanThreeKeys() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 773 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:55:46,375 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/map/Flat3Map_equals_Test.java
+2026-09-11 03:55:46,744 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.map.Flat3Map_equals_Test
+2026-09-11 03:55:48,046 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 03:55:48,046 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.collections4.map.Flat3Map_equals_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_equals_Test ✔
+│     ├─ testEquals_MapWithDifferentSize() ✔
+│     ├─ testEquals_DelegateMap() ✘ 
+│     │        Misplaced or misused argument matcher detected here:
+│     │     
+│     │        -> at org.apache.commons.collections4.map.Flat3Map_equals_Test.testEquals_DelegateMap(Flat3Map_equals_Test.java:78)
+│     │     
+│     │        You cannot use argument matchers outside of verification or stubbing.
+│     │        Examples of correct usage of argument matchers:
+│     │            when(mock.get(anyInt())).thenReturn(null);
+│     │            doThrow(new RuntimeException()).when(mock).someVoidMethod(any());
+│     │            verify(mock).someMethod(contains("foo"))
+│     │     
+│     │        This message may appear after an NullPointerException if the last matcher is returning an object 
+│     │        like any() but the stubbed method signature expect a primitive argument, in this case,
+│     │        use primitive alternatives.
+│     │            when(mock.get(any())); // bad use, will raise NPE
+│     │            when(mock.get(anyInt())); // correct usage use
+│     │     
+│     │        Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+│     │        Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+│     │        Mocking methods declared on non-public parent classes is not supported.
+│     ├─ testEquals_NullObject() ✔
+│     ├─ testEquals_SameSizeAndKeysAndValues() ✔
+│     ├─ testEquals_SameReference() ✔
+│     ├─ testEquals_EmptyMap() ✔
+│     ├─ testEquals_MapsWithDifferentSizes() ✔
+│     ├─ testEquals_SameSizeAndKeysButPartialValues() ✔
+│     ├─ testEquals_DifferentMaps() ✔
+│     ├─ testEquals_DifferentType() ✔
+│     ├─ testEquals_SameSizeButDifferentKeys() ✔
+│     ├─ testEquals_SameSizeAndKeysButDifferentValues() ✔
+│     └─ testEquals_EqualMaps() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Flat3Map_equals_Test:testEquals_DelegateMap()
+    MethodSource [className = 'org.apache.commons.collections4.map.Flat3Map_equals_Test', methodName = 'testEquals_DelegateMap', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.InvalidUseOfMatchersException: 
+Misplaced or misused argument matcher detected here:
+
+-> at org.apache.commons.collections4.map.Flat3Map_equals_Test.testEquals_DelegateMap(Flat3Map_equals_Test.java:78)
+
+You cannot use argument matchers outside of verification or stubbing.
+Examples of correct usage of argument matchers:
+    when(mock.get(anyInt())).thenReturn(null);
+    doThrow(new RuntimeException()).when(mock).someVoidMethod(any());
+    verify(mock).someMethod(contains("foo"))
+
+This message may appear after an NullPointerException if the last matcher is returning an object 
+like any() but the stubbed method signature expect a primitive argument, in this case,
+use primitive alternatives.
+    when(mock.get(any())); // bad use, will raise NPE
+    when(mock.get(anyInt())); // correct usage use
+
+Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+Mocking methods declared on non-public parent classes is not supported.
+
+       org.apache.commons.collections4.map.Flat3Map_equals_Test.testEquals_DelegateMap(Flat3Map_equals_Test.java:78)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+
+Test run finished after 667 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        13 tests found           ]
+[         0 tests skipped         ]
+[        13 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-11 03:55:49,098 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_MapWithDifferentSize --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_NullObject --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_SameSizeAndKeysAndValues --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_SameReference --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_EmptyMap --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_MapsWithDifferentSizes --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_SameSizeAndKeysButPartialValues --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_DifferentMaps --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_DifferentType --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_SameSizeButDifferentKeys --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_SameSizeAndKeysButDifferentValues --select-method org.apache.commons.collections4.map.Flat3Map_equals_Test#testEquals_EqualMaps
+2026-09-11 03:55:50,612 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_equals_Test ✔
+│     ├─ testEquals_MapWithDifferentSize() ✔
+│     ├─ testEquals_NullObject() ✔
+│     ├─ testEquals_SameSizeAndKeysAndValues() ✔
+│     ├─ testEquals_SameReference() ✔
+│     ├─ testEquals_EmptyMap() ✔
+│     ├─ testEquals_MapsWithDifferentSizes() ✔
+│     ├─ testEquals_SameSizeAndKeysButPartialValues() ✔
+│     ├─ testEquals_DifferentMaps() ✔
+│     ├─ testEquals_DifferentType() ✔
+│     ├─ testEquals_SameSizeButDifferentKeys() ✔
+│     ├─ testEquals_SameSizeAndKeysButDifferentValues() ✔
+│     └─ testEquals_EqualMaps() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 729 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:55:51,876 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie_put_Test.java
+2026-09-11 03:55:52,508 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test
+2026-09-11 03:55:54,487 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 03:55:54,487 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ AbstractPatriciaTrie_put_Test ✔
+│     ├─ testPutWithKeyFoundEqualBitKeyNotRoot() ✔
+│     ├─ testPutWithNewKeyEqualBitKey() ✔
+│     ├─ testPutWithNonEmptyValue() ✔
+│     ├─ testPutWithNewKeyNullBitKey() ✔
+│     ├─ testPutWithKeyFoundAndUpdatedNewValue() ✔
+│     ├─ testPutWithExistingKey() ✔
+│     ├─ testPutWithValidKey() ✔
+│     ├─ testPutWithFoundAndEmptyKey() ✘ expected: <newValue> but was: <null>
+│     ├─ testPutWithDuplicateValue() ✔
+│     ├─ testPutWithInvalidBitIndex() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testPutWithKeyWithEmptyStringValue() ✔
+│     ├─ testPutWithFoundAndNotEmptyKey() ✔
+│     ├─ testPutWithNullKey() ✔
+│     ├─ testPutWithSpecialCharacters() ✔
+│     ├─ testPutWithNewKeyValidBitIndex() ✔
+│     ├─ testPutWithLongString() ✔
+│     └─ testPutWithEmptyKey() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:AbstractPatriciaTrie_put_Test:testPutWithFoundAndEmptyKey()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test', methodName = 'testPutWithFoundAndEmptyKey', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <newValue> but was: <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test.testPutWithFoundAndEmptyKey(AbstractPatriciaTrie_put_Test.java:72)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_put_Test:testPutWithInvalidBitIndex()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test', methodName = 'testPutWithInvalidBitIndex', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test.testPutWithInvalidBitIndex(AbstractPatriciaTrie_put_Test.java:108)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 1095 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-11 03:55:55,387 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithKeyFoundEqualBitKeyNotRoot --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithNewKeyEqualBitKey --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithNonEmptyValue --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithNewKeyNullBitKey --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithKeyFoundAndUpdatedNewValue --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithExistingKey --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithValidKey --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithDuplicateValue --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithKeyWithEmptyStringValue --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithFoundAndNotEmptyKey --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithNullKey --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithSpecialCharacters --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithNewKeyValidBitIndex --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithLongString --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_put_Test#testPutWithEmptyKey
+2026-09-11 03:55:57,023 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ AbstractPatriciaTrie_put_Test ✔
+│     ├─ testPutWithKeyFoundEqualBitKeyNotRoot() ✔
+│     ├─ testPutWithNewKeyEqualBitKey() ✔
+│     ├─ testPutWithNonEmptyValue() ✔
+│     ├─ testPutWithNewKeyNullBitKey() ✔
+│     ├─ testPutWithKeyFoundAndUpdatedNewValue() ✔
+│     ├─ testPutWithExistingKey() ✔
+│     ├─ testPutWithValidKey() ✔
+│     ├─ testPutWithDuplicateValue() ✔
+│     ├─ testPutWithKeyWithEmptyStringValue() ✔
+│     ├─ testPutWithFoundAndNotEmptyKey() ✔
+│     ├─ testPutWithNullKey() ✔
+│     ├─ testPutWithSpecialCharacters() ✔
+│     ├─ testPutWithNewKeyValidBitIndex() ✔
+│     ├─ testPutWithLongString() ✔
+│     └─ testPutWithEmptyKey() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 994 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:55:58,138 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie_nextEntryImpl_Test.java
+2026-09-11 03:55:58,521 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test
+2026-09-11 03:56:00,115 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 03:56:00,116 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ AbstractPatriciaTrie_nextEntryImpl_Test ✔
+│     ├─ testNextEntryImpl_withNoRightChild() ✔
+│     ├─ testNextEntryImpl_handlingEmptyNode(TrieEntry, TrieEntry, TrieEntry, TrieEntry) ✔
+│     │  └─ [1] Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predeces... ✘ expected: <null> but was: <Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0])>
+│     ├─ testNextEntryImpl_withEmptyCurrent() ✘ 
+│     │        Boolean cannot be returned by nextEntryImpl()
+│     │        nextEntryImpl() should return TrieEntry
+│     │        ***
+│     │        If you're unsure why you're getting above error read on.
+│     │        Due to the nature of the syntax above problem might occur because:
+│     │        1. This exception *might* occur in wrongly written multi-threaded tests.
+│     │           Please refer to Mockito FAQ on limitations of concurrency testing.
+│     │        2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+│     │           - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+│     ├─ testNextEntryImpl_withValidEntries() ✔
+│     └─ testNextEntryImpl_traversingLeft(TrieEntry, TrieEntry, TrieEntry, TrieEntry) ✔
+│        ├─ [1] Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predeces... ✘ expected: <Entry(key=b [1], value=valueB, parent=null, left=b [1], right=null, predecessor=b [1])> but was: <Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0])>
+│        └─ [2] Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predeces... ✘ expected: <null> but was: <Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0])>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (4):
+  JUnit Jupiter:AbstractPatriciaTrie_nextEntryImpl_Test:testNextEntryImpl_handlingEmptyNode(TrieEntry, TrieEntry, TrieEntry, TrieEntry):[1] Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0]), Entry(key=b [1], value=valueB, parent=null, left=b [1], right=null, predecessor=b [1]), RootEntry(key=root [-1], value=valueRoot, parent=null, left=ROOT, right=null, predecessor=ROOT), null
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test', methodName = 'testNextEntryImpl_handlingEmptyNode', methodParameterTypes = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry']
+    => org.opentest4j.AssertionFailedError: expected: <null> but was: <Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0])>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test.testNextEntryImpl_handlingEmptyNode(AbstractPatriciaTrie_nextEntryImpl_Test.java:93)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_nextEntryImpl_Test:testNextEntryImpl_withEmptyCurrent()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test', methodName = 'testNextEntryImpl_withEmptyCurrent', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by nextEntryImpl()
+nextEntryImpl() should return TrieEntry
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test.testNextEntryImpl_withEmptyCurrent(AbstractPatriciaTrie_nextEntryImpl_Test.java:56)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_nextEntryImpl_Test:testNextEntryImpl_traversingLeft(TrieEntry, TrieEntry, TrieEntry, TrieEntry):[1] Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0]), null, RootEntry(key=root [-1], value=valueRoot, parent=null, left=ROOT, right=null, predecessor=ROOT), Entry(key=b [1], value=valueB, parent=null, left=b [1], right=null, predecessor=b [1])
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test', methodName = 'testNextEntryImpl_traversingLeft', methodParameterTypes = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry']
+    => org.opentest4j.AssertionFailedError: expected: <Entry(key=b [1], value=valueB, parent=null, left=b [1], right=null, predecessor=b [1])> but was: <Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0])>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test.testNextEntryImpl_traversingLeft(AbstractPatriciaTrie_nextEntryImpl_Test.java:82)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_nextEntryImpl_Test:testNextEntryImpl_traversingLeft(TrieEntry, TrieEntry, TrieEntry, TrieEntry):[2] Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0]), Entry(key=b [1], value=valueB, parent=null, left=b [1], right=null, predecessor=b [1]), RootEntry(key=root [-1], value=valueRoot, parent=null, left=ROOT, right=null, predecessor=ROOT), null
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test', methodName = 'testNextEntryImpl_traversingLeft', methodParameterTypes = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry, org.apache.commons.collections4.trie.AbstractPatriciaTrie$TrieEntry']
+    => org.opentest4j.AssertionFailedError: expected: <null> but was: <Entry(key=a [0], value=valueA, parent=null, left=a [0], right=null, predecessor=a [0])>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test.testNextEntryImpl_traversingLeft(AbstractPatriciaTrie_nextEntryImpl_Test.java:82)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 771 ms
+[         6 containers found      ]
+[         0 containers skipped    ]
+[         6 containers started    ]
+[         0 containers aborted    ]
+[         6 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         4 tests failed          ]
+
+
+2026-09-11 03:56:01,253 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test#testNextEntryImpl_withNoRightChild --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_nextEntryImpl_Test#testNextEntryImpl_withValidEntries
+2026-09-11 03:56:03,274 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ AbstractPatriciaTrie_nextEntryImpl_Test ✔
+│     ├─ testNextEntryImpl_withNoRightChild() ✔
+│     └─ testNextEntryImpl_withValidEntries() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 1006 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:05,031 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/map/Flat3Map_remove_Test.java
+2026-09-11 03:56:05,588 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.map.Flat3Map_remove_Test
+2026-09-11 03:56:07,440 - evaluations.coverage_test - INFO - return code: 0
+2026-09-11 03:56:07,441 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_remove_Test ✔
+│     ├─ testRemoveWithValidKeysWhenSizeIsThree() ✔
+│     ├─ testRemoveWhenSizeIsZero() ✔
+│     ├─ testRemoveWhenKeyIsNullAndSizeIsOne() ✔
+│     ├─ testRemoveWhenKeyIsNullAndSizeIsTwo() ✔
+│     ├─ testRemoveWithDelegateMap() ✔
+│     ├─ testRemoveNullKeyWhenSizeIsLessThanThree() ✔
+│     ├─ testRemoveKeyThatExists() ✔
+│     ├─ testRemoveNullKeyWhenSizeIsThree() ✔
+│     ├─ testRemoveKeyThatDoesNotExist() ✔
+│     ├─ testRemoveNonExistingKey() ✔
+│     ├─ testRemoveWhenKeyIsNullAndSizeIsThree() ✔
+│     └─ testRemoveKeyWhenSizeExceedsThree() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 977 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:08,515 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveWithValidKeysWhenSizeIsThree --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveWhenSizeIsZero --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveWhenKeyIsNullAndSizeIsOne --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveWhenKeyIsNullAndSizeIsTwo --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveWithDelegateMap --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveNullKeyWhenSizeIsLessThanThree --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveKeyThatExists --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveNullKeyWhenSizeIsThree --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveKeyThatDoesNotExist --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveNonExistingKey --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveWhenKeyIsNullAndSizeIsThree --select-method org.apache.commons.collections4.map.Flat3Map_remove_Test#testRemoveKeyWhenSizeExceedsThree
+2026-09-11 03:56:10,270 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_remove_Test ✔
+│     ├─ testRemoveWithValidKeysWhenSizeIsThree() ✔
+│     ├─ testRemoveWhenSizeIsZero() ✔
+│     ├─ testRemoveWhenKeyIsNullAndSizeIsOne() ✔
+│     ├─ testRemoveWhenKeyIsNullAndSizeIsTwo() ✔
+│     ├─ testRemoveWithDelegateMap() ✔
+│     ├─ testRemoveNullKeyWhenSizeIsLessThanThree() ✔
+│     ├─ testRemoveKeyThatExists() ✔
+│     ├─ testRemoveNullKeyWhenSizeIsThree() ✔
+│     ├─ testRemoveKeyThatDoesNotExist() ✔
+│     ├─ testRemoveNonExistingKey() ✔
+│     ├─ testRemoveWhenKeyIsNullAndSizeIsThree() ✔
+│     └─ testRemoveKeyWhenSizeExceedsThree() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 945 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:11,488 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie_removeInternalEntry_Test.java
+2026-09-11 03:56:12,079 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test
+2026-09-11 03:56:13,968 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 03:56:13,968 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ AbstractPatriciaTrie_removeInternalEntry_Test ✔
+│     ├─ testRemoveInternalEntry_InvalidUplinkCheck() ✔
+│     ├─ testRemoveInternalEntry_EntryWithOnlyLeftChild() ✔
+│     ├─ testRemoveInternalEntry_EntryWithNullKey() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testRemoveNonInternalEntryThrowsException() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testRemoveRootEntryThrowsException() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testRemoveInternalEntry_NonInternalEntry_ThrowsException() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testRemoveInternalEntry_ValidUplinkCheck() ✔
+│     ├─ testRemoveInternalEntry() ✔
+│     ├─ testRemoveInternalEntry_FixParentAndChildNodes() ✔
+│     ├─ testRemoveInternalEntry_EntryWithComplexRelationships() ✔
+│     ├─ testRemoveInternalEntry_EntryWithOnlyRightChild() ✔
+│     ├─ testRemoveInternalEntry_ValidInternalEntry() ✔
+│     ├─ testRemoveInternalEntry_EntryWithBothChildren() ✔
+│     ├─ testRemoveInternalEntry_RootEntry_ThrowsException() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testRemoveInternalEntry_EntryWithNoChildren() ✔
+│     ├─ testRemoveInternalEntry_InvalidEntryType() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     └─ testRemoveInternalEntry_EntryWithSelfLoopingChild() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (6):
+  JUnit Jupiter:AbstractPatriciaTrie_removeInternalEntry_Test:testRemoveInternalEntry_EntryWithNullKey()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test', methodName = 'testRemoveInternalEntry_EntryWithNullKey', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test.testRemoveInternalEntry_EntryWithNullKey(AbstractPatriciaTrie_removeInternalEntry_Test.java:244)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_removeInternalEntry_Test:testRemoveNonInternalEntryThrowsException()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test', methodName = 'testRemoveNonInternalEntryThrowsException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test.testRemoveNonInternalEntryThrowsException(AbstractPatriciaTrie_removeInternalEntry_Test.java:67)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_removeInternalEntry_Test:testRemoveRootEntryThrowsException()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test', methodName = 'testRemoveRootEntryThrowsException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test.testRemoveRootEntryThrowsException(AbstractPatriciaTrie_removeInternalEntry_Test.java:55)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_removeInternalEntry_Test:testRemoveInternalEntry_NonInternalEntry_ThrowsException()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test', methodName = 'testRemoveInternalEntry_NonInternalEntry_ThrowsException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test.testRemoveInternalEntry_NonInternalEntry_ThrowsException(AbstractPatriciaTrie_removeInternalEntry_Test.java:89)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_removeInternalEntry_Test:testRemoveInternalEntry_RootEntry_ThrowsException()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test', methodName = 'testRemoveInternalEntry_RootEntry_ThrowsException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test.testRemoveInternalEntry_RootEntry_ThrowsException(AbstractPatriciaTrie_removeInternalEntry_Test.java:78)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_removeInternalEntry_Test:testRemoveInternalEntry_InvalidEntryType()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test', methodName = 'testRemoveInternalEntry_InvalidEntryType', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test.testRemoveInternalEntry_InvalidEntryType(AbstractPatriciaTrie_removeInternalEntry_Test.java:233)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 1015 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         6 tests failed          ]
+
+
+2026-09-11 03:56:15,174 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_InvalidUplinkCheck --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_EntryWithOnlyLeftChild --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_ValidUplinkCheck --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_FixParentAndChildNodes --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_EntryWithComplexRelationships --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_EntryWithOnlyRightChild --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_ValidInternalEntry --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_EntryWithBothChildren --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_EntryWithNoChildren --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_removeInternalEntry_Test#testRemoveInternalEntry_EntryWithSelfLoopingChild
+2026-09-11 03:56:17,378 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ AbstractPatriciaTrie_removeInternalEntry_Test ✔
+│     ├─ testRemoveInternalEntry_InvalidUplinkCheck() ✔
+│     ├─ testRemoveInternalEntry_EntryWithOnlyLeftChild() ✔
+│     ├─ testRemoveInternalEntry_ValidUplinkCheck() ✔
+│     ├─ testRemoveInternalEntry() ✔
+│     ├─ testRemoveInternalEntry_FixParentAndChildNodes() ✔
+│     ├─ testRemoveInternalEntry_EntryWithComplexRelationships() ✔
+│     ├─ testRemoveInternalEntry_EntryWithOnlyRightChild() ✔
+│     ├─ testRemoveInternalEntry_ValidInternalEntry() ✔
+│     ├─ testRemoveInternalEntry_EntryWithBothChildren() ✔
+│     ├─ testRemoveInternalEntry_EntryWithNoChildren() ✔
+│     └─ testRemoveInternalEntry_EntryWithSelfLoopingChild() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 1183 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:19,249 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/bidimap/TreeBidiMap_doRedBlackDelete_Test.java
+2026-09-11 03:56:19,802 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test
+2026-09-11 03:56:21,979 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 03:56:21,980 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ TreeBidiMap_doRedBlackDelete_Test ✔
+│     ├─ testDoRedBlackDelete_NodeWithRightChildOnly() ✘ org.apache.commons.collections4.bidimap.TreeBidiMap$Node.setRight(org.apache.commons.collections4.bidimap.TreeBidiMap$Node)
+│     ├─ testDoRedBlackDelete_NodeWithBothChildren() ✘ org.apache.commons.collections4.bidimap.TreeBidiMap$Node.setLeft(org.apache.commons.collections4.bidimap.TreeBidiMap$Node)
+│     ├─ testDoRedBlackDelete() ✔
+│     ├─ testDoRedBlackDelete_NodeWithInvalidState() ✘ Should throw IllegalArgumentException for invalid node ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testDoRedBlackDelete_RootNodeDeletion() ✔
+│     ├─ testDoRedBlackDelete_NodeIsNull() ✘ Should throw NullPointerException for null node ==> Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testDoRedBlackDelete_RedNodeWithNoChildren() ✔
+│     ├─ testDoRedBlackDelete_NodeWithLeftChildOnly() ✘ org.apache.commons.collections4.bidimap.TreeBidiMap$Node.setLeft(org.apache.commons.collections4.bidimap.TreeBidiMap$Node)
+│     ├─ testDoRedBlackDelete_NodeWithNoChildren() ✔
+│     ├─ testDoRedBlackDelete_ConcurrentModification() ✘ Should throw ConcurrentModificationException ==> Expected java.util.ConcurrentModificationException to be thrown, but nothing was thrown.
+│     └─ testDoRedBlackDelete_BlackNodeWithNoChildren() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (6):
+  JUnit Jupiter:TreeBidiMap_doRedBlackDelete_Test:testDoRedBlackDelete_NodeWithRightChildOnly()
+    MethodSource [className = 'org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test', methodName = 'testDoRedBlackDelete_NodeWithRightChildOnly', methodParameterTypes = '']
+    => java.lang.NoSuchMethodException: org.apache.commons.collections4.bidimap.TreeBidiMap$Node.setRight(org.apache.commons.collections4.bidimap.TreeBidiMap$Node)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test.testDoRedBlackDelete_NodeWithRightChildOnly(TreeBidiMap_doRedBlackDelete_Test.java:98)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:TreeBidiMap_doRedBlackDelete_Test:testDoRedBlackDelete_NodeWithBothChildren()
+    MethodSource [className = 'org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test', methodName = 'testDoRedBlackDelete_NodeWithBothChildren', methodParameterTypes = '']
+    => java.lang.NoSuchMethodException: org.apache.commons.collections4.bidimap.TreeBidiMap$Node.setLeft(org.apache.commons.collections4.bidimap.TreeBidiMap$Node)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test.testDoRedBlackDelete_NodeWithBothChildren(TreeBidiMap_doRedBlackDelete_Test.java:63)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:TreeBidiMap_doRedBlackDelete_Test:testDoRedBlackDelete_NodeWithInvalidState()
+    MethodSource [className = 'org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test', methodName = 'testDoRedBlackDelete_NodeWithInvalidState', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Should throw IllegalArgumentException for invalid node ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test.testDoRedBlackDelete_NodeWithInvalidState(TreeBidiMap_doRedBlackDelete_Test.java:158)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:TreeBidiMap_doRedBlackDelete_Test:testDoRedBlackDelete_NodeIsNull()
+    MethodSource [className = 'org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test', methodName = 'testDoRedBlackDelete_NodeIsNull', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Should throw NullPointerException for null node ==> Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test.testDoRedBlackDelete_NodeIsNull(TreeBidiMap_doRedBlackDelete_Test.java:149)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test.invokeDoRedBlackDelete(TreeBidiMap_doRedBlackDelete_Test.java:39)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.commons.collections4.bidimap.TreeBidiMap$Node.getLeft(org.apache.commons.collections4.bidimap.TreeBidiMap$DataElement)" because "x0" is null
+       org.apache.commons.collections4.bidimap.TreeBidiMap$Node.access$2400(TreeBidiMap.java:552)
+       org.apache.commons.collections4.bidimap.TreeBidiMap.doRedBlackDelete(TreeBidiMap.java:1215)
+       [...]
+  JUnit Jupiter:TreeBidiMap_doRedBlackDelete_Test:testDoRedBlackDelete_NodeWithLeftChildOnly()
+    MethodSource [className = 'org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test', methodName = 'testDoRedBlackDelete_NodeWithLeftChildOnly', methodParameterTypes = '']
+    => java.lang.NoSuchMethodException: org.apache.commons.collections4.bidimap.TreeBidiMap$Node.setLeft(org.apache.commons.collections4.bidimap.TreeBidiMap$Node)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test.testDoRedBlackDelete_NodeWithLeftChildOnly(TreeBidiMap_doRedBlackDelete_Test.java:82)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:TreeBidiMap_doRedBlackDelete_Test:testDoRedBlackDelete_ConcurrentModification()
+    MethodSource [className = 'org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test', methodName = 'testDoRedBlackDelete_ConcurrentModification', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Should throw ConcurrentModificationException ==> Expected java.util.ConcurrentModificationException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test.testDoRedBlackDelete_ConcurrentModification(TreeBidiMap_doRedBlackDelete_Test.java:174)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 658 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         6 tests failed          ]
+
+
+2026-09-11 03:56:23,410 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test#testDoRedBlackDelete --select-method org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test#testDoRedBlackDelete_RootNodeDeletion --select-method org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test#testDoRedBlackDelete_RedNodeWithNoChildren --select-method org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test#testDoRedBlackDelete_NodeWithNoChildren --select-method org.apache.commons.collections4.bidimap.TreeBidiMap_doRedBlackDelete_Test#testDoRedBlackDelete_BlackNodeWithNoChildren
+2026-09-11 03:56:25,298 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ TreeBidiMap_doRedBlackDelete_Test ✔
+│     ├─ testDoRedBlackDelete() ✔
+│     ├─ testDoRedBlackDelete_RootNodeDeletion() ✔
+│     ├─ testDoRedBlackDelete_RedNodeWithNoChildren() ✔
+│     ├─ testDoRedBlackDelete_NodeWithNoChildren() ✔
+│     └─ testDoRedBlackDelete_BlackNodeWithNoChildren() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 895 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:26,640 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/bidimap/TreeBidiMap_swapPosition_Test.java
+2026-09-11 03:56:27,292 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test
+2026-09-11 03:56:28,765 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 03:56:28,766 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ TreeBidiMap_swapPosition_Test ✔
+│     ├─ testSwapPosition_HandleNullNodes() ✘ Cannot invoke "org.apache.commons.collections4.bidimap.TreeBidiMap$Node.getParent(org.apache.commons.collections4.bidimap.TreeBidiMap$DataElement)" because "x0" is null
+│     ├─ testSwapPosition_InvalidDataElement() ✘ Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.reflect.InvocationTargetException>
+│     └─ testSwapPosition_NonParentRelationship() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:TreeBidiMap_swapPosition_Test:testSwapPosition_HandleNullNodes()
+    MethodSource [className = 'org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test', methodName = 'testSwapPosition_HandleNullNodes', methodParameterTypes = '']
+    => java.lang.NullPointerException: Cannot invoke "org.apache.commons.collections4.bidimap.TreeBidiMap$Node.getParent(org.apache.commons.collections4.bidimap.TreeBidiMap$DataElement)" because "x0" is null
+       org.apache.commons.collections4.bidimap.TreeBidiMap$Node.access$2900(TreeBidiMap.java:552)
+       org.apache.commons.collections4.bidimap.TreeBidiMap.swapPosition(TreeBidiMap.java:2104)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test.invokeSwapPosition(TreeBidiMap_swapPosition_Test.java:42)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test.testSwapPosition_HandleNullNodes(TreeBidiMap_swapPosition_Test.java:125)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:TreeBidiMap_swapPosition_Test:testSwapPosition_InvalidDataElement()
+    MethodSource [className = 'org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test', methodName = 'testSwapPosition_InvalidDataElement', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test.testSwapPosition_InvalidDataElement(TreeBidiMap_swapPosition_Test.java:114)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test.invokeSwapPosition(TreeBidiMap_swapPosition_Test.java:42)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.commons.collections4.bidimap.TreeBidiMap$DataElement.ordinal()" because "dataElement" is null
+       org.apache.commons.collections4.bidimap.TreeBidiMap$Node.getParent(TreeBidiMap.java:645)
+       org.apache.commons.collections4.bidimap.TreeBidiMap$Node.access$2900(TreeBidiMap.java:552)
+       org.apache.commons.collections4.bidimap.TreeBidiMap.swapPosition(TreeBidiMap.java:2101)
+       [...]
+
+Test run finished after 718 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-11 03:56:30,496 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.bidimap.TreeBidiMap_swapPosition_Test#testSwapPosition_NonParentRelationship
+2026-09-11 03:56:32,237 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ TreeBidiMap_swapPosition_Test ✔
+│     └─ testSwapPosition_NonParentRelationship() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 734 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:33,353 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/map/Flat3Map_put_Test.java
+2026-09-11 03:56:33,771 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.map.Flat3Map_put_Test
+2026-09-11 03:56:35,009 - evaluations.coverage_test - INFO - return code: 0
+2026-09-11 03:56:35,009 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_put_Test ✔
+│     ├─ testPutReplaceValue() ✔
+│     ├─ testPutOverCapacity() ✔
+│     ├─ testPutWithNullKey() ✔
+│     └─ testPutWithNonNullKey() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 558 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:35,895 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.map.Flat3Map_put_Test#testPutReplaceValue --select-method org.apache.commons.collections4.map.Flat3Map_put_Test#testPutOverCapacity --select-method org.apache.commons.collections4.map.Flat3Map_put_Test#testPutWithNullKey --select-method org.apache.commons.collections4.map.Flat3Map_put_Test#testPutWithNonNullKey
+2026-09-11 03:56:37,158 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_put_Test ✔
+│     ├─ testPutReplaceValue() ✔
+│     ├─ testPutOverCapacity() ✔
+│     ├─ testPutWithNullKey() ✔
+│     └─ testPutWithNonNullKey() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 611 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:38,067 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie_higherEntry_Test.java
+2026-09-11 03:56:38,500 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test
+2026-09-11 03:56:40,032 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 03:56:40,032 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ AbstractPatriciaTrie_higherEntry_Test ✔
+│     ├─ testHigherEntryWhenRootIsEmpty() ✔
+│     ├─ testHigherEntryWithEmptyKey() ✘ Expected higherEntry to return the first entry when key length is 0. ==> expected: not <null>
+│     ├─ testHigherEntryWithKeyThatHasNoHigherEntry() ✔
+│     ├─ testHigherEntryWithKeyWithBitIndexGreaterThanMax() ✔
+│     ├─ testHigherEntryWithKeyWithNullBitIndex() ✔
+│     ├─ testHigherEntryWithKeyWithNegativeBitIndex() ✔
+│     ├─ testHigherEntryWithKeyWithEqualBitIndex() ✔
+│     ├─ testHigherEntryWithExistingEntries() ✘ Expected higherEntry to return a non-null entry ==> expected: not <null>
+│     ├─ testHigherEntryWithKeyWithValidBitIndex() ✔
+│     ├─ testHigherEntryWithValidKey() ✔
+│     ├─ testHigherEntryWithKeyAtMaxLength() ✔
+│     ├─ testHigherEntryWhenRootIsNotEmptyAndKeyIsProvided() ✔
+│     ├─ testHigherEntryWhenKeyIsNotGreaterThanAnyExistingKeys() ✔
+│     ├─ testHigherEntryWhenKeyIsNull() ✔
+│     └─ testHigherEntryWithInvalidKey() ✘ Expected higherEntry to throw IllegalStateException for invalid key. ==> Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:AbstractPatriciaTrie_higherEntry_Test:testHigherEntryWithEmptyKey()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test', methodName = 'testHigherEntryWithEmptyKey', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected higherEntry to return the first entry when key length is 0. ==> expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:312)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test.testHigherEntryWithEmptyKey(AbstractPatriciaTrie_higherEntry_Test.java:73)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_higherEntry_Test:testHigherEntryWithExistingEntries()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test', methodName = 'testHigherEntryWithExistingEntries', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected higherEntry to return a non-null entry ==> expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:312)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test.testHigherEntryWithExistingEntries(AbstractPatriciaTrie_higherEntry_Test.java:38)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:AbstractPatriciaTrie_higherEntry_Test:testHigherEntryWithInvalidKey()
+    MethodSource [className = 'org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test', methodName = 'testHigherEntryWithInvalidKey', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected higherEntry to throw IllegalStateException for invalid key. ==> Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test.testHigherEntryWithInvalidKey(AbstractPatriciaTrie_higherEntry_Test.java:152)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 756 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-11 03:56:41,634 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWhenRootIsEmpty --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWithKeyThatHasNoHigherEntry --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWithKeyWithBitIndexGreaterThanMax --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWithKeyWithNullBitIndex --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWithKeyWithNegativeBitIndex --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWithKeyWithEqualBitIndex --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWithKeyWithValidBitIndex --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWithValidKey --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWithKeyAtMaxLength --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWhenRootIsNotEmptyAndKeyIsProvided --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWhenKeyIsNotGreaterThanAnyExistingKeys --select-method org.apache.commons.collections4.trie.AbstractPatriciaTrie_higherEntry_Test#testHigherEntryWhenKeyIsNull
+2026-09-11 03:56:43,676 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ AbstractPatriciaTrie_higherEntry_Test ✔
+│     ├─ testHigherEntryWhenRootIsEmpty() ✔
+│     ├─ testHigherEntryWithKeyThatHasNoHigherEntry() ✔
+│     ├─ testHigherEntryWithKeyWithBitIndexGreaterThanMax() ✔
+│     ├─ testHigherEntryWithKeyWithNullBitIndex() ✔
+│     ├─ testHigherEntryWithKeyWithNegativeBitIndex() ✔
+│     ├─ testHigherEntryWithKeyWithEqualBitIndex() ✔
+│     ├─ testHigherEntryWithKeyWithValidBitIndex() ✔
+│     ├─ testHigherEntryWithValidKey() ✔
+│     ├─ testHigherEntryWithKeyAtMaxLength() ✔
+│     ├─ testHigherEntryWhenRootIsNotEmptyAndKeyIsProvided() ✔
+│     ├─ testHigherEntryWhenKeyIsNotGreaterThanAnyExistingKeys() ✔
+│     └─ testHigherEntryWhenKeyIsNull() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 988 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:45,327 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/collections4/map/Flat3Map_containsValue_Test.java
+2026-09-11 03:56:45,843 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.collections4.map.Flat3Map_containsValue_Test
+2026-09-11 03:56:47,880 - evaluations.coverage_test - INFO - return code: 0
+2026-09-11 03:56:47,881 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_containsValue_Test ✔
+│     ├─ testContainsValueWithValuesPresent() ✔
+│     ├─ testContainsValueWithBoundaryConditions() ✔
+│     ├─ testContainsValueWithNullValue() ✔
+│     ├─ testContainsValueWhenValueExists() ✔
+│     ├─ testContainsValueWhenValueIsNull() ✔
+│     ├─ testContainsValueWithEmptyMap() ✔
+│     ├─ testContainsValueWithDelegateMap() ✔
+│     └─ testContainsValueWhenValueDoesNotExist() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 1052 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:49,295 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.collections4.map.Flat3Map_containsValue_Test#testContainsValueWithValuesPresent --select-method org.apache.commons.collections4.map.Flat3Map_containsValue_Test#testContainsValueWithBoundaryConditions --select-method org.apache.commons.collections4.map.Flat3Map_containsValue_Test#testContainsValueWithNullValue --select-method org.apache.commons.collections4.map.Flat3Map_containsValue_Test#testContainsValueWhenValueExists --select-method org.apache.commons.collections4.map.Flat3Map_containsValue_Test#testContainsValueWhenValueIsNull --select-method org.apache.commons.collections4.map.Flat3Map_containsValue_Test#testContainsValueWithEmptyMap --select-method org.apache.commons.collections4.map.Flat3Map_containsValue_Test#testContainsValueWithDelegateMap --select-method org.apache.commons.collections4.map.Flat3Map_containsValue_Test#testContainsValueWhenValueDoesNotExist
+2026-09-11 03:56:51,633 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Flat3Map_containsValue_Test ✔
+│     ├─ testContainsValueWithValuesPresent() ✔
+│     ├─ testContainsValueWithBoundaryConditions() ✔
+│     ├─ testContainsValueWithNullValue() ✔
+│     ├─ testContainsValueWhenValueExists() ✔
+│     ├─ testContainsValueWhenValueIsNull() ✔
+│     ├─ testContainsValueWithEmptyMap() ✔
+│     ├─ testContainsValueWithDelegateMap() ✔
+│     └─ testContainsValueWhenValueDoesNotExist() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 1074 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 03:56:52,997 - evaluations.coverage_test - INFO - {'org.apache.commons.collections4.map.Flat3Map#get(Object)': {'test_cases': 8, 'passed_cases': 8}, 'org.apache.commons.collections4.IteratorUtils#getIterator(Object)': {'test_cases': 12, 'passed_cases': 11}, 'org.apache.commons.collections4.sequence.SequencesComparator#getMiddleSnake(int, int, int, int)': {'error_type': 'compile error'}, 'org.apache.commons.collections4.map.Flat3Map#containsKey(Object)': {'test_cases': 10, 'passed_cases': 10}, 'org.apache.commons.collections4.map.Flat3Map#equals(Object)': {'test_cases': 13, 'passed_cases': 12}, 'org.apache.commons.collections4.trie.AbstractPatriciaTrie#put(K, V)': {'test_cases': 17, 'passed_cases': 15}, 'org.apache.commons.collections4.trie.AbstractPatriciaTrie#nextEntryImpl(TrieEntry<K, V>, TrieEntry<K, V>, TrieEntry<K, V>)': {'test_cases': 6, 'passed_cases': 2}, 'org.apache.commons.collections4.map.Flat3Map#remove(Object)': {'test_cases': 12, 'passed_cases': 12}, 'org.apache.commons.collections4.trie.AbstractPatriciaTrie#removeInternalEntry(TrieEntry<K, V>)': {'test_cases': 17, 'passed_cases': 11}, 'org.apache.commons.collections4.bidimap.TreeBidiMap#doRedBlackDelete(Node<K, V>)': {'test_cases': 11, 'passed_cases': 5}, 'org.apache.commons.collections4.bidimap.TreeBidiMap#swapPosition(Node<K, V>, Node<K, V>, DataElement)': {'test_cases': 3, 'passed_cases': 1}, 'org.apache.commons.collections4.map.Flat3Map#put(K, V)': {'test_cases': 4, 'passed_cases': 4}, 'org.apache.commons.collections4.trie.AbstractPatriciaTrie#higherEntry(K)': {'test_cases': 15, 'passed_cases': 12}, 'org.apache.commons.collections4.map.Flat3Map#containsValue(Object)': {'test_cases': 8, 'passed_cases': 8}}
+2026-09-11 03:56:52,998 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_get/org.apache.commons.collections4.map/Flat3Map.html, method: get(Object)
+2026-09-11 03:56:53,005 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_get_correct/org.apache.commons.collections4.map/Flat3Map.html, method: get(Object)
+2026-09-11 03:56:53,010 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/IteratorUtils_getIterator/org.apache.commons.collections4/IteratorUtils.html, method: getIterator(Object)
+2026-09-11 03:56:53,017 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/IteratorUtils_getIterator_correct/org.apache.commons.collections4/IteratorUtils.html, method: getIterator(Object)
+2026-09-11 03:56:53,027 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_containsKey/org.apache.commons.collections4.map/Flat3Map.html, method: containsKey(Object)
+2026-09-11 03:56:53,031 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_containsKey_correct/org.apache.commons.collections4.map/Flat3Map.html, method: containsKey(Object)
+2026-09-11 03:56:53,035 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_equals/org.apache.commons.collections4.map/Flat3Map.html, method: equals(Object)
+2026-09-11 03:56:53,041 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_equals_correct/org.apache.commons.collections4.map/Flat3Map.html, method: equals(Object)
+2026-09-11 03:56:53,048 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/AbstractPatriciaTrie_put/org.apache.commons.collections4.trie/AbstractPatriciaTrie.html, method: put(K, V)
+2026-09-11 03:56:53,055 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/AbstractPatriciaTrie_put_correct/org.apache.commons.collections4.trie/AbstractPatriciaTrie.html, method: put(K, V)
+2026-09-11 03:56:53,061 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/AbstractPatriciaTrie_nextEntryImpl/org.apache.commons.collections4.trie/AbstractPatriciaTrie.html, method: nextEntryImpl(TrieEntry<K, V>, TrieEntry<K, V>, TrieEntry<K, V>)
+2026-09-11 03:56:53,067 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/AbstractPatriciaTrie_nextEntryImpl_correct/org.apache.commons.collections4.trie/AbstractPatriciaTrie.html, method: nextEntryImpl(TrieEntry<K, V>, TrieEntry<K, V>, TrieEntry<K, V>)
+2026-09-11 03:56:53,076 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_remove/org.apache.commons.collections4.map/Flat3Map.html, method: remove(Object)
+2026-09-11 03:56:53,080 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_remove_correct/org.apache.commons.collections4.map/Flat3Map.html, method: remove(Object)
+2026-09-11 03:56:53,086 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/AbstractPatriciaTrie_removeInternalEntry/org.apache.commons.collections4.trie/AbstractPatriciaTrie.html, method: removeInternalEntry(TrieEntry<K, V>)
+2026-09-11 03:56:53,093 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/AbstractPatriciaTrie_removeInternalEntry_correct/org.apache.commons.collections4.trie/AbstractPatriciaTrie.html, method: removeInternalEntry(TrieEntry<K, V>)
+2026-09-11 03:56:53,104 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/TreeBidiMap_doRedBlackDelete/org.apache.commons.collections4.bidimap/TreeBidiMap.html, method: doRedBlackDelete(Node<K, V>)
+2026-09-11 03:56:53,129 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/TreeBidiMap_doRedBlackDelete_correct/org.apache.commons.collections4.bidimap/TreeBidiMap.html, method: doRedBlackDelete(Node<K, V>)
+2026-09-11 03:56:53,138 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/TreeBidiMap_swapPosition/org.apache.commons.collections4.bidimap/TreeBidiMap.html, method: swapPosition(Node<K, V>, Node<K, V>, DataElement)
+2026-09-11 03:56:53,147 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/TreeBidiMap_swapPosition_correct/org.apache.commons.collections4.bidimap/TreeBidiMap.html, method: swapPosition(Node<K, V>, Node<K, V>, DataElement)
+2026-09-11 03:56:53,156 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_put/org.apache.commons.collections4.map/Flat3Map.html, method: put(K, V)
+2026-09-11 03:56:53,160 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_put_correct/org.apache.commons.collections4.map/Flat3Map.html, method: put(K, V)
+2026-09-11 03:56:53,164 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/AbstractPatriciaTrie_higherEntry/org.apache.commons.collections4.trie/AbstractPatriciaTrie.html, method: higherEntry(K)
+2026-09-11 03:56:53,172 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/AbstractPatriciaTrie_higherEntry_correct/org.apache.commons.collections4.trie/AbstractPatriciaTrie.html, method: higherEntry(K)
+2026-09-11 03:56:53,183 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_containsValue/org.apache.commons.collections4.map/Flat3Map.html, method: containsValue(Object)
+2026-09-11 03:56:53,190 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-collections/reports/jacoco-report-html/Flat3Map_containsValue_correct/org.apache.commons.collections4.map/Flat3Map.html, method: containsValue(Object)
+2026-09-11 03:56:53,193 - evaluations.coverage_test - INFO - report data:
+{'org.apache.commons.collections4.map.Flat3Map#get(Object)': {'test_cases': 8, 'passed_cases': 8, 'inst_cov': 0.58, 'bran_cov': 0.5, 'correct_inst_cov': 0.58, 'correct_bran_cov': 0.5}, 'org.apache.commons.collections4.IteratorUtils#getIterator(Object)': {'test_cases': 12, 'passed_cases': 12, 'inst_cov': 0.71, 'bran_cov': 0.79, 'correct_inst_cov': 0.71, 'correct_bran_cov': 0.79}, 'org.apache.commons.collections4.sequence.SequencesComparator#getMiddleSnake(int, int, int, int)': {'error_type': 'compile error', 'test_cases': 4, 'passed_cases': 0}, 'org.apache.commons.collections4.map.Flat3Map#containsKey(Object)': {'test_cases': 10, 'passed_cases': 10, 'inst_cov': 0.86, 'bran_cov': 0.65, 'correct_inst_cov': 0.86, 'correct_bran_cov': 0.65}, 'org.apache.commons.collections4.map.Flat3Map#equals(Object)': {'test_cases': 13, 'passed_cases': 13, 'inst_cov': 0.88, 'bran_cov': 0.69, 'correct_inst_cov': 0.88, 'correct_bran_cov': 0.69}, 'org.apache.commons.collections4.trie.AbstractPatriciaTrie#put(K, V)': {'test_cases': 17, 'passed_cases': 17, 'inst_cov': 0.19, 'bran_cov': 0.15, 'correct_inst_cov': 0.19, 'correct_bran_cov': 0.15}, 'org.apache.commons.collections4.trie.AbstractPatriciaTrie#nextEntryImpl(TrieEntry<K, V>, TrieEntry<K, V>, TrieEntry<K, V>)': {'test_cases': 6, 'passed_cases': 2, 'inst_cov': 0.2, 'bran_cov': 0.18, 'correct_inst_cov': 0.2, 'correct_bran_cov': 0.15}, 'org.apache.commons.collections4.map.Flat3Map#remove(Object)': {'test_cases': 12, 'passed_cases': 12, 'inst_cov': 0.63, 'bran_cov': 0.59, 'correct_inst_cov': 0.63, 'correct_bran_cov': 0.59}, 'org.apache.commons.collections4.trie.AbstractPatriciaTrie#removeInternalEntry(TrieEntry<K, V>)': {'test_cases': 17, 'passed_cases': 11, 'inst_cov': 0.0, 'bran_cov': 0.0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'org.apache.commons.collections4.bidimap.TreeBidiMap#doRedBlackDelete(Node<K, V>)': {'test_cases': 11, 'passed_cases': 11, 'inst_cov': 0.7, 'bran_cov': 0.54, 'correct_inst_cov': 0.7, 'correct_bran_cov': 0.54}, 'org.apache.commons.collections4.bidimap.TreeBidiMap#swapPosition(Node<K, V>, Node<K, V>, DataElement)': {'test_cases': 3, 'passed_cases': 3, 'inst_cov': 0.45, 'bran_cov': 0.33, 'correct_inst_cov': 0.45, 'correct_bran_cov': 0.33}, 'org.apache.commons.collections4.map.Flat3Map#put(K, V)': {'test_cases': 4, 'passed_cases': 4, 'inst_cov': 0.66, 'bran_cov': 0.57, 'correct_inst_cov': 0.66, 'correct_bran_cov': 0.57}, 'org.apache.commons.collections4.trie.AbstractPatriciaTrie#higherEntry(K)': {'test_cases': 15, 'passed_cases': 15, 'inst_cov': 0.16, 'bran_cov': 0.22, 'correct_inst_cov': 0.16, 'correct_bran_cov': 0.22}, 'org.apache.commons.collections4.map.Flat3Map#containsValue(Object)': {'test_cases': 8, 'passed_cases': 8, 'inst_cov': 0.87, 'bran_cov': 0.83, 'correct_inst_cov': 0.87, 'correct_bran_cov': 0.83}, 'compile_pass_rate': 0.9714285714285714, 'execution_pass_rate': 0.9, 'average_instruction_coverage': 0.49214285714285716, 'average_branch_coverage': 0.43142857142857144, 'average_correct_instruction_coverage': 0.49214285714285716, 'average_correct_branch_coverage': 0.42928571428571427}

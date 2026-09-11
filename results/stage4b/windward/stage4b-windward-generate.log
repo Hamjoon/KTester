@@ -1,0 +1,432 @@
+2026-09-11 03:22:48,673 - __main__ - INFO - prompt list: ['condition4case', 'io4case', 'exception4case', 'gencode']
+2026-09-11 03:22:48,691 - procedure.generate_prompt - INFO - Construct init prompts for project windward...
+2026-09-11 03:22:48,691 - tools.code_search - INFO - Loading code index for windward
+2026-09-11 03:22:48,735 - procedure.generate_prompt - INFO - Construct test case prompts for project windward...
+2026-09-11 03:22:48,735 - tools.code_search - INFO - Loading code index for windward
+2026-09-11 03:22:48,887 - __main__ - INFO - time for generate prompts: 0.21 seconds
+2026-09-11 03:22:48,913 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:48,924 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:48,937 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:48,949 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:48,965 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:48,980 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:48,992 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:49,003 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:49,004 - procedure.generate_code - INFO - Generating test class framework for project windward...
+2026-09-11 03:22:49,675 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:22:49,735 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:22:51,851 - procedure.generate_code - INFO - Completed test class framework generation for AbstractRouterGroup_matchRouter
+2026-09-11 03:22:53,709 - procedure.generate_code - INFO - Completed test class framework generation for AntPathMatcher_isMatch
+2026-09-11 03:22:53,715 - __main__ - INFO - time for generate test class framework: 4.83 seconds
+2026-09-11 03:22:53,729 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:53,742 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:53,754 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:53,766 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:53,777 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:53,789 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:53,801 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:53,813 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:22:53,813 - procedure.generate_code - INFO - Generating test cases for project windward...
+2026-09-11 03:22:54,386 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:22:54,409 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:22:58,767 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:23:02,147 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:23:04,040 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:23:07,685 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:23:07,932 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:23:10,106 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:23:18,380 - procedure.generate_code - INFO - Completed test case generation for AbstractRouterGroup_matchRouter
+2026-09-11 03:23:24,512 - procedure.generate_code - INFO - Completed test case generation for AntPathMatcher_isMatch
+2026-09-11 03:23:24,517 - __main__ - INFO - time for generate test cases: 30.80 seconds
+2026-09-11 03:23:24,518 - procedure.post_process - INFO - verify process test classes in windward...
+2026-09-11 03:23:24,540 - tools.llm_api - INFO - LLM API initialized, model name: openai/gpt-4o-mini.
+2026-09-11 03:23:24,552 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/util/AntPathMatcher_isMatch_Test.java
+2026-09-11 03:23:25,183 - procedure.post_process - INFO - Running single unit test, testclass: org.flmelody.util.AntPathMatcher_isMatch_Test
+2026-09-11 03:23:25,996 - procedure.post_process - INFO - return code: 1
+2026-09-11 03:23:25,997 - procedure.post_process - INFO - test case failed in org.flmelody.util.AntPathMatcher_isMatch_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ AntPathMatcher_isMatch_Test ✔
+│     ├─ testIsMatchWithQuestionMarkAndSingleCharacter() ✔
+│     ├─ testIsMatchWithQuestionMarkAndExactMatch() ✔
+│     ├─ testIsMatchWithNullPatternAndNullPath() ✔
+│     ├─ testIsMatchWithAsteriskAndSingleCharacter() ✔
+│     ├─ testIsMatchWithAsteriskAndAnyPath() ✔
+│     ├─ testIsMatchWithAsteriskInMiddle() ✔
+│     ├─ testIsMatchWithEmptyStrings() ✔
+│     ├─ testIsMatchWithPatternNotMatchingPath() ✔
+│     ├─ testIsMatchWithDoubleSlashPatternAndSinglePath() ✔
+│     ├─ testIsMatchWithNullPatternAndEmptyPath() ✔
+│     ├─ testIsMatchWithAsteriskInMiddleOfPath() ✔
+│     ├─ testIsMatchWithMultipleAsterisks() ✔
+│     ├─ testIsMatchWithPathEndingWithWildcard() ✔
+│     ├─ testIsMatchWithSingleAsteriskAndEmptyPath() ✔
+│     ├─ testIsMatchWithEmptyPatternAndNullPath() ✔
+│     ├─ testIsMatchWithWildcardAndPath() ✔
+│     ├─ testIsMatchWithDoubleQuestionMarkAndSingleCharacterPath() ✔
+│     ├─ testIsMatchWithSingleAsteriskAndRootPathAgain() ✔
+│     ├─ testIsMatchWithComplexPatternAndPath() ✔
+│     ├─ testIsMatchWithAsteriskInMiddleNotMatching() ✘ Expected false when pattern is 'a*/b' and path is 'ab/b'. ==> expected: <false> but was: <true>
+│     ├─ testIsMatchWithDoubleQuestionMarkAndPath() ✔
+│     ├─ testIsMatchWithSingleAsteriskAndRootPath() ✔
+│     ├─ testIsMatchWithAsteriskAndMultipleCharacters() ✔
+│     ├─ testIsMatchWithDoubleSlashPattern() ✔
+│     ├─ testIsMatchWithSingleAsteriskAndNonEmptyPath() ✔
+│     ├─ testIsMatchWithDoubleQuestionMark() ✔
+│     ├─ testIsMatchWithQuestionMarkInMiddle() ✔
+│     ├─ testIsMatch() ✔
+│     └─ testIsMatchWithAsteriskAndTrailingSlash() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:AntPathMatcher_isMatch_Test:testIsMatchWithAsteriskInMiddleNotMatching()
+    MethodSource [className = 'org.flmelody.util.AntPathMatcher_isMatch_Test', methodName = 'testIsMatchWithAsteriskInMiddleNotMatching', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected false when pattern is 'a*/b' and path is 'ab/b'. ==> expected: <false> but was: <true>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+       org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+       org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+       org.flmelody.util.AntPathMatcher_isMatch_Test.testIsMatchWithAsteriskInMiddleNotMatching(AntPathMatcher_isMatch_Test.java:154)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 422 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        29 tests found           ]
+[         0 tests skipped         ]
+[        29 tests started         ]
+[         0 tests aborted         ]
+[        28 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-11 03:23:26,000 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:23:26,591 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:48: error: routers has private access in AbstractRouterGroup
+        routerGroup.routers.put("/groupPath/test", getMethodMap);
+                   ^
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:49: error: routers has private access in AbstractRouterGroup
+        routerGroup.routers.put("/groupPath/test/{id}", getMethodMap);
+                   ^
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:50: error: routers has private access in AbstractRouterGroup
+        routerGroup.routers.put("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 errors
+
+2026-09-11 03:23:26,592 - procedure.post_process - INFO - try to repair test class ../evaluation/windward/test_classes/AbstractRouterGroup_matchRouter_Test.java...
+2026-09-11 03:23:26,593 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:23:27,175 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:48: error: routers has private access in AbstractRouterGroup
+        routerGroup.routers.put("/groupPath/test", getMethodMap);
+                   ^
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:49: error: routers has private access in AbstractRouterGroup
+        routerGroup.routers.put("/groupPath/test/{id}", getMethodMap);
+                   ^
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:50: error: routers has private access in AbstractRouterGroup
+        routerGroup.routers.put("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 errors
+
+2026-09-11 03:23:27,831 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:23:39,756 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:23:40,362 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:30: error: routers has private access in AbstractRouterGroup
+            routers.put(path, methodMap);
+            ^
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:52: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:53: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:54: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:23:40,362 - procedure.post_process - INFO - try to repair test class ../evaluation/windward/test_classes/AbstractRouterGroup_matchRouter_Test.java...
+2026-09-11 03:23:40,363 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:23:40,977 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:30: error: routers has private access in AbstractRouterGroup
+            routers.put(path, methodMap);
+            ^
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:52: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:53: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:54: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:23:41,883 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:23:55,448 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:23:56,063 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:32: error: cannot find symbol
+            registerRouter(path, methodMap);
+            ^
+  symbol:   method registerRouter(String,Map<String,Object>)
+  location: class TestRouterGroup
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:54: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:55: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:56: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:23:56,064 - procedure.post_process - INFO - try to repair test class ../evaluation/windward/test_classes/AbstractRouterGroup_matchRouter_Test.java...
+2026-09-11 03:23:56,065 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:23:56,632 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:32: error: cannot find symbol
+            registerRouter(path, methodMap);
+            ^
+  symbol:   method registerRouter(String,Map<String,Object>)
+  location: class TestRouterGroup
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:54: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:55: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:56: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:23:57,222 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:24:10,143 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:24:10,827 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:31: error: cannot find symbol
+            registerRouter(path, methodMap);
+            ^
+  symbol:   method registerRouter(String,Map<String,Object>)
+  location: class TestRouterGroup
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:53: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:54: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:55: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:24:10,828 - procedure.post_process - INFO - clean error cases in lines [30, 52, 53, 54, [28, 31], [44, 55], [44, 55], [44, 55]]
+2026-09-11 03:24:10,829 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:24:11,379 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:42: error: cannot find symbol
+        setupRouters();
+        ^
+  symbol:   method setupRouters()
+  location: class AbstractRouterGroup_matchRouter_Test
+1 error
+
+2026-09-11 03:24:11,380 - procedure.post_process - INFO - try to repair test class ../evaluation/windward/test_classes/AbstractRouterGroup_matchRouter_Test.java...
+2026-09-11 03:24:11,381 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:24:11,906 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:31: error: cannot find symbol
+            registerRouter(path, methodMap);
+            ^
+  symbol:   method registerRouter(String,Map<String,Object>)
+  location: class TestRouterGroup
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:53: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:54: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:55: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:24:12,533 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:24:26,909 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:24:27,489 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:32: error: cannot find symbol
+                registerRouter(path, entry.getKey(), entry.getValue(), WindwardContext.class);
+                                                                       ^
+  symbol:   class WindwardContext
+  location: class TestRouterGroup
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:55: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:56: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:57: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:24:27,490 - procedure.post_process - INFO - clean error cases in lines [31, 54, 55, 56, [28, 33], [46, 57], [46, 57], [46, 57]]
+2026-09-11 03:24:27,490 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:24:28,029 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:44: error: cannot find symbol
+        setupRouters();
+        ^
+  symbol:   method setupRouters()
+  location: class AbstractRouterGroup_matchRouter_Test
+1 error
+
+2026-09-11 03:24:28,030 - procedure.post_process - INFO - try to repair test class ../evaluation/windward/test_classes/AbstractRouterGroup_matchRouter_Test.java...
+2026-09-11 03:24:28,030 - procedure.post_process - INFO - add imports {'import org.flmelody.core.context.WindwardContext;'}
+2026-09-11 03:24:28,031 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:24:28,565 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:33: error: cannot find symbol
+                registerRouter(path, entry.getKey(), entry.getValue(), WindwardContext.class);
+                ^
+  symbol:   method registerRouter(String,String,Object,Class<WindwardContext>)
+  location: class TestRouterGroup
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:56: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:57: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:58: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:24:29,211 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 03:24:42,475 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:24:43,071 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:34: error: cannot find symbol
+                this.registerRouter(path, entry.getKey(), entry.getValue(), WindwardContext.class);
+                    ^
+  symbol: method registerRouter(String,String,Object,Class<WindwardContext>)
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:57: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:58: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:59: error: cannot find symbol
+        routerGroup.addRouter("/groupPath/test/{id}/details", getMethodMap);
+                   ^
+  symbol:   method addRouter(String,Map<String,Object>)
+  location: variable routerGroup of type AbstractRouterGroup<Windward>
+Note: src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
+
+2026-09-11 03:24:43,072 - procedure.post_process - INFO - clean error cases in lines [33, 56, 57, 58, [29, 35], [48, 59], [48, 59], [48, 59]]
+2026-09-11 03:24:43,073 - procedure.post_process - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java
+2026-09-11 03:24:43,635 - procedure.post_process - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/flmelody/core/AbstractRouterGroup_matchRouter_Test.java:46: error: cannot find symbol
+        setupRouters();
+        ^
+  symbol:   method setupRouters()
+  location: class AbstractRouterGroup_matchRouter_Test
+1 error
+
+2026-09-11 03:24:43,637 - procedure.post_process - INFO - Post process completed: /work/code/../data/projects/windward
+2026-09-11 03:24:43,637 - __main__ - INFO - time for post process: 79.12 seconds
+2026-09-11 03:24:43,638 - __main__ - INFO - total elapsed time: 114.96 seconds

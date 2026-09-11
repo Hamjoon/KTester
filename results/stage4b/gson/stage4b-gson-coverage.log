@@ -1,0 +1,2153 @@
+2026-09-11 06:56:40,970 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-11 06:56:40,970 - evaluations.coverage_test - INFO - Running tests for project: gson
+2026-09-11 06:56:40,971 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/ConstructorConstructor_newDefaultImplementationConstructor_Test.java
+2026-09-11 06:56:41,313 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test
+2026-09-11 06:56:42,414 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:56:42,414 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ConstructorConstructor_newDefaultImplementationConstructor_Test ✔
+│     ├─ testNewDefaultImplementationConstructor_InvalidTypes(TypeToken, Class, Object) ✘ Could not find factory method [provideInvalidTypeTestCases] in class [com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test]
+│     ├─ testNewDefaultImplementationConstructor_MapTypes(TypeToken, Class, Class) ✔
+│     │  ├─ [1] java.util.concurrent.ConcurrentNavigableMap<java.lang.String, java.lang.Stri... ✔
+│     │  ├─ [2] java.util.concurrent.ConcurrentMap<java.lang.String, java.lang.String>, inte... ✔
+│     │  ├─ [3] java.util.SortedMap<java.lang.String, java.lang.String>, interface java.util... ✔
+│     │  ├─ [4] java.util.Map<java.lang.String, java.lang.Integer>, interface java.util.Map,... ✘ Expected instance of LinkedHashMap ==> expected: <true> but was: <false>
+│     │  ├─ [5] java.util.Map<java.lang.String, java.lang.String>, interface java.util.Map, ... ✘ Expected instance of LinkedHashMap ==> expected: <true> but was: <false>
+│     │  ├─ [6] java.util.SortedMap<java.lang.Integer, java.lang.String>, interface java.uti... ✔
+│     │  └─ [7] java.util.Map<java.lang.Integer, java.lang.String>, interface java.util.Map,... ✔
+│     ├─ testNewDefaultImplementationConstructor_CollectionTypes(TypeToken, Class, Class) ✔
+│     │  ├─ [1] java.util.SortedSet<java.lang.String>, interface java.util.SortedSet, class ... ✔
+│     │  ├─ [2] java.util.Set<java.lang.String>, interface java.util.Set, class java.util.Li... ✔
+│     │  ├─ [3] java.util.Queue<java.lang.String>, interface java.util.Queue, class java.uti... ✔
+│     │  ├─ [4] java.util.Collection<java.lang.String>, interface java.util.Collection, clas... ✔
+│     │  ├─ [5] java.util.List<java.lang.String>, interface java.util.List, class java.util.... ✔
+│     │  └─ [6] java.util.Deque<java.lang.String>, interface java.util.Queue, class java.uti... ✔
+│     ├─ testNewDefaultImplementationConstructor_LinkedHashSet() ✔
+│     ├─ testNewDefaultImplementationConstructor_ArrayList() ✔
+│     ├─ testNewDefaultImplementationConstructor_ConcurrentHashMap() ✘ expected: <true> but was: <false>
+│     ├─ testNewDefaultImplementationConstructor_TreeSet() ✔
+│     └─ testNewDefaultImplementationConstructor_ConcurrentSkipListMap() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (4):
+  JUnit Jupiter:ConstructorConstructor_newDefaultImplementationConstructor_Test:testNewDefaultImplementationConstructor_InvalidTypes(TypeToken, Class, Object)
+    MethodSource [className = 'com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test', methodName = 'testNewDefaultImplementationConstructor_InvalidTypes', methodParameterTypes = 'com.google.gson.reflect.TypeToken, java.lang.Class, java.lang.Object']
+    => org.junit.platform.commons.PreconditionViolationException: Could not find factory method [provideInvalidTypeTestCases] in class [com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test]
+       org.junit.platform.commons.util.Preconditions.condition(Preconditions.java:313)
+       org.junit.jupiter.params.provider.MethodArgumentsProvider.findFactoryMethodBySimpleName(MethodArgumentsProvider.java:152)
+       org.junit.jupiter.params.provider.MethodArgumentsProvider.findFactoryMethodByFullyQualifiedName(MethodArgumentsProvider.java:132)
+       org.junit.jupiter.params.provider.MethodArgumentsProvider.findFactoryMethod(MethodArgumentsProvider.java:75)
+       org.junit.jupiter.params.provider.MethodArgumentsProvider.lambda$provideArguments$1(MethodArgumentsProvider.java:51)
+       [...]
+       Suppressed: org.junit.platform.commons.PreconditionViolationException: Configuration error: You must configure at least one set of arguments for this @ParameterizedTest
+         org.junit.platform.commons.util.Preconditions.condition(Preconditions.java:298)
+         org.junit.jupiter.params.ParameterizedTestExtension.lambda$provideTestTemplateInvocationContexts$4(ParameterizedTestExtension.java:95)
+         java.base/java.util.stream.AbstractPipeline.close(AbstractPipeline.java:323)
+         java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:273)
+         [...]
+  JUnit Jupiter:ConstructorConstructor_newDefaultImplementationConstructor_Test:testNewDefaultImplementationConstructor_MapTypes(TypeToken, Class, Class):[4] java.util.Map<java.lang.String, java.lang.Integer>, interface java.util.Map, class java.util.LinkedHashMap
+    MethodSource [className = 'com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test', methodName = 'testNewDefaultImplementationConstructor_MapTypes', methodParameterTypes = 'com.google.gson.reflect.TypeToken, java.lang.Class, java.lang.Class']
+    => org.opentest4j.AssertionFailedError: Expected instance of LinkedHashMap ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test.testNewDefaultImplementationConstructor_MapTypes(ConstructorConstructor_newDefaultImplementationConstructor_Test.java:143)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:ConstructorConstructor_newDefaultImplementationConstructor_Test:testNewDefaultImplementationConstructor_MapTypes(TypeToken, Class, Class):[5] java.util.Map<java.lang.String, java.lang.String>, interface java.util.Map, class java.util.LinkedHashMap
+    MethodSource [className = 'com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test', methodName = 'testNewDefaultImplementationConstructor_MapTypes', methodParameterTypes = 'com.google.gson.reflect.TypeToken, java.lang.Class, java.lang.Class']
+    => org.opentest4j.AssertionFailedError: Expected instance of LinkedHashMap ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test.testNewDefaultImplementationConstructor_MapTypes(ConstructorConstructor_newDefaultImplementationConstructor_Test.java:143)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:ConstructorConstructor_newDefaultImplementationConstructor_Test:testNewDefaultImplementationConstructor_ConcurrentHashMap()
+    MethodSource [className = 'com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test', methodName = 'testNewDefaultImplementationConstructor_ConcurrentHashMap', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+       com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test.testNewDefaultImplementationConstructor_ConcurrentHashMap(ConstructorConstructor_newDefaultImplementationConstructor_Test.java:117)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 530 ms
+[         7 containers found      ]
+[         0 containers skipped    ]
+[         7 containers started    ]
+[         0 containers aborted    ]
+[         6 containers successful ]
+[         1 containers failed     ]
+[        18 tests found           ]
+[         0 tests skipped         ]
+[        18 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-11 06:56:42,792 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructor_LinkedHashSet --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructor_ArrayList --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructor_TreeSet --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructor_ConcurrentSkipListMap
+2026-09-11 06:56:43,805 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ConstructorConstructor_newDefaultImplementationConstructor_Test ✔
+│     ├─ testNewDefaultImplementationConstructor_LinkedHashSet() ✔
+│     ├─ testNewDefaultImplementationConstructor_ArrayList() ✔
+│     ├─ testNewDefaultImplementationConstructor_TreeSet() ✔
+│     └─ testNewDefaultImplementationConstructor_ConcurrentSkipListMap() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 470 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:56:44,178 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/$Gson$Types_resolve_Test.java
+2026-09-11 06:56:44,502 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.$Gson$Types_resolve_Test
+2026-09-11 06:56:45,545 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:56:45,545 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.$Gson$Types_resolve_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_resolve_Test ✔
+│     ├─ testResolveWithGenericArrayType() ✘ java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+│     ├─ testResolveWithWildcardType() ✘ java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+│     ├─ testResolveWithNullAsToResolve() ✘ Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+│     ├─ testResolveWithParameterizedType() ✘ java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+│     ├─ testResolveWithClassArray() ✘ java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+│     ├─ testResolveWithTypeVariable() ✘ java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+│     ├─ testResolveWithInfiniteRecursion() ✘ java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+│     └─ testResolveWithClass() ✘ java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (8):
+  JUnit Jupiter:$Gson$Types_resolve_Test:testResolveWithGenericArrayType()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test', methodName = 'testResolveWithGenericArrayType', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:114)
+       com.google.gson.internal.$Gson$Types_resolve_Test.testResolveWithGenericArrayType($Gson$Types_resolve_Test.java:147)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:110)
+       [...]
+  JUnit Jupiter:$Gson$Types_resolve_Test:testResolveWithWildcardType()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test', methodName = 'testResolveWithWildcardType', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:114)
+       com.google.gson.internal.$Gson$Types_resolve_Test.testResolveWithWildcardType($Gson$Types_resolve_Test.java:163)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:110)
+       [...]
+  JUnit Jupiter:$Gson$Types_resolve_Test:testResolveWithNullAsToResolve()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test', methodName = 'testResolveWithNullAsToResolve', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.$Gson$Types_resolve_Test.testResolveWithNullAsToResolve($Gson$Types_resolve_Test.java:137)
+       [...]
+     Caused by: java.lang.RuntimeException: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:114)
+       com.google.gson.internal.$Gson$Types_resolve_Test.lambda$testResolveWithNullAsToResolve$0($Gson$Types_resolve_Test.java:138)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+     Caused by: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:110)
+       [...]
+  JUnit Jupiter:$Gson$Types_resolve_Test:testResolveWithParameterizedType()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test', methodName = 'testResolveWithParameterizedType', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:114)
+       com.google.gson.internal.$Gson$Types_resolve_Test.testResolveWithParameterizedType($Gson$Types_resolve_Test.java:155)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:110)
+       [...]
+  JUnit Jupiter:$Gson$Types_resolve_Test:testResolveWithClassArray()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test', methodName = 'testResolveWithClassArray', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:114)
+       com.google.gson.internal.$Gson$Types_resolve_Test.testResolveWithClassArray($Gson$Types_resolve_Test.java:130)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:110)
+       [...]
+  JUnit Jupiter:$Gson$Types_resolve_Test:testResolveWithTypeVariable()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test', methodName = 'testResolveWithTypeVariable', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:114)
+       com.google.gson.internal.$Gson$Types_resolve_Test.testResolveWithTypeVariable($Gson$Types_resolve_Test.java:122)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:110)
+       [...]
+  JUnit Jupiter:$Gson$Types_resolve_Test:testResolveWithInfiniteRecursion()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test', methodName = 'testResolveWithInfiniteRecursion', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:114)
+       com.google.gson.internal.$Gson$Types_resolve_Test.testResolveWithInfiniteRecursion($Gson$Types_resolve_Test.java:171)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:110)
+       [...]
+  JUnit Jupiter:$Gson$Types_resolve_Test:testResolveWithClass()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test', methodName = 'testResolveWithClass', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:114)
+       com.google.gson.internal.$Gson$Types_resolve_Test.testResolveWithClass($Gson$Types_resolve_Test.java:180)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.NoSuchMethodException: com.google.gson.internal.$Gson$Types.resolve(java.lang.reflect.Type,java.lang.Class,java.lang.reflect.Type,java.util.HashMap)
+       java.base/java.lang.Class.getDeclaredMethod(Class.java:2677)
+       com.google.gson.internal.$Gson$Types_resolve_Test.invokePrivateResolve($Gson$Types_resolve_Test.java:110)
+       [...]
+
+Test run finished after 505 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         8 tests failed          ]
+
+
+2026-09-11 06:56:45,897 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_doPeek_Test.java
+2026-09-11 06:56:46,201 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_doPeek_Test
+2026-09-11 06:56:47,233 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:56:47,233 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_doPeek_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_doPeek_Test ✔
+│     ├─ testDoPeekWhenUnexpectedValueEncountered() ✘ Expected java.io.IOException to be thrown, but nothing was thrown.
+│     ├─ testDoPeekWithSingleQuotedName() ✘ Expected END_OBJECT but was NAME at line 1 column 3 path $.
+│     ├─ testDoPeekWithDoubleQuote() ✘ Expected END_ARRAY but was STRING at line 1 column 4 path $[0]
+│     ├─ testDoPeekWhenExpectedNameNotFound() ✘ Unexpected exception type thrown, expected: <java.io.IOException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testDoPeekWithUnexpectedCharacterInObject() ✘ Expected java.io.IOException to be thrown, but nothing was thrown.
+│     ├─ testDoPeekWhenJsonReaderIsClosed() ✘ Unexpected exception type thrown, expected: <java.lang.IllegalStateException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testDoPeekWithEmptyArray() ✔
+│     ├─ testDoPeekWithBeginObject() ✘ Expected PEEKED_BEGIN_OBJECT ==> expected: <1> but was: <13>
+│     ├─ testDoPeekWithDoubleQuotedName() ✘ Expected END_OBJECT but was NAME at line 1 column 3 path $.
+│     ├─ testDoPeekWithEmptyDocument() ✘ Unexpected exception type thrown, expected: <java.io.IOException> but was: <java.lang.reflect.InvocationTargetException>
+│     ├─ testDoPeekWithUnexpectedCharacterInArray() ✘ Expected java.io.IOException to be thrown, but nothing was thrown.
+│     ├─ testDoPeekWithSingleQuoteInLenientMode() ✘ Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 4 path $[0]
+│     ├─ testDoPeekWithEmptyObject() ✔
+│     ├─ testDoPeekWithBeginArray() ✔
+│     ├─ testDoPeekWithUnquotedName() ✘ Expected END_OBJECT but was NAME at line 1 column 2 path $.
+│     └─ testDoPeekWhenExpectedValueNotFound() ✘ Expected java.io.IOException to be thrown, but nothing was thrown.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (13):
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWhenUnexpectedValueEncountered()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWhenUnexpectedValueEncountered', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWhenUnexpectedValueEncountered(JsonReader_doPeek_Test.java:258)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithSingleQuotedName()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithSingleQuotedName', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected END_OBJECT but was NAME at line 1 column 3 path $.
+       com.google.gson.stream.JsonReader.endObject(JsonReader.java:412)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithSingleQuotedName(JsonReader_doPeek_Test.java:124)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithDoubleQuote()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithDoubleQuote', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected END_ARRAY but was STRING at line 1 column 4 path $[0]
+       com.google.gson.stream.JsonReader.endArray(JsonReader.java:376)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithDoubleQuote(JsonReader_doPeek_Test.java:186)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWhenExpectedNameNotFound()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWhenExpectedNameNotFound', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.io.IOException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWhenExpectedNameNotFound(JsonReader_doPeek_Test.java:232)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.stream.JsonReader_doPeek_Test.invokeDoPeek(JsonReader_doPeek_Test.java:37)
+       [...]
+     Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 3 path $.
+       com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1659)
+       com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1465)
+       com.google.gson.stream.JsonReader.doPeek(JsonReader.java:517)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithUnexpectedCharacterInObject()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithUnexpectedCharacterInObject', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithUnexpectedCharacterInObject(JsonReader_doPeek_Test.java:210)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWhenJsonReaderIsClosed()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWhenJsonReaderIsClosed', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalStateException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWhenJsonReaderIsClosed(JsonReader_doPeek_Test.java:220)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.stream.JsonReader_doPeek_Test.invokeDoPeek(JsonReader_doPeek_Test.java:37)
+       [...]
+     Caused by: java.lang.IllegalStateException: JsonReader is closed
+       com.google.gson.stream.JsonReader.doPeek(JsonReader.java:555)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithBeginObject()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithBeginObject', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected PEEKED_BEGIN_OBJECT ==> expected: <1> but was: <13>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+       com.google.gson.stream.JsonReader_doPeek_Test.invokeDoPeekAndAssert(JsonReader_doPeek_Test.java:42)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithBeginObject(JsonReader_doPeek_Test.java:59)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithDoubleQuotedName()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithDoubleQuotedName', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected END_OBJECT but was NAME at line 1 column 3 path $.
+       com.google.gson.stream.JsonReader.endObject(JsonReader.java:412)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithDoubleQuotedName(JsonReader_doPeek_Test.java:139)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithEmptyDocument()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithEmptyDocument', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.io.IOException> but was: <java.lang.reflect.InvocationTargetException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithEmptyDocument(JsonReader_doPeek_Test.java:108)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.stream.JsonReader_doPeek_Test.invokeDoPeek(JsonReader_doPeek_Test.java:37)
+       [...]
+     Caused by: java.io.EOFException: End of input at line 1 column 1 path $
+       com.google.gson.stream.JsonReader.nextNonWhitespace(JsonReader.java:1457)
+       com.google.gson.stream.JsonReader.doPeek(JsonReader.java:558)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithUnexpectedCharacterInArray()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithUnexpectedCharacterInArray', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithUnexpectedCharacterInArray(JsonReader_doPeek_Test.java:198)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithSingleQuoteInLenientMode()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithSingleQuoteInLenientMode', methodParameterTypes = '']
+    => com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 4 path $[0]
+       com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1659)
+       com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1465)
+       com.google.gson.stream.JsonReader.doPeek(JsonReader.java:576)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.stream.JsonReader_doPeek_Test.invokeDoPeek(JsonReader_doPeek_Test.java:37)
+       com.google.gson.stream.JsonReader_doPeek_Test.invokeDoPeekAndAssert(JsonReader_doPeek_Test.java:42)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithSingleQuoteInLenientMode(JsonReader_doPeek_Test.java:170)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWithUnquotedName()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWithUnquotedName', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected END_OBJECT but was NAME at line 1 column 2 path $.
+       com.google.gson.stream.JsonReader.endObject(JsonReader.java:412)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWithUnquotedName(JsonReader_doPeek_Test.java:155)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_doPeek_Test:testDoPeekWhenExpectedValueNotFound()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_doPeek_Test', methodName = 'testDoPeekWhenExpectedValueNotFound', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_doPeek_Test.testDoPeekWhenExpectedValueNotFound(JsonReader_doPeek_Test.java:244)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+
+Test run finished after 491 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        16 tests found           ]
+[         0 tests skipped         ]
+[        16 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[        13 tests failed          ]
+
+
+2026-09-11 06:56:47,622 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_doPeek_Test#testDoPeekWithEmptyArray --select-method com.google.gson.stream.JsonReader_doPeek_Test#testDoPeekWithEmptyObject --select-method com.google.gson.stream.JsonReader_doPeek_Test#testDoPeekWithBeginArray
+2026-09-11 06:56:48,706 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_doPeek_Test ✔
+│     ├─ testDoPeekWithEmptyArray() ✔
+│     ├─ testDoPeekWithEmptyObject() ✔
+│     └─ testDoPeekWithBeginArray() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 536 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:56:49,133 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_skipValue_Test.java
+2026-09-11 06:56:49,521 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_skipValue_Test
+2026-09-11 06:56:50,782 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:56:50,783 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_skipValue_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_skipValue_Test ✔
+│     ├─ testSkipValue_Number() ✔
+│     ├─ testSkipValue_SkipsArray() ✘ expected: <key2> but was: <key1>
+│     ├─ testSkipValue_DoubleQuotedName() ✘ Expected a name but was STRING at line 1 column 11 path $.<skipped>
+│     ├─ testSkipValue_BeginEndArray() ✘ expected: <key2> but was: <key1>
+│     ├─ testSkipValue_UnquotedValue() ✔
+│     ├─ testSkipValue_SingleQuotedValue() ✔
+│     ├─ testSkipValue_SkipsNestedValues() ✘ expected: <key3> but was: <key1>
+│     ├─ testSkipValue_UnquotedName() ✘ Expected a name but was NUMBER at line 1 column 11 path $.<skipped>
+│     ├─ testSkipValue_BeginEndObject() ✔
+│     ├─ testSkipValue_NestedStructures() ✘ expected: <key3> but was: <key1>
+│     ├─ testSkipValue_EOF() ✔
+│     ├─ testSkipValue_NoOp() ✘ Expected a name but was STRING at line 1 column 11 path $.<skipped>
+│     ├─ testSkipValue_IOException() ✔
+│     ├─ testSkipValue_ArrayIndexOutOfBoundsException() ✔
+│     ├─ testSkipValue_SingleQuotedName() ✘ Expected a name but was STRING at line 1 column 11 path $.<skipped>
+│     ├─ testSkipValue_EndOfDocument() ✔
+│     ├─ testSkipValue_SkipsObject() ✘ Expected an int but was BEGIN_ARRAY at line 1 column 29 path $.key2
+│     └─ testSkipValue_DoubleQuotedValue() ✘ Expected an int but was BEGIN_ARRAY at line 1 column 29 path $.key2
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (10):
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_SkipsArray()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_SkipsArray', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <key2> but was: <key1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_SkipsArray(JsonReader_skipValue_Test.java:53)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_DoubleQuotedName()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_DoubleQuotedName', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected a name but was STRING at line 1 column 11 path $.<skipped>
+       com.google.gson.stream.JsonReader.nextName(Unknown Source)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_DoubleQuotedName(JsonReader_skipValue_Test.java:210)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_BeginEndArray()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_BeginEndArray', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <key2> but was: <key1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_BeginEndArray(JsonReader_skipValue_Test.java:132)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_SkipsNestedValues()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_SkipsNestedValues', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <key3> but was: <key1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_SkipsNestedValues(JsonReader_skipValue_Test.java:71)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_UnquotedName()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_UnquotedName', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected a name but was NUMBER at line 1 column 11 path $.<skipped>
+       com.google.gson.stream.JsonReader.nextName(Unknown Source)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_UnquotedName(JsonReader_skipValue_Test.java:224)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_NestedStructures()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_NestedStructures', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <key3> but was: <key1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_NestedStructures(JsonReader_skipValue_Test.java:264)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_NoOp()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_NoOp', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected a name but was STRING at line 1 column 11 path $.<skipped>
+       com.google.gson.stream.JsonReader.nextName(Unknown Source)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_NoOp(JsonReader_skipValue_Test.java:104)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_SingleQuotedName()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_SingleQuotedName', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected a name but was STRING at line 1 column 11 path $.<skipped>
+       com.google.gson.stream.JsonReader.nextName(JsonReader.java:800)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_SingleQuotedName(JsonReader_skipValue_Test.java:200)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_SkipsObject()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_SkipsObject', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected an int but was BEGIN_ARRAY at line 1 column 29 path $.key2
+       com.google.gson.stream.JsonReader.nextInt(JsonReader.java:1211)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_SkipsObject(JsonReader_skipValue_Test.java:45)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_skipValue_Test:testSkipValue_DoubleQuotedValue()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_skipValue_Test', methodName = 'testSkipValue_DoubleQuotedValue', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected an int but was BEGIN_ARRAY at line 1 column 29 path $.key2
+       com.google.gson.stream.JsonReader.nextInt(JsonReader.java:1211)
+       com.google.gson.stream.JsonReader_skipValue_Test.testSkipValue_DoubleQuotedValue(JsonReader_skipValue_Test.java:170)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+
+Test run finished after 663 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        18 tests found           ]
+[         0 tests skipped         ]
+[        18 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[        10 tests failed          ]
+
+
+2026-09-11 06:56:51,162 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_skipValue_Test#testSkipValue_Number --select-method com.google.gson.stream.JsonReader_skipValue_Test#testSkipValue_UnquotedValue --select-method com.google.gson.stream.JsonReader_skipValue_Test#testSkipValue_SingleQuotedValue --select-method com.google.gson.stream.JsonReader_skipValue_Test#testSkipValue_BeginEndObject --select-method com.google.gson.stream.JsonReader_skipValue_Test#testSkipValue_EOF --select-method com.google.gson.stream.JsonReader_skipValue_Test#testSkipValue_IOException --select-method com.google.gson.stream.JsonReader_skipValue_Test#testSkipValue_ArrayIndexOutOfBoundsException --select-method com.google.gson.stream.JsonReader_skipValue_Test#testSkipValue_EndOfDocument
+2026-09-11 06:56:52,393 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_skipValue_Test ✔
+│     ├─ testSkipValue_Number() ✔
+│     ├─ testSkipValue_UnquotedValue() ✔
+│     ├─ testSkipValue_SingleQuotedValue() ✔
+│     ├─ testSkipValue_BeginEndObject() ✔
+│     ├─ testSkipValue_EOF() ✔
+│     ├─ testSkipValue_IOException() ✔
+│     ├─ testSkipValue_ArrayIndexOutOfBoundsException() ✔
+│     └─ testSkipValue_EndOfDocument() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 602 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:56:52,796 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java
+2026-09-11 06:56:53,114 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.bind.JsonTreeReader_peek_Test
+2026-09-11 06:56:53,519 - evaluations.coverage_test - INFO - return code: 255
+2026-09-11 06:56:53,519 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.bind.JsonTreeReader_peek_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+org.junit.platform.commons.JUnitException: TestEngine with ID 'junit-jupiter' failed to discover tests
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:160)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverSafely(EngineDiscoveryOrchestrator.java:134)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discover(EngineDiscoveryOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discover(EngineDiscoveryOrchestrator.java:80)
+	at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:110)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.executeTests(ConsoleTestExecutor.java:66)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.lambda$execute$0(ConsoleTestExecutor.java:58)
+	at org.junit.platform.console.tasks.CustomContextClassLoaderExecutor.invoke(CustomContextClassLoaderExecutor.java:33)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.execute(ConsoleTestExecutor.java:58)
+	at org.junit.platform.console.ConsoleLauncher.executeTests(ConsoleLauncher.java:120)
+	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:82)
+	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:55)
+	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:48)
+	at org.junit.platform.console.ConsoleLauncher.main(ConsoleLauncher.java:42)
+Caused by: org.junit.platform.commons.JUnitException: ClassSelector [className = 'com.google.gson.internal.bind.JsonTreeReader_peek_Test', classLoader = null] resolution failed
+	at org.junit.platform.launcher.listeners.discovery.AbortOnFailureLauncherDiscoveryListener.selectorProcessed(AbortOnFailureLauncherDiscoveryListener.java:39)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolveCompletely(EngineDiscoveryRequestResolution.java:103)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.run(EngineDiscoveryRequestResolution.java:83)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolver.resolve(EngineDiscoveryRequestResolver.java:113)
+	at org.junit.jupiter.engine.discovery.DiscoverySelectorResolver.resolveSelectors(DiscoverySelectorResolver.java:48)
+	at org.junit.jupiter.engine.JupiterTestEngine.discover(JupiterTestEngine.java:69)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:152)
+	... 16 more
+Caused by: org.junit.platform.commons.PreconditionViolationException: Could not load class with name: com.google.gson.internal.bind.JsonTreeReader_peek_Test
+	at org.junit.platform.engine.discovery.ClassSelector.lambda$getJavaClass$0(ClassSelector.java:98)
+	at org.junit.platform.commons.function.Try$Failure.getOrThrow(Try.java:335)
+	at org.junit.platform.engine.discovery.ClassSelector.getJavaClass(ClassSelector.java:97)
+	at org.junit.jupiter.engine.discovery.ClassSelectorResolver.resolve(ClassSelectorResolver.java:66)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.lambda$resolve$2(EngineDiscoveryRequestResolution.java:135)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1602)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolve(EngineDiscoveryRequestResolution.java:189)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolve(EngineDiscoveryRequestResolution.java:126)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolveCompletely(EngineDiscoveryRequestResolution.java:92)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: com.google.gson.internal.bind.JsonTreeReader_peek_Test
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.junit.platform.commons.util.ReflectionUtils.lambda$tryToLoadClass$10(ReflectionUtils.java:890)
+	at org.junit.platform.commons.function.Try.lambda$call$0(Try.java:57)
+	at org.junit.platform.commons.function.Try.of(Try.java:93)
+	at org.junit.platform.commons.function.Try.call(Try.java:57)
+	at org.junit.platform.commons.util.ReflectionUtils.tryToLoadClass(ReflectionUtils.java:853)
+	at org.junit.platform.commons.util.ReflectionUtils.tryToLoadClass(ReflectionUtils.java:790)
+	at org.junit.platform.engine.discovery.ClassSelector.getJavaClass(ClassSelector.java:95)
+	... 35 more
+
+
+Usage: ConsoleLauncher [OPTIONS]
+Launches the JUnit Platform for test discovery and execution.
+      [@<filename>...]       One or more argument files containing options.
+
+COMMANDS
+
+  -h, --help                 Display help information.
+      --list-engines         List all observable test engines.
+
+SELECTORS
+
+      --scan-classpath, --scan-class-path[=PATH]
+                             Scan all directories on the classpath or explicit classpath
+                               roots. Without arguments, only directories on the system
+                               classpath as well as additional classpath entries supplied via
+                               -cp (directories and JAR files) are scanned. Explicit classpath
+                               roots that are not on the classpath will be silently ignored.
+                               This option can be repeated.
+      --scan-modules         EXPERIMENTAL: Scan all resolved modules for test discovery.
+  -u, --select-uri=URI       Select a URI for test discovery. This option can be repeated.
+  -f, --select-file=FILE     Select a file for test discovery. This option can be repeated.
+  -d, --select-directory=DIR Select a directory for test discovery. This option can be
+                               repeated.
+  -o, --select-module=NAME   EXPERIMENTAL: Select single module for test discovery. This
+                               option can be repeated.
+  -p, --select-package=PKG   Select a package for test discovery. This option can be repeated.
+  -c, --select-class=CLASS   Select a class for test discovery. This option can be repeated.
+  -m, --select-method=NAME   Select a method for test discovery. This option can be repeated.
+  -r, --select-resource=RESOURCE
+                             Select a classpath resource for test discovery. This option can
+                               be repeated.
+  -i, --select-iteration=TYPE:VALUE[INDEX(..INDEX)?(,INDEX(..INDEX)?)*]
+                             Select iterations for test discovery (e.g. method:com.acme.Foo#m()
+                               [1..2]). This option can be repeated.
+
+FILTERS
+
+  -n, --include-classname=PATTERN
+                             Provide a regular expression to include only classes whose fully
+                               qualified names match. To avoid loading classes unnecessarily,
+                               the default pattern only includes class names that begin with
+                               "Test" or end with "Test" or "Tests". When this option is
+                               repeated, all patterns will be combined using OR semantics.
+                               Default: ^(Test.*|.+[.$]Test.*|.*Tests?)$
+  -N, --exclude-classname=PATTERN
+                             Provide a regular expression to exclude those classes whose fully
+                               qualified names match. When this option is repeated, all
+                               patterns will be combined using OR semantics.
+      --include-package=PKG  Provide a package to be included in the test run. This option can
+                               be repeated.
+      --exclude-package=PKG  Provide a package to be excluded from the test run. This option
+                               can be repeated.
+  -t, --include-tag=TAG      Provide a tag or tag expression to include only tests whose tags
+                               match. When this option is repeated, all patterns will be
+                               combined using OR semantics.
+  -T, --exclude-tag=TAG      Provide a tag or tag expression to exclude those tests whose tags
+                               match. When this option is repeated, all patterns will be
+                               combined using OR semantics.
+  -e, --include-engine=ID    Provide the ID of an engine to be included in the test run. This
+                               option can be repeated.
+  -E, --exclude-engine=ID    Provide the ID of an engine to be excluded from the test run.
+                               This option can be repeated.
+
+RUNTIME CONFIGURATION
+
+      -cp, --classpath, --class-path=PATH
+                             Provide additional classpath entries -- for example, for adding
+                               engines and their dependencies. This option can be repeated.
+      --config=KEY=VALUE     Set a configuration parameter for test discovery and execution.
+                               This option can be repeated.
+
+REPORTING
+
+      --fail-if-no-tests     Fail and return exit status code 2 if no tests are found.
+      --reports-dir=DIR      Enable report output into a specified local directory (will be
+                               created if it does not exist).
+
+CONSOLE OUTPUT
+
+      --disable-ansi-colors  Disable ANSI colors in output (not supported by all terminals).
+      --color-palette=FILE   Specify a path to a properties file to customize ANSI style of
+                               output (not supported by all terminals).
+      --single-color         Style test output using only text attributes, no color (not
+                               supported by all terminals).
+      --disable-banner       Disable print out of the welcome message.
+      --details=MODE         Select an output details mode for when tests are executed. Use
+                               one of: none, summary, flat, tree, verbose. If 'none' is
+                               selected, then only the summary and test failures are shown.
+                               Default: tree.
+      --details-theme=THEME  Select an output details tree theme for when tests are executed.
+                               Use one of: ascii, unicode. Default is detected based on
+                               default character encoding.
+
+For more information, please refer to the JUnit User Guide at
+https://junit.org/junit5/docs/current/user-guide/
+
+2026-09-11 06:56:53,520 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/Primitives_unwrap_Test.java
+2026-09-11 06:56:53,838 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.Primitives_unwrap_Test
+2026-09-11 06:56:54,836 - evaluations.coverage_test - INFO - return code: 0
+2026-09-11 06:56:54,836 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Primitives_unwrap_Test ✔
+│     ├─ testUnwrap_WrapperType() ✔
+│     ├─ testUnwrap_ArrayTypes() ✔
+│     ├─ testUnwrap_NonWrapperTypes() ✔
+│     ├─ testUnwrap_PrimitiveWrapperTypes() ✔
+│     ├─ testUnwrap_Integer() ✔
+│     └─ testUnwrap_Float() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 470 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:56:55,197 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.Primitives_unwrap_Test#testUnwrap_WrapperType --select-method com.google.gson.internal.Primitives_unwrap_Test#testUnwrap_ArrayTypes --select-method com.google.gson.internal.Primitives_unwrap_Test#testUnwrap_NonWrapperTypes --select-method com.google.gson.internal.Primitives_unwrap_Test#testUnwrap_PrimitiveWrapperTypes --select-method com.google.gson.internal.Primitives_unwrap_Test#testUnwrap_Integer --select-method com.google.gson.internal.Primitives_unwrap_Test#testUnwrap_Float
+2026-09-11 06:56:56,237 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Primitives_unwrap_Test ✔
+│     ├─ testUnwrap_WrapperType() ✔
+│     ├─ testUnwrap_ArrayTypes() ✔
+│     ├─ testUnwrap_NonWrapperTypes() ✔
+│     ├─ testUnwrap_PrimitiveWrapperTypes() ✔
+│     ├─ testUnwrap_Integer() ✔
+│     └─ testUnwrap_Float() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 487 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:56:56,629 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_peek_Test.java
+2026-09-11 06:56:56,937 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_peek_Test
+2026-09-11 06:56:58,143 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:56:58,143 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_peek_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_peek_Test ✔
+│     ├─ testPeekThrowsEOFException() ✘ Expected java.io.EOFException to be thrown, but nothing was thrown.
+│     ├─ testPeekReturnsCorrectToken() ✔
+│     ├─ testPeekThrowsIOException() ✔
+│     └─ testPeekReturnsCorrectTokenFromPeekedNone() ✘ expected: <BEGIN_OBJECT> but was: <NAME>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:JsonReader_peek_Test:testPeekThrowsEOFException()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peek_Test', methodName = 'testPeekThrowsEOFException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.io.EOFException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_peek_Test.testPeekThrowsEOFException(JsonReader_peek_Test.java:62)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:JsonReader_peek_Test:testPeekReturnsCorrectTokenFromPeekedNone()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peek_Test', methodName = 'testPeekReturnsCorrectTokenFromPeekedNone', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <BEGIN_OBJECT> but was: <NAME>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.stream.JsonReader_peek_Test.testPeekReturnsCorrectTokenFromPeekedNone(JsonReader_peek_Test.java:72)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 625 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-11 06:56:58,526 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekReturnsCorrectToken --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekThrowsIOException
+2026-09-11 06:56:59,692 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_peek_Test ✔
+│     ├─ testPeekReturnsCorrectToken() ✔
+│     └─ testPeekThrowsIOException() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 581 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:00,102 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_peekNumber_Test.java
+2026-09-11 06:57:00,418 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_peekNumber_Test
+2026-09-11 06:57:01,521 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:57:01,521 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_peekNumber_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_peekNumber_Test ✔
+│     ├─ testPeekNumberForInvalidNumberFormats() ✘ Expected END_ARRAY but was STRING at line 1 column 14 path $[2]
+│     ├─ testPeekNumberForEdgeCases() ✘ expected: <0> but was: <16>
+│     ├─ testPeekNumberForValidLongNumber() ✔
+│     ├─ testPeekNumber() ✘ expected: <16> but was: <15>
+│     ├─ testPeekNumberForBufferFillingScenarios() ✘ Expected END_ARRAY but was STRING at line 1 column 2 path $[0]
+│     └─ testPeekNumberForValidDoubleNumber() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (4):
+  JUnit Jupiter:JsonReader_peekNumber_Test:testPeekNumberForInvalidNumberFormats()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peekNumber_Test', methodName = 'testPeekNumberForInvalidNumberFormats', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected END_ARRAY but was STRING at line 1 column 14 path $[2]
+       com.google.gson.stream.JsonReader.endArray(JsonReader.java:376)
+       com.google.gson.stream.JsonReader_peekNumber_Test.testPeekNumberForInvalidNumberFormats(JsonReader_peekNumber_Test.java:104)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:JsonReader_peekNumber_Test:testPeekNumberForEdgeCases()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peekNumber_Test', methodName = 'testPeekNumberForEdgeCases', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <0> but was: <16>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       com.google.gson.stream.JsonReader_peekNumber_Test.testPeekNumberForEdgeCases(JsonReader_peekNumber_Test.java:125)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_peekNumber_Test:testPeekNumber()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peekNumber_Test', methodName = 'testPeekNumber', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <16> but was: <15>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       com.google.gson.stream.JsonReader_peekNumber_Test.testPeekNumber(JsonReader_peekNumber_Test.java:57)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_peekNumber_Test:testPeekNumberForBufferFillingScenarios()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peekNumber_Test', methodName = 'testPeekNumberForBufferFillingScenarios', methodParameterTypes = '']
+    => java.lang.IllegalStateException: Expected END_ARRAY but was STRING at line 1 column 2 path $[0]
+       com.google.gson.stream.JsonReader.endArray(JsonReader.java:376)
+       com.google.gson.stream.JsonReader_peekNumber_Test.testPeekNumberForBufferFillingScenarios(JsonReader_peekNumber_Test.java:115)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+
+Test run finished after 509 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         4 tests failed          ]
+
+
+2026-09-11 06:57:01,932 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberForValidLongNumber --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberForValidDoubleNumber
+2026-09-11 06:57:02,973 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_peekNumber_Test ✔
+│     ├─ testPeekNumberForValidLongNumber() ✔
+│     └─ testPeekNumberForValidDoubleNumber() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 488 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:03,332 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_nextUnquotedValue_Test.java
+2026-09-11 06:57:03,631 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_nextUnquotedValue_Test
+2026-09-11 06:57:04,664 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:57:04,664 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_nextUnquotedValue_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_nextUnquotedValue_Test ✔
+│     ├─ testNextUnquotedValue_MultipleNonLiteralCharacters() ✔
+│     ├─ testNextUnquotedValue_SingleCharacterInput() ✔
+│     ├─ testNextUnquotedValue_ValidInputWithWhitespace() ✔
+│     ├─ testNextUnquotedValue_CheckLenientMode() ✔
+│     ├─ testNextUnquotedValue_EmptyBuffer() ✔
+│     ├─ testNextUnquotedValue_BufferWithEscapeSequences() ✘ expected: <escaped\Value> but was: <escaped>
+│     ├─ testNextUnquotedValue_NonLiteralCharacters() ✔
+│     ├─ testNextUnquotedValue_ValidInput() ✔
+│     ├─ testNextUnquotedValue_EdgeCaseWithNewline() ✔
+│     ├─ testNextUnquotedValue_SpecialCharacters() ✔
+│     ├─ testNextUnquotedValue_LongInputWithNonLiteralCharacter() ✔
+│     ├─ testNextUnquotedValue_MixedCharacters() ✔
+│     ├─ testNextUnquotedValue_ExceptionScenarios() ✘ Expected java.io.EOFException to be thrown, but nothing was thrown.
+│     ├─ testNextUnquotedValue() ✔
+│     └─ testNextUnquotedValue_BufferOverflowHandling() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:JsonReader_nextUnquotedValue_Test:testNextUnquotedValue_BufferWithEscapeSequences()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_nextUnquotedValue_Test', methodName = 'testNextUnquotedValue_BufferWithEscapeSequences', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <escaped\Value> but was: <escaped>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.stream.JsonReader_nextUnquotedValue_Test.testNextUnquotedValue_BufferWithEscapeSequences(JsonReader_nextUnquotedValue_Test.java:169)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_nextUnquotedValue_Test:testNextUnquotedValue_ExceptionScenarios()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_nextUnquotedValue_Test', methodName = 'testNextUnquotedValue_ExceptionScenarios', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.io.EOFException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_nextUnquotedValue_Test.testNextUnquotedValue_ExceptionScenarios(JsonReader_nextUnquotedValue_Test.java:214)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+
+Test run finished after 495 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        13 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-11 06:57:05,036 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_MultipleNonLiteralCharacters --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_SingleCharacterInput --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_ValidInputWithWhitespace --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_CheckLenientMode --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_EmptyBuffer --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_NonLiteralCharacters --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_ValidInput --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_EdgeCaseWithNewline --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_SpecialCharacters --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_LongInputWithNonLiteralCharacter --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_MixedCharacters --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue --select-method com.google.gson.stream.JsonReader_nextUnquotedValue_Test#testNextUnquotedValue_BufferOverflowHandling
+2026-09-11 06:57:06,119 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_nextUnquotedValue_Test ✔
+│     ├─ testNextUnquotedValue_MultipleNonLiteralCharacters() ✔
+│     ├─ testNextUnquotedValue_SingleCharacterInput() ✔
+│     ├─ testNextUnquotedValue_ValidInputWithWhitespace() ✔
+│     ├─ testNextUnquotedValue_CheckLenientMode() ✔
+│     ├─ testNextUnquotedValue_EmptyBuffer() ✔
+│     ├─ testNextUnquotedValue_NonLiteralCharacters() ✔
+│     ├─ testNextUnquotedValue_ValidInput() ✔
+│     ├─ testNextUnquotedValue_EdgeCaseWithNewline() ✔
+│     ├─ testNextUnquotedValue_SpecialCharacters() ✔
+│     ├─ testNextUnquotedValue_LongInputWithNonLiteralCharacter() ✔
+│     ├─ testNextUnquotedValue_MixedCharacters() ✔
+│     ├─ testNextUnquotedValue() ✔
+│     └─ testNextUnquotedValue_BufferOverflowHandling() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 504 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        13 tests found           ]
+[         0 tests skipped         ]
+[        13 tests started         ]
+[         0 tests aborted         ]
+[        13 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:06,494 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/LinkedTreeMap_find_Test.java
+2026-09-11 06:57:06,810 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.LinkedTreeMap_find_Test
+2026-09-11 06:57:07,876 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:57:07,876 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.LinkedTreeMap_find_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ LinkedTreeMap_find_Test ✔
+│     ├─ testFindWithNullKeyAndCreateTrue() ✘ java.lang.reflect.InvocationTargetException
+│     ├─ testFindWithCreateFalse() ✔
+│     ├─ testFindExistingKey() ✔
+│     ├─ testFindExistingKeyWithCreateTrueOnEmptyMap() ✔
+│     ├─ testFindWithNullKey() ✘ Expected NullPointerException for null key
+│     ├─ testFindWithNullKeyAndCreateFalse() ✔
+│     ├─ testFindNonExistingKeyWithCreateFalse() ✔
+│     ├─ testFindExistingKeyWithCreateTrue() ✔
+│     ├─ testFindExistingKeyWithCreateFalse() ✔
+│     ├─ testFindNonExistingKeyWithCreateTrue() ✔
+│     ├─ testFindWithCreateTrue() ✔
+│     ├─ testFindNonExistingKey() ✔
+│     ├─ testFindExistingKeyWithCreateFalseOnEmptyMap() ✔
+│     └─ testFindExistingKeyWithDuplicate() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:LinkedTreeMap_find_Test:testFindWithNullKeyAndCreateTrue()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_find_Test', methodName = 'testFindWithNullKeyAndCreateTrue', methodParameterTypes = '']
+    => java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+       com.google.gson.internal.LinkedTreeMap_find_Test.invokeFind(LinkedTreeMap_find_Test.java:34)
+       com.google.gson.internal.LinkedTreeMap_find_Test.testFindWithNullKeyAndCreateTrue(LinkedTreeMap_find_Test.java:112)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.internal.LinkedTreeMap_find_Test.invokeFind(LinkedTreeMap_find_Test.java:32)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "key" is null
+       com.google.gson.internal.LinkedTreeMap.find(LinkedTreeMap.java:187)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_find_Test:testFindWithNullKey()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_find_Test', methodName = 'testFindWithNullKey', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected NullPointerException for null key
+       org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+       org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+       com.google.gson.internal.LinkedTreeMap_find_Test.testFindWithNullKey(LinkedTreeMap_find_Test.java:73)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+
+Test run finished after 506 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        14 tests found           ]
+[         0 tests skipped         ]
+[        14 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-11 06:57:08,261 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindWithCreateFalse --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindExistingKey --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindExistingKeyWithCreateTrueOnEmptyMap --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindWithNullKeyAndCreateFalse --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindNonExistingKeyWithCreateFalse --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindExistingKeyWithCreateTrue --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindExistingKeyWithCreateFalse --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindNonExistingKeyWithCreateTrue --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindWithCreateTrue --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindNonExistingKey --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindExistingKeyWithCreateFalseOnEmptyMap --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindExistingKeyWithDuplicate
+2026-09-11 06:57:09,286 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ LinkedTreeMap_find_Test ✔
+│     ├─ testFindWithCreateFalse() ✔
+│     ├─ testFindExistingKey() ✔
+│     ├─ testFindExistingKeyWithCreateTrueOnEmptyMap() ✔
+│     ├─ testFindWithNullKeyAndCreateFalse() ✔
+│     ├─ testFindNonExistingKeyWithCreateFalse() ✔
+│     ├─ testFindExistingKeyWithCreateTrue() ✔
+│     ├─ testFindExistingKeyWithCreateFalse() ✔
+│     ├─ testFindNonExistingKeyWithCreateTrue() ✔
+│     ├─ testFindWithCreateTrue() ✔
+│     ├─ testFindNonExistingKey() ✔
+│     ├─ testFindExistingKeyWithCreateFalseOnEmptyMap() ✔
+│     └─ testFindExistingKeyWithDuplicate() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 478 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:09,635 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_nextNonWhitespace_Test.java
+2026-09-11 06:57:09,899 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_nextNonWhitespace_Test
+2026-09-11 06:57:10,312 - evaluations.coverage_test - INFO - return code: 2
+2026-09-11 06:57:10,312 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_nextNonWhitespace_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 22 ms
+[         3 containers found      ]
+[         0 containers skipped    ]
+[         3 containers started    ]
+[         0 containers aborted    ]
+[         3 containers successful ]
+[         0 containers failed     ]
+[         0 tests found           ]
+[         0 tests skipped         ]
+[         0 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:10,670 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/Excluder_excludeField_Test.java
+2026-09-11 06:57:10,945 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/com/google/gson/internal/Excluder_excludeField_Test.java:57: error: isSynthetic(int) is not public in Modifier; cannot be accessed from outside package
+                    if (Modifier.isSynthetic(field.getModifiers())) {
+                                ^
+1 error
+
+2026-09-11 06:57:10,946 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java
+2026-09-11 06:57:11,217 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java:10: error: cannot find symbol
+    private Class<T> type;
+                  ^
+  symbol:   class T
+  location: class GenericWithMultiBound
+src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java:16: error: type GenericWithMultiBound does not take parameters
+            GenericWithMultiBound<List<String>> listType = new GenericWithMultiBound<List<String>>((Class<List<String>>) new TypeToken<List<String>>() {
+                                 ^
+src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java:16: error: type GenericWithMultiBound does not take parameters
+            GenericWithMultiBound<List<String>> listType = new GenericWithMultiBound<List<String>>((Class<List<String>>) new TypeToken<List<String>>() {
+                                                                                    ^
+src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java:27: error: type GenericWithMultiBound does not take parameters
+        GenericWithMultiBound<List<String>> listType = new GenericWithMultiBound<List<String>>((Class<List<String>>) new TypeToken<List<String>>() {
+                             ^
+src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java:27: error: type GenericWithMultiBound does not take parameters
+        GenericWithMultiBound<List<String>> listType = new GenericWithMultiBound<List<String>>((Class<List<String>>) new TypeToken<List<String>>() {
+                                                                                ^
+Note: src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+5 errors
+
+2026-09-11 06:57:11,218 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/Primitives_wrap_Test.java
+2026-09-11 06:57:11,531 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.Primitives_wrap_Test
+2026-09-11 06:57:12,580 - evaluations.coverage_test - INFO - return code: 0
+2026-09-11 06:57:12,580 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Primitives_wrap_Test ✔
+│     ├─ testWrapByte() ✔
+│     ├─ testWrapChar() ✔
+│     ├─ testWrapList() ✔
+│     ├─ testWrapLong() ✔
+│     ├─ testWrapNull() ✔
+│     ├─ testWrapVoid() ✔
+│     ├─ testWrapIntArray() ✔
+│     ├─ testWrapBoolean() ✔
+│     ├─ testWrapStringArray() ✔
+│     ├─ testWrapFloat() ✔
+│     ├─ testWrapShort() ✔
+│     ├─ testWrapInt() ✔
+│     ├─ testWrapMap() ✔
+│     ├─ testWrapIntegerClass() ✔
+│     ├─ testWrapDouble() ✔
+│     ├─ testWrapObject() ✔
+│     └─ testWrapNonPrimitive() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 493 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[        17 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:12,935 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapByte --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapChar --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapList --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapLong --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapNull --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapVoid --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapIntArray --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapBoolean --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapStringArray --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapFloat --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapShort --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapInt --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapMap --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapIntegerClass --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapDouble --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapObject --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapNonPrimitive
+2026-09-11 06:57:13,960 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Primitives_wrap_Test ✔
+│     ├─ testWrapByte() ✔
+│     ├─ testWrapChar() ✔
+│     ├─ testWrapList() ✔
+│     ├─ testWrapLong() ✔
+│     ├─ testWrapNull() ✔
+│     ├─ testWrapVoid() ✔
+│     ├─ testWrapIntArray() ✔
+│     ├─ testWrapBoolean() ✔
+│     ├─ testWrapStringArray() ✔
+│     ├─ testWrapFloat() ✔
+│     ├─ testWrapShort() ✔
+│     ├─ testWrapInt() ✔
+│     ├─ testWrapMap() ✔
+│     ├─ testWrapIntegerClass() ✔
+│     ├─ testWrapDouble() ✔
+│     ├─ testWrapObject() ✔
+│     └─ testWrapNonPrimitive() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 488 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[        17 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:14,324 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/LinkedTreeMap_rebalance_Test.java
+2026-09-11 06:57:14,633 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/com/google/gson/internal/LinkedTreeMap_rebalance_Test.java:15: error: cannot find symbol
+    private Node<String, String> unbalancedNode;
+            ^
+  symbol:   class Node
+  location: class LinkedTreeMap_rebalance_Test
+src/test/java/com/google/gson/internal/LinkedTreeMap_rebalance_Test.java:33: error: cannot find symbol
+    private void invokeRebalance(Node<String, String> node, boolean insert) {
+                                 ^
+  symbol:   class Node
+  location: class LinkedTreeMap_rebalance_Test
+2 errors
+
+2026-09-11 06:57:14,635 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory_getBoundFields_Test.java
+2026-09-11 06:57:14,957 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory_getBoundFields_Test.java:101: error: unreported exception Throwable; must be caught or declared to be thrown
+            throw e.getCause();
+            ^
+Note: src/test/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory_getBoundFields_Test.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 error
+
+2026-09-11 06:57:14,959 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/bind/ObjectTypeAdapter_read_Test.java
+2026-09-11 06:57:15,288 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.bind.ObjectTypeAdapter_read_Test
+2026-09-11 06:57:16,401 - evaluations.coverage_test - INFO - return code: 0
+2026-09-11 06:57:16,401 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ObjectTypeAdapter_read_Test ✔
+│     ├─ testReadWithJsonArrayInput() ✔
+│     ├─ testReadWithJsonArrayOfMixedTypes() ✔
+│     ├─ testReadWithEmptyJsonInput() ✔
+│     ├─ testReadWithInvalidJsonInput() ✔
+│     ├─ testReadWithDeeplyNestedJsonStructure() ✔
+│     ├─ testReadWithJsonObjectWithNullValues() ✔
+│     ├─ testRead() ✔
+│     ├─ testReadWithTerminalJsonValues() ✔
+│     ├─ testReadWithJsonObjectWithEmptyArray() ✔
+│     ├─ testReadWithNestedJsonStructure() ✔
+│     ├─ testReadWithStackOverflowDueToExcessiveNesting() ✔
+│     ├─ testReadWithNullJsonReader() ✔
+│     ├─ testReadWithJsonObjectWithNestedArrays() ✔
+│     ├─ testReadWithUnexpectedToken() ✔
+│     └─ testReadWithJsonObjectInput() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 562 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:16,806 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithJsonArrayInput --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithJsonArrayOfMixedTypes --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithEmptyJsonInput --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithInvalidJsonInput --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithDeeplyNestedJsonStructure --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithJsonObjectWithNullValues --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithTerminalJsonValues --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithJsonObjectWithEmptyArray --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithNestedJsonStructure --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithStackOverflowDueToExcessiveNesting --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithNullJsonReader --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithJsonObjectWithNestedArrays --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithUnexpectedToken --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testReadWithJsonObjectInput
+2026-09-11 06:57:17,905 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ObjectTypeAdapter_read_Test ✔
+│     ├─ testReadWithJsonArrayInput() ✔
+│     ├─ testReadWithJsonArrayOfMixedTypes() ✔
+│     ├─ testReadWithEmptyJsonInput() ✔
+│     ├─ testReadWithInvalidJsonInput() ✔
+│     ├─ testReadWithDeeplyNestedJsonStructure() ✔
+│     ├─ testReadWithJsonObjectWithNullValues() ✔
+│     ├─ testRead() ✔
+│     ├─ testReadWithTerminalJsonValues() ✔
+│     ├─ testReadWithJsonObjectWithEmptyArray() ✔
+│     ├─ testReadWithNestedJsonStructure() ✔
+│     ├─ testReadWithStackOverflowDueToExcessiveNesting() ✔
+│     ├─ testReadWithNullJsonReader() ✔
+│     ├─ testReadWithJsonObjectWithNestedArrays() ✔
+│     ├─ testReadWithUnexpectedToken() ✔
+│     └─ testReadWithJsonObjectInput() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 547 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:18,274 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/$Gson$Types_getGenericSupertype_Test.java
+2026-09-11 06:57:18,624 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.$Gson$Types_getGenericSupertype_Test
+2026-09-11 06:57:19,664 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:57:19,664 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.$Gson$Types_getGenericSupertype_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_getGenericSupertype_Test ✔
+│     ├─ testGetGenericSupertype_RawTypeSubclassOfSupertype() ✘ expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.List<E>>
+│     ├─ testGetGenericSupertype_RawTypeImplementsSupertype() ✔
+│     ├─ testGetGenericSupertype_ContextIsNullRawTypeValidSupertypeValid() ✘ expected: <java.lang.String> but was: <null>
+│     ├─ testGetGenericSupertype_SupertypeSameAsRawType() ✔
+│     ├─ testGetGenericSupertype_RawTypeDoesNotImplementSupertype() ✔
+│     ├─ testGetGenericSupertype_ContextAndRawTypeAreNull() ✘ Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+│     ├─ testGetGenericSupertype_RawTypeImplementsListSupertype() ✘ expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.List<E>>
+│     ├─ testGetGenericSupertype_AllObject() ✔
+│     ├─ testGetGenericSupertype_AllParametersNull() ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+│     ├─ testGetGenericSupertype_RawTypeSubclassOfSupertypeWithDifferentType() ✔
+│     ├─ testGetGenericSupertype_RawTypeSubclassOfCollectionSupertypeAgain() ✘ expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.Collection<E>>
+│     ├─ testGetGenericSupertype() ✘ expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.List<E>>
+│     ├─ testGetGenericSupertype_ContextIsNullRawTypeValid() ✘ expected: <java.util.List> but was: <java.util.List<E>>
+│     ├─ testGetGenericSupertype_RawTypeSubclassOfInterfaceSupertype() ✘ expected: <java.util.HashMap<java.lang.String, java.lang.String>> but was: <java.util.Map<K, V>>
+│     ├─ testGetGenericSupertype_ContextIsNull() ✔
+│     ├─ testGetGenericSupertype_RawTypeSubclassOfSerializableSupertype() ✘ expected: <java.util.HashMap<java.lang.String, java.lang.String>> but was: <java.io.Serializable>
+│     ├─ testGetGenericSupertype_RawTypeSubclassOfCollectionSupertype() ✘ expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.Collection<E>>
+│     ├─ testGetGenericSupertype_SupertypeIsNull() ✘ Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+│     ├─ testGetGenericSupertype_SupertypeIsNullWithValidContextAndRawType() ✘ Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+│     └─ testGetGenericSupertype_ContextAndRawTypeAreNullButSupertypeValid() ✘ Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (14):
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_RawTypeSubclassOfSupertype()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_RawTypeSubclassOfSupertype', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.List<E>>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_RawTypeSubclassOfSupertype($Gson$Types_getGenericSupertype_Test.java:70)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_ContextIsNullRawTypeValidSupertypeValid()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_ContextIsNullRawTypeValidSupertypeValid', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.lang.String> but was: <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_ContextIsNullRawTypeValidSupertypeValid($Gson$Types_getGenericSupertype_Test.java:214)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_ContextAndRawTypeAreNull()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_ContextAndRawTypeAreNull', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_ContextAndRawTypeAreNull($Gson$Types_getGenericSupertype_Test.java:115)
+       [...]
+     Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.invokeGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:43)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.lambda$testGetGenericSupertype_ContextAndRawTypeAreNull$0($Gson$Types_getGenericSupertype_Test.java:115)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.invokeGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:41)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Class.isInterface()" because "rawType" is null
+       com.google.gson.internal.$Gson$Types.getGenericSupertype($Gson$Types.java:259)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_RawTypeImplementsListSupertype()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_RawTypeImplementsListSupertype', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.List<E>>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_RawTypeImplementsListSupertype($Gson$Types_getGenericSupertype_Test.java:152)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_AllParametersNull()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_AllParametersNull', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_AllParametersNull($Gson$Types_getGenericSupertype_Test.java:197)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_RawTypeSubclassOfCollectionSupertypeAgain()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_RawTypeSubclassOfCollectionSupertypeAgain', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.Collection<E>>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_RawTypeSubclassOfCollectionSupertypeAgain($Gson$Types_getGenericSupertype_Test.java:189)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.List<E>>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:51)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_ContextIsNullRawTypeValid()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_ContextIsNullRawTypeValid', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.util.List> but was: <java.util.List<E>>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_ContextIsNullRawTypeValid($Gson$Types_getGenericSupertype_Test.java:161)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_RawTypeSubclassOfInterfaceSupertype()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_RawTypeSubclassOfInterfaceSupertype', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.util.HashMap<java.lang.String, java.lang.String>> but was: <java.util.Map<K, V>>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_RawTypeSubclassOfInterfaceSupertype($Gson$Types_getGenericSupertype_Test.java:80)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_RawTypeSubclassOfSerializableSupertype()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_RawTypeSubclassOfSerializableSupertype', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.util.HashMap<java.lang.String, java.lang.String>> but was: <java.io.Serializable>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_RawTypeSubclassOfSerializableSupertype($Gson$Types_getGenericSupertype_Test.java:171)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_RawTypeSubclassOfCollectionSupertype()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_RawTypeSubclassOfCollectionSupertype', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <java.util.ArrayList<java.lang.String>> but was: <java.util.Collection<E>>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_RawTypeSubclassOfCollectionSupertype($Gson$Types_getGenericSupertype_Test.java:142)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_SupertypeIsNull()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_SupertypeIsNull', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_SupertypeIsNull($Gson$Types_getGenericSupertype_Test.java:123)
+       [...]
+     Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.invokeGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:43)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.lambda$testGetGenericSupertype_SupertypeIsNull$1($Gson$Types_getGenericSupertype_Test.java:123)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.invokeGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:41)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Class.isInterface()" because "supertype" is null
+       com.google.gson.internal.$Gson$Types.getGenericSupertype($Gson$Types.java:247)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_SupertypeIsNullWithValidContextAndRawType()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_SupertypeIsNullWithValidContextAndRawType', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_SupertypeIsNullWithValidContextAndRawType($Gson$Types_getGenericSupertype_Test.java:205)
+       [...]
+     Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.invokeGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:43)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.lambda$testGetGenericSupertype_SupertypeIsNullWithValidContextAndRawType$4($Gson$Types_getGenericSupertype_Test.java:205)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.invokeGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:41)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Class.isInterface()" because "supertype" is null
+       com.google.gson.internal.$Gson$Types.getGenericSupertype($Gson$Types.java:247)
+       [...]
+  JUnit Jupiter:$Gson$Types_getGenericSupertype_Test:testGetGenericSupertype_ContextAndRawTypeAreNullButSupertypeValid()
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_getGenericSupertype_Test', methodName = 'testGetGenericSupertype_ContextAndRawTypeAreNullButSupertypeValid', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.testGetGenericSupertype_ContextAndRawTypeAreNullButSupertypeValid($Gson$Types_getGenericSupertype_Test.java:179)
+       [...]
+     Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.invokeGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:43)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.lambda$testGetGenericSupertype_ContextAndRawTypeAreNullButSupertypeValid$2($Gson$Types_getGenericSupertype_Test.java:179)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.internal.$Gson$Types_getGenericSupertype_Test.invokeGetGenericSupertype($Gson$Types_getGenericSupertype_Test.java:41)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Class.getInterfaces()" because "rawType" is null
+       com.google.gson.internal.$Gson$Types.getGenericSupertype($Gson$Types.java:248)
+       [...]
+
+Test run finished after 493 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        20 tests found           ]
+[         0 tests skipped         ]
+[        20 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[        14 tests failed          ]
+
+
+2026-09-11 06:57:20,018 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertype_RawTypeImplementsSupertype --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertype_SupertypeSameAsRawType --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertype_RawTypeDoesNotImplementSupertype --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertype_AllObject --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertype_RawTypeSubclassOfSupertypeWithDifferentType --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertype_ContextIsNull
+2026-09-11 06:57:21,075 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_getGenericSupertype_Test ✔
+│     ├─ testGetGenericSupertype_RawTypeImplementsSupertype() ✔
+│     ├─ testGetGenericSupertype_SupertypeSameAsRawType() ✔
+│     ├─ testGetGenericSupertype_RawTypeDoesNotImplementSupertype() ✔
+│     ├─ testGetGenericSupertype_AllObject() ✔
+│     ├─ testGetGenericSupertype_RawTypeSubclassOfSupertypeWithDifferentType() ✔
+│     └─ testGetGenericSupertype_ContextIsNull() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 511 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:21,449 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_readEscapeCharacter_Test.java
+2026-09-11 06:57:21,770 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_readEscapeCharacter_Test
+2026-09-11 06:57:22,830 - evaluations.coverage_test - INFO - return code: 1
+2026-09-11 06:57:22,830 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_readEscapeCharacter_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_readEscapeCharacter_Test ✔
+│     ├─ testReadEscapeCharacter_SingleQuote() ✔
+│     ├─ testReadEscapeCharacter_Invalid() ✔
+│     ├─ testReadEscapeCharacter_DoubleQuote() ✔
+│     ├─ testReadEscapeCharacter_BufferHandling() ✘ Unexpected exception type thrown, expected: <java.io.IOException> but was: <java.lang.NumberFormatException>
+│     ├─ testReadEscapeCharacter_UniCode() ✔
+│     ├─ testReadEscapeCharacter_UnicodeEscapeSequences() ✘ Failed to invoke readEscapeCharacter
+│     ├─ testReadEscapeCharacter_ValidEscapeSequences() ✘ Failed to invoke readEscapeCharacter
+│     ├─ testReadEscapeCharacter_InvalidEscapeSequences() ✔
+│     └─ testReadEscapeCharacter_Backslash() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:JsonReader_readEscapeCharacter_Test:testReadEscapeCharacter_BufferHandling()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_readEscapeCharacter_Test', methodName = 'testReadEscapeCharacter_BufferHandling', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.io.IOException> but was: <java.lang.NumberFormatException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.testReadEscapeCharacter_BufferHandling(JsonReader_readEscapeCharacter_Test.java:166)
+       [...]
+     Caused by: java.lang.NumberFormatException: \u004"
+       com.google.gson.stream.JsonReader.readEscapeCharacter(JsonReader.java:1617)
+       com.google.gson.stream.JsonReader.nextQuotedValue(JsonReader.java:1027)
+       com.google.gson.stream.JsonReader.nextString(JsonReader.java:826)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.readEscapeCharacterFromJson(JsonReader_readEscapeCharacter_Test.java:37)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.lambda$testReadEscapeCharacter_BufferHandling$6(JsonReader_readEscapeCharacter_Test.java:168)
+       [...]
+  JUnit Jupiter:JsonReader_readEscapeCharacter_Test:testReadEscapeCharacter_UnicodeEscapeSequences()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_readEscapeCharacter_Test', methodName = 'testReadEscapeCharacter_UnicodeEscapeSequences', methodParameterTypes = '']
+    => java.io.IOException: Failed to invoke readEscapeCharacter
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.invokePrivateReadEscapeCharacter(JsonReader_readEscapeCharacter_Test.java:48)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.readEscapeCharacterFromJson(JsonReader_readEscapeCharacter_Test.java:38)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.testReadEscapeCharacter_UnicodeEscapeSequences(JsonReader_readEscapeCharacter_Test.java:129)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.invokePrivateReadEscapeCharacter(JsonReader_readEscapeCharacter_Test.java:46)
+       [...]
+     Caused by: com.google.gson.stream.MalformedJsonException: Invalid escape sequence at line 1 column 11 path $[1]
+       com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1659)
+       com.google.gson.stream.JsonReader.readEscapeCharacter(JsonReader.java:1650)
+       [...]
+  JUnit Jupiter:JsonReader_readEscapeCharacter_Test:testReadEscapeCharacter_ValidEscapeSequences()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_readEscapeCharacter_Test', methodName = 'testReadEscapeCharacter_ValidEscapeSequences', methodParameterTypes = '']
+    => java.io.IOException: Failed to invoke readEscapeCharacter
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.invokePrivateReadEscapeCharacter(JsonReader_readEscapeCharacter_Test.java:48)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.readEscapeCharacterFromJson(JsonReader_readEscapeCharacter_Test.java:38)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.testReadEscapeCharacter_ValidEscapeSequences(JsonReader_readEscapeCharacter_Test.java:108)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.invokePrivateReadEscapeCharacter(JsonReader_readEscapeCharacter_Test.java:46)
+       [...]
+     Caused by: com.google.gson.stream.MalformedJsonException: Invalid escape sequence at line 1 column 7 path $[1]
+       com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1659)
+       com.google.gson.stream.JsonReader.readEscapeCharacter(JsonReader.java:1650)
+       [...]
+
+Test run finished after 499 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         9 tests found           ]
+[         0 tests skipped         ]
+[         9 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-11 06:57:23,170 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_readEscapeCharacter_Test#testReadEscapeCharacter_SingleQuote --select-method com.google.gson.stream.JsonReader_readEscapeCharacter_Test#testReadEscapeCharacter_Invalid --select-method com.google.gson.stream.JsonReader_readEscapeCharacter_Test#testReadEscapeCharacter_DoubleQuote --select-method com.google.gson.stream.JsonReader_readEscapeCharacter_Test#testReadEscapeCharacter_UniCode --select-method com.google.gson.stream.JsonReader_readEscapeCharacter_Test#testReadEscapeCharacter_InvalidEscapeSequences --select-method com.google.gson.stream.JsonReader_readEscapeCharacter_Test#testReadEscapeCharacter_Backslash
+2026-09-11 06:57:24,203 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_readEscapeCharacter_Test ✔
+│     ├─ testReadEscapeCharacter_SingleQuote() ✔
+│     ├─ testReadEscapeCharacter_Invalid() ✔
+│     ├─ testReadEscapeCharacter_DoubleQuote() ✔
+│     ├─ testReadEscapeCharacter_UniCode() ✔
+│     ├─ testReadEscapeCharacter_InvalidEscapeSequences() ✔
+│     └─ testReadEscapeCharacter_Backslash() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 483 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-11 06:57:24,601 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java
+2026-09-11 06:57:24,911 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java:29: error: TypeVariableImpl is not abstract and does not override abstract method getGenericDeclaration() in TypeVariable
+    private static class TypeVariableImpl implements TypeVariable<Class<?>> {
+                   ^
+src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java:48: error: getGenericDeclaration() in TypeVariableImpl cannot implement getGenericDeclaration() in TypeVariable
+        public GenericDeclaration getGenericDeclaration() {
+                                  ^
+  return type GenericDeclaration is not compatible with Class<?>
+  where D is a type-variable:
+    D extends GenericDeclaration declared in interface TypeVariable
+src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java:47: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java:135: error: incompatible types: Class<CAP#1> cannot be converted to GenericArrayType
+        GenericArrayType stringArrayA = (GenericArrayType) java.lang.reflect.Array.newInstance(String.class, 0).getClass().getComponentType();
+                                                                                                                                           ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java:136: error: incompatible types: Class<CAP#1> cannot be converted to GenericArrayType
+        GenericArrayType stringArrayB = (GenericArrayType) java.lang.reflect.Array.newInstance(String.class, 0).getClass().getComponentType();
+                                                                                                                                           ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java:143: error: incompatible types: Class<CAP#1> cannot be converted to GenericArrayType
+        GenericArrayType stringArray = (GenericArrayType) java.lang.reflect.Array.newInstance(String.class, 0).getClass().getComponentType();
+                                                                                                                                          ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java:144: error: incompatible types: Class<CAP#1> cannot be converted to GenericArrayType
+        GenericArrayType integerArray = (GenericArrayType) java.lang.reflect.Array.newInstance(Integer.class, 0).getClass().getComponentType();
+                                                                                                                                            ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+7 errors
+
+2026-09-11 06:57:24,911 - evaluations.coverage_test - INFO - {'com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class<? super T>)': {'test_cases': 18, 'passed_cases': 15}, 'com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)': {'test_cases': 8, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'com.google.gson.stream.JsonReader#doPeek()': {'test_cases': 16, 'passed_cases': 3}, 'com.google.gson.stream.JsonReader#skipValue()': {'test_cases': 18, 'passed_cases': 8}, 'com.google.gson.internal.bind.JsonTreeReader#peek()': {'error_type': 'execution error'}, 'com.google.gson.internal.Primitives#unwrap(Class<T>)': {'test_cases': 6, 'passed_cases': 6}, 'com.google.gson.stream.JsonReader#peek()': {'test_cases': 4, 'passed_cases': 2}, 'com.google.gson.stream.JsonReader#peekNumber()': {'test_cases': 6, 'passed_cases': 2}, 'com.google.gson.stream.JsonReader#nextUnquotedValue()': {'test_cases': 15, 'passed_cases': 13}, 'com.google.gson.internal.LinkedTreeMap#find(K, boolean)': {'test_cases': 14, 'passed_cases': 12}, 'com.google.gson.stream.JsonReader#nextNonWhitespace(boolean)': {'test_cases': 0, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'com.google.gson.internal.Excluder#excludeField(Field, boolean)': {'error_type': 'compile error'}, 'com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)': {'error_type': 'compile error'}, 'com.google.gson.internal.Primitives#wrap(Class<T>)': {'test_cases': 17, 'passed_cases': 17}, 'com.google.gson.internal.LinkedTreeMap#rebalance(Node<K, V>, boolean)': {'error_type': 'compile error'}, 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)': {'error_type': 'compile error'}, 'com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)': {'test_cases': 15, 'passed_cases': 15}, 'com.google.gson.internal.$Gson$Types#getGenericSupertype(Type, Class<?>, Class<?>)': {'test_cases': 20, 'passed_cases': 6}, 'com.google.gson.stream.JsonReader#readEscapeCharacter()': {'test_cases': 9, 'passed_cases': 6}, 'com.google.gson.internal.$Gson$Types#equals(Type, Type)': {'error_type': 'compile error'}}
+2026-09-11 06:57:24,911 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ConstructorConstructor_newDefaultImplementationConstructor/com.google.gson.internal/ConstructorConstructor.html, method: newDefaultImplementationConstructor(Type, Class<? super T>)
+2026-09-11 06:57:24,916 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ConstructorConstructor_newDefaultImplementationConstructor_correct/com.google.gson.internal/ConstructorConstructor.html, method: newDefaultImplementationConstructor(Type, Class<? super T>)
+2026-09-11 06:57:24,918 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_resolve/com.google.gson.internal/$Gson$Types.html, method: resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)
+2026-09-11 06:57:24,922 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_doPeek/com.google.gson.stream/JsonReader.html, method: doPeek()
+2026-09-11 06:57:24,927 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_doPeek_correct/com.google.gson.stream/JsonReader.html, method: doPeek()
+2026-09-11 06:57:24,933 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_skipValue/com.google.gson.stream/JsonReader.html, method: skipValue()
+2026-09-11 06:57:24,938 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_skipValue_correct/com.google.gson.stream/JsonReader.html, method: skipValue()
+2026-09-11 06:57:24,944 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/Primitives_unwrap/com.google.gson.internal/Primitives.html, method: unwrap(Class<T>)
+2026-09-11 06:57:24,946 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/Primitives_unwrap_correct/com.google.gson.internal/Primitives.html, method: unwrap(Class<T>)
+2026-09-11 06:57:24,947 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_peek/com.google.gson.stream/JsonReader.html, method: peek()
+2026-09-11 06:57:24,955 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_peek_correct/com.google.gson.stream/JsonReader.html, method: peek()
+2026-09-11 06:57:24,960 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_peekNumber/com.google.gson.stream/JsonReader.html, method: peekNumber()
+2026-09-11 06:57:24,965 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_peekNumber_correct/com.google.gson.stream/JsonReader.html, method: peekNumber()
+2026-09-11 06:57:24,970 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_nextUnquotedValue/com.google.gson.stream/JsonReader.html, method: nextUnquotedValue()
+2026-09-11 06:57:24,975 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_nextUnquotedValue_correct/com.google.gson.stream/JsonReader.html, method: nextUnquotedValue()
+2026-09-11 06:57:24,981 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/LinkedTreeMap_find/com.google.gson.internal/LinkedTreeMap.html, method: find(K, boolean)
+2026-09-11 06:57:24,984 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/LinkedTreeMap_find_correct/com.google.gson.internal/LinkedTreeMap.html, method: find(K, boolean)
+2026-09-11 06:57:24,987 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_nextNonWhitespace/com.google.gson.stream/JsonReader.html, method: nextNonWhitespace(boolean)
+2026-09-11 06:57:24,993 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/Primitives_wrap/com.google.gson.internal/Primitives.html, method: wrap(Class<T>)
+2026-09-11 06:57:24,995 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/Primitives_wrap_correct/com.google.gson.internal/Primitives.html, method: wrap(Class<T>)
+2026-09-11 06:57:24,998 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ObjectTypeAdapter_read/com.google.gson.internal.bind/ObjectTypeAdapter.html, method: read(JsonReader)
+2026-09-11 06:57:25,000 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ObjectTypeAdapter_read_correct/com.google.gson.internal.bind/ObjectTypeAdapter.html, method: read(JsonReader)
+2026-09-11 06:57:25,001 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_getGenericSupertype/com.google.gson.internal/$Gson$Types.html, method: getGenericSupertype(Type, Class<?>, Class<?>)
+2026-09-11 06:57:25,006 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_getGenericSupertype_correct/com.google.gson.internal/$Gson$Types.html, method: getGenericSupertype(Type, Class<?>, Class<?>)
+2026-09-11 06:57:25,009 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_readEscapeCharacter/com.google.gson.stream/JsonReader.html, method: readEscapeCharacter()
+2026-09-11 06:57:25,014 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_readEscapeCharacter_correct/com.google.gson.stream/JsonReader.html, method: readEscapeCharacter()
+2026-09-11 06:57:25,019 - evaluations.coverage_test - INFO - report data:
+{'com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class<? super T>)': {'test_cases': 18, 'passed_cases': 15, 'inst_cov': 0.97, 'bran_cov': 0.95, 'correct_inst_cov': 0.48, 'correct_bran_cov': 0.45}, 'com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)': {'test_cases': 8, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.0, 'bran_cov': 0.0}, 'com.google.gson.stream.JsonReader#doPeek()': {'test_cases': 16, 'passed_cases': 3, 'inst_cov': 0.54, 'bran_cov': 0.46, 'correct_inst_cov': 0.39, 'correct_bran_cov': 0.33}, 'com.google.gson.stream.JsonReader#skipValue()': {'test_cases': 18, 'passed_cases': 8, 'inst_cov': 0.59, 'bran_cov': 0.52, 'correct_inst_cov': 0.52, 'correct_bran_cov': 0.48}, 'com.google.gson.internal.bind.JsonTreeReader#peek()': {'error_type': 'execution error', 'test_cases': 14, 'passed_cases': 0}, 'com.google.gson.internal.Primitives#unwrap(Class<T>)': {'test_cases': 6, 'passed_cases': 6, 'inst_cov': 1.0, 'bran_cov': 1.0, 'correct_inst_cov': 1.0, 'correct_bran_cov': 1.0}, 'com.google.gson.stream.JsonReader#peek()': {'test_cases': 4, 'passed_cases': 4, 'inst_cov': 0.52, 'bran_cov': 0.38, 'correct_inst_cov': 0.52, 'correct_bran_cov': 0.38}, 'com.google.gson.stream.JsonReader#peekNumber()': {'test_cases': 6, 'passed_cases': 2, 'inst_cov': 0.86, 'bran_cov': 0.68, 'correct_inst_cov': 0.68, 'correct_bran_cov': 0.43}, 'com.google.gson.stream.JsonReader#nextUnquotedValue()': {'test_cases': 15, 'passed_cases': 15, 'inst_cov': 0.58, 'bran_cov': 0.53, 'correct_inst_cov': 0.58, 'correct_bran_cov': 0.53}, 'com.google.gson.internal.LinkedTreeMap#find(K, boolean)': {'test_cases': 14, 'passed_cases': 12, 'inst_cov': 0.64, 'bran_cov': 0.63, 'correct_inst_cov': 0.64, 'correct_bran_cov': 0.59}, 'com.google.gson.stream.JsonReader#nextNonWhitespace(boolean)': {'test_cases': 0, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.0, 'bran_cov': 0.0}, 'com.google.gson.internal.Excluder#excludeField(Field, boolean)': {'error_type': 'compile error', 'test_cases': 8, 'passed_cases': 0}, 'com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)': {'error_type': 'compile error', 'test_cases': 1, 'passed_cases': 0}, 'com.google.gson.internal.Primitives#wrap(Class<T>)': {'test_cases': 17, 'passed_cases': 17, 'inst_cov': 0.0, 'bran_cov': 0.0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'com.google.gson.internal.LinkedTreeMap#rebalance(Node<K, V>, boolean)': {'error_type': 'compile error', 'test_cases': 8, 'passed_cases': 0}, 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)': {'error_type': 'compile error', 'test_cases': 12, 'passed_cases': 0}, 'com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)': {'test_cases': 15, 'passed_cases': 15, 'inst_cov': 1.0, 'bran_cov': 1.0, 'correct_inst_cov': 1.0, 'correct_bran_cov': 1.0}, 'com.google.gson.internal.$Gson$Types#getGenericSupertype(Type, Class<?>, Class<?>)': {'test_cases': 20, 'passed_cases': 6, 'inst_cov': 0.8, 'bran_cov': 0.66, 'correct_inst_cov': 0.67, 'correct_bran_cov': 0.61}, 'com.google.gson.stream.JsonReader#readEscapeCharacter()': {'test_cases': 9, 'passed_cases': 6, 'inst_cov': 0.61, 'bran_cov': 0.48, 'correct_inst_cov': 0.6, 'correct_bran_cov': 0.38}, 'com.google.gson.internal.$Gson$Types#equals(Type, Type)': {'error_type': 'compile error', 'test_cases': 12, 'passed_cases': 0}, 'compile_pass_rate': 0.8144796380090498, 'execution_pass_rate': 0.49321266968325794, 'average_instruction_coverage': 0.40549999999999997, 'average_branch_coverage': 0.36449999999999994, 'average_correct_instruction_coverage': 0.354, 'average_correct_branch_coverage': 0.309}
