@@ -1,0 +1,207 @@
+[
+  {
+    "group": "get method with delegateMap",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "someKey"
+          }
+        ],
+        "expected": "value returned by delegateMap.get(someKey)",
+        "description": "Test case when delegateMap is not null. The method should return the value associated with the key from the delegateMap."
+      }
+    ]
+  },
+  {
+    "group": "get method with null key and size conditions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": "value1",
+        "description": "Test case when key is null and size is 1. The method should return value1 as key1 is also null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": "value2",
+        "description": "Test case when key is null and size is 2. The method should return value2 if key2 is null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": "value3",
+        "description": "Test case when key is null and size is 3. The method should return value3 if key3 is null."
+      }
+    ]
+  },
+  {
+    "group": "get method with non-null key and size conditions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "key1"
+          }
+        ],
+        "expected": "value1",
+        "description": "Test case when key is non-null and size is 1, and key1 matches key. The method should return value1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "key2"
+          }
+        ],
+        "expected": "value2",
+        "description": "Test case when key is non-null and size is 2, and key2 matches key. The method should return value2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "key3"
+          }
+        ],
+        "expected": "value3",
+        "description": "Test case when key is non-null and size is 3, and key3 matches key. The method should return value3."
+      }
+    ]
+  },
+  {
+    "group": "get method with non-matching key",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "nonExistingKey"
+          }
+        ],
+        "expected": null,
+        "description": "Test case when key does not match any of the keys in the map. The method should return null."
+      }
+    ]
+  },
+  {
+    "group": "get method with empty map",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": null,
+        "description": "Test case when the map is empty and key is null. The method should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "someKey"
+          }
+        ],
+        "expected": null,
+        "description": "Test case when the map is empty and key is non-null. The method should return null."
+      }
+    ]
+  },
+  {
+    "group": "get method with null key and multiple size conditions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": "null",
+        "description": "Test case when key is null and size is 0. The method should return null as there are no entries."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": "value3",
+        "description": "Test case when key is null and size is 3. The method should return value3 if key3 is null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": "value2",
+        "description": "Test case when key is null and size is 2. The method should return value2 if key2 is null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": "value1",
+        "description": "Test case when key is null and size is 1. The method should return value1 if key1 is null."
+      }
+    ]
+  },
+  {
+    "group": "get method with non-matching key and size conditions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "someOtherKey"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case when key does not match any of the keys in the map and size is 1. The method should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "someOtherKey"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case when key does not match any of the keys in the map and size is 2. The method should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "someOtherKey"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case when key does not match any of the keys in the map and size is 3. The method should return null."
+      }
+    ]
+  }
+]

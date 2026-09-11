@@ -1,0 +1,232 @@
+[
+  {
+    "group": "higherEntry - Root is empty",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": null,
+        "description": "Test when root is empty and key is null. Should return null."
+      }
+    ]
+  },
+  {
+    "group": "higherEntry - Root is not empty",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "someKey"
+          }
+        ],
+        "expected": "nextEntry(root)",
+        "description": "Test when root is not empty and key is provided. Should return the next entry after the root."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "anotherKey"
+          }
+        ],
+        "expected": null,
+        "description": "Test when root is not empty and key is not greater than any existing keys. Should return null."
+      }
+    ]
+  },
+  {
+    "group": "higherEntry - Key length checks",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": ""
+          }
+        ],
+        "expected": "firstEntry()",
+        "description": "Test when the key length is 0. Should return the first entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "validKey"
+          }
+        ],
+        "expected": "nextEntry(found)",
+        "description": "Test when a valid key is given that is found in the trie. Should return the next entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithNoHigherEntry"
+          }
+        ],
+        "expected": null,
+        "description": "Test when a key is provided that does not have any higher entry in the trie. Should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyAtMaxLength"
+          }
+        ],
+        "expected": "nextEntry(found)",
+        "description": "Test when a key at the maximum valid length is provided. Should return the next entry if it exists."
+      }
+    ]
+  },
+  {
+    "group": "higherEntry - Bit index checks",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithValidBitIndex"
+          }
+        ],
+        "expected": "nextEntry(added)",
+        "description": "Test when a key with a valid bit index is added. Should return the next entry after adding the entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithNullBitIndex"
+          }
+        ],
+        "expected": "firstEntry()",
+        "description": "Test when a key with a null bit index is provided. Should return the first entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithEqualBitIndex"
+          }
+        ],
+        "expected": "nextEntry(found)",
+        "description": "Test when a key that has an equal bit index to an existing key is provided. Should return the next entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithNegativeBitIndex"
+          }
+        ],
+        "expected": null,
+        "description": "Test when a key with a negative bit index is provided. Should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithBitIndexGreaterThanMax"
+          }
+        ],
+        "expected": "nextEntry(added)",
+        "description": "Test when a key with a bit index greater than the maximum is added. Should return the next entry after adding the entry."
+      }
+    ]
+  },
+  {
+    "group": "higherEntry - IllegalStateException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "invalidKey"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Test when a key leads to an invalid lookup state. Should throw an IllegalStateException."
+      }
+    ]
+  },
+  {
+    "group": "higherEntry - Root is empty with size 1",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "someKey"
+          }
+        ],
+        "expected": null,
+        "description": "Test when root is empty but size is 1. Should return null as there are no higher entries."
+      }
+    ]
+  },
+  {
+    "group": "higherEntry - Edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          }
+        ],
+        "expected": "firstEntry()",
+        "description": "Test when the key is null. Should return the first entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithSpecialCharacters!@#"
+          }
+        ],
+        "expected": "nextEntry(found)",
+        "description": "Test when a key with special characters is provided. Should return the next entry if it exists."
+      }
+    ]
+  },
+  {
+    "group": "higherEntry - Exception Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "invalidKey"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Test when a key leads to an invalid lookup state. Should throw an IllegalStateException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithNegativeBitIndex"
+          }
+        ],
+        "expected": "null",
+        "description": "Test when a key with a negative bit index is provided. Should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithBitIndexGreaterThanMax"
+          }
+        ],
+        "expected": "nextEntry(added)",
+        "description": "Test when a key with a bit index greater than the maximum is added. Should return the next entry after adding the entry."
+      }
+    ]
+  }
+]

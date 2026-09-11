@@ -1,0 +1,222 @@
+{
+    "testCases": [
+        {
+            "group": "nextEntryImpl - Traversing Left - Edge Cases",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "null"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "TrieEntry(key='b', value='valueB', bitIndex=1)",
+                    "description": "Test case where the left child is valid and should be returned."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='b', value='valueB', bitIndex=1)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "null",
+                    "description": "Test case where the previous entry is the left child and should not be returned."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='e', value='valueE', bitIndex=4)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "TrieEntry(key='b', value='valueB', bitIndex=1)",
+                    "description": "Test case where previous entry is not part of the tree, should return the left child."
+                }
+            ]
+        },
+        {
+            "group": "nextEntryImpl - Handling Empty Node - Edge Cases",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='b', value='valueB', bitIndex=1)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "null",
+                    "description": "Test case where current node is empty, should return null."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "null"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "null",
+                    "description": "Test case where the tree is empty, should return null."
+                }
+            ]
+        },
+        {
+            "group": "nextEntryImpl - Traversing Right - Edge Cases",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='c', value='valueC', bitIndex=2)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "TrieEntry(key='d', value='valueD', bitIndex=3)",
+                    "description": "Test case where the right child is valid and should be returned."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='d', value='valueD', bitIndex=3)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "null",
+                    "description": "Test case where the previous entry is the right child and should not be returned."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='f', value='valueF', bitIndex=5)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "TrieEntry(key='d', value='valueD', bitIndex=3)",
+                    "description": "Test case where previous entry is not part of the tree, should return the right child."
+                }
+            ]
+        },
+        {
+            "group": "nextEntryImpl - Parent Traversal - Edge Cases",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='b', value='valueB', bitIndex=1)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)",
+                    "description": "Test case where we traverse up to find a valid parent entry."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='c', value='valueC', bitIndex=2)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "null",
+                    "description": "Test case where we cannot find a valid entry while traversing up."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "start",
+                            "value": "TrieEntry(key='b', value='valueB', bitIndex=1)"
+                        },
+                        {
+                            "parameter": "previous",
+                            "value": "TrieEntry(key='a', value='valueA', bitIndex=0)"
+                        },
+                        {
+                            "parameter": "tree",
+                            "value": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)"
+                        }
+                    ],
+                    "expected": "TrieEntry(key='root', value='valueRoot', bitIndex=-1)",
+                    "description": "Test case where we traverse up from a child to find the root."
+                }
+            ]
+        }
+    ]
+}

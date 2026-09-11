@@ -1,0 +1,315 @@
+[
+  {
+    "group": "put method - key is null",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "someValue"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the key is null. Expecting a NullPointerException to be thrown."
+      }
+    ]
+  },
+  {
+    "group": "put method - key length is zero",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": ""
+          },
+          {
+            "parameter": "value",
+            "value": "someValue"
+          }
+        ],
+        "expected": "someValue",
+        "description": "Test case where the key has zero length. If the root is empty, it should store the key-value pair."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": ""
+          },
+          {
+            "parameter": "value",
+            "value": "anotherValue"
+          }
+        ],
+        "expected": "anotherValue",
+        "description": "Test case where the key has zero length and the root is not empty. Expecting the method to update the value at the root."
+      }
+    ]
+  },
+  {
+    "group": "put method - key found and empty",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "existingKey"
+          },
+          {
+            "parameter": "value",
+            "value": "newValue"
+          }
+        ],
+        "expected": "newValue",
+        "description": "Test case where the key exists but is empty. Expecting the method to store the new key-value pair and increment size."
+      }
+    ]
+  },
+  {
+    "group": "put method - key found and not empty",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "existingKey"
+          },
+          {
+            "parameter": "value",
+            "value": "updatedValue"
+          }
+        ],
+        "expected": "updatedValue",
+        "description": "Test case where the key exists and is not empty. Expecting the method to update the value and increment mod count."
+      }
+    ]
+  },
+  {
+    "group": "put method - new key with valid bit index",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "newKey"
+          },
+          {
+            "parameter": "value",
+            "value": "newValue"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where a new key is added with a valid bit index. Expecting the method to add the entry and return null."
+      }
+    ]
+  },
+  {
+    "group": "put method - new key with null bit key",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithNullBit"
+          },
+          {
+            "parameter": "value",
+            "value": "value"
+          }
+        ],
+        "expected": "value",
+        "description": "Test case where a new key is added with a null bit key. Expecting the method to store the key-value pair at the root."
+      }
+    ]
+  },
+  {
+    "group": "put method - new key with equal bit key",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithEqualBit"
+          },
+          {
+            "parameter": "value",
+            "value": "value"
+          }
+        ],
+        "expected": "value",
+        "description": "Test case where a new key is added with an equal bit key but not at the root. Expecting the method to update the value."
+      }
+    ]
+  },
+  {
+    "group": "put method - invalid bit index",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "invalidKey"
+          },
+          {
+            "parameter": "value",
+            "value": "value"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where an invalid bit index is encountered. Expecting an IllegalArgumentException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithInvalidBitIndex"
+          },
+          {
+            "parameter": "value",
+            "value": "value"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where an invalid bit index is encountered. Expecting an IllegalArgumentException to be thrown."
+      }
+    ]
+  },
+  {
+    "group": "put method - key with non-empty value",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "nonEmptyKey"
+          },
+          {
+            "parameter": "value",
+            "value": "valueForNonEmptyKey"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where a non-empty key is added with a non-empty value. Expecting the method to add the entry and return null."
+      }
+    ]
+  },
+  {
+    "group": "put method - key with duplicate value",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "duplicateKey"
+          },
+          {
+            "parameter": "value",
+            "value": "duplicateValue"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where a key that already exists is added with the same value. Expecting the method to return null."
+      }
+    ]
+  },
+  {
+    "group": "put method - key with special characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "!@#$%^&*()"
+          },
+          {
+            "parameter": "value",
+            "value": "valueWithSpecialChars"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where a key with special characters is added. Expecting the method to add the entry and return null."
+      }
+    ]
+  },
+  {
+    "group": "put method - key with long string",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "aVeryLongKeyStringThatExceedsNormalLength"
+          },
+          {
+            "parameter": "value",
+            "value": "longValue"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where a very long key string is added. Expecting the method to add the entry and return null."
+      }
+    ]
+  },
+  {
+    "group": "put method - key found and updated with a new value",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "existingKey"
+          },
+          {
+            "parameter": "value",
+            "value": "updatedValueAgain"
+          }
+        ],
+        "expected": "updatedValueAgain",
+        "description": "Test case where an existing key is updated with a new value. Expecting the method to update the value and return the new value."
+      }
+    ]
+  },
+  {
+    "group": "put method - key with empty string value",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithEmptyValue"
+          },
+          {
+            "parameter": "value",
+            "value": ""
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where a key is added with an empty string value. Expecting the method to add the entry and return null."
+      }
+    ]
+  },
+  {
+    "group": "put method - key found with equal bit key but not root",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithEqualBit"
+          },
+          {
+            "parameter": "value",
+            "value": "updatedValue"
+          }
+        ],
+        "expected": "updatedValue",
+        "description": "Test case where a key is found with an equal bit key but not at the root. Expecting the method to update the value."
+      }
+    ]
+  }
+]
