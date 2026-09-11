@@ -1,0 +1,4 @@
+{
+  "parameters in constructors and focal method": "class `com.apple.spark.operator.SparkApplication`:\nconstructor:\n```java\n```",
+  "invoke examples of focal method": "example 1:\n```java\n  public void copyFrom(\n      SparkApplication sparkApplicationResource,\n      AppConfig.SparkCluster sparkCluster,\n      AppConfig appConfig) {\n    this.copyFrom(sparkApplicationResource);\n  }\n```"
+}

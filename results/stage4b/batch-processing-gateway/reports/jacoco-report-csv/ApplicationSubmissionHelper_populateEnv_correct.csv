@@ -1,0 +1,117 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+JaCoCo Coverage Report,com.apple.spark.clients.sparkhistory,GetJobEnvironmentResponse,66,0,8,0,21,0,10,0,6,0
+JaCoCo Coverage Report,com.apple.spark.operator,NodeSelectorOperator,56,0,0,0,11,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.operator,ObjectFieldSelector,16,0,0,0,7,0,4,0,4,0
+JaCoCo Coverage Report,com.apple.spark.operator,ExecutorSpec,25,16,2,0,9,7,5,2,4,2
+JaCoCo Coverage Report,com.apple.spark.operator,VolumeMount,40,0,0,0,17,0,10,0,10,0
+JaCoCo Coverage Report,com.apple.spark.operator,NodeSelectorRequirement,36,0,0,0,15,0,8,0,8,0
+JaCoCo Coverage Report,com.apple.spark.operator,IngressTLS,31,0,0,0,11,0,6,0,6,0
+JaCoCo Coverage Report,com.apple.spark.operator,EnvVarSource,16,0,0,0,7,0,4,0,4,0
+JaCoCo Coverage Report,com.apple.spark.operator,SparkApplicationResourceList,3,0,0,0,1,0,1,0,1,0
+JaCoCo Coverage Report,com.apple.spark.operator,NodeAffinity,38,0,0,0,17,0,8,0,8,0
+JaCoCo Coverage Report,com.apple.spark.operator,Affinity,16,0,0,0,7,0,4,0,4,0
+JaCoCo Coverage Report,com.apple.spark.operator,PreferredSchedulingTerm,26,0,0,0,11,0,6,0,6,0
+JaCoCo Coverage Report,com.apple.spark.operator,HostPathVolumeSource,26,0,0,0,11,0,6,0,6,0
+JaCoCo Coverage Report,com.apple.spark.operator,SecurityContext,24,0,0,0,10,0,7,0,7,0
+JaCoCo Coverage Report,com.apple.spark.operator,ConfigMapVolumeSource,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.operator,BatchSchedulerConfiguration,27,0,0,0,11,0,7,0,7,0
+JaCoCo Coverage Report,com.apple.spark.operator,PrometheusSpec,31,0,0,0,13,0,9,0,9,0
+JaCoCo Coverage Report,com.apple.spark.operator,Volume,33,0,0,0,14,0,8,0,8,0
+JaCoCo Coverage Report,com.apple.spark.operator,SparkUIConfiguration,75,0,6,0,22,0,11,0,8,0
+JaCoCo Coverage Report,com.apple.spark.operator,ApplicationState,17,0,0,0,7,0,5,0,5,0
+JaCoCo Coverage Report,com.apple.spark.operator,EnvVar,30,19,0,0,13,7,6,3,6,3
+JaCoCo Coverage Report,com.apple.spark.operator,SparkPodSpec,213,18,18,0,70,8,38,5,29,5
+JaCoCo Coverage Report,com.apple.spark.operator,DriverInfo,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.operator,RestartPolicy,38,0,0,0,16,0,11,0,11,0
+JaCoCo Coverage Report,com.apple.spark.operator,SparkApplication,17,0,0,0,7,0,5,0,5,0
+JaCoCo Coverage Report,com.apple.spark.operator,SparkApplicationSpec,168,17,0,0,72,7,48,5,48,5
+JaCoCo Coverage Report,com.apple.spark.operator,DriverSpec,26,9,0,0,10,4,5,1,5,1
+JaCoCo Coverage Report,com.apple.spark.operator,DynamicAllocation,38,0,0,0,16,0,11,0,11,0
+JaCoCo Coverage Report,com.apple.spark.operator,MonitoringSpec,38,0,0,0,16,0,11,0,11,0
+JaCoCo Coverage Report,com.apple.spark.operator,SparkApplicationSpec.Builder,198,0,14,0,57,0,31,0,24,0
+JaCoCo Coverage Report,com.apple.spark.operator,Dependencies,52,0,0,0,22,0,15,0,15,0
+JaCoCo Coverage Report,com.apple.spark.operator,NodeSelectorTerm,16,0,0,0,7,0,4,0,4,0
+JaCoCo Coverage Report,com.apple.spark.operator,RequiredDuringSchedulingIgnoredDuringExecutionTerm,16,0,0,0,7,0,4,0,4,0
+JaCoCo Coverage Report,com.apple.spark.operator,SparkApplicationStatus,45,0,0,0,19,0,13,0,13,0
+JaCoCo Coverage Report,com.apple.spark.api,SubmissionStatus,141,0,16,0,44,0,24,0,16,0
+JaCoCo Coverage Report,com.apple.spark.api,SubmitApplicationRequest,154,17,0,0,66,7,44,5,44,5
+JaCoCo Coverage Report,com.apple.spark.api,GetSubmissionStatusResponse,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.api,GetMySubmissionsResponse,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.api,DeleteSubmissionResponse,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.api,UploadS3Response,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.api,SubmissionSummary,402,0,38,0,134,0,53,0,34,0
+JaCoCo Coverage Report,com.apple.spark.api,HealthcheckResponse,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.api,SubmitApplicationResponse,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.api,GetDriverInfoResponse,17,0,0,0,7,0,5,0,5,0
+JaCoCo Coverage Report,com.apple.spark.health,BPGHealthCheck,25,0,4,0,8,0,5,0,3,0
+JaCoCo Coverage Report,com.apple.spark.util,JwtUtils,44,0,0,0,17,0,4,0,4,0
+JaCoCo Coverage Report,com.apple.spark.util,CounterMetricContainer,60,0,2,0,15,0,5,0,4,0
+JaCoCo Coverage Report,com.apple.spark.util,TimerMetricContainer,85,0,2,0,20,0,8,0,7,0
+JaCoCo Coverage Report,com.apple.spark.util,KubernetesClusterAndNamespace,68,0,10,0,14,0,11,0,6,0
+JaCoCo Coverage Report,com.apple.spark.util,DateTimeUtils,37,0,4,0,9,0,6,0,4,0
+JaCoCo Coverage Report,com.apple.spark.util,ConfigUtil,205,0,10,0,51,0,14,0,9,0
+JaCoCo Coverage Report,com.apple.spark.util,MetricId,89,0,16,0,18,0,15,0,7,0
+JaCoCo Coverage Report,com.apple.spark.util,VersionInfo,32,0,0,0,11,0,8,0,8,0
+JaCoCo Coverage Report,com.apple.spark.util,HttpUtils,429,0,24,0,84,0,31,0,19,0
+JaCoCo Coverage Report,com.apple.spark.util,CustomSerDe,73,0,10,0,19,0,8,0,3,0
+JaCoCo Coverage Report,com.apple.spark.util,ExceptionUtils,74,0,8,0,23,0,12,0,8,0
+JaCoCo Coverage Report,com.apple.spark.util,GaugeMetricContainer,60,0,2,0,13,0,5,0,4,0
+JaCoCo Coverage Report,com.apple.spark.util,EndAwareInputStream,150,0,8,0,38,0,23,0,19,0
+JaCoCo Coverage Report,com.apple.spark.security,UserUnauthorizedHandler,27,0,0,0,5,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.security,UserNameAuthFilter.Builder,7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.security,UserNameAuthFilter,40,0,4,0,11,0,4,0,2,0
+JaCoCo Coverage Report,com.apple.spark.security,UserNameBasicAuthenticator,60,0,10,0,11,0,8,0,3,0
+JaCoCo Coverage Report,com.apple.spark.security,User,9,0,0,0,4,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.rest,HealthcheckRest,37,0,0,0,8,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark.rest,RestBase,326,0,18,0,90,0,21,0,12,0
+JaCoCo Coverage Report,com.apple.spark.rest,ApplicationGetLogRest.new RestStreamingOutput() {...},180,0,10,0,43,0,7,0,2,0
+JaCoCo Coverage Report,com.apple.spark.rest,AdminRest.new RestStreamingOutput() {...},33,0,0,0,11,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.rest,CloudStorageRest,427,0,18,0,97,0,15,0,6,0
+JaCoCo Coverage Report,com.apple.spark.rest,ApplicationSubmissionRest.new CacheLoader() {...},84,0,2,0,18,0,3,0,2,0
+JaCoCo Coverage Report,com.apple.spark.rest,AdminRest.new RestSubmissionsStreamingOutput() {...},64,0,2,0,15,0,3,0,2,0
+JaCoCo Coverage Report,com.apple.spark.rest,AdminRest.new RestSubmissionsStreamingOutput() {...},58,0,2,0,14,0,3,0,2,0
+JaCoCo Coverage Report,com.apple.spark.rest,ApplicationSubmissionRest.new RestStreamingOutput() {...},139,0,4,0,27,0,4,0,2,0
+JaCoCo Coverage Report,com.apple.spark.rest,ApplicationGetLogRest,472,0,48,0,128,0,31,0,7,0
+JaCoCo Coverage Report,com.apple.spark.rest,AdminRest,93,0,4,0,19,0,8,0,6,0
+JaCoCo Coverage Report,com.apple.spark.rest,GetSubmissionStatusResponseCacheValue,33,0,0,0,12,0,5,0,5,0
+JaCoCo Coverage Report,com.apple.spark.rest,ApplicationSubmissionRest,1634,0,122,0,381,0,83,0,22,0
+JaCoCo Coverage Report,com.apple.spark.rest,AwsConstants,6,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.rest,CloudStorageRest.new ProgressListener() {...},58,0,2,0,12,0,3,0,2,0
+JaCoCo Coverage Report,com.apple.spark,AppConfig.QueueTokenConfig,10,0,0,0,4,0,3,0,3,0
+JaCoCo Coverage Report,com.apple.spark,AppConfig.DBStorage,35,0,0,0,14,0,10,0,10,0
+JaCoCo Coverage Report,com.apple.spark,BPGApplication,362,0,22,0,80,0,20,0,9,0
+JaCoCo Coverage Report,com.apple.spark,BPGApplication.new TimerTask() {...},26,0,0,0,6,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark,AppConfig.SparkCluster,184,17,8,0,65,7,50,5,46,5
+JaCoCo Coverage Report,com.apple.spark,AppConfig,205,0,18,0,69,0,55,0,46,0
+JaCoCo Coverage Report,com.apple.spark,AppConfig.SparkImage,24,0,0,0,10,0,7,0,7,0
+JaCoCo Coverage Report,com.apple.spark,AppConfig.QueueConfig,139,0,4,0,48,0,33,0,31,0
+JaCoCo Coverage Report,com.apple.spark,BuildInfo,43,0,2,0,16,0,3,0,2,0
+JaCoCo Coverage Report,com.apple.spark.tools,LoadTest,470,0,32,0,112,0,21,0,5,0
+JaCoCo Coverage Report,com.apple.spark.tools,DeleteApplications,148,0,4,0,34,0,8,0,6,0
+JaCoCo Coverage Report,com.apple.spark.tools,SparkClusterTest,195,0,18,0,45,0,11,0,2,0
+JaCoCo Coverage Report,com.apple.spark.tools,QueueTokenGenerator,126,0,20,0,34,0,13,0,3,0
+JaCoCo Coverage Report,com.apple.spark.tools,LoadTest.TestApplicationInfo,96,0,4,0,28,0,17,0,15,0
+JaCoCo Coverage Report,com.apple.spark.core,RunningApplicationMonitor.new TimerTask() {...},16,0,0,0,6,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.core,ApplicationUpdateEvent,27,0,0,0,10,0,5,0,5,0
+JaCoCo Coverage Report,com.apple.spark.core,SparkClusterHelper,296,0,28,0,72,0,26,0,12,0
+JaCoCo Coverage Report,com.apple.spark.core,ApplicationSubmissionHelper,1521,122,238,22,348,25,165,8,41,2
+JaCoCo Coverage Report,com.apple.spark.core,SparkConstants,19,19,6,0,4,6,5,1,2,1
+JaCoCo Coverage Report,com.apple.spark.core,RunningApplicationMonitor.RunningAppInfo,33,0,2,0,8,0,6,0,5,0
+JaCoCo Coverage Report,com.apple.spark.core,BPGStatsdConfig,80,0,8,0,21,0,12,0,8,0
+JaCoCo Coverage Report,com.apple.spark.core,RestStreamingOutput,14,0,0,0,4,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.core,LogDao,1393,0,48,0,312,0,59,0,35,0
+JaCoCo Coverage Report,com.apple.spark.core,ApplicationMonitor.new ResourceEventHandler() {...},62,0,2,0,16,0,5,0,4,0
+JaCoCo Coverage Report,com.apple.spark.core,KubernetesHelper,542,0,86,0,125,0,58,0,15,0
+JaCoCo Coverage Report,com.apple.spark.core,Constants,118,0,0,0,25,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.core,ConfigValue,374,0,38,0,70,0,23,0,4,0
+JaCoCo Coverage Report,com.apple.spark.core,QueueTokenVerifier,232,0,32,0,48,0,19,0,3,0
+JaCoCo Coverage Report,com.apple.spark.core,InvalidSubmissionIdException,9,0,0,0,4,0,2,0,2,0
+JaCoCo Coverage Report,com.apple.spark.core,ThrowableExceptionMapper,72,0,2,0,21,0,4,0,3,0
+JaCoCo Coverage Report,com.apple.spark.core,RestSubmissionsStreamingOutput,47,0,6,0,15,0,5,0,2,0
+JaCoCo Coverage Report,com.apple.spark.core,SparkSpecHelper,9,47,1,5,2,9,2,3,1,1
+JaCoCo Coverage Report,com.apple.spark.core,ApplicationMonitor,711,0,60,0,198,0,39,0,9,0
+JaCoCo Coverage Report,com.apple.spark.core,NamespaceAndName,79,0,10,0,19,0,14,0,9,0
+JaCoCo Coverage Report,com.apple.spark.core,DBConnection,116,0,8,0,33,0,10,0,6,0
+JaCoCo Coverage Report,com.apple.spark.core,BatchSchedulerConstants,3,0,0,0,1,0,1,0,1,0
+JaCoCo Coverage Report,com.apple.spark.core,SparkApplicationResourceHelper,17,0,4,0,4,0,4,0,2,0
+JaCoCo Coverage Report,com.apple.spark.core,RunningApplicationMonitor,453,0,40,0,107,0,31,0,11,0

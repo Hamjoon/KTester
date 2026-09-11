@@ -1,0 +1,545 @@
+[
+  {
+    "group": "copyFrom - Basic Functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app1",
+                "labels": {
+                  "proxyUser": "user1",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG1"
+                  },
+                  "memory": "2g",
+                  "cores": 2
+                },
+                "executor": {
+                  "cores": 2,
+                  "instances": 3,
+                  "memory": "4g"
+                },
+                "sparkVersion": "3.0.0",
+                "arguments": [
+                  "arg1",
+                  "arg2"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "MyApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method with complete and valid SparkApplication input."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom - Null Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app2",
+                "labels": null
+              },
+              "spec": {
+                "driver": {
+                  "labels": null,
+                  "memory": null,
+                  "cores": null
+                },
+                "executor": {
+                  "cores": null,
+                  "instances": null,
+                  "memory": null
+                },
+                "sparkVersion": null,
+                "arguments": null,
+                "sparkConf": null
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method when labels and all spec fields are null."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom - Exception Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app3",
+                "labels": {
+                  "proxyUser": "user2",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG2"
+                  },
+                  "memory": "invalid_memory",
+                  "cores": 2
+                },
+                "executor": {
+                  "cores": 2,
+                  "instances": 3,
+                  "memory": "4g"
+                },
+                "sparkVersion": "3.0.0",
+                "arguments": [
+                  "arg1",
+                  "arg2"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "MyApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method with invalid driver memory format to check exception handling."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app9",
+                "labels": {
+                  "proxyUser": "user7",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG6"
+                  },
+                  "memory": "invalid_memory_format",
+                  "cores": 2
+                },
+                "executor": {
+                  "cores": 2,
+                  "instances": 3,
+                  "memory": "4g"
+                },
+                "sparkVersion": "3.0.0",
+                "arguments": [
+                  "arg1",
+                  "arg2"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "MyApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method with invalid driver memory format to check exception handling."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app10",
+                "labels": {
+                  "proxyUser": "user8",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG7"
+                  },
+                  "memory": null,
+                  "cores": 2
+                },
+                "executor": {
+                  "cores": 2,
+                  "instances": 3,
+                  "memory": "4g"
+                },
+                "sparkVersion": "3.0.0",
+                "arguments": [
+                  "arg1",
+                  "arg2"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "MyApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method when driver memory is null to verify handling of missing values."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app11",
+                "labels": {
+                  "proxyUser": "user9",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG8"
+                  },
+                  "memory": "2g",
+                  "cores": null
+                },
+                "executor": {
+                  "cores": null,
+                  "instances": 3,
+                  "memory": "4g"
+                },
+                "sparkVersion": "3.0.0",
+                "arguments": [
+                  "arg1",
+                  "arg2"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "MyApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method when driver cores are null to verify handling of missing values."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app12",
+                "labels": {
+                  "proxyUser": "user10",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG9"
+                  },
+                  "memory": "2g",
+                  "cores": 2
+                },
+                "executor": {
+                  "cores": 2,
+                  "instances": null,
+                  "memory": "4g"
+                },
+                "sparkVersion": "3.0.0",
+                "arguments": [
+                  "arg1",
+                  "arg2"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "MyApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method when executor instances are null to verify handling of missing values."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app13",
+                "labels": {
+                  "proxyUser": "user11",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG10"
+                  },
+                  "memory": "2g",
+                  "cores": 2
+                },
+                "executor": {
+                  "cores": 2,
+                  "instances": 3,
+                  "memory": null
+                },
+                "sparkVersion": "3.0.0",
+                "arguments": [
+                  "arg1",
+                  "arg2"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "MyApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method when executor memory is null to verify handling of missing values."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom - Conditional Branches",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app4",
+                "labels": {
+                  "proxyUser": null,
+                  "queue": null
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": null
+                  },
+                  "memory": "1g",
+                  "cores": 1
+                },
+                "executor": {
+                  "cores": 1,
+                  "instances": 1,
+                  "memory": "1g"
+                },
+                "sparkVersion": null,
+                "arguments": null,
+                "sparkConf": {
+                  "spark.app.name": null
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method with null user, queue, dagName, and app name to verify conditional branches."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom - Valid Input with All Fields",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app5",
+                "labels": {
+                  "proxyUser": "user3",
+                  "queue": "high-priority"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG3"
+                  },
+                  "memory": "3g",
+                  "cores": 4
+                },
+                "executor": {
+                  "cores": 4,
+                  "instances": 2,
+                  "memory": "5g"
+                },
+                "sparkVersion": "3.1.0",
+                "arguments": [
+                  "arg3",
+                  "arg4"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "AnotherApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method with valid SparkApplication input including all fields."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom - Edge Case for Memory and Cores",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app6",
+                "labels": {
+                  "proxyUser": "user4",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG4"
+                  },
+                  "memory": "0g",
+                  "cores": 0
+                },
+                "executor": {
+                  "cores": 0,
+                  "instances": 0,
+                  "memory": "0g"
+                },
+                "sparkVersion": "3.1.0",
+                "arguments": [],
+                "sparkConf": {
+                  "spark.app.name": "ZeroApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method with zero values for memory and cores for driver and executor."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom - Handling Missing DAG Name",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app7",
+                "labels": {
+                  "proxyUser": "user5",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": null
+                  },
+                  "memory": "2g",
+                  "cores": 2
+                },
+                "executor": {
+                  "cores": 2,
+                  "instances": 3,
+                  "memory": "4g"
+                },
+                "sparkVersion": "3.1.0",
+                "arguments": [
+                  "arg5"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "AppWithNoDAG"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method with a null DAG name to verify handling of missing labels."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom - Handling Large Input Values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": {
+              "metadata": {
+                "name": "app8",
+                "labels": {
+                  "proxyUser": "user6",
+                  "queue": "default"
+                }
+              },
+              "spec": {
+                "driver": {
+                  "labels": {
+                    "dagName": "DAG5"
+                  },
+                  "memory": "100g",
+                  "cores": 32
+                },
+                "executor": {
+                  "cores": 32,
+                  "instances": 10,
+                  "memory": "64g"
+                },
+                "sparkVersion": "3.1.0",
+                "arguments": [
+                  "arg6",
+                  "arg7"
+                ],
+                "sparkConf": {
+                  "spark.app.name": "LargeResourceApp"
+                }
+              }
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test the copyFrom method with large values for memory and cores to verify system handling."
+      }
+    ]
+  }
+]
