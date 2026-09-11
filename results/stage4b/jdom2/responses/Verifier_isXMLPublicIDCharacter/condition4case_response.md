@@ -1,0 +1,139 @@
+{
+    "test cases": [
+        {
+            "group": "isXMLPublicIDCharacter",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "a"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with a lowercase letter 'a', which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "Z"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with an uppercase letter 'Z', which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "!"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with the character '!', which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": " "
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with a space character, which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "1"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with a digit '1', which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "'"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with the character ''', which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "\n"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with a newline character, which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "?"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with the character '?', which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": ">"
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test with the character '>', which is not a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "&"
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test with the character '&', which is not a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "0"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with the character '0', which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "%"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test with the character '%', which is a valid XML Public ID character."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "c",
+                            "value": "}"
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test with the character '}', which is not a valid XML Public ID character."
+                }
+            ]
+        }
+    ]
+}

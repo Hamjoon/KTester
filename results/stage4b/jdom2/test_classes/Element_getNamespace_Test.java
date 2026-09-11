@@ -1,0 +1,149 @@
+package org.jdom2;
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import static org.junit.jupiter.api.Assertions.*;
+import org.mockito.*;
+import static org.mockito.Mockito.*;
+import org.mockito.junit.jupiter.MockitoExtension;
+import java.util.Collections;
+
+@ExtendWith(MockitoExtension.class)
+class Element_getNamespace_Test {
+
+    private Element element;
+
+    private Namespace namespace;
+
+    @BeforeEach
+    void setupBeforeEach() {
+        // Initialize the element and namespace before each test
+        // Use factory method
+        namespace = Namespace.getNamespace("ns", "http://example.com/ns");
+        element = new Element("exampleElement", namespace);
+    }
+
+    @AfterEach
+    void teardownAfterEach() {
+        // Cleanup after each test, if needed
+        element = null;
+        namespace = null;
+    }
+
+    @Test
+    void testGetNamespaceWithNullPrefix() {
+        String prefix = null;
+        Namespace result = element.getNamespace(prefix);
+        assertNull(result, "Expected null for null prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithXmlPrefix() {
+        String prefix = JDOMConstants.NS_PREFIX_XML;
+        Namespace result = element.getNamespace(prefix);
+        assertEquals(Namespace.XML_NAMESPACE, result, "Expected XML namespace for xml prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithValidPrefix() {
+        String prefix = "ns";
+        Namespace result = element.getNamespace(prefix);
+        assertEquals(namespace, result, "Expected the correct namespace for the given prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithInvalidPrefix() {
+        String prefix = "invalidPrefix";
+        Namespace result = element.getNamespace(prefix);
+        assertNull(result, "Expected null for an invalid prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithElementPrefix() {
+        String prefix = "ns";
+        element.setNamespace(namespace);
+        Namespace result = element.getNamespace(prefix);
+        assertEquals(namespace, result, "Expected the correct namespace for the element's prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithAdditionalNamespace() {
+        // Use factory method
+        Namespace additionalNamespace = Namespace.getNamespace("additionalNamespacePrefix", "http://example.com/additional");
+        element.addNamespaceDeclaration(additionalNamespace);
+        String prefix = "additionalNamespacePrefix";
+        Namespace result = element.getNamespace(prefix);
+        assertEquals(additionalNamespace, result, "Expected the corresponding namespace for additional prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithAttributeNamespace() {
+        // Use factory method
+        Attribute attribute = new Attribute("attr", "value", Namespace.getNamespace("attributeNamespacePrefix", "http://example.com/attr"));
+        element.setAttributes(Collections.singletonList(attribute));
+        String prefix = "attributeNamespacePrefix";
+        Namespace result = element.getNamespace(prefix);
+        assertEquals(attribute.getNamespace(), result, "Expected the corresponding namespace for attribute prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithParentElementPrefix() {
+        // Use factory method
+        Element parentElement = new Element("parentElement", Namespace.getNamespace("parentNamespace", "http://example.com/parent"));
+        element.setParent(parentElement);
+        String prefix = "parentNamespace";
+        Namespace result = element.getNamespace(prefix);
+        assertEquals(parentElement.getNamespace(), result, "Expected the parent's namespace for the prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithNonExistentPrefix() {
+        String prefix = "nonExistentPrefix";
+        Namespace result = element.getNamespace(prefix);
+        assertNull(result, "Expected null for a non-existent prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithEmptyPrefix() {
+        String prefix = "";
+        Namespace result = element.getNamespace(prefix);
+        assertNull(result, "Expected null for an empty prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithDefaultNamespace() {
+        // Use factory method
+        Namespace defaultNamespace = Namespace.getNamespace("defaultNamespace", "http://example.com/default");
+        element.addNamespaceDeclaration(defaultNamespace);
+        String prefix = "defaultNamespace";
+        Namespace result = element.getNamespace(prefix);
+        assertEquals(defaultNamespace, result, "Expected the corresponding namespace for default prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithAnotherAdditionalNamespace() {
+        // Use factory method
+        Namespace anotherAdditionalNamespace = Namespace.getNamespace("anotherAdditionalNamespacePrefix", "http://example.com/another");
+        element.addNamespaceDeclaration(anotherAdditionalNamespace);
+        String prefix = "anotherAdditionalNamespacePrefix";
+        Namespace result = element.getNamespace(prefix);
+        assertEquals(anotherAdditionalNamespace, result, "Expected the corresponding namespace for another additional prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithNonMatchingParentPrefix() {
+        // Use factory method
+        Element parentElement = new Element("parentElement", Namespace.getNamespace("parentNamespace", "http://example.com/parent"));
+        element.setParent(parentElement);
+        String prefix = "nonMatchingParentPrefix";
+        Namespace result = element.getNamespace(prefix);
+        assertNull(result, "Expected null for a non-matching parent prefix");
+    }
+
+    @Test
+    void testGetNamespaceWithNotDeclaredPrefix() {
+        String prefix = "notDeclaredPrefix";
+        Namespace result = element.getNamespace(prefix);
+        assertNull(result, "Expected null for a not declared prefix");
+    }
+}

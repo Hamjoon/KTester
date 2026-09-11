@@ -1,0 +1,421 @@
+[
+  {
+    "group": "Test printDocument with omitted declaration",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithOmitDeclaration"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithRootElement"
+          }
+        ],
+        "expected": "StartDocument event with no declaration",
+        "description": "Test case where the format stack omits the declaration, ensuring that the start document event is created without a declaration."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with omitted encoding",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithOmitEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithRootElement"
+          }
+        ],
+        "expected": "StartDocument event with version 1.0 and no encoding",
+        "description": "Test case where the format stack omits the encoding, ensuring that the start document event is created with version 1.0 and no encoding."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with default encoding",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithRootElement"
+          }
+        ],
+        "expected": "StartDocument event with specified encoding and version 1.0",
+        "description": "Test case where the format stack provides a default encoding, ensuring that the start document event is created with the specified encoding."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with empty document",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedEmptyDocument"
+          }
+        ],
+        "expected": "Empty content list processed without errors",
+        "description": "Test case with an empty document, ensuring that the method handles the empty content list without throwing exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with various content types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithMultipleContentTypes"
+          }
+        ],
+        "expected": "All content types processed correctly",
+        "description": "Test case with a document containing various content types (comments, elements, processing instructions), ensuring that each type is processed correctly."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with no root element",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithoutRootElement"
+          }
+        ],
+        "expected": "Empty content list processed without errors",
+        "description": "Test case where the document has no root element, ensuring that the method handles the lack of a root element without throwing exceptions."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with line separator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithLineSeparator"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithRootElement"
+          }
+        ],
+        "expected": "StartDocument event with specified encoding and version 1.0 followed by line separator",
+        "description": "Test case where the format stack specifies a line separator, ensuring that the start document event is created with the specified encoding and version, followed by the line separator."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with multiple root elements",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithMultipleRootElements"
+          }
+        ],
+        "expected": "Exception thrown due to multiple root elements",
+        "description": "Test case where the document contains multiple root elements, ensuring that the method throws an exception as this is invalid for XML documents."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with only comments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithOnlyComments"
+          }
+        ],
+        "expected": "All comments processed correctly",
+        "description": "Test case where the document contains only comments, ensuring that the method processes comments correctly without any other content types."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument with processing instructions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithProcessingInstructions"
+          }
+        ],
+        "expected": "All processing instructions processed correctly",
+        "description": "Test case where the document contains processing instructions, ensuring that the method processes them correctly."
+      }
+    ]
+  },
+  {
+    "group": "Test printDocument exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "null"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithRootElement"
+          }
+        ],
+        "expected": "XMLStreamException due to null XMLEventConsumer",
+        "description": "Test case where the XMLEventConsumer is null, ensuring that the method throws an XMLStreamException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "null"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithRootElement"
+          }
+        ],
+        "expected": "XMLStreamException due to null XMLEventFactory",
+        "description": "Test case where the XMLEventFactory is null, ensuring that the method throws an XMLStreamException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithInvalidContent"
+          }
+        ],
+        "expected": "XMLStreamException due to invalid content in Document",
+        "description": "Test case where the Document contains invalid content that cannot be processed, ensuring that the method throws an XMLStreamException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mockedXMLEventConsumer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mockedFormatStackWithDefaultEncoding"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mockedNamespaceStack"
+          },
+          {
+            "parameter": "eventfactory",
+            "value": "mockedXMLEventFactory"
+          },
+          {
+            "parameter": "doc",
+            "value": "mockedDocumentWithNullRootElement"
+          }
+        ],
+        "expected": "XMLStreamException due to null root element",
+        "description": "Test case where the Document has a null root element, ensuring that the method throws an XMLStreamException."
+      }
+    ]
+  }
+]

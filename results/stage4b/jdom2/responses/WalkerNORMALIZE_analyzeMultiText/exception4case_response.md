@@ -1,0 +1,1 @@
+{"group": "analyzeMultiText - Invalid Offset", "cases": [{"input": [{"parameter": "mtext", "value": "MultiText instance with initial empty state"}, {"parameter": "offset", "value": -1}, {"parameter": "len", "value": 1}], "expected": "IndexOutOfBoundsException", "description": "Tests the scenario where the offset is negative, expecting an IndexOutOfBoundsException."}]}

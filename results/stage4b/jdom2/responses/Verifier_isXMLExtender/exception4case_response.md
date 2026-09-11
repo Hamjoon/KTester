@@ -1,0 +1,4 @@
+{
+    "group": "isXMLExtender",
+    "cases": []
+}

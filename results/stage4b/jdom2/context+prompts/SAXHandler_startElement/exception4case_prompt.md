@@ -1,0 +1,269 @@
+You are a professional software tester. Write test cases for a focal method in a target class.
+
+**Instructions:**
+1. Analyze method behavior and identify ALL possible exception scenarios
+2. Design test cases that trigger each identified exception
+3. Follow existing test case structure, Avoid duplication and create new test cases for uncovered exception scenarios
+
+Test Case Format:
+1. Group test cases by test function name
+2. Each test case MUST include:
+   - Input parameters with values (use empty list `[]` if none)
+   - Expected exception or observable behavior
+   - Clear description of test scenario
+3. Return empty array if no exception scenarios found
+
+Output Schema (STRICT JSON format):
+```json
+[
+    {
+        "group": "test name",
+        "cases": [
+            {
+                "input": [
+                    {
+                        "parameter": "param name",
+                        "value": "param value"
+                    }
+                ],
+                "expected": "expected exception or behavior",
+                "description": "test scenario description"
+            }
+        ]
+    },
+    {...}
+]
+```
+
+@input{focal method and target class}
+Here is the code of focal method, `startElement(String, String, String, Attributes)`, with the focal class `SAXHandler`:
+```Java
+package org.jdom2.input.sax;
+import java.util.HashMap;
+import org.jdom2.Attribute;
+import org.jdom2.Parent;
+import org.jdom2.Element;
+import java.util.ArrayList;
+import org.xml.sax.Attributes;
+import org.jdom2.JDOMFactory;
+import org.jdom2.Document;
+import org.xml.sax.SAXException;
+import org.jdom2.DefaultJDOMFactory;
+import org.xml.sax.Locator;
+import org.xml.sax.ext.DeclHandler;
+import org.xml.sax.ext.LexicalHandler;
+import org.jdom2.AttributeType;
+import java.util.List;
+import org.jdom2.EntityRef;
+import org.jdom2.Comment;
+import org.jdom2.DocType;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.Namespace;
+import org.jdom2.Text;
+import org.xml.sax.helpers.DefaultHandler;
+import org.xml.sax.ext.Attributes2;
+import javax.xml.XMLConstants;
+import org.jdom2.ProcessingInstruction;
+import java.util.Map;
+import org.xml.sax.DTDHandler;
+import org.jdom2.CDATA;
+public class SAXHandler extends DefaultHandler implements LexicalHandler , DeclHandler , DTDHandler {
+    private final JDOMFactory factory;
+    private final List<Namespace> declaredNamespaces = new ArrayList<Namespace>(32);
+    private Document currentDocument = null;
+    private Element currentElement = null;
+    private Locator currentLocator = null;
+    private boolean atRoot = true;
+    private boolean suppress = false;
+    @Override
+    public void startElement(final String namespaceURI, String localName, final String qName, final Attributes atts) throws SAXException {
+        if (suppress)
+            return;
+    
+        String prefix = "";
+        // If QName is set, then set prefix and local name as necessary
+        if (!"".equals(qName)) {
+            final int colon = qName.indexOf(':');
+            if (colon > 0) {
+                prefix = qName.substring(0, colon);
+            }
+            // If local name is not set, try to get it from the QName
+            if ((localName == null) || localName.equals("")) {
+                localName = qName.substring(colon + 1);
+            }
+        }
+        // At this point either prefix and localName are set correctly or
+        // there is an error in the parser.
+        final Namespace namespace = Namespace.getNamespace(prefix, namespaceURI);
+        final Element element = (currentLocator == null) ? factory.element(localName, namespace) : factory.element(currentLocator.getLineNumber(), currentLocator.getColumnNumber(), localName, namespace);
+        // Take leftover declared namespaces and add them to this element's
+        // map of namespaces
+        if (declaredNamespaces.size() > 0) {
+            transferNamespaces(element);
+        }
+        flushCharacters();
+        if (atRoot) {
+            factory.setRoot(currentDocument, element);// Yes, use a factory
+    
+            // call...
+            atRoot = false;
+        } else {
+            factory.addContent(getCurrentElement(), element);
+        }
+        currentElement = element;
+        // Handle attributes
+        for (int i = 0, len = atts.getLength(); i < len; i++) {
+            String attPrefix = "";
+            String attLocalName = atts.getLocalName(i);
+            final String attQName = atts.getQName(i);
+            final boolean specified = (atts instanceof Attributes2) ? ((Attributes2) (atts)).isSpecified(i) : true;
+            // If attribute QName is set, then set attribute prefix and
+            // attribute local name as necessary
+            if (!attQName.equals("")) {
+                // Bypass any xmlns attributes which might appear, as we got
+                // them already in startPrefixMapping(). This is sometimes
+                // necessary when SAXHandler is used with another source than
+                // SAXBuilder, as with JDOMResult.
+                if (attQName.startsWith("xmlns:") || attQName.equals("xmlns")) {
+                    continue;
+                }
+                final int attColon = attQName.indexOf(':');
+                if (attColon > 0) {
+                    attPrefix = attQName.substring(0, attColon);
+                }
+                // If localName is not set, try to get it from the QName
+                if ("".equals(attLocalName)) {
+                    attLocalName = attQName.substring(attColon + 1);
+                }
+            }
+            final AttributeType attType = AttributeType.getAttributeType(atts.getType(i));
+            final String attValue = atts.getValue(i);
+            final String attURI = atts.getURI(i);
+            if ((XMLConstants.XMLNS_ATTRIBUTE.equals(attLocalName) || XMLConstants.XMLNS_ATTRIBUTE.equals(attPrefix)) || XMLConstants.XMLNS_ATTRIBUTE_NS_URI.equals(attURI)) {
+                // use the actual Namespace to check too, because, in theory, a
+                // namespace-aware parser does not need to set the qName unless
+                // the namespace-prefixes feature is set as well.
+                continue;
+            }
+            // At this point either attPrefix and attLocalName are set
+            // correctly or there is an error in the parser.
+            // just one thing to sort out....
+            // the prefix for the namespace.
+            if ((!"".equals(attURI)) && "".equals(attPrefix)) {
+                // the localname and qName are the same, but there is a
+                // Namspace URI. We need to figure out the namespace prefix.
+                // this is an unusual condition. Currently the only known
+                // trigger
+                // is when there is a fixed/defaulted attribute from a
+                // validating
+                // XMLSchema, and the attribute is in a different namespace
+                // than the rest of the document, this happens whenever there
+                // is an attribute definition that has form="qualified".
+                // <xs:attribute name="attname" form="qualified" ... />
+                // or the schema sets attributeFormDefault="qualified"
+                final HashMap<String, Namespace> tmpmap = new HashMap<String, Namespace>();
+                for (final Namespace nss : element.getNamespacesInScope()) {
+                    if ((nss.getPrefix().length() > 0) && nss.getURI().equals(attURI)) {
+                        attPrefix = nss.getPrefix();
+                        break;
+                    }
+                    tmpmap.put(nss.getPrefix(), nss);
+                }
+                if ("".equals(attPrefix)) {
+                    // we cannot find a 'prevailing' namespace that has a prefix
+                    // that is for this namespace.
+                    // This basically means that there's an XMLSchema, for the
+                    // DEFAULT namespace, and there's a defaulted/fixed
+                    // attribute definition in the XMLSchema that's targeted
+                    // for this namespace,... but, the user has either not
+                    // declared a prefixed version of the namespace, or has
+                    // re-declared the same prefix at a lower level with a
+                    // different namespace.
+                    // All of these things are possible.
+                    // Create some sort of default prefix.
+                    int cnt = 0;
+                    final String base = "attns";
+                    String pfx = base + cnt;
+                    while (tmpmap.containsKey(pfx)) {
+                        cnt++;
+                        pfx = base + cnt;
+                    } 
+                    attPrefix = pfx;
+                }
+            }
+            final Namespace attNs = Namespace.getNamespace(attPrefix, attURI);
+            final Attribute attribute = factory.attribute(attLocalName, attValue, attType, attNs);
+            if (!specified) {
+                // it is a DTD defaulted value.
+                attribute.setSpecified(false);
+            }
+            factory.setAttribute(element, attribute);
+        }
+    }
+@Override
+public void attributeDecl(final String eName, final String aName, final String type, final String valueDefault, final String value);
+    @Override
+public void characters(final char[] ch, final int start, final int length) throws SAXException;
+    @Override
+public void comment(final char[] ch, final int start, final int length) throws SAXException;
+    @Override
+public void elementDecl(final String name, final String model);
+    @Override
+public void endCDATA() throws SAXException;
+    @Override
+public void endDTD();
+    @Override
+public void endElement(final String namespaceURI, final String localName, final String qName) throws SAXException;
+    @Override
+public void endEntity(final String name) throws SAXException;
+    @Override
+public void externalEntityDecl(final String name, final String publicID, final String systemID) throws SAXException;
+    protected void flushCharacters() throws SAXException;
+    protected void flushCharacters(final String data) throws SAXException;
+    public Element getCurrentElement() throws SAXException;
+    public Document getDocument();
+    public Locator getDocumentLocator();
+    public boolean getExpandEntities();
+    public JDOMFactory getFactory();
+    public boolean getIgnoringBoundaryWhitespace();
+    public boolean getIgnoringElementContentWhitespace();
+    @Override
+public void ignorableWhitespace(final char[] ch, final int start, final int length) throws SAXException;
+    @Override
+public void internalEntityDecl(final String name, final String value);
+    @Override
+public void notationDecl(final String name, final String publicID, final String systemID) throws SAXException;
+    @Override
+public void processingInstruction(final String target, final String data) throws SAXException;
+    protected void pushElement(final Element element);
+    public final void reset();
+    protected void resetSubCLass();
+    @Override
+public void setDocumentLocator(final Locator locator);
+    public void setExpandEntities(final boolean expand);
+    public void setIgnoringBoundaryWhitespace(final boolean ignoringBoundaryWhite);
+    public void setIgnoringElementContentWhitespace(final boolean ignoringWhite);
+    @Override
+public void skippedEntity(final String name) throws SAXException;
+    @Override
+public void startCDATA();
+    @Override
+public void startDTD(final String name, final String publicID, final String systemID) throws SAXException;
+    @Override
+public void startDocument();
+    @Override
+public void startEntity(final String name) throws SAXException;
+    @Override
+public void startPrefixMapping(final String prefix, final String uri) throws SAXException;
+    private void transferNamespaces(final Element element);
+    @Override
+public void unparsedEntityDecl(final String name, final String publicID, final String systemID, final String notationName);
+}
+```
+@input{existing test case}
+here's the existing test cases:
+```json
+<cases_json>
+```
+
+@output{test cases}: output the test cases in the JSON format:

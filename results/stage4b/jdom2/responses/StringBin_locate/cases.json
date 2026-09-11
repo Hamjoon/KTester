@@ -1,0 +1,414 @@
+[
+  {
+    "group": "Locate Method Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": "test"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": 0,
+        "description": "Test case where the input value matches the first element in the bucket."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 654321
+          },
+          {
+            "parameter": "value",
+            "value": "example"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": 1,
+        "description": "Test case where the input value matches the second element in the bucket."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 111111
+          },
+          {
+            "parameter": "value",
+            "value": "sample"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": 2,
+        "description": "Test case where the input value matches the last element in the bucket."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 222222
+          },
+          {
+            "parameter": "value",
+            "value": "notfound"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": -4,
+        "description": "Test case where the input value does not match any element, should return negative insertion point."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": "sample"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "sample",
+              "sample",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": 0,
+        "description": "Test case where the input value matches an element with the same hash but different string value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": "test"
+          },
+          {
+            "parameter": "bucket",
+            "value": []
+          },
+          {
+            "parameter": "length",
+            "value": 0
+          }
+        ],
+        "expected": -1,
+        "description": "Test case where the bucket is empty, should return -1 as no elements are present."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": "test"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "test",
+              "test"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": 0,
+        "description": "Test case where the input value matches multiple identical elements in the bucket."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": "sample"
+          },
+          {
+            "parameter": "value",
+            "value": "sample"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "sample",
+              "sample",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": 0,
+        "description": "Test case where the input hash is the string itself, testing how the hash code is handled with the same value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 999999
+          },
+          {
+            "parameter": "value",
+            "value": "notfound"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": -4,
+        "description": "Test case where the input value does not match any element in the bucket and has a unique hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 0
+          },
+          {
+            "parameter": "value",
+            "value": "zero"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "one",
+              "two",
+              "three"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": -1,
+        "description": "Test case where the input hash is zero and does not match any elements in the bucket."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": "test"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 2
+          }
+        ],
+        "expected": -1,
+        "description": "Test case where the input value matches no elements and is greater than the largest element in a smaller bucket."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": "example"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "test",
+              "test"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": -1,
+        "description": "Test case where the input value does not match any element in a bucket of identical elements."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "test"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the input hash is null, which should trigger a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": null
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": 3
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the input value is null, which should trigger a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": "test"
+          },
+          {
+            "parameter": "bucket",
+            "value": null
+          },
+          {
+            "parameter": "length",
+            "value": 0
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the bucket is null, which should trigger a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "hash",
+            "value": 123456
+          },
+          {
+            "parameter": "value",
+            "value": "test"
+          },
+          {
+            "parameter": "bucket",
+            "value": [
+              "test",
+              "example",
+              "sample"
+            ]
+          },
+          {
+            "parameter": "length",
+            "value": -1
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "Test case where the length parameter is negative, which should trigger an ArrayIndexOutOfBoundsException."
+      }
+    ]
+  }
+]

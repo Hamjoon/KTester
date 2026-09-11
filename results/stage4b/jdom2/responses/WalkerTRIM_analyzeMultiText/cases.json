@@ -1,0 +1,331 @@
+[
+  {
+    "group": "analyzeMultiText",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText()"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 0
+          }
+        ],
+        "expected": "no changes to mtext",
+        "description": "Test with zero length, should not modify mtext."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with whitespace Text"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 5
+          }
+        ],
+        "expected": "no changes to mtext",
+        "description": "Test with all whitespace Text elements, should not append any text."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with non-whitespace Text"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 5
+          }
+        ],
+        "expected": "mtext contains non-whitespace Text",
+        "description": "Test with non-whitespace Text elements, should append text to mtext."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with mixed Content"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 5
+          }
+        ],
+        "expected": "mtext contains mixed Content with appropriate handling",
+        "description": "Test with a mix of Text, CDATA, and other content types, should append correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText()"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 1
+          }
+        ],
+        "expected": "mtext contains both trimmed Text",
+        "description": "Test with length of 1, should apply BOTH trim."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText()"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 2
+          }
+        ],
+        "expected": "mtext contains left trimmed Text and right trimmed Text",
+        "description": "Test with length of 2, should apply LEFT trim to first and RIGHT trim to last."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText()"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 3
+          }
+        ],
+        "expected": "mtext contains left trimmed Text, raw Content, and right trimmed Text",
+        "description": "Test with length of 3, should apply LEFT trim to first, raw Content in the middle, and RIGHT trim to last."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with only CDATA"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 3
+          }
+        ],
+        "expected": "mtext contains CDATA without any trimming",
+        "description": "Test with only CDATA elements, should append CDATA to mtext without any trimming."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with mixed whitespace and non-whitespace Text"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 4
+          }
+        ],
+        "expected": "mtext contains non-whitespace Text, whitespace ignored",
+        "description": "Test with mixed whitespace and non-whitespace Text elements, should append only non-whitespace Text to mtext."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with only EntityRef"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 2
+          }
+        ],
+        "expected": "mtext contains raw EntityRef content",
+        "description": "Test with only EntityRef content, should append raw EntityRef to mtext."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with mixed Content types"
+          },
+          {
+            "parameter": "offset",
+            "value": 1
+          },
+          {
+            "parameter": "len",
+            "value": 4
+          }
+        ],
+        "expected": "mtext contains mixed Content with appropriate handling",
+        "description": "Test with mixed Content types starting from offset 1, should handle each type appropriately."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText()"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 10
+          }
+        ],
+        "expected": "mtext contains trimmed Text and raw Content",
+        "description": "Test with length of 10, should apply LEFT trim to the first Text, handle raw Content in the middle, and RIGHT trim to the last Text."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with mixed whitespace and non-whitespace Text"
+          },
+          {
+            "parameter": "offset",
+            "value": 2
+          },
+          {
+            "parameter": "len",
+            "value": 3
+          }
+        ],
+        "expected": "mtext contains non-whitespace Text with appropriate trimming",
+        "description": "Test with mixed whitespace and non-whitespace Text starting from offset 2, should handle trimming correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with invalid offset"
+          },
+          {
+            "parameter": "offset",
+            "value": -1
+          },
+          {
+            "parameter": "len",
+            "value": 5
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test with negative offset, should throw IndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with invalid offset"
+          },
+          {
+            "parameter": "offset",
+            "value": 100
+          },
+          {
+            "parameter": "len",
+            "value": 5
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test with offset greater than the content size, should throw IndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with invalid length"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": -5
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test with negative length, should throw IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with zero length and offset beyond content size"
+          },
+          {
+            "parameter": "offset",
+            "value": 100
+          },
+          {
+            "parameter": "len",
+            "value": 0
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test with zero length but an invalid offset, should throw IndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "new MultiText() with empty content"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 5
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test with an empty MultiText and a non-zero length, should throw IndexOutOfBoundsException."
+      }
+    ]
+  }
+]

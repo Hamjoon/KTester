@@ -1,0 +1,436 @@
+[
+  {
+    "group": "processPrunableElement - Invalid Event Type",
+    "cases": [
+      {
+        "input": [],
+        "expected": "JDOMException",
+        "description": "Test case to verify that a JDOMException is thrown when the XMLStreamReader is not at the START_ELEMENT state."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - START_ELEMENT Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader at START_ELEMENT with no elements to prune"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that does not prune any elements"
+          }
+        ],
+        "expected": "Element with processed children",
+        "description": "Test case to verify that elements are processed correctly when the filter allows all elements."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader at START_ELEMENT with elements to prune"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that prunes specific elements"
+          }
+        ],
+        "expected": "Element with pruned children",
+        "description": "Test case to verify that elements are pruned correctly based on the filter."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - CDATA Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with CDATA sections"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that allows CDATA"
+          }
+        ],
+        "expected": "Element with CDATA content",
+        "description": "Test case to verify that CDATA sections are processed correctly when allowed by the filter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with CDATA sections"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that prunes CDATA"
+          }
+        ],
+        "expected": "Element without CDATA content",
+        "description": "Test case to verify that CDATA sections are not processed when pruned by the filter."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - Text Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with text nodes"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that allows text"
+          }
+        ],
+        "expected": "Element with text content",
+        "description": "Test case to verify that text nodes are processed correctly when allowed by the filter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with text nodes"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that prunes text"
+          }
+        ],
+        "expected": "Element without text content",
+        "description": "Test case to verify that text nodes are not processed when pruned by the filter."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - Comment Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with comment nodes"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that allows comments"
+          }
+        ],
+        "expected": "Element with comment content",
+        "description": "Test case to verify that comment nodes are processed correctly when allowed by the filter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with comment nodes"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that prunes comments"
+          }
+        ],
+        "expected": "Element without comment content",
+        "description": "Test case to verify that comment nodes are not processed when pruned by the filter."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - Entity Reference Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with entity reference"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that does not prune entity references"
+          }
+        ],
+        "expected": "Element with entity reference",
+        "description": "Test case to verify that entity references are processed correctly when allowed by the filter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with entity reference"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that prunes entity references"
+          }
+        ],
+        "expected": "Element without entity reference",
+        "description": "Test case to verify that entity references are not processed when pruned by the filter."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - Processing Instruction Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with processing instruction"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that does not prune processing instructions"
+          }
+        ],
+        "expected": "Element with processing instruction",
+        "description": "Test case to verify that processing instructions are processed correctly when allowed by the filter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader with processing instruction"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that prunes processing instructions"
+          }
+        ],
+        "expected": "Element without processing instruction",
+        "description": "Test case to verify that processing instructions are not processed when pruned by the filter."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - Unexpected Event Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader that produces unexpected event type"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 1
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter"
+          }
+        ],
+        "expected": "JDOMException",
+        "description": "Test case to verify that a JDOMException is thrown when an unexpected XMLStream event type is encountered."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - Multiple Nested Elements",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader at START_ELEMENT with multiple nested elements"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that allows all nested elements"
+          }
+        ],
+        "expected": "Element with multiple processed nested children",
+        "description": "Test case to verify that multiple nested elements are processed correctly when the filter allows all nested elements."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - Depth Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader at START_ELEMENT with deeply nested elements"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that allows all elements"
+          }
+        ],
+        "expected": "Element with deep nested structure",
+        "description": "Test case to verify that elements are processed correctly when there are deeply nested elements."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader at START_ELEMENT with elements causing depth to exceed limits"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that allows all elements"
+          }
+        ],
+        "expected": "JDOMException",
+        "description": "Test case to verify that a JDOMException is thrown when the depth exceeds the expected limits."
+      }
+    ]
+  },
+  {
+    "group": "processPrunableElement - Filter Behavior",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "DefaultJDOMFactory instance"
+          },
+          {
+            "parameter": "reader",
+            "value": "XMLStreamReader at START_ELEMENT with elements to prune"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "StAXFilter that prunes all elements"
+          }
+        ],
+        "expected": "Empty Element",
+        "description": "Test case to verify that when all elements are pruned by the filter, the result is an empty element."
+      }
+    ]
+  }
+]

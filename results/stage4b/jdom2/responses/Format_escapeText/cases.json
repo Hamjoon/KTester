@@ -1,0 +1,337 @@
+[
+  {
+    "group": "escapeText with no characters needing escape",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "Hello World"
+          }
+        ],
+        "expected": "Hello World",
+        "description": "Test with a string that does not contain any characters that need escaping."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with characters needing escape",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "Hello <World>"
+          }
+        ],
+        "expected": "Hello &lt;World&gt;",
+        "description": "Test with a string that contains '<' and '>' which need to be escaped."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return ch == 'W'; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "Hello World"
+          }
+        ],
+        "expected": "Hello &amp;lt;W&amp;gt;orld",
+        "description": "Test with a string that contains a character 'W' which should be escaped based on strategy."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with line breaks",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": "\n"
+          },
+          {
+            "parameter": "value",
+            "value": "Line1\nLine2"
+          }
+        ],
+        "expected": "Line1\nLine2",
+        "description": "Test with a string that contains line breaks and a specified eol."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": "\r\n"
+          },
+          {
+            "parameter": "value",
+            "value": "Line1\rLine2"
+          }
+        ],
+        "expected": "Line1\r\nLine2",
+        "description": "Test with a string that contains carriage returns and a specified eol."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with surrogate pairs",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "\u0001\u0002"
+          }
+        ],
+        "expected": "&#x1;&#x2;",
+        "description": "Test with a string containing characters that should be escaped as they are not printable."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with illegal surrogate pairs",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "\u007f\u007f"
+          }
+        ],
+        "expected": "&#x7F;&#x7F;",
+        "description": "Test with a string containing illegal surrogate pairs that should throw an IllegalDataException."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with empty string",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": ""
+          }
+        ],
+        "expected": "",
+        "description": "Test with an empty string, expecting the same empty string as output."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with all characters needing escape",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return true; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "<>&\n\r"
+          }
+        ],
+        "expected": "&lt;&gt;&amp;&#xD;\n",
+        "description": "Test with a string containing all characters that need escaping, expecting all to be converted."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with mixed characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return ch == 'a'; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "a <b> & c"
+          }
+        ],
+        "expected": "&amp;lt;b&amp;gt; &amp; c",
+        "description": "Test with a string containing a mix of characters, where only 'a' should be escaped."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with high surrogate character",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000D\u0000E"
+          }
+        ],
+        "expected": "&#xD;&#xE;",
+        "description": "Test with a string containing high surrogate characters, expecting them to be escaped."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with illegal surrogate pair",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000D\u0000F"
+          }
+        ],
+        "expected": "IllegalDataException",
+        "description": "Test with an illegal surrogate pair, expecting an IllegalDataException to be thrown."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with custom line separator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": "---"
+          },
+          {
+            "parameter": "value",
+            "value": "Line1\nLine2"
+          }
+        ],
+        "expected": "Line1---Line2",
+        "description": "Test with a string containing line breaks and a custom line separator."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with high surrogate character followed by low surrogate",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000D\u0000E"
+          }
+        ],
+        "expected": "&#xD;&#xE;",
+        "description": "Test with a valid high surrogate followed by a low surrogate character, expecting them to be escaped correctly."
+      }
+    ]
+  },
+  {
+    "group": "escapeText with truncated surrogate pair",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "new EscapeStrategy() { public boolean shouldEscape(char ch) { return false; } }"
+          },
+          {
+            "parameter": "eol",
+            "value": null
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000D"
+          }
+        ],
+        "expected": "IllegalDataException",
+        "description": "Test with a string containing only a high surrogate character, expecting an IllegalDataException to be thrown due to a truncated surrogate pair."
+      }
+    ]
+  }
+]

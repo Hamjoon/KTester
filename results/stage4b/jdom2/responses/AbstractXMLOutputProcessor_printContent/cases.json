@@ -1,0 +1,469 @@
+[
+  {
+    "group": "printContent",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning null"
+          }
+        ],
+        "expected": "textRaw method is called with appropriate text value",
+        "description": "Test case where walker has next content as null, expecting raw text handling."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a CDATA object"
+          }
+        ],
+        "expected": "printCDATA method is called",
+        "description": "Test case where walker returns a CDATA object, expecting printCDATA to be invoked."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a Comment object"
+          }
+        ],
+        "expected": "printComment method is called",
+        "description": "Test case where walker returns a Comment object, expecting printComment to be invoked."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a DocType object"
+          }
+        ],
+        "expected": "printDocType method is called",
+        "description": "Test case where walker returns a DocType object, expecting printDocType to be invoked."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning an Element object"
+          }
+        ],
+        "expected": "printElement method is called",
+        "description": "Test case where walker returns an Element object, expecting printElement to be invoked."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning an EntityRef object"
+          }
+        ],
+        "expected": "printEntityRef method is called",
+        "description": "Test case where walker returns an EntityRef object, expecting printEntityRef to be invoked."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a ProcessingInstruction object"
+          }
+        ],
+        "expected": "printProcessingInstruction method is called",
+        "description": "Test case where walker returns a ProcessingInstruction object, expecting printProcessingInstruction to be invoked."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a Text object"
+          }
+        ],
+        "expected": "printText method is called",
+        "description": "Test case where walker returns a Text object, expecting printText to be invoked."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning false"
+          }
+        ],
+        "expected": "no content is processed, method completes without exceptions",
+        "description": "Test case where walker has no next content, expecting the method to complete without processing."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a null object"
+          }
+        ],
+        "expected": "textRaw method is called with empty string",
+        "description": "Test case where walker has next content as null, expecting raw text handling with an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a mixed content object"
+          }
+        ],
+        "expected": "all relevant print methods are called in sequence",
+        "description": "Test case where walker returns a mixed content object, expecting the method to invoke relevant print methods for each content type in sequence."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a CDATA object with invalid content"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where walker returns a CDATA object with invalid content, expecting an IOException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a Comment object with invalid data"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where walker returns a Comment object with invalid data, expecting an IOException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a Document object"
+          }
+        ],
+        "expected": "printDocument method is called",
+        "description": "Test case where walker returns a Document object, expecting printDocument to be invoked."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer that throws IOException"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a CDATA object"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where writer throws an IOException while processing a CDATA object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer that throws IOException"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a Comment object"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where writer throws an IOException while processing a Comment object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer that throws IOException"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a DocType object"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where writer throws an IOException while processing a DocType object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer that throws IOException"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning an Element object"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where writer throws an IOException while processing an Element object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer that throws IOException"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning an EntityRef object"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where writer throws an IOException while processing an EntityRef object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer that throws IOException"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a ProcessingInstruction object"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where writer throws an IOException while processing a ProcessingInstruction object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "mock Writer that throws IOException"
+          },
+          {
+            "parameter": "fstack",
+            "value": "mock FormatStack"
+          },
+          {
+            "parameter": "nstack",
+            "value": "mock NamespaceStack"
+          },
+          {
+            "parameter": "walker",
+            "value": "mock Walker with hasNext() returning true and next() returning a Text object"
+          }
+        ],
+        "expected": "IOException is thrown",
+        "description": "Test case where writer throws an IOException while processing a Text object."
+      }
+    ]
+  }
+]

@@ -1,0 +1,291 @@
+[
+  {
+    "group": "analyzeMultiText - Text Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 1
+          }
+        ],
+        "expected": "MultiText contains the text value from the first Content",
+        "description": "Tests the case where the Content is a non-whitespace Text, verifying that it is appended to MultiText."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 1
+          }
+        ],
+        "expected": "MultiText remains unchanged",
+        "description": "Tests the case where the Content is a whitespace Text, verifying that it does not modify MultiText."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - CDATA Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 1
+          }
+        ],
+        "expected": "MultiText contains the CDATA value from the first Content",
+        "description": "Tests the case where the Content is a non-whitespace CDATA, verifying that it is appended to MultiText."
+      },
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 1
+          }
+        ],
+        "expected": "MultiText remains unchanged",
+        "description": "Tests the case where the Content is a whitespace CDATA, verifying that it does not modify MultiText."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - EntityRef Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 1
+          }
+        ],
+        "expected": "MultiText contains the raw value of the EntityRef",
+        "description": "Tests the case where the Content is an EntityRef, verifying that it is appended to MultiText."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - Mixed Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 3
+          }
+        ],
+        "expected": "MultiText contains text, CDATA, and raw value without leading/trailing spaces",
+        "description": "Tests the scenario where mixed Content types are processed, ensuring proper handling of whitespace and text."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - Whitespace Management",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 5
+          }
+        ],
+        "expected": "MultiText contains text with appropriate spaces inserted",
+        "description": "Tests the scenario where multiple text contents are interspersed with whitespace, ensuring spaces are added correctly."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - Multiple Whitespace Text",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 2
+          }
+        ],
+        "expected": "MultiText remains unchanged",
+        "description": "Tests the case where the Content consists of multiple whitespace Text elements, verifying that MultiText does not change."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - Leading and Trailing Spaces",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 3
+          }
+        ],
+        "expected": "MultiText contains text with leading and trailing spaces handled correctly",
+        "description": "Tests the scenario where text elements have leading and trailing spaces, ensuring they are trimmed or managed appropriately."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - Mixed Empty and Non-Empty Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 4
+          }
+        ],
+        "expected": "MultiText contains non-empty text and ignores empty ones",
+        "description": "Tests the scenario where mixed Content includes both empty and non-empty elements, verifying that only non-empty elements are appended."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - EntityRef with Whitespace",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 2
+          }
+        ],
+        "expected": "MultiText contains raw value of EntityRef and ignores whitespace",
+        "description": "Tests the scenario where an EntityRef is followed by whitespace, ensuring that the EntityRef is correctly appended while ignoring the whitespace."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - Long Content Length",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": 0
+          },
+          {
+            "parameter": "len",
+            "value": 10
+          }
+        ],
+        "expected": "MultiText contains all valid content up to the specified length",
+        "description": "Tests the scenario where the length exceeds the actual content size, ensuring that MultiText correctly handles the situation without errors."
+      }
+    ]
+  },
+  {
+    "group": "analyzeMultiText - Invalid Offset",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "mtext",
+            "value": "MultiText instance with initial empty state"
+          },
+          {
+            "parameter": "offset",
+            "value": -1
+          },
+          {
+            "parameter": "len",
+            "value": 1
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Tests the scenario where the offset is negative, expecting an IndexOutOfBoundsException."
+      }
+    ]
+  }
+]

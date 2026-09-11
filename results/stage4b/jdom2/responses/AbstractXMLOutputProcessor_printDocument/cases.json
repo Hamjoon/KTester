@@ -1,0 +1,326 @@
+[
+  {
+    "group": "printDocument - Root Element Exists",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with a root element"
+          }
+        ],
+        "expected": "Output with content of the document",
+        "description": "Test printDocument when the document has a root element."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Empty Document",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with no root element"
+          }
+        ],
+        "expected": "Empty output and no exceptions thrown",
+        "description": "Test printDocument when the document has no root element."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Walker has Next",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with multiple content types including Comment, Element, Text"
+          }
+        ],
+        "expected": "Output includes comments, elements, and text",
+        "description": "Test printDocument when the walker has multiple content types to process."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Handle Null Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with a root element and null content"
+          }
+        ],
+        "expected": "Output handles null content gracefully without exceptions",
+        "description": "Test printDocument when the content includes null values."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Whitespace Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with whitespace content"
+          }
+        ],
+        "expected": "Output includes only whitespace without CDATA",
+        "description": "Test printDocument when the content is only whitespace."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Line Separator Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with line separator"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with a root element and content"
+          }
+        ],
+        "expected": "Output ends with the specified line separator",
+        "description": "Test printDocument when the format stack has a line separator."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Mixed Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with mixed content types including Element, Comment, and Text"
+          }
+        ],
+        "expected": "Output includes elements, comments, and text in the correct order",
+        "description": "Test printDocument when the document has a mix of content types."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Multiple Root Elements",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with multiple root elements"
+          }
+        ],
+        "expected": "Throws IllegalDataException",
+        "description": "Test printDocument when the document has multiple root elements, which is invalid."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with CDATA Section",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with a CDATA section"
+          }
+        ],
+        "expected": "Output includes CDATA section correctly formatted",
+        "description": "Test printDocument when the document contains a CDATA section."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Special Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with special characters in text"
+          }
+        ],
+        "expected": "Output correctly escapes special characters",
+        "description": "Test printDocument when the document contains special characters that need to be escaped."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - Document with Empty Elements",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "StringWriter"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with empty elements"
+          }
+        ],
+        "expected": "Output includes empty elements correctly formatted",
+        "description": "Test printDocument when the document contains elements with no content."
+      }
+    ]
+  },
+  {
+    "group": "printDocument - IOException Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "Mocked Writer that throws IOException"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack with valid settings"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack with valid namespaces"
+          },
+          {
+            "parameter": "doc",
+            "value": "Document with a root element"
+          }
+        ],
+        "expected": "Throws IOException",
+        "description": "Test printDocument when the Writer throws IOException during write operations."
+      }
+    ]
+  }
+]
