@@ -1,0 +1,485 @@
+{
+  "archive_layout_note": [
+    "rep_1 batch-processing-gateway uses reports/, test_classes/, and fix/ directly",
+    "rep_1 other projects use a gpt4o/ level under reports, test_classes, and fix",
+    "rep_2 through rep_5 use the shallower directories without gpt4o/"
+  ],
+  "repetitions": {
+    "rep_1": {
+      "batch-processing-gateway": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/batch-processing-gateway/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 60
+      },
+      "commons-cli": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/commons-cli/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 10
+      },
+      "commons-codec": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/commons-codec/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 18,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 18,
+        "fix_file_count": 164
+      },
+      "commons-collections": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/commons-collections/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 14,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 14,
+        "fix_file_count": 96
+      },
+      "commons-csv": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/commons-csv/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 60
+      },
+      "datafaker": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/datafaker/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 60
+      },
+      "gson": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/gson/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 20,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 20,
+        "fix_file_count": 162
+      },
+      "jdom2": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/jdom2/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 21,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 21,
+        "fix_file_count": 196
+      },
+      "ruler": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/ruler/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 16,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 16,
+        "fix_file_count": 154
+      },
+      "windward": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_1/windward/reports/gpt4o/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 20
+      }
+    },
+    "rep_2": {
+      "batch-processing-gateway": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/batch-processing-gateway/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 22
+      },
+      "commons-cli": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/commons-cli/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 4
+      },
+      "commons-codec": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/commons-codec/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 18,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 18,
+        "fix_file_count": 26
+      },
+      "commons-collections": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/commons-collections/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 14,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 14,
+        "fix_file_count": 32
+      },
+      "commons-csv": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/commons-csv/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 28
+      },
+      "datafaker": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/datafaker/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 18
+      },
+      "gson": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/gson/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 20,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 20,
+        "fix_file_count": 32
+      },
+      "jdom2": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/jdom2/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 21,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 21,
+        "fix_file_count": 64
+      },
+      "ruler": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/ruler/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 16,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 16,
+        "fix_file_count": 62
+      },
+      "windward": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_2/windward/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 6
+      }
+    },
+    "rep_3": {
+      "batch-processing-gateway": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/batch-processing-gateway/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 56
+      },
+      "commons-cli": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/commons-cli/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 10
+      },
+      "commons-codec": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/commons-codec/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 18,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 18,
+        "fix_file_count": 154
+      },
+      "commons-collections": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/commons-collections/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 14,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 14,
+        "fix_file_count": 106
+      },
+      "commons-csv": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/commons-csv/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 52
+      },
+      "datafaker": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/datafaker/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 54
+      },
+      "gson": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/gson/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 20,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 20,
+        "fix_file_count": 138
+      },
+      "jdom2": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/jdom2/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 21,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 21,
+        "fix_file_count": 166
+      },
+      "ruler": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/ruler/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 16,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 16,
+        "fix_file_count": 160
+      },
+      "windward": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_3/windward/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 20
+      }
+    },
+    "rep_4": {
+      "batch-processing-gateway": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/batch-processing-gateway/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 58
+      },
+      "commons-cli": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/commons-cli/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 20
+      },
+      "commons-codec": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/commons-codec/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 18,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 18,
+        "fix_file_count": 172
+      },
+      "commons-collections": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/commons-collections/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 14,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 14,
+        "fix_file_count": 116
+      },
+      "commons-csv": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/commons-csv/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 60
+      },
+      "datafaker": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/datafaker/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 60
+      },
+      "gson": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/gson/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 20,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 20,
+        "fix_file_count": 176
+      },
+      "jdom2": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/jdom2/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 21,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 21,
+        "fix_file_count": 184
+      },
+      "ruler": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/ruler/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 16,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 16,
+        "fix_file_count": 160
+      },
+      "windward": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_4/windward/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 10
+      }
+    },
+    "rep_5": {
+      "batch-processing-gateway": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/batch-processing-gateway/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 60
+      },
+      "commons-cli": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/commons-cli/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 10
+      },
+      "commons-codec": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/commons-codec/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 18,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 18,
+        "fix_file_count": 174
+      },
+      "commons-collections": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/commons-collections/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 14,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 14,
+        "fix_file_count": 116
+      },
+      "commons-csv": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/commons-csv/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 60
+      },
+      "datafaker": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/datafaker/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 6,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 6,
+        "fix_file_count": 60
+      },
+      "gson": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/gson/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 20,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 20,
+        "fix_file_count": 176
+      },
+      "jdom2": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/jdom2/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 21,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 21,
+        "fix_file_count": 206
+      },
+      "ruler": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/ruler/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 16,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 16,
+        "fix_file_count": 160
+      },
+      "windward": {
+        "summary_path": "evaluation_results/RQ1-ktester/RQ1/KTester-gpt4o/rep_5/windward/reports/summary.json",
+        "summary_exists": true,
+        "task_count": 2,
+        "missing_task_keys": [],
+        "extra_task_keys": [],
+        "test_class_count": 2,
+        "fix_file_count": 20
+      }
+    }
+  },
+  "time_records": {
+    "path": "evaluation_results/RQ1-ktester/RQ1/time_records/time_record_KTester.json",
+    "detail_count": 111,
+    "statistics": {
+      "average_total": 152.68,
+      "average_detail": {
+        "process_init_response": 8.12,
+        "process_case_response": 53.66,
+        "check_test_class": 90.9
+      },
+      "median_time": 141.5,
+      "min_time": 36.39,
+      "max_time": 1062.26,
+      "std_time": 115.74
+    }
+  }
+}
