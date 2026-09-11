@@ -186,7 +186,7 @@ def write_inventory(author_reps: list[dict]) -> None:
                 "missing_task_keys": sorted(expected - keys),
                 "extra_task_keys": sorted(keys - expected),
                 "test_class_count": len(list(class_dir.glob("*_Test.java"))),
-                "fix_file_count": len(list(fix_root.glob("**/*"))) if fix_root.exists() else 0,
+                "fix_file_count": sum(path.is_file() for path in fix_root.glob("**/*")) if fix_root.exists() else 0,
             }
         inventory["repetitions"][f"rep_{rep}"] = projects
     time_data = load_json(AUTHORS_TIME)
@@ -198,6 +198,33 @@ def write_inventory(author_reps: list[dict]) -> None:
     (OUTPUT / "extraction_inventory.json").write_text(
         json.dumps(inventory, indent=2) + "\n", encoding="utf-8"
     )
+    lines = [
+        "# Stage 5 extraction inventory",
+        "",
+        "| Repetition | Project | Summary | Tasks | Missing | Extra | Test classes | Fix files |",
+        "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |",
+    ]
+    for rep, projects in inventory["repetitions"].items():
+        for project, value in projects.items():
+            lines.append(
+                f"| {rep} | {project} | {'yes' if value['summary_exists'] else 'no'} | "
+                f"{value['task_count']} | {len(value['missing_task_keys'])} | "
+                f"{len(value['extra_task_keys'])} | {value['test_class_count']} | "
+                f"{value['fix_file_count']} |"
+            )
+    time = inventory["time_records"]
+    lines.extend(
+        [
+            "",
+            "## Layout and timing",
+            "",
+            *[f"- {note}." for note in inventory["archive_layout_note"]],
+            f"- KTester time-record files found: 1.",
+            f"- KTester time-record task details: {time['detail_count']}.",
+            f"- Published mean time per task: {time['statistics']['average_total']:.2f} seconds.",
+        ]
+    )
+    (OUTPUT / "extraction_inventory.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def write_task_table(ours_tasks: dict, author_tasks: list[dict]) -> None:
