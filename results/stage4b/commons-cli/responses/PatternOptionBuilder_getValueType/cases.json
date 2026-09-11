@@ -1,0 +1,202 @@
+[
+  {
+    "group": "getValueType - valid cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "@"
+          }
+        ],
+        "expected": "class java.lang.Object",
+        "description": "Test case for character '@', which should return OBJECT_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": ":"
+          }
+        ],
+        "expected": "class java.lang.String",
+        "description": "Test case for character ':', which should return STRING_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "%"
+          }
+        ],
+        "expected": "class java.lang.Number",
+        "description": "Test case for character '%', which should return NUMBER_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "+"
+          }
+        ],
+        "expected": "class java.lang.Class",
+        "description": "Test case for character '+', which should return CLASS_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "#"
+          }
+        ],
+        "expected": "class java.util.Date",
+        "description": "Test case for character '#', which should return DATE_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "<"
+          }
+        ],
+        "expected": "class java.io.FileInputStream",
+        "description": "Test case for character '<', which should return EXISTING_FILE_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": ">"
+          }
+        ],
+        "expected": "class java.io.File",
+        "description": "Test case for character '>', which should return FILE_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "*"
+          }
+        ],
+        "expected": "class [Ljava.io.File;",
+        "description": "Test case for character '*', which should return FILES_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "/"
+          }
+        ],
+        "expected": "class java.net.URL",
+        "description": "Test case for character '/', which should return URL_VALUE."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "^"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for character '^', which is not defined in the method and should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": " "
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for a space character, which is not defined in the method and should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "Z"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for an uppercase character 'Z', which is not defined in the method and should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "0"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for a numeric character '0', which is not defined in the method and should return null."
+      }
+    ]
+  },
+  {
+    "group": "getValueType - invalid cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "A"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for an invalid character 'A', which should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "1"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for an invalid character '1', which should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "!"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for an invalid character '!', which should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "?"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for an invalid character '?', which should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "}"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for an invalid character '}', which should return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "&"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case for an invalid character '&', which should return null."
+      }
+    ]
+  }
+]
