@@ -1,0 +1,3 @@
+{
+  "dependent classes": "class `net.datafaker.providers.base.Finance`:\n\trelated functions:\n\t\tmethod `private static String calculateIbanChecksum(String, String)` returns `java.lang.String`, related with `net.datafaker.transformations.sql.SqlTransformer.handlePrimitivesInArray(Class<?>, Object)`;\nclass `net.datafaker.providers.base.Internet`:\n\trelated functions:\n\t\tmethod `public String image()` returns `java.lang.String`, related with `net.datafaker.transformations.sql.SqlTransformer.handlePrimitivesInArray(Class<?>, Object)`;"
+}

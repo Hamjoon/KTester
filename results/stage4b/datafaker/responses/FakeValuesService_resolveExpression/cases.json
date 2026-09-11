@@ -1,0 +1,476 @@
+[
+  {
+    "group": "resolveExpression - Empty Directive",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": ""
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "",
+        "description": "Test case where the directive is empty. The method should return an empty string."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - No Dot Index and Current is AbstractProvider",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "first_name"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": "MockedAbstractProviderInstance"
+          },
+          {
+            "parameter": "root",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "Expected first name from the provider",
+        "description": "Test case where directive is a method on the AbstractProvider. The method should be invoked and return the first name."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - No Dot Index and Current is Not AbstractProvider",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "invalid_method"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": "SomeNonAbstractProvider"
+          },
+          {
+            "parameter": "root",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": null,
+        "description": "Test case where directive is invalid and current is not an AbstractProvider. The method should return null."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - With Dot Index",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "Name.first_name"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "Expected first name from Name provider",
+        "description": "Test case where the directive includes a dot. The method should resolve to the Name provider and return the first name."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - Last Ditch Effort Fetch",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "Address.street_title"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "Expected street title from Address provider",
+        "description": "Test case where the directive cannot be resolved normally, but should fall back to safeFetch for Address.street_title."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - With Arguments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "number_between"
+          },
+          {
+            "parameter": "args",
+            "value": [
+              "1",
+              "10"
+            ]
+          },
+          {
+            "parameter": "current",
+            "value": "MockedNumberProvider"
+          },
+          {
+            "parameter": "root",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "A number between 1 and 10",
+        "description": "Test case where the directive is a method on the current provider that takes arguments. The method should return a number between the specified range."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - Invalid Directive with Dot Index",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "InvalidProvider.invalid_method"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": null,
+        "description": "Test case where the directive contains an invalid provider and method. The method should return null."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - Current is Null and Valid Provider",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "Company.name"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "Expected company name from Company provider",
+        "description": "Test case where the directive is valid but current is null. The method should resolve to the Company provider and return a company name."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - Valid Directive with Arguments and Root",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "Address.city"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "Expected city name from Address provider",
+        "description": "Test case where the directive includes a valid address method. The method should resolve to the Address provider and return a city name."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - Null Arguments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "user.username"
+          },
+          {
+            "parameter": "args",
+            "value": null
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "Expected username from User provider",
+        "description": "Test case where the directive is valid but the arguments are null. The method should resolve to the User provider and return a username."
+      }
+    ]
+  },
+  {
+    "group": "resolveExpression - Exception Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "first_name"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": "MockedAbstractProviderInstance"
+          },
+          {
+            "parameter": "root",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test case where the method invocation on AbstractProvider throws an exception, causing a RuntimeException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "invalid_method"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": "MockedAbstractProviderInstance"
+          },
+          {
+            "parameter": "root",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test case where invoking an invalid method on AbstractProvider throws an exception, resulting in a RuntimeException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "Name.first_name"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test case where the method invocation on the resolved Name provider throws an exception, causing a RuntimeException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "Address.street_title"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test case where the safeFetch call for Address.street_title throws an exception, resulting in a RuntimeException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "invalid_provider.invalid_method"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test case where an invalid provider and method combination is used, and an exception is thrown during resolution."
+      },
+      {
+        "input": [
+          {
+            "parameter": "directive",
+            "value": "Company.name"
+          },
+          {
+            "parameter": "args",
+            "value": []
+          },
+          {
+            "parameter": "current",
+            "value": null
+          },
+          {
+            "parameter": "root",
+            "value": "MockedProviderRegistration"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test case where the resolution of a valid directive throws an exception, resulting in a RuntimeException."
+      }
+    ]
+  }
+]

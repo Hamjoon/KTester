@@ -1,0 +1,1 @@
+{"group":"handlePrimitivesInArray - boolean array","cases":[{"input":[{"parameter":"componentType","value":"boolean.class"},{"parameter":"value","value":"[]"}],"expected":"","description":"Test with an empty boolean array, which should return an empty string."}]}

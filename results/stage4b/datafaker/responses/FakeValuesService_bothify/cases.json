@@ -1,0 +1,421 @@
+[
+  {
+    "group": "bothify with all flags set to true",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Hello #?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": true
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "String with uppercase letters and digits",
+        "description": "Test case to verify that bothify replaces '#' with a digit and '?' with an uppercase letter."
+      }
+    ]
+  },
+  {
+    "group": "bothify with only numerify set to true",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Hello #?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "String with digits replacing '#' and '?' remains unchanged",
+        "description": "Test case to check that bothify replaces '#' with a digit and leaves '?' unchanged when only numerify is true."
+      }
+    ]
+  },
+  {
+    "group": "bothify with only letterify set to true",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Hello #?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "String with lowercase letters replacing '?' and '#' remains unchanged",
+        "description": "Test case to verify that bothify replaces '?' with a lowercase letter and leaves '#' unchanged when only letterify is true."
+      }
+    ]
+  },
+  {
+    "group": "bothify with no replacements",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Hello World"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "Hello World",
+        "description": "Test case to ensure that bothify returns the input unchanged when all flags are false."
+      }
+    ]
+  },
+  {
+    "group": "bothify with upper case setting",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Hello ?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": true
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "String with uppercase letter replacing '?'",
+        "description": "Test case to verify that bothify replaces '?' with an uppercase letter when isUpper is true."
+      }
+    ]
+  },
+  {
+    "group": "bothify with numerify on '?'",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Your code is ?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "String with a digit replacing '?'",
+        "description": "Test case to ensure that bothify replaces '?' with a digit when numerify is true."
+      }
+    ]
+  },
+  {
+    "group": "bothify with only letterify set to true and upper case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Hello ?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": true
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "String with an uppercase letter replacing '?'",
+        "description": "Test case to verify that bothify replaces '?' with an uppercase letter when isUpper is true and letterify is also true."
+      }
+    ]
+  },
+  {
+    "group": "bothify with only numerify set to true and upper case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Code #?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": true
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "String with an uppercase letter and a digit replacing '#'",
+        "description": "Test case to verify that bothify replaces '#' with a digit and '?' with an uppercase letter when both numerify and isUpper are true."
+      }
+    ]
+  },
+  {
+    "group": "bothify with only numerify set to true and letterify set to true",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "#?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "String with a digit replacing '#' and a lowercase letter replacing '?'",
+        "description": "Test case to check that bothify replaces '#' with a digit and '?' with a lowercase letter when both numerify and letterify are true."
+      }
+    ]
+  },
+  {
+    "group": "bothify with boundary input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": ""
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test case to ensure that bothify returns an empty string when the input is empty."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "String with three digits replacing '###'",
+        "description": "Test case to verify that bothify replaces all '#' with digits when numerify is true."
+      }
+    ]
+  },
+  {
+    "group": "bothify exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case to verify that bothify throws a NullPointerException when the input string is null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Hello #?"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case to verify that bothify throws a NullPointerException when the FakerContext is null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "Hello #?"
+          },
+          {
+            "parameter": "context",
+            "value": "FakerContext instance with random service"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case to verify that bothify throws an IllegalArgumentException when the input string contains invalid characters (if applicable, assuming the implementation checks for valid characters)."
+      }
+    ]
+  }
+]

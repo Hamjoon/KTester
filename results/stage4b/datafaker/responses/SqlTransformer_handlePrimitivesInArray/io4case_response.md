@@ -1,0 +1,1 @@
+{"group": "handlePrimitivesInArray - short array", "cases": [{"input": [{"parameter": "componentType", "value": "short.class"}, {"parameter": "value", "value": "[-32768, 0, 32767]"}], "expected": "-32768, 0, 32767", "description": "Test with a short array containing the minimum and maximum values along with zero."}]}

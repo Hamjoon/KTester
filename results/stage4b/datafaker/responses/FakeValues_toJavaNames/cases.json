@@ -1,0 +1,422 @@
+[
+  {
+    "group": "toJavaNames - Null Input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": null
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": null,
+        "description": "Test with null input string, expecting null as output."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Empty String Input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": ""
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test with empty string input, expecting empty string as output."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - No Underscores and Uppercase First Character",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "TestString"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "TestString",
+        "description": "Test with a string that has no underscores and starts with an uppercase letter, expecting the same string as output."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - No Underscores and Lowercase First Character",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "testString"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "testString",
+        "description": "Test with a string that has no underscores and starts with a lowercase letter for a method, expecting the same string as output."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - With Underscores",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "test_string_example"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "TestStringExample",
+        "description": "Test with a string that contains underscores, expecting the output to be converted to camel case with the first letter uppercase."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "test_string_example"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "testStringExample",
+        "description": "Test with a string that contains underscores for a method, expecting the output to be converted to camel case with the first letter lowercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Leading Underscore",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "_leadingUnderscore"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "LeadingUnderscore",
+        "description": "Test with a string starting with an underscore, expecting the underscore to be removed and the following character to be uppercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Trailing Underscore",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "trailingUnderscore_"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "TrailingUnderscore",
+        "description": "Test with a string ending with an underscore, expecting the underscore to be ignored and the first character to be uppercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Multiple Underscores",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "multiple__underscores_test"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "MultipleUnderscoresTest",
+        "description": "Test with a string containing multiple underscores, expecting each underscore to be removed and the following letter to be uppercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Single Underscore",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "single_underscore"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "SingleUnderscore",
+        "description": "Test with a string containing a single underscore, expecting the output to be converted to camel case with the first letter uppercase."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "single_underscore"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "singleUnderscore",
+        "description": "Test with a string containing a single underscore for a method, expecting the output to be converted to camel case with the first letter lowercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - All Uppercase",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "ALLUPPERCASE"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "Alluppercase",
+        "description": "Test with an all-uppercase string, expecting the first letter to be uppercase and the rest to be lowercase."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "ALLUPPERCASE"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "alluppercase",
+        "description": "Test with an all-uppercase string for a method, expecting the first letter to be lowercase and the rest to be lowercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Mixed Case with Underscores",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "Mixed_Case_With_Underscores"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "MixedCaseWithUnderscores",
+        "description": "Test with a mixed case string containing underscores, expecting the output to be converted to camel case with the first letter uppercase."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "Mixed_Case_With_Underscores"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "mixedCaseWithUnderscores",
+        "description": "Test with a mixed case string containing underscores for a method, expecting the output to be converted to camel case with the first letter lowercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Special Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "special@character_test"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "Special@characterTest",
+        "description": "Test with a string containing special characters, expecting the output to retain special characters with the first letter uppercase."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "special@character_test"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "special@characterTest",
+        "description": "Test with a string containing special characters for a method, expecting the output to retain special characters with the first letter lowercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Consecutive Underscores",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "consecutive__underscores"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "ConsecutiveUnderscores",
+        "description": "Test with a string containing consecutive underscores, expecting the output to remove underscores and capitalize the following character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "consecutive__underscores"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "consecutiveUnderscores",
+        "description": "Test with a string containing consecutive underscores for a method, expecting the output to remove underscores and keep the first letter lowercase."
+      }
+    ]
+  },
+  {
+    "group": "toJavaNames - Invalid Input Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "test_string_example_"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "TestStringExample",
+        "description": "Test with a string that ends with an underscore, expecting the output to remove the trailing underscore and capitalize the first letter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "test_string_example_"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "testStringExample",
+        "description": "Test with a string that ends with an underscore for a method, expecting the output to remove the trailing underscore and keep the first letter lowercase."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "1_invalid_start"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "1InvalidStart",
+        "description": "Test with a string that starts with a number, expecting the output to retain the number and capitalize the first letter after the underscore."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "1_invalid_start"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "1_invalidStart",
+        "description": "Test with a string that starts with a number for a method, expecting the output to retain the number and keep the first letter after the underscore lowercase."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "___multiple_leading_underscores"
+          },
+          {
+            "parameter": "isMethod",
+            "value": false
+          }
+        ],
+        "expected": "MultipleLeadingUnderscores",
+        "description": "Test with a string that has multiple leading underscores, expecting the output to remove the leading underscores and capitalize the first letter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "string",
+            "value": "___multiple_leading_underscores"
+          },
+          {
+            "parameter": "isMethod",
+            "value": true
+          }
+        ],
+        "expected": "multipleLeadingUnderscores",
+        "description": "Test with a string that has multiple leading underscores for a method, expecting the output to remove the leading underscores and keep the first letter lowercase."
+      }
+    ]
+  }
+]
