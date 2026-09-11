@@ -396,6 +396,7 @@ def generate_environment_notes() -> None:
     author_fix = REPO / "evaluation_results" / "RQ1-ktester" / "RQ1" / "KTester-gpt4o"
     author_java_option_reps = 0
     author_source_warning_reps = 0
+    author_fifth_repair_tasks = 0
     for rep in range(1, 6):
         texts = []
         for path in (author_fix / f"rep_{rep}").glob("*/fix/**/repair_prompt_*.md"):
@@ -403,6 +404,10 @@ def generate_environment_notes() -> None:
         joined = "\n".join(texts)
         author_java_option_reps += "Picked up _JAVA_OPTIONS" in joined
         author_source_warning_reps += "less than -source '17'" in joined
+        author_fifth_repair_tasks += len(list((author_fix / f"rep_{rep}").glob("*/fix/**/repair_prompt_4.md")))
+
+    our_third_repair_tasks = len(list((REPO / "results" / "stage4").glob("*/fix/*/repair_prompt_2.md")))
+    our_fifth_repair_tasks = len(list((REPO / "results" / "stage4").glob("*/fix/*/repair_prompt_4.md")))
 
     junit_missing = sum(
         "package org.junit" in feedback and "does not exist" in feedback for feedback in final_feedback
@@ -420,7 +425,10 @@ def generate_environment_notes() -> None:
         f"- Our final failures caused by a missing Mockito package: {mockito_missing} of {len(final_feedback)}.",
         f"- Our final failures carrying the Java 17 annotation-processor source warning: {our_source_warnings} of {len(final_feedback)}.",
         f"- Authors' repair prompts carrying the same Java 17 source warning: {author_source_warning_reps} of 5 repetitions.",
+        f"- Our tasks reaching a third repair prompt (`repair_prompt_2.md`): {our_third_repair_tasks}; tasks reaching a fifth repair prompt: {our_fifth_repair_tasks}.",
+        f"- Authors' task/repetition pairs reaching a fifth repair prompt (`repair_prompt_4.md`): {author_fifth_repair_tasks}.",
         "- The final 18 compile failures point to generated source errors involving project-local types, members, imports, visibility, constructors, or literals. The extracted archive does not provide evidence that a dependency available to the authors was missing from our classpath.",
+        "- The repair-budget difference is an experiment-configuration effect that can improve the authors' final compile rate independently of the initial model response.",
         "- Runtime is environment-sensitive: the archived author timing record and our timing record came from different runs and potentially different hardware, API latency, and concurrency conditions, so their time difference cannot be assigned solely to the model.",
         "- The authors' `@Timeout` annotation and our omission are prompt/tool-output differences. They could change handling of long-running tests, but they do not explain the 18 compilation failures.",
     ]
