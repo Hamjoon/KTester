@@ -1,0 +1,5 @@
+{
+  "api document of class org.flmelody.core.AbstractRouterGroup": "\n * @author esotericman\n ",
+  "constructors for class `org.flmelody.core.AbstractRouterGroup`": "params: \nbody:\n```java\n  protected AbstractRouterGroup(M manager) {\n    this(manager, \"/\");\n  }\n\n```\nparams: \nbody:\n```java\n  protected AbstractRouterGroup(M manager, String groupPath) {\n    this.manager = manager;\n    setGroupPath(groupPath);\n  }\n\n```",
+  "invoke examples of focal method": "example 1:\n```java\n  public static <I> FunctionMetaInfo<I> findRouter(String relativePath, String method) {\n    for (AbstractRouterGroup<Windward> routerGroup : routerGroups) {\n      FunctionMetaInfo<I> functionMetaInfo = routerGroup.matchRouter(relativePath, method);\n    for (AbstractRouterGroup<Windward> routerGroup : resourceRouterGroups) {\n      FunctionMetaInfo<I> functionMetaInfo = routerGroup.matchRouter(relativePath, method);\n  }\n```"
+}
