@@ -1,0 +1,53 @@
+{
+  "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)": {
+    "test_cases": 12,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.45,
+    "bran_cov": 0.45
+  },
+  "org.apache.commons.csv.Lexer#nextToken(Token)": {
+    "test_cases": 17,
+    "passed_cases": 4,
+    "inst_cov": 0.74,
+    "bran_cov": 0.76,
+    "correct_inst_cov": 0.51,
+    "correct_bran_cov": 0.44
+  },
+  "org.apache.commons.csv.CSVParser#createHeaders()": {
+    "error_type": "compile error",
+    "test_cases": 16,
+    "passed_cases": 0
+  },
+  "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.36,
+    "bran_cov": 0.18,
+    "correct_inst_cov": 0.36,
+    "correct_bran_cov": 0.18
+  },
+  "org.apache.commons.csv.CSVParser#nextRecord()": {
+    "test_cases": 10,
+    "passed_cases": 7,
+    "inst_cov": 0.59,
+    "bran_cov": 0.61,
+    "correct_inst_cov": 0.56,
+    "correct_bran_cov": 0.55
+  },
+  "org.apache.commons.csv.CSVFormat#toString()": {
+    "test_cases": 12,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.83,
+    "bran_cov": 0.81
+  },
+  "compile_pass_rate": 0.7837837837837838,
+  "execution_pass_rate": 0.24324324324324326,
+  "average_instruction_coverage": 0.49499999999999994,
+  "average_branch_coverage": 0.4683333333333333,
+  "average_correct_instruction_coverage": 0.23833333333333337,
+  "average_correct_branch_coverage": 0.19499999999999998
+}

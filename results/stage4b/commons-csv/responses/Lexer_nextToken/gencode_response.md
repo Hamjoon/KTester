@@ -1,0 +1,188 @@
+```java
+package org.apache.commons.csv;
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import static org.junit.jupiter.api.Assertions.*;
+import org.mockito.*;
+import static org.mockito.Mockito.*;
+import org.mockito.junit.jupiter.MockitoExtension;
+import java.io.IOException;
+import java.io.StringReader;
+
+@ExtendWith(MockitoExtension.class)
+class Lexer_nextToken_Test {
+    private Lexer lexer;
+    private CSVFormat format;
+    private ExtendedBufferedReader reader;
+    private Token token;
+
+    @BeforeAll
+    static void setupBeforeAll() {
+        // Any global setup can be done here
+    }
+
+    @BeforeEach
+    void setupBeforeEach() {
+        // Setup the CSVFormat and ExtendedBufferedReader
+        format = CSVFormat.DEFAULT.withEscape('\\');
+        token = new Token();
+    }
+
+    @AfterEach
+    void teardownAfterEach() {
+        // Cleanup after each test if necessary
+        if (lexer != null) {
+            try {
+                lexer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @AfterAll
+    static void teardownAfterAll() {
+        // Any global cleanup can be done here
+    }
+
+    private void createLexer(final String input) {
+        reader = new ExtendedBufferedReader(new StringReader(input));
+        lexer = new Lexer(format, reader);
+    }
+
+    @Test
+    void testNextTokenHandlingEmptyLines() throws IOException {
+        // Test when ignoreEmptyLines is true and the input contains only empty lines
+        createLexer("\n\n\n");
+        lexer.ignoreEmptyLines = true; // Set the ignoreEmptyLines flag
+        assertThat(lexer.nextToken(token), matches(Token.Type.EOF, ""));
+
+        // Test when ignoreEmptyLines is false and the input contains only empty lines
+        createLexer("\n\n\n");
+        lexer.ignoreEmptyLines = false; // Set the ignoreEmptyLines flag
+        assertThat(lexer.nextToken(token), matches(Token.Type.EOF, ""));
+    }
+
+    @Test
+    void testNextTokenEndOfFileHandling() throws IOException {
+        // Test when the last character read is EOF
+        createLexer("a,b,c");
+        lexer.nextToken(token); // Read tokens until EOF
+        lexer.nextToken(token);
+        lexer.nextToken(token);
+        assertThat(lexer.nextToken(token), matches(Token.Type.EOF, ""));
+
+        // Test when the next character read is EOF
+        createLexer("a,b,c");
+        lexer.nextToken(token); // Read first token
+        lexer.nextToken(token); // Read second token
+        lexer.nextToken(token); // Read third token
+        lexer.nextToken(token); // Read EOF
+        assertThat(lexer.nextToken(token), matches(Token.Type.EOF, ""));
+    }
+
+    @Test
+    void testNextTokenCommentHandling() throws IOException {
+        // Test when the character read indicates a comment start
+        createLexer("# This is a comment\nvalue1,value2");
+        assertThat(lexer.nextToken(token), matches(Token.Type.COMMENT, "This is a comment"));
+    }
+
+    @Test
+    void testNextTokenTokenParsing() throws IOException {
+        // Test when the character read is a simple token
+        createLexer("simpleToken,");
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "simpleToken"));
+
+        // Test when the character read indicates end of record
+        createLexer("value1,value2\n");
+        assertThat(lexer.nextToken(token), matches(Token.Type.EORECORD, ""));
+
+        // Test when the character read indicates the start of an encapsulated token
+        createLexer("\"encapsulatedToken\",value");
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "encapsulatedToken"));
+    }
+
+    @Test
+    void testNextTokenWhitespaceHandling() throws IOException {
+        // Test when ignoreSurroundingSpaces is true and there are leading whitespaces
+        createLexer("   tokenWithSpaces");
+        lexer.ignoreSurroundingSpaces = true; // Set the ignoreSurroundingSpaces flag
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "tokenWithSpaces"));
+
+        // Test when ignoreSurroundingSpaces is false and there are leading whitespaces
+        createLexer("   tokenWithSpaces");
+        lexer.ignoreSurroundingSpaces = false; // Set the ignoreSurroundingSpaces flag
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "   tokenWithSpaces"));
+    }
+
+    @Test
+    void testNextTokenHandlingMixedContent() throws IOException {
+        // Test when the input contains mixed content including tokens and comments
+        createLexer("# This is a comment\nmixedContent,value");
+        assertThat(lexer.nextToken(token), matches(Token.Type.COMMENT, "This is a comment"));
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "mixedContent"));
+    }
+
+    @Test
+    void testNextTokenHandlingCommentsWithTrailingSpaces() throws IOException {
+        // Test when the character read indicates a comment start with trailing spaces
+        createLexer("# Trailing comment    \nvalue");
+        assertThat(lexer.nextToken(token), matches(Token.Type.COMMENT, "Trailing comment    "));
+    }
+
+    @Test
+    void testNextTokenEndOfFileWithContent() throws IOException {
+        // Test when the last character read is EOF with content before it
+        createLexer("content");
+        lexer.nextToken(token); // Read token
+        assertThat(lexer.nextToken(token), matches(Token.Type.EOF, ""));
+    }
+
+    @Test
+    void testNextTokenHandlingEscapedCharacters() throws IOException {
+        // Test when the character read indicates an escaped character
+        createLexer("escaped\\nToken");
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "escapedToken"));
+    }
+
+    @Test
+    void testNextTokenHandlingMixedLineEndings() throws IOException {
+        // Test when the input contains mixed line endings (CR, LF)
+        createLexer("line1\r\nline2\nline3");
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "line1"));
+        assertThat(lexer.nextToken(token), matches(Token.Type.EORECORD, ""));
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "line2"));
+        assertThat(lexer.nextToken(token), matches(Token.Type.EORECORD, ""));
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, "line3"));
+        assertThat(lexer.nextToken(token), matches(Token.Type.EOF, ""));
+    }
+
+    @Test
+    void testNextTokenHandlingMultipleConsecutiveDelimiters() throws IOException {
+        // Test when the input contains multiple consecutive delimiters
+        createLexer(",,");
+        assertThat(lexer.nextToken(token), matches(Token.Type.TOKEN, ""));
+    }
+
+    @Test
+    void testNextTokenIOExceptionHandling() throws IOException {
+        // Mock the ExtendedBufferedReader to throw IOException
+        reader = mock(ExtendedBufferedReader.class);
+        when(reader.read()).thenThrow(new IOException("Mocked IOException"));
+        lexer = new Lexer(format, reader);
+        
+        // Test when an IOException is thrown by the reader during character reading
+        assertThrows(IOException.class, () -> lexer.nextToken(token));
+    }
+
+    @Test
+    void testNextTokenInvalidTokenHandling() throws IOException {
+        // Test when the input character is invalid and should be handled as an INVALID token
+        createLexer("invalidChar");
+        // Assuming the first character is invalid
+        assertThat(lexer.nextToken(token), matches(Token.Type.INVALID, ""));
+    }
+}
+```

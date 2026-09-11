@@ -1,0 +1,421 @@
+[
+  {
+    "group": "printWithQuotes - QuoteMode.ALL",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "\"Sample String\""
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "\"Sample String\"",
+        "description": "Test when QuoteMode is ALL, should always quote the output."
+      }
+    ]
+  },
+  {
+    "group": "printWithQuotes - QuoteMode.ALL_NON_NULL",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "\"Sample String\""
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "\"Sample String\"",
+        "description": "Test when QuoteMode is ALL_NON_NULL, should always quote the output."
+      }
+    ]
+  },
+  {
+    "group": "printWithQuotes - QuoteMode.NON_NUMERIC",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "\"Sample String\""
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "\"Sample String\"",
+        "description": "Test when QuoteMode is NON_NUMERIC with a non-numeric object, should quote the output."
+      },
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": 123
+          },
+          {
+            "parameter": "charSeq",
+            "value": "123"
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "123",
+        "description": "Test when QuoteMode is NON_NUMERIC with a numeric object, should not quote the output."
+      }
+    ]
+  },
+  {
+    "group": "printWithQuotes - QuoteMode.NONE",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "Sample String"
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "Sample String",
+        "description": "Test when QuoteMode is NONE, should write the original value without quotes."
+      }
+    ]
+  },
+  {
+    "group": "printWithQuotes - QuoteMode.MINIMAL",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": ""
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "\"\"",
+        "description": "Test when QuoteMode is MINIMAL with an empty charSeq, should quote the empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "Sample String"
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": false
+          }
+        ],
+        "expected": "Sample String",
+        "description": "Test when QuoteMode is MINIMAL with no special characters, should write the original value without quotes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "\nNew Line"
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": false
+          }
+        ],
+        "expected": "\"\\nNew Line\"",
+        "description": "Test when QuoteMode is MINIMAL with new line character, should quote the output."
+      }
+    ]
+  },
+  {
+    "group": "printWithQuotes - Exception Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "Sample String"
+          },
+          {
+            "parameter": "out",
+            "value": "null"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test when the Appendable out is null, should throw IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "Sample String"
+          },
+          {
+            "parameter": "out",
+            "value": "new StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test when the Appendable out throws IOException during append, should throw IOException."
+      }
+    ]
+  },
+  {
+    "group": "printWithQuotes - QuoteMode.MINIMAL - Edge Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "\tTab Character"
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": false
+          }
+        ],
+        "expected": "\"\\tTab Character\"",
+        "description": "Test when QuoteMode is MINIMAL with a tab character, should quote the output."
+      },
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "   Leading Spaces"
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": false
+          }
+        ],
+        "expected": "\"   Leading Spaces\"",
+        "description": "Test when QuoteMode is MINIMAL with leading spaces, should quote the output."
+      },
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "Trailing Spaces   "
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": false
+          }
+        ],
+        "expected": "\"Trailing Spaces   \"",
+        "description": "Test when QuoteMode is MINIMAL with trailing spaces, should quote the output."
+      }
+    ]
+  },
+  {
+    "group": "printWithQuotes - QuoteMode.MINIMAL - Special Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "Special@Char"
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "\"Special@Char\"",
+        "description": "Test when QuoteMode is MINIMAL with special characters, should quote the output."
+      },
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": "Quote\"Inside\""
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": true
+          }
+        ],
+        "expected": "\"Quote\\\"Inside\\\"\"",
+        "description": "Test when QuoteMode is MINIMAL with quotes inside the string, should escape quotes and quote the output."
+      }
+    ]
+  },
+  {
+    "group": "printWithQuotes - QuoteMode.NONE - Edge Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": ""
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test when QuoteMode is NONE with an empty charSeq, should return empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "object",
+            "value": "Sample Object"
+          },
+          {
+            "parameter": "charSeq",
+            "value": " "
+          },
+          {
+            "parameter": "out",
+            "value": "StringWriter()"
+          },
+          {
+            "parameter": "newRecord",
+            "value": false
+          }
+        ],
+        "expected": " ",
+        "description": "Test when QuoteMode is NONE with a space character, should return the original space."
+      }
+    ]
+  }
+]

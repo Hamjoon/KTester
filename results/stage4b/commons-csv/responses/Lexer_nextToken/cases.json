@@ -1,0 +1,311 @@
+[
+  {
+    "group": "nextToken - Handling Empty Lines",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF",
+          "content": ""
+        },
+        "description": "Test when ignoreEmptyLines is true and the input contains only empty lines, expecting token type to be EOF."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF",
+          "content": ""
+        },
+        "description": "Test when ignoreEmptyLines is false and the input contains only empty lines, expecting token type to be EOF."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - End of File Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF",
+          "content": ""
+        },
+        "description": "Test when the last character read is EOF, expecting token type to be EOF."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF",
+          "content": ""
+        },
+        "description": "Test when the next character read is EOF, expecting token type to be EOF."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Comment Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "COMMENT",
+          "content": "This is a comment"
+        },
+        "description": "Test when the character read indicates a comment start, expecting token type to be COMMENT with content from the line."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Token Parsing",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "simpleToken"
+        },
+        "description": "Test when the character read is a simple token, expecting token type to be TOKEN with the content of the simple token."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EORecord",
+          "content": ""
+        },
+        "description": "Test when the character read indicates end of record, expecting token type to be EORECORD."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "encapsulatedToken"
+        },
+        "description": "Test when the character read indicates the start of an encapsulated token, expecting token type to be TOKEN with the content of the encapsulated token."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Whitespace Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": ""
+        },
+        "description": "Test when ignoreSurroundingSpaces is true and there are leading whitespaces, expecting token type to be TOKEN with trimmed content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "tokenWithSpaces"
+        },
+        "description": "Test when ignoreSurroundingSpaces is false and there are leading whitespaces, expecting token type to be TOKEN with spaces included in content."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling Mixed Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "mixedContent"
+        },
+        "description": "Test when the input contains mixed content including tokens and comments, expecting token type to be TOKEN with the content of the mixed token."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling Comments with Trailing Spaces",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "COMMENT",
+          "content": "Trailing comment    "
+        },
+        "description": "Test when the character read indicates a comment start with trailing spaces, expecting token type to be COMMENT with content from the line including trailing spaces."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - End of File with Content",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EOF",
+          "content": ""
+        },
+        "description": "Test when the last character read is EOF with content before it, expecting token type to be EOF."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling Escaped Characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": "escaped\\nToken"
+        },
+        "description": "Test when the character read indicates an escaped character, expecting token type to be TOKEN with the content of the escaped token."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling Mixed Line Endings",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "EORecord",
+          "content": ""
+        },
+        "description": "Test when the input contains mixed line endings (CR, LF), expecting token type to be EORECORD."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Handling Multiple Consecutive Delimiters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "TOKEN",
+          "content": ""
+        },
+        "description": "Test when the input contains multiple consecutive delimiters, expecting token type to be TOKEN with empty content."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - IOException Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "IOException"
+        },
+        "description": "Test when an IOException is thrown by the reader during character reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "IOException"
+        },
+        "description": "Test when an IOException is thrown while reading a line for comment."
+      }
+    ]
+  },
+  {
+    "group": "nextToken - Invalid Token Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": {
+          "type": "INVALID"
+        },
+        "description": "Test when the input character is invalid and should be handled as an INVALID token."
+      }
+    ]
+  }
+]
