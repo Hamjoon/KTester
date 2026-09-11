@@ -1,0 +1,361 @@
+{
+    "testCases": [
+        {
+            "group": "matches method - EXACT pattern type",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"test\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "EXACT",
+                                "pattern": "\"test\""
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for EXACT pattern where the value matches the pattern exactly."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"test\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "EXACT",
+                                "pattern": "\"not_test\""
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for EXACT pattern where the value does not match the pattern."
+                }
+            ]
+        },
+        {
+            "group": "matches method - PREFIX pattern type",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"testValue\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "PREFIX",
+                                "pattern": "\"test\""
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for PREFIX pattern where the value starts with the pattern."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"valueTest\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "PREFIX",
+                                "pattern": "\"test\""
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for PREFIX pattern where the value does not start with the pattern."
+                }
+            ]
+        },
+        {
+            "group": "matches method - ANYTHING_BUT pattern type",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"test\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "ANYTHING_BUT",
+                                "values": ["\"test\"", "\"example\""]
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for ANYTHING_BUT pattern where the value is in the excluded list."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"not_test\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "ANYTHING_BUT",
+                                "values": ["\"test\"", "\"example\""]
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for ANYTHING_BUT pattern where the value is not in the excluded list."
+                }
+            ]
+        },
+        {
+            "group": "matches method - EXISTS and ABSENT pattern types",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"any_value\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "EXISTS"
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for EXISTS pattern which should always return true regardless of the value."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"any_value\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "ABSENT"
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for ABSENT pattern which should always return false regardless of the value."
+                }
+            ]
+        },
+        {
+            "group": "matches method - NUMERIC_EQ pattern type",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "42"
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "NUMERIC_EQ",
+                                "pattern": 42
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for NUMERIC_EQ pattern where the numeric value matches the pattern."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "42"
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "NUMERIC_EQ",
+                                "pattern": 43
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for NUMERIC_EQ pattern where the numeric value does not match the pattern."
+                }
+            ]
+        },
+        {
+            "group": "matches method - NUMERIC_RANGE pattern type",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "25"
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "NUMERIC_RANGE",
+                                "bottom": 20,
+                                "top": 30,
+                                "isCIDR": false,
+                                "openBottom": false,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for NUMERIC_RANGE pattern where the value is within the specified range."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "15"
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "NUMERIC_RANGE",
+                                "bottom": 20,
+                                "top": 30,
+                                "isCIDR": false,
+                                "openBottom": false,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for NUMERIC_RANGE pattern where the value is below the specified range."
+                }
+            ]
+        },
+        {
+            "group": "matches method - EQUALS_IGNORE_CASE pattern type",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"Test\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "EQUALS_IGNORE_CASE",
+                                "pattern": "\"test\""
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for EQUALS_IGNORE_CASE pattern where the value matches the pattern ignoring case."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"Test\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "EQUALS_IGNORE_CASE",
+                                "pattern": "\"not_test\""
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for EQUALS_IGNORE_CASE pattern where the value does not match the pattern ignoring case."
+                }
+            ]
+        },
+        {
+            "group": "matches method - WILDCARD pattern type",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"testValue\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "WILDCARD",
+                                "pattern": "\"test*\""
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for WILDCARD pattern where the value matches the pattern using wildcard."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"notMatchingValue\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "WILDCARD",
+                                "pattern": "\"test*\""
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for WILDCARD pattern where the value does not match the pattern using wildcard."
+                }
+            ]
+        },
+        {
+            "group": "matches method - ANYTHING_BUT_IGNORE_CASE pattern type",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"Test\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "ANYTHING_BUT_IGNORE_CASE",
+                                "values": ["\"test\"", "\"example\""]
+                            }
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Test case for ANYTHING_BUT_IGNORE_CASE pattern where the value is in the excluded list ignoring case."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "val",
+                            "value": "\"not_test\""
+                        },
+                        {
+                            "parameter": "pattern",
+                            "value": {
+                                "type": "ANYTHING_BUT_IGNORE_CASE",
+                                "values": ["\"test\"", "\"example\""]
+                            }
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Test case for ANYTHING_BUT_IGNORE_CASE pattern where the value is not in the excluded list ignoring case."
+                }
+            ]
+        }
+    ]
+}

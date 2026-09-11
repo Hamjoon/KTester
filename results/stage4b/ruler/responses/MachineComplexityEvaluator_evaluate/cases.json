@@ -1,0 +1,157 @@
+[
+  {
+    "group": "evaluate method tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with no transitions"
+          }
+        ],
+        "expected": 0,
+        "description": "Test the evaluation of a ByteState with no transitions, expecting a complexity of 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to multiple wildcard patterns"
+          }
+        ],
+        "expected": "maxComplexity",
+        "description": "Test the evaluation of a ByteState that leads to multiple wildcard patterns, expecting the returned complexity to be capped at maxComplexity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to a single wildcard pattern"
+          }
+        ],
+        "expected": 1,
+        "description": "Test the evaluation of a ByteState that leads to a single wildcard pattern, expecting a complexity of 1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with complex transitions"
+          }
+        ],
+        "expected": "complexity greater than 1",
+        "description": "Test the evaluation of a complex ByteState with multiple transitions and wildcard patterns, expecting a complexity greater than 1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with wildcards and next NameStates"
+          }
+        ],
+        "expected": "maxSize from next NameStates",
+        "description": "Test the evaluation of a ByteState that has wildcard transitions leading to next NameStates, expecting the complexity to correctly reflect the maximum size from those states."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with empty transitions and next NameStates"
+          }
+        ],
+        "expected": 0,
+        "description": "Test the evaluation of a ByteState with empty transitions and no next NameStates, expecting a complexity of 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with a transition leading to a wildcard pattern and a next NameState"
+          }
+        ],
+        "expected": "complexity based on wildcard patterns and next NameState",
+        "description": "Test the evaluation of a ByteState with a transition leading to a wildcard pattern and a next NameState, expecting the complexity to reflect the combined complexity of both."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to multiple wildcard patterns and a maxComplexity of 5"
+          }
+        ],
+        "expected": 5,
+        "description": "Test the evaluation of a ByteState with multiple transitions leading to wildcard patterns, expecting the returned complexity to be capped at maxComplexity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with a single transition leading to no wildcard patterns"
+          }
+        ],
+        "expected": 0,
+        "description": "Test the evaluation of a ByteState with a single transition that leads to no wildcard patterns, expecting a complexity of 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with multiple transitions but no wildcard patterns"
+          }
+        ],
+        "expected": 0,
+        "description": "Test the evaluation of a ByteState with multiple transitions that do not lead to any wildcard patterns, expecting a complexity of 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with maximum transitions and wildcard patterns"
+          }
+        ],
+        "expected": "maxComplexity",
+        "description": "Test the evaluation of a ByteState with maximum transitions leading to wildcard patterns, expecting the returned complexity to be capped at maxComplexity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with null transitions"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test the evaluation of a ByteState that is null, expecting a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with invalid transition leading to null next ByteState"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test the evaluation of a ByteState with a transition that leads to a null next ByteState, expecting a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions leading to a next NameState that is null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test the evaluation of a ByteState with transitions leading to a next NameState that is null, expecting a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "mocked ByteState with transitions that create a cycle"
+          }
+        ],
+        "expected": "StackOverflowError",
+        "description": "Test the evaluation of a ByteState with transitions that create a cycle, expecting a StackOverflowError."
+      }
+    ]
+  }
+]

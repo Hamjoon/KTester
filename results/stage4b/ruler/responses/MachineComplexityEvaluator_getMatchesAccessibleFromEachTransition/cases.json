@@ -1,0 +1,157 @@
+[
+  {
+    "group": "getMatchesAccessibleFromEachTransition",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "null"
+          }
+        ],
+        "expected": "{}",
+        "description": "Test case where the input ByteState is null. The method should return an empty map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with no transitions"
+          }
+        ],
+        "expected": "{}",
+        "description": "Test case where the input ByteState has no transitions. The method should return a map with the state transition but no matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with one transition leading to another state with matches"
+          }
+        ],
+        "expected": "{SingleByteTransition -> Set<ByteMatch>}",
+        "description": "Test case where the input ByteState has one transition leading to another state that contains matches. The method should return a map with the transition and the corresponding matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with multiple transitions"
+          }
+        ],
+        "expected": "{SingleByteTransition1 -> Set<ByteMatch1>, SingleByteTransition2 -> Set<ByteMatch2>}",
+        "description": "Test case where the input ByteState has multiple transitions leading to various states. The method should return a map with all transitions and their corresponding matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with circular transitions"
+          }
+        ],
+        "expected": "{SingleByteTransition -> Set<ByteMatch>}",
+        "description": "Test case where the input ByteState has circular transitions. The method should handle the circular reference and return the correct matches without infinite looping."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to states with no matches"
+          }
+        ],
+        "expected": "{SingleByteTransition -> Set<ByteMatch>}",
+        "description": "Test case where the input ByteState has transitions leading to states that do not contain matches. The method should return a map with the transitions but empty sets for matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with one transition leading to another state with no transitions"
+          }
+        ],
+        "expected": "{SingleByteTransition -> Set<ByteMatch>}",
+        "description": "Test case where the input ByteState has one transition leading to another state with no transitions. The method should return a map with the transition and an empty set of matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with multiple transitions leading to some states with matches and some without"
+          }
+        ],
+        "expected": "{SingleByteTransition1 -> Set<ByteMatch1>, SingleByteTransition2 -> Set<ByteMatch2>, SingleByteTransition3 -> Set<ByteMatch3>}",
+        "description": "Test case where the input ByteState has multiple transitions leading to various states, some of which contain matches and some do not. The method should return a map with all transitions and their corresponding matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with deep transitions"
+          }
+        ],
+        "expected": "{SingleByteTransition -> Set<ByteMatch>}",
+        "description": "Test case where the input ByteState has deep transitions that lead to matches after several states. The method should correctly compute matches through the depth of transitions."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with multiple circular transitions"
+          }
+        ],
+        "expected": "{SingleByteTransition -> Set<ByteMatch>}",
+        "description": "Test case where the input ByteState has multiple circular transitions. The method should handle the circular references correctly and return the expected matches without causing an infinite loop."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions that lead to states with a large number of matches"
+          }
+        ],
+        "expected": "{SingleByteTransition -> Set<ByteMatch>}",
+        "description": "Test case where the input ByteState has transitions leading to states that contain a large number of matches. The method should return the correct matches efficiently."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with null transitions"
+          }
+        ],
+        "expected": "{}",
+        "description": "Test case where the input ByteState has transitions that are null. The method should handle the null transitions gracefully and return an empty map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to states that throw exceptions"
+          }
+        ],
+        "expected": "Exception",
+        "description": "Test case where the input ByteState has transitions leading to states that throw exceptions when accessed. The method should catch the exception and handle it appropriately."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to states that are not reachable"
+          }
+        ],
+        "expected": "{}",
+        "description": "Test case where the input ByteState has transitions leading to states that are not reachable (e.g. due to some conditions). The method should return an empty map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to states with matches that are null"
+          }
+        ],
+        "expected": "{}",
+        "description": "Test case where the input ByteState has transitions leading to states that contain matches that are null. The method should return a map with transitions but empty sets for matches."
+      }
+    ]
+  }
+]

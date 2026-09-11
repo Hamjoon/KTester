@@ -1,0 +1,386 @@
+[
+  {
+    "group": "addRangePattern - Basic Functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                2,
+                3
+              ],
+              "top": [
+                1,
+                2,
+                5
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "nextNameState is not null",
+        "description": "Test case where the range is valid and both bottom and top are closed."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                2,
+                3
+              ],
+              "top": [
+                1,
+                3,
+                0
+              ],
+              "openBottom": false,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "nextNameState is not null",
+        "description": "Test case where the top is open, allowing for matches below the top value."
+      }
+    ]
+  },
+  {
+    "group": "addRangePattern - Edge Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                2,
+                3
+              ],
+              "top": [
+                1,
+                2,
+                3
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and no matches are added",
+        "description": "Test case where the bottom and top are equal and closed, leading to no valid matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                2,
+                3
+              ],
+              "top": [
+                1,
+                2,
+                4
+              ],
+              "openBottom": true,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and includes matches for values greater than bottom",
+        "description": "Test case where the bottom is open and the top is closed, allowing for matches greater than the bottom value."
+      }
+    ]
+  },
+  {
+    "group": "addRangePattern - Special Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                0,
+                0
+              ],
+              "top": [
+                0,
+                0,
+                0
+              ],
+              "openBottom": true,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and no matches are added",
+        "description": "Test case where both bottom and top are zero and open, leading to no valid matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                9,
+                9,
+                9
+              ],
+              "top": [
+                1,
+                0,
+                0
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and includes matches for values below top",
+        "description": "Test case where the bottom is at maximum and the top is lower, leading to valid matches."
+      }
+    ]
+  },
+  {
+    "group": "addRangePattern - Additional Functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                5,
+                5,
+                5
+              ],
+              "top": [
+                5,
+                5,
+                10
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and includes matches for values between bottom and top",
+        "description": "Test case where the range is valid and both bottom and top are closed, allowing for matches between 5 and 10."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                2,
+                3,
+                4
+              ],
+              "top": [
+                2,
+                3,
+                4
+              ],
+              "openBottom": true,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and no matches are added",
+        "description": "Test case where the bottom and top are equal and both are open, leading to no valid matches."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                1,
+                2,
+                3
+              ],
+              "openBottom": true,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and includes matches for values greater than bottom and less than top",
+        "description": "Test case where both bottom and top are open, allowing for matches between 0 and 3."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                0,
+                0
+              ],
+              "top": [
+                1,
+                0,
+                1
+              ],
+              "openBottom": false,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and includes matches for values equal to bottom and below top",
+        "description": "Test case where the bottom is closed and the top is open, allowing for matches equal to the bottom value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                9,
+                0,
+                0
+              ],
+              "top": [
+                9,
+                1,
+                0
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "nextNameState is not null and includes matches for values below top",
+        "description": "Test case where the bottom is at maximum and the top is higher, allowing for valid matches below the top."
+      }
+    ]
+  },
+  {
+    "group": "addRangePattern - Exception Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                2,
+                3
+              ],
+              "top": [
+                1,
+                2,
+                2
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where the bottom is greater than the top, which should throw an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                2,
+                3
+              ],
+              "top": [
+                1,
+                2
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "Test case where the bottom and top arrays have different lengths, which should throw an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [],
+              "top": [
+                1,
+                2,
+                3
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where the bottom array is empty, which should throw an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                2,
+                3
+              ],
+              "top": [],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where the top array is empty, which should throw an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                2,
+                3
+              ],
+              "top": [
+                1,
+                2,
+                3
+              ],
+              "openBottom": true,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where both bottom and top are equal and open, which should throw an exception."
+      }
+    ]
+  }
+]

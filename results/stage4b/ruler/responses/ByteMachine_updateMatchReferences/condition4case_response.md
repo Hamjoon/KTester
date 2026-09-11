@@ -1,0 +1,222 @@
+{
+    "testCases": [
+        {
+            "group": "updateMatchReferences - Exact Pattern",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "EXACT"
+                                }
+                            }
+                        }
+                    ],
+                    "expected": "No change in hasNumeric, hasIP, hasSuffix",
+                    "description": "Test the method with an EXACT pattern type, ensuring no decrements occur."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Suffix Pattern",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "SUFFIX"
+                                }
+                            }
+                        }
+                    ],
+                    "expected": "hasSuffix decremented by 1",
+                    "description": "Test the method with a SUFFIX pattern type to verify hasSuffix is decremented."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Numeric Equal Pattern",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "NUMERIC_EQ"
+                                }
+                            }
+                        }
+                    ],
+                    "expected": "hasNumeric decremented by 1",
+                    "description": "Test the method with a NUMERIC_EQ pattern type to ensure hasNumeric is decremented."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Numeric Range Pattern (CIDR)",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "NUMERIC_RANGE",
+                                    "isCIDR": true
+                                }
+                            }
+                        }
+                    ],
+                    "expected": "hasIP decremented by 1",
+                    "description": "Test the method with a NUMERIC_RANGE pattern type where isCIDR is true, verifying hasIP is decremented."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Numeric Range Pattern (Not CIDR)",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "NUMERIC_RANGE",
+                                    "isCIDR": false
+                                }
+                            }
+                        }
+                    ],
+                    "expected": "hasNumeric decremented by 1",
+                    "description": "Test the method with a NUMERIC_RANGE pattern type where isCIDR is false, ensuring hasNumeric is decremented."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Anything But Pattern with Numeric",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "ANYTHING_BUT",
+                                    "isNumeric": true
+                                },
+                                "nextNameState": "someState"
+                            }
+                        }
+                    ],
+                    "expected": "hasNumeric decremented by 1 and nextNameState removed from anythingButs",
+                    "description": "Test the method with an ANYTHING_BUT pattern type that is numeric, verifying both hasNumeric is decremented and the nextNameState is removed."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Anything But Pattern without Numeric",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "ANYTHING_BUT",
+                                    "isNumeric": false
+                                },
+                                "nextNameState": "someState"
+                            }
+                        }
+                    ],
+                    "expected": "nextNameState removed from anythingButs",
+                    "description": "Test the method with an ANYTHING_BUT pattern type that is not numeric, ensuring only the nextNameState is removed."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Anything But Ignore Case Pattern",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "ANYTHING_BUT_IGNORE_CASE"
+                                },
+                                "nextNameState": "someState"
+                            }
+                        }
+                    ],
+                    "expected": "nextNameState removed from anythingButs",
+                    "description": "Test the method with an ANYTHING_BUT_IGNORE_CASE pattern type to verify that nextNameState is removed."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Anything But Suffix Pattern",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "ANYTHING_BUT_SUFFIX"
+                                },
+                                "nextNameState": "someState"
+                            }
+                        }
+                    ],
+                    "expected": "hasSuffix decremented by 1 and nextNameState removed from anythingButs",
+                    "description": "Test the method with an ANYTHING_BUT_SUFFIX pattern type to verify hasSuffix is decremented and nextNameState is removed."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Anything But Prefix Pattern",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "ANYTHING_BUT_PREFIX"
+                                },
+                                "nextNameState": "someState"
+                            }
+                        }
+                    ],
+                    "expected": "nextNameState removed from anythingButs",
+                    "description": "Test the method with an ANYTHING_BUT_PREFIX pattern type to ensure that nextNameState is removed."
+                }
+            ]
+        },
+        {
+            "group": "updateMatchReferences - Default Case",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": {
+                                "pattern": {
+                                    "type": "UNKNOWN_TYPE"
+                                }
+                            }
+                        }
+                    ],
+                    "expected": "throws AssertionError",
+                    "description": "Test the method with an unknown pattern type to ensure an AssertionError is thrown."
+                }
+            ]
+        }
+    ]
+}

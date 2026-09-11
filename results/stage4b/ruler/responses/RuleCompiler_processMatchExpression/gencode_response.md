@@ -1,0 +1,159 @@
+```java
+package software.amazon.event.ruler;
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import static org.junit.jupiter.api.Assertions.*;
+import org.mockito.*;
+import static org.mockito.Mockito.*;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
+import java.io.IOException;
+
+@ExtendWith(MockitoExtension.class)
+class RuleCompiler_processMatchExpression_Test {
+
+    @Mock
+    private JsonParser parser;
+
+    @BeforeAll
+    static void setupBeforeAll() {
+        // Any global setup can be done here
+    }
+
+    @BeforeEach
+    void setupBeforeEach() {
+        // Prepare the mocked JsonParser before each test
+        reset(parser);
+    }
+
+    @AfterEach
+    void teardownAfterEach() {
+        // Cleanup after each test if necessary
+    }
+
+    @AfterAll
+    static void teardownAfterAll() {
+        // Any global cleanup can be done here
+    }
+
+    @Test
+    void testProcessMatchExpressionExactMatch() throws IOException {
+        // Test for exact match with a valid string value.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME, JsonToken.VALUE_STRING, JsonToken.END_OBJECT);
+        when(parser.getCurrentName()).thenReturn(Constants.EXACT_MATCH);
+        when(parser.getText()).thenReturn("test");
+
+        Patterns result = RuleCompiler.processMatchExpression(parser);
+
+        assertNotNull(result);
+        assertEquals("test", result.getValue()); // Assuming getValue() returns the matched value
+    }
+
+    @Test
+    void testProcessMatchExpressionExactMatchInvalidValue() throws IOException {
+        // Test for exact match with an invalid numeric value.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME, JsonToken.VALUE_NUMBER_INT);
+        when(parser.getCurrentName()).thenReturn(Constants.EXACT_MATCH);
+
+        Exception exception = assertThrows(IOException.class, () -> {
+            RuleCompiler.processMatchExpression(parser);
+        });
+
+        assertEquals("exact match pattern must be a string", exception.getMessage());
+    }
+
+    @Test
+    void testProcessMatchExpressionPrefixMatch() throws IOException {
+        // Test for prefix match with a valid string value.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME, JsonToken.VALUE_STRING, JsonToken.END_OBJECT);
+        when(parser.getCurrentName()).thenReturn(Constants.PREFIX_MATCH);
+        when(parser.getText()).thenReturn("test");
+
+        Patterns result = RuleCompiler.processMatchExpression(parser);
+
+        assertNotNull(result);
+        assertEquals("test", result.getValue()); // Assuming getValue() returns the matched value
+    }
+
+    @Test
+    void testProcessMatchExpressionPrefixMatchInvalidValue() throws IOException {
+        // Test for prefix match with an invalid numeric value.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME, JsonToken.VALUE_NUMBER_INT);
+        when(parser.getCurrentName()).thenReturn(Constants.PREFIX_MATCH);
+
+        Exception exception = assertThrows(IOException.class, () -> {
+            RuleCompiler.processMatchExpression(parser);
+        });
+
+        assertEquals("prefix match pattern must be a string", exception.getMessage());
+    }
+
+    @Test
+    void testProcessMatchExpressionSuffixMatch() throws IOException {
+        // Test for suffix match with a valid string value.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME, JsonToken.VALUE_STRING, JsonToken.END_OBJECT);
+        when(parser.getCurrentName()).thenReturn(Constants.SUFFIX_MATCH);
+        when(parser.getText()).thenReturn("test");
+
+        Patterns result = RuleCompiler.processMatchExpression(parser);
+
+        assertNotNull(result);
+        assertEquals("test", result.getValue()); // Assuming getValue() returns the matched value
+    }
+
+    @Test
+    void testProcessMatchExpressionSuffixMatchInvalidValue() throws IOException {
+        // Test for suffix match with an invalid numeric value.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME, JsonToken.VALUE_NUMBER_INT);
+        when(parser.getCurrentName()).thenReturn(Constants.SUFFIX_MATCH);
+
+        Exception exception = assertThrows(IOException.class, () -> {
+            RuleCompiler.processMatchExpression(parser);
+        });
+
+        assertEquals("suffix match pattern must be a string", exception.getMessage());
+    }
+
+    @Test
+    void testProcessMatchExpressionNumericMatch() throws IOException {
+        // Test for numeric match with a valid array of numbers.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME, JsonToken.START_ARRAY, JsonToken.END_OBJECT);
+        when(parser.getCurrentName()).thenReturn(Constants.NUMERIC);
+        
+        // Mock processing numeric match expression here
+        Patterns result = RuleCompiler.processMatchExpression(parser);
+
+        assertNotNull(result);
+        // Add assertions based on the expected output of numeric match
+    }
+
+    @Test
+    void testProcessMatchExpressionNumericMatchInvalidValue() throws IOException {
+        // Test for numeric match with an invalid non-array value.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME, JsonToken.VALUE_STRING);
+        when(parser.getCurrentName()).thenReturn(Constants.NUMERIC);
+
+        Exception exception = assertThrows(IOException.class, () -> {
+            RuleCompiler.processMatchExpression(parser);
+        });
+
+        assertEquals("Value of NUMERIC must be an array.", exception.getMessage());
+    }
+
+    @Test
+    void testProcessMatchExpressionInvalidMatchType() throws IOException {
+        // Test for unrecognized match type.
+        when(parser.nextToken()).thenReturn(JsonToken.FIELD_NAME);
+        when(parser.getCurrentName()).thenReturn("UNKNOWN_MATCH_TYPE");
+
+        Exception exception = assertThrows(IOException.class, () -> {
+            RuleCompiler.processMatchExpression(parser);
+        });
+
+        assertEquals("Unrecognized match type UNKNOWN_MATCH_TYPE", exception.getMessage());
+    }
+
+    // Additional tests for other scenarios can be added similarly based on the provided JSON test cases.
+}
+```

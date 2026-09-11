@@ -1,0 +1,139 @@
+{
+    "testCases": [
+        {
+            "group": "Test addMatchReferences with Exact and Similar Patterns",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.EXACT)"
+                        }
+                    ],
+                    "expected": "No change in hasNumeric, hasIP, hasSuffix",
+                    "description": "Test with an EXACT pattern. No counters should increment."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.PREFIX)"
+                        }
+                    ],
+                    "expected": "No change in hasNumeric, hasIP, hasSuffix",
+                    "description": "Test with a PREFIX pattern. No counters should increment."
+                }
+            ]
+        },
+        {
+            "group": "Test addMatchReferences with Suffix Pattern",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.SUFFIX)"
+                        }
+                    ],
+                    "expected": "hasSuffix = 1",
+                    "description": "Test with a SUFFIX pattern. hasSuffix should increment."
+                }
+            ]
+        },
+        {
+            "group": "Test addMatchReferences with Numeric Patterns",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.NUMERIC_EQ)"
+                        }
+                    ],
+                    "expected": "hasNumeric = 1",
+                    "description": "Test with a NUMERIC_EQ pattern. hasNumeric should increment."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.NUMERIC_RANGE)"
+                        }
+                    ],
+                    "expected": "hasNumeric = 1 and hasIP = 0",
+                    "description": "Test with a NUMERIC_RANGE pattern that is not CIDR. hasNumeric should increment."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(new Range(true))"
+                        }
+                    ],
+                    "expected": "hasIP = 1",
+                    "description": "Test with a NUMERIC_RANGE pattern that is CIDR. hasIP should increment."
+                }
+            ]
+        },
+        {
+            "group": "Test addMatchReferences with Anything But Patterns",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.ANYTHING_BUT)"
+                        }
+                    ],
+                    "expected": "hasNumeric = 1 and anythingButs size = 1",
+                    "description": "Test with an ANYTHING_BUT pattern. hasNumeric should increment and anythingButs should increase."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.ANYTHING_BUT_IGNORE_CASE)"
+                        }
+                    ],
+                    "expected": "anythingButs size = 1",
+                    "description": "Test with an ANYTHING_BUT_IGNORE_CASE pattern. anythingButs should increase, but hasNumeric should not."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.ANYTHING_BUT_SUFFIX)"
+                        }
+                    ],
+                    "expected": "hasSuffix = 1 and anythingButs size = 1",
+                    "description": "Test with an ANYTHING_BUT_SUFFIX pattern. hasSuffix should increment and anythingButs should increase."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.ANYTHING_BUT_PREFIX)"
+                        }
+                    ],
+                    "expected": "anythingButs size = 1",
+                    "description": "Test with an ANYTHING_BUT_PREFIX pattern. anythingButs should increase."
+                }
+            ]
+        },
+        {
+            "group": "Test addMatchReferences with Default Case",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "match",
+                            "value": "new ByteMatch(Patterns.UNDEFINED)"
+                        }
+                    ],
+                    "expected": "Throw AssertionError",
+                    "description": "Test with an undefined pattern type. Should throw an AssertionError."
+                }
+            ]
+        }
+    ]
+}

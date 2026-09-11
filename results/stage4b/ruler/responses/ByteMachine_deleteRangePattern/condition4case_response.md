@@ -1,0 +1,159 @@
+{
+    "testCases": [
+        {
+            "group": "deleteRangePattern",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [1],
+                                "top": [5],
+                                "openBottom": false,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted exists and is not open. It should delete the range from the state."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [10],
+                                "top": [15],
+                                "openBottom": false,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted exists and is not open. It should delete the specified range from the state."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [5],
+                                "top": [10],
+                                "openBottom": true,
+                                "openTop": true
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted exists and is open on both ends. It should delete the range from the state."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [1],
+                                "top": [1],
+                                "openBottom": false,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted is a single value. It should delete the single value from the state."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [0],
+                                "top": [5],
+                                "openBottom": false,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted exists and includes 0 as the bottom value. It should delete the range from the state."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [5],
+                                "top": [5],
+                                "openBottom": true,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted is a single value with open bottom. It should not delete the value."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [10],
+                                "top": [5],
+                                "openBottom": false,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted does not exist (bottom > top). It should return without any changes."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [1],
+                                "top": [1],
+                                "openBottom": true,
+                                "openTop": true
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted is a single value with open on both ends. It should not delete the value."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [5],
+                                "top": [10],
+                                "openBottom": false,
+                                "openTop": true
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted exists with an open top. It should delete the range from the state but not the top value."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "range",
+                            "value": {
+                                "bottom": [10],
+                                "top": [20],
+                                "openBottom": false,
+                                "openTop": false
+                            }
+                        }
+                    ],
+                    "expected": null,
+                    "description": "Test case where the range to be deleted exists and is not open. It should delete the specified range from the state."
+                }
+            ]
+        }
+    ]
+}

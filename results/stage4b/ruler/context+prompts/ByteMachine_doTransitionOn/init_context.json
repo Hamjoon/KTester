@@ -1,0 +1,4 @@
+{
+  "api document of class software.amazon.event.ruler.ByteMachine": "\n * Represents a UTF8-byte-level state machine that matches a Ruler state machine's field values.\n * Each state is a map keyed by utf8 byte. getTransition(byte) yields a Target, which can contain either or\n *  both of the next ByteState, and the first of a chain of Matches, which indicate a match to some pattern.\n ",
+  "invoke examples of focal method": "example 1:\n```java\n    Set<NameState> transitionOn(String valString) {\n\n        // not thread-safe, but this is only used in the scope of this method on one thread\n        final Set<NameState> transitionTo = new HashSet<>();\n        boolean fieldValueIsNumeric = false;\n        if (hasNumeric.get() > 0) {\n        doTransitionOn(valString, transitionTo, fieldValueIsNumeric);\n    }\n```"
+}
