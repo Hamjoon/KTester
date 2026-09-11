@@ -1,0 +1,313 @@
+[
+  {
+    "group": "handleC method tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CAESAR"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'CAESAR' at index 0, should append 'S' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Czerny"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'Czerny' at index 0, should append 'S' and 'X' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "focaccia"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 3,
+        "description": "Test when the input value is 'focaccia' at index 0, should append 'X' and return index 3."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "McClelland"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 1
+          }
+        ],
+        "expected": 1,
+        "description": "Test when the input value is 'McClelland' at index 1, should handle double 'CC' and return index 1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CIG"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'CIG' at index 0, should append 'S' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "C"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 1,
+        "description": "Test when the input value is 'C' at index 0, should append 'K' and return index 1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "C"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 1
+          }
+        ],
+        "expected": 1,
+        "description": "Test when the input value is 'C' at index 1, should append 'K' and return index 1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CIC"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'CIC' at index 0, should append 'S' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CIE"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'CIE' at index 0, should append 'S' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CIELO"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'CIELO' at index 0, should append 'S' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CC"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 1,
+        "description": "Test when the input value is 'CC' at index 0, should handle double 'CC' and return index 1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CZECH"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'CZECH' at index 0, should append 'S' and 'X' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CQUICK"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'CQUICK' at index 0, should append 'K' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "CIGAR"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": 2,
+        "description": "Test when the input value is 'CIGAR' at index 0, should append 'S' and return index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": ""
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test when the input value is an empty string at index 0, should throw IndexOutOfBoundsException when trying to access characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": null
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(10)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when the input value is null at index 0, should throw NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "C"
+          },
+          {
+            "parameter": "result",
+            "value": "new DoubleMetaphoneResult(0)"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": "StringIndexOutOfBoundsException",
+        "description": "Test when the input value is 'C' and max length of result is 0 at index 0, should throw StringIndexOutOfBoundsException when trying to append."
+      }
+    ]
+  }
+]

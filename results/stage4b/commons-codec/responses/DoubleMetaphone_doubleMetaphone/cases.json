@@ -1,0 +1,413 @@
+[
+  {
+    "group": "doubleMetaphone",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": null
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": null,
+        "description": "Test with null input value, expect the method to return null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Smith"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "S530",
+        "description": "Test with a regular name 'Smith', expect primary encoding to be 'S530'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Smith"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "S530",
+        "description": "Test with a regular name 'Smith', expect alternate encoding to also return 'S530'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "O'Connor"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "A245",
+        "description": "Test with name containing an apostrophe 'O'Connor', expect primary encoding to be 'A245'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "O'Connor"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "A245",
+        "description": "Test with name containing an apostrophe 'O'Connor', expect alternate encoding to also return 'A245'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Bach"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "P200",
+        "description": "Test with name 'Bach', expect primary encoding to be 'P200'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Bach"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "P200",
+        "description": "Test with name 'Bach', expect alternate encoding to also return 'P200'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Xavier"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "S140",
+        "description": "Test with name 'Xavier', expect primary encoding to be 'S140'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Xavier"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "S140",
+        "description": "Test with name 'Xavier', expect alternate encoding to also return 'S140'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Knox"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "K520",
+        "description": "Test with name 'Knox', expect primary encoding to be 'K520'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Knox"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "K520",
+        "description": "Test with name 'Knox', expect alternate encoding to also return 'K520'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "A"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "A",
+        "description": "Test with a single vowel 'A', expect primary encoding to be 'A'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "A"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "A",
+        "description": "Test with a single vowel 'A', expect alternate encoding to also return 'A'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "B"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "P",
+        "description": "Test with a single consonant 'B', expect primary encoding to be 'P'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "B"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "P",
+        "description": "Test with a single consonant 'B', expect alternate encoding to also return 'P'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Aardvark"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "A634",
+        "description": "Test with a name 'Aardvark', expect primary encoding to be 'A634'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Aardvark"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "A634",
+        "description": "Test with a name 'Aardvark', expect alternate encoding to also return 'A634'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Schmidt"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "S353",
+        "description": "Test with a name 'Schmidt', expect primary encoding to be 'S353'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "Schmidt"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "S353",
+        "description": "Test with a name 'Schmidt', expect alternate encoding to also return 'S353'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "O'Reilly"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "A643",
+        "description": "Test with a name containing an apostrophe 'O'Reilly', expect primary encoding to be 'A643'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "O'Reilly"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "A643",
+        "description": "Test with a name containing an apostrophe 'O'Reilly', expect alternate encoding to also return 'A643'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": ""
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test with an empty string, expect the method to return an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": ""
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "",
+        "description": "Test with an empty string, expect the alternate encoding to also return an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": " "
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test with a string containing only whitespace, expect the method to return an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "  "
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "",
+        "description": "Test with a string containing multiple whitespace characters, expect the alternate encoding to also return an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "12345"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test with a string containing only numeric characters, expect the method to return an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "12345"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "",
+        "description": "Test with a string containing only numeric characters, expect the alternate encoding to also return an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "!!@#$%"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test with a string containing special characters, expect the method to return an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "!!@#$%"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "",
+        "description": "Test with a string containing special characters, expect the alternate encoding to also return an empty string."
+      }
+    ]
+  }
+]

@@ -1,0 +1,447 @@
+[
+  {
+    "group": "transcodeRemaining Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "E"
+          },
+          {
+            "parameter": "next",
+            "value": "V"
+          },
+          {
+            "parameter": "aNext",
+            "value": "X"
+          }
+        ],
+        "expected": "['A', 'F']",
+        "description": "Test case for 'EV' condition where curr is 'E' and next is 'V', expecting return value of CHARS_AF."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "A"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for vowel condition where curr is 'A', expecting return value of CHARS_A."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "Q"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['G']",
+        "description": "Test case for case 'Q' where curr is 'Q', expecting return value of CHARS_G."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "Z"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['S']",
+        "description": "Test case for case 'Z' where curr is 'Z', expecting return value of CHARS_S."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "M"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['N']",
+        "description": "Test case for case 'M' where curr is 'M', expecting return value of CHARS_N."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "K"
+          },
+          {
+            "parameter": "next",
+            "value": "N"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['N', 'N']",
+        "description": "Test case for case 'K' followed by 'N' where curr is 'K' and next is 'N', expecting return value of CHARS_NN."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "K"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['C']",
+        "description": "Test case for case 'K' where curr is 'K' and next is not 'N', expecting return value of CHARS_C."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "S"
+          },
+          {
+            "parameter": "curr",
+            "value": "S"
+          },
+          {
+            "parameter": "next",
+            "value": "C"
+          },
+          {
+            "parameter": "aNext",
+            "value": "H"
+          }
+        ],
+        "expected": "['S', 'S', 'S']",
+        "description": "Test case for 'SCH' condition where curr is 'S', next is 'C', and aNext is 'H', expecting return value of CHARS_SSS."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "P"
+          },
+          {
+            "parameter": "next",
+            "value": "H"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['F', 'F']",
+        "description": "Test case for 'PH' condition where curr is 'P' and next is 'H', expecting return value of CHARS_FF."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "A"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['B']",
+        "description": "Test case for 'H' condition where previous is non-vowel and next is vowel, expecting return value of prev."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "A"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for 'H' condition where previous is vowel and next is vowel, expecting return value of curr."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "W"
+          },
+          {
+            "parameter": "next",
+            "value": "A"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for 'W' condition where previous is vowel, expecting return value of prev."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "W"
+          },
+          {
+            "parameter": "next",
+            "value": "A"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['W']",
+        "description": "Test case for 'W' condition where previous is non-vowel, expecting return value of curr."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "B"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for 'H' condition where previous is vowel and next is non-vowel, expecting return value of prev."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "C"
+          },
+          {
+            "parameter": "aNext",
+            "value": "D"
+          }
+        ],
+        "expected": "['B']",
+        "description": "Test case for 'H' condition where previous is non-vowel and next is non-vowel, expecting return value of prev."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "E"
+          },
+          {
+            "parameter": "curr",
+            "value": "W"
+          },
+          {
+            "parameter": "next",
+            "value": "A"
+          },
+          {
+            "parameter": "aNext",
+            "value": "C"
+          }
+        ],
+        "expected": "['E']",
+        "description": "Test case for 'W' condition where previous is vowel and next is vowel, expecting return value of prev."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "B"
+          },
+          {
+            "parameter": "curr",
+            "value": "W"
+          },
+          {
+            "parameter": "next",
+            "value": "C"
+          },
+          {
+            "parameter": "aNext",
+            "value": "D"
+          }
+        ],
+        "expected": "['W']",
+        "description": "Test case for 'W' condition where previous is non-vowel and next is non-vowel, expecting return value of curr."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "E"
+          },
+          {
+            "parameter": "next",
+            "value": "A"
+          },
+          {
+            "parameter": "aNext",
+            "value": "B"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for vowel condition where curr is 'E', expecting return value of CHARS_A."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "X"
+          },
+          {
+            "parameter": "next",
+            "value": "Y"
+          },
+          {
+            "parameter": "aNext",
+            "value": "Z"
+          }
+        ],
+        "expected": "['X']",
+        "description": "Test case for a scenario where curr is a non-special character, expecting return value of curr."
+      },
+      {
+        "input": [
+          {
+            "parameter": "prev",
+            "value": "A"
+          },
+          {
+            "parameter": "curr",
+            "value": "H"
+          },
+          {
+            "parameter": "next",
+            "value": "C"
+          },
+          {
+            "parameter": "aNext",
+            "value": "D"
+          }
+        ],
+        "expected": "['A']",
+        "description": "Test case for 'H' condition where previous is vowel and next is non-vowel, expecting return value of prev."
+      }
+    ]
+  }
+]

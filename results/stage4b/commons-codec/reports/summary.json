@@ -1,0 +1,149 @@
+{
+  "org.apache.commons.codec.binary.Base64#decode(byte[], int, int, Context)": {
+    "test_cases": 12,
+    "passed_cases": 2,
+    "inst_cov": 0.92,
+    "bran_cov": 0.79,
+    "correct_inst_cov": 0.73,
+    "correct_bran_cov": 0.66
+  },
+  "org.apache.commons.codec.net.QuotedPrintableCodec#encodeQuotedPrintable(BitSet, byte[], boolean)": {
+    "test_cases": 13,
+    "passed_cases": 13,
+    "inst_cov": 0.84,
+    "bran_cov": 0.62,
+    "correct_inst_cov": 0.84,
+    "correct_bran_cov": 0.62
+  },
+  "org.apache.commons.codec.binary.Base32#decode(byte[], int, int, Context)": {
+    "test_cases": 3,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.4,
+    "bran_cov": 0.53
+  },
+  "org.apache.commons.codec.binary.Base64#encode(byte[], int, int, Context)": {
+    "test_cases": 12,
+    "passed_cases": 12,
+    "inst_cov": 0.38,
+    "bran_cov": 0.4,
+    "correct_inst_cov": 0.38,
+    "correct_bran_cov": 0.4
+  },
+  "org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)": {
+    "test_cases": 12,
+    "passed_cases": 3,
+    "inst_cov": 0.58,
+    "bran_cov": 0.38,
+    "correct_inst_cov": 0.39,
+    "correct_bran_cov": 0.24
+  },
+  "org.apache.commons.codec.binary.Base32#encode(byte[], int, int, Context)": {
+    "test_cases": 8,
+    "passed_cases": 8,
+    "inst_cov": 0.27,
+    "bran_cov": 0.42,
+    "correct_inst_cov": 0.27,
+    "correct_bran_cov": 0.42
+  },
+  "org.apache.commons.codec.language.bm.Rule#pattern(String)": {
+    "test_cases": 7,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "org.apache.commons.codec.language.DoubleMetaphone#handleS(String, DoubleMetaphoneResult, int, boolean)": {
+    "test_cases": 9,
+    "passed_cases": 1,
+    "inst_cov": 0.63,
+    "bran_cov": 0.5,
+    "correct_inst_cov": 0.57,
+    "correct_bran_cov": 0.37
+  },
+  "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)": {
+    "test_cases": 24,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "org.apache.commons.codec.language.Nysiis#transcodeRemaining(char, char, char, char)": {
+    "test_cases": 1,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.87,
+    "bran_cov": 0.72
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash128x64Internal(byte[], int, int, long)": {
+    "test_cases": 11,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 1.0,
+    "bran_cov": 0.44
+  },
+  "org.apache.commons.codec.language.Nysiis#nysiis(String)": {
+    "test_cases": 8,
+    "passed_cases": 3,
+    "inst_cov": 0.86,
+    "bran_cov": 0.88,
+    "correct_inst_cov": 0.86,
+    "correct_bran_cov": 0.8
+  },
+  "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)": {
+    "test_cases": 11,
+    "passed_cases": 6,
+    "inst_cov": 0.95,
+    "bran_cov": 0.88,
+    "correct_inst_cov": 0.81,
+    "correct_bran_cov": 0.69
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)": {
+    "test_cases": 17,
+    "passed_cases": 17,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)": {
+    "test_cases": 33,
+    "passed_cases": 12,
+    "inst_cov": 0.57,
+    "bran_cov": 0.58,
+    "correct_inst_cov": 0.3,
+    "correct_bran_cov": 0.33
+  },
+  "org.apache.commons.codec.language.Metaphone#metaphone(String)": {
+    "test_cases": 7,
+    "passed_cases": 2,
+    "inst_cov": 0.48,
+    "bran_cov": 0.38,
+    "correct_inst_cov": 0.01,
+    "correct_bran_cov": 0.02
+  },
+  "org.apache.commons.codec.language.DoubleMetaphone#handleC(String, DoubleMetaphoneResult, int)": {
+    "test_cases": 12,
+    "passed_cases": 12,
+    "inst_cov": 0.75,
+    "bran_cov": 0.53,
+    "correct_inst_cov": 0.75,
+    "correct_bran_cov": 0.53
+  },
+  "org.apache.commons.codec.digest.Sha2Crypt#sha2Crypt(byte[], String, String, int, String)": {
+    "error_type": "execution error",
+    "test_cases": 10,
+    "passed_cases": 0
+  },
+  "compile_pass_rate": 1.0,
+  "execution_pass_rate": 0.43333333333333335,
+  "average_instruction_coverage": 0.5833333333333335,
+  "average_branch_coverage": 0.5027777777777778,
+  "average_correct_instruction_coverage": 0.38388888888888884,
+  "average_correct_branch_coverage": 0.33777777777777784
+}

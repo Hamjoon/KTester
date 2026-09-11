@@ -1,0 +1,348 @@
+[
+  {
+    "group": "md5Crypt - Null Salt",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with null salt, expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Invalid Salt Format",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": "invalidSaltFormat"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test md5Crypt with an invalid salt format, expecting an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Valid Salt",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$validSalt"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with a valid salt, expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Edge Case Key Length",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "smallKey"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$validSalt"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with a small key length, expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Multiple Rounds",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$validSalt"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt to ensure that it processes multiple rounds correctly, expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Empty Key",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": ""
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with an empty key, expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Long Key",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "aVeryLongKeyThatExceedsNormalLengthForTestingPurpose"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$validSalt"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with a long key, expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Special Characters in Key",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "key@#$$%^&*()"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$validSalt"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with special characters in the key, expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Max Length Salt",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcdefgh"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with maximum length salt (8 characters), expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Invalid Prefix",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$validSalt"
+          },
+          {
+            "parameter": "prefix",
+            "value": "invalidPrefix"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with an invalid prefix, expecting a valid MD5 hash result despite prefix."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Random Instance",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new Random()"
+          }
+        ],
+        "expected": "string result",
+        "description": "Test md5Crypt with a standard Random instance, expecting a valid MD5 hash result."
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt - Invalid Salt Value",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": "invalidSaltFormat"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test md5Crypt with an invalid salt format, expecting an IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "sampleKeyBytes"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$invalidSalt"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test md5Crypt with a salt that does not match the expected pattern, expecting an IllegalArgumentException."
+      }
+    ]
+  }
+]

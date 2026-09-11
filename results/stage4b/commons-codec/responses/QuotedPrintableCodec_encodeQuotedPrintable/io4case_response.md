@@ -1,0 +1,1 @@
+{"group": "encodeQuotedPrintable with empty byte array", "cases": [{"input": [{"parameter": "printable", "value": "BitSet with printable characters"}, {"parameter": "bytes", "value": ""}, {"parameter": "strict", "value": true}], "expected": null, "description": "Test case where the input byte array is empty. The expected output should be null in strict mode."}]}
