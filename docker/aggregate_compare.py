@@ -239,7 +239,7 @@ def write_task_table(ours_tasks: dict, author_tasks: list[dict]) -> None:
             ]
         )
     with (OUTPUT / "comparison_task_table.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=columns)
+        writer = csv.DictWriter(handle, fieldnames=columns, lineterminator="\n")
         writer.writeheader()
         for project, info in DATASET.items():
             for task in info["focal-methods"]:
