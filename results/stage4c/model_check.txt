@@ -1,0 +1,9 @@
+settings (grep):
+13:    MODEL = "openai/gpt-4o"
+20:    TEMPERATURE = 0.5
+24:    CASES_LIST = []
+30:    MAX_WORKERS = 8
+31:    FIX_TRIES = 5
+
+api_check response model string: openai/gpt-4o
+OpenRouter log confirmed by Gary: Model = GPT-4o, Provider = OpenAI, 2026-09-12 20:07 KST
