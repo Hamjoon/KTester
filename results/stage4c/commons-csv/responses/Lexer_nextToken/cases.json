@@ -1,0 +1,157 @@
+[
+  {
+    "group": "nextToken method test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type EOF",
+        "description": "Test case where the reader's last character and next character are both EOF. This checks the branch where the method should return a token of type EOF when the end of the file is detected."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type COMMENT",
+        "description": "Test case where the reader's last character is the start of a line and the next character is a comment start. This checks the branch where the method should return a token of type COMMENT after reading a comment line."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type TOKEN",
+        "description": "Test case where the next character is a delimiter. This checks the branch where an empty token is returned with type TOKEN."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type EORECORD",
+        "description": "Test case where the next character is end of line (EOL). This checks the branch where an empty token is returned with type EORECORD."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type EOF and isReady true",
+        "description": "Test case where the next character is EOF and there is data at EOF. This checks the branch where the method should return a token of type EOF and set isReady to true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with content from parseEncapsulatedToken",
+        "description": "Test case where the next character is a quote character. This checks the branch where the method should parse an encapsulated token."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with content from parseSimpleToken",
+        "description": "Test case where the next character is not a delimiter, EOL, EOF, or quote. This checks the branch where the method should parse a simple token."
+      }
+    ]
+  },
+  {
+    "group": "nextToken method additional test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type EOF",
+        "description": "Test case where ignoreEmptyLines is true, and the reader encounters an empty line at the end of the file. This checks the branch where the method should return a token of type EOF due to empty line detection."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type TOKEN and content stripped of leading spaces",
+        "description": "Test case where ignoreSurroundingSpaces is true, and the next character is a whitespace followed by a delimiter. This checks the branch where leading spaces are ignored for a token."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type TOKEN and content stripped of leading spaces",
+        "description": "Test case where ignoreSurroundingSpaces is true, and the next character is a whitespace followed by a non-delimiter character. This checks the branch where leading spaces are ignored for a simple token."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type EORECORD and content stripped of leading spaces",
+        "description": "Test case where ignoreSurroundingSpaces is true, and the next character is a whitespace followed by an end of line character. This checks the branch where leading spaces are ignored for an end of record."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "Token with type COMMENT and content trimmed",
+        "description": "Test case where the reader's last character is the start of a line, the next character is a comment start, and the line contains leading and trailing spaces. This checks the branch where the comment content is trimmed."
+      }
+    ]
+  },
+  {
+    "group": "nextToken method exception test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the input token is null. This checks the behavior when a null token is passed, which should result in a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "new Token()"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test case where the reader throws an IOException during character reading. This checks the behavior when an IOException is thrown by the reader."
+      }
+    ]
+  }
+]

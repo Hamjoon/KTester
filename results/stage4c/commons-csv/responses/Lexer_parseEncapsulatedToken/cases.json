@@ -1,0 +1,177 @@
+[
+  {
+    "group": "parseEncapsulatedToken Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "emptyToken"
+          }
+        ],
+        "expected": "IOException with message '(startline 1) EOF reached before encapsulated token finished'",
+        "description": "Test case where EOF is reached before the encapsulated token is finished, leading to an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "escapedDelimiterToken"
+          }
+        ],
+        "expected": "token with content appended by delimiter and type TOKEN",
+        "description": "Test case where the escape character is followed by a delimiter, resulting in the delimiter being appended to the token content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "escapedCharacterToken"
+          }
+        ],
+        "expected": "token with content appended by unescaped character",
+        "description": "Test case where the escape character is followed by a non-delimiter character, resulting in the unescaped character being appended to the token content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "doubleQuoteToken"
+          }
+        ],
+        "expected": "token with content appended by a single quote character",
+        "description": "Test case where the quote character is followed by another quote character, resulting in a single quote character being appended to the token content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "endOfTokenWithWhitespaceToken"
+          }
+        ],
+        "expected": "token with type TOKEN",
+        "description": "Test case where the token finishes with a quote character, followed by whitespace and a delimiter, resulting in a TOKEN type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "endOfTokenWithEOFToken"
+          }
+        ],
+        "expected": "token with type EOF and isReady set to true",
+        "description": "Test case where the token finishes with a quote character, followed by EOF, resulting in EOF type and isReady set to true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "endOfTokenWithEOLToken"
+          }
+        ],
+        "expected": "token with type EORECORD",
+        "description": "Test case where the token finishes with a quote character, followed by an end of line, resulting in EORECORD type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "invalidCharBetweenTokenAndDelimiter"
+          }
+        ],
+        "expected": "IOException with message '(line 1) invalid char between encapsulated token and delimiter'",
+        "description": "Test case where a non-whitespace character is found between the token and the next delimiter, leading to an IOException."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken Additional Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "emptyTokenWithImmediateEOF"
+          }
+        ],
+        "expected": "IOException with message '(startline 1) EOF reached before encapsulated token finished'",
+        "description": "Test case where the token is empty and EOF is immediately encountered, leading to an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "tokenWithOnlyWhitespace"
+          }
+        ],
+        "expected": "token with type TOKEN",
+        "description": "Test case where the token consists solely of whitespace characters and is correctly terminated by a delimiter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "tokenWithMixedContentAndEscape"
+          }
+        ],
+        "expected": "token with content appended by unescaped characters and type TOKEN",
+        "description": "Test case where the token contains a mix of regular characters and escape sequences, resulting in the unescaped characters being appended to the token content, and correctly terminated by a delimiter."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "tokenWithUnescapedEndOfStream"
+          }
+        ],
+        "expected": "IOException with message '(startline 1) EOF reached before encapsulated token finished'",
+        "description": "Test case where an unescaped END_OF_STREAM character is encountered, leading to an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "tokenWithImmediateDelimiter"
+          }
+        ],
+        "expected": "token with type TOKEN and empty content",
+        "description": "Test case where the token starts and immediately encounters a delimiter, resulting in a TOKEN type with empty content."
+      }
+    ]
+  },
+  {
+    "group": "parseEncapsulatedToken Additional Exception Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "tokenWithUnescapedEOF"
+          }
+        ],
+        "expected": "IOException with message '(startline 1) EOF reached before encapsulated token finished'",
+        "description": "Test case where EOF is encountered without being properly escaped, leading to an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "tokenWithInvalidCharAfterQuote"
+          }
+        ],
+        "expected": "IOException with message '(line 1) invalid char between encapsulated token and delimiter'",
+        "description": "Test case where an invalid character is found immediately after a quote, leading to an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "token",
+            "value": "tokenWithUnexpectedCharAfterEscape"
+          }
+        ],
+        "expected": "token with content appended by escape character and unexpected character",
+        "description": "Test case where an unexpected character follows an escape character, resulting in both characters being appended to the token content."
+      }
+    ]
+  }
+]
