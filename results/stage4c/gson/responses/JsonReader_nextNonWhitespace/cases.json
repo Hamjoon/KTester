@@ -1,0 +1,47 @@
+[
+  {
+    "group": "test_nextNonWhitespace",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": "true"
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test scenario where the buffer is empty and throwOnEof is true, expecting an EOFException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": "false"
+          }
+        ],
+        "expected": "-1",
+        "description": "Test scenario where the buffer is empty and throwOnEof is false, expecting the method to return -1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": "true"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test scenario where the buffer contains an unterminated comment and throwOnEof is true, expecting an IOException due to syntax error."
+      },
+      {
+        "input": [
+          {
+            "parameter": "throwOnEof",
+            "value": "false"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test scenario where the buffer contains an unterminated comment and throwOnEof is false, expecting an IOException due to syntax error."
+      }
+    ]
+  }
+]

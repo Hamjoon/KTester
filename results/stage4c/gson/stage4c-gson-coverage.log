@@ -1,0 +1,2092 @@
+2026-09-12 16:02:12,406 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-12 16:02:12,406 - evaluations.coverage_test - INFO - Running tests for project: gson
+2026-09-12 16:02:12,407 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/ConstructorConstructor_newDefaultImplementationConstructor_Test.java
+2026-09-12 16:02:12,729 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test
+2026-09-12 16:02:13,819 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:02:13,820 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ConstructorConstructor_newDefaultImplementationConstructor_Test ✔
+│     ├─ testNewDefaultImplementationConstructorForMap() ✘ expected: <true> but was: <false>
+│     ├─ testNewDefaultImplementationConstructorForSet() ✔
+│     ├─ testNewDefaultImplementationConstructorForList() ✔
+│     ├─ testNewDefaultImplementationConstructorForQueue() ✔
+│     ├─ testNewDefaultImplementationConstructorForParameterizedMap() ✔
+│     ├─ testNewDefaultImplementationConstructorForNonCollectionOrMap() ✔
+│     ├─ testNewDefaultImplementationConstructorForConcurrentMap() ✔
+│     ├─ testNewDefaultImplementationConstructorForSortedMap() ✔
+│     ├─ testNewDefaultImplementationConstructorForSortedSet() ✔
+│     └─ testNewDefaultImplementationConstructorForConcurrentNavigableMap() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:ConstructorConstructor_newDefaultImplementationConstructor_Test:testNewDefaultImplementationConstructorForMap()
+    MethodSource [className = 'com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test', methodName = 'testNewDefaultImplementationConstructorForMap', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+       com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test.testNewDefaultImplementationConstructorForMap(ConstructorConstructor_newDefaultImplementationConstructor_Test.java:55)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 505 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[         9 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-12 16:02:14,301 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForSet --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForList --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForQueue --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForParameterizedMap --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForNonCollectionOrMap --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForConcurrentMap --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForSortedMap --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForSortedSet --select-method com.google.gson.internal.ConstructorConstructor_newDefaultImplementationConstructor_Test#testNewDefaultImplementationConstructorForConcurrentNavigableMap
+2026-09-12 16:02:15,415 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ConstructorConstructor_newDefaultImplementationConstructor_Test ✔
+│     ├─ testNewDefaultImplementationConstructorForSet() ✔
+│     ├─ testNewDefaultImplementationConstructorForList() ✔
+│     ├─ testNewDefaultImplementationConstructorForQueue() ✔
+│     ├─ testNewDefaultImplementationConstructorForParameterizedMap() ✔
+│     ├─ testNewDefaultImplementationConstructorForNonCollectionOrMap() ✔
+│     ├─ testNewDefaultImplementationConstructorForConcurrentMap() ✔
+│     ├─ testNewDefaultImplementationConstructorForSortedMap() ✔
+│     ├─ testNewDefaultImplementationConstructorForSortedSet() ✔
+│     └─ testNewDefaultImplementationConstructorForConcurrentNavigableMap() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 532 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         9 tests found           ]
+[         0 tests skipped         ]
+[         9 tests started         ]
+[         0 tests aborted         ]
+[         9 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:02:15,811 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/$Gson$Types_resolve_Test.java
+2026-09-12 16:02:16,184 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.$Gson$Types_resolve_Test
+2026-09-12 16:02:17,454 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:02:17,454 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.$Gson$Types_resolve_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_resolve_Test ✔
+│     ├─ testResolveTypeVariable() ✔
+│     ├─ resolve method exception tests ✔
+│     │  ├─ Test resolving with null as the contextRawType parameter ✔
+│     │  ├─ Test resolving with null as the context parameter ✔
+│     │  ├─ Test resolving with null as the visitedTypeVariables parameter ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+│     │  └─ Test resolving with null as the toResolve parameter ✔
+│     ├─ resolve method additional tests ✔
+│     │  ├─ Test resolving a ParameterizedType with an existing mapping in visitedTypeVariab... ✔
+│     │  ├─ Test resolving a Class type that is Void.TYPE ✔
+│     │  ├─ Test resolving a Class type that is an interface ✔
+│     │  ├─ Test resolving a WildcardType with an existing mapping in visitedTypeVariables ✔
+│     │  └─ Test resolving a TypeVariable with Void.TYPE as the existing mapping in visitedT... ✔
+│     └─ resolve method tests ✔
+│        ├─ Test resolving a WildcardType ✔
+│        ├─ Test resolving a ParameterizedType ✔
+│        ├─ Test resolving a GenericArrayType ✔
+│        ├─ Test resolving a TypeVariable with no prior mapping in visitedTypeVariables ✔
+│        ├─ Test resolving a Class type that is an array ✔
+│        └─ Test resolving a TypeVariable with an existing mapping in visitedTypeVariables ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:$Gson$Types_resolve_Test:resolve method exception tests:Test resolving with null as the visitedTypeVariables parameter
+    MethodSource [className = 'com.google.gson.internal.$Gson$Types_resolve_Test$ResolveMethodExceptionTests', methodName = 'testResolveWithNullVisitedTypeVariables', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.$Gson$Types_resolve_Test$ResolveMethodExceptionTests.testResolveWithNullVisitedTypeVariables($Gson$Types_resolve_Test.java:262)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+
+Test run finished after 659 ms
+[         7 containers found      ]
+[         0 containers skipped    ]
+[         7 containers started    ]
+[         0 containers aborted    ]
+[         7 containers successful ]
+[         0 containers failed     ]
+[        16 tests found           ]
+[         0 tests skipped         ]
+[        16 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-12 16:02:17,819 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.$Gson$Types_resolve_Test#testResolveTypeVariable
+2026-09-12 16:02:18,298 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_resolve_Test ✔
+│     └─ testResolveTypeVariable() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 45 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:02:18,688 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_doPeek_Test.java
+2026-09-12 16:02:18,964 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_doPeek_Test
+2026-09-12 16:02:19,447 - evaluations.coverage_test - INFO - return code: 0
+2026-09-12 16:02:19,447 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_doPeek_Test ✔
+│     └─ testDoPeekWithClosed() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 49 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:02:19,815 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_doPeek_Test#testDoPeekWithClosed
+2026-09-12 16:02:20,334 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_doPeek_Test ✔
+│     └─ testDoPeekWithClosed() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 47 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:02:20,710 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_skipValue_Test.java
+2026-09-12 16:02:21,056 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_skipValue_Test
+2026-09-12 16:05:33,078 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:05:33,079 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_skipValue_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "main"
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+*** java.lang.instrument ASSERTION FAILED ***: "!errorOutstanding" with message can't create name string at ./src/java.instrument/share/native/libinstrument/JPLISAgent.c line: 830
+
+
+2026-09-12 16:05:33,082 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java
+2026-09-12 16:05:33,482 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java:29: error: class JsonTreeReader_peek_Test.CustomSubclass is already defined in class JsonTreeReader_peek_Test
+    class CustomSubclass extends JsonElement {
+    ^
+src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java:37: error: class JsonTreeReader_peek_Test.CustomSubclass is already defined in class JsonTreeReader_peek_Test
+    class CustomSubclass extends JsonElement {
+    ^
+src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java:189: error: incompatible types: Iterator<JsonPrimitive> cannot be converted to Iterator<JsonElement>
+        Iterator<JsonElement> iterator = Arrays.asList(new JsonPrimitive("item")).iterator();
+                                                                                          ^
+src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java:198: error: incompatible types: Iterator<JsonPrimitive> cannot be converted to Iterator<JsonElement>
+        Iterator<JsonElement> iterator = Arrays.asList(new JsonPrimitive(42)).iterator();
+                                                                                      ^
+src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java:207: error: incompatible types: Iterator<JsonPrimitive> cannot be converted to Iterator<JsonElement>
+        Iterator<JsonElement> iterator = Arrays.asList(new JsonPrimitive(true)).iterator();
+                                                                                        ^
+src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java:216: error: incompatible types: Iterator<JsonNull> cannot be converted to Iterator<JsonElement>
+        Iterator<JsonElement> iterator = Arrays.asList(JsonNull.INSTANCE).iterator();
+                                                                                  ^
+Note: src/test/java/com/google/gson/internal/bind/JsonTreeReader_peek_Test.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+6 errors
+
+2026-09-12 16:05:33,483 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/Primitives_unwrap_Test.java
+2026-09-12 16:05:33,846 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.Primitives_unwrap_Test
+2026-09-12 16:05:34,278 - evaluations.coverage_test - INFO - return code: 255
+2026-09-12 16:05:34,278 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.Primitives_unwrap_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+org.junit.platform.commons.JUnitException: TestEngine with ID 'junit-jupiter' failed to discover tests
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:160)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverSafely(EngineDiscoveryOrchestrator.java:134)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discover(EngineDiscoveryOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discover(EngineDiscoveryOrchestrator.java:80)
+	at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:110)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.executeTests(ConsoleTestExecutor.java:66)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.lambda$execute$0(ConsoleTestExecutor.java:58)
+	at org.junit.platform.console.tasks.CustomContextClassLoaderExecutor.invoke(CustomContextClassLoaderExecutor.java:33)
+	at org.junit.platform.console.tasks.ConsoleTestExecutor.execute(ConsoleTestExecutor.java:58)
+	at org.junit.platform.console.ConsoleLauncher.executeTests(ConsoleLauncher.java:120)
+	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:82)
+	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:55)
+	at org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:48)
+	at org.junit.platform.console.ConsoleLauncher.main(ConsoleLauncher.java:42)
+Caused by: org.junit.platform.commons.JUnitException: ClassSelector [className = 'com.google.gson.internal.Primitives_unwrap_Test', classLoader = null] resolution failed
+	at org.junit.platform.launcher.listeners.discovery.AbortOnFailureLauncherDiscoveryListener.selectorProcessed(AbortOnFailureLauncherDiscoveryListener.java:39)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolveCompletely(EngineDiscoveryRequestResolution.java:103)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.run(EngineDiscoveryRequestResolution.java:83)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolver.resolve(EngineDiscoveryRequestResolver.java:113)
+	at org.junit.jupiter.engine.discovery.DiscoverySelectorResolver.resolveSelectors(DiscoverySelectorResolver.java:48)
+	at org.junit.jupiter.engine.JupiterTestEngine.discover(JupiterTestEngine.java:69)
+	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:152)
+	... 16 more
+Caused by: org.junit.platform.commons.PreconditionViolationException: Could not load class with name: com.google.gson.internal.Primitives_unwrap_Test
+	at org.junit.platform.engine.discovery.ClassSelector.lambda$getJavaClass$0(ClassSelector.java:98)
+	at org.junit.platform.commons.function.Try$Failure.getOrThrow(Try.java:335)
+	at org.junit.platform.engine.discovery.ClassSelector.getJavaClass(ClassSelector.java:97)
+	at org.junit.jupiter.engine.discovery.ClassSelectorResolver.resolve(ClassSelectorResolver.java:66)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.lambda$resolve$2(EngineDiscoveryRequestResolution.java:135)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1602)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolve(EngineDiscoveryRequestResolution.java:189)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolve(EngineDiscoveryRequestResolution.java:126)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolveCompletely(EngineDiscoveryRequestResolution.java:92)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: com.google.gson.internal.Primitives_unwrap_Test
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.junit.platform.commons.util.ReflectionUtils.lambda$tryToLoadClass$10(ReflectionUtils.java:890)
+	at org.junit.platform.commons.function.Try.lambda$call$0(Try.java:57)
+	at org.junit.platform.commons.function.Try.of(Try.java:93)
+	at org.junit.platform.commons.function.Try.call(Try.java:57)
+	at org.junit.platform.commons.util.ReflectionUtils.tryToLoadClass(ReflectionUtils.java:853)
+	at org.junit.platform.commons.util.ReflectionUtils.tryToLoadClass(ReflectionUtils.java:790)
+	at org.junit.platform.engine.discovery.ClassSelector.getJavaClass(ClassSelector.java:95)
+	... 35 more
+
+
+Usage: ConsoleLauncher [OPTIONS]
+Launches the JUnit Platform for test discovery and execution.
+      [@<filename>...]       One or more argument files containing options.
+
+COMMANDS
+
+  -h, --help                 Display help information.
+      --list-engines         List all observable test engines.
+
+SELECTORS
+
+      --scan-classpath, --scan-class-path[=PATH]
+                             Scan all directories on the classpath or explicit classpath
+                               roots. Without arguments, only directories on the system
+                               classpath as well as additional classpath entries supplied via
+                               -cp (directories and JAR files) are scanned. Explicit classpath
+                               roots that are not on the classpath will be silently ignored.
+                               This option can be repeated.
+      --scan-modules         EXPERIMENTAL: Scan all resolved modules for test discovery.
+  -u, --select-uri=URI       Select a URI for test discovery. This option can be repeated.
+  -f, --select-file=FILE     Select a file for test discovery. This option can be repeated.
+  -d, --select-directory=DIR Select a directory for test discovery. This option can be
+                               repeated.
+  -o, --select-module=NAME   EXPERIMENTAL: Select single module for test discovery. This
+                               option can be repeated.
+  -p, --select-package=PKG   Select a package for test discovery. This option can be repeated.
+  -c, --select-class=CLASS   Select a class for test discovery. This option can be repeated.
+  -m, --select-method=NAME   Select a method for test discovery. This option can be repeated.
+  -r, --select-resource=RESOURCE
+                             Select a classpath resource for test discovery. This option can
+                               be repeated.
+  -i, --select-iteration=TYPE:VALUE[INDEX(..INDEX)?(,INDEX(..INDEX)?)*]
+                             Select iterations for test discovery (e.g. method:com.acme.Foo#m()
+                               [1..2]). This option can be repeated.
+
+FILTERS
+
+  -n, --include-classname=PATTERN
+                             Provide a regular expression to include only classes whose fully
+                               qualified names match. To avoid loading classes unnecessarily,
+                               the default pattern only includes class names that begin with
+                               "Test" or end with "Test" or "Tests". When this option is
+                               repeated, all patterns will be combined using OR semantics.
+                               Default: ^(Test.*|.+[.$]Test.*|.*Tests?)$
+  -N, --exclude-classname=PATTERN
+                             Provide a regular expression to exclude those classes whose fully
+                               qualified names match. When this option is repeated, all
+                               patterns will be combined using OR semantics.
+      --include-package=PKG  Provide a package to be included in the test run. This option can
+                               be repeated.
+      --exclude-package=PKG  Provide a package to be excluded from the test run. This option
+                               can be repeated.
+  -t, --include-tag=TAG      Provide a tag or tag expression to include only tests whose tags
+                               match. When this option is repeated, all patterns will be
+                               combined using OR semantics.
+  -T, --exclude-tag=TAG      Provide a tag or tag expression to exclude those tests whose tags
+                               match. When this option is repeated, all patterns will be
+                               combined using OR semantics.
+  -e, --include-engine=ID    Provide the ID of an engine to be included in the test run. This
+                               option can be repeated.
+  -E, --exclude-engine=ID    Provide the ID of an engine to be excluded from the test run.
+                               This option can be repeated.
+
+RUNTIME CONFIGURATION
+
+      -cp, --classpath, --class-path=PATH
+                             Provide additional classpath entries -- for example, for adding
+                               engines and their dependencies. This option can be repeated.
+      --config=KEY=VALUE     Set a configuration parameter for test discovery and execution.
+                               This option can be repeated.
+
+REPORTING
+
+      --fail-if-no-tests     Fail and return exit status code 2 if no tests are found.
+      --reports-dir=DIR      Enable report output into a specified local directory (will be
+                               created if it does not exist).
+
+CONSOLE OUTPUT
+
+      --disable-ansi-colors  Disable ANSI colors in output (not supported by all terminals).
+      --color-palette=FILE   Specify a path to a properties file to customize ANSI style of
+                               output (not supported by all terminals).
+      --single-color         Style test output using only text attributes, no color (not
+                               supported by all terminals).
+      --disable-banner       Disable print out of the welcome message.
+      --details=MODE         Select an output details mode for when tests are executed. Use
+                               one of: none, summary, flat, tree, verbose. If 'none' is
+                               selected, then only the summary and test failures are shown.
+                               Default: tree.
+      --details-theme=THEME  Select an output details tree theme for when tests are executed.
+                               Use one of: ascii, unicode. Default is detected based on
+                               default character encoding.
+
+For more information, please refer to the JUnit User Guide at
+https://junit.org/junit5/docs/current/user-guide/
+
+2026-09-12 16:05:34,279 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_peek_Test.java
+2026-09-12 16:05:34,684 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_peek_Test
+2026-09-12 16:05:36,091 - evaluations.coverage_test - INFO - return code: 0
+2026-09-12 16:05:36,091 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_peek_Test ✔
+│     ├─ testPeekWhenDoPeekThrowsEOFException() ✔
+│     ├─ testPeekWithString() ✔
+│     ├─ testPeekWithPresetPeekedValues() ✔
+│     ├─ testPeekWhenDoPeekThrowsIOException() ✔
+│     ├─ testPeekWithUnexpectedPeekedValue() ✔
+│     ├─ testPeekWithEmptyObject() ✔
+│     ├─ testPeekWithArray() ✔
+│     ├─ testPeekWhenDoPeekReturnsValues() ✔
+│     └─ testPeekWithNull() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 785 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         9 tests found           ]
+[         0 tests skipped         ]
+[         9 tests started         ]
+[         0 tests aborted         ]
+[         9 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:05:36,500 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWhenDoPeekThrowsEOFException --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWithString --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWithPresetPeekedValues --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWhenDoPeekThrowsIOException --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWithUnexpectedPeekedValue --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWithEmptyObject --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWithArray --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWhenDoPeekReturnsValues --select-method com.google.gson.stream.JsonReader_peek_Test#testPeekWithNull
+2026-09-12 16:05:37,802 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_peek_Test ✔
+│     ├─ testPeekWhenDoPeekThrowsEOFException() ✔
+│     ├─ testPeekWithString() ✔
+│     ├─ testPeekWithPresetPeekedValues() ✔
+│     ├─ testPeekWhenDoPeekThrowsIOException() ✔
+│     ├─ testPeekWithUnexpectedPeekedValue() ✔
+│     ├─ testPeekWithEmptyObject() ✔
+│     ├─ testPeekWithArray() ✔
+│     ├─ testPeekWhenDoPeekReturnsValues() ✔
+│     └─ testPeekWithNull() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 689 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         9 tests found           ]
+[         0 tests skipped         ]
+[         9 tests started         ]
+[         0 tests aborted         ]
+[         9 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:05:38,200 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_peekNumber_Test.java
+2026-09-12 16:05:38,508 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_peekNumber_Test
+2026-09-12 16:05:39,595 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:05:39,595 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_peekNumber_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_peekNumber_Test ✔
+│     ├─ testPeekNumberWithLeadingZero() ✔
+│     ├─ testPeekNumberWithExceedingLongValue() ✘ expected: <0> but was: <16>
+│     ├─ testPeekNumberWithJustBelowMinLongValue() ✘ expected: <0> but was: <16>
+│     ├─ testPeekNumberWithIncompleteScientificNotation() ✔
+│     ├─ testPeekNumberWithIncompletePositiveExponent() ✔
+│     ├─ testPeekNumber() ✔
+│     ├─ testPeekNumberWithVerySmallDecimal() ✔
+│     ├─ testPeekNumberWithSimpleInteger() ✔
+│     ├─ testPeekNumberWithNegativeDecimalPoint() ✔
+│     ├─ testPeekNumberWithVerySmallNegativeScientificNotation() ✔
+│     ├─ testPeekNumberWithMaxLongValue() ✔
+│     ├─ testPeekNumberWithIncompleteExponent() ✔
+│     ├─ testPeekNumberWithJustOverMaxLongValue() ✘ expected: <0> but was: <16>
+│     ├─ testPeekNumberWithMinLongValue() ✔
+│     ├─ testPeekNumberWithVerySmallScientificNotation() ✔
+│     ├─ testPeekNumberWithMaxDoubleValue() ✔
+│     ├─ testPeekNumberWithNumberFollowedByLetters() ✔
+│     ├─ testPeekNumberWithScientificNotationNegativeExponent() ✔
+│     ├─ testPeekNumberWithSingleDecimalPoint() ✔
+│     ├─ testPeekNumberWithSinglePositiveSign() ✔
+│     ├─ testPeekNumberWithDecimalNumber() ✔
+│     ├─ testPeekNumberWithEmptyBuffer() ✔
+│     ├─ testPeekNumberWithSingleNegativeSign() ✔
+│     ├─ testPeekNumberWithScientificNotation() ✔
+│     ├─ testPeekNumberWithNegativeInteger() ✔
+│     ├─ testPeekNumberWithIncompleteNegativeExponent() ✔
+│     ├─ testPeekNumberWithNegativeZero() ✔
+│     ├─ testPeekNumberWithInvalidInput() ✔
+│     ├─ testPeekNumberWithSingleECharacter() ✔
+│     ├─ testPeekNumberWithNegativeMaxDoubleValue() ✔
+│     └─ testPeekNumberWithTrailingDecimalPoint() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:JsonReader_peekNumber_Test:testPeekNumberWithExceedingLongValue()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peekNumber_Test', methodName = 'testPeekNumberWithExceedingLongValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <0> but was: <16>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       com.google.gson.stream.JsonReader_peekNumber_Test.testPeekNumberWithExceedingLongValue(JsonReader_peekNumber_Test.java:255)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_peekNumber_Test:testPeekNumberWithJustBelowMinLongValue()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peekNumber_Test', methodName = 'testPeekNumberWithJustBelowMinLongValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <0> but was: <16>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       com.google.gson.stream.JsonReader_peekNumber_Test.testPeekNumberWithJustBelowMinLongValue(JsonReader_peekNumber_Test.java:376)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_peekNumber_Test:testPeekNumberWithJustOverMaxLongValue()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_peekNumber_Test', methodName = 'testPeekNumberWithJustOverMaxLongValue', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <0> but was: <16>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       com.google.gson.stream.JsonReader_peekNumber_Test.testPeekNumberWithJustOverMaxLongValue(JsonReader_peekNumber_Test.java:365)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 523 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        31 tests found           ]
+[         0 tests skipped         ]
+[        31 tests started         ]
+[         0 tests aborted         ]
+[        28 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-12 16:05:39,958 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithLeadingZero --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithIncompleteScientificNotation --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithIncompletePositiveExponent --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumber --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithVerySmallDecimal --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithSimpleInteger --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithNegativeDecimalPoint --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithVerySmallNegativeScientificNotation --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithMaxLongValue --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithIncompleteExponent --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithMinLongValue --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithVerySmallScientificNotation --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithMaxDoubleValue --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithNumberFollowedByLetters --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithScientificNotationNegativeExponent --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithSingleDecimalPoint --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithSinglePositiveSign --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithDecimalNumber --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithEmptyBuffer --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithSingleNegativeSign --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithScientificNotation --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithNegativeInteger --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithIncompleteNegativeExponent --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithNegativeZero --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithInvalidInput --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithSingleECharacter --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithNegativeMaxDoubleValue --select-method com.google.gson.stream.JsonReader_peekNumber_Test#testPeekNumberWithTrailingDecimalPoint
+2026-09-12 16:05:41,020 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_peekNumber_Test ✔
+│     ├─ testPeekNumberWithLeadingZero() ✔
+│     ├─ testPeekNumberWithIncompleteScientificNotation() ✔
+│     ├─ testPeekNumberWithIncompletePositiveExponent() ✔
+│     ├─ testPeekNumber() ✔
+│     ├─ testPeekNumberWithVerySmallDecimal() ✔
+│     ├─ testPeekNumberWithSimpleInteger() ✔
+│     ├─ testPeekNumberWithNegativeDecimalPoint() ✔
+│     ├─ testPeekNumberWithVerySmallNegativeScientificNotation() ✔
+│     ├─ testPeekNumberWithMaxLongValue() ✔
+│     ├─ testPeekNumberWithIncompleteExponent() ✔
+│     ├─ testPeekNumberWithMinLongValue() ✔
+│     ├─ testPeekNumberWithVerySmallScientificNotation() ✔
+│     ├─ testPeekNumberWithMaxDoubleValue() ✔
+│     ├─ testPeekNumberWithNumberFollowedByLetters() ✔
+│     ├─ testPeekNumberWithScientificNotationNegativeExponent() ✔
+│     ├─ testPeekNumberWithSingleDecimalPoint() ✔
+│     ├─ testPeekNumberWithSinglePositiveSign() ✔
+│     ├─ testPeekNumberWithDecimalNumber() ✔
+│     ├─ testPeekNumberWithEmptyBuffer() ✔
+│     ├─ testPeekNumberWithSingleNegativeSign() ✔
+│     ├─ testPeekNumberWithScientificNotation() ✔
+│     ├─ testPeekNumberWithNegativeInteger() ✔
+│     ├─ testPeekNumberWithIncompleteNegativeExponent() ✔
+│     ├─ testPeekNumberWithNegativeZero() ✔
+│     ├─ testPeekNumberWithInvalidInput() ✔
+│     ├─ testPeekNumberWithSingleECharacter() ✔
+│     ├─ testPeekNumberWithNegativeMaxDoubleValue() ✔
+│     └─ testPeekNumberWithTrailingDecimalPoint() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 501 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        28 tests found           ]
+[         0 tests skipped         ]
+[        28 tests started         ]
+[         0 tests aborted         ]
+[        28 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:05:41,366 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_nextUnquotedValue_Test.java
+2026-09-12 16:05:41,648 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_nextUnquotedValue_Test
+2026-09-12 16:15:41,747 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/LinkedTreeMap_find_Test.java
+2026-09-12 16:15:42,087 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.LinkedTreeMap_find_Test
+2026-09-12 16:15:43,169 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:15:43,169 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.LinkedTreeMap_find_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ LinkedTreeMap_find_Test ✔
+│     ├─ testFindExistingKeyWithCreate() ✔
+│     ├─ testFindExistingKey() ✔
+│     ├─ testFindNonExistingKeyWithCreate() ✔
+│     ├─ testFindWithNullKey() ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+│     ├─ testFindWithNullKeyAndCreate() ✔
+│     ├─ testFindNonExistingKeyWithoutCreate() ✔
+│     ├─ testFindWithNonComparableKey() ✔
+│     └─ testFindWithNonComparableKeyWithoutCreate() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:LinkedTreeMap_find_Test:testFindWithNullKey()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_find_Test', methodName = 'testFindWithNullKey', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.LinkedTreeMap_find_Test.testFindWithNullKey(LinkedTreeMap_find_Test.java:61)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+
+Test run finished after 532 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         7 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-12 16:15:43,651 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindExistingKeyWithCreate --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindExistingKey --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindNonExistingKeyWithCreate --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindWithNullKeyAndCreate --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindNonExistingKeyWithoutCreate --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindWithNonComparableKey --select-method com.google.gson.internal.LinkedTreeMap_find_Test#testFindWithNonComparableKeyWithoutCreate
+2026-09-12 16:15:44,735 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ LinkedTreeMap_find_Test ✔
+│     ├─ testFindExistingKeyWithCreate() ✔
+│     ├─ testFindExistingKey() ✔
+│     ├─ testFindNonExistingKeyWithCreate() ✔
+│     ├─ testFindWithNullKeyAndCreate() ✔
+│     ├─ testFindNonExistingKeyWithoutCreate() ✔
+│     ├─ testFindWithNonComparableKey() ✔
+│     └─ testFindWithNonComparableKeyWithoutCreate() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 529 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         7 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:15:45,113 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_nextNonWhitespace_Test.java
+2026-09-12 16:15:45,423 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_nextNonWhitespace_Test
+2026-09-12 16:15:46,478 - evaluations.coverage_test - INFO - return code: 0
+2026-09-12 16:15:46,478 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_nextNonWhitespace_Test ✔
+│     ├─ testNextNonWhitespace_throwsEOFException() ✔
+│     ├─ testNextNonWhitespace_unterminatedCommentThrowsIOExceptionWhenThrowOnEofFalse() ✔
+│     ├─ testNextNonWhitespace_returnsNonWhitespaceCharacter() ✔
+│     ├─ testNextNonWhitespace_unterminatedCommentThrowsIOException() ✔
+│     └─ testNextNonWhitespace_returnsNegativeOneWhenEOFAndThrowOnEofFalse() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 486 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:15:46,853 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.stream.JsonReader_nextNonWhitespace_Test#testNextNonWhitespace_throwsEOFException --select-method com.google.gson.stream.JsonReader_nextNonWhitespace_Test#testNextNonWhitespace_unterminatedCommentThrowsIOExceptionWhenThrowOnEofFalse --select-method com.google.gson.stream.JsonReader_nextNonWhitespace_Test#testNextNonWhitespace_returnsNonWhitespaceCharacter --select-method com.google.gson.stream.JsonReader_nextNonWhitespace_Test#testNextNonWhitespace_unterminatedCommentThrowsIOException --select-method com.google.gson.stream.JsonReader_nextNonWhitespace_Test#testNextNonWhitespace_returnsNegativeOneWhenEOFAndThrowOnEofFalse
+2026-09-12 16:15:47,902 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_nextNonWhitespace_Test ✔
+│     ├─ testNextNonWhitespace_throwsEOFException() ✔
+│     ├─ testNextNonWhitespace_unterminatedCommentThrowsIOExceptionWhenThrowOnEofFalse() ✔
+│     ├─ testNextNonWhitespace_returnsNonWhitespaceCharacter() ✔
+│     ├─ testNextNonWhitespace_unterminatedCommentThrowsIOException() ✔
+│     └─ testNextNonWhitespace_returnsNegativeOneWhenEOFAndThrowOnEofFalse() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 512 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:15:48,281 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/Excluder_excludeField_Test.java
+2026-09-12 16:15:48,630 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.Excluder_excludeField_Test
+2026-09-12 16:15:49,927 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:15:49,927 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.Excluder_excludeField_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Excluder_excludeField_Test ✔
+│     ├─ testExcludeField_withInnerClass() ✔
+│     ├─ testExcludeField_withAnonymousOrNonStaticLocalClass() ✘ expected: <true> but was: <false>
+│     ├─ testExcludeField_withVersion() ✔
+│     ├─ testExcludeField_withExclusionStrategy() ✘ java.lang.NullPointerException
+│     ├─ testExcludeField_withModifiers() ✔
+│     ├─ testExcludeField_withExposeAnnotation() ✔
+│     └─ testExcludeField_withoutAnyExclusion() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:Excluder_excludeField_Test:testExcludeField_withAnonymousOrNonStaticLocalClass()
+    MethodSource [className = 'com.google.gson.internal.Excluder_excludeField_Test', methodName = 'testExcludeField_withAnonymousOrNonStaticLocalClass', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+       com.google.gson.internal.Excluder_excludeField_Test.testExcludeField_withAnonymousOrNonStaticLocalClass(Excluder_excludeField_Test.java:96)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:Excluder_excludeField_Test:testExcludeField_withExclusionStrategy()
+    MethodSource [className = 'com.google.gson.internal.Excluder_excludeField_Test', methodName = 'testExcludeField_withExclusionStrategy', methodParameterTypes = '']
+    => java.lang.NullPointerException
+       java.base/java.lang.Class.isAssignableFrom(Native Method)
+       com.google.gson.internal.Excluder.isAnonymousOrNonStaticLocal(Excluder.java:220)
+       com.google.gson.internal.Excluder.excludeField(Excluder.java:175)
+       com.google.gson.internal.Excluder_excludeField_Test.testExcludeField_withExclusionStrategy(Excluder_excludeField_Test.java:106)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       [...]
+
+Test run finished after 716 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-12 16:15:50,312 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.Excluder_excludeField_Test#testExcludeField_withInnerClass --select-method com.google.gson.internal.Excluder_excludeField_Test#testExcludeField_withVersion --select-method com.google.gson.internal.Excluder_excludeField_Test#testExcludeField_withModifiers --select-method com.google.gson.internal.Excluder_excludeField_Test#testExcludeField_withExposeAnnotation --select-method com.google.gson.internal.Excluder_excludeField_Test#testExcludeField_withoutAnyExclusion
+2026-09-12 16:15:51,579 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Excluder_excludeField_Test ✔
+│     ├─ testExcludeField_withInnerClass() ✔
+│     ├─ testExcludeField_withVersion() ✔
+│     ├─ testExcludeField_withModifiers() ✔
+│     ├─ testExcludeField_withExposeAnnotation() ✔
+│     └─ testExcludeField_withoutAnyExclusion() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 687 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:15:51,991 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/reflect/TypeToken_isAssignableFrom_Test.java
+2026-09-12 16:15:52,312 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.reflect.TypeToken_isAssignableFrom_Test
+2026-09-12 16:15:53,581 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:15:53,583 - evaluations.coverage_test - INFO - test case failed in com.google.gson.reflect.TypeToken_isAssignableFrom_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ TypeToken_isAssignableFrom_Test ✔
+│     ├─ testIsAssignableFrom_withEqualTypes() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testIsAssignableFrom_withNullToType() ✘ Expected NullPointerException when 'to' is null ==> Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+│     ├─ testIsAssignableFrom_withNullTypeVarMap() ✘ Expected NullPointerException when 'typeVarMap' is null ==> Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+│     └─ testIsAssignableFrom_withNullType() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:TypeToken_isAssignableFrom_Test:testIsAssignableFrom_withEqualTypes()
+    MethodSource [className = 'com.google.gson.reflect.TypeToken_isAssignableFrom_Test', methodName = 'testIsAssignableFrom_withEqualTypes', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.testIsAssignableFrom_withEqualTypes(TypeToken_isAssignableFrom_Test.java:53)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:TypeToken_isAssignableFrom_Test:testIsAssignableFrom_withNullToType()
+    MethodSource [className = 'com.google.gson.reflect.TypeToken_isAssignableFrom_Test', methodName = 'testIsAssignableFrom_withNullToType', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected NullPointerException when 'to' is null ==> Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.testIsAssignableFrom_withNullToType(TypeToken_isAssignableFrom_Test.java:130)
+       [...]
+     Caused by: java.lang.RuntimeException: Failed to invoke isAssignableFrom
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.invokeIsAssignableFrom(TypeToken_isAssignableFrom_Test.java:37)
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.lambda$testIsAssignableFrom_withNullToType$1(TypeToken_isAssignableFrom_Test.java:131)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.invokeIsAssignableFrom(TypeToken_isAssignableFrom_Test.java:35)
+       [...]
+     Caused by: java.lang.NullPointerException: Cannot invoke "Object.equals(Object)" because "to" is null
+       com.google.gson.reflect.TypeToken.isAssignableFrom(TypeToken.java:210)
+       [...]
+  JUnit Jupiter:TypeToken_isAssignableFrom_Test:testIsAssignableFrom_withNullTypeVarMap()
+    MethodSource [className = 'com.google.gson.reflect.TypeToken_isAssignableFrom_Test', methodName = 'testIsAssignableFrom_withNullTypeVarMap', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected NullPointerException when 'typeVarMap' is null ==> Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.RuntimeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.testIsAssignableFrom_withNullTypeVarMap(TypeToken_isAssignableFrom_Test.java:120)
+       [...]
+     Caused by: java.lang.RuntimeException: Failed to invoke isAssignableFrom
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.invokeIsAssignableFrom(TypeToken_isAssignableFrom_Test.java:37)
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.lambda$testIsAssignableFrom_withNullTypeVarMap$0(TypeToken_isAssignableFrom_Test.java:121)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+     Caused by: java.lang.reflect.InvocationTargetException
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.reflect.TypeToken_isAssignableFrom_Test.invokeIsAssignableFrom(TypeToken_isAssignableFrom_Test.java:35)
+       [...]
+     Caused by: java.lang.IllegalArgumentException
+       com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:54)
+       com.google.gson.internal.$Gson$Types.getRawType($Gson$Types.java:145)
+       com.google.gson.reflect.TypeToken.isAssignableFrom(TypeToken.java:215)
+       [...]
+
+Test run finished after 635 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-12 16:15:53,971 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.reflect.TypeToken_isAssignableFrom_Test#testIsAssignableFrom_withNullType
+2026-09-12 16:15:55,170 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ TypeToken_isAssignableFrom_Test ✔
+│     └─ testIsAssignableFrom_withNullType() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 610 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:15:55,540 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/Primitives_wrap_Test.java
+2026-09-12 16:15:55,837 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.Primitives_wrap_Test
+2026-09-12 16:15:56,333 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:15:56,333 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.Primitives_wrap_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Primitives_wrap_Test ✔
+│     ├─ testWrapByte() ✔
+│     ├─ testWrapChar() ✔
+│     ├─ testWrapLong() ✔
+│     ├─ testWrapVoid() ✔
+│     ├─ testWrapBoolean() ✔
+│     ├─ testWrapArrayOfPrimitive() ✔
+│     ├─ testWrapWrapperType() ✔
+│     ├─ testWrapWithNullInput() ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+│     ├─ testWrapEnumType() ✔
+│     ├─ testWrapFloat() ✔
+│     ├─ testWrapShort() ✔
+│     ├─ testWrapInt() ✔
+│     ├─ testWrapDouble() ✔
+│     ├─ testWrapObject() ✔
+│     └─ testWrapNonPrimitive() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Primitives_wrap_Test:testWrapWithNullInput()
+    MethodSource [className = 'com.google.gson.internal.Primitives_wrap_Test', methodName = 'testWrapWithNullInput', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+       com.google.gson.internal.Primitives_wrap_Test.testWrapWithNullInput(Primitives_wrap_Test.java:124)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+
+Test run finished after 54 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        14 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-12 16:15:56,690 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapByte --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapChar --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapLong --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapVoid --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapBoolean --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapArrayOfPrimitive --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapWrapperType --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapEnumType --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapFloat --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapShort --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapInt --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapDouble --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapObject --select-method com.google.gson.internal.Primitives_wrap_Test#testWrapNonPrimitive
+2026-09-12 16:15:57,236 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Primitives_wrap_Test ✔
+│     ├─ testWrapByte() ✔
+│     ├─ testWrapChar() ✔
+│     ├─ testWrapLong() ✔
+│     ├─ testWrapVoid() ✔
+│     ├─ testWrapBoolean() ✔
+│     ├─ testWrapArrayOfPrimitive() ✔
+│     ├─ testWrapWrapperType() ✔
+│     ├─ testWrapEnumType() ✔
+│     ├─ testWrapFloat() ✔
+│     ├─ testWrapShort() ✔
+│     ├─ testWrapInt() ✔
+│     ├─ testWrapDouble() ✔
+│     ├─ testWrapObject() ✔
+│     └─ testWrapNonPrimitive() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 52 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        14 tests found           ]
+[         0 tests skipped         ]
+[        14 tests started         ]
+[         0 tests aborted         ]
+[        14 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:15:57,594 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/LinkedTreeMap_rebalance_Test.java
+2026-09-12 16:15:57,963 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.LinkedTreeMap_rebalance_Test
+2026-09-12 16:15:59,320 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:15:59,320 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.LinkedTreeMap_rebalance_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ LinkedTreeMap_rebalance_Test ✔
+│     ├─ testRebalanceRightRightRotation() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceDeltaMinusOneNonInsertion() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceNullLeftChild() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceLeftLeftRotation() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceDeltaZeroInsertion() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceAfterInsertion() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceRightLeftRotation() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceAfterRemoval() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceLeftRightRotation() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceDeltaOneNonInsertion() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     ├─ testRebalanceNullRightChild() ✘ 
+│     │        when() requires an argument which has to be 'a method call on a mock'.
+│     │        For example:
+│     │            when(mock.getArticles()).thenReturn(articles);
+│     │     
+│     │        Also, this error might show up because:
+│     │        1. you stub either of: final/private/equals()/hashCode() methods.
+│     │           Those methods *cannot* be stubbed/verified.
+│     │           Mocking methods declared on non-public parent classes is not supported.
+│     │        2. inside when() you don't call method on mock but on some other object.
+│     └─ testRebalanceDeltaZeroNonInsertion() ✘ 
+│              when() requires an argument which has to be 'a method call on a mock'.
+│              For example:
+│                  when(mock.getArticles()).thenReturn(articles);
+│           
+│              Also, this error might show up because:
+│              1. you stub either of: final/private/equals()/hashCode() methods.
+│                 Those methods *cannot* be stubbed/verified.
+│                 Mocking methods declared on non-public parent classes is not supported.
+│              2. inside when() you don't call method on mock but on some other object.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (12):
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceRightRightRotation()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceRightRightRotation', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceRightRightRotation(LinkedTreeMap_rebalance_Test.java:76)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceDeltaMinusOneNonInsertion()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceDeltaMinusOneNonInsertion', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceDeltaMinusOneNonInsertion(LinkedTreeMap_rebalance_Test.java:187)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceNullLeftChild()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceNullLeftChild', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceNullLeftChild(LinkedTreeMap_rebalance_Test.java:212)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceLeftLeftRotation()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceLeftLeftRotation', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceLeftLeftRotation(LinkedTreeMap_rebalance_Test.java:112)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceDeltaZeroInsertion()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceDeltaZeroInsertion', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceDeltaZeroInsertion(LinkedTreeMap_rebalance_Test.java:145)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceAfterInsertion()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceAfterInsertion', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceAfterInsertion(LinkedTreeMap_rebalance_Test.java:48)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceRightLeftRotation()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceRightLeftRotation', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceRightLeftRotation(LinkedTreeMap_rebalance_Test.java:94)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceAfterRemoval()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceAfterRemoval', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceAfterRemoval(LinkedTreeMap_rebalance_Test.java:61)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceLeftRightRotation()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceLeftRightRotation', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceLeftRightRotation(LinkedTreeMap_rebalance_Test.java:129)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceDeltaOneNonInsertion()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceDeltaOneNonInsertion', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceDeltaOneNonInsertion(LinkedTreeMap_rebalance_Test.java:173)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceNullRightChild()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceNullRightChild', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceNullRightChild(LinkedTreeMap_rebalance_Test.java:201)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:LinkedTreeMap_rebalance_Test:testRebalanceDeltaZeroNonInsertion()
+    MethodSource [className = 'com.google.gson.internal.LinkedTreeMap_rebalance_Test', methodName = 'testRebalanceDeltaZeroNonInsertion', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+       com.google.gson.internal.LinkedTreeMap_rebalance_Test.testRebalanceDeltaZeroNonInsertion(LinkedTreeMap_rebalance_Test.java:159)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+
+Test run finished after 756 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[        12 tests failed          ]
+
+
+2026-09-12 16:15:59,698 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory_getBoundFields_Test.java
+2026-09-12 16:16:00,035 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test
+2026-09-12 16:16:01,382 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:16:01,382 - evaluations.coverage_test - INFO - test case failed in com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ReflectiveTypeAdapterFactory_getBoundFields_Test ✔
+│     ├─ testGetBoundFields_StaticFieldsClass() ✔
+│     ├─ testGetBoundFields_EmptyClass() ✔
+│     ├─ testGetBoundFields_Interface() ✔
+│     ├─ testGetBoundFields_ConflictingFieldNames() ✘ Expected IllegalArgumentException due to conflicting field names ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testGetBoundFields_InaccessibleFields() ✘ Expected JsonIOException due to inaccessible fields ==> Expected com.google.gson.JsonIOException to be thrown, but nothing was thrown.
+│     ├─ testGetBoundFields_ReflectionAccessFilterBlockAll() ✘ 
+│     │        Misplaced or misused argument matcher detected here:
+│     │     
+│     │        -> at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_ReflectionAccessFilterBlockAll(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:120)
+│     │        -> at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_ReflectionAccessFilterBlockAll(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:120)
+│     │     
+│     │        You cannot use argument matchers outside of verification or stubbing.
+│     │        Examples of correct usage of argument matchers:
+│     │            when(mock.get(anyInt())).thenReturn(null);
+│     │            doThrow(new RuntimeException()).when(mock).someVoidMethod(any());
+│     │            verify(mock).someMethod(contains("foo"))
+│     │     
+│     │        This message may appear after an NullPointerException if the last matcher is returning an object 
+│     │        like any() but the stubbed method signature expect a primitive argument, in this case,
+│     │        use primitive alternatives.
+│     │            when(mock.get(any())); // bad use, will raise NPE
+│     │            when(mock.get(anyInt())); // correct usage use
+│     │     
+│     │        Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+│     │        Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+│     │        Mocking methods declared on non-public parent classes is not supported.
+│     ├─ testGetBoundFields() ✔
+│     ├─ testGetBoundFields_RecordClassWithAccessors() ✘ Expected a map with bound fields using accessor methods ==> expected: <false> but was: <true>
+│     ├─ testGetBoundFields_RecordClassWithSerializedName() ✘ Expected JsonIOException due to @SerializedName on accessor method without corresponding field annotation ==> Expected com.google.gson.JsonIOException to be thrown, but nothing was thrown.
+│     ├─ testGetBoundFields_AnnotatedFieldClass() ✘ Expected a map with bound fields including annotated fields ==> expected: <false> but was: <true>
+│     ├─ testGetBoundFields_SuperClass() ✘ Expected a map with bound fields from superclass ==> expected: <false> but was: <true>
+│     └─ testGetBoundFields_AccessibleFields() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (7):
+  JUnit Jupiter:ReflectiveTypeAdapterFactory_getBoundFields_Test:testGetBoundFields_ConflictingFieldNames()
+    MethodSource [className = 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test', methodName = 'testGetBoundFields_ConflictingFieldNames', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected IllegalArgumentException due to conflicting field names ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+       com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_ConflictingFieldNames(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:168)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:ReflectiveTypeAdapterFactory_getBoundFields_Test:testGetBoundFields_InaccessibleFields()
+    MethodSource [className = 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test', methodName = 'testGetBoundFields_InaccessibleFields', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected JsonIOException due to inaccessible fields ==> Expected com.google.gson.JsonIOException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+       com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_InaccessibleFields(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:212)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:ReflectiveTypeAdapterFactory_getBoundFields_Test:testGetBoundFields_ReflectionAccessFilterBlockAll()
+    MethodSource [className = 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test', methodName = 'testGetBoundFields_ReflectionAccessFilterBlockAll', methodParameterTypes = '']
+    => org.mockito.exceptions.misusing.InvalidUseOfMatchersException: 
+Misplaced or misused argument matcher detected here:
+
+-> at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_ReflectionAccessFilterBlockAll(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:120)
+-> at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_ReflectionAccessFilterBlockAll(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:120)
+
+You cannot use argument matchers outside of verification or stubbing.
+Examples of correct usage of argument matchers:
+    when(mock.get(anyInt())).thenReturn(null);
+    doThrow(new RuntimeException()).when(mock).someVoidMethod(any());
+    verify(mock).someMethod(contains("foo"))
+
+This message may appear after an NullPointerException if the last matcher is returning an object 
+like any() but the stubbed method signature expect a primitive argument, in this case,
+use primitive alternatives.
+    when(mock.get(any())); // bad use, will raise NPE
+    when(mock.get(anyInt())); // correct usage use
+
+Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+Mocking methods declared on non-public parent classes is not supported.
+
+       com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_ReflectionAccessFilterBlockAll(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:120)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+       [...]
+  JUnit Jupiter:ReflectiveTypeAdapterFactory_getBoundFields_Test:testGetBoundFields_RecordClassWithAccessors()
+    MethodSource [className = 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test', methodName = 'testGetBoundFields_RecordClassWithAccessors', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected a map with bound fields using accessor methods ==> expected: <false> but was: <true>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+       org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+       org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+       com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_RecordClassWithAccessors(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:156)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:ReflectiveTypeAdapterFactory_getBoundFields_Test:testGetBoundFields_RecordClassWithSerializedName()
+    MethodSource [className = 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test', methodName = 'testGetBoundFields_RecordClassWithSerializedName', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected JsonIOException due to @SerializedName on accessor method without corresponding field annotation ==> Expected com.google.gson.JsonIOException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+       com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_RecordClassWithSerializedName(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:256)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+  JUnit Jupiter:ReflectiveTypeAdapterFactory_getBoundFields_Test:testGetBoundFields_AnnotatedFieldClass()
+    MethodSource [className = 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test', methodName = 'testGetBoundFields_AnnotatedFieldClass', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected a map with bound fields including annotated fields ==> expected: <false> but was: <true>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+       org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+       org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+       com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_AnnotatedFieldClass(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:229)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:ReflectiveTypeAdapterFactory_getBoundFields_Test:testGetBoundFields_SuperClass()
+    MethodSource [className = 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test', methodName = 'testGetBoundFields_SuperClass', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected a map with bound fields from superclass ==> expected: <false> but was: <true>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+       org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+       org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+       com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test.testGetBoundFields_SuperClass(ReflectiveTypeAdapterFactory_getBoundFields_Test.java:244)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 751 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         7 tests failed          ]
+
+
+2026-09-12 16:16:01,748 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test#testGetBoundFields_StaticFieldsClass --select-method com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test#testGetBoundFields_EmptyClass --select-method com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test#testGetBoundFields_Interface --select-method com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test#testGetBoundFields --select-method com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_getBoundFields_Test#testGetBoundFields_AccessibleFields
+2026-09-12 16:16:03,121 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ReflectiveTypeAdapterFactory_getBoundFields_Test ✔
+│     ├─ testGetBoundFields_StaticFieldsClass() ✔
+│     ├─ testGetBoundFields_EmptyClass() ✔
+│     ├─ testGetBoundFields_Interface() ✔
+│     ├─ testGetBoundFields() ✔
+│     └─ testGetBoundFields_AccessibleFields() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 728 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:16:03,480 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/bind/ObjectTypeAdapter_read_Test.java
+2026-09-12 16:16:03,802 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.bind.ObjectTypeAdapter_read_Test
+2026-09-12 16:16:04,918 - evaluations.coverage_test - INFO - return code: 0
+2026-09-12 16:16:04,919 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ObjectTypeAdapter_read_Test ✔
+│     ├─ testRead_malformedNestedJsonArray() ✔
+│     ├─ testRead_jsonNumberValue() ✔
+│     ├─ testRead_jsonBooleanValue() ✔
+│     ├─ testRead_malformedJsonArray() ✔
+│     ├─ testRead_jsonObjectWithNestedArray() ✔
+│     ├─ testRead_jsonNullValue() ✔
+│     ├─ testRead_simpleJsonObject() ✔
+│     ├─ testRead_emptyJsonArray() ✔
+│     ├─ testRead_emptyJsonObject() ✔
+│     ├─ testRead_jsonStringValue() ✔
+│     ├─ testRead_malformedJsonObject() ✔
+│     ├─ testRead_jsonArrayOfIntegers() ✔
+│     ├─ testRead_jsonArrayWithNestedObject() ✔
+│     ├─ testRead_withValidJson() ✔
+│     └─ testRead_jsonArrayWithMixedTypes() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 549 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:16:05,328 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_malformedNestedJsonArray --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_jsonNumberValue --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_jsonBooleanValue --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_malformedJsonArray --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_jsonObjectWithNestedArray --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_jsonNullValue --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_simpleJsonObject --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_emptyJsonArray --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_emptyJsonObject --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_jsonStringValue --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_malformedJsonObject --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_jsonArrayOfIntegers --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_jsonArrayWithNestedObject --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_withValidJson --select-method com.google.gson.internal.bind.ObjectTypeAdapter_read_Test#testRead_jsonArrayWithMixedTypes
+2026-09-12 16:16:06,564 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ObjectTypeAdapter_read_Test ✔
+│     ├─ testRead_malformedNestedJsonArray() ✔
+│     ├─ testRead_jsonNumberValue() ✔
+│     ├─ testRead_jsonBooleanValue() ✔
+│     ├─ testRead_malformedJsonArray() ✔
+│     ├─ testRead_jsonObjectWithNestedArray() ✔
+│     ├─ testRead_jsonNullValue() ✔
+│     ├─ testRead_simpleJsonObject() ✔
+│     ├─ testRead_emptyJsonArray() ✔
+│     ├─ testRead_emptyJsonObject() ✔
+│     ├─ testRead_jsonStringValue() ✔
+│     ├─ testRead_malformedJsonObject() ✔
+│     ├─ testRead_jsonArrayOfIntegers() ✔
+│     ├─ testRead_jsonArrayWithNestedObject() ✔
+│     ├─ testRead_withValidJson() ✔
+│     └─ testRead_jsonArrayWithMixedTypes() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 666 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:16:06,924 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/$Gson$Types_getGenericSupertype_Test.java
+2026-09-12 16:16:07,221 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.$Gson$Types_getGenericSupertype_Test
+2026-09-12 16:16:08,290 - evaluations.coverage_test - INFO - return code: 0
+2026-09-12 16:16:08,290 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_getGenericSupertype_Test ✔
+│     ├─ testGetGenericSupertypeWithNullContext() ✔
+│     ├─ testGetGenericSupertypeWithNullRawType() ✔
+│     ├─ testGetGenericSupertypeForMarkerInterface() ✔
+│     ├─ testGetGenericSupertypeForUnrelatedInterface() ✔
+│     ├─ testGetGenericSupertypeForSuperclass() ✔
+│     ├─ testGetGenericSupertypeForInterface() ✔
+│     ├─ testGetGenericSupertypeForPropertiesClass() ✔
+│     ├─ testGetGenericSupertypeForSameType() ✔
+│     ├─ testGetGenericSupertypeWithNullSupertype() ✔
+│     └─ testGetGenericSupertypeForUnrelatedSupertype() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 504 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:16:08,683 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeWithNullContext --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeWithNullRawType --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeForMarkerInterface --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeForUnrelatedInterface --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeForSuperclass --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeForInterface --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeForPropertiesClass --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeForSameType --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeWithNullSupertype --select-method com.google.gson.internal.$Gson$Types_getGenericSupertype_Test#testGetGenericSupertypeForUnrelatedSupertype
+2026-09-12 16:16:09,722 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_getGenericSupertype_Test ✔
+│     ├─ testGetGenericSupertypeWithNullContext() ✔
+│     ├─ testGetGenericSupertypeWithNullRawType() ✔
+│     ├─ testGetGenericSupertypeForMarkerInterface() ✔
+│     ├─ testGetGenericSupertypeForUnrelatedInterface() ✔
+│     ├─ testGetGenericSupertypeForSuperclass() ✔
+│     ├─ testGetGenericSupertypeForInterface() ✔
+│     ├─ testGetGenericSupertypeForPropertiesClass() ✔
+│     ├─ testGetGenericSupertypeForSameType() ✔
+│     ├─ testGetGenericSupertypeWithNullSupertype() ✔
+│     └─ testGetGenericSupertypeForUnrelatedSupertype() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 497 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:16:10,090 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/stream/JsonReader_readEscapeCharacter_Test.java
+2026-09-12 16:16:10,413 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.stream.JsonReader_readEscapeCharacter_Test
+2026-09-12 16:16:11,473 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 16:16:11,473 - evaluations.coverage_test - INFO - test case failed in com.google.gson.stream.JsonReader_readEscapeCharacter_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ JsonReader_readEscapeCharacter_Test ✔
+│     ├─ testReadEscapeCharacter_ValidEscape() ✘ Invalid escape sequence at line 1 column 7 path $[1]
+│     ├─ testReadEscapeCharacter_ValidEscapeSequences() ✘ expected: <	> but was: <\>
+│     ├─ testReadEscapeCharacter_InvalidEscapeSequences() ✘ Expected IOException or NumberFormatException for Invalid escape sequence
+│     └─ testReadEscapeCharacter_InvalidEscape() ✘ Invalid escape sequence at line 1 column 5 path $[0]
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (4):
+  JUnit Jupiter:JsonReader_readEscapeCharacter_Test:testReadEscapeCharacter_ValidEscape()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_readEscapeCharacter_Test', methodName = 'testReadEscapeCharacter_ValidEscape', methodParameterTypes = '']
+    => com.google.gson.stream.MalformedJsonException: Invalid escape sequence at line 1 column 7 path $[1]
+       com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1659)
+       com.google.gson.stream.JsonReader.readEscapeCharacter(JsonReader.java:1650)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.invokePrivateMethod(JsonReader_readEscapeCharacter_Test.java:48)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.testReadEscapeCharacter_ValidEscape(JsonReader_readEscapeCharacter_Test.java:58)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:JsonReader_readEscapeCharacter_Test:testReadEscapeCharacter_ValidEscapeSequences()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_readEscapeCharacter_Test', methodName = 'testReadEscapeCharacter_ValidEscapeSequences', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <	> but was: <\>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:54)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:49)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1041)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.testReadEscapeCharacter_ValidEscapeSequences(JsonReader_readEscapeCharacter_Test.java:102)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:JsonReader_readEscapeCharacter_Test:testReadEscapeCharacter_InvalidEscapeSequences()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_readEscapeCharacter_Test', methodName = 'testReadEscapeCharacter_InvalidEscapeSequences', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected IOException or NumberFormatException for Invalid escape sequence
+       org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+       org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.testReadEscapeCharacter_InvalidEscapeSequences(JsonReader_readEscapeCharacter_Test.java:128)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:JsonReader_readEscapeCharacter_Test:testReadEscapeCharacter_InvalidEscape()
+    MethodSource [className = 'com.google.gson.stream.JsonReader_readEscapeCharacter_Test', methodName = 'testReadEscapeCharacter_InvalidEscape', methodParameterTypes = '']
+    => com.google.gson.stream.MalformedJsonException: Invalid escape sequence at line 1 column 5 path $[0]
+       com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1659)
+       com.google.gson.stream.JsonReader.readEscapeCharacter(JsonReader.java:1650)
+       com.google.gson.stream.JsonReader.nextQuotedValue(JsonReader.java:1027)
+       com.google.gson.stream.JsonReader.nextString(JsonReader.java:826)
+       com.google.gson.stream.JsonReader_readEscapeCharacter_Test.testReadEscapeCharacter_InvalidEscape(JsonReader_readEscapeCharacter_Test.java:71)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+       [...]
+
+Test run finished after 511 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         4 tests failed          ]
+
+
+2026-09-12 16:16:11,848 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/com/google/gson/internal/$Gson$Types_equals_Test.java
+2026-09-12 16:16:12,134 - evaluations.coverage_test - INFO - Running single unit test, testclass: com.google.gson.internal.$Gson$Types_equals_Test
+2026-09-12 16:16:13,187 - evaluations.coverage_test - INFO - return code: 0
+2026-09-12 16:16:13,187 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_equals_Test ✔
+│     ├─ testEqualsWithDifferentTypeVariables() ✔
+│     ├─ testEqualsWithDifferentGenericArrayTypes() ✔
+│     ├─ testEqualsWithNullTypes() ✔
+│     ├─ testEqualsWithParameterizedType() ✔
+│     ├─ testEqualsWithWildcardType() ✔
+│     ├─ testEqualsWithDifferentParameterizedTypes() ✔
+│     ├─ testEqualsWithDifferentClasses() ✔
+│     ├─ testEqualsWithDifferentWildcardTypes() ✔
+│     ├─ testEqualsWithTypeVariable() ✔
+│     ├─ testEqualsWithSameType() ✔
+│     ├─ testEqualsWithOneNullType() ✔
+│     └─ testEqualsWithGenericArrayType() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 488 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:16:13,545 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithDifferentTypeVariables --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithDifferentGenericArrayTypes --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithNullTypes --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithParameterizedType --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithWildcardType --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithDifferentParameterizedTypes --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithDifferentClasses --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithDifferentWildcardTypes --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithTypeVariable --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithSameType --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithOneNullType --select-method com.google.gson.internal.$Gson$Types_equals_Test#testEqualsWithGenericArrayType
+2026-09-12 16:16:14,609 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ $Gson$Types_equals_Test ✔
+│     ├─ testEqualsWithDifferentTypeVariables() ✔
+│     ├─ testEqualsWithDifferentGenericArrayTypes() ✔
+│     ├─ testEqualsWithNullTypes() ✔
+│     ├─ testEqualsWithParameterizedType() ✔
+│     ├─ testEqualsWithWildcardType() ✔
+│     ├─ testEqualsWithDifferentParameterizedTypes() ✔
+│     ├─ testEqualsWithDifferentClasses() ✔
+│     ├─ testEqualsWithDifferentWildcardTypes() ✔
+│     ├─ testEqualsWithTypeVariable() ✔
+│     ├─ testEqualsWithSameType() ✔
+│     ├─ testEqualsWithOneNullType() ✔
+│     └─ testEqualsWithGenericArrayType() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 522 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 16:16:14,988 - evaluations.coverage_test - INFO - {'com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class<? super T>)': {'test_cases': 10, 'passed_cases': 9}, 'com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)': {'test_cases': 16, 'passed_cases': 15}, 'com.google.gson.stream.JsonReader#doPeek()': {'test_cases': 1, 'passed_cases': 1}, 'com.google.gson.stream.JsonReader#skipValue()': {'error_type': 'execution error'}, 'com.google.gson.internal.bind.JsonTreeReader#peek()': {'error_type': 'compile error'}, 'com.google.gson.internal.Primitives#unwrap(Class<T>)': {'error_type': 'execution error'}, 'com.google.gson.stream.JsonReader#peek()': {'test_cases': 9, 'passed_cases': 9}, 'com.google.gson.stream.JsonReader#peekNumber()': {'test_cases': 31, 'passed_cases': 28}, 'com.google.gson.stream.JsonReader#nextUnquotedValue()': {'error_type': 'execution error'}, 'com.google.gson.internal.LinkedTreeMap#find(K, boolean)': {'test_cases': 8, 'passed_cases': 7}, 'com.google.gson.stream.JsonReader#nextNonWhitespace(boolean)': {'test_cases': 5, 'passed_cases': 5}, 'com.google.gson.internal.Excluder#excludeField(Field, boolean)': {'test_cases': 7, 'passed_cases': 5}, 'com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)': {'test_cases': 4, 'passed_cases': 1}, 'com.google.gson.internal.Primitives#wrap(Class<T>)': {'test_cases': 15, 'passed_cases': 14}, 'com.google.gson.internal.LinkedTreeMap#rebalance(Node<K, V>, boolean)': {'test_cases': 12, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)': {'test_cases': 12, 'passed_cases': 5}, 'com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)': {'test_cases': 15, 'passed_cases': 15}, 'com.google.gson.internal.$Gson$Types#getGenericSupertype(Type, Class<?>, Class<?>)': {'test_cases': 10, 'passed_cases': 10}, 'com.google.gson.stream.JsonReader#readEscapeCharacter()': {'test_cases': 4, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'com.google.gson.internal.$Gson$Types#equals(Type, Type)': {'test_cases': 12, 'passed_cases': 12}}
+2026-09-12 16:16:14,988 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ConstructorConstructor_newDefaultImplementationConstructor/com.google.gson.internal/ConstructorConstructor.html, method: newDefaultImplementationConstructor(Type, Class<? super T>)
+2026-09-12 16:16:14,993 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ConstructorConstructor_newDefaultImplementationConstructor_correct/com.google.gson.internal/ConstructorConstructor.html, method: newDefaultImplementationConstructor(Type, Class<? super T>)
+2026-09-12 16:16:14,995 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_resolve/com.google.gson.internal/$Gson$Types.html, method: resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)
+2026-09-12 16:16:14,998 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_resolve_correct/com.google.gson.internal/$Gson$Types.html, method: resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)
+2026-09-12 16:16:15,002 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_doPeek/com.google.gson.stream/JsonReader.html, method: doPeek()
+2026-09-12 16:16:15,007 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_doPeek_correct/com.google.gson.stream/JsonReader.html, method: doPeek()
+2026-09-12 16:16:15,016 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_peek/com.google.gson.stream/JsonReader.html, method: peek()
+2026-09-12 16:16:15,021 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_peek_correct/com.google.gson.stream/JsonReader.html, method: peek()
+2026-09-12 16:16:15,027 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_peekNumber/com.google.gson.stream/JsonReader.html, method: peekNumber()
+2026-09-12 16:16:15,034 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_peekNumber_correct/com.google.gson.stream/JsonReader.html, method: peekNumber()
+2026-09-12 16:16:15,041 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/LinkedTreeMap_find/com.google.gson.internal/LinkedTreeMap.html, method: find(K, boolean)
+2026-09-12 16:16:15,044 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/LinkedTreeMap_find_correct/com.google.gson.internal/LinkedTreeMap.html, method: find(K, boolean)
+2026-09-12 16:16:15,047 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_nextNonWhitespace/com.google.gson.stream/JsonReader.html, method: nextNonWhitespace(boolean)
+2026-09-12 16:16:15,052 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_nextNonWhitespace_correct/com.google.gson.stream/JsonReader.html, method: nextNonWhitespace(boolean)
+2026-09-12 16:16:15,057 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/Excluder_excludeField/com.google.gson.internal/Excluder.html, method: excludeField(Field, boolean)
+2026-09-12 16:16:15,060 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/Excluder_excludeField_correct/com.google.gson.internal/Excluder.html, method: excludeField(Field, boolean)
+2026-09-12 16:16:15,063 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/TypeToken_isAssignableFrom/com.google.gson.reflect/TypeToken.html, method: isAssignableFrom(Type, ParameterizedType, Map<String, Type>)
+2026-09-12 16:16:15,066 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/TypeToken_isAssignableFrom_correct/com.google.gson.reflect/TypeToken.html, method: isAssignableFrom(Type, ParameterizedType, Map<String, Type>)
+2026-09-12 16:16:15,068 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/Primitives_wrap/com.google.gson.internal/Primitives.html, method: wrap(Class<T>)
+2026-09-12 16:16:15,070 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/Primitives_wrap_correct/com.google.gson.internal/Primitives.html, method: wrap(Class<T>)
+2026-09-12 16:16:15,071 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/LinkedTreeMap_rebalance/com.google.gson.internal/LinkedTreeMap.html, method: rebalance(Node<K, V>, boolean)
+2026-09-12 16:16:15,075 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ReflectiveTypeAdapterFactory_getBoundFields/com.google.gson.internal.bind/ReflectiveTypeAdapterFactory.html, method: getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)
+2026-09-12 16:16:15,076 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ReflectiveTypeAdapterFactory_getBoundFields_correct/com.google.gson.internal.bind/ReflectiveTypeAdapterFactory.html, method: getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)
+2026-09-12 16:16:15,078 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ObjectTypeAdapter_read/com.google.gson.internal.bind/ObjectTypeAdapter.html, method: read(JsonReader)
+2026-09-12 16:16:15,079 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/ObjectTypeAdapter_read_correct/com.google.gson.internal.bind/ObjectTypeAdapter.html, method: read(JsonReader)
+2026-09-12 16:16:15,083 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_getGenericSupertype/com.google.gson.internal/$Gson$Types.html, method: getGenericSupertype(Type, Class<?>, Class<?>)
+2026-09-12 16:16:15,086 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_getGenericSupertype_correct/com.google.gson.internal/$Gson$Types.html, method: getGenericSupertype(Type, Class<?>, Class<?>)
+2026-09-12 16:16:15,089 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/JsonReader_readEscapeCharacter/com.google.gson.stream/JsonReader.html, method: readEscapeCharacter()
+2026-09-12 16:16:15,093 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_equals/com.google.gson.internal/$Gson$Types.html, method: equals(Type, Type)
+2026-09-12 16:16:15,096 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/gson/reports/jacoco-report-html/$Gson$Types_equals_correct/com.google.gson.internal/$Gson$Types.html, method: equals(Type, Type)
+2026-09-12 16:16:15,099 - evaluations.coverage_test - INFO - report data:
+{'com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class<? super T>)': {'test_cases': 10, 'passed_cases': 9, 'inst_cov': 1.0, 'bran_cov': 0.95, 'correct_inst_cov': 0.95, 'correct_bran_cov': 0.9}, 'com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)': {'test_cases': 16, 'passed_cases': 15, 'inst_cov': 0.8, 'bran_cov': 0.68, 'correct_inst_cov': 0.1, 'correct_bran_cov': 0.15}, 'com.google.gson.stream.JsonReader#doPeek()': {'test_cases': 1, 'passed_cases': 1, 'inst_cov': 0.11, 'bran_cov': 0.12, 'correct_inst_cov': 0.11, 'correct_bran_cov': 0.12}, 'com.google.gson.stream.JsonReader#skipValue()': {'error_type': 'execution error', 'test_cases': 17, 'passed_cases': 0}, 'com.google.gson.internal.bind.JsonTreeReader#peek()': {'error_type': 'compile error', 'test_cases': 19, 'passed_cases': 0}, 'com.google.gson.internal.Primitives#unwrap(Class<T>)': {'error_type': 'execution error', 'test_cases': 15, 'passed_cases': 0}, 'com.google.gson.stream.JsonReader#peek()': {'test_cases': 9, 'passed_cases': 9, 'inst_cov': 1.0, 'bran_cov': 1.0, 'correct_inst_cov': 1.0, 'correct_bran_cov': 1.0}, 'com.google.gson.stream.JsonReader#peekNumber()': {'test_cases': 31, 'passed_cases': 28, 'inst_cov': 0.97, 'bran_cov': 0.92, 'correct_inst_cov': 0.97, 'correct_bran_cov': 0.86}, 'com.google.gson.stream.JsonReader#nextUnquotedValue()': {'error_type': 'execution error', 'test_cases': 4, 'passed_cases': 0}, 'com.google.gson.internal.LinkedTreeMap#find(K, boolean)': {'test_cases': 8, 'passed_cases': 8, 'inst_cov': 0.58, 'bran_cov': 0.5, 'correct_inst_cov': 0.58, 'correct_bran_cov': 0.5}, 'com.google.gson.stream.JsonReader#nextNonWhitespace(boolean)': {'test_cases': 5, 'passed_cases': 5, 'inst_cov': 0.57, 'bran_cov': 0.7, 'correct_inst_cov': 0.57, 'correct_bran_cov': 0.7}, 'com.google.gson.internal.Excluder#excludeField(Field, boolean)': {'test_cases': 7, 'passed_cases': 7, 'inst_cov': 0.68, 'bran_cov': 0.53, 'correct_inst_cov': 0.68, 'correct_bran_cov': 0.53}, 'com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)': {'test_cases': 4, 'passed_cases': 4, 'inst_cov': 0.03, 'bran_cov': 0.05, 'correct_inst_cov': 0.03, 'correct_bran_cov': 0.05}, 'com.google.gson.internal.Primitives#wrap(Class<T>)': {'test_cases': 15, 'passed_cases': 15, 'inst_cov': 1.0, 'bran_cov': 1.0, 'correct_inst_cov': 1.0, 'correct_bran_cov': 1.0}, 'com.google.gson.internal.LinkedTreeMap#rebalance(Node<K, V>, boolean)': {'test_cases': 12, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.0, 'bran_cov': 0.0}, 'com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)': {'test_cases': 12, 'passed_cases': 12, 'inst_cov': 0.21, 'bran_cov': 0.15, 'correct_inst_cov': 0.21, 'correct_bran_cov': 0.15}, 'com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)': {'test_cases': 15, 'passed_cases': 15, 'inst_cov': 1.0, 'bran_cov': 1.0, 'correct_inst_cov': 1.0, 'correct_bran_cov': 1.0}, 'com.google.gson.internal.$Gson$Types#getGenericSupertype(Type, Class<?>, Class<?>)': {'test_cases': 10, 'passed_cases': 10, 'inst_cov': 0.83, 'bran_cov': 0.83, 'correct_inst_cov': 0.83, 'correct_bran_cov': 0.83}, 'com.google.gson.stream.JsonReader#readEscapeCharacter()': {'test_cases': 4, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.13, 'bran_cov': 0.09}, 'com.google.gson.internal.$Gson$Types#equals(Type, Type)': {'test_cases': 12, 'passed_cases': 12, 'inst_cov': 0.75, 'bran_cov': 0.61, 'correct_inst_cov': 0.75, 'correct_bran_cov': 0.61}, 'compile_pass_rate': 0.915929203539823, 'execution_pass_rate': 0.6637168141592921, 'average_instruction_coverage': 0.483, 'average_branch_coverage': 0.45649999999999996, 'average_correct_instruction_coverage': 0.43899999999999995, 'average_correct_branch_coverage': 0.42000000000000004}

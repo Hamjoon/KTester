@@ -1,0 +1,187 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlTimestampTypeAdapter.new TypeAdapterFactory() {...},15,3,2,0,4,1,2,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlDateTypeAdapter,71,5,4,0,21,1,5,1,3,1
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlTypesSupport.new DefaultDateTypeAdapter.DateType() {...},6,4,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlTypesSupport.new DefaultDateTypeAdapter.DateType() {...},6,4,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlTimeTypeAdapter,70,5,4,0,20,1,5,1,3,1
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlTypesSupport,13,28,1,1,7,11,1,1,0,1
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlTimestampTypeAdapter,28,5,2,0,7,1,4,1,3,1
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlTimeTypeAdapter.new TypeAdapterFactory() {...},10,3,2,0,1,1,2,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.sql,SqlDateTypeAdapter.new TypeAdapterFactory() {...},10,3,2,0,2,1,2,1,1,1
+JaCoCo Coverage Report,com.google.gson.reflect,TypeToken,548,0,74,0,115,0,57,0,20,0
+JaCoCo Coverage Report,com.google.gson.internal.bind.util,ISO8601Utils,669,0,91,0,152,0,56,0,10,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,JsonTreeWriter.new Writer() {...},15,0,0,0,4,0,4,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapterFactory() {...},27,12,4,0,4,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapterFactory() {...},18,9,2,0,2,1,3,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapterFactory() {...},24,9,2,0,5,1,3,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapterFactory() {...},27,12,4,0,4,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,ArrayTypeAdapter.new TypeAdapterFactory() {...},33,3,6,0,8,1,4,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapterFactory() {...},19,0,2,0,2,0,3,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,DefaultDateTypeAdapter,225,0,18,0,51,0,16,0,7,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.EnumTypeAdapter.new PrivilegedAction() {...},53,0,4,0,9,0,4,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},19,3,2,0,6,1,3,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},31,3,2,0,9,1,3,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},24,3,4,0,6,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},75,3,6,0,19,1,5,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},33,3,6,0,9,1,5,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},30,3,4,0,10,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},38,3,6,0,9,1,5,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},24,3,4,0,8,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},31,3,2,0,9,1,3,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},25,3,4,0,9,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,ObjectTypeAdapter,37,158,6,26,12,50,5,21,1,7
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapterFactory() {...},25,3,6,0,7,1,4,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},265,3,46,0,67,1,29,1,4,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},32,3,6,0,7,1,5,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},24,3,4,0,6,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},22,3,4,0,6,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},38,3,6,0,9,1,5,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},22,3,0,0,6,1,2,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},34,3,4,0,9,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},75,3,16,0,21,1,10,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},165,3,18,0,46,1,11,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,DateTypeAdapter.new TypeAdapterFactory() {...},10,3,2,0,1,1,2,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TreeTypeAdapter.SingleTypeFactory,82,0,18,0,18,0,11,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters,12,239,0,0,3,73,2,5,2,5
+JaCoCo Coverage Report,com.google.gson.internal.bind,ReflectiveTypeAdapterFactory.Adapter,97,0,12,0,34,0,9,0,3,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,DateTypeAdapter,124,5,10,0,31,1,9,1,4,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,JsonTreeReader,812,0,115,0,180,0,88,0,29,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,DefaultDateTypeAdapter.DateType,39,12,0,0,5,4,5,2,5,2
+JaCoCo Coverage Report,com.google.gson.internal.bind,ReflectiveTypeAdapterFactory.RecordAdapter,191,0,8,0,43,0,10,0,6,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,JsonTreeReader.new Reader() {...},11,0,0,0,3,0,3,0,3,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},12,3,0,0,3,1,2,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},22,3,4,0,6,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},49,3,8,0,14,1,6,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},98,3,15,0,28,1,10,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},27,3,4,0,9,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},19,3,0,0,5,1,2,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},12,3,0,0,3,1,2,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.34.new TypeAdapter() {...},44,0,4,0,8,0,5,0,3,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},49,3,8,0,14,1,6,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.new TypeAdapter() {...},31,3,4,0,10,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,NumberTypeAdapter,34,25,4,1,9,8,5,4,2,4
+JaCoCo Coverage Report,com.google.gson.internal.bind,NumberTypeAdapter.new TypeAdapterFactory() {...},9,6,2,0,1,1,2,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,DefaultDateTypeAdapter.DateType.new DefaultDateTypeAdapter.DateType() {...},2,4,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,ObjectTypeAdapter.new TypeAdapterFactory() {...},13,6,2,0,3,1,2,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapters.EnumTypeAdapter,151,0,12,0,29,0,9,0,3,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,MapTypeAdapterFactory.Adapter,323,0,40,0,80,0,24,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,TreeTypeAdapter,156,0,18,0,35,0,18,0,9,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,CollectionTypeAdapterFactory,36,6,2,0,9,3,2,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,MapTypeAdapterFactory,65,9,6,0,13,4,5,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,JsonAdapterAnnotationTypeAdapterFactory,103,6,18,0,27,3,11,1,2,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,TypeAdapterRuntimeTypeWrapper,86,0,16,0,27,0,13,0,5,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,ReflectiveTypeAdapterFactory.new ReflectiveTypeAdapterFactory.BoundField() {...},176,0,24,0,35,0,16,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,TreeTypeAdapter.GsonContextImpl,26,0,0,0,4,0,4,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,CollectionTypeAdapterFactory.Adapter,74,0,8,0,24,0,7,0,3,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,ReflectiveTypeAdapterFactory.BoundField,19,0,0,0,7,0,1,0,1,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,ReflectiveTypeAdapterFactory.FieldReflectionAdapter,18,0,0,0,7,0,4,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,ArrayTypeAdapter,112,5,12,0,31,1,9,1,3,1
+JaCoCo Coverage Report,com.google.gson.internal.bind,SerializationDelegatingTypeAdapter,3,0,0,0,1,0,1,0,1,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,JsonTreeWriter,364,0,56,0,88,0,49,0,21,0
+JaCoCo Coverage Report,com.google.gson.internal.bind,ReflectiveTypeAdapterFactory,421,18,70,0,88,7,41,1,6,1
+JaCoCo Coverage Report,com.google.gson.internal.reflect,ReflectionHelper.RecordSupportedHelper,138,0,4,0,27,0,7,0,5,0
+JaCoCo Coverage Report,com.google.gson.internal.reflect,ReflectionHelper,197,0,16,0,51,0,21,0,13,0
+JaCoCo Coverage Report,com.google.gson.internal.reflect,ReflectionHelper.RecordNotSupportedHelper,17,0,0,0,4,0,4,0,4,0
+JaCoCo Coverage Report,com.google.gson,LongSerializationPolicy,0,15,0,0,0,3,0,1,0,1
+JaCoCo Coverage Report,com.google.gson,FieldNamingPolicy.new FieldNamingPolicy() {...},7,5,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,FieldNamingPolicy.new FieldNamingPolicy() {...},7,5,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,FieldNamingPolicy.new FieldNamingPolicy() {...},7,5,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,FieldNamingPolicy.new FieldNamingPolicy() {...},7,5,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,Gson,636,383,54,4,177,95,63,8,34,8
+JaCoCo Coverage Report,com.google.gson,FieldNamingPolicy.new FieldNamingPolicy() {...},6,5,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,FieldNamingPolicy.new FieldNamingPolicy() {...},4,5,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,FieldNamingPolicy.new FieldNamingPolicy() {...},3,5,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,JsonObject,175,0,20,0,32,0,30,0,20,0
+JaCoCo Coverage Report,com.google.gson,LongSerializationPolicy.new LongSerializationPolicy() {...},10,5,2,0,3,1,2,1,1,1
+JaCoCo Coverage Report,com.google.gson,LongSerializationPolicy.new LongSerializationPolicy() {...},9,5,2,0,3,1,2,1,1,1
+JaCoCo Coverage Report,com.google.gson,ReflectionAccessFilter.FilterResult,27,0,0,0,5,0,1,0,1,0
+JaCoCo Coverage Report,com.google.gson,ReflectionAccessFilter,17,0,0,0,4,0,1,0,1,0
+JaCoCo Coverage Report,com.google.gson,JsonElement,175,0,8,0,37,0,26,0,22,0
+JaCoCo Coverage Report,com.google.gson,Gson.new TypeAdapter() {...},74,6,6,0,17,1,5,1,2,1
+JaCoCo Coverage Report,com.google.gson,Gson.new TypeAdapter() {...},27,0,4,0,10,0,5,0,3,0
+JaCoCo Coverage Report,com.google.gson,Gson.new TypeAdapter() {...},20,6,0,0,4,1,2,1,2,1
+JaCoCo Coverage Report,com.google.gson,Gson.new TypeAdapter() {...},28,6,4,0,11,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson,Gson.FutureTypeAdapter,44,0,4,0,14,0,8,0,6,0
+JaCoCo Coverage Report,com.google.gson,Gson.new TypeAdapter() {...},38,6,6,0,12,1,5,1,2,1
+JaCoCo Coverage Report,com.google.gson,JsonPrimitive,370,0,74,0,71,0,60,0,23,0
+JaCoCo Coverage Report,com.google.gson,JsonStreamParser,82,0,4,0,21,0,7,0,5,0
+JaCoCo Coverage Report,com.google.gson,GsonBuilder,715,0,48,0,151,0,55,0,31,0
+JaCoCo Coverage Report,com.google.gson,JsonIOException,13,0,0,0,6,0,3,0,3,0
+JaCoCo Coverage Report,com.google.gson,FieldAttributes,48,0,2,0,11,0,10,0,9,0
+JaCoCo Coverage Report,com.google.gson,JsonParser,90,0,4,0,24,0,9,0,7,0
+JaCoCo Coverage Report,com.google.gson,FieldNamingPolicy,82,45,14,0,18,8,9,1,2,1
+JaCoCo Coverage Report,com.google.gson,TypeAdapter,76,8,0,0,21,3,6,2,6,2
+JaCoCo Coverage Report,com.google.gson,ToNumberPolicy,0,27,0,0,0,5,0,1,0,1
+JaCoCo Coverage Report,com.google.gson,ReflectionAccessFilter.new ReflectionAccessFilter() {...},10,0,2,0,4,0,3,0,2,0
+JaCoCo Coverage Report,com.google.gson,ReflectionAccessFilter.new ReflectionAccessFilter() {...},10,0,2,0,4,0,3,0,2,0
+JaCoCo Coverage Report,com.google.gson,ReflectionAccessFilter.new ReflectionAccessFilter() {...},10,0,2,0,4,0,3,0,2,0
+JaCoCo Coverage Report,com.google.gson,ReflectionAccessFilter.new ReflectionAccessFilter() {...},10,0,2,0,4,0,3,0,2,0
+JaCoCo Coverage Report,com.google.gson,ToNumberPolicy.new ToNumberPolicy() {...},0,9,0,0,0,2,0,2,0,2
+JaCoCo Coverage Report,com.google.gson,ToNumberPolicy.new ToNumberPolicy() {...},40,5,6,0,9,1,4,1,1,1
+JaCoCo Coverage Report,com.google.gson,ToNumberPolicy.new ToNumberPolicy() {...},6,5,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,ToNumberPolicy.new ToNumberPolicy() {...},18,5,0,0,4,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson,JsonParseException,13,0,0,0,6,0,3,0,3,0
+JaCoCo Coverage Report,com.google.gson,JsonNull,16,0,0,0,6,0,5,0,5,0
+JaCoCo Coverage Report,com.google.gson,JsonArray,258,0,24,0,54,0,45,0,33,0
+JaCoCo Coverage Report,com.google.gson,TypeAdapter.new TypeAdapter() {...},25,6,4,0,8,1,4,1,2,1
+JaCoCo Coverage Report,com.google.gson,JsonSyntaxException,13,0,0,0,6,0,3,0,3,0
+JaCoCo Coverage Report,com.google.gson.internal,JavaVersion,90,0,14,0,26,0,14,0,7,0
+JaCoCo Coverage Report,com.google.gson.internal,LinkedTreeMap.Node,118,42,26,0,27,15,21,2,8,2
+JaCoCo Coverage Report,com.google.gson.internal,PreJava9DateFormatProvider,68,0,14,0,21,0,17,0,6,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},39,0,0,0,10,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},12,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},12,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},44,0,4,0,8,0,4,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},42,0,4,0,8,0,4,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},15,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},15,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},18,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},18,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,.Gson.Types,841,0,152,0,203,0,98,0,22,0
+JaCoCo Coverage Report,com.google.gson.internal,Excluder,398,23,94,0,81,7,64,2,17,2
+JaCoCo Coverage Report,com.google.gson.internal,.Gson.Types.ParameterizedTypeImpl,176,0,24,0,32,0,20,0,8,0
+JaCoCo Coverage Report,com.google.gson.internal,LinkedTreeMap.new Comparator() {...},4,3,0,0,1,1,1,1,1,1
+JaCoCo Coverage Report,com.google.gson.internal,Streams,62,0,4,0,19,0,6,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal,LinkedTreeMap.KeySet.new LinkedTreeMap.LinkedTreeMapIterator() {...},12,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,Streams.AppendableWriter,64,0,0,0,18,0,8,0,8,0
+JaCoCo Coverage Report,com.google.gson.internal,Streams.AppendableWriter.CurrentWrite,39,0,2,0,9,0,6,0,5,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},26,0,0,0,5,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,UnsafeAllocator.new UnsafeAllocator() {...},23,0,0,0,3,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,UnsafeAllocator.new UnsafeAllocator() {...},10,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,UnsafeAllocator.new UnsafeAllocator() {...},23,0,0,0,3,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,UnsafeAllocator.new UnsafeAllocator() {...},28,0,0,0,3,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},7,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor,299,12,60,0,80,5,37,1,7,1
+JaCoCo Coverage Report,com.google.gson.internal,NonNullElementWrapperList,99,0,2,0,24,0,19,0,18,0
+JaCoCo Coverage Report,com.google.gson.internal,LinkedTreeMap.EntrySet.new LinkedTreeMap.LinkedTreeMapIterator() {...},11,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,UnsafeAllocator,125,0,2,0,28,0,5,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal,LinkedTreeMap.LinkedTreeMapIterator,83,0,8,0,19,0,8,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal,ReflectionAccessFilterHelper.AccessChecker.new ReflectionAccessFilterHelper.AccessChecker() {...},26,0,0,0,4,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ReflectionAccessFilterHelper.AccessChecker.new ReflectionAccessFilterHelper.AccessChecker() {...},5,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,ReflectionAccessFilterHelper,84,0,22,0,18,0,18,0,7,0
+JaCoCo Coverage Report,com.google.gson.internal,LazilyParsedNumber,90,0,8,0,23,0,14,0,10,0
+JaCoCo Coverage Report,com.google.gson.internal,.Gson.Types.WildcardTypeImpl,138,0,20,0,25,0,16,0,6,0
+JaCoCo Coverage Report,com.google.gson.internal,.Gson.Preconditions,21,0,4,0,8,0,5,0,3,0
+JaCoCo Coverage Report,com.google.gson.internal,ReflectionAccessFilterHelper.AccessChecker,30,0,4,0,10,0,3,0,1,0
+JaCoCo Coverage Report,com.google.gson.internal,ConstructorConstructor.new ObjectConstructor() {...},15,0,0,0,2,0,2,0,2,0
+JaCoCo Coverage Report,com.google.gson.internal,.Gson.Types.GenericArrayTypeImpl,34,0,4,0,9,0,7,0,5,0
+JaCoCo Coverage Report,com.google.gson.internal,Excluder.new TypeAdapter() {...},61,0,6,0,14,0,7,0,4,0
+JaCoCo Coverage Report,com.google.gson.internal,LinkedTreeMap.KeySet,33,0,2,0,7,0,7,0,6,0
+JaCoCo Coverage Report,com.google.gson.internal,Primitives,139,0,58,0,23,0,34,0,5,0
+JaCoCo Coverage Report,com.google.gson.internal,JsonReaderInternalAccess,0,3,0,0,0,1,0,1,0,1
+JaCoCo Coverage Report,com.google.gson.internal,LinkedTreeMap.EntrySet,54,0,8,0,13,0,10,0,6,0
+JaCoCo Coverage Report,com.google.gson.internal,LinkedTreeMap,588,221,110,28,138,65,79,14,15,9
+JaCoCo Coverage Report,com.google.gson.stream,MalformedJsonException,9,4,0,0,4,2,2,1,2,1
+JaCoCo Coverage Report,com.google.gson.stream,JsonToken,0,63,0,0,0,11,0,1,0,1
+JaCoCo Coverage Report,com.google.gson.stream,JsonReader.new JsonReaderInternalAccess() {...},47,3,10,0,15,1,6,1,1,1
+JaCoCo Coverage Report,com.google.gson.stream,JsonScope,3,0,0,0,1,0,1,0,1,0
+JaCoCo Coverage Report,com.google.gson.stream,JsonWriter,770,0,122,0,204,0,99,0,36,0
+JaCoCo Coverage Report,com.google.gson.stream,JsonReader,1734,1166,331,158,394,280,238,71,16,25

@@ -1,0 +1,116 @@
+```java
+package com.google.gson.stream;
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import static org.junit.jupiter.api.Assertions.*;
+import org.mockito.*;
+import static org.mockito.Mockito.*;
+import org.mockito.junit.jupiter.MockitoExtension;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
+import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
+import java.io.EOFException;
+
+@ExtendWith(MockitoExtension.class)
+class JsonReader_nextNonWhitespace_Test {
+
+    private JsonReader jsonReader;
+
+    @BeforeAll
+    static void setupBeforeAll() {
+        // Setup operations that need to be done once before all tests
+    }
+
+    @BeforeEach
+    void setupBeforeEach() {
+        // Initialize JsonReader with a mocked or simple Reader
+        Reader reader = new StringReader("   \n\t\r /# This is a comment\nabc");
+        jsonReader = new JsonReader(reader);
+    }
+
+    @AfterEach
+    void teardownAfterEach() {
+        // Clean up operations after each test
+    }
+
+    @AfterAll
+    static void teardownAfterAll() {
+        // Clean up operations after all tests
+    }
+
+    @Test
+    void testNextNonWhitespace_throwsEOFException() throws Exception {
+        // Given
+        Reader reader = new StringReader("");
+        jsonReader = new JsonReader(reader);
+
+        // When & Then
+        Method nextNonWhitespaceMethod = JsonReader.class.getDeclaredMethod("nextNonWhitespace", boolean.class);
+        nextNonWhitespaceMethod.setAccessible(true);
+        assertThrows(EOFException.class, () -> {
+            nextNonWhitespaceMethod.invoke(jsonReader, true);
+        });
+    }
+
+    @Test
+    void testNextNonWhitespace_returnsNonWhitespaceCharacter() throws Exception {
+        // Given
+        Reader reader = new StringReader("   \n\t\r /# This is a comment\nabc");
+        jsonReader = new JsonReader(reader);
+
+        // When
+        Method nextNonWhitespaceMethod = JsonReader.class.getDeclaredMethod("nextNonWhitespace", boolean.class);
+        nextNonWhitespaceMethod.setAccessible(true);
+        int result = (int) nextNonWhitespaceMethod.invoke(jsonReader, true);
+
+        // Then
+        assertEquals('a', result);
+    }
+
+    @Test
+    void testNextNonWhitespace_returnsNegativeOneWhenEOFAndThrowOnEofFalse() throws Exception {
+        // Given
+        Reader reader = new StringReader("");
+        jsonReader = new JsonReader(reader);
+
+        // When
+        Method nextNonWhitespaceMethod = JsonReader.class.getDeclaredMethod("nextNonWhitespace", boolean.class);
+        nextNonWhitespaceMethod.setAccessible(true);
+        int result = (int) nextNonWhitespaceMethod.invoke(jsonReader, false);
+
+        // Then
+        assertEquals(-1, result);
+    }
+
+    @Test
+    void testNextNonWhitespace_unterminatedCommentThrowsIOException() throws Exception {
+        // Given
+        Reader reader = new StringReader("/* unterminated comment");
+        jsonReader = new JsonReader(reader);
+
+        // When & Then
+        Method nextNonWhitespaceMethod = JsonReader.class.getDeclaredMethod("nextNonWhitespace", boolean.class);
+        nextNonWhitespaceMethod.setAccessible(true);
+        assertThrows(IOException.class, () -> {
+            nextNonWhitespaceMethod.invoke(jsonReader, true);
+        });
+    }
+
+    @Test
+    void testNextNonWhitespace_unterminatedCommentThrowsIOExceptionWhenThrowOnEofFalse() throws Exception {
+        // Given
+        Reader reader = new StringReader("/* unterminated comment");
+        jsonReader = new JsonReader(reader);
+
+        // When & Then
+        Method nextNonWhitespaceMethod = JsonReader.class.getDeclaredMethod("nextNonWhitespace", boolean.class);
+        nextNonWhitespaceMethod.setAccessible(true);
+        assertThrows(IOException.class, () -> {
+            nextNonWhitespaceMethod.invoke(jsonReader, false);
+        });
+    }
+}
+```

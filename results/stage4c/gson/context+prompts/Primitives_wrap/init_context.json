@@ -1,0 +1,5 @@
+{
+  "api document of class com.google.gson.internal.Primitives": "\n * Contains static utility methods pertaining to primitive types and their\n * corresponding wrapper types.\n *\n * @author Kevin Bourrillion\n ",
+  "constructors for class `com.google.gson.internal.Primitives`": "params: \nbody:\n```java\n  Primitives() {}\n\n```",
+  "invoke examples of focal method": "example 1:\n```java\n  public <T> T fromJson(String json, Class<T> classOfT) throws JsonSyntaxException {\n    T object = fromJson(json, TypeToken.get(classOfT));\n    return Primitives.wrap(classOfT).cast(object);\n  }\n```\nexample 2:\n```java\n  public <T> T fromJson(Reader json, Class<T> classOfT) throws JsonSyntaxException, JsonIOException {\n    T object = fromJson(json, TypeToken.get(classOfT));\n    return Primitives.wrap(classOfT).cast(object);\n  }\n```\nexample 3:\n```java\n  public <T> T fromJson(JsonElement json, Class<T> classOfT) throws JsonSyntaxException {\n    T object = fromJson(json, TypeToken.get(classOfT));\n    return Primitives.wrap(classOfT).cast(object);\n  }\n```"
+}

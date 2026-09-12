@@ -1,0 +1,377 @@
+[
+  {
+    "group": "nextUnquotedValue Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 3
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a simple unquoted literal without special characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc/"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 4
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a '/' which should trigger checkLenient and stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc;"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 4
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a ';' which should trigger checkLenient and stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc{"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 4
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing '{' which should stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc "
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 4
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a space which should stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abcdef"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 6
+          }
+        ],
+        "expected": "abcdef",
+        "description": "Test with a string that fits entirely in the buffer without any special characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abcdefghij"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 10
+          }
+        ],
+        "expected": "abcdefghij",
+        "description": "Test with a string that exceeds the initial buffer size and requires building with StringBuilder."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc\\def"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 7
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a '\\' which should trigger checkLenient and stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc#def"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 7
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a '#' which should trigger checkLenient and stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc=def"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 7
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a '=' which should trigger checkLenient and stop reading."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc\rdef"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 7
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a carriage return '\\r' which should stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc\ndef"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 7
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a newline '\\n' which should stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc\tdef"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 7
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a tab '\\t' which should stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc\fdef"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 7
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing a form feed '\\f' which should stop reading."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "{}[]:,"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 6
+          }
+        ],
+        "expected": "",
+        "description": "Test with a string starting with JSON structural characters which should result in an empty string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 62
+          }
+        ],
+        "expected": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+        "description": "Test with a string containing only alphanumeric characters which should read the entire buffer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc def ghi"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 11
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing spaces between words, should return the first word."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc=def ghi"
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 11
+          }
+        ],
+        "expected": "abc",
+        "description": "Test with a string containing an '=' followed by spaces, should return the first segment before '='."
+      }
+    ]
+  },
+  {
+    "group": "nextUnquotedValue Exception Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": ""
+          },
+          {
+            "parameter": "pos",
+            "value": 0
+          },
+          {
+            "parameter": "limit",
+            "value": 0
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test with an empty buffer which should trigger an EOFException when trying to read."
+      },
+      {
+        "input": [
+          {
+            "parameter": "buffer",
+            "value": "abc"
+          },
+          {
+            "parameter": "pos",
+            "value": 3
+          },
+          {
+            "parameter": "limit",
+            "value": 3
+          }
+        ],
+        "expected": "EOFException",
+        "description": "Test with position at the end of the buffer which should trigger an EOFException when trying to read."
+      }
+    ]
+  }
+]

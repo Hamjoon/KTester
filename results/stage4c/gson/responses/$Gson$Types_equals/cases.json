@@ -1,0 +1,264 @@
+[
+  {
+    "group": "equals(Type, Type) method tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "null"
+          },
+          {
+            "parameter": "b",
+            "value": "null"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are null, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "Class.forName('java.lang.String')"
+          },
+          {
+            "parameter": "b",
+            "value": "Class.forName('java.lang.String')"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are the same Class instance, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "Class.forName('java.lang.String')"
+          },
+          {
+            "parameter": "b",
+            "value": "Class.forName('java.lang.Integer')"
+          }
+        ],
+        "expected": false,
+        "description": "Different Class instances, should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, null)"
+          },
+          {
+            "parameter": "b",
+            "value": "ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, null)"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are identical ParameterizedType instances, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, null)"
+          },
+          {
+            "parameter": "b",
+            "value": "ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.Integer')}, null)"
+          }
+        ],
+        "expected": false,
+        "description": "Different ParameterizedType instances with different type arguments, should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "GenericArrayTypeImpl(Class.forName('java.lang.String'))"
+          },
+          {
+            "parameter": "b",
+            "value": "GenericArrayTypeImpl(Class.forName('java.lang.String'))"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are identical GenericArrayType instances, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "GenericArrayTypeImpl(Class.forName('java.lang.String'))"
+          },
+          {
+            "parameter": "b",
+            "value": "GenericArrayTypeImpl(Class.forName('java.lang.Integer'))"
+          }
+        ],
+        "expected": false,
+        "description": "Different GenericArrayType instances with different component types, should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "WildcardTypeImpl(new Type[]{Class.forName('java.lang.Number')}, new Type[]{})"
+          },
+          {
+            "parameter": "b",
+            "value": "WildcardTypeImpl(new Type[]{Class.forName('java.lang.Number')}, new Type[]{})"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are identical WildcardType instances, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "WildcardTypeImpl(new Type[]{Class.forName('java.lang.Number')}, new Type[]{})"
+          },
+          {
+            "parameter": "b",
+            "value": "WildcardTypeImpl(new Type[]{Class.forName('java.lang.Integer')}, new Type[]{})"
+          }
+        ],
+        "expected": false,
+        "description": "Different WildcardType instances with different upper bounds, should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "TypeVariableImpl('T', new Type[]{Class.forName('java.lang.Number')}, null)"
+          },
+          {
+            "parameter": "b",
+            "value": "TypeVariableImpl('T', new Type[]{Class.forName('java.lang.Number')}, null)"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are identical TypeVariable instances, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "TypeVariableImpl('T', new Type[]{Class.forName('java.lang.Number')}, null)"
+          },
+          {
+            "parameter": "b",
+            "value": "TypeVariableImpl('U', new Type[]{Class.forName('java.lang.Number')}, null)"
+          }
+        ],
+        "expected": false,
+        "description": "Different TypeVariable instances with different names, should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "null"
+          },
+          {
+            "parameter": "b",
+            "value": "Class.forName('java.lang.String')"
+          }
+        ],
+        "expected": false,
+        "description": "One type is null, the other is a Class instance, should return false."
+      }
+    ]
+  },
+  {
+    "group": "equals(Type, Type) additional method tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, Class.forName('java.lang.Object'))"
+          },
+          {
+            "parameter": "b",
+            "value": "ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, Class.forName('java.lang.Object'))"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are identical ParameterizedType instances with owner type, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, Class.forName('java.lang.Object'))"
+          },
+          {
+            "parameter": "b",
+            "value": "ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, Class.forName('java.lang.Integer'))"
+          }
+        ],
+        "expected": false,
+        "description": "Different ParameterizedType instances with different owner types, should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "GenericArrayTypeImpl(ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, null))"
+          },
+          {
+            "parameter": "b",
+            "value": "GenericArrayTypeImpl(ParameterizedTypeImpl(Class.forName('java.util.List'), new Type[]{Class.forName('java.lang.String')}, null))"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are identical GenericArrayType instances with ParameterizedType component types, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "WildcardTypeImpl(new Type[]{Class.forName('java.lang.Number')}, new Type[]{Class.forName('java.lang.Integer')})"
+          },
+          {
+            "parameter": "b",
+            "value": "WildcardTypeImpl(new Type[]{Class.forName('java.lang.Number')}, new Type[]{Class.forName('java.lang.Double')})"
+          }
+        ],
+        "expected": false,
+        "description": "Different WildcardType instances with different lower bounds, should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "TypeVariableImpl('T', new Type[]{Class.forName('java.lang.Number')}, Class.forName('java.lang.Object'))"
+          },
+          {
+            "parameter": "b",
+            "value": "TypeVariableImpl('T', new Type[]{Class.forName('java.lang.Number')}, Class.forName('java.lang.Object'))"
+          }
+        ],
+        "expected": true,
+        "description": "Both types are identical TypeVariable instances with the same bounds and generic declaration, should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "a",
+            "value": "TypeVariableImpl('T', new Type[]{Class.forName('java.lang.Number')}, Class.forName('java.lang.Object'))"
+          },
+          {
+            "parameter": "b",
+            "value": "TypeVariableImpl('T', new Type[]{Class.forName('java.lang.Double')}, Class.forName('java.lang.Object'))"
+          }
+        ],
+        "expected": false,
+        "description": "Different TypeVariable instances with different bounds, should return false."
+      }
+    ]
+  }
+]

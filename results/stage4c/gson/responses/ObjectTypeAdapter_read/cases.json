@@ -1,0 +1,257 @@
+[
+  {
+    "group": "ObjectTypeAdapter.read(JsonReader) Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[]"
+          }
+        ],
+        "expected": "Empty List",
+        "description": "Test reading an empty JSON array to ensure it returns an empty List."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{}"
+          }
+        ],
+        "expected": "Empty Map",
+        "description": "Test reading an empty JSON object to ensure it returns an empty Map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[1, 2, 3]"
+          }
+        ],
+        "expected": "[1, 2, 3]",
+        "description": "Test reading a simple JSON array of integers to ensure it returns the correct List."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{\"key1\": \"value1\", \"key2\": \"value2\"}"
+          }
+        ],
+        "expected": "{\"key1\": \"value1\", \"key2\": \"value2\"}",
+        "description": "Test reading a simple JSON object to ensure it returns the correct Map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[{\"nestedKey\": \"nestedValue\"}]"
+          }
+        ],
+        "expected": "[{\"nestedKey\": \"nestedValue\"}]",
+        "description": "Test reading a JSON array with a nested object to ensure it correctly nests the object within a List."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{\"outerKey\": [\"listItem1\", \"listItem2\"]}"
+          }
+        ],
+        "expected": "{\"outerKey\": [\"listItem1\", \"listItem2\"]}",
+        "description": "Test reading a JSON object with a nested array to ensure it correctly nests the List within a Map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[{\"key\": [\"nestedListItem1\", \"nestedListItem2\"]}]"
+          }
+        ],
+        "expected": "[{\"key\": [\"nestedListItem1\", \"nestedListItem2\"]}]",
+        "description": "Test reading a JSON array with a nested object containing a list to ensure proper nesting."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "true"
+          }
+        ],
+        "expected": "true",
+        "description": "Test reading a JSON boolean value to ensure it returns the correct boolean."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "null"
+          }
+        ],
+        "expected": "null",
+        "description": "Test reading a JSON null value to ensure it returns null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "\"stringValue\""
+          }
+        ],
+        "expected": "\"stringValue\"",
+        "description": "Test reading a JSON string value to ensure it returns the correct string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "123"
+          }
+        ],
+        "expected": "123",
+        "description": "Test reading a JSON number value to ensure it returns the correct number."
+      }
+    ]
+  },
+  {
+    "group": "ObjectTypeAdapter.read(JsonReader) Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[{\"key\": {\"nestedKey\": \"nestedValue\"}}]"
+          }
+        ],
+        "expected": "[{\"key\": {\"nestedKey\": \"nestedValue\"}}]",
+        "description": "Test reading a JSON array with a nested object containing another nested object to ensure proper double nesting."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{\"key\": {\"nestedKey\": [1, 2, 3]}}"
+          }
+        ],
+        "expected": "{\"key\": {\"nestedKey\": [1, 2, 3]}}",
+        "description": "Test reading a JSON object with a nested object containing a list to ensure proper nesting."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[{\"key\": {\"nestedKey\": null}}]"
+          }
+        ],
+        "expected": "[{\"key\": {\"nestedKey\": null}}]",
+        "description": "Test reading a JSON array with a nested object containing a null value to ensure it correctly represents the null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[[{\"deeplyNestedKey\": \"deepValue\"}]]"
+          }
+        ],
+        "expected": "[[{\"deeplyNestedKey\": \"deepValue\"}]]",
+        "description": "Test reading a JSON array with multiple levels of nested arrays and objects to ensure deep nesting is handled."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{\"key1\": \"value1\", \"key2\": {\"nestedKey\": {\"deepNestedKey\": 123}}}"
+          }
+        ],
+        "expected": "{\"key1\": \"value1\", \"key2\": {\"nestedKey\": {\"deepNestedKey\": 123}}}",
+        "description": "Test reading a complex JSON object with multiple levels of nested objects to ensure all levels are parsed correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[{\"key\": [null, true, false, \"string\", 456.78]}]"
+          }
+        ],
+        "expected": "[{\"key\": [null, true, false, \"string\", 456.78]}]",
+        "description": "Test reading a JSON array with a nested object containing a list of mixed types to ensure all types are handled correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{\"emptyArray\": [], \"emptyObject\": {}}"
+          }
+        ],
+        "expected": "{\"emptyArray\": [], \"emptyObject\": {}}",
+        "description": "Test reading a JSON object with empty nested array and object to ensure they are represented correctly."
+      }
+    ]
+  },
+  {
+    "group": "ObjectTypeAdapter.read(JsonReader) Exception Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{\"key\": \"value\""
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a malformed JSON object with a missing closing brace to trigger an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[1, 2, 3"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a malformed JSON array with a missing closing bracket to trigger an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{\"key\": [1, 2, 3}"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a JSON object with a nested array that is missing a closing bracket to trigger an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[{\"key\": \"value\"}"
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a JSON array with a nested object that is missing a closing bracket to trigger an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "{\"key\": \"value\", \"key2\": {\"nestedKey\": \"nestedValue\""
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a JSON object with a nested object that is missing a closing brace to trigger an IOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "JsonReader",
+            "value": "[{\"key\": \"value\"}, {\"key2\": \"value2\""
+          }
+        ],
+        "expected": "IOException",
+        "description": "Test reading a JSON array with multiple objects where the last object is missing a closing brace to trigger an IOException."
+      }
+    ]
+  }
+]

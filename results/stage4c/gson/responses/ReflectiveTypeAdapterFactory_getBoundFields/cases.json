@@ -1,0 +1,293 @@
+[
+  {
+    "group": "ReflectiveTypeAdapterFactory.getBoundFields",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(MockClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "MockClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "An empty map",
+        "description": "Test case where 'raw' is an interface, should return an empty map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(ConcreteClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "ConcreteClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "JsonIOException",
+        "description": "Test case where ReflectionAccessFilter blocks all access, should throw JsonIOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(ConcreteClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "ConcreteClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": true
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "A map with bound fields",
+        "description": "Test case where fields are accessible and not blocked, should return a map with bound fields."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(RecordClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "RecordClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": true
+          }
+        ],
+        "expected": "A map with bound fields using accessor methods",
+        "description": "Test case for a record class with accessible fields, should use accessor methods for bound fields."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(ConflictingClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "ConflictingClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where class has conflicting JSON field names, should throw IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(EmptyClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "EmptyClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "An empty map",
+        "description": "Test case where the class has no fields, should return an empty map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(StaticFieldsClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "StaticFieldsClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "A map with bound fields excluding static fields",
+        "description": "Test case where the class has only static fields, should return a map excluding these fields."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(InaccessibleFieldsClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "InaccessibleFieldsClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": true
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "JsonIOException",
+        "description": "Test case where fields are inaccessible and blockInaccessible is true, should throw JsonIOException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(AnnotatedFieldClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "AnnotatedFieldClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "A map with bound fields including annotated fields",
+        "description": "Test case where fields have annotations like @SerializedName, should include these fields in the map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(SuperClass.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "SuperClass.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": false
+          }
+        ],
+        "expected": "A map with bound fields from superclass",
+        "description": "Test case where the class has inherited fields from a superclass, should include these fields in the map."
+      },
+      {
+        "input": [
+          {
+            "parameter": "context",
+            "value": "MockGsonInstance"
+          },
+          {
+            "parameter": "type",
+            "value": "TypeToken.get(RecordClassWithSerializedName.class)"
+          },
+          {
+            "parameter": "raw",
+            "value": "RecordClassWithSerializedName.class"
+          },
+          {
+            "parameter": "blockInaccessible",
+            "value": false
+          },
+          {
+            "parameter": "isRecord",
+            "value": true
+          }
+        ],
+        "expected": "JsonIOException",
+        "description": "Test case where a record class has a @SerializedName annotation on an accessor method without corresponding field annotation, should throw JsonIOException."
+      }
+    ]
+  }
+]

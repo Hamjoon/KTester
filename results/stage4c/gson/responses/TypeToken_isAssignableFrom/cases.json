@@ -1,0 +1,305 @@
+[
+  {
+    "group": "isAssignableFrom Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": null
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.List<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test with 'from' as null to ensure it returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.List<java.lang.String>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.List<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test with 'from' and 'to' as identical parameterized types to ensure it returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.ArrayList<java.lang.String>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.List<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test with a subclass 'from' and superclass 'to' with matching type arguments to ensure it returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.ArrayList<java.lang.Integer>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.List<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test with a subclass 'from' and superclass 'to' with non-matching type arguments to ensure it returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.HashMap<K, V>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.Map<java.lang.String, java.lang.Integer>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test with a class 'from' that implements a parameterized interface 'to' with type variables to ensure it returns true if type variables are correctly resolved."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.HashMap<java.lang.String, java.lang.String>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.Map<java.lang.String, java.lang.Integer>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test with a class 'from' that implements a parameterized interface 'to' with non-matching type arguments to ensure it returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.List<E>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.Collection<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test with a class 'from' that implements a parameterized interface 'to' with type variables to ensure correct resolution and return true."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom Additional Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.List<java.lang.Integer>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.List<java.lang.Number>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test with 'from' having a subtype of 'to's type argument to ensure it returns false due to type variance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.List<java.lang.Number>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.List<? extends java.lang.Number>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test with 'from' and 'to' having wildcard type arguments to ensure it returns true if they are compatible."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.List<? super java.lang.String>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.List<java.lang.Object>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test with 'from' having a wildcard type argument with 'super' bound to ensure it returns false when 'to' has a specific type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.HashSet<java.lang.String>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.Set<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test with 'from' as a subclass implementing 'to' interface with matching type arguments to ensure it returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.HashSet<java.lang.Integer>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.Set<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test with 'from' as a subclass implementing 'to' interface with non-matching type arguments to ensure it returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.TreeSet<java.lang.String>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.Set<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": true,
+        "description": "Test with 'from' as a subclass implementing 'to' interface with matching type arguments to ensure it returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.TreeSet<java.lang.Integer>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.Set<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": false,
+        "description": "Test with 'from' as a subclass implementing 'to' interface with non-matching type arguments to ensure it returns false."
+      }
+    ]
+  },
+  {
+    "group": "isAssignableFrom Exception Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.List<java.lang.String>"
+          },
+          {
+            "parameter": "to",
+            "value": "java.util.List<java.lang.String>"
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with 'typeVarMap' as null to ensure it throws NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "from",
+            "value": "java.util.List<java.lang.String>"
+          },
+          {
+            "parameter": "to",
+            "value": null
+          },
+          {
+            "parameter": "typeVarMap",
+            "value": "{}"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with 'to' as null to ensure it throws NullPointerException."
+      }
+    ]
+  }
+]
