@@ -1,0 +1,105 @@
+{
+    "group": "Flat3Map equals(Object) Method Tests",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "this"
+                }
+            ],
+            "expected": true,
+            "description": "Test where the object is compared to itself, expecting true."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new Flat3Map()"
+                }
+            ],
+            "expected": "delegateMap.equals(obj)",
+            "description": "Test where delegateMap is not null, expecting delegateMap's equals method to be called."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new Object()"
+                }
+            ],
+            "expected": false,
+            "description": "Test where the object is not an instance of Map, expecting false."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new HashMap()"
+                }
+            ],
+            "expected": false,
+            "description": "Test where the object is a Map but has a different size, expecting false."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new HashMap() {{ put(key1, value1); }}"
+                }
+            ],
+            "expected": true,
+            "description": "Test where the Flat3Map has size 1 and the Map contains the same key-value pair, expecting true."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new HashMap() {{ put(key1, value1); put(key2, value2); }}"
+                }
+            ],
+            "expected": true,
+            "description": "Test where the Flat3Map has size 2 and the Map contains the same key-value pairs, expecting true."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new HashMap() {{ put(key1, value1); put(key2, value2); put(key3, value3); }}"
+                }
+            ],
+            "expected": true,
+            "description": "Test where the Flat3Map has size 3 and the Map contains the same key-value pairs, expecting true."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new HashMap() {{ put(key1, value1); put(key2, value2); put(key3, differentValue); }}"
+                }
+            ],
+            "expected": false,
+            "description": "Test where the Flat3Map has size 3 but the Map contains a different value for one of the keys, expecting false."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new HashMap() {{ put(key1, value1); put(key2, differentValue); }}"
+                }
+            ],
+            "expected": false,
+            "description": "Test where the Flat3Map has size 2 but the Map contains a different value for one of the keys, expecting false."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "obj",
+                    "value": "new HashMap() {{ put(differentKey, value1); }}"
+                }
+            ],
+            "expected": false,
+            "description": "Test where the Flat3Map has size 1 but the Map contains a different key, expecting false."
+        }
+    ]
+}

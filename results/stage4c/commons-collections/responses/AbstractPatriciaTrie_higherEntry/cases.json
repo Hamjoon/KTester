@@ -1,0 +1,147 @@
+[
+  {
+    "group": "AbstractPatriciaTrie.higherEntry",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "null"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where the input key is null, expecting null since no higher entry can be found."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "existingKey"
+          }
+        ],
+        "expected": "nextEntry of found",
+        "description": "Test case where the input key exists in the trie, expecting the next entry after the found key."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "nonExistentKey"
+          }
+        ],
+        "expected": "firstEntry",
+        "description": "Test case where the input key does not exist in the trie, and the root is empty, expecting the first entry in the trie."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "nonExistentKeyWithValidBitIndex"
+          }
+        ],
+        "expected": "nextEntry of added",
+        "description": "Test case where the input key does not exist and has a valid bit index, expecting the next entry of a temporarily added entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithNullBitIndex"
+          }
+        ],
+        "expected": "firstEntry or nextEntry of firstEntry",
+        "description": "Test case where the input key results in a null bit index, expecting the first entry or the next entry of the first entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithEqualBitIndex"
+          }
+        ],
+        "expected": "nextEntry of found",
+        "description": "Test case where the input key results in an equal bit index, expecting the next entry of the found key."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "invalidKey"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Test case where the input key results in an invalid lookup, expecting an IllegalStateException to be thrown."
+      }
+    ]
+  },
+  {
+    "group": "AbstractPatriciaTrie.higherEntry - Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "emptyTrie"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where the trie is empty and any key is provided, expecting null since there are no entries in the trie."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyAtBoundary"
+          }
+        ],
+        "expected": "null",
+        "description": "Test case where the input key is the largest key in the trie, expecting null since there is no higher entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithNegativeBitIndex"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Test case where the input key results in a negative bit index, expecting an IllegalStateException to be thrown due to invalid lookup."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithMaxBitIndex"
+          }
+        ],
+        "expected": "nextEntry of found",
+        "description": "Test case where the input key has the maximum possible bit index, expecting the next entry after the found key."
+      },
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithSingleBitDifference"
+          }
+        ],
+        "expected": "nextEntry of found",
+        "description": "Test case where the input key differs by only one bit from an existing key, expecting the next entry after the found key."
+      }
+    ]
+  },
+  {
+    "group": "AbstractPatriciaTrie.higherEntry - Additional Exception Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "key",
+            "value": "keyWithCorruptedEntry"
+          }
+        ],
+        "expected": "ConcurrentModificationException",
+        "description": "Test case where the input key leads to a corrupted entry in the trie, expecting a ConcurrentModificationException due to modification during iteration."
+      }
+    ]
+  }
+]

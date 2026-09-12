@@ -1,0 +1,413 @@
+[
+  {
+    "group": "getMiddleSnake Method Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 0
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 0
+          }
+        ],
+        "expected": null,
+        "description": "Test case where both sequences are empty. The method should return null since there are no elements to compare."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 0
+          }
+        ],
+        "expected": null,
+        "description": "Test case where the second sequence is empty. The method should return null since there are no elements in the second sequence to compare."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 0
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": null,
+        "description": "Test case where the first sequence is empty. The method should return null since there are no elements in the first sequence to compare."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": "Snake object",
+        "description": "Test case where both sequences have elements. The method should return a Snake object indicating the middle snake found by the algorithm."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 3
+          }
+        ],
+        "expected": "Snake object",
+        "description": "Test case where the first sequence is longer than the second. The method should return a Snake object indicating the middle snake found by the algorithm."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 3
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": "Snake object",
+        "description": "Test case where the second sequence is longer than the first. The method should return a Snake object indicating the middle snake found by the algorithm."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Test case to simulate a condition that should never happen, forcing the method to throw an IllegalStateException. This might require specific setup of the sequences and equator to trigger this condition."
+      }
+    ]
+  },
+  {
+    "group": "getMiddleSnake Method Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 1
+          },
+          {
+            "parameter": "end1",
+            "value": 2
+          },
+          {
+            "parameter": "start2",
+            "value": 1
+          },
+          {
+            "parameter": "end2",
+            "value": 2
+          }
+        ],
+        "expected": "Snake object",
+        "description": "Test case with minimal non-zero ranges for both sequences. The method should return a Snake object if there is a matching segment in the middle."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 1
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 1
+          }
+        ],
+        "expected": "Snake object",
+        "description": "Test case with a single element in both sequences. The method should return a Snake object if the single elements match."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 10
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 10
+          }
+        ],
+        "expected": "Snake object",
+        "description": "Test case with larger equal-sized sequences. The method should return a Snake object indicating the middle snake found by the algorithm."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 7
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": "Snake object",
+        "description": "Test case where the first sequence is larger than the second by a margin but not double. The method should return a Snake object indicating the middle snake found by the algorithm."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 7
+          }
+        ],
+        "expected": "Snake object",
+        "description": "Test case where the second sequence is larger than the first by a margin but not double. The method should return a Snake object indicating the middle snake found by the algorithm."
+      }
+    ]
+  },
+  {
+    "group": "getMiddleSnake Method Exception Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": -1
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test case where start1 is negative, which should trigger an IndexOutOfBoundsException when accessing sequence1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": -1
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test case where start2 is negative, which should trigger an IndexOutOfBoundsException when accessing sequence2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 10
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test case where end1 is beyond the length of sequence1, which should trigger an IndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 10
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test case where end2 is beyond the length of sequence2, which should trigger an IndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 5
+          },
+          {
+            "parameter": "end1",
+            "value": 0
+          },
+          {
+            "parameter": "start2",
+            "value": 0
+          },
+          {
+            "parameter": "end2",
+            "value": 5
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where start1 is greater than end1, which should trigger an IllegalArgumentException due to invalid range."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start1",
+            "value": 0
+          },
+          {
+            "parameter": "end1",
+            "value": 5
+          },
+          {
+            "parameter": "start2",
+            "value": 5
+          },
+          {
+            "parameter": "end2",
+            "value": 0
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test case where start2 is greater than end2, which should trigger an IllegalArgumentException due to invalid range."
+      }
+    ]
+  }
+]

@@ -1,0 +1,341 @@
+[
+  {
+    "group": "nextEntryImpl Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with only root node, expecting null as there are no other nodes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"b\", 2, 1)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a previous node not equal to the start node's predecessor, expecting null as the tree has only one node."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a node that has no children, expecting null as there are no other nodes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with previous node being the same as start node, expecting null as there's no valid next entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"b\", 2, 1)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a node having right child as null, expecting null as no traversal is possible."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a node that is the root and no right child, expecting null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"b\", 2, 1)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with node having no valid uplink on the left, expecting traversal to right and null return."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test where current node is empty, expecting null as no further traversal is possible."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with root node only, having no children, expecting null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with previous node being the same as start node, expecting null as there's no valid next entry."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"b\", 2, 1)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a node having no valid uplink on the left or right, expecting null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"b\", 2, 1)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test with node having a right child that is itself, expecting null as no traversal is possible."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"c\", 3, 2)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "null",
+        "description": "Test where current node is an internal node with no valid children, expecting null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"b\", 2, 1)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "new TrieEntry<>(\"b\", 2, 1)",
+        "description": "Test with a valid uplink on the left, expecting the left child to be returned."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"b\", 2, 1)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "new TrieEntry<>(\"c\", 3, 2)",
+        "description": "Test with a valid uplink on the right, expecting the right child to be returned."
+      }
+    ]
+  },
+  {
+    "group": "nextEntryImpl Exception Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "null"
+          },
+          {
+            "parameter": "previous",
+            "value": "new TrieEntry<>(\"b\", 2, 1)"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with a null start node, expecting NullPointerException due to dereferencing a null object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with a null tree node, expecting NullPointerException when trying to compare with the tree."
+      },
+      {
+        "input": [
+          {
+            "parameter": "start",
+            "value": "new TrieEntry<>(\"a\", 1, 0)"
+          },
+          {
+            "parameter": "previous",
+            "value": "null"
+          },
+          {
+            "parameter": "tree",
+            "value": "new TrieEntry<>(\"root\", 1, -1)"
+          }
+        ],
+        "expected": "ConcurrentModificationException",
+        "description": "Test with concurrent modification scenario by changing modCount during traversal, expecting ConcurrentModificationException."
+      }
+    ]
+  }
+]

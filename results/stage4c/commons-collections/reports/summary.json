@@ -1,0 +1,117 @@
+{
+  "org.apache.commons.collections4.map.Flat3Map#get(Object)": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 0.84,
+    "bran_cov": 0.68,
+    "correct_inst_cov": 0.84,
+    "correct_bran_cov": 0.68
+  },
+  "org.apache.commons.collections4.IteratorUtils#getIterator(Object)": {
+    "error_type": "execution error",
+    "test_cases": 21,
+    "passed_cases": 0
+  },
+  "org.apache.commons.collections4.sequence.SequencesComparator#getMiddleSnake(int, int, int, int)": {
+    "test_cases": 12,
+    "passed_cases": 12,
+    "inst_cov": 0.86,
+    "bran_cov": 0.75,
+    "correct_inst_cov": 0.86,
+    "correct_bran_cov": 0.75
+  },
+  "org.apache.commons.collections4.map.Flat3Map#containsKey(Object)": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.9,
+    "bran_cov": 0.68,
+    "correct_inst_cov": 0.9,
+    "correct_bran_cov": 0.68
+  },
+  "org.apache.commons.collections4.map.Flat3Map#equals(Object)": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 0.91,
+    "bran_cov": 0.73,
+    "correct_inst_cov": 0.91,
+    "correct_bran_cov": 0.73
+  },
+  "org.apache.commons.collections4.trie.AbstractPatriciaTrie#put(K, V)": {
+    "test_cases": 8,
+    "passed_cases": 8,
+    "inst_cov": 0.17,
+    "bran_cov": 0.1,
+    "correct_inst_cov": 0.17,
+    "correct_bran_cov": 0.1
+  },
+  "org.apache.commons.collections4.trie.AbstractPatriciaTrie#nextEntryImpl(TrieEntry<K, V>, TrieEntry<K, V>, TrieEntry<K, V>)": {
+    "test_cases": 12,
+    "passed_cases": 9,
+    "inst_cov": 0.38,
+    "bran_cov": 0.37,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.apache.commons.collections4.map.Flat3Map#remove(Object)": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.28,
+    "bran_cov": 0.3,
+    "correct_inst_cov": 0.28,
+    "correct_bran_cov": 0.3
+  },
+  "org.apache.commons.collections4.trie.AbstractPatriciaTrie#removeInternalEntry(TrieEntry<K, V>)": {
+    "test_cases": 15,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "org.apache.commons.collections4.bidimap.TreeBidiMap#doRedBlackDelete(Node<K, V>)": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 0.28,
+    "bran_cov": 0.25,
+    "correct_inst_cov": 0.28,
+    "correct_bran_cov": 0.25
+  },
+  "org.apache.commons.collections4.bidimap.TreeBidiMap#swapPosition(Node<K, V>, Node<K, V>, DataElement)": {
+    "test_cases": 11,
+    "passed_cases": 11,
+    "inst_cov": 0.64,
+    "bran_cov": 0.52,
+    "correct_inst_cov": 0.64,
+    "correct_bran_cov": 0.52
+  },
+  "org.apache.commons.collections4.map.Flat3Map#put(K, V)": {
+    "test_cases": 20,
+    "passed_cases": 20,
+    "inst_cov": 0.84,
+    "bran_cov": 0.76,
+    "correct_inst_cov": 0.84,
+    "correct_bran_cov": 0.76
+  },
+  "org.apache.commons.collections4.trie.AbstractPatriciaTrie#higherEntry(K)": {
+    "test_cases": 15,
+    "passed_cases": 7,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.apache.commons.collections4.map.Flat3Map#containsValue(Object)": {
+    "test_cases": 5,
+    "passed_cases": 5,
+    "inst_cov": 0.92,
+    "bran_cov": 0.66,
+    "correct_inst_cov": 0.92,
+    "correct_bran_cov": 0.66
+  },
+  "compile_pass_rate": 1.0,
+  "execution_pass_rate": 0.70625,
+  "average_instruction_coverage": 0.5014285714285714,
+  "average_branch_coverage": 0.4142857142857143,
+  "average_correct_instruction_coverage": 0.47428571428571425,
+  "average_correct_branch_coverage": 0.38785714285714284
+}
