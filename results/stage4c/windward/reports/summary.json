@@ -1,0 +1,24 @@
+{
+  "org.flmelody.util.AntPathMatcher#isMatch(String, String)": {
+    "test_cases": 26,
+    "passed_cases": 23,
+    "inst_cov": 0.86,
+    "bran_cov": 0.86,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.flmelody.core.AbstractRouterGroup#matchRouter(String, String)": {
+    "test_cases": 11,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "compile_pass_rate": 1.0,
+  "execution_pass_rate": 0.6216216216216216,
+  "average_instruction_coverage": 0.43,
+  "average_branch_coverage": 0.43,
+  "average_correct_instruction_coverage": 0.0,
+  "average_correct_branch_coverage": 0.0
+}

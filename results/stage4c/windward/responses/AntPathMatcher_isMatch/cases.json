@@ -1,0 +1,353 @@
+[
+  {
+    "group": "isMatch method test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": ""
+          },
+          {
+            "parameter": "path",
+            "value": ""
+          }
+        ],
+        "expected": true,
+        "description": "Both pattern and path are empty strings, should return true as they match."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": ""
+          },
+          {
+            "parameter": "path",
+            "value": "somePath"
+          }
+        ],
+        "expected": false,
+        "description": "Pattern is empty and path is not, should return false as they do not match."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/"
+          },
+          {
+            "parameter": "path",
+            "value": ""
+          }
+        ],
+        "expected": true,
+        "description": "Pattern starts with pathSeparator and path is empty, should return true if matchStart is true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "/*"
+          },
+          {
+            "parameter": "path",
+            "value": ""
+          }
+        ],
+        "expected": false,
+        "description": "Pattern is '/*' and path is empty, should return false if matchStart is false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "*"
+          },
+          {
+            "parameter": "path",
+            "value": "somePath"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is '*' and path is 'somePath', should return true as '*' matches any sequence of characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "*some"
+          },
+          {
+            "parameter": "path",
+            "value": "anysome"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is '*some' and path is 'anysome', should return true as '*' can match 'any'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some*"
+          },
+          {
+            "parameter": "path",
+            "value": "somePath"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'some*' and path is 'somePath', should return true as '*' can match 'Path'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "so?e"
+          },
+          {
+            "parameter": "path",
+            "value": "some"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'so?e' and path is 'some', should return true as '?' matches any single character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "so?e"
+          },
+          {
+            "parameter": "path",
+            "value": "sore"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'so?e' and path is 'sore', should return true as '?' matches 'r'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "so?e"
+          },
+          {
+            "parameter": "path",
+            "value": "sooe"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'so?e' and path is 'sooe', should return true as '?' matches 'o'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "so?e"
+          },
+          {
+            "parameter": "path",
+            "value": "soe"
+          }
+        ],
+        "expected": false,
+        "description": "Pattern is 'so?e' and path is 'soe', should return false as '?' cannot match zero characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "**"
+          },
+          {
+            "parameter": "path",
+            "value": "anyPath"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is '**' and path is 'anyPath', should return true as '**' matches any sequence of characters."
+      }
+    ]
+  },
+  {
+    "group": "isMatch method additional test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/**"
+          },
+          {
+            "parameter": "path",
+            "value": "some/any/path"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'some/**' and path is 'some/any/path', should return true as '**' matches any sequence of characters including path separators."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/*"
+          },
+          {
+            "parameter": "path",
+            "value": "some/"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'some/*' and path is 'some/', should return true since '*' can match zero or more characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/**/path"
+          },
+          {
+            "parameter": "path",
+            "value": "some/any/deep/path"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'some/**/path' and path is 'some/any/deep/path', should return true as '**' can match any path segment."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/*/path"
+          },
+          {
+            "parameter": "path",
+            "value": "some/any/path"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'some/*/path' and path is 'some/any/path', should return true as '*' can match a single path segment."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/*/path"
+          },
+          {
+            "parameter": "path",
+            "value": "some/path"
+          }
+        ],
+        "expected": false,
+        "description": "Pattern is 'some/*/path' and path is 'some/path', should return false as '*' should match exactly one segment."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "*/path"
+          },
+          {
+            "parameter": "path",
+            "value": "/path"
+          }
+        ],
+        "expected": false,
+        "description": "Pattern is '*/path' and path is '/path', should return false because '*' cannot match an empty segment when path starts with a separator."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/**"
+          },
+          {
+            "parameter": "path",
+            "value": "some"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'some/**' and path is 'some', should return true as '**' can match zero or more characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/**/"
+          },
+          {
+            "parameter": "path",
+            "value": "some/"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'some/**/' and path is 'some/', should return true as '**' can match zero or more characters including path separators."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/path/**"
+          },
+          {
+            "parameter": "path",
+            "value": "some/path/deeply/nested"
+          }
+        ],
+        "expected": true,
+        "description": "Pattern is 'some/path/**' and path is 'some/path/deeply/nested', should return true as '**' matches any sequence of characters following 'some/path/'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "some/path/*"
+          },
+          {
+            "parameter": "path",
+            "value": "some/path/deeply/nested"
+          }
+        ],
+        "expected": false,
+        "description": "Pattern is 'some/path/*' and path is 'some/path/deeply/nested', should return false as '*' only matches a single segment."
+      }
+    ]
+  },
+  {
+    "group": "isMatch method exception test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": null
+          },
+          {
+            "parameter": "path",
+            "value": "somePath"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Pattern is null, should throw NullPointerException as the pattern cannot be null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "pattern",
+            "value": "somePattern"
+          },
+          {
+            "parameter": "path",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Path is null, should throw NullPointerException as the path cannot be null."
+      }
+    ]
+  }
+]
