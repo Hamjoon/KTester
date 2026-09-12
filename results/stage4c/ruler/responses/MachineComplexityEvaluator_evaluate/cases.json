@@ -1,0 +1,167 @@
+[
+  {
+    "group": "evaluate(ByteState) Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with no transitions"
+          }
+        ],
+        "expected": 0,
+        "description": "Test case where the ByteState has no transitions. This should return 0 as there's no complexity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions, no wildcards"
+          }
+        ],
+        "expected": "calculated maxSize",
+        "description": "ByteState has transitions but none lead to any wildcard patterns. The expected output should be the calculated maxSize based on transitions."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with wildcard transitions"
+          }
+        ],
+        "expected": "maxComplexity",
+        "description": "ByteState has transitions that lead to wildcard patterns. The size should exceed maxComplexity, returning maxComplexity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with cyclic transitions"
+          }
+        ],
+        "expected": "calculated maxSize",
+        "description": "ByteState has cyclic transitions. The function should handle cycles without infinite loops and return the calculated maxSize."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with next name states"
+          }
+        ],
+        "expected": "maxSizeFromNextNameStates",
+        "description": "ByteState transitions lead to other NameStates. The function should recursively calculate complexity and return the max size from these states."
+      }
+    ]
+  },
+  {
+    "group": "evaluate(ByteState) Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions and some leading to wildcards"
+          }
+        ],
+        "expected": "calculated maxSize",
+        "description": "ByteState has transitions where some lead to wildcard patterns but do not exceed maxComplexity. The expected output should be the calculated maxSize based on transitions."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with multiple transitions leading to different wildcard patterns"
+          }
+        ],
+        "expected": "calculated maxSize",
+        "description": "ByteState has multiple transitions, each leading to different wildcard patterns. The function should calculate the maxSize considering all accessible wildcard patterns."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to cycles and wildcards"
+          }
+        ],
+        "expected": "calculated maxSize",
+        "description": "ByteState has transitions that form cycles and also lead to wildcard patterns. The function should handle cycles and calculate maxSize considering wildcard patterns."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to empty byte transitions"
+          }
+        ],
+        "expected": "calculated maxSize",
+        "description": "ByteState has transitions that lead to empty byte transitions. The function should skip these empty transitions and calculate the maxSize based on non-empty transitions."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to the same state"
+          }
+        ],
+        "expected": "calculated maxSize",
+        "description": "ByteState has transitions that lead back to the same state, forming a self-loop. The function should handle self-loops and calculate the maxSize correctly."
+      }
+    ]
+  },
+  {
+    "group": "evaluate(ByteState) Exception Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the ByteState is null. This should throw a NullPointerException as the method attempts to access methods on the null object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with invalid transitions"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Test case where the ByteState has invalid transitions that do not conform to expected structures. This should throw an IllegalStateException due to unexpected transition handling."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState where getTransitions returns null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where ByteState's getTransitions method returns null. This should throw a NullPointerException when trying to iterate over transitions."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to null ByteState"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where one or more transitions lead to a null ByteState, which should throw a NullPointerException when trying to access methods on the null ByteState."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState with transitions leading to null SingleByteTransition"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the transition expands into a null SingleByteTransition, leading to a NullPointerException when trying to access methods on it."
+      }
+    ]
+  }
+]

@@ -1,0 +1,457 @@
+[
+  {
+    "group": "addEndOfMatch",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('*')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NameState instance with startStateMatch set",
+        "description": "Test case where the only character is '*', which should match empty input."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('a')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test case where the transition is not empty and is a shortcut transition."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('b'), new InputCharacter('c')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test case with multiple characters where no shortcut is needed."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('d'), new InputCharacter('*')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test case where the transition has a wildcard at the end."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('e')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXISTS"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test case where pattern type is EXISTS, testing non-shortcut logic."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('x'), new InputCharacter('y'), new InputCharacter('z')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "non-null NameState instance"
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test case with multiple characters and a non-null nameStateCandidate, ensuring it is reused."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('f'), new InputCharacter('g')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type SUFFIX"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test case where pattern type is SUFFIX, testing non-shortcut logic."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('h'), new InputCharacter('i')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 1
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test case starting from a non-zero charIndex, ensuring correct handling of partial character arrays."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('j')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type ANYTHING_BUT_SUFFIX"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test case where pattern type is ANYTHING_BUT_SUFFIX, testing handling of this specific pattern type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "null"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('a')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where 'state' is null, expecting a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "null"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('b')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where 'prevState' is null, expecting a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "null"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where 'characters' is null, expecting a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('c')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": -1
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "Test case where 'charIndex' is negative, expecting an ArrayIndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('d')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 1
+          },
+          {
+            "parameter": "pattern",
+            "value": "Patterns instance with type EXACT"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "Test case where 'charIndex' is out of bounds for the characters array, expecting an ArrayIndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "state",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "prevState",
+            "value": "ByteState instance"
+          },
+          {
+            "parameter": "characters",
+            "value": "[new InputCharacter('e')]"
+          },
+          {
+            "parameter": "charIndex",
+            "value": 0
+          },
+          {
+            "parameter": "pattern",
+            "value": "null"
+          },
+          {
+            "parameter": "nameStateCandidate",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where 'pattern' is null, expecting a NullPointerException."
+      }
+    ]
+  }
+]

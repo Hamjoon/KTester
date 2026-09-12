@@ -1,0 +1,6 @@
+{
+  "api document of class software.amazon.event.ruler.MachineComplexityEvaluator": "\n * Evaluates the complexity of machines.\n ",
+  "constructors for class `software.amazon.event.ruler.MachineComplexityEvaluator`": "params: \nbody:\n```java\n    public MachineComplexityEvaluator(int maxComplexity) {\n        this.maxComplexity = maxComplexity;\n    }\n\n```",
+  "parameters in constructors and focal method": "class `software.amazon.event.ruler.ByteState`:\napi document : \n * Represents a state in a state machine and maps utf-8 bytes to transitions. One byte can have many transitions,\n * meaning this is an NFA state as opposed to a DFA state.\n \nconstructor:\n```java\n```",
+  "invoke examples of focal method": "example 1:\n```java\n    public int evaluateComplexity(MachineComplexityEvaluator evaluator) {\n        return (startStateMatch != null ? 1 : 0) + evaluator.evaluate(startState);\n    }\n```"
+}

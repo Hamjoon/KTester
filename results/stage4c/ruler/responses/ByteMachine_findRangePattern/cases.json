@@ -1,0 +1,451 @@
+[
+  {
+    "group": "findRangePattern Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                2
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test when range bottom and top are identical, expecting a valid NameState."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                3
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with a range where top is greater than bottom by one, expecting a valid NameState."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                1
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a range where top is less than bottom, expecting null as they don't overlap."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                3
+              ],
+              "openBottom": true,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with open bottom range, expecting a valid NameState as bottom is inclusive."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                3
+              ],
+              "openBottom": false,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with open top range, expecting a valid NameState as top is inclusive."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0
+              ],
+              "top": [
+                0
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with single byte range where bottom and top are equal, expecting a valid NameState."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0
+              ],
+              "top": [
+                1
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with single byte range where top is greater than bottom, expecting a valid NameState."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1
+              ],
+              "top": [
+                0
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with single byte range where top is less than bottom, expecting null."
+      }
+    ]
+  },
+  {
+    "group": "findRangePattern Additional Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                9
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with a range where the top is significantly greater than the bottom, expecting a valid NameState."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                2
+              ],
+              "openBottom": true,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a range where bottom and top are equal but both open, expecting null as no valid range is defined."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                2,
+                0
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with a range where there's a difference in the second byte, expecting a valid NameState."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                2,
+                5
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a range where the top has more bytes than the bottom, expecting null due to mismatch in length."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [],
+              "top": [],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with an empty range, expecting a valid NameState as both bottom and top are empty and equal."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                2
+              ],
+              "openBottom": false,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with a range where bottom and top are equal and top is open, expecting a valid NameState as the range is inclusive."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                0,
+                0
+              ],
+              "top": [
+                1,
+                0,
+                1
+              ],
+              "openBottom": true,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "NameState instance",
+        "description": "Test with a range where the bottom is open and top is open, expecting a valid NameState as the open range is valid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                1,
+                0,
+                0
+              ],
+              "top": [
+                1,
+                0,
+                0
+              ],
+              "openBottom": true,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a range where bottom and top are equal but bottom is open, expecting null as the range is invalid."
+      }
+    ]
+  },
+  {
+    "group": "findRangePattern Exception Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [],
+              "top": [
+                0,
+                1,
+                2
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a range where bottom is empty and top is not, expecting null due to mismatch in length."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a range where top is empty and bottom is not, expecting null due to mismatch in length."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2
+              ],
+              "top": [
+                0,
+                1,
+                2
+              ],
+              "openBottom": true,
+              "openTop": true
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a range where bottom and top are equal but both open, expecting null as no valid range is defined."
+      },
+      {
+        "input": [
+          {
+            "parameter": "range",
+            "value": {
+              "bottom": [
+                0,
+                1,
+                2,
+                4
+              ],
+              "top": [
+                0,
+                1,
+                2
+              ],
+              "openBottom": false,
+              "openTop": false
+            }
+          }
+        ],
+        "expected": "null",
+        "description": "Test with a range where bottom has more bytes than top, expecting null due to mismatch in length."
+      }
+    ]
+  }
+]
