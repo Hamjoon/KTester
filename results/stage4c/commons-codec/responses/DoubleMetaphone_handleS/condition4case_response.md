@@ -1,0 +1,203 @@
+{
+    "group": "handleS method test cases",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "ISLAND"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 2
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": 3,
+            "description": "Test case for special cases 'ISL', 'YSL' where index should increment by 1."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "SUGAR"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 0
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": 1,
+            "description": "Test case for special case 'SUGAR' where 'X' and 'S' are appended and index increments by 1."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "SHELTER"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 0
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": 2,
+            "description": "Test case for 'SH' where 'X' is appended and index increments by 2."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "SIOUX"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 0
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": 3,
+            "description": "Test case for 'SIO', 'SIA', 'SIAN' where 'S' and 'X' are appended and index increments by 3."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "SMITH"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 0
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": 1,
+            "description": "Test case for initial 'S' followed by 'M', 'N', 'L', 'W' where 'S' and 'X' are appended and index increments by 1."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "SZABO"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 0
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": 2,
+            "description": "Test case for 'SZ' where 'S' and 'X' are appended and index increments by 2."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "SCENE"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 0
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": "handleSC return value",
+            "description": "Test case for 'SC' where handleSC method is called."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "RESNAIS"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 5
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": 6,
+            "description": "Test case for final 'S' preceded by 'AI', 'OI' where 'S' is appended only to alternate."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "value",
+                    "value": "SASSY"
+                },
+                {
+                    "parameter": "result",
+                    "value": "new DoubleMetaphoneResult(10)"
+                },
+                {
+                    "parameter": "index",
+                    "value": 0
+                },
+                {
+                    "parameter": "slavoGermanic",
+                    "value": false
+                }
+            ],
+            "expected": 2,
+            "description": "Test case for 'S' followed by 'S' or 'Z' where 'S' is appended and index increments by 2."
+        }
+    ]
+}

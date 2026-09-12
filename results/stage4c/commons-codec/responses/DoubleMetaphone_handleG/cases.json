@@ -1,0 +1,413 @@
+[
+  {
+    "group": "handleG method test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GH"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "Index should be updated after handleGH",
+        "description": "Test when 'G' is followed by 'H', handleGH should be invoked"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GN"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "KN, N to be appended",
+        "description": "Test when 'G' is followed by 'N' and the condition is met, 'KN' and 'N' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GNE"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "N, KN to be appended",
+        "description": "Test when 'G' is followed by 'N' and the condition is not met, 'N' and 'KN' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GLI"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "KL, L to be appended",
+        "description": "Test when 'G' is followed by 'LI' and not Slavo-Germanic, 'KL' and 'L' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GES"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "K, J to be appended",
+        "description": "Test when 'G' is at the beginning followed by specific strings, 'K' and 'J' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GER"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "K, J to be appended",
+        "description": "Test when 'G' is followed by 'ER' or 'Y' and not preceded by specific strings, 'K' and 'J' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GIE"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "J, K to be appended",
+        "description": "Test when 'G' is followed by 'E', 'I', 'Y' or specific strings, 'J' and 'K' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GG"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "Index should be incremented by 2",
+        "description": "Test when 'G' is followed by another 'G', index should increase by 2"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GA"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "K to be appended",
+        "description": "Test default case when none of the conditions are met, 'K' should be appended"
+      }
+    ]
+  },
+  {
+    "group": "handleG method additional test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GIER"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "J to be appended",
+        "description": "Test when 'G' is followed by 'IER', 'J' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GOGGI"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "J, K to be appended",
+        "description": "Test when 'G' is followed by 'OGGI', 'J' and 'K' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GERMAN"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": true
+          }
+        ],
+        "expected": "K to be appended",
+        "description": "Test when 'G' is followed by 'ER' in a Slavo-Germanic context, 'K' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GON"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "K to be appended",
+        "description": "Test when 'G' is followed by 'ON', default case should apply, 'K' should be appended"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "G"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "K to be appended",
+        "description": "Test when 'G' is a standalone character, 'K' should be appended"
+      }
+    ]
+  },
+  {
+    "group": "handleG method exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": null
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when the input 'value' is null, should throw NullPointerException"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "G"
+          },
+          {
+            "parameter": "result",
+            "value": null
+          },
+          {
+            "parameter": "index",
+            "value": 0
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when the 'result' is null, should throw NullPointerException"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "G"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": -1
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test when 'index' is negative, should throw IndexOutOfBoundsException"
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "G"
+          },
+          {
+            "parameter": "result",
+            "value": "DoubleMetaphoneResult instance"
+          },
+          {
+            "parameter": "index",
+            "value": 1000
+          },
+          {
+            "parameter": "slavoGermanic",
+            "value": false
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "Test when 'index' is out of bounds of the 'value' string length, should throw IndexOutOfBoundsException"
+      }
+    ]
+  }
+]

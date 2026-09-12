@@ -1,0 +1,521 @@
+[
+  {
+    "group": "DoubleMetaphone Method Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": null
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": null,
+        "description": "Test when input string is null, expecting null return."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "AEIOUY"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "A",
+        "description": "Test when input starts with vowels, expecting primary encoding to handle vowels."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "BB"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "P",
+        "description": "Test when input starts with double 'B', expecting single 'P' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "C"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "K",
+        "description": "Test when input starts with 'C', expecting 'K' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "DD"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "T",
+        "description": "Test when input starts with double 'D', expecting 'T' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "FF"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "F",
+        "description": "Test when input starts with double 'F', expecting single 'F' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "GG"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "K",
+        "description": "Test when input starts with double 'G', expecting 'K' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "HH"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test when input starts with double 'H', expecting no primary encoding due to silent 'H'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "JJ"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "H",
+        "description": "Test when input starts with double 'J', expecting 'H' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "KK"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "K",
+        "description": "Test when input starts with double 'K', expecting single 'K' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "LL"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "L",
+        "description": "Test when input starts with double 'L', expecting single 'L' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "MM"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "M",
+        "description": "Test when input starts with double 'M', expecting single 'M' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "NN"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "N",
+        "description": "Test when input starts with double 'N', expecting single 'N' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "PP"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "P",
+        "description": "Test when input starts with double 'P', expecting single 'P' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "QQ"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "K",
+        "description": "Test when input starts with double 'Q', expecting 'K' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "RR"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "R",
+        "description": "Test when input starts with double 'R', expecting single 'R' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "SS"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "S",
+        "description": "Test when input starts with double 'S', expecting single 'S' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "TT"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "T",
+        "description": "Test when input starts with double 'T', expecting single 'T' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "VV"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "F",
+        "description": "Test when input starts with double 'V', expecting 'F' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "WW"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test when input starts with double 'W', expecting no primary encoding due to silent 'W'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "XX"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "KS",
+        "description": "Test when input starts with double 'X', expecting 'KS' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "ZZ"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "S",
+        "description": "Test when input starts with double 'Z', expecting 'S' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "C"
+          },
+          {
+            "parameter": "alternate",
+            "value": true
+          }
+        ],
+        "expected": "S",
+        "description": "Test alternate encoding for input starting with 'C', expecting 'S' in alternate encoding."
+      }
+    ]
+  },
+  {
+    "group": "DoubleMetaphone Additional Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "BACH"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "BK",
+        "description": "Test when input contains 'CH' after a vowel, expecting 'K' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "MACDONALD"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "MKTLNT",
+        "description": "Test when input contains 'MAC' at the start, expecting 'MK' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "KNIGHT"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "NKT",
+        "description": "Test when input starts with silent 'K', expecting 'N' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "PSALM"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "SLM",
+        "description": "Test when input starts with silent 'P', expecting 'S' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "SCHMIDT"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "XMT",
+        "description": "Test when input starts with 'SCH', expecting 'X' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "THOMAS"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "TMS",
+        "description": "Test when input starts with 'TH', expecting 'T' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "WRIGHT"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "RT",
+        "description": "Test when input starts with silent 'W', expecting 'R' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "XENON"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "SN",
+        "description": "Test when input starts with 'X', expecting 'S' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "YACHT"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "KT",
+        "description": "Test when input contains 'CHT', expecting 'KT' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "PHARAOH"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "FR",
+        "description": "Test when input starts with 'PH', expecting 'F' in primary encoding."
+      }
+    ]
+  },
+  {
+    "group": "DoubleMetaphone Exception Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": ""
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test when input string is empty, expecting empty string return as there is nothing to encode."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "A"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "A",
+        "description": "Test when input string is a single vowel 'A', expecting 'A' in primary encoding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "value",
+            "value": "?"
+          },
+          {
+            "parameter": "alternate",
+            "value": false
+          }
+        ],
+        "expected": "S",
+        "description": "Test when input string contains a character '?', expecting 'S' in primary encoding due to special handling."
+      }
+    ]
+  }
+]

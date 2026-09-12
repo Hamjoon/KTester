@@ -1,0 +1,274 @@
+[
+  {
+    "group": "soundex method tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": null
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": null,
+        "description": "Test case for null input, expecting null output."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": ""
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": [
+          "000000"
+        ],
+        "description": "Test case for empty string input, expecting a single branch with all zeroes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "   "
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": [
+          "000000"
+        ],
+        "description": "Test case for input string with only spaces, expecting a single branch with all zeroes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "a"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": [
+          "000000"
+        ],
+        "description": "Test case for single character input with no matching rule, expecting a single branch with all zeroes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "nm"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": [
+          "000000"
+        ],
+        "description": "Test case for special rule 'nm', expecting a single branch with all zeroes due to forced replacement."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "mn"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": [
+          "000000"
+        ],
+        "description": "Test case for special rule 'mn', expecting a single branch with all zeroes due to forced replacement."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "example"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a normal string input to check the normal flow of soundex processing without branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "example"
+          },
+          {
+            "parameter": "branching",
+            "value": true
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a normal string input to check the normal flow of soundex processing with branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "abcdef"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a string input 'abcdef' to check the normal flow of soundex processing without branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "abcdef"
+          },
+          {
+            "parameter": "branching",
+            "value": true
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a string input 'abcdef' to check the normal flow of soundex processing with branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "aeiou"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a string input consisting only of vowels 'aeiou' to verify vowel handling without branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "aeiou"
+          },
+          {
+            "parameter": "branching",
+            "value": true
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a string input consisting only of vowels 'aeiou' to verify vowel handling with branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "bcd"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a string input 'bcd' to verify consonant handling without branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "bcd"
+          },
+          {
+            "parameter": "branching",
+            "value": true
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a string input 'bcd' to verify consonant handling with branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "xyz"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a string input 'xyz' to check the handling of characters with no defined rules without branching."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "xyz"
+          },
+          {
+            "parameter": "branching",
+            "value": true
+          }
+        ],
+        "expected": "expected output",
+        "description": "Test case for a string input 'xyz' to check the handling of characters with no defined rules with branching."
+      }
+    ]
+  },
+  {
+    "group": "soundex exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "a"
+          },
+          {
+            "parameter": "branching",
+            "value": false
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case for a single character input 'a' without matching rules, expecting NullPointerException due to RULES map being empty."
+      },
+      {
+        "input": [
+          {
+            "parameter": "source",
+            "value": "a"
+          },
+          {
+            "parameter": "branching",
+            "value": true
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case for a single character input 'a' with branching enabled, expecting NullPointerException due to RULES map being empty."
+      }
+    ]
+  }
+]

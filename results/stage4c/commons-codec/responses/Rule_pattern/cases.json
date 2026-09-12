@@ -1,0 +1,257 @@
+[
+  {
+    "group": "Pattern Method Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^test$"
+          }
+        ],
+        "expected": "input -> input.equals(\"test\")",
+        "description": "Exact match with both start and end anchors and non-empty content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^$"
+          }
+        ],
+        "expected": "input -> input.length() == 0",
+        "description": "Exact match with both start and end anchors and empty content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^"
+          }
+        ],
+        "expected": "ALL_STRINGS_RMATCHER",
+        "description": "Matches every string with start anchor and empty content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "$"
+          }
+        ],
+        "expected": "ALL_STRINGS_RMATCHER",
+        "description": "Matches every string with end anchor and empty content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^start"
+          }
+        ],
+        "expected": "input -> startsWith(input, \"start\")",
+        "description": "Matches strings that start with a specific substring."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "end$"
+          }
+        ],
+        "expected": "input -> endsWith(input, \"end\")",
+        "description": "Matches strings that end with a specific substring."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^[abc]$"
+          }
+        ],
+        "expected": "input -> (input.length() == 1) && (contains(\"abc\", input.charAt(0)) == true)",
+        "description": "Exact match with character class containing alternatives."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^[^abc]$"
+          }
+        ],
+        "expected": "input -> (input.length() == 1) && (contains(\"abc\", input.charAt(0)) == false)",
+        "description": "Exact match with negated character class."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^[abc]"
+          }
+        ],
+        "expected": "input -> (input.length() > 0) && (contains(\"abc\", input.charAt(0)) == true)",
+        "description": "Matches strings starting with a character from a set."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "[abc]$"
+          }
+        ],
+        "expected": "input -> (input.length() > 0) && (contains(\"abc\", input.charAt(input.length() - 1)) == true)",
+        "description": "Matches strings ending with a character from a set."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": ".*"
+          }
+        ],
+        "expected": "new RPattern() { Pattern pattern = Pattern.compile(\".*\"); ... }",
+        "description": "General pattern compilation for any regex not covered by specific conditions."
+      }
+    ]
+  },
+  {
+    "group": "Additional Pattern Method Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^[abc]"
+          }
+        ],
+        "expected": "input -> (input.length() > 0) && (contains(\"abc\", input.charAt(0)) == true)",
+        "description": "Matches strings starting with a character from a set, already covered."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "[^abc]$"
+          }
+        ],
+        "expected": "input -> (input.length() > 0) && (contains(\"abc\", input.charAt(input.length() - 1)) == false)",
+        "description": "Matches strings ending with a character not in a set."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "[abc]"
+          }
+        ],
+        "expected": "new RPattern() { Pattern pattern = Pattern.compile(\"[abc]\"); ... }",
+        "description": "General pattern compilation for character set without anchors."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^a.*b$"
+          }
+        ],
+        "expected": "new RPattern() { Pattern pattern = Pattern.compile(\"^a.*b$\"); ... }",
+        "description": "Complex pattern with start and end anchors and wildcard in between."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "[a-z]{3,}"
+          }
+        ],
+        "expected": "new RPattern() { Pattern pattern = Pattern.compile(\"[a-z]{3,}\"); ... }",
+        "description": "Pattern with quantifiers for matching sequences of at least 3 lowercase letters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "(abc|def)"
+          }
+        ],
+        "expected": "new RPattern() { Pattern pattern = Pattern.compile(\"(abc|def)\"); ... }",
+        "description": "Pattern with alternation for matching either 'abc' or 'def'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "\\d+"
+          }
+        ],
+        "expected": "new RPattern() { Pattern pattern = Pattern.compile(\"\\d+\"); ... }",
+        "description": "Pattern for matching one or more digits."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "^\\s*$"
+          }
+        ],
+        "expected": "new RPattern() { Pattern pattern = Pattern.compile(\"^\\s*$\"); ... }",
+        "description": "Pattern for matching strings that consist only of whitespace."
+      }
+    ]
+  },
+  {
+    "group": "Pattern Method Exception Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test scenario where the regex parameter is null, expecting a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "(unclosed"
+          }
+        ],
+        "expected": "PatternSyntaxException",
+        "description": "Test scenario where the regex contains an unclosed parenthesis, expecting a PatternSyntaxException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "[unterminated"
+          }
+        ],
+        "expected": "PatternSyntaxException",
+        "description": "Test scenario where the regex contains an unterminated character class, expecting a PatternSyntaxException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "\\"
+          }
+        ],
+        "expected": "PatternSyntaxException",
+        "description": "Test scenario where the regex ends with a single backslash, expecting a PatternSyntaxException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "regex",
+            "value": "(?invalid)"
+          }
+        ],
+        "expected": "PatternSyntaxException",
+        "description": "Test scenario where the regex contains an invalid group syntax, expecting a PatternSyntaxException."
+      }
+    ]
+  }
+]

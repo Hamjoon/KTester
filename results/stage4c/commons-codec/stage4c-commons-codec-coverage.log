@@ -1,0 +1,2260 @@
+2026-09-12 13:25:29,503 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-12 13:25:29,504 - evaluations.coverage_test - INFO - Running tests for project: commons-codec
+2026-09-12 13:25:29,506 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_decode_Test.java
+2026-09-12 13:25:30,124 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_decode_Test
+2026-09-12 13:25:31,790 - evaluations.coverage_test - INFO - return code: 0
+2026-09-12 13:25:31,791 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_decode_Test ✔
+│     ├─ testDecodeWithSixBytes() ✔
+│     ├─ testDecodeWithFullBuffer() ✔
+│     ├─ testDecodeWithPaddingCharacter() ✔
+│     ├─ testDecodeWithModulusOne() ✔
+│     ├─ testDecodeWithModulusTwo() ✔
+│     ├─ testDecodeWithInvalidInput() ✔
+│     ├─ testDecodeWithPaddingAtEnd() ✔
+│     ├─ testDecodeWithValidInput() ✔
+│     ├─ testDecodeWithImpossibleModulus() ✔
+│     ├─ testDecodeWithFiveBytes() ✔
+│     ├─ testDecodeWithNegativeInAvail() ✔
+│     ├─ testDecodeWithEightBytes() ✔
+│     ├─ testDecodeWithInvalidByte() ✔
+│     ├─ testDecodeWithByteOutsideRange() ✔
+│     └─ testDecodeWithModulusThree() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 941 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:25:32,313 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithSixBytes --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithFullBuffer --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithPaddingCharacter --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithModulusOne --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithModulusTwo --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithInvalidInput --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithPaddingAtEnd --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithValidInput --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithImpossibleModulus --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithFiveBytes --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithNegativeInAvail --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithEightBytes --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithInvalidByte --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithByteOutsideRange --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecodeWithModulusThree
+2026-09-12 13:25:33,771 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_decode_Test ✔
+│     ├─ testDecodeWithSixBytes() ✔
+│     ├─ testDecodeWithFullBuffer() ✔
+│     ├─ testDecodeWithPaddingCharacter() ✔
+│     ├─ testDecodeWithModulusOne() ✔
+│     ├─ testDecodeWithModulusTwo() ✔
+│     ├─ testDecodeWithInvalidInput() ✔
+│     ├─ testDecodeWithPaddingAtEnd() ✔
+│     ├─ testDecodeWithValidInput() ✔
+│     ├─ testDecodeWithImpossibleModulus() ✔
+│     ├─ testDecodeWithFiveBytes() ✔
+│     ├─ testDecodeWithNegativeInAvail() ✔
+│     ├─ testDecodeWithEightBytes() ✔
+│     ├─ testDecodeWithInvalidByte() ✔
+│     ├─ testDecodeWithByteOutsideRange() ✔
+│     └─ testDecodeWithModulusThree() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 757 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        15 tests found           ]
+[         0 tests skipped         ]
+[        15 tests started         ]
+[         0 tests aborted         ]
+[        15 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:25:34,225 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/net/QuotedPrintableCodec_encodeQuotedPrintable_Test.java
+2026-09-12 13:25:34,605 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test
+2026-09-12 13:25:36,151 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:25:36,151 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ QuotedPrintableCodec_encodeQuotedPrintable_Test ✔
+│     ├─ testEncodeQuotedPrintable_StrictMode_ShortBytes() ✘ Encoding bytes array with length less than MIN_BYTES in strict mode should return null ==> expected: <null> but was: <[65, 66, 67]>
+│     ├─ testEncodeQuotedPrintable_NullBytes() ✔
+│     ├─ testEncodeQuotedPrintable_NonStrictMode_NonPrintableBytes() ✘ Non-printable bytes should be encoded ==> array lengths differ, expected: <6> but was: <9>
+│     ├─ testEncodeQuotedPrintable_StrictMode_EqualsCharacter() ✘ Encoded '=' character should be represented correctly ==> array lengths differ, expected: <5> but was: <6>
+│     ├─ testEncodeQuotedPrintable_StrictMode() ✔
+│     ├─ testEncodeQuotedPrintable_StrictMode_WhitespaceAtEnd() ✘ Whitespace at the end should be encoded ==> array lengths differ, expected: <6> but was: <7>
+│     ├─ testEncodeQuotedPrintable_EmptyBytes() ✔
+│     ├─ testEncodeQuotedPrintable_NonStrictMode_PrintableBytes() ✔
+│     ├─ testEncodeQuotedPrintable_StrictMode_LongBytes() ✘ Encoded bytes should include soft line break ==> array lengths differ, expected: <10> but was: <6>
+│     └─ testEncodeQuotedPrintable_NonStrictMode() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (5):
+  JUnit Jupiter:QuotedPrintableCodec_encodeQuotedPrintable_Test:testEncodeQuotedPrintable_StrictMode_ShortBytes()
+    MethodSource [className = 'org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test', methodName = 'testEncodeQuotedPrintable_StrictMode_ShortBytes', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Encoding bytes array with length less than MIN_BYTES in strict mode should return null ==> expected: <null> but was: <[65, 66, 67]>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+       org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNull(Assertions.java:287)
+       org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test.testEncodeQuotedPrintable_StrictMode_ShortBytes(QuotedPrintableCodec_encodeQuotedPrintable_Test.java:81)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:QuotedPrintableCodec_encodeQuotedPrintable_Test:testEncodeQuotedPrintable_NonStrictMode_NonPrintableBytes()
+    MethodSource [className = 'org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test', methodName = 'testEncodeQuotedPrintable_NonStrictMode_NonPrintableBytes', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Non-printable bytes should be encoded ==> array lengths differ, expected: <6> but was: <9>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertArrayEquals.assertArraysHaveSameLength(AssertArrayEquals.java:428)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:205)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:63)
+       org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1238)
+       org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test.testEncodeQuotedPrintable_NonStrictMode_NonPrintableBytes(QuotedPrintableCodec_encodeQuotedPrintable_Test.java:151)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:QuotedPrintableCodec_encodeQuotedPrintable_Test:testEncodeQuotedPrintable_StrictMode_EqualsCharacter()
+    MethodSource [className = 'org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test', methodName = 'testEncodeQuotedPrintable_StrictMode_EqualsCharacter', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Encoded '=' character should be represented correctly ==> array lengths differ, expected: <5> but was: <6>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertArrayEquals.assertArraysHaveSameLength(AssertArrayEquals.java:428)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:205)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:63)
+       org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1238)
+       org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test.testEncodeQuotedPrintable_StrictMode_EqualsCharacter(QuotedPrintableCodec_encodeQuotedPrintable_Test.java:109)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:QuotedPrintableCodec_encodeQuotedPrintable_Test:testEncodeQuotedPrintable_StrictMode_WhitespaceAtEnd()
+    MethodSource [className = 'org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test', methodName = 'testEncodeQuotedPrintable_StrictMode_WhitespaceAtEnd', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Whitespace at the end should be encoded ==> array lengths differ, expected: <6> but was: <7>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertArrayEquals.assertArraysHaveSameLength(AssertArrayEquals.java:428)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:205)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:63)
+       org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1238)
+       org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test.testEncodeQuotedPrintable_StrictMode_WhitespaceAtEnd(QuotedPrintableCodec_encodeQuotedPrintable_Test.java:123)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:QuotedPrintableCodec_encodeQuotedPrintable_Test:testEncodeQuotedPrintable_StrictMode_LongBytes()
+    MethodSource [className = 'org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test', methodName = 'testEncodeQuotedPrintable_StrictMode_LongBytes', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Encoded bytes should include soft line break ==> array lengths differ, expected: <10> but was: <6>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertArrayEquals.assertArraysHaveSameLength(AssertArrayEquals.java:428)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:205)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:63)
+       org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1238)
+       org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test.testEncodeQuotedPrintable_StrictMode_LongBytes(QuotedPrintableCodec_encodeQuotedPrintable_Test.java:95)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 663 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         5 tests failed          ]
+
+
+2026-09-12 13:25:36,775 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test#testEncodeQuotedPrintable_NullBytes --select-method org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test#testEncodeQuotedPrintable_StrictMode --select-method org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test#testEncodeQuotedPrintable_EmptyBytes --select-method org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test#testEncodeQuotedPrintable_NonStrictMode_PrintableBytes --select-method org.apache.commons.codec.net.QuotedPrintableCodec_encodeQuotedPrintable_Test#testEncodeQuotedPrintable_NonStrictMode
+2026-09-12 13:25:38,331 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ QuotedPrintableCodec_encodeQuotedPrintable_Test ✔
+│     ├─ testEncodeQuotedPrintable_NullBytes() ✔
+│     ├─ testEncodeQuotedPrintable_StrictMode() ✔
+│     ├─ testEncodeQuotedPrintable_EmptyBytes() ✔
+│     ├─ testEncodeQuotedPrintable_NonStrictMode_PrintableBytes() ✔
+│     └─ testEncodeQuotedPrintable_NonStrictMode() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 728 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:25:39,622 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base32_decode_Test.java
+2026-09-12 13:25:40,093 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base32_decode_Test
+2026-09-12 13:25:42,134 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:25:42,138 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base32_decode_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_decode_Test ✔
+│     ├─ testDecodeMethodAdditionalExceptions() ✘ Expecting IndexOutOfBoundsException for out of range input byte value. ==> Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+│     ├─ testDecodeMethod() ✘ context.modulus should be 1 after processing one valid byte. ==> expected: <1> but was: <0>
+│     ├─ testDecodeMethodAdditional() ✘ 5 bytes should be decoded and stored in the buffer. ==> expected: <5> but was: <0>
+│     └─ testDecode() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:Base32_decode_Test:testDecodeMethodAdditionalExceptions()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_decode_Test', methodName = 'testDecodeMethodAdditionalExceptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expecting IndexOutOfBoundsException for out of range input byte value. ==> Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.codec.binary.Base32_decode_Test.testDecodeMethodAdditionalExceptions(Base32_decode_Test.java:191)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:Base32_decode_Test:testDecodeMethod()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_decode_Test', methodName = 'testDecodeMethod', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: context.modulus should be 1 after processing one valid byte. ==> expected: <1> but was: <0>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+       org.apache.commons.codec.binary.Base32_decode_Test.testDecodeMethod(Base32_decode_Test.java:65)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:Base32_decode_Test:testDecodeMethodAdditional()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_decode_Test', methodName = 'testDecodeMethodAdditional', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: 5 bytes should be decoded and stored in the buffer. ==> expected: <5> but was: <0>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+       org.apache.commons.codec.binary.Base32_decode_Test.testDecodeMethodAdditional(Base32_decode_Test.java:143)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 813 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-12 13:25:42,661 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base32_decode_Test#testDecode
+2026-09-12 13:25:44,218 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_decode_Test ✔
+│     └─ testDecode() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 627 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:25:44,638 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encode_Test.java
+2026-09-12 13:25:45,026 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_encode_Test
+2026-09-12 13:25:46,335 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:25:46,336 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base64_encode_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encode_Test ✔
+│     ├─ testEncode_InPosGreaterThanLength() ✔
+│     ├─ testEncode_32ByteInput() ✔
+│     ├─ testEncode_LeftoverBytesEOF() ✘ expected: <4> but was: <0>
+│     ├─ testEncode_NegativeBytes() ✔
+│     ├─ testEncode_NegativeInPos() ✔
+│     ├─ testEncode_6ByteInput() ✔
+│     ├─ testEncode_MixedValues() ✔
+│     ├─ testEncode_4ByteInput() ✔
+│     ├─ testEncode_3ByteInput() ✔
+│     ├─ testEncode_2ByteInput() ✔
+│     ├─ testEncode_1ByteInput() ✔
+│     ├─ testEncode_NullContext() ✔
+│     ├─ testEncode_16ByteInput() ✔
+│     ├─ testEncode_NullInput() ✔
+│     ├─ testEncode() ✔
+│     ├─ testEncode_EmptyInputEOF() ✔
+│     ├─ testEncode_10ByteInput() ✔
+│     └─ testEncode_InAvailGreaterThanLengthFromInPos() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Base64_encode_Test:testEncode_LeftoverBytesEOF()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_encode_Test', methodName = 'testEncode_LeftoverBytesEOF', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <4> but was: <0>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       org.apache.commons.codec.binary.Base64_encode_Test.testEncode_LeftoverBytesEOF(Base64_encode_Test.java:116)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 638 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        18 tests found           ]
+[         0 tests skipped         ]
+[        18 tests started         ]
+[         0 tests aborted         ]
+[        17 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-12 13:25:46,831 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_InPosGreaterThanLength --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_32ByteInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_NegativeBytes --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_NegativeInPos --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_6ByteInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_MixedValues --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_4ByteInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_3ByteInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_2ByteInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_1ByteInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_NullContext --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_16ByteInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_NullInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_EmptyInputEOF --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_10ByteInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_InAvailGreaterThanLengthFromInPos
+2026-09-12 13:25:48,253 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encode_Test ✔
+│     ├─ testEncode_InPosGreaterThanLength() ✔
+│     ├─ testEncode_32ByteInput() ✔
+│     ├─ testEncode_NegativeBytes() ✔
+│     ├─ testEncode_NegativeInPos() ✔
+│     ├─ testEncode_6ByteInput() ✔
+│     ├─ testEncode_MixedValues() ✔
+│     ├─ testEncode_4ByteInput() ✔
+│     ├─ testEncode_3ByteInput() ✔
+│     ├─ testEncode_2ByteInput() ✔
+│     ├─ testEncode_1ByteInput() ✔
+│     ├─ testEncode_NullContext() ✔
+│     ├─ testEncode_16ByteInput() ✔
+│     ├─ testEncode_NullInput() ✔
+│     ├─ testEncode() ✔
+│     ├─ testEncode_EmptyInputEOF() ✔
+│     ├─ testEncode_10ByteInput() ✔
+│     └─ testEncode_InAvailGreaterThanLengthFromInPos() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 695 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[        17 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:25:48,874 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/DoubleMetaphone_handleG_Test.java
+2026-09-12 13:25:49,293 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.DoubleMetaphone_handleG_Test
+2026-09-12 13:25:50,809 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:25:50,810 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.DoubleMetaphone_handleG_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ DoubleMetaphone_handleG_Test ✔
+│     ├─ testHandleG_Group1() ✔
+│     ├─ testHandleG_Group2() ✘ expected: <KN> but was: <N>
+│     ├─ testHandleG_Group3() ✔
+│     ├─ testHandleG_Group4() ✔
+│     ├─ testHandleG_Group5() ✔
+│     ├─ testHandleG_Group6() ✔
+│     ├─ testHandleG_Group7() ✘ expected: <J> but was: <K>
+│     ├─ testHandleG_Group8() ✔
+│     ├─ testHandleG_Group9() ✔
+│     ├─ testHandleG_Additional1() ✘ expected: <J> but was: <K>
+│     ├─ testHandleG_Additional2() ✘ expected: <2> but was: <1>
+│     ├─ testHandleG_Additional3() ✘ expected: <K> but was: <J>
+│     ├─ testHandleG_Additional4() ✔
+│     ├─ testHandleG_Additional5() ✔
+│     ├─ testHandleG_Exception3() ✘ Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+│     ├─ testHandleG_Exception4() ✘ Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+│     └─ testHandleG() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (7):
+  JUnit Jupiter:DoubleMetaphone_handleG_Test:testHandleG_Group2()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleG_Test', methodName = 'testHandleG_Group2', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <KN> but was: <N>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_handleG_Test.testHandleG_Group2(DoubleMetaphone_handleG_Test.java:57)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleG_Test:testHandleG_Group7()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleG_Test', methodName = 'testHandleG_Group7', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <J> but was: <K>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_handleG_Test.testHandleG_Group7(DoubleMetaphone_handleG_Test.java:112)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleG_Test:testHandleG_Additional1()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleG_Test', methodName = 'testHandleG_Additional1', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <J> but was: <K>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_handleG_Test.testHandleG_Additional1(DoubleMetaphone_handleG_Test.java:145)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleG_Test:testHandleG_Additional2()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleG_Test', methodName = 'testHandleG_Additional2', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       org.apache.commons.codec.language.DoubleMetaphone_handleG_Test.testHandleG_Additional2(DoubleMetaphone_handleG_Test.java:155)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleG_Test:testHandleG_Additional3()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleG_Test', methodName = 'testHandleG_Additional3', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <K> but was: <J>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_handleG_Test.testHandleG_Additional3(DoubleMetaphone_handleG_Test.java:168)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleG_Test:testHandleG_Exception3()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleG_Test', methodName = 'testHandleG_Exception3', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.language.DoubleMetaphone_handleG_Test.testHandleG_Exception3(DoubleMetaphone_handleG_Test.java:218)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleG_Test:testHandleG_Exception4()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleG_Test', methodName = 'testHandleG_Exception4', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.language.DoubleMetaphone_handleG_Test.testHandleG_Exception4(DoubleMetaphone_handleG_Test.java:228)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 836 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         7 tests failed          ]
+
+
+2026-09-12 13:25:51,371 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Group1 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Group3 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Group4 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Group5 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Group6 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Group8 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Group9 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Additional4 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG_Additional5 --select-method org.apache.commons.codec.language.DoubleMetaphone_handleG_Test#testHandleG
+2026-09-12 13:25:52,785 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ DoubleMetaphone_handleG_Test ✔
+│     ├─ testHandleG_Group1() ✔
+│     ├─ testHandleG_Group3() ✔
+│     ├─ testHandleG_Group4() ✔
+│     ├─ testHandleG_Group5() ✔
+│     ├─ testHandleG_Group6() ✔
+│     ├─ testHandleG_Group8() ✔
+│     ├─ testHandleG_Group9() ✔
+│     ├─ testHandleG_Additional4() ✔
+│     ├─ testHandleG_Additional5() ✔
+│     └─ testHandleG() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 604 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[        10 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:25:53,333 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base32_encode_Test.java
+2026-09-12 13:25:53,727 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base32_encode_Test
+2026-09-12 13:25:54,921 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:25:54,921 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base32_encode_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_encode_Test ✔
+│     ├─ testProcessingWithOneFullBlockAndOneAdditionalByte() ✔
+│     ├─ testEncodeWithEmptyInput() ✔
+│     ├─ testProcessingWithOneFullBlockAndFourAdditionalBytes() ✔
+│     ├─ testProcessingWithPartialBlockOfBytes() ✔
+│     ├─ testEncodeWithSingleByteInput() ✔
+│     ├─ testNormalProcessingWithFullBlockOf5Bytes() ✔
+│     ├─ testEOFConditionWithNoLeftoversAndNoChunking() ✔
+│     ├─ testEOFConditionWithModulus1() ✔
+│     ├─ testEOFConditionWithModulus2() ✔
+│     ├─ testEOFConditionWithModulus3() ✔
+│     ├─ testEOFConditionWithModulus4() ✔
+│     ├─ testScenarioWithNullInputAndZeroInAvail() ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+│     ├─ testProcessingWithOneFullBlockAndTwoAdditionalBytes() ✔
+│     ├─ testNormalProcessingWithTwoFullBlocks() ✔
+│     ├─ testEncodeWithMultipleBytesInput() ✔
+│     ├─ testScenarioWithImpossibleModulus() ✔
+│     └─ testProcessingWithOneFullBlockAndThreeAdditionalBytes() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Base32_encode_Test:testScenarioWithNullInputAndZeroInAvail()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_encode_Test', methodName = 'testScenarioWithNullInputAndZeroInAvail', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.binary.Base32_encode_Test.testScenarioWithNullInputAndZeroInAvail(Base32_encode_Test.java:237)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 601 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[        16 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-12 13:25:55,311 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base32_encode_Test#testProcessingWithOneFullBlockAndOneAdditionalByte --select-method org.apache.commons.codec.binary.Base32_encode_Test#testEncodeWithEmptyInput --select-method org.apache.commons.codec.binary.Base32_encode_Test#testProcessingWithOneFullBlockAndFourAdditionalBytes --select-method org.apache.commons.codec.binary.Base32_encode_Test#testProcessingWithPartialBlockOfBytes --select-method org.apache.commons.codec.binary.Base32_encode_Test#testEncodeWithSingleByteInput --select-method org.apache.commons.codec.binary.Base32_encode_Test#testNormalProcessingWithFullBlockOf5Bytes --select-method org.apache.commons.codec.binary.Base32_encode_Test#testEOFConditionWithNoLeftoversAndNoChunking --select-method org.apache.commons.codec.binary.Base32_encode_Test#testEOFConditionWithModulus1 --select-method org.apache.commons.codec.binary.Base32_encode_Test#testEOFConditionWithModulus2 --select-method org.apache.commons.codec.binary.Base32_encode_Test#testEOFConditionWithModulus3 --select-method org.apache.commons.codec.binary.Base32_encode_Test#testEOFConditionWithModulus4 --select-method org.apache.commons.codec.binary.Base32_encode_Test#testProcessingWithOneFullBlockAndTwoAdditionalBytes --select-method org.apache.commons.codec.binary.Base32_encode_Test#testNormalProcessingWithTwoFullBlocks --select-method org.apache.commons.codec.binary.Base32_encode_Test#testEncodeWithMultipleBytesInput --select-method org.apache.commons.codec.binary.Base32_encode_Test#testScenarioWithImpossibleModulus --select-method org.apache.commons.codec.binary.Base32_encode_Test#testProcessingWithOneFullBlockAndThreeAdditionalBytes
+2026-09-12 13:25:56,576 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_encode_Test ✔
+│     ├─ testProcessingWithOneFullBlockAndOneAdditionalByte() ✔
+│     ├─ testEncodeWithEmptyInput() ✔
+│     ├─ testProcessingWithOneFullBlockAndFourAdditionalBytes() ✔
+│     ├─ testProcessingWithPartialBlockOfBytes() ✔
+│     ├─ testEncodeWithSingleByteInput() ✔
+│     ├─ testNormalProcessingWithFullBlockOf5Bytes() ✔
+│     ├─ testEOFConditionWithNoLeftoversAndNoChunking() ✔
+│     ├─ testEOFConditionWithModulus1() ✔
+│     ├─ testEOFConditionWithModulus2() ✔
+│     ├─ testEOFConditionWithModulus3() ✔
+│     ├─ testEOFConditionWithModulus4() ✔
+│     ├─ testProcessingWithOneFullBlockAndTwoAdditionalBytes() ✔
+│     ├─ testNormalProcessingWithTwoFullBlocks() ✔
+│     ├─ testEncodeWithMultipleBytesInput() ✔
+│     ├─ testScenarioWithImpossibleModulus() ✔
+│     └─ testProcessingWithOneFullBlockAndThreeAdditionalBytes() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 589 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        16 tests found           ]
+[         0 tests skipped         ]
+[        16 tests started         ]
+[         0 tests aborted         ]
+[        16 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:25:57,052 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/bm/Rule_pattern_Test.java
+2026-09-12 13:25:57,401 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/language/bm/Rule_pattern_Test.java:10: error: variable pattern not initialized in the default constructor
+    private final Pattern pattern;
+                          ^
+1 error
+
+2026-09-12 13:25:57,403 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/DoubleMetaphone_handleS_Test.java
+2026-09-12 13:25:57,831 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.DoubleMetaphone_handleS_Test
+2026-09-12 13:25:58,961 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:25:58,961 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.DoubleMetaphone_handleS_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ DoubleMetaphone_handleS_Test ✔
+│     ├─ testHandleS_SHGermanic() ✔
+│     ├─ testHandleS_InitialSFollowedByA() ✔
+│     ├─ testHandleS_InitialSFollowedByO() ✔
+│     ├─ testHandleS_SIA_SlavoGermanicTrue() ✔
+│     ├─ testHandleS_InitialSFollowedByO_M() ✔
+│     ├─ testHandleS_FinalS() ✘ expected: <6> but was: <7>
+│     ├─ testHandleS_IndexGreaterThanLength() ✘ Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+│     ├─ testHandleS_SpecialCaseSugar() ✔
+│     ├─ testHandleS_SSSZ() ✘ expected: <2> but was: <1>
+│     ├─ testHandleS_NullInputString() ✔
+│     ├─ testHandleS_SIAN_SlavoGermanicFalse() ✔
+│     ├─ testHandleS_NegativeIndex() ✘ Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+│     ├─ testHandleS_SpecialCaseIsland() ✘ expected: <> but was: <S>
+│     ├─ testHandleS_SIO() ✔
+│     ├─ testHandleS_SC() ✘ expected: <2> but was: <3>
+│     ├─ testHandleS_SH() ✔
+│     ├─ testHandleS_SZ() ✔
+│     ├─ testHandleS_Germanic() ✔
+│     └─ testHandleS_NullResultObject() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (6):
+  JUnit Jupiter:DoubleMetaphone_handleS_Test:testHandleS_FinalS()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleS_Test', methodName = 'testHandleS_FinalS', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <6> but was: <7>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       org.apache.commons.codec.language.DoubleMetaphone_handleS_Test.testHandleS_FinalS(DoubleMetaphone_handleS_Test.java:112)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleS_Test:testHandleS_IndexGreaterThanLength()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleS_Test', methodName = 'testHandleS_IndexGreaterThanLength', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.language.DoubleMetaphone_handleS_Test.testHandleS_IndexGreaterThanLength(DoubleMetaphone_handleS_Test.java:229)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleS_Test:testHandleS_SSSZ()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleS_Test', methodName = 'testHandleS_SSSZ', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       org.apache.commons.codec.language.DoubleMetaphone_handleS_Test.testHandleS_SSSZ(DoubleMetaphone_handleS_Test.java:123)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleS_Test:testHandleS_NegativeIndex()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleS_Test', methodName = 'testHandleS_NegativeIndex', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.language.DoubleMetaphone_handleS_Test.testHandleS_NegativeIndex(DoubleMetaphone_handleS_Test.java:218)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleS_Test:testHandleS_SpecialCaseIsland()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleS_Test', methodName = 'testHandleS_SpecialCaseIsland', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <> but was: <S>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_handleS_Test.testHandleS_SpecialCaseIsland(DoubleMetaphone_handleS_Test.java:37)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleS_Test:testHandleS_SC()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleS_Test', methodName = 'testHandleS_SC', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       org.apache.commons.codec.language.DoubleMetaphone_handleS_Test.testHandleS_SC(DoubleMetaphone_handleS_Test.java:103)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 552 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        19 tests found           ]
+[         0 tests skipped         ]
+[        19 tests started         ]
+[         0 tests aborted         ]
+[        13 tests successful      ]
+[         6 tests failed          ]
+
+
+2026-09-12 13:25:59,335 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_SHGermanic --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_InitialSFollowedByA --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_InitialSFollowedByO --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_SIA_SlavoGermanicTrue --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_InitialSFollowedByO_M --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_SpecialCaseSugar --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_NullInputString --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_SIAN_SlavoGermanicFalse --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_SIO --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_SH --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_SZ --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_Germanic --select-method org.apache.commons.codec.language.DoubleMetaphone_handleS_Test#testHandleS_NullResultObject
+2026-09-12 13:26:00,519 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ DoubleMetaphone_handleS_Test ✔
+│     ├─ testHandleS_SHGermanic() ✔
+│     ├─ testHandleS_InitialSFollowedByA() ✔
+│     ├─ testHandleS_InitialSFollowedByO() ✔
+│     ├─ testHandleS_SIA_SlavoGermanicTrue() ✔
+│     ├─ testHandleS_InitialSFollowedByO_M() ✔
+│     ├─ testHandleS_SpecialCaseSugar() ✔
+│     ├─ testHandleS_NullInputString() ✔
+│     ├─ testHandleS_SIAN_SlavoGermanicFalse() ✔
+│     ├─ testHandleS_SIO() ✔
+│     ├─ testHandleS_SH() ✔
+│     ├─ testHandleS_SZ() ✔
+│     ├─ testHandleS_Germanic() ✔
+│     └─ testHandleS_NullResultObject() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 590 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        13 tests found           ]
+[         0 tests skipped         ]
+[        13 tests started         ]
+[         0 tests aborted         ]
+[        13 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:26:00,988 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/DaitchMokotoffSoundex_soundex_Test.java
+2026-09-12 13:26:01,361 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test
+2026-09-12 13:26:02,500 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:26:02,500 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ DaitchMokotoffSoundex_soundex_Test ✔
+│     ├─ testSoundexWithoutBranching() ✘ java.lang.ExceptionInInitializerError
+│     ├─ testSoundexExceptionScenarios() ✘ Could not initialize class org.apache.commons.codec.language.DaitchMokotoffSoundex
+│     ├─ testSoundexMethodWithVariousInputs() ✘ Could not initialize class org.apache.commons.codec.language.DaitchMokotoffSoundex
+│     └─ testSoundexWithBranching() ✘ Could not initialize class org.apache.commons.codec.language.DaitchMokotoffSoundex
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (4):
+  JUnit Jupiter:DaitchMokotoffSoundex_soundex_Test:testSoundexWithoutBranching()
+    MethodSource [className = 'org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test', methodName = 'testSoundexWithoutBranching', methodParameterTypes = '']
+    => java.lang.ExceptionInInitializerError
+       org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test.setupBeforeEach(DaitchMokotoffSoundex_soundex_Test.java:19)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+     Caused by: java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/dmrules.txt
+       org.apache.commons.codec.Resources.getInputStream(Resources.java:38)
+       org.apache.commons.codec.language.DaitchMokotoffSoundex.<clinit>(DaitchMokotoffSoundex.java:228)
+       [...]
+  JUnit Jupiter:DaitchMokotoffSoundex_soundex_Test:testSoundexExceptionScenarios()
+    MethodSource [className = 'org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test', methodName = 'testSoundexExceptionScenarios', methodParameterTypes = '']
+    => java.lang.NoClassDefFoundError: Could not initialize class org.apache.commons.codec.language.DaitchMokotoffSoundex
+       org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test.setupBeforeEach(DaitchMokotoffSoundex_soundex_Test.java:19)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+     Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/dmrules.txt [in thread "main"]
+       org.apache.commons.codec.Resources.getInputStream(Resources.java:38)
+       org.apache.commons.codec.language.DaitchMokotoffSoundex.<clinit>(DaitchMokotoffSoundex.java:228)
+       [...]
+  JUnit Jupiter:DaitchMokotoffSoundex_soundex_Test:testSoundexMethodWithVariousInputs()
+    MethodSource [className = 'org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test', methodName = 'testSoundexMethodWithVariousInputs', methodParameterTypes = '']
+    => java.lang.NoClassDefFoundError: Could not initialize class org.apache.commons.codec.language.DaitchMokotoffSoundex
+       org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test.setupBeforeEach(DaitchMokotoffSoundex_soundex_Test.java:19)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+     Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/dmrules.txt [in thread "main"]
+       org.apache.commons.codec.Resources.getInputStream(Resources.java:38)
+       org.apache.commons.codec.language.DaitchMokotoffSoundex.<clinit>(DaitchMokotoffSoundex.java:228)
+       [...]
+  JUnit Jupiter:DaitchMokotoffSoundex_soundex_Test:testSoundexWithBranching()
+    MethodSource [className = 'org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test', methodName = 'testSoundexWithBranching', methodParameterTypes = '']
+    => java.lang.NoClassDefFoundError: Could not initialize class org.apache.commons.codec.language.DaitchMokotoffSoundex
+       org.apache.commons.codec.language.DaitchMokotoffSoundex_soundex_Test.setupBeforeEach(DaitchMokotoffSoundex_soundex_Test.java:19)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+     Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.IllegalArgumentException: Unable to resolve required resource: org/apache/commons/codec/language/dmrules.txt [in thread "main"]
+       org.apache.commons.codec.Resources.getInputStream(Resources.java:38)
+       org.apache.commons.codec.language.DaitchMokotoffSoundex.<clinit>(DaitchMokotoffSoundex.java:228)
+       [...]
+
+Test run finished after 551 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         4 tests failed          ]
+
+
+2026-09-12 13:26:02,887 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/Nysiis_transcodeRemaining_Test.java
+2026-09-12 13:26:03,208 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test
+2026-09-12 13:26:04,463 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:26:04,463 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Nysiis_transcodeRemaining_Test ✔
+│     ├─ testTranscodeRemaining_EV() ✔
+│     ├─ testTranscodeRemaining_KN() ✔
+│     ├─ testTranscodeRemaining_PH() ✔
+│     ├─ testTranscodeRemaining_SCH() ✔
+│     ├─ testTranscodeRemaining_K() ✔
+│     ├─ testTranscodeRemaining_M() ✔
+│     ├─ testTranscodeRemaining_Q() ✔
+│     ├─ testTranscodeRemaining_Z() ✔
+│     ├─ testTranscodeRemaining_Vowel() ✔
+│     ├─ testTranscodeRemaining_H_prevNonVowel() ✔
+│     ├─ testTranscodeRemaining_Vowel_I() ✔
+│     ├─ testTranscodeRemaining_Vowel_O() ✔
+│     ├─ testTranscodeRemaining_Vowel_U() ✔
+│     ├─ testTranscodeRemaining_H_prevAndNextVowel() ✘ array contents differ at index [0], expected: <A> but was: <H>
+│     ├─ testTranscodeRemaining_Default() ✔
+│     ├─ testTranscodeRemaining_W_prevVowel() ✔
+│     ├─ testTranscodeRemaining_W_prevNonVowel() ✔
+│     └─ testTranscodeRemaining_H_nextNonVowel() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Nysiis_transcodeRemaining_Test:testTranscodeRemaining_H_prevAndNextVowel()
+    MethodSource [className = 'org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test', methodName = 'testTranscodeRemaining_H_prevAndNextVowel', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: array contents differ at index [0], expected: <A> but was: <H>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:193)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:47)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:51)
+       org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1203)
+       org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test.testTranscodeRemaining_H_prevAndNextVowel(Nysiis_transcodeRemaining_Test.java:248)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+
+Test run finished after 604 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        18 tests found           ]
+[         0 tests skipped         ]
+[        18 tests started         ]
+[         0 tests aborted         ]
+[        17 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-09-12 13:26:05,601 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_EV --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_KN --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_PH --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_SCH --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_K --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_M --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_Q --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_Z --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_Vowel --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_H_prevNonVowel --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_Vowel_I --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_Vowel_O --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_Vowel_U --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_Default --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_W_prevVowel --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_W_prevNonVowel --select-method org.apache.commons.codec.language.Nysiis_transcodeRemaining_Test#testTranscodeRemaining_H_nextNonVowel
+2026-09-12 13:26:07,259 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Nysiis_transcodeRemaining_Test ✔
+│     ├─ testTranscodeRemaining_EV() ✔
+│     ├─ testTranscodeRemaining_KN() ✔
+│     ├─ testTranscodeRemaining_PH() ✔
+│     ├─ testTranscodeRemaining_SCH() ✔
+│     ├─ testTranscodeRemaining_K() ✔
+│     ├─ testTranscodeRemaining_M() ✔
+│     ├─ testTranscodeRemaining_Q() ✔
+│     ├─ testTranscodeRemaining_Z() ✔
+│     ├─ testTranscodeRemaining_Vowel() ✔
+│     ├─ testTranscodeRemaining_H_prevNonVowel() ✔
+│     ├─ testTranscodeRemaining_Vowel_I() ✔
+│     ├─ testTranscodeRemaining_Vowel_O() ✔
+│     ├─ testTranscodeRemaining_Vowel_U() ✔
+│     ├─ testTranscodeRemaining_Default() ✔
+│     ├─ testTranscodeRemaining_W_prevVowel() ✔
+│     ├─ testTranscodeRemaining_W_prevNonVowel() ✔
+│     └─ testTranscodeRemaining_H_nextNonVowel() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 689 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        17 tests found           ]
+[         0 tests skipped         ]
+[        17 tests started         ]
+[         0 tests aborted         ]
+[        17 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:26:07,842 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java
+2026-09-12 13:26:08,314 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                  ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                       ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                            ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                 ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                              ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                           ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                             ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                                  ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                                                    ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                                                         ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                                                                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                                                                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                                                                                        ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64Internal_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+    private static final byte[] TEST_DATA = { 46, 246, 249, 184, 247, 84, 99, 144, 62, 77, 195, 220, 92, 20, 150, 159, 38, 40, 124, 252, 185, 28, 63, 13, 213, 172, 85, 198, 118, 74, 109, 157 };
+                                                                                                                                                                                           ^
+15 errors
+
+2026-09-12 13:26:08,317 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/Nysiis_nysiis_Test.java
+2026-09-12 13:26:08,764 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.Nysiis_nysiis_Test
+2026-09-12 13:26:10,229 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:26:10,230 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.Nysiis_nysiis_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Nysiis_nysiis_Test ✔
+│     ├─ testNysiisWithNull() ✔
+│     ├─ testNysiisWithVariousInputs() ✘ Failed on MACDONALD ==> expected: <MCCDONALD> but was: <MCDANA>
+│     ├─ testNysiisWithAdditionalCases() ✘ Failed on PHARMACY ==> expected: <FFARMACY> but was: <FARNAC>
+│     ├─ testNysiisWithStrictMode() ✔
+│     └─ testNysiisWithEmptyString() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:Nysiis_nysiis_Test:testNysiisWithVariousInputs()
+    MethodSource [className = 'org.apache.commons.codec.language.Nysiis_nysiis_Test', methodName = 'testNysiisWithVariousInputs', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Failed on MACDONALD ==> expected: <MCCDONALD> but was: <MCDANA>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.language.Nysiis_nysiis_Test.testNysiisWithVariousInputs(Nysiis_nysiis_Test.java:33)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:Nysiis_nysiis_Test:testNysiisWithAdditionalCases()
+    MethodSource [className = 'org.apache.commons.codec.language.Nysiis_nysiis_Test', methodName = 'testNysiisWithAdditionalCases', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Failed on PHARMACY ==> expected: <FFARMACY> but was: <FARNAC>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.language.Nysiis_nysiis_Test.testNysiisWithAdditionalCases(Nysiis_nysiis_Test.java:69)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 713 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-12 13:26:10,731 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.language.Nysiis_nysiis_Test#testNysiisWithNull --select-method org.apache.commons.codec.language.Nysiis_nysiis_Test#testNysiisWithStrictMode --select-method org.apache.commons.codec.language.Nysiis_nysiis_Test#testNysiisWithEmptyString
+2026-09-12 13:26:12,146 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Nysiis_nysiis_Test ✔
+│     ├─ testNysiisWithNull() ✔
+│     ├─ testNysiisWithStrictMode() ✔
+│     └─ testNysiisWithEmptyString() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 793 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:26:12,637 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/ColognePhonetic_colognePhonetic_Test.java
+2026-09-12 13:26:13,046 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test
+2026-09-12 13:26:14,553 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:26:14,553 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ ColognePhonetic_colognePhonetic_Test ✔
+│     ├─ testColognePhoneticWithEmptyInput() ✔
+│     ├─ testColognePhoneticWithVowelsAndY() ✘ expected: <0000000> but was: <0>
+│     ├─ testColognePhoneticWithValidInput() ✔
+│     ├─ testColognePhoneticWithCSZ() ✘ expected: <848> but was: <8>
+│     ├─ testColognePhoneticWithGKQ() ✘ expected: <444> but was: <4>
+│     ├─ testColognePhoneticWithLHR() ✔
+│     ├─ testColognePhoneticWithMNZ() ✘ expected: <668> but was: <68>
+│     ├─ testColognePhoneticWithPHT() ✘ expected: <38> but was: <32>
+│     ├─ testColognePhoneticWithSCH() ✘ expected: <84> but was: <8>
+│     ├─ testColognePhoneticWithTSC() ✘ expected: <84> but was: <8>
+│     ├─ testColognePhoneticWithZXC() ✘ expected: <884> but was: <848>
+│     ├─ testColognePhoneticWithNullInput() ✔
+│     ├─ testColognePhoneticWithH() ✔
+│     ├─ testColognePhoneticWithL() ✔
+│     ├─ testColognePhoneticWithR() ✔
+│     ├─ testColognePhoneticWithX() ✔
+│     ├─ testColognePhoneticWithAHKLOQRUX() ✘ expected: <045740478> but was: <0454748>
+│     ├─ testColognePhoneticWithABCD() ✘ expected: <0142> but was: <0182>
+│     ├─ testColognePhoneticWithFPVW() ✘ expected: <3333> but was: <313>
+│     ├─ testColognePhoneticWithBP() ✘ expected: <11> but was: <1>
+│     ├─ testColognePhoneticWithCK() ✔
+│     ├─ testColognePhoneticWithDT() ✘ expected: <28> but was: <2>
+│     ├─ testColognePhoneticWithGQ() ✘ expected: <44> but was: <4>
+│     ├─ testColognePhoneticWithMN() ✘ expected: <66> but was: <6>
+│     ├─ testColognePhoneticWithPH() ✔
+│     └─ testColognePhoneticWithQX() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (15):
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithVowelsAndY()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithVowelsAndY', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <0000000> but was: <0>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithVowelsAndY(ColognePhonetic_colognePhonetic_Test.java:59)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithCSZ()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithCSZ', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <848> but was: <8>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithCSZ(ColognePhonetic_colognePhonetic_Test.java:99)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithGKQ()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithGKQ', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <444> but was: <4>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithGKQ(ColognePhonetic_colognePhonetic_Test.java:119)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithMNZ()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithMNZ', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <668> but was: <68>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithMNZ(ColognePhonetic_colognePhonetic_Test.java:259)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithPHT()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithPHT', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <38> but was: <32>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithPHT(ColognePhonetic_colognePhonetic_Test.java:249)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithSCH()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithSCH', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <84> but was: <8>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithSCH(ColognePhonetic_colognePhonetic_Test.java:189)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithTSC()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithTSC', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <84> but was: <8>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithTSC(ColognePhonetic_colognePhonetic_Test.java:219)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithZXC()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithZXC', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <884> but was: <848>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithZXC(ColognePhonetic_colognePhonetic_Test.java:239)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithAHKLOQRUX()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithAHKLOQRUX', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <045740478> but was: <0454748>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithAHKLOQRUX(ColognePhonetic_colognePhonetic_Test.java:229)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithABCD()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithABCD', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <0142> but was: <0182>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithABCD(ColognePhonetic_colognePhonetic_Test.java:179)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithFPVW()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithFPVW', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <3333> but was: <313>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithFPVW(ColognePhonetic_colognePhonetic_Test.java:109)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithBP()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithBP', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <11> but was: <1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithBP(ColognePhonetic_colognePhonetic_Test.java:69)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithDT()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithDT', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <28> but was: <2>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithDT(ColognePhonetic_colognePhonetic_Test.java:89)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithGQ()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithGQ', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <44> but was: <4>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithGQ(ColognePhonetic_colognePhonetic_Test.java:279)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:ColognePhonetic_colognePhonetic_Test:testColognePhoneticWithMN()
+    MethodSource [className = 'org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test', methodName = 'testColognePhoneticWithMN', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <66> but was: <6>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test.testColognePhoneticWithMN(ColognePhonetic_colognePhonetic_Test.java:159)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 660 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        26 tests found           ]
+[         0 tests skipped         ]
+[        26 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[        15 tests failed          ]
+
+
+2026-09-12 13:26:15,054 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithEmptyInput --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithValidInput --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithLHR --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithNullInput --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithH --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithL --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithR --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithX --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithCK --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithPH --select-method org.apache.commons.codec.language.ColognePhonetic_colognePhonetic_Test#testColognePhoneticWithQX
+2026-09-12 13:26:16,461 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ ColognePhonetic_colognePhonetic_Test ✔
+│     ├─ testColognePhoneticWithEmptyInput() ✔
+│     ├─ testColognePhoneticWithValidInput() ✔
+│     ├─ testColognePhoneticWithLHR() ✔
+│     ├─ testColognePhoneticWithNullInput() ✔
+│     ├─ testColognePhoneticWithH() ✔
+│     ├─ testColognePhoneticWithL() ✔
+│     ├─ testColognePhoneticWithR() ✔
+│     ├─ testColognePhoneticWithX() ✔
+│     ├─ testColognePhoneticWithCK() ✔
+│     ├─ testColognePhoneticWithPH() ✔
+│     └─ testColognePhoneticWithQX() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 558 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:26:16,966 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_Test.java
+2026-09-12 13:26:17,406 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test
+2026-09-12 13:26:18,056 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:26:18,056 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_Test ✔
+│     ├─ testMd5CryptWithNullRandom() ✘ Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+│     ├─ testMd5CryptWithLongKeyBytes() ✔
+│     ├─ testMd5CryptWithMaxLengthSalt() ✔
+│     ├─ testMd5CryptWithApr1SaltUsingMd5Prefix() ✔
+│     ├─ testMd5CryptWithInvalidSalt() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testMd5CryptWithRandomSaltGeneration() ✔
+│     ├─ testMd5CryptWithValidInput() ✔
+│     ├─ testMd5CryptWithEmptySalt() ✔
+│     ├─ testMd5CryptWithNullKeyBytes() ✔
+│     ├─ testMd5CryptWithShortValidSalt() ✔
+│     ├─ testMd5CryptWithEmptyKeyBytes() ✔
+│     ├─ testMd5CryptWithNullSalt() ✔
+│     ├─ testMd5CryptWithApr1Prefix() ✔
+│     └─ testMd5CryptWithNullPrefix() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:Md5Crypt_md5Crypt_Test:testMd5CryptWithNullRandom()
+    MethodSource [className = 'org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test', methodName = 'testMd5CryptWithNullRandom', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test.testMd5CryptWithNullRandom(Md5Crypt_md5Crypt_Test.java:104)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:Md5Crypt_md5Crypt_Test:testMd5CryptWithInvalidSalt()
+    MethodSource [className = 'org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test', methodName = 'testMd5CryptWithInvalidSalt', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test.testMd5CryptWithInvalidSalt(Md5Crypt_md5Crypt_Test.java:117)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 98 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        14 tests found           ]
+[         0 tests skipped         ]
+[        14 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-12 13:26:18,450 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithLongKeyBytes --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithMaxLengthSalt --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithApr1SaltUsingMd5Prefix --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithRandomSaltGeneration --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithValidInput --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithEmptySalt --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithNullKeyBytes --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithShortValidSalt --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithEmptyKeyBytes --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithNullSalt --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithApr1Prefix --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#testMd5CryptWithNullPrefix
+2026-09-12 13:26:19,105 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_Test ✔
+│     ├─ testMd5CryptWithLongKeyBytes() ✔
+│     ├─ testMd5CryptWithMaxLengthSalt() ✔
+│     ├─ testMd5CryptWithApr1SaltUsingMd5Prefix() ✔
+│     ├─ testMd5CryptWithRandomSaltGeneration() ✔
+│     ├─ testMd5CryptWithValidInput() ✔
+│     ├─ testMd5CryptWithEmptySalt() ✔
+│     ├─ testMd5CryptWithNullKeyBytes() ✔
+│     ├─ testMd5CryptWithShortValidSalt() ✔
+│     ├─ testMd5CryptWithEmptyKeyBytes() ✔
+│     ├─ testMd5CryptWithNullSalt() ✔
+│     ├─ testMd5CryptWithApr1Prefix() ✔
+│     └─ testMd5CryptWithNullPrefix() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 83 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:26:19,483 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/DoubleMetaphone_doubleMetaphone_Test.java
+2026-09-12 13:26:19,839 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test
+2026-09-12 13:26:21,051 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:26:21,051 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ DoubleMetaphone_doubleMetaphone_Test ✔
+│     ├─ testDoubleMetaphoneNullInput() ✔
+│     ├─ testDoubleMetaphonePrimary() ✔
+│     ├─ testDoubleMetaphoneAlternate() ✔
+│     ├─ DoubleMetaphone Exception Tests ✔
+│     │  ├─ testEmptyInput() ✘ expected: <> but was: <null>
+│     │  ├─ testSingleVowelA() ✔
+│     │  └─ testSpecialCharacter() ✔
+│     ├─ DoubleMetaphone Additional Tests ✔
+│     │  ├─ testStartsWithX() ✘ expected: <SN> but was: <SNN>
+│     │  ├─ testTHAtStart() ✔
+│     │  ├─ testSCHAtStart() ✔
+│     │  ├─ testContainsCHT() ✘ expected: <KT> but was: <AKT>
+│     │  ├─ testMACAtStart() ✘ expected: <MKTLNT> but was: <MKTN>
+│     │  ├─ testCHAfterVowel() ✘ expected: <BK> but was: <PK>
+│     │  ├─ testSilentK() ✘ expected: <NKT> but was: <NT>
+│     │  ├─ testSilentP() ✔
+│     │  ├─ testSilentW() ✔
+│     │  └─ testPHAtStart() ✔
+│     └─ DoubleMetaphone Method Tests ✔
+│        ├─ testStartsWithC() ✔
+│        ├─ testStartsWithVowels() ✔
+│        ├─ testDoubleB() ✔
+│        ├─ testDoubleD() ✔
+│        ├─ testDoubleF() ✔
+│        ├─ testDoubleG() ✔
+│        ├─ testDoubleH() ✔
+│        ├─ testDoubleJ() ✘ expected: <H> but was: <J>
+│        ├─ testDoubleK() ✔
+│        ├─ testDoubleL() ✔
+│        ├─ testDoubleM() ✔
+│        ├─ testDoubleN() ✔
+│        ├─ testDoubleP() ✔
+│        ├─ testDoubleQ() ✔
+│        ├─ testDoubleR() ✔
+│        ├─ testDoubleS() ✔
+│        ├─ testDoubleT() ✔
+│        ├─ testDoubleV() ✔
+│        ├─ testDoubleW() ✔
+│        ├─ testDoubleX() ✘ expected: <KS> but was: <SKS>
+│        ├─ testDoubleZ() ✔
+│        ├─ testNullInput() ✔
+│        └─ testAlternateEncodingC() ✘ expected: <S> but was: <K>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (9):
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Exception Tests:testEmptyInput()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneExceptionTests', methodName = 'testEmptyInput', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <> but was: <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneExceptionTests.testEmptyInput(DoubleMetaphone_doubleMetaphone_Test.java:409)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Additional Tests:testStartsWithX()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests', methodName = 'testStartsWithX', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <SN> but was: <SNN>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests.testStartsWithX(DoubleMetaphone_doubleMetaphone_Test.java:369)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Additional Tests:testContainsCHT()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests', methodName = 'testContainsCHT', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <KT> but was: <AKT>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests.testContainsCHT(DoubleMetaphone_doubleMetaphone_Test.java:381)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Additional Tests:testMACAtStart()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests', methodName = 'testMACAtStart', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <MKTLNT> but was: <MKTN>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests.testMACAtStart(DoubleMetaphone_doubleMetaphone_Test.java:301)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Additional Tests:testCHAfterVowel()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests', methodName = 'testCHAfterVowel', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <BK> but was: <PK>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests.testCHAfterVowel(DoubleMetaphone_doubleMetaphone_Test.java:289)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Additional Tests:testSilentK()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests', methodName = 'testSilentK', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <NKT> but was: <NT>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneAdditionalTests.testSilentK(DoubleMetaphone_doubleMetaphone_Test.java:313)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Method Tests:testDoubleJ()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneMethodTests', methodName = 'testDoubleJ', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <H> but was: <J>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneMethodTests.testDoubleJ(DoubleMetaphone_doubleMetaphone_Test.java:116)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Method Tests:testDoubleX()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneMethodTests', methodName = 'testDoubleX', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <KS> but was: <SKS>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneMethodTests.testDoubleX(DoubleMetaphone_doubleMetaphone_Test.java:249)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_doubleMetaphone_Test:DoubleMetaphone Method Tests:testAlternateEncodingC()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneMethodTests', methodName = 'testAlternateEncodingC', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <S> but was: <K>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test$DoubleMetaphoneMethodTests.testAlternateEncodingC(DoubleMetaphone_doubleMetaphone_Test.java:272)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 587 ms
+[         7 containers found      ]
+[         0 containers skipped    ]
+[         7 containers started    ]
+[         0 containers aborted    ]
+[         7 containers successful ]
+[         0 containers failed     ]
+[        39 tests found           ]
+[         0 tests skipped         ]
+[        39 tests started         ]
+[         0 tests aborted         ]
+[        30 tests successful      ]
+[         9 tests failed          ]
+
+
+2026-09-12 13:26:21,456 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleMetaphoneNullInput --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleMetaphonePrimary --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleMetaphoneAlternate --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testSingleVowelA --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testSpecialCharacter --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testTHAtStart --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testSCHAtStart --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testSilentP --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testSilentW --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testPHAtStart --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testStartsWithC --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testStartsWithVowels --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleB --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleD --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleF --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleG --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleH --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleK --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleL --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleM --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleN --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleP --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleQ --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleR --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleS --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleT --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleV --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleW --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testDoubleZ --select-method org.apache.commons.codec.language.DoubleMetaphone_doubleMetaphone_Test#testNullInput
+2026-09-12 13:26:22,048 - evaluations.coverage_test - INFO - test execution info: Usage: ConsoleLauncher [OPTIONS]
+Launches the JUnit Platform for test discovery and execution.
+      [@<filename>...]       One or more argument files containing options.
+
+COMMANDS
+
+  -h, --help                 Display help information.
+      --list-engines         List all observable test engines.
+
+SELECTORS
+
+      --scan-classpath, --scan-class-path[=PATH]
+                             Scan all directories on the classpath or explicit classpath
+                               roots. Without arguments, only directories on the system
+                               classpath as well as additional classpath entries supplied via
+                               -cp (directories and JAR files) are scanned. Explicit classpath
+                               roots that are not on the classpath will be silently ignored.
+                               This option can be repeated.
+      --scan-modules         EXPERIMENTAL: Scan all resolved modules for test discovery.
+  -u, --select-uri=URI       Select a URI for test discovery. This option can be repeated.
+  -f, --select-file=FILE     Select a file for test discovery. This option can be repeated.
+  -d, --select-directory=DIR Select a directory for test discovery. This option can be
+                               repeated.
+  -o, --select-module=NAME   EXPERIMENTAL: Select single module for test discovery. This
+                               option can be repeated.
+  -p, --select-package=PKG   Select a package for test discovery. This option can be repeated.
+  -c, --select-class=CLASS   Select a class for test discovery. This option can be repeated.
+  -m, --select-method=NAME   Select a method for test discovery. This option can be repeated.
+  -r, --select-resource=RESOURCE
+                             Select a classpath resource for test discovery. This option can
+                               be repeated.
+  -i, --select-iteration=TYPE:VALUE[INDEX(..INDEX)?(,INDEX(..INDEX)?)*]
+                             Select iterations for test discovery (e.g. method:com.acme.Foo#m()
+                               [1..2]). This option can be repeated.
+
+FILTERS
+
+  -n, --include-classname=PATTERN
+                             Provide a regular expression to include only classes whose fully
+                               qualified names match. To avoid loading classes unnecessarily,
+                               the default pattern only includes class names that begin with
+                               "Test" or end with "Test" or "Tests". When this option is
+                               repeated, all patterns will be combined using OR semantics.
+                               Default: ^(Test.*|.+[.$]Test.*|.*Tests?)$
+  -N, --exclude-classname=PATTERN
+                             Provide a regular expression to exclude those classes whose fully
+                               qualified names match. When this option is repeated, all
+                               patterns will be combined using OR semantics.
+      --include-package=PKG  Provide a package to be included in the test run. This option can
+                               be repeated.
+      --exclude-package=PKG  Provide a package to be excluded from the test run. This option
+                               can be repeated.
+  -t, --include-tag=TAG      Provide a tag or tag expression to include only tests whose tags
+                               match. When this option is repeated, all patterns will be
+                               combined using OR semantics.
+  -T, --exclude-tag=TAG      Provide a tag or tag expression to exclude those tests whose tags
+                               match. When this option is repeated, all patterns will be
+                               combined using OR semantics.
+  -e, --include-engine=ID    Provide the ID of an engine to be included in the test run. This
+                               option can be repeated.
+  -E, --exclude-engine=ID    Provide the ID of an engine to be excluded from the test run.
+                               This option can be repeated.
+
+RUNTIME CONFIGURATION
+
+      -cp, --classpath, --class-path=PATH
+                             Provide additional classpath entries -- for example, for adding
+                               engines and their dependencies. This option can be repeated.
+      --config=KEY=VALUE     Set a configuration parameter for test discovery and execution.
+                               This option can be repeated.
+
+REPORTING
+
+      --fail-if-no-tests     Fail and return exit status code 2 if no tests are found.
+      --reports-dir=DIR      Enable report output into a specified local directory (will be
+                               created if it does not exist).
+
+CONSOLE OUTPUT
+
+      --disable-ansi-colors  Disable ANSI colors in output (not supported by all terminals).
+      --color-palette=FILE   Specify a path to a properties file to customize ANSI style of
+                               output (not supported by all terminals).
+      --single-color         Style test output using only text attributes, no color (not
+                               supported by all terminals).
+      --disable-banner       Disable print out of the welcome message.
+      --details=MODE         Select an output details mode for when tests are executed. Use
+                               one of: none, summary, flat, tree, verbose. If 'none' is
+                               selected, then only the summary and test failures are shown.
+                               Default: tree.
+      --details-theme=THEME  Select an output details tree theme for when tests are executed.
+                               Use one of: ascii, unicode. Default is detected based on
+                               default character encoding.
+
+For more information, please refer to the JUnit User Guide at
+https://junit.org/junit5/docs/current/user-guide/
+
+2026-09-12 13:26:22,525 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/Metaphone_metaphone_Test.java
+2026-09-12 13:26:22,870 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.Metaphone_metaphone_Test
+2026-09-12 13:26:24,197 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:26:24,197 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.Metaphone_metaphone_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Metaphone_metaphone_Test ✔
+│     ├─ testMetaphoneWithSingleCharacter() ✔
+│     ├─ testMetaphoneWithSpecialCases() ✘ expected: <> but was: <X>
+│     ├─ testMetaphoneWithAdditionalCases() ✘ expected: <FT> but was: <KT>
+│     ├─ testMetaphoneWithNullInput() ✔
+│     ├─ testMetaphoneWithEmptyString() ✔
+│     ├─ testMetaphoneWithInitialExceptions() ✘ expected: <NKT> but was: <NT>
+│     └─ testMetaphoneWithValidInput() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:Metaphone_metaphone_Test:testMetaphoneWithSpecialCases()
+    MethodSource [className = 'org.apache.commons.codec.language.Metaphone_metaphone_Test', methodName = 'testMetaphoneWithSpecialCases', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <> but was: <X>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.Metaphone_metaphone_Test.testMetaphoneWithSpecialCases(Metaphone_metaphone_Test.java:85)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:Metaphone_metaphone_Test:testMetaphoneWithAdditionalCases()
+    MethodSource [className = 'org.apache.commons.codec.language.Metaphone_metaphone_Test', methodName = 'testMetaphoneWithAdditionalCases', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <FT> but was: <KT>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.Metaphone_metaphone_Test.testMetaphoneWithAdditionalCases(Metaphone_metaphone_Test.java:97)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:Metaphone_metaphone_Test:testMetaphoneWithInitialExceptions()
+    MethodSource [className = 'org.apache.commons.codec.language.Metaphone_metaphone_Test', methodName = 'testMetaphoneWithInitialExceptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <NKT> but was: <NT>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       org.apache.commons.codec.language.Metaphone_metaphone_Test.testMetaphoneWithInitialExceptions(Metaphone_metaphone_Test.java:65)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 704 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-09-12 13:26:24,708 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.language.Metaphone_metaphone_Test#testMetaphoneWithSingleCharacter --select-method org.apache.commons.codec.language.Metaphone_metaphone_Test#testMetaphoneWithNullInput --select-method org.apache.commons.codec.language.Metaphone_metaphone_Test#testMetaphoneWithEmptyString --select-method org.apache.commons.codec.language.Metaphone_metaphone_Test#testMetaphoneWithValidInput
+2026-09-12 13:26:25,930 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Metaphone_metaphone_Test ✔
+│     ├─ testMetaphoneWithSingleCharacter() ✔
+│     ├─ testMetaphoneWithNullInput() ✔
+│     ├─ testMetaphoneWithEmptyString() ✔
+│     └─ testMetaphoneWithValidInput() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 585 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:26:26,388 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/language/DoubleMetaphone_handleC_Test.java
+2026-09-12 13:26:26,758 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.language.DoubleMetaphone_handleC_Test
+2026-09-12 13:26:28,449 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:26:28,450 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.language.DoubleMetaphone_handleC_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ DoubleMetaphone_handleC_Test ✔
+│     ├─ testHandleC_Exception_NegativeIndex() ✘ Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+│     ├─ testHandleC_Exception_IndexOutOfBounds() ✘ Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+│     ├─ testHandleC_Default() ✔
+│     ├─ testHandleC_Exception_NullResult() ✔
+│     ├─ testHandleC_Exception_NullValue() ✔
+│     ├─ testHandleC_Caeser() ✔
+│     ├─ testHandleC_CIA() ✘ expected: <3> but was: <2>
+│     ├─ testHandleC_CIO() ✔
+│     ├─ testHandleC_Mac() ✘ expected: <3> but was: <1>
+│     ├─ testHandleC_CH() ✔
+│     ├─ testHandleC_CI() ✔
+│     ├─ testHandleC_CK() ✘ expected: <2> but was: <1>
+│     └─ testHandleC_CZ() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (5):
+  JUnit Jupiter:DoubleMetaphone_handleC_Test:testHandleC_Exception_NegativeIndex()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleC_Test', methodName = 'testHandleC_Exception_NegativeIndex', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.language.DoubleMetaphone_handleC_Test.testHandleC_Exception_NegativeIndex(DoubleMetaphone_handleC_Test.java:140)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleC_Test:testHandleC_Exception_IndexOutOfBounds()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleC_Test', methodName = 'testHandleC_Exception_IndexOutOfBounds', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.language.DoubleMetaphone_handleC_Test.testHandleC_Exception_IndexOutOfBounds(DoubleMetaphone_handleC_Test.java:149)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleC_Test:testHandleC_CIA()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleC_Test', methodName = 'testHandleC_CIA', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       org.apache.commons.codec.language.DoubleMetaphone_handleC_Test.testHandleC_CIA(DoubleMetaphone_handleC_Test.java:60)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleC_Test:testHandleC_Mac()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleC_Test', methodName = 'testHandleC_Mac', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <3> but was: <1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       org.apache.commons.codec.language.DoubleMetaphone_handleC_Test.testHandleC_Mac(DoubleMetaphone_handleC_Test.java:106)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:DoubleMetaphone_handleC_Test:testHandleC_CK()
+    MethodSource [className = 'org.apache.commons.codec.language.DoubleMetaphone_handleC_Test', methodName = 'testHandleC_CK', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+       org.apache.commons.codec.language.DoubleMetaphone_handleC_Test.testHandleC_CK(DoubleMetaphone_handleC_Test.java:88)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 822 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        13 tests found           ]
+[         0 tests skipped         ]
+[        13 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         5 tests failed          ]
+
+
+2026-09-12 13:26:28,933 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.language.DoubleMetaphone_handleC_Test#testHandleC_Default --select-method org.apache.commons.codec.language.DoubleMetaphone_handleC_Test#testHandleC_Exception_NullResult --select-method org.apache.commons.codec.language.DoubleMetaphone_handleC_Test#testHandleC_Exception_NullValue --select-method org.apache.commons.codec.language.DoubleMetaphone_handleC_Test#testHandleC_Caeser --select-method org.apache.commons.codec.language.DoubleMetaphone_handleC_Test#testHandleC_CIO --select-method org.apache.commons.codec.language.DoubleMetaphone_handleC_Test#testHandleC_CH --select-method org.apache.commons.codec.language.DoubleMetaphone_handleC_Test#testHandleC_CI --select-method org.apache.commons.codec.language.DoubleMetaphone_handleC_Test#testHandleC_CZ
+2026-09-12 13:26:30,191 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ DoubleMetaphone_handleC_Test ✔
+│     ├─ testHandleC_Default() ✔
+│     ├─ testHandleC_Exception_NullResult() ✔
+│     ├─ testHandleC_Exception_NullValue() ✔
+│     ├─ testHandleC_Caeser() ✔
+│     ├─ testHandleC_CIO() ✔
+│     ├─ testHandleC_CH() ✔
+│     ├─ testHandleC_CI() ✔
+│     └─ testHandleC_CZ() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 662 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:26:30,600 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha2Crypt_Test.java
+2026-09-12 13:26:30,989 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Sha2Crypt_sha2Crypt_Test
+2026-09-12 13:32:37,234 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 13:32:37,235 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.Sha2Crypt_sha2Crypt_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha2Crypt_Test ✔
+│     ├─ testSha512CryptWithSalt() ✔
+│     ├─ testSha512CryptWithNullSalt() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testSha256CryptWithSalt() ✔
+│     ├─ testSha256CryptWithNullSalt() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     └─ testSha2CryptMethodAdditional() 364785 ms ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:Sha2Crypt_sha2Crypt_Test:testSha512CryptWithNullSalt()
+    MethodSource [className = 'org.apache.commons.codec.digest.Sha2Crypt_sha2Crypt_Test', methodName = 'testSha512CryptWithNullSalt', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.digest.Sha2Crypt_sha2Crypt_Test.testSha512CryptWithNullSalt(Sha2Crypt_sha2Crypt_Test.java:57)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:Sha2Crypt_sha2Crypt_Test:testSha256CryptWithNullSalt()
+    MethodSource [className = 'org.apache.commons.codec.digest.Sha2Crypt_sha2Crypt_Test', methodName = 'testSha256CryptWithNullSalt', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       org.apache.commons.codec.digest.Sha2Crypt_sha2Crypt_Test.testSha256CryptWithNullSalt(Sha2Crypt_sha2Crypt_Test.java:38)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 365600 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-09-12 13:32:37,705 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Sha2Crypt_sha2Crypt_Test#testSha512CryptWithSalt --select-method org.apache.commons.codec.digest.Sha2Crypt_sha2Crypt_Test#testSha256CryptWithSalt
+2026-09-12 13:32:39,177 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha2Crypt_Test ✔
+│     ├─ testSha512CryptWithSalt() ✔
+│     └─ testSha256CryptWithSalt() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 757 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 13:32:39,568 - evaluations.coverage_test - INFO - {'org.apache.commons.codec.binary.Base64#decode(byte[], int, int, Context)': {'test_cases': 15, 'passed_cases': 15}, 'org.apache.commons.codec.net.QuotedPrintableCodec#encodeQuotedPrintable(BitSet, byte[], boolean)': {'test_cases': 10, 'passed_cases': 5}, 'org.apache.commons.codec.binary.Base32#decode(byte[], int, int, Context)': {'test_cases': 4, 'passed_cases': 1}, 'org.apache.commons.codec.binary.Base64#encode(byte[], int, int, Context)': {'test_cases': 18, 'passed_cases': 17}, 'org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)': {'test_cases': 17, 'passed_cases': 10}, 'org.apache.commons.codec.binary.Base32#encode(byte[], int, int, Context)': {'test_cases': 17, 'passed_cases': 16}, 'org.apache.commons.codec.language.bm.Rule#pattern(String)': {'error_type': 'compile error'}, 'org.apache.commons.codec.language.DoubleMetaphone#handleS(String, DoubleMetaphoneResult, int, boolean)': {'test_cases': 19, 'passed_cases': 13}, 'org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)': {'test_cases': 4, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'org.apache.commons.codec.language.Nysiis#transcodeRemaining(char, char, char, char)': {'test_cases': 18, 'passed_cases': 17}, 'org.apache.commons.codec.digest.MurmurHash3#hash128x64Internal(byte[], int, int, long)': {'error_type': 'compile error'}, 'org.apache.commons.codec.language.Nysiis#nysiis(String)': {'test_cases': 5, 'passed_cases': 3}, 'org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)': {'test_cases': 26, 'passed_cases': 11}, 'org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)': {'test_cases': 14, 'passed_cases': 12}, 'org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)': {'test_cases': 39, 'passed_cases': 30}, 'org.apache.commons.codec.language.Metaphone#metaphone(String)': {'test_cases': 7, 'passed_cases': 4}, 'org.apache.commons.codec.language.DoubleMetaphone#handleC(String, DoubleMetaphoneResult, int)': {'test_cases': 13, 'passed_cases': 8}, 'org.apache.commons.codec.digest.Sha2Crypt#sha2Crypt(byte[], String, String, int, String)': {'test_cases': 5, 'passed_cases': 3}}
+2026-09-12 13:32:39,568 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base64_decode/org.apache.commons.codec.binary/Base64.html, method: decode(byte[], int, int, Context)
+2026-09-12 13:32:39,577 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base64_decode_correct/org.apache.commons.codec.binary/Base64.html, method: decode(byte[], int, int, Context)
+2026-09-12 13:32:39,584 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/QuotedPrintableCodec_encodeQuotedPrintable/org.apache.commons.codec.net/QuotedPrintableCodec.html, method: encodeQuotedPrintable(BitSet, byte[], boolean)
+2026-09-12 13:32:39,588 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/QuotedPrintableCodec_encodeQuotedPrintable_correct/org.apache.commons.codec.net/QuotedPrintableCodec.html, method: encodeQuotedPrintable(BitSet, byte[], boolean)
+2026-09-12 13:32:39,592 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base32_decode/org.apache.commons.codec.binary/Base32.html, method: decode(byte[], int, int, Context)
+2026-09-12 13:32:39,595 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base32_decode_correct/org.apache.commons.codec.binary/Base32.html, method: decode(byte[], int, int, Context)
+2026-09-12 13:32:39,598 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base64_encode/org.apache.commons.codec.binary/Base64.html, method: encode(byte[], int, int, Context)
+2026-09-12 13:32:39,603 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base64_encode_correct/org.apache.commons.codec.binary/Base64.html, method: encode(byte[], int, int, Context)
+2026-09-12 13:32:39,607 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DoubleMetaphone_handleG/org.apache.commons.codec.language/DoubleMetaphone.html, method: handleG(String, DoubleMetaphoneResult, int, boolean)
+2026-09-12 13:32:39,616 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DoubleMetaphone_handleG_correct/org.apache.commons.codec.language/DoubleMetaphone.html, method: handleG(String, DoubleMetaphoneResult, int, boolean)
+2026-09-12 13:32:39,622 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base32_encode/org.apache.commons.codec.binary/Base32.html, method: encode(byte[], int, int, Context)
+2026-09-12 13:32:39,625 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base32_encode_correct/org.apache.commons.codec.binary/Base32.html, method: encode(byte[], int, int, Context)
+2026-09-12 13:32:39,630 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DoubleMetaphone_handleS/org.apache.commons.codec.language/DoubleMetaphone.html, method: handleS(String, DoubleMetaphoneResult, int, boolean)
+2026-09-12 13:32:39,635 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DoubleMetaphone_handleS_correct/org.apache.commons.codec.language/DoubleMetaphone.html, method: handleS(String, DoubleMetaphoneResult, int, boolean)
+2026-09-12 13:32:39,640 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DaitchMokotoffSoundex_soundex/org.apache.commons.codec.language/DaitchMokotoffSoundex.html, method: soundex(String, boolean)
+2026-09-12 13:32:39,643 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Nysiis_transcodeRemaining/org.apache.commons.codec.language/Nysiis.html, method: transcodeRemaining(char, char, char, char)
+2026-09-12 13:32:39,645 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Nysiis_transcodeRemaining_correct/org.apache.commons.codec.language/Nysiis.html, method: transcodeRemaining(char, char, char, char)
+2026-09-12 13:32:39,649 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Nysiis_nysiis/org.apache.commons.codec.language/Nysiis.html, method: nysiis(String)
+2026-09-12 13:32:39,651 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Nysiis_nysiis_correct/org.apache.commons.codec.language/Nysiis.html, method: nysiis(String)
+2026-09-12 13:32:39,653 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/ColognePhonetic_colognePhonetic/org.apache.commons.codec.language/ColognePhonetic.html, method: colognePhonetic(String)
+2026-09-12 13:32:39,655 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/ColognePhonetic_colognePhonetic_correct/org.apache.commons.codec.language/ColognePhonetic.html, method: colognePhonetic(String)
+2026-09-12 13:32:39,657 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Md5Crypt_md5Crypt/org.apache.commons.codec.digest/Md5Crypt.html, method: md5Crypt(byte[], String, String, Random)
+2026-09-12 13:32:39,660 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Md5Crypt_md5Crypt_correct/org.apache.commons.codec.digest/Md5Crypt.html, method: md5Crypt(byte[], String, String, Random)
+2026-09-12 13:32:39,662 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DoubleMetaphone_doubleMetaphone/org.apache.commons.codec.language/DoubleMetaphone.html, method: doubleMetaphone(String, boolean)
+2026-09-12 13:32:39,686 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DoubleMetaphone_doubleMetaphone_correct/org.apache.commons.codec.language/DoubleMetaphone.html, method: doubleMetaphone(String, boolean)
+2026-09-12 13:32:39,698 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Metaphone_metaphone/org.apache.commons.codec.language/Metaphone.html, method: metaphone(String)
+2026-09-12 13:32:39,704 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Metaphone_metaphone_correct/org.apache.commons.codec.language/Metaphone.html, method: metaphone(String)
+2026-09-12 13:32:39,707 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DoubleMetaphone_handleC/org.apache.commons.codec.language/DoubleMetaphone.html, method: handleC(String, DoubleMetaphoneResult, int)
+2026-09-12 13:32:39,712 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/DoubleMetaphone_handleC_correct/org.apache.commons.codec.language/DoubleMetaphone.html, method: handleC(String, DoubleMetaphoneResult, int)
+2026-09-12 13:32:39,717 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Sha2Crypt_sha2Crypt/org.apache.commons.codec.digest/Sha2Crypt.html, method: sha2Crypt(byte[], String, String, int, String)
+2026-09-12 13:32:39,719 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Sha2Crypt_sha2Crypt_correct/org.apache.commons.codec.digest/Sha2Crypt.html, method: sha2Crypt(byte[], String, String, int, String)
+2026-09-12 13:32:39,720 - evaluations.coverage_test - INFO - report data:
+{'org.apache.commons.codec.binary.Base64#decode(byte[], int, int, Context)': {'test_cases': 15, 'passed_cases': 15, 'inst_cov': 0.27, 'bran_cov': 0.62, 'correct_inst_cov': 0.27, 'correct_bran_cov': 0.62}, 'org.apache.commons.codec.net.QuotedPrintableCodec#encodeQuotedPrintable(BitSet, byte[], boolean)': {'test_cases': 10, 'passed_cases': 5, 'inst_cov': 0.75, 'bran_cov': 0.65, 'correct_inst_cov': 0.72, 'correct_bran_cov': 0.57}, 'org.apache.commons.codec.binary.Base32#decode(byte[], int, int, Context)': {'test_cases': 4, 'passed_cases': 1, 'inst_cov': 0.12, 'bran_cov': 0.5, 'correct_inst_cov': 0.04, 'correct_bran_cov': 0.14}, 'org.apache.commons.codec.binary.Base64#encode(byte[], int, int, Context)': {'test_cases': 18, 'passed_cases': 18, 'inst_cov': 0.82, 'bran_cov': 0.6, 'correct_inst_cov': 0.82, 'correct_bran_cov': 0.6}, 'org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)': {'test_cases': 17, 'passed_cases': 10, 'inst_cov': 0.55, 'bran_cov': 0.44, 'correct_inst_cov': 0.55, 'correct_bran_cov': 0.42}, 'org.apache.commons.codec.binary.Base32#encode(byte[], int, int, Context)': {'test_cases': 17, 'passed_cases': 17, 'inst_cov': 0.92, 'bran_cov': 0.6, 'correct_inst_cov': 0.92, 'correct_bran_cov': 0.6}, 'org.apache.commons.codec.language.bm.Rule#pattern(String)': {'error_type': 'compile error', 'test_cases': 11, 'passed_cases': 0}, 'org.apache.commons.codec.language.DoubleMetaphone#handleS(String, DoubleMetaphoneResult, int, boolean)': {'test_cases': 19, 'passed_cases': 13, 'inst_cov': 0.91, 'bran_cov': 0.84, 'correct_inst_cov': 0.87, 'correct_bran_cov': 0.71}, 'org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)': {'test_cases': 4, 'passed_cases': 0, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0, 'inst_cov': 0.0, 'bran_cov': 0.0}, 'org.apache.commons.codec.language.Nysiis#transcodeRemaining(char, char, char, char)': {'test_cases': 18, 'passed_cases': 17, 'inst_cov': 1.0, 'bran_cov': 0.9, 'correct_inst_cov': 1.0, 'correct_bran_cov': 0.87}, 'org.apache.commons.codec.digest.MurmurHash3#hash128x64Internal(byte[], int, int, long)': {'error_type': 'compile error', 'test_cases': 18, 'passed_cases': 0}, 'org.apache.commons.codec.language.Nysiis#nysiis(String)': {'test_cases': 5, 'passed_cases': 3, 'inst_cov': 0.86, 'bran_cov': 0.8, 'correct_inst_cov': 0.86, 'correct_bran_cov': 0.69}, 'org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)': {'test_cases': 26, 'passed_cases': 11, 'inst_cov': 0.97, 'bran_cov': 0.92, 'correct_inst_cov': 0.8, 'correct_bran_cov': 0.67}, 'org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)': {'test_cases': 14, 'passed_cases': 14, 'inst_cov': 1.0, 'bran_cov': 1.0, 'correct_inst_cov': 1.0, 'correct_bran_cov': 1.0}, 'org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)': {'test_cases': 39, 'passed_cases': 30, 'inst_cov': 0.92, 'bran_cov': 0.87, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'org.apache.commons.codec.language.Metaphone#metaphone(String)': {'test_cases': 7, 'passed_cases': 4, 'inst_cov': 0.57, 'bran_cov': 0.46, 'correct_inst_cov': 0.17, 'correct_bran_cov': 0.13}, 'org.apache.commons.codec.language.DoubleMetaphone#handleC(String, DoubleMetaphoneResult, int)': {'test_cases': 13, 'passed_cases': 8, 'inst_cov': 0.8, 'bran_cov': 0.59, 'correct_inst_cov': 0.8, 'correct_bran_cov': 0.56}, 'org.apache.commons.codec.digest.Sha2Crypt#sha2Crypt(byte[], String, String, int, String)': {'test_cases': 5, 'passed_cases': 3, 'inst_cov': 0.93, 'bran_cov': 0.85, 'correct_inst_cov': 0.93, 'correct_bran_cov': 0.79}, 'compile_pass_rate': 0.8884615384615384, 'execution_pass_rate': 0.65, 'average_instruction_coverage': 0.6327777777777778, 'average_branch_coverage': 0.5911111111111111, 'average_correct_instruction_coverage': 0.5416666666666667, 'average_correct_branch_coverage': 0.4650000000000001}

@@ -1,0 +1,303 @@
+[
+  {
+    "group": "md5Crypt Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "null"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with random salt",
+        "description": "Test with null salt to trigger random salt generation"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcdefg"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with provided salt",
+        "description": "Test with valid salt that matches pattern"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$invalid_salt"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "IllegalArgumentException with message 'Invalid salt value: $1$invalid_salt'",
+        "description": "Test with invalid salt that does not match pattern"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$apr1$abcdefg"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$apr1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with provided salt using APR1 prefix",
+        "description": "Test with APR1 prefix and valid salt"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "null"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$apr1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with random salt using APR1 prefix",
+        "description": "Test with null salt and APR1 prefix to trigger random salt generation"
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abc"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with short valid salt",
+        "description": "Test with a short valid salt (3 characters) that matches pattern"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcdefgh"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with maximum length salt",
+        "description": "Test with a salt of maximum allowed length (8 characters)"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99, 100, 101, 102, 103, 104, 105, 106]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcde"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with longer keyBytes",
+        "description": "Test with longer keyBytes array to ensure method handles longer inputs"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcde"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with empty keyBytes",
+        "description": "Test with empty keyBytes array to see how the method handles it"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$apr1$abcde"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "Generated hash with APR1 salt using MD5 prefix",
+        "description": "Test with APR1 salt but using MD5 prefix to check prefix handling"
+      }
+    ]
+  },
+  {
+    "group": "md5Crypt Null Input Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "null"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcde"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with null keyBytes to trigger NullPointerException"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "null"
+          },
+          {
+            "parameter": "prefix",
+            "value": "null"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with null prefix to trigger NullPointerException"
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "[97, 98, 99]"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcde"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with null random to trigger NullPointerException"
+      }
+    ]
+  }
+]

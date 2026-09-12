@@ -1,0 +1,4 @@
+{
+    "group": "encodeQuotedPrintable",
+    "cases": []
+}
