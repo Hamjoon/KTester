@@ -1,0 +1,412 @@
+[
+  {
+    "group": "getSparkConf Method Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-123"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "spark.executor.memory": "2g"
+              },
+              "applicationName": "TestApp"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "spark.executor.memory": "1g",
+                "spark.driver.memory": "1g"
+              },
+              "fixedSparkConf": {
+                "spark.driver.cores": "1"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {
+                "spark.executor.cores": "2"
+              }
+            }
+          }
+        ],
+        "expected": {
+          "spark.executor.memory": "2g",
+          "spark.driver.memory": "1g",
+          "spark.executor.cores": "2",
+          "spark.driver.cores": "1",
+          "spark.app.name": "TestApp"
+        },
+        "description": "Test with all configurations provided to ensure priority order is followed and all branches are covered."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-456"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": null,
+        "description": "Test with all configurations set to null to ensure method handles empty inputs gracefully."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-789"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {},
+              "applicationName": "AppWithoutConf"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "spark.executor.memory": "4g"
+              },
+              "fixedSparkConf": {
+                "spark.executor.cores": "4"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {}
+            }
+          }
+        ],
+        "expected": {
+          "spark.executor.memory": "4g",
+          "spark.executor.cores": "4",
+          "spark.app.name": "AppWithoutConf"
+        },
+        "description": "Test with no sparkConf in request and sparkCluster but with default and fixed configurations in appConfig."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-101"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "spark.executor.memory": "3g"
+              },
+              "applicationName": ""
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "spark.executor.memory": "2g"
+              },
+              "fixedSparkConf": {
+                "spark.driver.memory": "1g"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {
+                "spark.executor.cores": "3"
+              }
+            }
+          }
+        ],
+        "expected": {
+          "spark.executor.memory": "3g",
+          "spark.driver.memory": "1g",
+          "spark.executor.cores": "3"
+        },
+        "description": "Test with empty application name to ensure it does not get added to the configuration."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf Additional Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-202"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "spark.executor.memory": "2g"
+              },
+              "applicationName": "AppWithOnlyRequestConf"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {
+          "spark.executor.memory": "2g",
+          "spark.app.name": "AppWithOnlyRequestConf"
+        },
+        "description": "Test with only request sparkConf and applicationName provided to ensure these are correctly applied when others are null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-303"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {},
+              "applicationName": "AppWithOnlyFixedConf"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": {
+                "spark.driver.memory": "2g"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": null
+            }
+          }
+        ],
+        "expected": {
+          "spark.driver.memory": "2g",
+          "spark.app.name": "AppWithOnlyFixedConf"
+        },
+        "description": "Test with only fixed sparkConf provided to ensure it is correctly applied when others are null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-404"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": null,
+              "applicationName": null
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "spark.driver.memory": "3g"
+              },
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {}
+            }
+          }
+        ],
+        "expected": {
+          "spark.driver.memory": "3g"
+        },
+        "description": "Test with only default sparkConf provided to ensure it is correctly applied when others are null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-505"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "spark.driver.memory": "4g"
+              },
+              "applicationName": "AppWithRequestAndClusterConf"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": null,
+              "fixedSparkConf": null
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {
+                "spark.executor.cores": "2"
+              }
+            }
+          }
+        ],
+        "expected": {
+          "spark.driver.memory": "4g",
+          "spark.executor.cores": "2",
+          "spark.app.name": "AppWithRequestAndClusterConf"
+        },
+        "description": "Test with sparkConf in both request and sparkCluster to ensure both are applied correctly."
+      }
+    ]
+  },
+  {
+    "group": "getSparkConf Exception Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-001"
+          },
+          {
+            "parameter": "request",
+            "value": null
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "spark.executor.memory": "1g"
+              },
+              "fixedSparkConf": {
+                "spark.driver.cores": "1"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {
+                "spark.executor.cores": "2"
+              }
+            }
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with null SubmitApplicationRequest to check handling of null request object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-002"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "spark.executor.memory": "2g"
+              },
+              "applicationName": "TestApp"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": null
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": {
+              "sparkConf": {
+                "spark.executor.cores": "2"
+              }
+            }
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with null AppConfig to check handling of null appConfig object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "submissionId",
+            "value": "sub-003"
+          },
+          {
+            "parameter": "request",
+            "value": {
+              "sparkConf": {
+                "spark.executor.memory": "2g"
+              },
+              "applicationName": "TestApp"
+            }
+          },
+          {
+            "parameter": "appConfig",
+            "value": {
+              "defaultSparkConf": {
+                "spark.executor.memory": "1g"
+              },
+              "fixedSparkConf": {
+                "spark.driver.cores": "1"
+              }
+            }
+          },
+          {
+            "parameter": "sparkCluster",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with null SparkCluster to check handling of null sparkCluster object."
+      }
+    ]
+  }
+]

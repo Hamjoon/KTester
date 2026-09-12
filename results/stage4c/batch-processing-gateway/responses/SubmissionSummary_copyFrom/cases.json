@@ -1,0 +1,167 @@
+[
+  {
+    "group": "SubmissionSummary.copyFrom(SparkApplication)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with non-null metadata and labels"
+          }
+        ],
+        "expected": "All fields set correctly based on the input SparkApplication",
+        "description": "Test when SparkApplication has all necessary metadata and label fields populated."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with null metadata"
+          }
+        ],
+        "expected": "No fields set, method handles null metadata gracefully",
+        "description": "Test when SparkApplication has null metadata to ensure the method handles it gracefully."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with metadata but null labels"
+          }
+        ],
+        "expected": "SubmissionId is set, other fields related to labels remain default",
+        "description": "Test when SparkApplication has metadata but labels are null to check correct behavior."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with labels but missing specific keys"
+          }
+        ],
+        "expected": "Fields related to missing labels remain default, others set correctly",
+        "description": "Test when SparkApplication has labels but specific keys like QUEUE_LABEL are missing."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with driver and executor memory not convertible"
+          }
+        ],
+        "expected": "Driver and executor memory fields set to 0 with log message",
+        "description": "Test when memory strings for driver and executor are not convertible to GB, check logging and default values."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with null driver and executor specs"
+          }
+        ],
+        "expected": "Driver and executor related fields remain default",
+        "description": "Test when driver and executor specs in SparkApplication are null, ensure defaults are used."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with valid spec but null sparkConf"
+          }
+        ],
+        "expected": "SparkVersion and arguments set, application name remains default",
+        "description": "Test when SparkApplication spec is valid but sparkConf is null, check correct field assignments."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with valid sparkConf but missing SPARK_APP_NAME_CONFIG"
+          }
+        ],
+        "expected": "Application name remains default, other fields set correctly",
+        "description": "Test when SparkConf is present but does not contain SPARK_APP_NAME_CONFIG."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with empty labels and driver specs"
+          }
+        ],
+        "expected": "SubmissionId is set, other fields related to labels and driver specs remain default",
+        "description": "Test when SparkApplication has empty labels and driver specs to ensure defaults are used where applicable."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with empty executor specs"
+          }
+        ],
+        "expected": "Executor related fields remain default, other fields set correctly",
+        "description": "Test when SparkApplication has empty executor specs to ensure defaults are used for executor fields."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with valid metadata and labels but null spec"
+          }
+        ],
+        "expected": "SubmissionId and user set, other fields related to spec remain default",
+        "description": "Test when SparkApplication has valid metadata and labels but the spec is null to ensure correct handling."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with driver memory and executor memory set to zero"
+          }
+        ],
+        "expected": "Driver and executor memory fields set to 0, total memory calculated correctly",
+        "description": "Test when driver and executor memory are explicitly set to zero to ensure correct total memory calculation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with null and empty strings in labels"
+          }
+        ],
+        "expected": "Fields related to labels set to defaults or empty strings, no exceptions",
+        "description": "Test when labels contain null and empty strings to ensure method handles this gracefully."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with null spec"
+          }
+        ],
+        "expected": "No exception, fields related to spec remain default",
+        "description": "Test when SparkApplication has null spec to ensure method handles it gracefully."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with null driver and executor memory"
+          }
+        ],
+        "expected": "Driver and executor memory fields remain default, no exceptions",
+        "description": "Test when driver and executor memory are null to ensure method handles it without exceptions."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sparkApplicationResource",
+            "value": "SparkApplication with null driver and executor cores"
+          }
+        ],
+        "expected": "Driver and executor core fields remain default, no exceptions",
+        "description": "Test when driver and executor cores are null to ensure method handles it without exceptions."
+      }
+    ]
+  }
+]

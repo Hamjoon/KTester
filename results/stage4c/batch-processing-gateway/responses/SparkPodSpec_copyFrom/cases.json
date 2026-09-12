@@ -1,0 +1,279 @@
+[
+  {
+    "group": "copyFrom Method Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "another",
+            "value": {
+              "cores": 4,
+              "coreLimit": "2000m",
+              "memory": "4Gi",
+              "memoryOverhead": "500Mi",
+              "image": "spark:latest",
+              "env": [
+                {
+                  "name": "ENV_VAR",
+                  "value": "value"
+                }
+              ],
+              "labels": {
+                "app": "spark"
+              },
+              "annotations": {
+                "annotation1": "value1"
+              },
+              "terminationGracePeriodSeconds": 30,
+              "serviceAccount": "spark-sa",
+              "volumeMounts": [
+                {
+                  "name": "volume1",
+                  "mountPath": "/data"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 1000
+              },
+              "affinity": {
+                "nodeAffinity": {
+                  "requiredDuringSchedulingIgnoredDuringExecution": {}
+                }
+              },
+              "coreRequest": "1000m",
+              "javaOptions": "-Xmx2g"
+            }
+          }
+        ],
+        "expected": "All fields copied correctly",
+        "description": "Test copying from a fully populated SparkPodSpec object to a new instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "another",
+            "value": {
+              "cores": null,
+              "coreLimit": null,
+              "memory": null,
+              "memoryOverhead": null,
+              "image": null,
+              "env": null,
+              "labels": null,
+              "annotations": null,
+              "terminationGracePeriodSeconds": null,
+              "serviceAccount": null,
+              "volumeMounts": null,
+              "securityContext": null,
+              "affinity": null,
+              "coreRequest": null,
+              "javaOptions": null
+            }
+          }
+        ],
+        "expected": "All fields set to null or default",
+        "description": "Test copying from a SparkPodSpec object where all fields are null."
+      },
+      {
+        "input": [
+          {
+            "parameter": "another",
+            "value": {
+              "cores": 4,
+              "coreLimit": null,
+              "memory": "4Gi",
+              "memoryOverhead": null,
+              "image": "spark:latest",
+              "env": [],
+              "labels": {},
+              "annotations": {},
+              "terminationGracePeriodSeconds": null,
+              "serviceAccount": null,
+              "volumeMounts": [],
+              "securityContext": null,
+              "affinity": null,
+              "coreRequest": null,
+              "javaOptions": null
+            }
+          }
+        ],
+        "expected": "Partial fields copied, null fields remain unchanged",
+        "description": "Test copying from a SparkPodSpec object with a mix of populated and null fields."
+      },
+      {
+        "input": [
+          {
+            "parameter": "another",
+            "value": {
+              "cores": 8,
+              "coreLimit": "3000m",
+              "memory": "8Gi",
+              "memoryOverhead": "1Gi",
+              "image": "spark:v2",
+              "env": [
+                {
+                  "name": "ENV_VAR_NEW",
+                  "value": "new_value"
+                }
+              ],
+              "labels": {
+                "app": "spark-new"
+              },
+              "annotations": {
+                "annotation2": "value2"
+              },
+              "terminationGracePeriodSeconds": 60,
+              "serviceAccount": "spark-sa-new",
+              "volumeMounts": [
+                {
+                  "name": "volume2",
+                  "mountPath": "/newdata"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 2000
+              },
+              "affinity": {
+                "podAffinity": {
+                  "requiredDuringSchedulingIgnoredDuringExecution": {}
+                }
+              },
+              "coreRequest": "2000m",
+              "javaOptions": "-Xmx4g"
+            }
+          }
+        ],
+        "expected": "All fields updated correctly",
+        "description": "Test copying from a fully populated SparkPodSpec object with different values to ensure all fields are updated."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom Method Additional Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "another",
+            "value": {
+              "cores": 0,
+              "coreLimit": "0m",
+              "memory": "0Gi",
+              "memoryOverhead": "0Mi",
+              "image": "",
+              "env": [],
+              "labels": {},
+              "annotations": {},
+              "terminationGracePeriodSeconds": 0,
+              "serviceAccount": "",
+              "volumeMounts": [],
+              "securityContext": null,
+              "affinity": null,
+              "coreRequest": "0m",
+              "javaOptions": ""
+            }
+          }
+        ],
+        "expected": "All fields set to zero values or empty strings",
+        "description": "Test copying from a SparkPodSpec object where fields are set to zero values or empty strings to verify handling of such edge cases."
+      },
+      {
+        "input": [
+          {
+            "parameter": "another",
+            "value": {
+              "cores": 2,
+              "coreLimit": "1500m",
+              "memory": "2Gi",
+              "memoryOverhead": "300Mi",
+              "image": "spark:v1",
+              "env": null,
+              "labels": null,
+              "annotations": null,
+              "terminationGracePeriodSeconds": 45,
+              "serviceAccount": null,
+              "volumeMounts": null,
+              "securityContext": null,
+              "affinity": null,
+              "coreRequest": "500m",
+              "javaOptions": null
+            }
+          }
+        ],
+        "expected": "Non-null fields copied, null fields remain unchanged",
+        "description": "Test copying from a SparkPodSpec object with a mix of populated fields and null fields to ensure proper copying behavior."
+      },
+      {
+        "input": [
+          {
+            "parameter": "another",
+            "value": {
+              "cores": 16,
+              "coreLimit": "4000m",
+              "memory": "16Gi",
+              "memoryOverhead": "2Gi",
+              "image": "spark:latest",
+              "env": [
+                {
+                  "name": "ENV_VAR",
+                  "value": "value"
+                },
+                {
+                  "name": "ENV_VAR_EXTRA",
+                  "value": "extra_value"
+                }
+              ],
+              "labels": {
+                "app": "spark",
+                "version": "v2"
+              },
+              "annotations": {
+                "annotation1": "value1",
+                "annotation3": "value3"
+              },
+              "terminationGracePeriodSeconds": 90,
+              "serviceAccount": "spark-sa-extra",
+              "volumeMounts": [
+                {
+                  "name": "volume1",
+                  "mountPath": "/data"
+                },
+                {
+                  "name": "volume3",
+                  "mountPath": "/extra"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 3000
+              },
+              "affinity": {
+                "nodeAffinity": {
+                  "preferredDuringSchedulingIgnoredDuringExecution": {}
+                }
+              },
+              "coreRequest": "3000m",
+              "javaOptions": "-Xmx8g"
+            }
+          }
+        ],
+        "expected": "All fields with complex structures copied correctly",
+        "description": "Test copying from a SparkPodSpec object with complex structures in fields like env, labels, annotations, and volumeMounts to ensure deep copying."
+      }
+    ]
+  },
+  {
+    "group": "copyFrom Method Exception Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "another",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test copying from a null SparkPodSpec object to check how the method handles a null input."
+      }
+    ]
+  }
+]
