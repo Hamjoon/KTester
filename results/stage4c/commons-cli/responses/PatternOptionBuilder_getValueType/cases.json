@@ -1,0 +1,197 @@
+[
+  {
+    "group": "getValueType(char) Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "@"
+          }
+        ],
+        "expected": "Object.class",
+        "description": "Verify that the method returns Object.class when the input character is '@'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": ":"
+          }
+        ],
+        "expected": "String.class",
+        "description": "Verify that the method returns String.class when the input character is ':'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "%"
+          }
+        ],
+        "expected": "Number.class",
+        "description": "Verify that the method returns Number.class when the input character is '%'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "+"
+          }
+        ],
+        "expected": "Class.class",
+        "description": "Verify that the method returns Class.class when the input character is '+'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "#"
+          }
+        ],
+        "expected": "Date.class",
+        "description": "Verify that the method returns Date.class when the input character is '#'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "<"
+          }
+        ],
+        "expected": "FileInputStream.class",
+        "description": "Verify that the method returns FileInputStream.class when the input character is '<'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": ">"
+          }
+        ],
+        "expected": "File.class",
+        "description": "Verify that the method returns File.class when the input character is '>'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "*"
+          }
+        ],
+        "expected": "File[].class",
+        "description": "Verify that the method returns File[].class when the input character is '*'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "/"
+          }
+        ],
+        "expected": "URL.class",
+        "description": "Verify that the method returns URL.class when the input character is '/'."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "x"
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character does not match any case."
+      }
+    ]
+  },
+  {
+    "group": "getValueType(char) Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": " "
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character is a space, which does not match any case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "\n"
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character is a newline character, which does not match any case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "0"
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character is a digit, which does not match any case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "A"
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character is an uppercase letter, which does not match any case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "z"
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character is a lowercase letter, which does not match any case."
+      }
+    ]
+  },
+  {
+    "group": "getValueType(char) Edge Case Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "\u0000"
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character is the null character, which does not match any case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "\u007f"
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character is the delete character, which does not match any case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "ch",
+            "value": "\u007f"
+          }
+        ],
+        "expected": null,
+        "description": "Verify that the method returns null when the input character is a non-ASCII character, which does not match any case."
+      }
+    ]
+  }
+]

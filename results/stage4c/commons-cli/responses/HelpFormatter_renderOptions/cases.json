@@ -1,0 +1,459 @@
+[
+  {
+    "group": "renderOptions Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "new Options()"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with no options rendered",
+        "description": "Test rendering with an empty Options object, expecting no options to be rendered."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with single short option"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with single short option formatted",
+        "description": "Test rendering with a single short option, expecting the option to be formatted with padding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with multiple options including long options"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with multiple options formatted",
+        "description": "Test rendering with multiple options including long options, expecting all options to be formatted correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with options having arguments"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with options having arguments formatted",
+        "description": "Test rendering with options that have arguments, expecting argument names to be included in the formatting."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with options having empty argument names"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with options having empty argument names formatted",
+        "description": "Test rendering with options that have empty argument names, expecting spaces to be correctly handled."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with no description"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with options having no description formatted",
+        "description": "Test rendering with options that have no description, expecting the options to be formatted without descriptions."
+      }
+    ]
+  },
+  {
+    "group": "renderOptions Additional Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with a single long option"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with single long option formatted",
+        "description": "Test rendering with a single long option, expecting the option to be formatted with padding."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with very long option names"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with long option names wrapped correctly",
+        "description": "Test rendering with options having very long names, expecting the names to be wrapped correctly within the specified width."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 10
+          },
+          {
+            "parameter": "options",
+            "value": "Options with multiple short options"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with multiple short options wrapped",
+        "description": "Test rendering with multiple short options and a small width, expecting options to be wrapped into multiple lines."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with mixed short and long options"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with mixed options formatted",
+        "description": "Test rendering with a mix of short and long options, expecting all options to be formatted correctly with proper separators."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with no options"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with no options rendered",
+        "description": "Test rendering with an Options object that has no options added, expecting no output in the StringBuffer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "Options with options having very long descriptions"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "StringBuffer with long descriptions wrapped correctly",
+        "description": "Test rendering with options that have very long descriptions, expecting descriptions to be wrapped correctly within the specified width."
+      }
+    ]
+  },
+  {
+    "group": "renderOptions Exception Test Cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "null"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "new Options()"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test rendering with a null StringBuffer, expecting a NullPointerException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": -1
+          },
+          {
+            "parameter": "options",
+            "value": "new Options()"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test rendering with a negative width, expecting an IllegalArgumentException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "null"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test rendering with a null Options object, expecting a NullPointerException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "new Options()"
+          },
+          {
+            "parameter": "leftPad",
+            "value": -1
+          },
+          {
+            "parameter": "descPad",
+            "value": 3
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test rendering with a negative leftPad, expecting an IllegalArgumentException to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "sb",
+            "value": "new StringBuffer()"
+          },
+          {
+            "parameter": "width",
+            "value": 80
+          },
+          {
+            "parameter": "options",
+            "value": "new Options()"
+          },
+          {
+            "parameter": "leftPad",
+            "value": 1
+          },
+          {
+            "parameter": "descPad",
+            "value": -1
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test rendering with a negative descPad, expecting an IllegalArgumentException to be thrown."
+      }
+    ]
+  }
+]

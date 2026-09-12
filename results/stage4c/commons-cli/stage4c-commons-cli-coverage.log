@@ -1,0 +1,272 @@
+2026-09-12 11:26:27,611 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-09-12 11:26:27,611 - evaluations.coverage_test - INFO - Running tests for project: commons-cli
+2026-09-12 11:26:27,613 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/HelpFormatter_renderOptions_Test.java
+2026-09-12 11:26:28,114 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.cli.HelpFormatter_renderOptions_Test
+2026-09-12 11:26:29,607 - evaluations.coverage_test - INFO - return code: 1
+2026-09-12 11:26:29,607 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.cli.HelpFormatter_renderOptions_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ HelpFormatter_renderOptions_Test ✔
+│     ├─ testRenderOptionsWithOptionsHavingNoDescription() ✘ Expected options to be formatted without descriptions. ==> expected: <true> but was: <false>
+│     ├─ testRenderOptionsWithMixedShortAndLongOptions() ✘ Expected mixed options to be formatted correctly. ==> expected: <true> but was: <false>
+│     ├─ testRenderOptionsWithNegativeLeftPad() ✘ Expected an IllegalArgumentException to be thrown. ==> Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+│     ├─ testRenderOptionsWithNegativeWidth() ✘ Expected an IllegalArgumentException to be thrown. ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testRenderOptions() ✔
+│     ├─ testRenderOptionsWithSingleShortOption() ✔
+│     ├─ testRenderOptionsWithMultipleOptionsIncludingLongOptions() ✘ Expected options to be formatted correctly. ==> expected: <true> but was: <false>
+│     ├─ testRenderOptionsWithOptionsHavingEmptyArgumentNames() ✔
+│     ├─ testRenderOptionsWithNullOptions() ✔
+│     ├─ testRenderOptionsWithSingleLongOption() ✔
+│     ├─ testRenderOptionsWithOptionsHavingArguments() ✔
+│     ├─ testRenderOptionsWithNoOptions() ✔
+│     ├─ testRenderOptionsWithNegativeDescPad() ✘ Expected an IllegalArgumentException to be thrown. ==> Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+│     ├─ testRenderOptionsWithEmptyOptions() ✔
+│     ├─ testRenderOptionsWithVeryLongOptionNames() ✔
+│     ├─ testRenderOptionsWithMultipleShortOptionsWrapped() ✔
+│     ├─ testRenderOptionsWithLongDescriptionsWrapped() ✔
+│     └─ testRenderOptionsWithNullStringBuffer() ✘ Expected a NullPointerException to be thrown. ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (7):
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithOptionsHavingNoDescription()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithOptionsHavingNoDescription', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected options to be formatted without descriptions. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithOptionsHavingNoDescription(HelpFormatter_renderOptions_Test.java:132)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithMixedShortAndLongOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithMixedShortAndLongOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected mixed options to be formatted correctly. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithMixedShortAndLongOptions(HelpFormatter_renderOptions_Test.java:194)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithNegativeLeftPad()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithNegativeLeftPad', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected an IllegalArgumentException to be thrown. ==> Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithNegativeLeftPad(HelpFormatter_renderOptions_Test.java:277)
+       [...]
+     Caused by: java.lang.NegativeArraySizeException: -1
+       org.apache.commons.cli.HelpFormatter.createPadding(HelpFormatter.java:264)
+       org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:672)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.lambda$testRenderOptionsWithNegativeLeftPad$3(HelpFormatter_renderOptions_Test.java:279)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithNegativeWidth()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithNegativeWidth', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected an IllegalArgumentException to be thrown. ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithNegativeWidth(HelpFormatter_renderOptions_Test.java:248)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithMultipleOptionsIncludingLongOptions()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithMultipleOptionsIncludingLongOptions', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected options to be formatted correctly. ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithMultipleOptionsIncludingLongOptions(HelpFormatter_renderOptions_Test.java:85)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithNegativeDescPad()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithNegativeDescPad', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected an IllegalArgumentException to be thrown. ==> Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NegativeArraySizeException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithNegativeDescPad(HelpFormatter_renderOptions_Test.java:291)
+       [...]
+     Caused by: java.lang.NegativeArraySizeException: -1
+       org.apache.commons.cli.HelpFormatter.createPadding(HelpFormatter.java:264)
+       org.apache.commons.cli.HelpFormatter.renderOptions(HelpFormatter.java:673)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.lambda$testRenderOptionsWithNegativeDescPad$4(HelpFormatter_renderOptions_Test.java:293)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+       [...]
+  JUnit Jupiter:HelpFormatter_renderOptions_Test:testRenderOptionsWithNullStringBuffer()
+    MethodSource [className = 'org.apache.commons.cli.HelpFormatter_renderOptions_Test', methodName = 'testRenderOptionsWithNullStringBuffer', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected a NullPointerException to be thrown. ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.cli.HelpFormatter_renderOptions_Test.testRenderOptionsWithNullStringBuffer(HelpFormatter_renderOptions_Test.java:234)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 745 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        18 tests found           ]
+[         0 tests skipped         ]
+[        18 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         7 tests failed          ]
+
+
+2026-09-12 11:26:29,990 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptions --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithSingleShortOption --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithOptionsHavingEmptyArgumentNames --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithNullOptions --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithSingleLongOption --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithOptionsHavingArguments --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithNoOptions --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithEmptyOptions --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithVeryLongOptionNames --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithMultipleShortOptionsWrapped --select-method org.apache.commons.cli.HelpFormatter_renderOptions_Test#testRenderOptionsWithLongDescriptionsWrapped
+2026-09-12 11:26:31,478 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ HelpFormatter_renderOptions_Test ✔
+│     ├─ testRenderOptions() ✔
+│     ├─ testRenderOptionsWithSingleShortOption() ✔
+│     ├─ testRenderOptionsWithOptionsHavingEmptyArgumentNames() ✔
+│     ├─ testRenderOptionsWithNullOptions() ✔
+│     ├─ testRenderOptionsWithSingleLongOption() ✔
+│     ├─ testRenderOptionsWithOptionsHavingArguments() ✔
+│     ├─ testRenderOptionsWithNoOptions() ✔
+│     ├─ testRenderOptionsWithEmptyOptions() ✔
+│     ├─ testRenderOptionsWithVeryLongOptionNames() ✔
+│     ├─ testRenderOptionsWithMultipleShortOptionsWrapped() ✔
+│     └─ testRenderOptionsWithLongDescriptionsWrapped() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 663 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 11:26:31,762 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/cli/PatternOptionBuilder_getValueType_Test.java
+2026-09-12 11:26:32,110 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.cli.PatternOptionBuilder_getValueType_Test
+2026-09-12 11:26:32,701 - evaluations.coverage_test - INFO - return code: 0
+2026-09-12 11:26:32,701 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ PatternOptionBuilder_getValueType_Test ✔
+│     ├─ testGetValueType_Invalid() ✔
+│     ├─ testGetValueType_Class() ✔
+│     ├─ testGetValueType_Digit() ✔
+│     ├─ testGetValueType_Files() ✔
+│     ├─ testGetValueType_Space() ✔
+│     ├─ testGetValueType_UppercaseLetter() ✔
+│     ├─ testGetValueType_DeleteCharacter() ✔
+│     ├─ testGetValueType_NonASCIICharacter() ✔
+│     ├─ testGetValueType_Number() ✔
+│     ├─ testGetValueType_Object() ✔
+│     ├─ testGetValueType_String() ✔
+│     ├─ testGetValueType_LowercaseLetter() ✔
+│     ├─ testGetValueType_Date() ✔
+│     ├─ testGetValueType_File() ✔
+│     ├─ testGetValueType_URL() ✔
+│     ├─ testGetValueType_NullCharacter() ✔
+│     ├─ testGetValueType_ExistingFile() ✔
+│     └─ testGetValueType_Newline() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 74 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        18 tests found           ]
+[         0 tests skipped         ]
+[        18 tests started         ]
+[         0 tests aborted         ]
+[        18 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 11:26:32,960 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Invalid --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Class --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Digit --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Files --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Space --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_UppercaseLetter --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_DeleteCharacter --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_NonASCIICharacter --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Number --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Object --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_String --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_LowercaseLetter --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Date --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_File --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_URL --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_NullCharacter --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_ExistingFile --select-method org.apache.commons.cli.PatternOptionBuilder_getValueType_Test#testGetValueType_Newline
+2026-09-12 11:26:33,665 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ PatternOptionBuilder_getValueType_Test ✔
+│     ├─ testGetValueType_Invalid() ✔
+│     ├─ testGetValueType_Class() ✔
+│     ├─ testGetValueType_Digit() ✔
+│     ├─ testGetValueType_Files() ✔
+│     ├─ testGetValueType_Space() ✔
+│     ├─ testGetValueType_UppercaseLetter() ✔
+│     ├─ testGetValueType_DeleteCharacter() ✔
+│     ├─ testGetValueType_NonASCIICharacter() ✔
+│     ├─ testGetValueType_Number() ✔
+│     ├─ testGetValueType_Object() ✔
+│     ├─ testGetValueType_String() ✔
+│     ├─ testGetValueType_LowercaseLetter() ✔
+│     ├─ testGetValueType_Date() ✔
+│     ├─ testGetValueType_File() ✔
+│     ├─ testGetValueType_URL() ✔
+│     ├─ testGetValueType_NullCharacter() ✔
+│     ├─ testGetValueType_ExistingFile() ✔
+│     └─ testGetValueType_Newline() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 65 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        18 tests found           ]
+[         0 tests skipped         ]
+[        18 tests started         ]
+[         0 tests aborted         ]
+[        18 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-09-12 11:26:33,886 - evaluations.coverage_test - INFO - {'org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)': {'test_cases': 18, 'passed_cases': 11}, 'org.apache.commons.cli.PatternOptionBuilder#getValueType(char)': {'test_cases': 18, 'passed_cases': 18}}
+2026-09-12 11:26:33,886 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-cli/reports/jacoco-report-html/HelpFormatter_renderOptions/org.apache.commons.cli/HelpFormatter.html, method: renderOptions(StringBuffer, int, Options, int, int)
+2026-09-12 11:26:33,892 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-cli/reports/jacoco-report-html/HelpFormatter_renderOptions_correct/org.apache.commons.cli/HelpFormatter.html, method: renderOptions(StringBuffer, int, Options, int, int)
+2026-09-12 11:26:33,898 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-cli/reports/jacoco-report-html/PatternOptionBuilder_getValueType/org.apache.commons.cli/PatternOptionBuilder.html, method: getValueType(char)
+2026-09-12 11:26:33,900 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-cli/reports/jacoco-report-html/PatternOptionBuilder_getValueType_correct/org.apache.commons.cli/PatternOptionBuilder.html, method: getValueType(char)
+2026-09-12 11:26:33,901 - evaluations.coverage_test - INFO - report data:
+{'org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)': {'test_cases': 18, 'passed_cases': 11, 'inst_cov': 0.97, 'bran_cov': 0.84, 'correct_inst_cov': 0.97, 'correct_bran_cov': 0.8}, 'org.apache.commons.cli.PatternOptionBuilder#getValueType(char)': {'test_cases': 18, 'passed_cases': 18, 'inst_cov': 1.0, 'bran_cov': 1.0, 'correct_inst_cov': 1.0, 'correct_bran_cov': 1.0}, 'compile_pass_rate': 1.0, 'execution_pass_rate': 0.8055555555555556, 'average_instruction_coverage': 0.985, 'average_branch_coverage': 0.9199999999999999, 'average_correct_instruction_coverage': 0.985, 'average_correct_branch_coverage': 0.9}
