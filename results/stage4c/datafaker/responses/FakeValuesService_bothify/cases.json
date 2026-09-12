@@ -1,0 +1,355 @@
+[
+  {
+    "group": "bothify method tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###???"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService returning 0 for digits and 'a' for letters"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "000aaa",
+        "description": "Test with mixed '#' and '?' characters, numerify and letterify enabled, lowercase letters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###???"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService returning 0 for digits and 'a' for letters"
+          },
+          {
+            "parameter": "isUpper",
+            "value": true
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "000AAA",
+        "description": "Test with mixed '#' and '?' characters, numerify and letterify enabled, uppercase letters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###???"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService returning 0 for digits"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "000???",
+        "description": "Test with mixed '#' and '?' characters, only numerify enabled, no letter conversion."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###???"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService returning 'a' for letters"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "###aaa",
+        "description": "Test with mixed '#' and '?' characters, only letterify enabled, no digit conversion."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###???"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "###???",
+        "description": "Test with mixed '#' and '?' characters, neither numerify nor letterify enabled, should return input unchanged."
+      }
+    ]
+  },
+  {
+    "group": "bothify method additional tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "##??##"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService returning 9 for digits and 'z' for letters"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "99zz99",
+        "description": "Test with alternating '#' and '?' characters, numerify and letterify enabled, lowercase letters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "?????"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService returning 'm' for letters"
+          },
+          {
+            "parameter": "isUpper",
+            "value": true
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "MMMMM",
+        "description": "Test with only '?' characters, letterify enabled with uppercase, no numerify."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService returning 5 for digits"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "555",
+        "description": "Test with only '#' characters, numerify enabled, no letterify."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "abc???xyz"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService returning 'k' for letters"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "abckkkxyz",
+        "description": "Test with non-placeholder characters mixed with '?', only letterify enabled, lowercase letters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": ""
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "",
+        "description": "Test with empty input string, neither numerify nor letterify enabled, should return empty string."
+      }
+    ]
+  },
+  {
+    "group": "bothify exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": null
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": false
+          },
+          {
+            "parameter": "letterify",
+            "value": false
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with null input string to ensure method handles null values appropriately."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###???"
+          },
+          {
+            "parameter": "context",
+            "value": null
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test with null context to ensure method handles null context appropriately."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "###???"
+          },
+          {
+            "parameter": "context",
+            "value": "mocked context with RandomService throwing exception"
+          },
+          {
+            "parameter": "isUpper",
+            "value": false
+          },
+          {
+            "parameter": "numerify",
+            "value": true
+          },
+          {
+            "parameter": "letterify",
+            "value": true
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "Test with context's RandomService throwing an exception to ensure method handles exceptions from RandomService."
+      }
+    ]
+  }
+]
