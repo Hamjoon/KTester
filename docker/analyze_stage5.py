@@ -295,6 +295,200 @@ FAILURE_CLASSIFICATIONS = {
     ),
 }
 
+GPT4O_FAILURE_CLASSIFICATIONS = {
+    ("batch-processing-gateway", "SubmissionSummary_copyFrom"): (
+        "H1",
+        "import",
+        "Imports the non-existent com.apple.spark.operator.Metadata type.",
+    ),
+    ("commons-codec", "Rule_pattern"): (
+        "S",
+        "field",
+        "Declares a final Pattern field without initializing it in a constructor.",
+    ),
+    ("commons-codec", "MurmurHash3_hash128x64Internal"): (
+        "S",
+        "field",
+        "Initializes a byte array with integer literals outside the byte range without casts.",
+    ),
+    ("gson", "JsonTreeReader_peek"): (
+        "S",
+        "helper classes and @Test methods",
+        "Declares the same CustomSubclass helper three times; test methods also assign invariant Iterator<JsonPrimitive/JsonNull> values to Iterator<JsonElement>.",
+    ),
+    ("ruler", "ByteMachine_addEndOfMatch"): (
+        "H2",
+        "helper",
+        "Attempts to instantiate the existing abstract InputCharacter type directly.",
+    ),
+}
+
+
+def generate_gap_analysis_gpt4o() -> None:
+    with (RESULTS / "comparison_task_table_4way.csv").open(encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        for key in list(row):
+            if key not in {"project", "id"}:
+                row[key] = float(row[key])
+        row["gap"] = row["ours_gpt4o_correct_inst_cov"] - row["authors_mean_correct_inst_cov"]
+        row["range_position"] = (
+            "inside"
+            if row["authors_min_correct_inst_cov"]
+            <= row["ours_gpt4o_correct_inst_cov"]
+            <= row["authors_max_correct_inst_cov"]
+            else "below"
+            if row["ours_gpt4o_correct_inst_cov"] < row["authors_min_correct_inst_cov"]
+            else "above"
+        )
+
+    positions = Counter(row["range_position"] for row in rows)
+    lines = [
+        "# Stage 5 gap analysis: gpt-4o, FIX_TRIES=5",
+        "",
+        "## Correct instruction coverage range position",
+        "",
+        f"- FIX_TRIES=3 (gpt-4o-mini): inside 80, below 24, above 7 of 111 tasks.",
+        f"- FIX_TRIES=5 (gpt-4o-mini): inside 75, below 33, above 3 of 111 tasks.",
+        f"- gpt-4o, FIX_TRIES=5: inside {positions['inside']}, below {positions['below']}, above {positions['above']} of {len(rows)} tasks.",
+        "",
+        "## Project-level gaps and repetition spread",
+        "",
+        "A flag means the absolute gap between ours and the authors' five-repetition mean is larger than the authors' maximum-minus-minimum spread.",
+        "",
+        "| Project | Metric | Ours (gpt-4o, FIX_TRIES=5) | Authors mean | Authors min | Authors max | Gap | Authors spread | Flag |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+    ]
+    ours = load_json(RESULTS / "aggregate_ours_gpt4o.json")
+    author_reps = [
+        load_json(RESULTS / f"aggregate_authors_rep{i}.json") for i in range(1, 6)
+    ]
+    authors = load_json(RESULTS / "aggregate_authors_mean.json")
+    metrics = (
+        ("test_case_compile_rate", "TC compile"),
+        ("test_case_execution_rate", "TC execution"),
+        ("mean_correct_instruction_coverage", "Correct inst"),
+        ("mean_correct_branch_coverage", "Correct branch"),
+    )
+    flagged = Counter()
+    for project in ours["projects"]:
+        for key, label in metrics:
+            our_value = ours["projects"][project][key]
+            values = [rep["projects"][project][key] for rep in author_reps]
+            author_mean = authors["projects"][project][key]
+            gap = our_value - author_mean
+            spread = max(values) - min(values)
+            is_flagged = abs(gap) > spread
+            if is_flagged:
+                flagged[project] += 1
+            lines.append(
+                f"| {project} | {label} | {percent(our_value)} | {percent(author_mean)} | "
+                f"{percent(min(values))} | {percent(max(values))} | {gap * 100:+.2f} pp | "
+                f"{spread * 100:.2f} pp | {'yes' if is_flagged else 'no'} |"
+            )
+    lines.extend(["", "### Projects flagged", ""])
+    for project in ours["projects"]:
+        lines.append(f"- {project}: {flagged[project]} of {len(metrics)} metrics flagged.")
+    (RESULTS / "gap_analysis_gpt4o.md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8"
+    )
+
+
+def generate_compile_failures_gpt4o() -> None:
+    roots = {
+        "FIX_TRIES=3": REPO / "results" / "stage4",
+        "FIX_TRIES=5": REPO / "results" / "stage4b",
+        "gpt-4o": REPO / "results" / "stage4c",
+    }
+    task_lookup = {}
+    failures = {label: set() for label in roots}
+    for label, root in roots.items():
+        for project, info in DATASET.items():
+            summary = load_json(root / project / "reports" / "summary.json")
+            for task in info["focal-methods"]:
+                key = f"{task['class']}#{task['method-name']}"
+                task_lookup[(project, task["id"])] = key
+                if summary[key].get("error_type") == "compile error":
+                    failures[label].add((project, task["id"]))
+
+    prior_union = failures["FIX_TRIES=3"] | failures["FIX_TRIES=5"]
+    current = failures["gpt-4o"]
+    if len(prior_union) != 26:
+        raise ValueError(f"Expected 26 prior distinct failures, found {len(prior_union)}")
+    if current != set(GPT4O_FAILURE_CLASSIFICATIONS):
+        raise ValueError(
+            f"gpt-4o classification mismatch: missing={current - set(GPT4O_FAILURE_CLASSIFICATIONS)}, "
+            f"extra={set(GPT4O_FAILURE_CLASSIFICATIONS) - current}"
+        )
+
+    def highest_prompt(project: str, task_id: str) -> str:
+        prompts = list(
+            (roots["gpt-4o"] / project / "fix" / task_id).glob("repair_prompt_*.md")
+        )
+        return (
+            max(prompts, key=lambda path: int(path.stem.rsplit("_", 1)[1])).name
+            if prompts
+            else "none"
+        )
+
+    category_counts = Counter()
+    lines = [
+        "# Stage 5 compile-failure follow-up: gpt-4o, FIX_TRIES=5",
+        "",
+        f"The gpt-4o run has {len(current)} non-compiling final classes, compared with 18 in Stage 4, 16 in Stage 4b, and 0 of 555 task/repetition outcomes in the authors' archive.",
+        "",
+        "## Current gpt-4o non-compiling final classes",
+        "",
+        "| Project | Task | Category | Failing location | Final remaining error | Highest repair prompt |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for project, task_id in sorted(current):
+        category, location, description = GPT4O_FAILURE_CLASSIFICATIONS[(project, task_id)]
+        category_counts[category] += 1
+        lines.append(
+            f"| {project} | {task_id} | {category} | {location} | {description} | "
+            f"{highest_prompt(project, task_id)} |"
+        )
+    lines.extend(
+        [
+            "",
+            "### Category counts",
+            "",
+            *[f"- {category}: {category_counts[category]}." for category in ("H1", "H2", "G", "S", "O")],
+            "",
+            "## Prior 26-task union under gpt-4o",
+            "",
+            "| Project | Task | Compiles under gpt-4o | Highest repair prompt | Final error type |",
+            "| --- | --- | --- | --- | --- |",
+        ]
+    )
+    for project, task_id in sorted(prior_union):
+        item = load_json(
+            roots["gpt-4o"] / project / "reports" / "summary.json"
+        )[task_lookup[(project, task_id)]]
+        lines.append(
+            f"| {project} | {task_id} | {'yes' if (project, task_id) not in current else 'no'} | "
+            f"{highest_prompt(project, task_id)} | {item.get('error_type') or 'none'} |"
+        )
+
+    new_failures = sorted(current - prior_union)
+    lines.extend(
+        [
+            "",
+            "## New failures after compiling in both earlier runs",
+            "",
+            f"- Count: {len(new_failures)}.",
+        ]
+    )
+    if new_failures:
+        for project, task_id in new_failures:
+            lines.append(f"- {project}: {task_id}.")
+    else:
+        lines.append("- None.")
+    (RESULTS / "compile_failures_gpt4o.md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8"
+    )
+
 
 def author_summary(rep: int, project: str) -> dict:
     base = REPO / "evaluation_results" / "RQ1-ktester" / "RQ1" / "KTester-gpt4o" / f"rep_{rep}" / project / "reports"
@@ -575,12 +769,16 @@ def generate_environment_notes() -> None:
 
 
 def main() -> None:
+    if len(sys.argv) == 2 and sys.argv[1] == "--gpt4o":
+        generate_gap_analysis_gpt4o()
+        generate_compile_failures_gpt4o()
+        return
     if len(sys.argv) == 2 and sys.argv[1] == "--fixtries5":
         generate_gap_analysis_fixtries5()
         generate_compile_failures_fixtries5()
         return
     if len(sys.argv) != 1:
-        raise SystemExit(f"Usage: {Path(sys.argv[0]).name} [--fixtries5]")
+        raise SystemExit(f"Usage: {Path(sys.argv[0]).name} [--fixtries5|--gpt4o]")
     generate_gap_analysis()
     generate_compile_failures()
     generate_prompt_drift()

@@ -1,0 +1,866 @@
+{
+  "org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)": {
+    "test_cases": 18,
+    "passed_cases": 11,
+    "inst_cov": 0.97,
+    "bran_cov": 0.84,
+    "correct_inst_cov": 0.97,
+    "correct_bran_cov": 0.8
+  },
+  "org.apache.commons.cli.PatternOptionBuilder#getValueType(char)": {
+    "test_cases": 18,
+    "passed_cases": 18,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "org.flmelody.util.AntPathMatcher#isMatch(String, String)": {
+    "test_cases": 26,
+    "passed_cases": 23,
+    "inst_cov": 0.86,
+    "bran_cov": 0.86,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.flmelody.core.AbstractRouterGroup#matchRouter(String, String)": {
+    "test_cases": 11,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)": {
+    "test_cases": 9,
+    "passed_cases": 2,
+    "inst_cov": 0.46,
+    "bran_cov": 0.55,
+    "correct_inst_cov": 0.36,
+    "correct_bran_cov": 0.45
+  },
+  "org.apache.commons.csv.Lexer#nextToken(Token)": {
+    "test_cases": 14,
+    "passed_cases": 9,
+    "inst_cov": 0.76,
+    "bran_cov": 0.76,
+    "correct_inst_cov": 0.67,
+    "correct_bran_cov": 0.68
+  },
+  "org.apache.commons.csv.CSVParser#createHeaders()": {
+    "test_cases": 4,
+    "passed_cases": 3,
+    "inst_cov": 0.84,
+    "bran_cov": 0.65,
+    "correct_inst_cov": 0.83,
+    "correct_bran_cov": 0.6
+  },
+  "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)": {
+    "test_cases": 17,
+    "passed_cases": 17,
+    "inst_cov": 0.78,
+    "bran_cov": 0.69,
+    "correct_inst_cov": 0.78,
+    "correct_bran_cov": 0.69
+  },
+  "org.apache.commons.csv.CSVParser#nextRecord()": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.83,
+    "bran_cov": 0.83,
+    "correct_inst_cov": 0.83,
+    "correct_bran_cov": 0.83
+  },
+  "org.apache.commons.csv.CSVFormat#toString()": {
+    "test_cases": 18,
+    "passed_cases": 5,
+    "inst_cov": 0.92,
+    "bran_cov": 0.9,
+    "correct_inst_cov": 0.73,
+    "correct_bran_cov": 0.68
+  },
+  "net.datafaker.transformations.sql.SqlTransformer#handlePrimitivesInArray(Class<?>, Object)": {
+    "test_cases": 25,
+    "passed_cases": 25,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "net.datafaker.service.FakeValuesService#javaNameToYamlName(String)": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 0.98,
+    "bran_cov": 0.95,
+    "correct_inst_cov": 0.98,
+    "correct_bran_cov": 0.95
+  },
+  "net.datafaker.service.FakeValuesService#resolveExpression(String, String[], Object, ProviderRegistration, FakerContext)": {
+    "test_cases": 10,
+    "passed_cases": 5,
+    "inst_cov": 0.66,
+    "bran_cov": 0.7,
+    "correct_inst_cov": 0.56,
+    "correct_bran_cov": 0.54
+  },
+  "net.datafaker.service.FakeValues#toJavaNames(String, boolean)": {
+    "test_cases": 18,
+    "passed_cases": 17,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "net.datafaker.service.FakeValuesService#bothify(String, FakerContext, boolean, boolean, boolean)": {
+    "test_cases": 17,
+    "passed_cases": 17,
+    "inst_cov": 0.77,
+    "bran_cov": 0.78,
+    "correct_inst_cov": 0.77,
+    "correct_bran_cov": 0.78
+  },
+  "net.datafaker.service.FakeValuesService#resolveExpression(String, Object, ProviderRegistration, FakerContext)": {
+    "test_cases": 7,
+    "passed_cases": 4,
+    "inst_cov": 0.85,
+    "bran_cov": 0.75,
+    "correct_inst_cov": 0.79,
+    "correct_bran_cov": 0.66
+  },
+  "com.apple.spark.operator.SparkPodSpec#copyFrom(SparkPodSpec)": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)": {
+    "test_cases": 12,
+    "passed_cases": 12,
+    "inst_cov": 0.94,
+    "bran_cov": 0.88,
+    "correct_inst_cov": 0.94,
+    "correct_bran_cov": 0.88
+  },
+  "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)": {
+    "error_type": "compile error",
+    "test_cases": 17,
+    "passed_cases": 0
+  },
+  "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)": {
+    "test_cases": 9,
+    "passed_cases": 1,
+    "inst_cov": 0.72,
+    "bran_cov": 0.63,
+    "correct_inst_cov": 0.48,
+    "correct_bran_cov": 0.25
+  },
+  "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)": {
+    "test_cases": 11,
+    "passed_cases": 5,
+    "inst_cov": 0.88,
+    "bran_cov": 0.78,
+    "correct_inst_cov": 0.74,
+    "correct_bran_cov": 0.68
+  },
+  "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)": {
+    "test_cases": 9,
+    "passed_cases": 2,
+    "inst_cov": 0.85,
+    "bran_cov": 0.79,
+    "correct_inst_cov": 0.69,
+    "correct_bran_cov": 0.5
+  },
+  "org.apache.commons.collections4.map.Flat3Map#get(Object)": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 0.84,
+    "bran_cov": 0.68,
+    "correct_inst_cov": 0.84,
+    "correct_bran_cov": 0.68
+  },
+  "org.apache.commons.collections4.IteratorUtils#getIterator(Object)": {
+    "error_type": "execution error",
+    "test_cases": 21,
+    "passed_cases": 0
+  },
+  "org.apache.commons.collections4.sequence.SequencesComparator#getMiddleSnake(int, int, int, int)": {
+    "test_cases": 12,
+    "passed_cases": 12,
+    "inst_cov": 0.86,
+    "bran_cov": 0.75,
+    "correct_inst_cov": 0.86,
+    "correct_bran_cov": 0.75
+  },
+  "org.apache.commons.collections4.map.Flat3Map#containsKey(Object)": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.9,
+    "bran_cov": 0.68,
+    "correct_inst_cov": 0.9,
+    "correct_bran_cov": 0.68
+  },
+  "org.apache.commons.collections4.map.Flat3Map#equals(Object)": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 0.91,
+    "bran_cov": 0.73,
+    "correct_inst_cov": 0.91,
+    "correct_bran_cov": 0.73
+  },
+  "org.apache.commons.collections4.trie.AbstractPatriciaTrie#put(K, V)": {
+    "test_cases": 8,
+    "passed_cases": 8,
+    "inst_cov": 0.17,
+    "bran_cov": 0.1,
+    "correct_inst_cov": 0.17,
+    "correct_bran_cov": 0.1
+  },
+  "org.apache.commons.collections4.trie.AbstractPatriciaTrie#nextEntryImpl(TrieEntry<K, V>, TrieEntry<K, V>, TrieEntry<K, V>)": {
+    "test_cases": 12,
+    "passed_cases": 9,
+    "inst_cov": 0.38,
+    "bran_cov": 0.37,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.apache.commons.collections4.map.Flat3Map#remove(Object)": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.28,
+    "bran_cov": 0.3,
+    "correct_inst_cov": 0.28,
+    "correct_bran_cov": 0.3
+  },
+  "org.apache.commons.collections4.trie.AbstractPatriciaTrie#removeInternalEntry(TrieEntry<K, V>)": {
+    "test_cases": 15,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "org.apache.commons.collections4.bidimap.TreeBidiMap#doRedBlackDelete(Node<K, V>)": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 0.28,
+    "bran_cov": 0.25,
+    "correct_inst_cov": 0.28,
+    "correct_bran_cov": 0.25
+  },
+  "org.apache.commons.collections4.bidimap.TreeBidiMap#swapPosition(Node<K, V>, Node<K, V>, DataElement)": {
+    "test_cases": 11,
+    "passed_cases": 11,
+    "inst_cov": 0.64,
+    "bran_cov": 0.52,
+    "correct_inst_cov": 0.64,
+    "correct_bran_cov": 0.52
+  },
+  "org.apache.commons.collections4.map.Flat3Map#put(K, V)": {
+    "test_cases": 20,
+    "passed_cases": 20,
+    "inst_cov": 0.84,
+    "bran_cov": 0.76,
+    "correct_inst_cov": 0.84,
+    "correct_bran_cov": 0.76
+  },
+  "org.apache.commons.collections4.trie.AbstractPatriciaTrie#higherEntry(K)": {
+    "test_cases": 15,
+    "passed_cases": 7,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.apache.commons.collections4.map.Flat3Map#containsValue(Object)": {
+    "test_cases": 5,
+    "passed_cases": 5,
+    "inst_cov": 0.92,
+    "bran_cov": 0.66,
+    "correct_inst_cov": 0.92,
+    "correct_bran_cov": 0.66
+  },
+  "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set<NameState>, boolean)": {
+    "test_cases": 20,
+    "passed_cases": 20,
+    "inst_cov": 0.31,
+    "bran_cov": 0.16,
+    "correct_inst_cov": 0.31,
+    "correct_bran_cov": 0.16
+  },
+  "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)": {
+    "test_cases": 8,
+    "passed_cases": 8,
+    "inst_cov": 0.53,
+    "bran_cov": 0.38,
+    "correct_inst_cov": 0.53,
+    "correct_bran_cov": 0.38
+  },
+  "software.amazon.event.ruler.ByteMachine#findRangePattern(Range)": {
+    "test_cases": 20,
+    "passed_cases": 5,
+    "inst_cov": 0.14,
+    "bran_cov": 0.06,
+    "correct_inst_cov": 0.07,
+    "correct_bran_cov": 0.02
+  },
+  "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)": {
+    "error_type": "compile error",
+    "test_cases": 16,
+    "passed_cases": 0
+  },
+  "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)": {
+    "test_cases": 16,
+    "passed_cases": 16,
+    "inst_cov": 0.01,
+    "bran_cov": 0.01,
+    "correct_inst_cov": 0.01,
+    "correct_bran_cov": 0.01
+  },
+  "software.amazon.event.ruler.ByteMachine#addMatchReferences(ByteMatch)": {
+    "test_cases": 16,
+    "passed_cases": 16,
+    "inst_cov": 0.56,
+    "bran_cov": 0.46,
+    "correct_inst_cov": 0.56,
+    "correct_bran_cov": 0.46
+  },
+  "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)": {
+    "test_cases": 17,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.1,
+    "bran_cov": 0.06
+  },
+  "software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)": {
+    "test_cases": 13,
+    "passed_cases": 4,
+    "inst_cov": 0.14,
+    "bran_cov": 0.08,
+    "correct_inst_cov": 0.09,
+    "correct_bran_cov": 0.05
+  },
+  "software.amazon.event.ruler.ByteMachine#addRangePattern(Range)": {
+    "test_cases": 0,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "software.amazon.event.ruler.MachineComplexityEvaluator#getMatchesAccessibleFromEachTransition(ByteState)": {
+    "test_cases": 12,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.52,
+    "bran_cov": 0.4
+  },
+  "software.amazon.event.ruler.ByteMachine#updateMatchReferences(ByteMatch)": {
+    "test_cases": 11,
+    "passed_cases": 11,
+    "inst_cov": 0.56,
+    "bran_cov": 0.46,
+    "correct_inst_cov": 0.56,
+    "correct_bran_cov": 0.46
+  },
+  "software.amazon.event.ruler.ByteMachine#deleteRangePattern(Range)": {
+    "test_cases": 1,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.01
+  },
+  "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)": {
+    "test_cases": 11,
+    "passed_cases": 10,
+    "inst_cov": 0.52,
+    "bran_cov": 0.44,
+    "correct_inst_cov": 0.5,
+    "correct_bran_cov": 0.42
+  },
+  "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)": {
+    "test_cases": 14,
+    "passed_cases": 3,
+    "inst_cov": 0.23,
+    "bran_cov": 0.12,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)": {
+    "test_cases": 2,
+    "passed_cases": 1,
+    "inst_cov": 0.17,
+    "bran_cov": 0.09,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "software.amazon.event.ruler.RuleCompiler#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)": {
+    "test_cases": 18,
+    "passed_cases": 11,
+    "inst_cov": 0.85,
+    "bran_cov": 0.84,
+    "correct_inst_cov": 0.85,
+    "correct_bran_cov": 0.76
+  },
+  "org.apache.commons.codec.binary.Base64#decode(byte[], int, int, Context)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 0.27,
+    "bran_cov": 0.62,
+    "correct_inst_cov": 0.27,
+    "correct_bran_cov": 0.62
+  },
+  "org.apache.commons.codec.net.QuotedPrintableCodec#encodeQuotedPrintable(BitSet, byte[], boolean)": {
+    "test_cases": 10,
+    "passed_cases": 5,
+    "inst_cov": 0.75,
+    "bran_cov": 0.65,
+    "correct_inst_cov": 0.72,
+    "correct_bran_cov": 0.57
+  },
+  "org.apache.commons.codec.binary.Base32#decode(byte[], int, int, Context)": {
+    "test_cases": 4,
+    "passed_cases": 1,
+    "inst_cov": 0.12,
+    "bran_cov": 0.5,
+    "correct_inst_cov": 0.04,
+    "correct_bran_cov": 0.14
+  },
+  "org.apache.commons.codec.binary.Base64#encode(byte[], int, int, Context)": {
+    "test_cases": 18,
+    "passed_cases": 18,
+    "inst_cov": 0.82,
+    "bran_cov": 0.6,
+    "correct_inst_cov": 0.82,
+    "correct_bran_cov": 0.6
+  },
+  "org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)": {
+    "test_cases": 17,
+    "passed_cases": 10,
+    "inst_cov": 0.55,
+    "bran_cov": 0.44,
+    "correct_inst_cov": 0.55,
+    "correct_bran_cov": 0.42
+  },
+  "org.apache.commons.codec.binary.Base32#encode(byte[], int, int, Context)": {
+    "test_cases": 17,
+    "passed_cases": 17,
+    "inst_cov": 0.92,
+    "bran_cov": 0.6,
+    "correct_inst_cov": 0.92,
+    "correct_bran_cov": 0.6
+  },
+  "org.apache.commons.codec.language.bm.Rule#pattern(String)": {
+    "error_type": "compile error",
+    "test_cases": 11,
+    "passed_cases": 0
+  },
+  "org.apache.commons.codec.language.DoubleMetaphone#handleS(String, DoubleMetaphoneResult, int, boolean)": {
+    "test_cases": 19,
+    "passed_cases": 13,
+    "inst_cov": 0.91,
+    "bran_cov": 0.84,
+    "correct_inst_cov": 0.87,
+    "correct_bran_cov": 0.71
+  },
+  "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)": {
+    "test_cases": 4,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "org.apache.commons.codec.language.Nysiis#transcodeRemaining(char, char, char, char)": {
+    "test_cases": 18,
+    "passed_cases": 17,
+    "inst_cov": 1.0,
+    "bran_cov": 0.9,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 0.87
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash128x64Internal(byte[], int, int, long)": {
+    "error_type": "compile error",
+    "test_cases": 18,
+    "passed_cases": 0
+  },
+  "org.apache.commons.codec.language.Nysiis#nysiis(String)": {
+    "test_cases": 5,
+    "passed_cases": 3,
+    "inst_cov": 0.86,
+    "bran_cov": 0.8,
+    "correct_inst_cov": 0.86,
+    "correct_bran_cov": 0.69
+  },
+  "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)": {
+    "test_cases": 26,
+    "passed_cases": 11,
+    "inst_cov": 0.97,
+    "bran_cov": 0.92,
+    "correct_inst_cov": 0.8,
+    "correct_bran_cov": 0.67
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)": {
+    "test_cases": 14,
+    "passed_cases": 14,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)": {
+    "test_cases": 39,
+    "passed_cases": 30,
+    "inst_cov": 0.92,
+    "bran_cov": 0.87,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.apache.commons.codec.language.Metaphone#metaphone(String)": {
+    "test_cases": 7,
+    "passed_cases": 4,
+    "inst_cov": 0.57,
+    "bran_cov": 0.46,
+    "correct_inst_cov": 0.17,
+    "correct_bran_cov": 0.13
+  },
+  "org.apache.commons.codec.language.DoubleMetaphone#handleC(String, DoubleMetaphoneResult, int)": {
+    "test_cases": 13,
+    "passed_cases": 8,
+    "inst_cov": 0.8,
+    "bran_cov": 0.59,
+    "correct_inst_cov": 0.8,
+    "correct_bran_cov": 0.56
+  },
+  "org.apache.commons.codec.digest.Sha2Crypt#sha2Crypt(byte[], String, String, int, String)": {
+    "test_cases": 5,
+    "passed_cases": 3,
+    "inst_cov": 0.93,
+    "bran_cov": 0.85,
+    "correct_inst_cov": 0.93,
+    "correct_bran_cov": 0.79
+  },
+  "com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class<? super T>)": {
+    "test_cases": 10,
+    "passed_cases": 9,
+    "inst_cov": 1.0,
+    "bran_cov": 0.95,
+    "correct_inst_cov": 0.95,
+    "correct_bran_cov": 0.9
+  },
+  "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)": {
+    "test_cases": 16,
+    "passed_cases": 15,
+    "inst_cov": 0.8,
+    "bran_cov": 0.68,
+    "correct_inst_cov": 0.1,
+    "correct_bran_cov": 0.15
+  },
+  "com.google.gson.stream.JsonReader#doPeek()": {
+    "test_cases": 1,
+    "passed_cases": 1,
+    "inst_cov": 0.11,
+    "bran_cov": 0.12,
+    "correct_inst_cov": 0.11,
+    "correct_bran_cov": 0.12
+  },
+  "com.google.gson.stream.JsonReader#skipValue()": {
+    "error_type": "execution error",
+    "test_cases": 17,
+    "passed_cases": 0
+  },
+  "com.google.gson.internal.bind.JsonTreeReader#peek()": {
+    "error_type": "compile error",
+    "test_cases": 19,
+    "passed_cases": 0
+  },
+  "com.google.gson.internal.Primitives#unwrap(Class<T>)": {
+    "error_type": "execution error",
+    "test_cases": 15,
+    "passed_cases": 0
+  },
+  "com.google.gson.stream.JsonReader#peek()": {
+    "test_cases": 9,
+    "passed_cases": 9,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "com.google.gson.stream.JsonReader#peekNumber()": {
+    "test_cases": 31,
+    "passed_cases": 28,
+    "inst_cov": 0.97,
+    "bran_cov": 0.92,
+    "correct_inst_cov": 0.97,
+    "correct_bran_cov": 0.86
+  },
+  "com.google.gson.stream.JsonReader#nextUnquotedValue()": {
+    "error_type": "execution error",
+    "test_cases": 4,
+    "passed_cases": 0
+  },
+  "com.google.gson.internal.LinkedTreeMap#find(K, boolean)": {
+    "test_cases": 8,
+    "passed_cases": 8,
+    "inst_cov": 0.58,
+    "bran_cov": 0.5,
+    "correct_inst_cov": 0.58,
+    "correct_bran_cov": 0.5
+  },
+  "com.google.gson.stream.JsonReader#nextNonWhitespace(boolean)": {
+    "test_cases": 5,
+    "passed_cases": 5,
+    "inst_cov": 0.57,
+    "bran_cov": 0.7,
+    "correct_inst_cov": 0.57,
+    "correct_bran_cov": 0.7
+  },
+  "com.google.gson.internal.Excluder#excludeField(Field, boolean)": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.68,
+    "bran_cov": 0.53,
+    "correct_inst_cov": 0.68,
+    "correct_bran_cov": 0.53
+  },
+  "com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)": {
+    "test_cases": 4,
+    "passed_cases": 4,
+    "inst_cov": 0.03,
+    "bran_cov": 0.05,
+    "correct_inst_cov": 0.03,
+    "correct_bran_cov": 0.05
+  },
+  "com.google.gson.internal.Primitives#wrap(Class<T>)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "com.google.gson.internal.LinkedTreeMap#rebalance(Node<K, V>, boolean)": {
+    "test_cases": 12,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0
+  },
+  "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)": {
+    "test_cases": 12,
+    "passed_cases": 12,
+    "inst_cov": 0.21,
+    "bran_cov": 0.15,
+    "correct_inst_cov": 0.21,
+    "correct_bran_cov": 0.15
+  },
+  "com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 1.0,
+    "bran_cov": 1.0,
+    "correct_inst_cov": 1.0,
+    "correct_bran_cov": 1.0
+  },
+  "com.google.gson.internal.$Gson$Types#getGenericSupertype(Type, Class<?>, Class<?>)": {
+    "test_cases": 10,
+    "passed_cases": 10,
+    "inst_cov": 0.83,
+    "bran_cov": 0.83,
+    "correct_inst_cov": 0.83,
+    "correct_bran_cov": 0.83
+  },
+  "com.google.gson.stream.JsonReader#readEscapeCharacter()": {
+    "test_cases": 4,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.13,
+    "bran_cov": 0.09
+  },
+  "com.google.gson.internal.$Gson$Types#equals(Type, Type)": {
+    "test_cases": 12,
+    "passed_cases": 12,
+    "inst_cov": 0.75,
+    "bran_cov": 0.61,
+    "correct_inst_cov": 0.75,
+    "correct_bran_cov": 0.61
+  },
+  "org.jdom2.output.support.AbstractStAXStreamProcessor#printDocument(XMLStreamWriter, FormatStack, NamespaceStack, Document)": {
+    "test_cases": 16,
+    "passed_cases": 4,
+    "inst_cov": 0.28,
+    "bran_cov": 0.22,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.jdom2.StringBin#locate(int, String, String[], int)": {
+    "test_cases": 18,
+    "passed_cases": 6,
+    "inst_cov": 0.43,
+    "bran_cov": 0.26,
+    "correct_inst_cov": 0.39,
+    "correct_bran_cov": 0.23
+  },
+  "org.jdom2.output.support.AbstractXMLOutputProcessor#printDocument(Writer, FormatStack, NamespaceStack, Document)": {
+    "test_cases": 19,
+    "passed_cases": 19,
+    "inst_cov": 0.76,
+    "bran_cov": 0.53,
+    "correct_inst_cov": 0.76,
+    "correct_bran_cov": 0.53
+  },
+  "org.jdom2.input.stax.DTDParser#formatInternal(String)": {
+    "test_cases": 24,
+    "passed_cases": 7,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.jdom2.output.support.AbstractStAXStreamProcessor#printContent(XMLStreamWriter, FormatStack, NamespaceStack, Walker)": {
+    "test_cases": 20,
+    "passed_cases": 20,
+    "inst_cov": 0.03,
+    "bran_cov": 0.07,
+    "correct_inst_cov": 0.03,
+    "correct_bran_cov": 0.07
+  },
+  "org.jdom2.output.support.WalkerNORMALIZE#analyzeMultiText(MultiText, int, int)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 0.15,
+    "bran_cov": 0.06,
+    "correct_inst_cov": 0.15,
+    "correct_bran_cov": 0.06
+  },
+  "org.jdom2.output.support.AbstractSAXOutputProcessor#printContent(SAXTarget, FormatStack, NamespaceStack, Walker)": {
+    "error_type": "execution error",
+    "test_cases": 12,
+    "passed_cases": 0
+  },
+  "org.jdom2.xpath.XPathHelper#getSingleStep(NamespaceAware, StringBuilder)": {
+    "test_cases": 11,
+    "passed_cases": 9,
+    "inst_cov": 0.93,
+    "bran_cov": 0.8,
+    "correct_inst_cov": 0.67,
+    "correct_bran_cov": 0.66
+  },
+  "org.jdom2.output.support.AbstractFormattedWalker#next()": {
+    "test_cases": 3,
+    "passed_cases": 3,
+    "inst_cov": 0.03,
+    "bran_cov": 0.02,
+    "correct_inst_cov": 0.03,
+    "correct_bran_cov": 0.02
+  },
+  "org.jdom2.input.StAXStreamBuilder#processPrunableElement(JDOMFactory, XMLStreamReader, int, StAXFilter)": {
+    "test_cases": 16,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.21,
+    "bran_cov": 0.13
+  },
+  "org.jdom2.Element#getNamespace(String)": {
+    "test_cases": 8,
+    "passed_cases": 8,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.jdom2.Element#getNamespacesInScope()": {
+    "test_cases": 9,
+    "passed_cases": 6,
+    "inst_cov": 0.91,
+    "bran_cov": 0.81,
+    "correct_inst_cov": 0.78,
+    "correct_bran_cov": 0.59
+  },
+  "org.jdom2.output.support.AbstractXMLOutputProcessor#printContent(Writer, FormatStack, NamespaceStack, Walker)": {
+    "test_cases": 15,
+    "passed_cases": 6,
+    "inst_cov": 0.76,
+    "bran_cov": 0.71,
+    "correct_inst_cov": 0.25,
+    "correct_bran_cov": 0.28
+  },
+  "org.jdom2.output.Format#escapeText(EscapeStrategy, String, String)": {
+    "test_cases": 10,
+    "passed_cases": 7,
+    "inst_cov": 0.74,
+    "bran_cov": 0.76,
+    "correct_inst_cov": 0.69,
+    "correct_bran_cov": 0.73
+  },
+  "org.jdom2.Verifier#isXMLPublicIDCharacter(char)": {
+    "test_cases": 2,
+    "passed_cases": 2,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.jdom2.output.support.AbstractStAXEventProcessor#printContent(XMLEventConsumer, FormatStack, NamespaceStack, XMLEventFactory, Walker)": {
+    "test_cases": 6,
+    "passed_cases": 2,
+    "inst_cov": 0.92,
+    "bran_cov": 0.92,
+    "correct_inst_cov": 0.68,
+    "correct_bran_cov": 0.71
+  },
+  "org.jdom2.Verifier#isXMLExtender(char)": {
+    "test_cases": 4,
+    "passed_cases": 4,
+    "inst_cov": 0.97,
+    "bran_cov": 0.96,
+    "correct_inst_cov": 0.97,
+    "correct_bran_cov": 0.96
+  },
+  "org.jdom2.output.support.AbstractStAXEventProcessor#printDocument(XMLEventConsumer, FormatStack, NamespaceStack, XMLEventFactory, Document)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 0.79,
+    "bran_cov": 0.6,
+    "correct_inst_cov": 0.79,
+    "correct_bran_cov": 0.6
+  },
+  "org.jdom2.output.support.WalkerTRIM#analyzeMultiText(MultiText, int, int)": {
+    "test_cases": 12,
+    "passed_cases": 5,
+    "inst_cov": 0.57,
+    "bran_cov": 0.56,
+    "correct_inst_cov": 0.57,
+    "correct_bran_cov": 0.47
+  },
+  "org.jdom2.input.sax.SAXHandler#startElement(String, String, String, Attributes)": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.62,
+    "bran_cov": 0.5,
+    "correct_inst_cov": 0.62,
+    "correct_bran_cov": 0.5
+  },
+  "org.jdom2.output.Format#escapeAttribute(EscapeStrategy, String)": {
+    "test_cases": 13,
+    "passed_cases": 7,
+    "inst_cov": 0.76,
+    "bran_cov": 0.85,
+    "correct_inst_cov": 0.66,
+    "correct_bran_cov": 0.77
+  },
+  "compile_pass_rate": 0.9417685118619699,
+  "execution_pass_rate": 0.6398274622573688,
+  "average_instruction_coverage": 0.5282882882882882,
+  "average_branch_coverage": 0.4796396396396399,
+  "average_correct_instruction_coverage": 0.4577477477477477,
+  "average_correct_branch_coverage": 0.4060360360360362
+}

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import sys
 from pathlib import Path
 from statistics import mean
 
@@ -15,6 +16,7 @@ REPO = Path(__file__).resolve().parent.parent
 DATASET = load_json(REPO / "data" / "dataset_info.json")
 OURS_ROOT = REPO / "results" / "stage4"
 OURS_FIXTRIES5_ROOT = REPO / "results" / "stage4b"
+OURS_GPT4O_ROOT = REPO / "results" / "stage4c"
 AUTHORS_ROOT = REPO / "evaluation_results" / "RQ1-ktester" / "RQ1" / "KTester-gpt4o"
 AUTHORS_TIME = (
     REPO
@@ -317,6 +319,44 @@ def write_task_table_3way(
                 writer.writerow(row)
 
 
+def write_task_table_4way(
+    ours_tasks: dict,
+    ours_fixtries5_tasks: dict,
+    ours_gpt4o_tasks: dict,
+    author_tasks: list[dict],
+) -> None:
+    columns = ["project", "id"]
+    for field in FIELDS:
+        columns.extend(
+            [
+                f"ours_fixtries3_{field}",
+                f"ours_fixtries5_{field}",
+                f"ours_gpt4o_{field}",
+                f"authors_mean_{field}",
+                f"authors_min_{field}",
+                f"authors_max_{field}",
+            ]
+        )
+    with (OUTPUT / "comparison_task_table_4way.csv").open(
+        "w", newline="", encoding="utf-8"
+    ) as handle:
+        writer = csv.DictWriter(handle, fieldnames=columns, lineterminator="\n")
+        writer.writeheader()
+        for project, info in DATASET.items():
+            for task in info["focal-methods"]:
+                task_id = task["id"]
+                row = {"project": project, "id": task_id}
+                for field in FIELDS:
+                    values = [rep[task_id][field] for rep in author_tasks]
+                    row[f"ours_fixtries3_{field}"] = ours_tasks[task_id][field]
+                    row[f"ours_fixtries5_{field}"] = ours_fixtries5_tasks[task_id][field]
+                    row[f"ours_gpt4o_{field}"] = ours_gpt4o_tasks[task_id][field]
+                    row[f"authors_mean_{field}"] = mean(values)
+                    row[f"authors_min_{field}"] = min(values)
+                    row[f"authors_max_{field}"] = max(values)
+                writer.writerow(row)
+
+
 def format_project_table(ours: dict, authors: dict) -> str:
     headers = (
         "Project",
@@ -440,7 +480,77 @@ def format_project_table_3way(ours: dict, ours_fixtries5: dict, authors: dict) -
     return "\n".join(lines) + "\n"
 
 
+def format_project_table_4way(
+    ours: dict, ours_fixtries5: dict, ours_gpt4o: dict, authors: dict
+) -> str:
+    headers = (
+        "Project",
+        "Side",
+        "Tasks",
+        "TC compile",
+        "TC execution",
+        "Task compile",
+        "Task all pass",
+        "Task any pass",
+        "Mean inst cov",
+        "Mean branch cov",
+        "Mean correct inst cov",
+        "Mean correct branch cov",
+        "Tests/class",
+    )
+    lines = [
+        "| " + " | ".join(headers) + " |",
+        "| " + " | ".join(["---", "---"] + ["---:"] * (len(headers) - 2)) + " |",
+    ]
+    sides = (
+        ("Ours (FIX_TRIES=3)", ours),
+        ("Ours (FIX_TRIES=5)", ours_fixtries5),
+        ("Ours (gpt-4o, FIX_TRIES=5)", ours_gpt4o),
+        ("Authors mean", authors),
+    )
+    for project in [*DATASET, "Total"]:
+        key = "total" if project == "Total" else "projects"
+        for label, data in sides:
+            value = data[key] if key == "total" else data[key][project]
+            lines.append(
+                "| "
+                + " | ".join(
+                    [
+                        project,
+                        label,
+                        f"{value['tasks']:.0f}",
+                        percent(value["test_case_compile_rate"]),
+                        percent(value["test_case_execution_rate"]),
+                        percent(value["task_compile_rate"]),
+                        percent(value["task_all_pass_rate"]),
+                        percent(value["task_any_pass_rate"]),
+                        percent(value["mean_instruction_coverage"]),
+                        percent(value["mean_branch_coverage"]),
+                        percent(value["mean_correct_instruction_coverage"]),
+                        percent(value["mean_correct_branch_coverage"]),
+                        f"{value['mean_test_cases_per_class']:.2f}",
+                    ]
+                )
+                + " |"
+            )
+    lines.extend(
+        [
+            "",
+            "### Total tests per class and time per task",
+            "",
+            "| Side | Tests/class | Mean time/task (s) |",
+            "| --- | ---: | ---: |",
+            f"| Ours (gpt-4o, FIX_TRIES=5) | {ours_gpt4o['total']['mean_test_cases_per_class']:.2f} | {ours_gpt4o['total']['mean_time_per_task_seconds']:.2f} |",
+            f"| Authors mean | {authors['total']['mean_test_cases_per_class']:.2f} | {authors['total']['mean_time_per_task_seconds']:.2f} |",
+        ]
+    )
+    return "\n".join(lines) + "\n"
+
+
 def main() -> None:
+    if len(sys.argv) > 2 or (len(sys.argv) == 2 and sys.argv[1] != "--4way"):
+        raise SystemExit(f"Usage: {Path(sys.argv[0]).name} [--4way]")
+    four_way_only = len(sys.argv) == 2
     OUTPUT.mkdir(parents=True, exist_ok=True)
     ours, ours_tasks = load_run(OURS_ROOT, authors=False)
     add_times(ours, OURS_ROOT / "time" / "time_records.json")
@@ -448,17 +558,34 @@ def main() -> None:
     add_times(
         ours_fixtries5, OURS_FIXTRIES5_ROOT / "time" / "time_records.json"
     )
+    ours_gpt4o, ours_gpt4o_tasks = load_run(OURS_GPT4O_ROOT, authors=False)
+    add_times(ours_gpt4o, OURS_GPT4O_ROOT / "time" / "time_records.json")
     author_reps = []
     author_tasks = []
     for rep in range(1, 6):
         aggregate, tasks = load_run(AUTHORS_ROOT / f"rep_{rep}", authors=True)
         author_reps.append(aggregate)
         author_tasks.append(tasks)
-        (OUTPUT / f"aggregate_authors_rep{rep}.json").write_text(
-            json.dumps(aggregate, indent=2) + "\n", encoding="utf-8"
-        )
+        if not four_way_only:
+            (OUTPUT / f"aggregate_authors_rep{rep}.json").write_text(
+                json.dumps(aggregate, indent=2) + "\n", encoding="utf-8"
+            )
     authors_mean = mean_aggregates(author_reps)
     add_times(authors_mean, AUTHORS_TIME)
+    (OUTPUT / "aggregate_ours_gpt4o.json").write_text(
+        json.dumps(ours_gpt4o, indent=2) + "\n", encoding="utf-8"
+    )
+    write_task_table_4way(
+        ours_tasks, ours_fixtries5_tasks, ours_gpt4o_tasks, author_tasks
+    )
+    (OUTPUT / "comparison_project_table_4way.md").write_text(
+        format_project_table_4way(
+            ours, ours_fixtries5, ours_gpt4o, authors_mean
+        ),
+        encoding="utf-8",
+    )
+    if four_way_only:
+        return
     (OUTPUT / "aggregate_ours.json").write_text(
         json.dumps(ours, indent=2) + "\n", encoding="utf-8"
     )
