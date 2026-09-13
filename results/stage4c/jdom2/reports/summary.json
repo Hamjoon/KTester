@@ -1,0 +1,173 @@
+{
+  "org.jdom2.output.support.AbstractStAXStreamProcessor#printDocument(XMLStreamWriter, FormatStack, NamespaceStack, Document)": {
+    "test_cases": 16,
+    "passed_cases": 4,
+    "inst_cov": 0.28,
+    "bran_cov": 0.22,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.jdom2.StringBin#locate(int, String, String[], int)": {
+    "test_cases": 18,
+    "passed_cases": 6,
+    "inst_cov": 0.43,
+    "bran_cov": 0.26,
+    "correct_inst_cov": 0.39,
+    "correct_bran_cov": 0.23
+  },
+  "org.jdom2.output.support.AbstractXMLOutputProcessor#printDocument(Writer, FormatStack, NamespaceStack, Document)": {
+    "test_cases": 19,
+    "passed_cases": 19,
+    "inst_cov": 0.76,
+    "bran_cov": 0.53,
+    "correct_inst_cov": 0.76,
+    "correct_bran_cov": 0.53
+  },
+  "org.jdom2.input.stax.DTDParser#formatInternal(String)": {
+    "test_cases": 24,
+    "passed_cases": 7,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.jdom2.output.support.AbstractStAXStreamProcessor#printContent(XMLStreamWriter, FormatStack, NamespaceStack, Walker)": {
+    "test_cases": 20,
+    "passed_cases": 20,
+    "inst_cov": 0.03,
+    "bran_cov": 0.07,
+    "correct_inst_cov": 0.03,
+    "correct_bran_cov": 0.07
+  },
+  "org.jdom2.output.support.WalkerNORMALIZE#analyzeMultiText(MultiText, int, int)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 0.15,
+    "bran_cov": 0.06,
+    "correct_inst_cov": 0.15,
+    "correct_bran_cov": 0.06
+  },
+  "org.jdom2.output.support.AbstractSAXOutputProcessor#printContent(SAXTarget, FormatStack, NamespaceStack, Walker)": {
+    "error_type": "execution error",
+    "test_cases": 12,
+    "passed_cases": 0
+  },
+  "org.jdom2.xpath.XPathHelper#getSingleStep(NamespaceAware, StringBuilder)": {
+    "test_cases": 11,
+    "passed_cases": 9,
+    "inst_cov": 0.93,
+    "bran_cov": 0.8,
+    "correct_inst_cov": 0.67,
+    "correct_bran_cov": 0.66
+  },
+  "org.jdom2.output.support.AbstractFormattedWalker#next()": {
+    "test_cases": 3,
+    "passed_cases": 3,
+    "inst_cov": 0.03,
+    "bran_cov": 0.02,
+    "correct_inst_cov": 0.03,
+    "correct_bran_cov": 0.02
+  },
+  "org.jdom2.input.StAXStreamBuilder#processPrunableElement(JDOMFactory, XMLStreamReader, int, StAXFilter)": {
+    "test_cases": 16,
+    "passed_cases": 0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0,
+    "inst_cov": 0.21,
+    "bran_cov": 0.13
+  },
+  "org.jdom2.Element#getNamespace(String)": {
+    "test_cases": 8,
+    "passed_cases": 8,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.jdom2.Element#getNamespacesInScope()": {
+    "test_cases": 9,
+    "passed_cases": 6,
+    "inst_cov": 0.91,
+    "bran_cov": 0.81,
+    "correct_inst_cov": 0.78,
+    "correct_bran_cov": 0.59
+  },
+  "org.jdom2.output.support.AbstractXMLOutputProcessor#printContent(Writer, FormatStack, NamespaceStack, Walker)": {
+    "test_cases": 15,
+    "passed_cases": 6,
+    "inst_cov": 0.76,
+    "bran_cov": 0.71,
+    "correct_inst_cov": 0.25,
+    "correct_bran_cov": 0.28
+  },
+  "org.jdom2.output.Format#escapeText(EscapeStrategy, String, String)": {
+    "test_cases": 10,
+    "passed_cases": 7,
+    "inst_cov": 0.74,
+    "bran_cov": 0.76,
+    "correct_inst_cov": 0.69,
+    "correct_bran_cov": 0.73
+  },
+  "org.jdom2.Verifier#isXMLPublicIDCharacter(char)": {
+    "test_cases": 2,
+    "passed_cases": 2,
+    "inst_cov": 0.0,
+    "bran_cov": 0.0,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.jdom2.output.support.AbstractStAXEventProcessor#printContent(XMLEventConsumer, FormatStack, NamespaceStack, XMLEventFactory, Walker)": {
+    "test_cases": 6,
+    "passed_cases": 2,
+    "inst_cov": 0.92,
+    "bran_cov": 0.92,
+    "correct_inst_cov": 0.68,
+    "correct_bran_cov": 0.71
+  },
+  "org.jdom2.Verifier#isXMLExtender(char)": {
+    "test_cases": 4,
+    "passed_cases": 4,
+    "inst_cov": 0.97,
+    "bran_cov": 0.96,
+    "correct_inst_cov": 0.97,
+    "correct_bran_cov": 0.96
+  },
+  "org.jdom2.output.support.AbstractStAXEventProcessor#printDocument(XMLEventConsumer, FormatStack, NamespaceStack, XMLEventFactory, Document)": {
+    "test_cases": 15,
+    "passed_cases": 15,
+    "inst_cov": 0.79,
+    "bran_cov": 0.6,
+    "correct_inst_cov": 0.79,
+    "correct_bran_cov": 0.6
+  },
+  "org.jdom2.output.support.WalkerTRIM#analyzeMultiText(MultiText, int, int)": {
+    "test_cases": 12,
+    "passed_cases": 5,
+    "inst_cov": 0.57,
+    "bran_cov": 0.56,
+    "correct_inst_cov": 0.57,
+    "correct_bran_cov": 0.47
+  },
+  "org.jdom2.input.sax.SAXHandler#startElement(String, String, String, Attributes)": {
+    "test_cases": 7,
+    "passed_cases": 7,
+    "inst_cov": 0.62,
+    "bran_cov": 0.5,
+    "correct_inst_cov": 0.62,
+    "correct_bran_cov": 0.5
+  },
+  "org.jdom2.output.Format#escapeAttribute(EscapeStrategy, String)": {
+    "test_cases": 13,
+    "passed_cases": 7,
+    "inst_cov": 0.76,
+    "bran_cov": 0.85,
+    "correct_inst_cov": 0.66,
+    "correct_bran_cov": 0.77
+  },
+  "compile_pass_rate": 1.0,
+  "execution_pass_rate": 0.596078431372549,
+  "average_instruction_coverage": 0.4695238095238095,
+  "average_branch_coverage": 0.41714285714285715,
+  "average_correct_instruction_coverage": 0.38285714285714284,
+  "average_correct_branch_coverage": 0.3419047619047619
+}

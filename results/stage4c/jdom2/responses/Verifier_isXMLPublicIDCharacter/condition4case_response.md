@@ -1,0 +1,185 @@
+{
+    "group": "isXMLPublicIDCharacter Tests",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "a"
+                }
+            ],
+            "expected": true,
+            "description": "Test with a lowercase letter 'a' which is within the range 'a' to 'z'."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "Z"
+                }
+            ],
+            "expected": true,
+            "description": "Test with an uppercase letter 'Z' which is within the range '?' to 'Z'."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "?"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character '?' which is the lower bound of the range '?' to 'Z'."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "'"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character ''' which is within the range ''' to ';'."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": ";"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character ';' which is the upper bound of the range ''' to ';'."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": " "
+                }
+            ],
+            "expected": true,
+            "description": "Test with the space character ' ' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "!"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character '!' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "="
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character '=' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "#"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character '#' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "$"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character '$' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "_"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character '_' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "%"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character '%' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "\n"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the newline character '\\n' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "\r"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the carriage return character '\\r' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "\t"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the tab character '\\t' which is explicitly checked."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "9"
+                }
+            ],
+            "expected": false,
+            "description": "Test with the character '9' which is not within any of the specified ranges or explicitly checked characters."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "@"
+                }
+            ],
+            "expected": true,
+            "description": "Test with the character '@' which is within the range '?' to 'Z'."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "c",
+                    "value": "^"
+                }
+            ],
+            "expected": false,
+            "description": "Test with the character '^' which is not within any of the specified ranges or explicitly checked characters."
+        }
+    ]
+}

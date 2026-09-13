@@ -1,0 +1,451 @@
+[
+  {
+    "group": "escapeAttribute Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Hello World"
+          }
+        ],
+        "expected": "Hello World",
+        "description": "Test with a string that contains no special characters requiring escape. Should return the original string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "<tag>"
+          }
+        ],
+        "expected": "&lt;tag&gt;",
+        "description": "Test with a string containing '<' and '>'. Should escape these characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Hello & Goodbye"
+          }
+        ],
+        "expected": "Hello &amp; Goodbye",
+        "description": "Test with a string containing '&'. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Line1\rLine2"
+          }
+        ],
+        "expected": "Line1&#xD;Line2",
+        "description": "Test with a string containing carriage return '\\r'. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Line1\nLine2"
+          }
+        ],
+        "expected": "Line1&#xA;Line2",
+        "description": "Test with a string containing newline '\\n'. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Tab\tCharacter"
+          }
+        ],
+        "expected": "Tab&#x9;Character",
+        "description": "Test with a string containing a tab '\\t'. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Quote\"Here"
+          }
+        ],
+        "expected": "Quote&quot;Here",
+        "description": "Test with a string containing double quotes '\"'. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "CustomEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "CustomChar!"
+          }
+        ],
+        "expected": "CustomChar&#x21;",
+        "description": "Test with a custom escape strategy that escapes '!' character. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u001f"
+          }
+        ],
+        "expected": "&#x1F;",
+        "description": "Test with a string containing a non-printable ASCII character. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000"
+          }
+        ],
+        "expected": "&#x0;",
+        "description": "Test with a string containing a null character. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u001f\u001f"
+          }
+        ],
+        "expected": "&#x1F;&#x1F;",
+        "description": "Test with a string containing multiple non-printable ASCII characters. Should escape these characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u001f\u001f\u001f"
+          }
+        ],
+        "expected": "&#x1F;&#x1F;&#x1F;",
+        "description": "Test with a string containing multiple non-printable ASCII characters in succession. Should escape these characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u001f\u001f\u001f\u001f"
+          }
+        ],
+        "expected": "&#x1F;&#x1F;&#x1F;&#x1F;",
+        "description": "Test with a string containing multiple non-printable ASCII characters in succession. Should escape these characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u001f\u001f\u001f\u001f\u001f"
+          }
+        ],
+        "expected": "&#x1F;&#x1F;&#x1F;&#x1F;&#x1F;",
+        "description": "Test with a string containing multiple non-printable ASCII characters in succession. Should escape these characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u001f\u001f\u001f\u001f\u001f\u001f"
+          }
+        ],
+        "expected": "&#x1F;&#x1F;&#x1F;&#x1F;&#x1F;&#x1F;",
+        "description": "Test with a string containing multiple non-printable ASCII characters in succession. Should escape these characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u001f\u001f\u001f\u001f\u001f\u001f\u001f"
+          }
+        ],
+        "expected": "&#x1F;&#x1F;&#x1F;&#x1F;&#x1F;&#x1F;&#x1F;",
+        "description": "Test with a string containing multiple non-printable ASCII characters in succession. Should escape these characters."
+      }
+    ]
+  },
+  {
+    "group": "Additional escapeAttribute Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Surrogate\u001dPair"
+          }
+        ],
+        "expected": "Surrogate&#x1D;Pair",
+        "description": "Test with a string containing a single surrogate character. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u001d\u001e"
+          }
+        ],
+        "expected": "&#x1D;&#x1E;",
+        "description": "Test with a string containing multiple surrogate characters. Should escape these characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "HighSurrogate\u001d"
+          }
+        ],
+        "expected": "HighSurrogate&#x1D;",
+        "description": "Test with a string containing a high surrogate character. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "LowSurrogate\u001e"
+          }
+        ],
+        "expected": "LowSurrogate&#x1E;",
+        "description": "Test with a string containing a low surrogate character. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "CustomEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Hello !"
+          }
+        ],
+        "expected": "Hello &#x21;",
+        "description": "Test with a custom escape strategy that escapes '!' character. Should escape this character."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "CustomEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "Test !@#"
+          }
+        ],
+        "expected": "Test &#x21;@#",
+        "description": "Test with a custom escape strategy that escapes '!' character and leaves others. Should escape '!' only."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "MixedContent<&>\"'\n"
+          }
+        ],
+        "expected": "MixedContent&lt;&amp;&gt;&quot;&#xA;",
+        "description": "Test with a string containing multiple special characters. Should escape all special characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "NoEscapeNeeded"
+          }
+        ],
+        "expected": "NoEscapeNeeded",
+        "description": "Test with a string that contains no special characters requiring escape. Should return the original string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000\u0001\u0002"
+          }
+        ],
+        "expected": "&#x0;&#x1;&#x2;",
+        "description": "Test with a string containing multiple non-printable ASCII characters. Should escape these characters."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000"
+          }
+        ],
+        "expected": "&#x0;",
+        "description": "Test with a string containing a null character. Should escape this character."
+      }
+    ]
+  },
+  {
+    "group": "escapeAttribute Exception Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000D800"
+          }
+        ],
+        "expected": "IllegalDataException",
+        "description": "Test with a string containing a high surrogate character without a following low surrogate. Should throw IllegalDataException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000D800A"
+          }
+        ],
+        "expected": "IllegalDataException",
+        "description": "Test with a string containing a high surrogate character followed by a non-surrogate character. Should throw IllegalDataException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000D800D800"
+          }
+        ],
+        "expected": "IllegalDataException",
+        "description": "Test with a string containing consecutive high surrogate characters. Should throw IllegalDataException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000DC00"
+          }
+        ],
+        "expected": "IllegalDataException",
+        "description": "Test with a string containing a low surrogate character without a preceding high surrogate. Should throw IllegalDataException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "DefaultEscapeStrategy"
+          },
+          {
+            "parameter": "value",
+            "value": "\u0000D800DC00D800"
+          }
+        ],
+        "expected": "IllegalDataException",
+        "description": "Test with a string containing a valid surrogate pair followed by a high surrogate without a low surrogate. Should throw IllegalDataException."
+      }
+    ]
+  }
+]

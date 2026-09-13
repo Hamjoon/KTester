@@ -1,0 +1,237 @@
+[
+  {
+    "group": "printContent method test cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning null and isCDATA() true"
+          }
+        ],
+        "expected": "printCDATA is called with appropriate parameters",
+        "description": "Test case where walker.next() returns null and walker.isCDATA() is true, expecting printCDATA to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning null and isCDATA() false"
+          }
+        ],
+        "expected": "printText is called with appropriate parameters",
+        "description": "Test case where walker.next() returns null and walker.isCDATA() is false, expecting printText to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning Content of type CDATA"
+          }
+        ],
+        "expected": "printCDATA is called with the CDATA content",
+        "description": "Test case where walker.next() returns a CDATA content, expecting printCDATA to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning Content of type Comment"
+          }
+        ],
+        "expected": "printComment is called with the Comment content",
+        "description": "Test case where walker.next() returns a Comment content, expecting printComment to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning Content of type Element"
+          }
+        ],
+        "expected": "printElement is called with the Element content",
+        "description": "Test case where walker.next() returns an Element content, expecting printElement to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning Content of type EntityRef"
+          }
+        ],
+        "expected": "printEntityRef is called with the EntityRef content",
+        "description": "Test case where walker.next() returns an EntityRef content, expecting printEntityRef to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning Content of type ProcessingInstruction"
+          }
+        ],
+        "expected": "printProcessingInstruction is called with the ProcessingInstruction content",
+        "description": "Test case where walker.next() returns a ProcessingInstruction content, expecting printProcessingInstruction to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning Content of type Text"
+          }
+        ],
+        "expected": "printText is called with the Text content",
+        "description": "Test case where walker.next() returns a Text content, expecting printText to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning Content of type DocType"
+          }
+        ],
+        "expected": "printDocType is called with the DocType content",
+        "description": "Test case where walker.next() returns a DocType content, expecting printDocType to be called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning Content of unknown type"
+          }
+        ],
+        "expected": "IllegalStateException is thrown with message 'Unexpected Content '",
+        "description": "Test case where walker.next() returns a Content of an unknown type, expecting an IllegalStateException to be thrown."
+      }
+    ]
+  },
+  {
+    "group": "printContent method test cases - additional",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with no next() call and isCDATA() true"
+          }
+        ],
+        "expected": "No action performed, method exits gracefully",
+        "description": "Test case where walker is not called with next() and walker.isCDATA() is true, expecting no action to be performed and method to exit gracefully."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with no next() call and isCDATA() false"
+          }
+        ],
+        "expected": "No action performed, method exits gracefully",
+        "description": "Test case where walker is not called with next() and walker.isCDATA() is false, expecting no action to be performed and method to exit gracefully."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning multiple Content types in sequence"
+          }
+        ],
+        "expected": "Corresponding print methods are called for each Content type",
+        "description": "Test case where walker.next() returns multiple Content types in sequence, expecting the corresponding print methods to be called for each type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning null followed by Content of type Text"
+          }
+        ],
+        "expected": "printText is called after handling null",
+        "description": "Test case where walker.next() returns null and then a Text content, expecting printText to be called after handling the null case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() throwing an exception"
+          }
+        ],
+        "expected": "Exception is propagated or handled",
+        "description": "Test case where walker.next() throws an exception, expecting the exception to be propagated or handled appropriately."
+      }
+    ]
+  },
+  {
+    "group": "printContent exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException or similar exception",
+        "description": "Test scenario where the XMLEventConsumer 'out' is null, expecting a NullPointerException or similar exception to be thrown when trying to use it."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException or similar exception",
+        "description": "Test scenario where the FormatStack 'fstack' is null, expecting a NullPointerException or similar exception to be thrown when trying to use it."
+      },
+      {
+        "input": [
+          {
+            "parameter": "nstack",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException or similar exception",
+        "description": "Test scenario where the NamespaceStack 'nstack' is null, expecting a NullPointerException or similar exception to be thrown when trying to use it."
+      },
+      {
+        "input": [
+          {
+            "parameter": "eventfactory",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException or similar exception",
+        "description": "Test scenario where the XMLEventFactory 'eventfactory' is null, expecting a NullPointerException or similar exception to be thrown when trying to use it."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException or similar exception",
+        "description": "Test scenario where the Walker 'walker' is null, expecting a NullPointerException or similar exception to be thrown when trying to use it."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker throwing XMLStreamException"
+          }
+        ],
+        "expected": "XMLStreamException is propagated",
+        "description": "Test scenario where walker.next() throws an XMLStreamException, expecting the exception to be propagated."
+      },
+      {
+        "input": [
+          {
+            "parameter": "walker",
+            "value": "Walker with next() returning a malformed Content"
+          }
+        ],
+        "expected": "Exception related to malformed content is thrown",
+        "description": "Test scenario where walker.next() returns a malformed Content object, expecting an exception related to malformed content to be thrown."
+      }
+    ]
+  }
+]

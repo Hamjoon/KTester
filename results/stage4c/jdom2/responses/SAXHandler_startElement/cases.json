@@ -1,0 +1,391 @@
+[
+  {
+    "group": "startElement Method Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": ""
+          },
+          {
+            "parameter": "localName",
+            "value": ""
+          },
+          {
+            "parameter": "qName",
+            "value": ""
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributes()"
+          }
+        ],
+        "expected": "No action since suppress is true",
+        "description": "Test when suppress is true, the method should return immediately without processing."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributes()"
+          }
+        ],
+        "expected": "Element created with prefix and local name derived from qName",
+        "description": "Test when qName is provided, prefix and local name should be derived from qName."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": ""
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributes()"
+          }
+        ],
+        "expected": "Element created with provided local name and namespace",
+        "description": "Test when qName is empty, element should be created with provided local name and namespace."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributesWithXMLNS()"
+          }
+        ],
+        "expected": "XMLNS attributes are ignored",
+        "description": "Test when attributes contain XMLNS, they should be ignored."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributesWithSpecified()"
+          }
+        ],
+        "expected": "Attributes are processed correctly with specified flag",
+        "description": "Test when attributes have specified flag, they should be processed accordingly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributesWithNamespace()"
+          }
+        ],
+        "expected": "Correct namespace prefix is assigned to attributes",
+        "description": "Test when attributes have a namespace URI but no prefix, the correct prefix should be assigned."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributesWithDefaultNamespace()"
+          }
+        ],
+        "expected": "Default prefix is assigned when no existing prefix matches the namespace",
+        "description": "Test when no existing prefix matches the attribute namespace, a default prefix should be assigned."
+      }
+    ]
+  },
+  {
+    "group": "startElement Additional Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": ":element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributes()"
+          }
+        ],
+        "expected": "Element created with empty prefix and correct local name",
+        "description": "Test when qName starts with a colon, indicating an empty prefix."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": ""
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributes()"
+          }
+        ],
+        "expected": "Element created with prefix and empty local name",
+        "description": "Test when qName ends with a colon, indicating an empty local name."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributesWithEmptyURI()"
+          }
+        ],
+        "expected": "Attribute with empty URI handled",
+        "description": "Test when attribute has an empty URI, ensuring it is processed without errors."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributesWithEmptyValue()"
+          }
+        ],
+        "expected": "Attribute with empty value handled",
+        "description": "Test when attribute has an empty value, ensuring it is processed without errors."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributesWithMultipleNamespaces()"
+          }
+        ],
+        "expected": "Multiple namespaces handled correctly",
+        "description": "Test when attributes belong to multiple namespaces, ensuring correct namespace assignment."
+      }
+    ]
+  },
+  {
+    "group": "startElement Exception Tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": null
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributes()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when namespaceURI is null, which may cause a NullPointerException when attempting to create a Namespace."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": null
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributes()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when localName is null, which may cause a NullPointerException when attempting to create an Element."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": null
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributes()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when qName is null, which may cause a NullPointerException when attempting to derive prefix and local name."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when atts is null, which may cause a NullPointerException when attempting to process attributes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "namespaceURI",
+            "value": "http://example.com"
+          },
+          {
+            "parameter": "localName",
+            "value": "element"
+          },
+          {
+            "parameter": "qName",
+            "value": "prefix:element"
+          },
+          {
+            "parameter": "atts",
+            "value": "mockAttributesWithInvalidType()"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Test when atts contains an invalid attribute type, which may cause an IllegalArgumentException when attempting to process the attribute type."
+      }
+    ]
+  }
+]

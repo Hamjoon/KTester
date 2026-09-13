@@ -1,0 +1,502 @@
+[
+  {
+    "group": "PrintDocumentTests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": true,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": null
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": []
+            }
+          }
+        ],
+        "expected": "out.add(eventfactory.createStartDocument(null, null))",
+        "description": "Test case where the document declaration is omitted and the document has a root element with no content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": true,
+              "encoding": "UTF-8",
+              "lineSeparator": "\n"
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": []
+            }
+          }
+        ],
+        "expected": [
+          "out.add(eventfactory.createStartDocument(null, \"1.0\"))",
+          "out.add(eventfactory.createCharacters(\"\\n\"))"
+        ],
+        "description": "Test case where the encoding is omitted, and a line separator is specified."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": "\n"
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": []
+            }
+          }
+        ],
+        "expected": [
+          "out.add(eventfactory.createStartDocument(\"UTF-8\", \"1.0\"))",
+          "out.add(eventfactory.createCharacters(\"\\n\"))"
+        ],
+        "description": "Test case where neither declaration nor encoding is omitted, and a line separator is specified."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": null
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": false,
+              "content": [
+                {
+                  "type": "Comment",
+                  "content": "This is a comment"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "printComment is called with the comment content",
+        "description": "Test case where the document has no root element, and the content includes a comment."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": null
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": false,
+              "content": [
+                {
+                  "type": "DocType",
+                  "content": "DOCTYPE html"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "printDocType is called with the doctype content",
+        "description": "Test case where the document has no root element, and the content includes a doctype."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": null
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": false,
+              "content": [
+                {
+                  "type": "Element",
+                  "content": "<element></element>"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "printElement is called with the element content",
+        "description": "Test case where the document has no root element, and the content includes an element."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": null
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": false,
+              "content": [
+                {
+                  "type": "ProcessingInstruction",
+                  "content": "<?xml-stylesheet type=\"text/xsl\" href=\"style.xsl\"?>"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "printProcessingInstruction is called with the processing instruction content",
+        "description": "Test case where the document has no root element, and the content includes a processing instruction."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": null
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": false,
+              "content": [
+                {
+                  "type": "Text",
+                  "content": "Some text content"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "out.add(eventfactory.createCharacters(\"Some text content\"))",
+        "description": "Test case where the document has no root element, and the content includes text."
+      }
+    ]
+  },
+  {
+    "group": "AdditionalPrintDocumentTests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": "\n"
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": [
+                {
+                  "type": "Element",
+                  "content": "<element>Text with <![CDATA[<some cdata>]]></element>"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "printElement is called with the element containing CDATA",
+        "description": "Test case where the document has a root element with CDATA content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": null
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": false,
+              "content": [
+                {
+                  "type": "EntityRef",
+                  "content": "&entity;"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "printEntityRef is called with the entity reference content",
+        "description": "Test case where the document has no root element, and the content includes an entity reference."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "ISO-8859-1",
+              "lineSeparator": "\r\n"
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": [
+                {
+                  "type": "Text",
+                  "content": "ISO-8859-1 encoded content"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": [
+          "out.add(eventfactory.createStartDocument('ISO-8859-1', '1.0'))",
+          "out.add(eventfactory.createCharacters('ISO-8859-1 encoded content'))"
+        ],
+        "description": "Test case where the document uses a different encoding and contains text content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": true,
+              "encoding": "UTF-8",
+              "lineSeparator": "\n"
+            }
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": false,
+              "content": [
+                {
+                  "type": "Comment",
+                  "content": "Comment with special characters: <>&"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "printComment is called with the comment containing special characters",
+        "description": "Test case where the document omits encoding and contains a comment with special characters."
+      }
+    ]
+  },
+  {
+    "group": "ExceptionScenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": null
+          },
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": "\n"
+            }
+          },
+          {
+            "parameter": "nstack",
+            "value": {}
+          },
+          {
+            "parameter": "eventfactory",
+            "value": {}
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": []
+            }
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the XMLEventConsumer 'out' is null, which should trigger a NullPointerException when attempting to add events."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": {}
+          },
+          {
+            "parameter": "fstack",
+            "value": null
+          },
+          {
+            "parameter": "nstack",
+            "value": {}
+          },
+          {
+            "parameter": "eventfactory",
+            "value": {}
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": []
+            }
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the FormatStack 'fstack' is null, which should trigger a NullPointerException when accessing its methods."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": {}
+          },
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": "\n"
+            }
+          },
+          {
+            "parameter": "nstack",
+            "value": {}
+          },
+          {
+            "parameter": "eventfactory",
+            "value": null
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": []
+            }
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the XMLEventFactory 'eventfactory' is null, which should trigger a NullPointerException when attempting to create events."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": {}
+          },
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": "\n"
+            }
+          },
+          {
+            "parameter": "nstack",
+            "value": {}
+          },
+          {
+            "parameter": "eventfactory",
+            "value": {}
+          },
+          {
+            "parameter": "doc",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test case where the Document 'doc' is null, which should trigger a NullPointerException when attempting to access its content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": {}
+          },
+          {
+            "parameter": "fstack",
+            "value": {
+              "omitDeclaration": false,
+              "omitEncoding": false,
+              "encoding": "UTF-8",
+              "lineSeparator": "\n"
+            }
+          },
+          {
+            "parameter": "nstack",
+            "value": {}
+          },
+          {
+            "parameter": "eventfactory",
+            "value": {}
+          },
+          {
+            "parameter": "doc",
+            "value": {
+              "hasRootElement": true,
+              "content": [
+                {
+                  "type": "InvalidType",
+                  "content": "Invalid content"
+                }
+              ]
+            }
+          }
+        ],
+        "expected": "ClassCastException",
+        "description": "Test case where the document content includes an invalid type, which should trigger a ClassCastException when casting to expected content types."
+      }
+    ]
+  }
+]

@@ -1,0 +1,337 @@
+[
+  {
+    "group": "processPrunableElement",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT event"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that returns false for all prune methods"
+          }
+        ],
+        "expected": "Element with nested structure based on XMLStreamReader input",
+        "description": "Test case where reader starts with START_ELEMENT and filter does not prune any elements, ensuring a complete nested structure is built."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader not at START_ELEMENT event"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter"
+          }
+        ],
+        "expected": "JDOMException with message 'JDOM requires that the XMLStreamReader is at the START_ELEMENT state when retrieving an Element Fragment.'",
+        "description": "Test case where the reader is not at the START_ELEMENT event, expecting an exception to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and subsequent END_ELEMENT events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes all elements"
+          }
+        ],
+        "expected": "Element with no children",
+        "description": "Test case where all elements are pruned by the filter, ensuring no children are added to the root element."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT, CDATA, and CHARACTERS events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes CDATA but not CHARACTERS"
+          }
+        ],
+        "expected": "Element with text content from CHARACTERS event only",
+        "description": "Test case where CDATA sections are pruned but CHARACTERS are not, verifying only CHARACTERS are added to the element."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and ENTITY_REFERENCE events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes ENTITY_REFERENCE"
+          }
+        ],
+        "expected": "Element without entity references",
+        "description": "Test case where entity references are pruned, ensuring they are not added to the element content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and PROCESSING_INSTRUCTION events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that does not prune PROCESSING_INSTRUCTION"
+          }
+        ],
+        "expected": "Element with processing instructions",
+        "description": "Test case where processing instructions are not pruned, ensuring they are added to the element content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and COMMENT events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes COMMENT"
+          }
+        ],
+        "expected": "Element without comments",
+        "description": "Test case where comments are pruned, ensuring they are not added to the element content."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and unsupported event type"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter"
+          }
+        ],
+        "expected": "JDOMException with message 'Unexpected XMLStream event X'",
+        "description": "Test case where an unsupported XMLStream event occurs, expecting an exception to be thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and multiple nested START_ELEMENT and END_ELEMENT events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes selectively based on depth"
+          }
+        ],
+        "expected": "Element with selectively pruned nested structure",
+        "description": "Test case where nested elements are selectively pruned based on depth, ensuring only certain levels of elements are included in the final structure."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and multiple CHARACTERS and SPACE events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes SPACE but not CHARACTERS"
+          }
+        ],
+        "expected": "Element with text content from CHARACTERS events only",
+        "description": "Test case where SPACE events are pruned but CHARACTERS are not, verifying that only CHARACTERS text is added to the element."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and nested ENTITY_REFERENCE and CDATA events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes ENTITY_REFERENCE but not CDATA"
+          }
+        ],
+        "expected": "Element with CDATA content but without entity references",
+        "description": "Test case where ENTITY_REFERENCE events are pruned but CDATA events are not, ensuring only CDATA content is included."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and COMMENT events with varying depth"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes comments based on depth"
+          }
+        ],
+        "expected": "Element with comments pruned at certain depths",
+        "description": "Test case where comments are pruned based on the depth of the element, ensuring comments are only included at specific levels."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and nested PROCESSING_INSTRUCTION events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter that prunes PROCESSING_INSTRUCTION selectively"
+          }
+        ],
+        "expected": "Element with selectively included processing instructions",
+        "description": "Test case where processing instructions are selectively pruned based on criteria, verifying only specific instructions are included in the element."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and END_DOCUMENT events"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter"
+          }
+        ],
+        "expected": "Element without further processing beyond END_DOCUMENT",
+        "description": "Test case where the XMLStreamReader encounters an END_DOCUMENT event unexpectedly, ensuring no further processing occurs."
+      },
+      {
+        "input": [
+          {
+            "parameter": "factory",
+            "value": "MockJDOMFactory"
+          },
+          {
+            "parameter": "reader",
+            "value": "MockXMLStreamReader with START_ELEMENT and invalid XMLStream event"
+          },
+          {
+            "parameter": "topdepth",
+            "value": 0
+          },
+          {
+            "parameter": "filter",
+            "value": "MockStAXFilter"
+          }
+        ],
+        "expected": "JDOMException with message 'Unexpected XMLStream event X'",
+        "description": "Test case where an invalid XMLStream event is encountered, expecting an exception to be thrown."
+      }
+    ]
+  }
+]

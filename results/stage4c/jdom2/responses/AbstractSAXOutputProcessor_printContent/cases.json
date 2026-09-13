@@ -1,0 +1,403 @@
+[
+  {
+    "group": "printContent",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning false"
+          }
+        ],
+        "expected": "No output or exception",
+        "description": "Test with an empty Walker to ensure no processing is done."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning null with isCDATA() true"
+          }
+        ],
+        "expected": "printCDATA is called with the correct parameters",
+        "description": "Test when Walker returns null and isCDATA() is true, ensuring printCDATA is called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning null with isCDATA() false"
+          }
+        ],
+        "expected": "printText is called with the correct parameters",
+        "description": "Test when Walker returns null and isCDATA() is false, ensuring printText is called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning a CDATA instance"
+          }
+        ],
+        "expected": "printCDATA is called with the correct CDATA instance",
+        "description": "Test when Walker returns a CDATA instance, ensuring printCDATA is called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning a Comment instance"
+          }
+        ],
+        "expected": "printComment is called with the correct Comment instance",
+        "description": "Test when Walker returns a Comment instance, ensuring printComment is called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning a DocType instance"
+          }
+        ],
+        "expected": "No action taken for DocType instance",
+        "description": "Test when Walker returns a DocType instance, ensuring no action is taken."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning an Element instance"
+          }
+        ],
+        "expected": "printElement is called with the correct Element instance",
+        "description": "Test when Walker returns an Element instance, ensuring printElement is called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning an EntityRef instance"
+          }
+        ],
+        "expected": "printEntityRef is called with the correct EntityRef instance",
+        "description": "Test when Walker returns an EntityRef instance, ensuring printEntityRef is called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning a ProcessingInstruction instance"
+          }
+        ],
+        "expected": "printProcessingInstruction is called with the correct ProcessingInstruction instance",
+        "description": "Test when Walker returns a ProcessingInstruction instance, ensuring printProcessingInstruction is called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning a Text instance"
+          }
+        ],
+        "expected": "printText is called with the correct Text instance",
+        "description": "Test when Walker returns a Text instance, ensuring printText is called."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning an empty text"
+          }
+        ],
+        "expected": "printText is called with an empty Text instance",
+        "description": "Test when Walker returns an empty text, ensuring printText is called with an empty Text instance."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning multiple mixed Content types in sequence"
+          }
+        ],
+        "expected": "Appropriate print methods are called for each Content type in sequence",
+        "description": "Test when Walker returns multiple mixed Content types in sequence (e.g., Text, Element, Comment), ensuring each type triggers the appropriate print method."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returning a deeply nested Element"
+          }
+        ],
+        "expected": "printElement is called correctly handling nested structure",
+        "description": "Test when Walker returns a deeply nested Element, ensuring printElement is called, and the nested structure is properly handled."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true and next() returns an Element with various namespaces"
+          }
+        ],
+        "expected": "printElement is called with correct namespace handling",
+        "description": "Test when Walker returns an Element with various namespaces, ensuring printElement is called with correct namespace handling."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "null"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when SAXTarget is null, ensuring NullPointerException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "null"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when FormatStack is null, ensuring NullPointerException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "null"
+          },
+          {
+            "parameter": "walker",
+            "value": "Walker instance with hasNext() returning true"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when NamespaceStack is null, ensuring NullPointerException is thrown."
+      },
+      {
+        "input": [
+          {
+            "parameter": "out",
+            "value": "SAXTarget instance"
+          },
+          {
+            "parameter": "fstack",
+            "value": "FormatStack instance"
+          },
+          {
+            "parameter": "nstack",
+            "value": "NamespaceStack instance"
+          },
+          {
+            "parameter": "walker",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Test when Walker is null, ensuring NullPointerException is thrown."
+      }
+    ]
+  }
+]
