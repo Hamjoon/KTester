@@ -16,6 +16,7 @@ run.py
 note.md
 docs/cc-instructions-stage*.md
 docs/handover-stage*.md
+docs/ktester-replication-report.pdf
 
 # IDE
 .vscode/
