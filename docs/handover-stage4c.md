@@ -35,7 +35,8 @@ OpenRouter log confirmed by Gary: Model = GPT-4o, Provider = OpenAI, 2026-09-12 
 - At that moment 16 tasks were complete through `datafaker`, while the six-task `batch-processing-gateway` project was in progress. The reading therefore covered roughly 16-21 tasks, not only the 10 tasks complete when the checkpoint question was first asked.
 - This is about $0.21-$0.28 per covered task and projects to about $23-$31 for 111 tasks on a simple linear basis. Because the first five projects were the smallest and commons-codec, gson, and jdom2 represented 59 of the 89 tasks then remaining, the operational expectation was $30-$45 total.
 - The corrected projection was below the $70 ceiling, so the run continued. The $70 credit wall was monitored separately through the HTTP 402 rule and was not reached in the logs.
-- TODO (Gary): Record OpenRouter GPT-4o input tokens, output tokens, and cost for 2026-09-12 20:24:11 KST through 2026-09-13 01:59:18 KST from the Activity dashboard filtered to GPT-4o.
+- Gary's final OpenRouter GPT-4o reading for the run window, 2026-09-12 20:24:11 KST through 2026-09-13 01:59:18 KST, was $23.70 total, or $0.214 per task across 111 tasks.
+- The checkpoint's $23-$31 linear projection held; the upward adjustment to $30-$45 did not. The large projects' additional wall-clock time came primarily from test subprocess timeouts, which consume no model tokens.
 
 ## Four-way project comparison
 
@@ -158,6 +159,21 @@ Category counts: H1 1, H2 1, G 0, S 3, O 0.
 | windward | AbstractRouterGroup_matchRouter | yes | repair_prompt_4.md | none |
 
 Of the prior 26-task union, 24 compile under gpt-4o. Two tasks compiled in both earlier runs and fail now: `commons-codec/Rule_pattern` and `gson/JsonTreeReader_peek`.
+
+## Runtime limitations
+
+- `tools/execute_test.py` gives each single-test-class subprocess 600 seconds. Timestamp gaps immediately after its `Running single unit test` entries show that this limit fired 12 times in Stage 4c, all in Gson: `JsonReader_nextUnquotedValue_Test` fired 10 times (9 during generation and 1 during coverage), and `JsonReader_doPeek_Test` fired twice during generation. Commons Codec fired it zero times in Stage 4c. Stage 4b also fired the same limit 12 times, but all were for `commons-codec/Sha2Crypt_sha2Crypt_Test` (11 during generation and 1 during coverage). The count stayed the same while the affected classes changed, so changing the model relocated this runtime problem rather than removing it. These waits explain why Gson took 2 h 43 m.
+- The persistent out-of-memory sequences contain 14 Stage 4c `OutOfMemoryError` occurrences: 6 for Gson's `JsonReader_skipValue_Test` and 8 for jdom2's `AbstractSAXOutputProcessor_printContent_Test`. Stage 4b contains 9, all in jdom2. Each sequence continued through the available repair rounds, so repair did not resolve either affected Stage 4c task.
+- The authors' archived initialization prompts contain `@Timeout(600)`, while the public `code/templates/` files contain no `Timeout` string; consequently, our generated methods have no per-method JUnit timeout. When a method hangs, KTester's `check_timeout_cases` uses the last method shown by a separate verbose run and deletes that method instead of preserving it as a failed test. This is an uncontrolled difference from the authors' prompt environment.
+- Neither execution setup supplies `-Xmx`. Our container has `mem_limit: 12g`, yielding a JVM default maximum heap of approximately 3 GB. The authors' machine memory is unknown, so its default heap ceiling differs by an unknown amount. This is an environment limitation only; the logs do not establish that the affected tasks would pass with a larger heap.
+
+## Windward correct-coverage anomaly
+
+`results/stage4c/windward/reports/summary.json` reports 23 of 26 passing cases and 0.86 plain instruction coverage for `AntPathMatcher#isMatch`, but both correct instruction and correct branch coverage are 0.0. The Stage 4b task had 29 of 29 cases passing and 0.91 correct instruction coverage.
+
+The Stage 4c coverage log shows why the correct-coverage pass produced no data. The generated Stage 4c test places most methods in three nested test classes. `deal_execution_feedback` extracts only each passing method name from JUnit's tree, drops its nested-class owner, and `run_project_test` then constructs every selector against the outer `AntPathMatcher_isMatch_Test` class. The resulting 23-selector ConsoleLauncher invocation prints its usage screen instead of a test run. `run_selected_mehods` nevertheless treats every return code other than `-1` as success, discards stderr, and generates a JaCoCo `_correct` report from an empty execution-data file. The archived CSV confirms zero covered instructions for every class, including `AntPathMatcher`, so the produced 0.0 values reflect an evaluator/selector bug rather than a measured zero from the 23 passing tests.
+
+The measured files and comparison tables remain unchanged. If this task's correct instruction coverage had matched its 0.86 plain instruction coverage, the 111-task total would be approximately 46.5% instead of the produced 45.77%.
 
 ## Headline range conclusion
 
