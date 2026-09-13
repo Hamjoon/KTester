@@ -15,6 +15,7 @@ myscript.bat
 run.py
 note.md
 docs/cc-instructions-stage*.md
+docs/handover-stage*.md
 
 # IDE
 .vscode/
