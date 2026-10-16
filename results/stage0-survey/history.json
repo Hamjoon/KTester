@@ -1,0 +1,562 @@
+[
+  {
+    "project": "batch-processing-gateway",
+    "after_t": 12,
+    "date_start": "2024-06-25T22:40:27-07:00",
+    "date_end": "2026-05-06T16:08:21-07:00",
+    "src_main_changes": 2,
+    "only_test_doc_build": 6,
+    "other_non_src": 4,
+    "release_tags": [],
+    "release_tag_count": 0,
+    "milestones": {},
+    "jdom_core_changes": 0
+  },
+  {
+    "project": "commons-cli",
+    "after_t": 746,
+    "date_start": "2024-02-28T08:21:10-05:00",
+    "date_end": "2026-10-15T08:31:58-04:00",
+    "src_main_changes": 247,
+    "only_test_doc_build": 496,
+    "other_non_src": 3,
+    "release_tags": [
+      {
+        "sha": "caed6714a73ce366aebccebf4a21e287d6d34ae0",
+        "tags": [
+          "rel/commons-cli-1.7.0"
+        ]
+      },
+      {
+        "sha": "d74613321325f6081fa0206c4ab608ab65d80e2e",
+        "tags": [
+          "rel/commons-cli-1.11.0"
+        ]
+      }
+    ],
+    "release_tag_count": 2,
+    "milestones": {
+      "100": {
+        "first_parent_index": 274,
+        "sha": "62d1ba73661f7d3b2f4e36bc2db139bf5c6b068d",
+        "date": "2024-10-16T16:07:10-04:00"
+      },
+      "200": {
+        "first_parent_index": 552,
+        "sha": "b65ef1c9957acd8d38273142b25fe20d8351acab",
+        "date": "2025-11-08T11:40:14-05:00"
+      }
+    },
+    "jdom_core_changes": 0
+  },
+  {
+    "project": "commons-codec",
+    "after_t": 830,
+    "date_start": "2024-05-16T16:44:32-04:00",
+    "date_end": "2026-10-15T09:19:44-04:00",
+    "src_main_changes": 327,
+    "only_test_doc_build": 499,
+    "other_non_src": 4,
+    "release_tags": [
+      {
+        "sha": "965109705c5236b05011e1c45f47d991abfa521e",
+        "tags": [
+          "rel/commons-codec-1.17.1"
+        ]
+      },
+      {
+        "sha": "1147e788058ee67509616903cbe2ddd149e02a04",
+        "tags": [
+          "rel/commons-codec-1.23.0"
+        ]
+      }
+    ],
+    "release_tag_count": 2,
+    "milestones": {
+      "100": {
+        "first_parent_index": 338,
+        "sha": "1d718d8515091f49fe9c092455b17bacf3085809",
+        "date": "2025-07-18T21:51:03-04:00"
+      },
+      "200": {
+        "first_parent_index": 569,
+        "sha": "ca9a599380a8469800b402ea4f17a5b6f94c99c8",
+        "date": "2026-02-16T18:19:19-05:00"
+      }
+    },
+    "jdom_core_changes": 0
+  },
+  {
+    "project": "commons-collections",
+    "after_t": 1201,
+    "date_start": "2024-04-02T19:45:49Z",
+    "date_end": "2026-10-15T09:19:46-04:00",
+    "src_main_changes": 547,
+    "only_test_doc_build": 651,
+    "other_non_src": 3,
+    "release_tags": [
+      {
+        "sha": "a67032e0e9d159f27a9ace79cf0ca183a881ba7a",
+        "tags": [
+          "rel/commons-collections-4.5.0-M3"
+        ]
+      },
+      {
+        "sha": "7f7fb0244abc940a2e9dd28b67508c0483a58c3e",
+        "tags": [
+          "rel/commons-collections-4.5.0"
+        ]
+      }
+    ],
+    "release_tag_count": 2,
+    "milestones": {
+      "100": {
+        "first_parent_index": 182,
+        "sha": "9fa70d9459cf57caba592252718f1d21cd139c87",
+        "date": "2024-06-23T16:04:12-04:00"
+      },
+      "200": {
+        "first_parent_index": 327,
+        "sha": "552c114d4b14225011df938051bb135e38dbd0d8",
+        "date": "2024-08-25T16:31:55-04:00"
+      }
+    },
+    "jdom_core_changes": 0
+  },
+  {
+    "project": "commons-csv",
+    "after_t": 909,
+    "date_start": "2023-02-02T07:50:41-05:00",
+    "date_end": "2026-10-15T09:19:57-04:00",
+    "src_main_changes": 210,
+    "only_test_doc_build": 692,
+    "other_non_src": 7,
+    "release_tags": [
+      {
+        "sha": "74e12741b24e724bb2e60109daa0c834fd75a68a",
+        "tags": [
+          "rel/commons-csv-1.11.0"
+        ]
+      },
+      {
+        "sha": "969d42a1e12942d52727b6d2d4f330303755e85d",
+        "tags": [
+          "rel/commons-csv-1.14.0"
+        ]
+      },
+      {
+        "sha": "e14ef86d34211f9d1b9b6040c5f6dbafc93ba907",
+        "tags": [
+          "rel/commons-csv-1.14.1"
+        ]
+      }
+    ],
+    "release_tag_count": 3,
+    "milestones": {
+      "100": {
+        "first_parent_index": 486,
+        "sha": "681cca23144dc4fc56d083c3fd81b24aedb67726",
+        "date": "2025-01-13T10:58:11-05:00"
+      },
+      "200": {
+        "first_parent_index": 866,
+        "sha": "78785a9f67279ec6734d78242e15ee3dcf22479c",
+        "date": "2026-07-23T07:43:16-04:00"
+      }
+    },
+    "jdom_core_changes": 0
+  },
+  {
+    "project": "datafaker",
+    "after_t": 1110,
+    "date_start": "2023-02-12T19:42:38+11:00",
+    "date_end": "2026-10-14T09:47:09-04:00",
+    "src_main_changes": 422,
+    "only_test_doc_build": 677,
+    "other_non_src": 11,
+    "release_tags": [
+      {
+        "sha": "289601043e91d199bbc616ca2dc0dbe08e801c0d",
+        "tags": [
+          "v2.0.0"
+        ]
+      },
+      {
+        "sha": "2bab94c53fe152f778ea77dedbc6819cc9817b25",
+        "tags": [
+          "v2.0.1"
+        ]
+      },
+      {
+        "sha": "805150d0b95e115774f7f2bc77877a2d3947f468",
+        "tags": [
+          "v2.0.2"
+        ]
+      },
+      {
+        "sha": "1d8d19889c0ead43ed77a6794218c3ff5ce85c3a",
+        "tags": [
+          "v2.1.0"
+        ]
+      },
+      {
+        "sha": "60f0774f2f36e748cf428a760a84d4f8ec28806b",
+        "tags": [
+          "v2.2.0"
+        ]
+      },
+      {
+        "sha": "580f8f804707d2803f1b540b577e052e1d86d918",
+        "tags": [
+          "v2.2.1"
+        ]
+      },
+      {
+        "sha": "55ed9c7b8448f37f127480f7f6ecbbdcdf7b9adb",
+        "tags": [
+          "v2.2.2"
+        ]
+      },
+      {
+        "sha": "29a65bcb9dd4eb6e0b2814c266c1c7d604a7f4b3",
+        "tags": [
+          "datafaker-2.3.0"
+        ]
+      },
+      {
+        "sha": "ac58a8c62b4e98ff02090da1ab4d6816868b1881",
+        "tags": [
+          "v2.3.1"
+        ]
+      },
+      {
+        "sha": "334db1829a25905f2e6f6b2e8d56c5959d4ce2cf",
+        "tags": [
+          "v2.4.0"
+        ]
+      },
+      {
+        "sha": "0f09cee645c7629744d42a03eff5cee22a63b204",
+        "tags": [
+          "v2.4.1"
+        ]
+      },
+      {
+        "sha": "cda7fb2f4e0676d40e214943cb64c7a895290e77",
+        "tags": [
+          "v2.4.2"
+        ]
+      },
+      {
+        "sha": "57087ed245aef749c62d56b6eab7126f9d3173ea",
+        "tags": [
+          "2.4.3"
+        ]
+      },
+      {
+        "sha": "53c326a2bbbc2064f0d29bcad0fceb25daa71c48",
+        "tags": [
+          "2.4.4"
+        ]
+      },
+      {
+        "sha": "32126b16fa6e11f2cccb9498201aef09cb72c6a0",
+        "tags": [
+          "2.5.0"
+        ]
+      },
+      {
+        "sha": "6201ec876ed2f6a5f32809f8a22ec6e8de947a9e",
+        "tags": [
+          "2.5.1"
+        ]
+      },
+      {
+        "sha": "b3309dd891d04739ccd4b54bb0624d9ccbb3ccd9",
+        "tags": [
+          "2.5.2"
+        ]
+      },
+      {
+        "sha": "441b6fb0aed41276f988fad960c4302eb2f146b7",
+        "tags": [
+          "2.5.3"
+        ]
+      },
+      {
+        "sha": "f7e1c42a758f13ab987eaa38a0ab77d84ee59344",
+        "tags": [
+          "2.5.4"
+        ]
+      },
+      {
+        "sha": "9647942d94402988e48b2421da8bee79a3d507d5",
+        "tags": [
+          "2.6.0"
+        ]
+      },
+      {
+        "sha": "3f43d4c4367193f0abccf21156098e3aec98abf0",
+        "tags": [
+          "2.7.0"
+        ]
+      }
+    ],
+    "release_tag_count": 21,
+    "milestones": {
+      "100": {
+        "first_parent_index": 229,
+        "sha": "9097f2c53e76f34a4c489a863ef2852f7f2febb5",
+        "date": "2023-09-17T13:53:40-04:00"
+      },
+      "200": {
+        "first_parent_index": 511,
+        "sha": "28631b8db6b740390fbc0d97f918fb3e8df2021a",
+        "date": "2024-08-10T07:00:03-04:00"
+      }
+    },
+    "jdom_core_changes": 0
+  },
+  {
+    "project": "gson",
+    "after_t": 477,
+    "date_start": "2023-01-06T07:42:33-08:00",
+    "date_end": "2026-10-11T14:06:38-07:00",
+    "src_main_changes": 142,
+    "only_test_doc_build": 314,
+    "other_non_src": 21,
+    "release_tags": [
+      {
+        "sha": "828a97be0f8d58108b140b77df8dc76b657f4a87",
+        "tags": [
+          "gson-parent-2.11.0"
+        ]
+      },
+      {
+        "sha": "aaf7a12d8004a8b6e51a713ce5b0a42c3e78809c",
+        "tags": [
+          "gson-parent-2.12.0"
+        ]
+      },
+      {
+        "sha": "29e3d1d2cc0ce4175378e511a87f538561625515",
+        "tags": [
+          "gson-parent-2.12.1"
+        ]
+      },
+      {
+        "sha": "bfe0fd58e3efc9f54938a87b955bbfc42dfd45e1",
+        "tags": [
+          "gson-parent-2.13.0"
+        ]
+      },
+      {
+        "sha": "257bee9eff81889893ca02a6925aa1b620378e9e",
+        "tags": [
+          "gson-parent-2.13.1"
+        ]
+      },
+      {
+        "sha": "686fad782d969d8f15c7581a5435a208b810caa7",
+        "tags": [
+          "gson-parent-2.13.2"
+        ]
+      },
+      {
+        "sha": "3ff35d6269894901ab8006258395aafc4b9765cd",
+        "tags": [
+          "gson-parent-2.14.0"
+        ]
+      }
+    ],
+    "release_tag_count": 7,
+    "milestones": {
+      "100": {
+        "first_parent_index": 383,
+        "sha": "a271f487b5969601308ed438b2da9c8fc1a8e927",
+        "date": "2025-11-24T12:42:13-08:00"
+      }
+    },
+    "jdom_core_changes": 0
+  },
+  {
+    "project": "jdom2",
+    "after_t": 11,
+    "date_start": "2015-11-14T08:32:22-05:00",
+    "date_end": "2021-10-20T14:50:34-07:00",
+    "src_main_changes": 0,
+    "only_test_doc_build": 0,
+    "other_non_src": 11,
+    "release_tags": [
+      {
+        "sha": "c6065f684bdff5cebf5f23b2859c5e4c89fd89db",
+        "tags": [
+          "JDOM-2.0.6.1"
+        ]
+      }
+    ],
+    "release_tag_count": 1,
+    "milestones": {},
+    "jdom_core_changes": 8
+  },
+  {
+    "project": "ruler",
+    "after_t": 142,
+    "date_start": "2023-04-10T08:48:00-07:00",
+    "date_end": "2026-09-21T14:32:18-07:00",
+    "src_main_changes": 41,
+    "only_test_doc_build": 100,
+    "other_non_src": 1,
+    "release_tags": [
+      {
+        "sha": "f789cab9859d84ac63b40f8b8aa1b8bc6acded54",
+        "tags": [
+          "v1.2.2"
+        ]
+      },
+      {
+        "sha": "e97a9ce044db03277fad612df079609baa4cbd1a",
+        "tags": [
+          "v1.4.0"
+        ]
+      },
+      {
+        "sha": "4cddf22da44b6a6f9bafe4e15525237a8e42c1bd",
+        "tags": [
+          "v1.5.0"
+        ]
+      },
+      {
+        "sha": "41572f6cbad34181bcf974b76953331052237460",
+        "tags": [
+          "v1.6.0"
+        ]
+      },
+      {
+        "sha": "097b889ea983753426e4471a3040ce7e16b2fc2a",
+        "tags": [
+          "v1.7.0"
+        ]
+      },
+      {
+        "sha": "68bdcd4cb5bed3cb89c79ccdf4c039b1c2c889e3",
+        "tags": [
+          "v1.7.1"
+        ]
+      },
+      {
+        "sha": "938d65a52c24f53d812c547ed3e55675067cf3bd",
+        "tags": [
+          "v1.7.2"
+        ]
+      },
+      {
+        "sha": "f03cde67ed5ebbbd513bf1090b3a4e6d75b62544",
+        "tags": [
+          "v1.7.3"
+        ]
+      },
+      {
+        "sha": "23e75a213e97ff5177e18111c89a8d9664c7f9a8",
+        "tags": [
+          "v1.7.4"
+        ]
+      },
+      {
+        "sha": "d04e3f03bd68d583cd7e01d9e174ad8ff949ac7b",
+        "tags": [
+          "v1.7.5"
+        ]
+      },
+      {
+        "sha": "1406b64b9986572895fe0992982895c705650926",
+        "tags": [
+          "v1.8.0"
+        ]
+      },
+      {
+        "sha": "4c883d7f0b1d5ac27f3775e55bbe8ed8475a942f",
+        "tags": [
+          "v1.8.1"
+        ]
+      },
+      {
+        "sha": "bb4c071f4b091d474909687851520c1a548ea4a2",
+        "tags": [
+          "v1.8.2"
+        ]
+      },
+      {
+        "sha": "547ee59e2cc3a444d6716d4093b054126d437796",
+        "tags": [
+          "v1.9.0"
+        ]
+      },
+      {
+        "sha": "23374705326da9ddf81eeb5ee618bba7b60f1ca5",
+        "tags": [
+          "v2.0.0"
+        ]
+      },
+      {
+        "sha": "13297de440df1ab19c0c491e5874399b05dd00fa",
+        "tags": [
+          "v2.0.1"
+        ]
+      },
+      {
+        "sha": "3dde6dbfa100b2fb056044beb018c386a10ab56a",
+        "tags": [
+          "v2.0.2"
+        ]
+      },
+      {
+        "sha": "31a62b295c71dc39d902a73997b00f3f4cdca176",
+        "tags": [
+          "v2.1.0"
+        ]
+      },
+      {
+        "sha": "6efe434fdd7473b77ab35a891813fbd4b18537b3",
+        "tags": [
+          "v2.2.0"
+        ]
+      }
+    ],
+    "release_tag_count": 19,
+    "milestones": {},
+    "jdom_core_changes": 0
+  },
+  {
+    "project": "windward",
+    "after_t": 49,
+    "date_start": "2024-05-05T22:14:06+08:00",
+    "date_end": "2024-12-22T09:57:45+08:00",
+    "src_main_changes": 27,
+    "only_test_doc_build": 22,
+    "other_non_src": 0,
+    "release_tags": [
+      {
+        "sha": "66b45be081c3a2968de18d6cfcb395472ac1e9cc",
+        "tags": [
+          "1.5.1-RELEASE"
+        ]
+      },
+      {
+        "sha": "c3aefa821d28e4d776f14dad6c9afbd9353a04c1",
+        "tags": [
+          "1.5.2-RELEASE"
+        ]
+      },
+      {
+        "sha": "b8777acdf3ac0b340412f5fe6689b5f1de58ec65",
+        "tags": [
+          "1.5.3-RELEASE"
+        ]
+      }
+    ],
+    "release_tag_count": 3,
+    "milestones": {},
+    "jdom_core_changes": 0
+  }
+]
