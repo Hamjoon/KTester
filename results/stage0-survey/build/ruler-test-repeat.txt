@@ -1,0 +1,126 @@
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+     [java] Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+i=1 s0:00000000000000 s1:00000000000009
+i=2 s0:00000000000009 s1:00000000000014
+i=3 s0:00000000000014 s1:0000000000001D
+i=4 s0:0000000000001D s1:0E35FA931A000A
+i=5 s0:0E35FA931A000A s1:0E35FA931A2710
+i=6 s0:0E35FA931A2710 s1:11C376E3D49C00
+i=7 s0:11C376E3D49C00 s1:11C37930949E47
+i=8 s0:11C37930949E47 s1:11C37937E07FFE
+i=9 s0:11C37937E07FFE s1:11C37937E08000
+i=10 s0:11C37937E08000 s1:11C37937E08001
+i=11 s0:11C37937E08001 s1:11C379381A7BC0
+i=12 s0:11C379381A7BC0 s1:11C379381C0260
+i=13 s0:11C379381C0260 s1:11C379388858C0
+i=14 s0:11C379388858C0 s1:11C37938979B00
+i=15 s0:11C37938979B00 s1:11C3793F2C67B5
+i=16 s0:11C3793F2C67B5 s1:11C37F09FE3A00
+i=17 s0:11C37F09FE3A00 s1:1550F7DCA6FFFE
+i=18 s0:1550F7DCA6FFFE s1:1550F7DCA6FFFF
+i=19 s0:1550F7DCA6FFFF s1:2386F26FC0FFE2
+i=20 s0:2386F26FC0FFE2 s1:2386F26FC0FFEC
+i=21 s0:2386F26FC0FFEC s1:2386F26FC0FFF6
+i=22 s0:2386F26FC0FFF6 s1:2386F26FC10000
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 4743624096984871193
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 2666389527531720581
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -4105350684933634280
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 2924233266063876400
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 7991232052460319141
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -499939074343991621
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 8138563454207122721
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 89394032253849436
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6740042099268942448
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -4836641607618068438
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 3142790459408453060
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8670561305265958402
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -4449599364262682512
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 1452565371694392636
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6828297857956952077
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -254475016112936194
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 3330353104751489422
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -300552027930611901
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 7533225543922029736
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 5807967437814582192
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -842934622993757780
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 8571636310681365557
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -3743216840455286893
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8373703846014814129
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 2299969410527660799
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 97013825458239447
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -4944049260500699037
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -5160397966830818700
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 9067842337580387900
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 3181975392266688009
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 2853341082632112289
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -7224817590774319100
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 7924920041726101009
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 4324997504260502571
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -7487179490776503347
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 1816106882830482765
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 1145358016578685790
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 6167625586374581646
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 4454108764740373964
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6105641818982601527
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 8070915297404602821
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -2254549072560335492
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8746538866862595711
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -3363150911273264695
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -5381634925890913479
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 5678605039076588792
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 2205519733356134962
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -3929406349425849153
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -853868845470075876
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6615700679956429109
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -4317021132190671922
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -1664227230338816756
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6273459377182806914
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -7810754533044054789
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6870652002115774221
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -2243471806068368127
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -3299387722857540927
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -218770881895300236
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8915859187575317496
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -2931584699648876361
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 7928724143771599538
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -2963022000021071555
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 5479368608259311774
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 1083183163193048381
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6647890260662555215
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 3666483324551211204
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 3876628616606047883
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6417104642535787058
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 2171759474039673524
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -5425621469666776527
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8630517483670631335
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8828778814448604457
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 830625565396893567
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -2419408789724490301
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 2173905513464554739
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -2576122612909421925
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -5938942824337986204
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -6358473349269073903
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 6245552443268105188
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 8984481112252724920
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 4662376940613226871
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 6187682699762889062
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 3502897571717734659
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8050614058510013477
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 716796082140643379
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -7294875072816083301
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 7823312382464222799
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 9117211773696450994
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 4660147846433338885
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8972300360265815035
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -496578862469087895
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 5352513877788042565
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -8015310591448861277
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -1068762005850605226
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 5287688149638419745
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with -1970104018736537005
+USE ME TO REPRODUCE - ByteMachineTest.testPatternPermutations seeding with 7903451243485404520
+matched rule name :[test]
+use rulesForJSONEvent API, matching takes : 13 ms
+matched rule name :[test]
+use rulesForEvent API, matching takes : 485 ms

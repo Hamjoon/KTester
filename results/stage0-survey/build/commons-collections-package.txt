@@ -1,0 +1,2 @@
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+writing to /work/scratch/build/commons-collections/target/moditect/org.apache.commons.collections4/versions/9/module-info.java

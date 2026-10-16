@@ -1,0 +1,227 @@
+[
+  {
+    "project": "commons-codec",
+    "sha": "cd16988dd46ac7533771eb6856a5f56c7aeaffba",
+    "jdk": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nopenjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-deb12u1-Debian)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-deb12u1-Debian, mixed mode, sharing)",
+    "maven": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nApache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)\nMaven home: /opt/maven\nJava version: 17.0.20.1, vendor: Debian, runtime: /usr/lib/jvm/java-17-openjdk-arm64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"7.0.12-linuxkit\", arch: \"aarch64\", family: \"unix\"",
+    "runs": [
+      {
+        "command": "mvn -q -DskipTests -Drat.skip -Dcheckstyle.skip -Dspotbugs.skip -Dpmd.skip -Dmaven.javadoc.skip package",
+        "cwd": "/work/scratch/build/commons-codec",
+        "exit_code": 0,
+        "seconds": 25.992,
+        "log": "results/stage0-survey/build/commons-codec-package.txt"
+      },
+      {
+        "command": "mvn -q test",
+        "cwd": "/work/scratch/build/commons-codec",
+        "exit_code": 0,
+        "seconds": 17.65,
+        "log": "results/stage0-survey/build/commons-codec-test.txt"
+      }
+    ],
+    "surefire_xml_files": 65,
+    "counts": {
+      "tests": 1715,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2
+    },
+    "slow_testcases": [],
+    "slow_suites": [],
+    "total_seconds": 67.681,
+    "second_test_run": "recorded in repeat",
+    "repeat": {
+      "command": "mvn -q test",
+      "cwd": "/work/scratch/build/commons-codec",
+      "exit_code": 0,
+      "seconds": 23.511,
+      "log": "results/stage0-survey/build/commons-codec-test-repeat.txt",
+      "counts": {
+        "tests": 1715,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2
+      },
+      "surefire_xml_files": 65,
+      "same_counts_as_first": true
+    }
+  },
+  {
+    "project": "commons-collections",
+    "sha": "2f8305d6a268d51e4b41e183f6d8b61c3c1ef99b",
+    "jdk": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nopenjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-deb12u1-Debian)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-deb12u1-Debian, mixed mode, sharing)",
+    "maven": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nApache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)\nMaven home: /opt/maven\nJava version: 17.0.20.1, vendor: Debian, runtime: /usr/lib/jvm/java-17-openjdk-arm64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"7.0.12-linuxkit\", arch: \"aarch64\", family: \"unix\"",
+    "runs": [
+      {
+        "command": "mvn -q -DskipTests -Drat.skip -Dcheckstyle.skip -Dspotbugs.skip -Dpmd.skip -Dmaven.javadoc.skip package",
+        "cwd": "/work/scratch/build/commons-collections",
+        "exit_code": 0,
+        "seconds": 24.242,
+        "log": "results/stage0-survey/build/commons-collections-package.txt"
+      },
+      {
+        "command": "mvn -q test",
+        "cwd": "/work/scratch/build/commons-collections",
+        "exit_code": 0,
+        "seconds": 26.668,
+        "log": "results/stage0-survey/build/commons-collections-test.txt"
+      }
+    ],
+    "surefire_xml_files": 215,
+    "counts": {
+      "tests": 6528,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 28
+    },
+    "slow_testcases": [],
+    "slow_suites": [],
+    "total_seconds": 80.523,
+    "second_test_run": "recorded in repeat",
+    "repeat": {
+      "command": "mvn -q test",
+      "cwd": "/work/scratch/build/commons-collections",
+      "exit_code": 0,
+      "seconds": 28.271,
+      "log": "results/stage0-survey/build/commons-collections-test-repeat.txt",
+      "counts": {
+        "tests": 6528,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 28
+      },
+      "surefire_xml_files": 215,
+      "same_counts_as_first": true
+    }
+  },
+  {
+    "project": "gson",
+    "sha": "2ce6a6106c22bf0cce2e39f68b0da2f117d6e66b",
+    "jdk": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nopenjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-deb12u1-Debian)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-deb12u1-Debian, mixed mode, sharing)",
+    "maven": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nApache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)\nMaven home: /opt/maven\nJava version: 17.0.20.1, vendor: Debian, runtime: /usr/lib/jvm/java-17-openjdk-arm64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"7.0.12-linuxkit\", arch: \"aarch64\", family: \"unix\"",
+    "runs": [
+      {
+        "command": "mvn -q -DskipTests -Drat.skip -Dcheckstyle.skip -Dspotbugs.skip -Dpmd.skip -Dmaven.javadoc.skip package",
+        "cwd": "/work/scratch/build/gson",
+        "exit_code": 0,
+        "seconds": 13.452,
+        "log": "results/stage0-survey/build/gson-package.txt"
+      },
+      {
+        "command": "mvn -q test",
+        "cwd": "/work/scratch/build/gson",
+        "exit_code": 0,
+        "seconds": 8.028,
+        "log": "results/stage0-survey/build/gson-test.txt"
+      }
+    ],
+    "surefire_xml_files": 122,
+    "counts": {
+      "tests": 1328,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 19
+    },
+    "slow_testcases": [],
+    "slow_suites": [],
+    "total_seconds": 29.168,
+    "second_test_run": "recorded in repeat",
+    "repeat": {
+      "command": "mvn -q test",
+      "cwd": "/work/scratch/build/gson",
+      "exit_code": 0,
+      "seconds": 7.176,
+      "log": "results/stage0-survey/build/gson-test-repeat.txt",
+      "counts": {
+        "tests": 1328,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 19
+      },
+      "surefire_xml_files": 122,
+      "same_counts_as_first": true
+    }
+  },
+  {
+    "project": "jdom2",
+    "sha": "91d8b6bd0ff1112c5a6acfea141b1ede96f7626f",
+    "jdk": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nopenjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-deb12u1-Debian)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-deb12u1-Debian, mixed mode, sharing)",
+    "maven": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nApache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)\nMaven home: /opt/maven\nJava version: 17.0.20.1, vendor: Debian, runtime: /usr/lib/jvm/java-17-openjdk-arm64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"7.0.12-linuxkit\", arch: \"aarch64\", family: \"unix\"",
+    "runs": [
+      {
+        "command": "mvn -q -DskipTests -Drat.skip -Dcheckstyle.skip -Dspotbugs.skip -Dpmd.skip -Dmaven.javadoc.skip package",
+        "cwd": "/work/scratch/build/jdom2",
+        "exit_code": 1,
+        "seconds": 0.669,
+        "log": "results/stage0-survey/build/jdom2-package.txt"
+      },
+      {
+        "command": "mvn -q test",
+        "cwd": "/work/scratch/build/jdom2",
+        "exit_code": 1,
+        "seconds": 0.831,
+        "log": "results/stage0-survey/build/jdom2-test.txt"
+      }
+    ],
+    "surefire_xml_files": 0,
+    "counts": {
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "slow_testcases": [],
+    "slow_suites": [],
+    "total_seconds": 2.089,
+    "second_test_run": "not run; no flakiness claim"
+  },
+  {
+    "project": "ruler",
+    "sha": "7d588b1bfa5218259dbbf940baf2ee9cb2c8fcbb",
+    "jdk": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nopenjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-deb12u1-Debian)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-deb12u1-Debian, mixed mode, sharing)",
+    "maven": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nApache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)\nMaven home: /opt/maven\nJava version: 17.0.20.1, vendor: Debian, runtime: /usr/lib/jvm/java-17-openjdk-arm64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"7.0.12-linuxkit\", arch: \"aarch64\", family: \"unix\"",
+    "runs": [
+      {
+        "command": "mvn -q -DskipTests -Drat.skip -Dcheckstyle.skip -Dspotbugs.skip -Dpmd.skip -Dmaven.javadoc.skip package",
+        "cwd": "/work/scratch/build/ruler",
+        "exit_code": 0,
+        "seconds": 6.94,
+        "log": "results/stage0-survey/build/ruler-package.txt"
+      },
+      {
+        "command": "mvn -q test",
+        "cwd": "/work/scratch/build/ruler",
+        "exit_code": 0,
+        "seconds": 28.287,
+        "log": "results/stage0-survey/build/ruler-test.txt"
+      }
+    ],
+    "surefire_xml_files": 31,
+    "counts": {
+      "tests": 469,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "slow_testcases": [],
+    "slow_suites": [],
+    "total_seconds": 59.745,
+    "second_test_run": "recorded in repeat",
+    "repeat": {
+      "command": "mvn -q test",
+      "cwd": "/work/scratch/build/ruler",
+      "exit_code": 0,
+      "seconds": 23.855,
+      "log": "results/stage0-survey/build/ruler-test-repeat.txt",
+      "counts": {
+        "tests": 469,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "surefire_xml_files": 31,
+      "same_counts_as_first": true
+    }
+  }
+]

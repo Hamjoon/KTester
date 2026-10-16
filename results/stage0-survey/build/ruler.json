@@ -1,0 +1,48 @@
+{
+  "project": "ruler",
+  "sha": "7d588b1bfa5218259dbbf940baf2ee9cb2c8fcbb",
+  "jdk": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nopenjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-deb12u1-Debian)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-deb12u1-Debian, mixed mode, sharing)",
+  "maven": "Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8\nApache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)\nMaven home: /opt/maven\nJava version: 17.0.20.1, vendor: Debian, runtime: /usr/lib/jvm/java-17-openjdk-arm64\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"7.0.12-linuxkit\", arch: \"aarch64\", family: \"unix\"",
+  "runs": [
+    {
+      "command": "mvn -q -DskipTests -Drat.skip -Dcheckstyle.skip -Dspotbugs.skip -Dpmd.skip -Dmaven.javadoc.skip package",
+      "cwd": "/work/scratch/build/ruler",
+      "exit_code": 0,
+      "seconds": 6.94,
+      "log": "results/stage0-survey/build/ruler-package.txt"
+    },
+    {
+      "command": "mvn -q test",
+      "cwd": "/work/scratch/build/ruler",
+      "exit_code": 0,
+      "seconds": 28.287,
+      "log": "results/stage0-survey/build/ruler-test.txt"
+    }
+  ],
+  "surefire_xml_files": 31,
+  "counts": {
+    "tests": 469,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "slow_testcases": [],
+  "slow_suites": [],
+  "total_seconds": 59.745,
+  "second_test_run": "recorded in repeat",
+  "repeat": {
+    "command": "mvn -q test",
+    "cwd": "/work/scratch/build/ruler",
+    "exit_code": 0,
+    "seconds": 23.855,
+    "log": "results/stage0-survey/build/ruler-test-repeat.txt",
+    "counts": {
+      "tests": 469,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "surefire_xml_files": 31,
+    "same_counts_as_first": true
+  }
+}
