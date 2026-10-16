@@ -1,0 +1,148 @@
+[
+  {
+    "project": "batch-processing-gateway",
+    "repo": "apple/batch-processing-gateway",
+    "default_branch": "main",
+    "head": "0372006ce00a50c565e947d608928b77aafc8575",
+    "date": "2026-05-06T16:08:21-07:00",
+    "first_parent_count": 33,
+    "clone_kib": 2564,
+    "shallow": "false",
+    "evidence": [
+      "Snapshot omits own repository URL; candidate from survey instructions, verified by source comparison in Step 2 (identity provisional here)."
+    ]
+  },
+  {
+    "project": "commons-cli",
+    "repo": "apache/commons-cli",
+    "default_branch": "master",
+    "head": "58c64b52a8fb1c38c4f4b2d41db0349241475f95",
+    "date": "2026-10-15T08:31:58-04:00",
+    "first_parent_count": 1964,
+    "clone_kib": 6996,
+    "shallow": "false",
+    "evidence": [
+      "url: https://commons.apache.org/proper/commons-cli/",
+      "scm/url: https://gitbox.apache.org/repos/asf?p=commons-cli.git",
+      "scm/connection: scm:git:https://gitbox.apache.org/repos/asf/commons-cli.git",
+      "snapshot remote: https://github.com/apache/commons-cli.git"
+    ]
+  },
+  {
+    "project": "commons-codec",
+    "repo": "apache/commons-codec",
+    "default_branch": "master",
+    "head": "a3d9418f2d9cd2b8b012af4280ec0bb87ec33303",
+    "date": "2026-10-15T09:19:44-04:00",
+    "first_parent_count": 3445,
+    "clone_kib": 12916,
+    "shallow": "false",
+    "evidence": [
+      "url: https://commons.apache.org/proper/commons-codec/",
+      "scm/url: https://github.com/apache/commons-codec",
+      "scm/connection: scm:git:https://gitbox.apache.org/repos/asf/commons-codec"
+    ]
+  },
+  {
+    "project": "commons-collections",
+    "repo": "apache/commons-collections",
+    "default_branch": "master",
+    "head": "0b545e2f21ee8f2e8269201b5754465d76db70c7",
+    "date": "2026-10-15T09:19:46-04:00",
+    "first_parent_count": 5186,
+    "clone_kib": 36580,
+    "shallow": "false",
+    "evidence": [
+      "url: https://commons.apache.org/proper/commons-collections/",
+      "scm/url: https://gitbox.apache.org/repos/asf?p=commons-collections.git",
+      "scm/connection: scm:git:http://gitbox.apache.org/repos/asf/commons-collections.git"
+    ]
+  },
+  {
+    "project": "commons-csv",
+    "repo": "apache/commons-csv",
+    "default_branch": "master",
+    "head": "e07e3dfed1a73ed2001ce5ef545651ad3b198685",
+    "date": "2026-10-15T09:19:57-04:00",
+    "first_parent_count": 2780,
+    "clone_kib": 85888,
+    "shallow": "false",
+    "evidence": [
+      "url: https://commons.apache.org/proper/commons-csv/",
+      "scm/url: https://gitbox.apache.org/repos/asf?p=commons-csv.git",
+      "scm/connection: scm:git:http://gitbox.apache.org/repos/asf/commons-csv.git"
+    ]
+  },
+  {
+    "project": "datafaker",
+    "repo": "datafaker-net/datafaker",
+    "default_branch": "main",
+    "head": "b785d61246311cef8cbe9cb48666dc4fb6c74d87",
+    "date": "2026-10-14T09:47:09-04:00",
+    "first_parent_count": 2473,
+    "clone_kib": 32096,
+    "shallow": "false",
+    "evidence": [
+      "url: https://www.datafaker.net",
+      "scm/url: https://github.com/datafaker-net/datafaker",
+      "scm/connection: scm:git:https://github.com/datafaker-net/datafaker.git"
+    ]
+  },
+  {
+    "project": "gson",
+    "repo": "google/gson",
+    "default_branch": "main",
+    "head": "e2292f9c9f2e07a4791827e8eea34aa7d80545d6",
+    "date": "2026-10-11T14:06:38-07:00",
+    "first_parent_count": 2059,
+    "clone_kib": 23368,
+    "shallow": "false",
+    "evidence": [
+      "url: https://github.com/google/gson",
+      "scm/url: https://github.com/google/gson/",
+      "scm/connection: scm:git:https://github.com/google/gson.git"
+    ]
+  },
+  {
+    "project": "jdom2",
+    "repo": "hunterhacker/jdom",
+    "default_branch": "master",
+    "head": "c6065f684bdff5cebf5f23b2859c5e4c89fd89db",
+    "date": "2021-10-20T14:50:34-07:00",
+    "first_parent_count": 1618,
+    "clone_kib": 66804,
+    "shallow": "false",
+    "evidence": [
+      "Snapshot omits own repository URL; candidate from survey instructions, verified by source comparison in Step 2 (identity provisional here)."
+    ]
+  },
+  {
+    "project": "ruler",
+    "repo": "aws/event-ruler",
+    "default_branch": "main",
+    "head": "ced786201c1f43ec73482b78f3d1843aa4bd2f89",
+    "date": "2026-09-21T14:32:18-07:00",
+    "first_parent_count": 195,
+    "clone_kib": 113152,
+    "shallow": "false",
+    "evidence": [
+      "url: https://github.com/aws/event-ruler/",
+      "scm/url: https://github.com/aws/event-ruler.git"
+    ]
+  },
+  {
+    "project": "windward",
+    "repo": "Flmelody/windward",
+    "default_branch": "main",
+    "head": "e3badb29860fad688eebd664b835714370c2bd68",
+    "date": "2024-12-22T09:57:45+08:00",
+    "first_parent_count": 248,
+    "clone_kib": 1344,
+    "shallow": "false",
+    "evidence": [
+      "url: https://windward.flmelody.org",
+      "scm/url: https://github.com/Flmelody/windward",
+      "scm/connection: scm:git:git://github.com/Flmelody/windward"
+    ]
+  }
+]

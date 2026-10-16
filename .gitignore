@@ -195,3 +195,7 @@ cython_debug/
 # Local evaluation artifacts
 evaluation_results/
 results/**/jacoco-report-html/
+
+# Commit-survival survey workspaces
+scratch/
+!docs/handover-stage0-commit-survival.md
