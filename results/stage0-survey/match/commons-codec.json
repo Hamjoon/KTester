@@ -1,0 +1,35 @@
+{
+  "project": "commons-codec",
+  "sha": "cd16988dd46ac7533771eb6856a5f56c7aeaffba",
+  "score": 2,
+  "difference": {
+    "differing": [
+      "src/main/java/org/apache/commons/codec/binary/Base32.java",
+      "src/main/java/org/apache/commons/codec/binary/Base64.java"
+    ],
+    "snapshot_only": [],
+    "commit_only": []
+  },
+  "phase": "version/release window",
+  "date": "2024-05-16T14:47:23-04:00",
+  "exact": false,
+  "snapshot_root": "src/main",
+  "upstream_root": "src/main",
+  "snapshot_files": 208,
+  "candidate_commits_checked": 3445,
+  "unique_source_trees_checked": 1072,
+  "snapshot_versions": [
+    "-SNAPSHOT",
+    "69"
+  ],
+  "version_candidates": 16,
+  "nearest_tag_before": [
+    "commons-codec-1.16.1-RC1",
+    "rel/commons-codec-1.16.1"
+  ],
+  "nearest_tag_after": [
+    "commons-codec-1.17.1-RC1",
+    "rel/commons-codec-1.17.1"
+  ],
+  "elapsed_seconds": 19.378
+}

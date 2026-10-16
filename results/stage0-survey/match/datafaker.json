@@ -1,0 +1,45 @@
+{
+  "project": "datafaker",
+  "sha": "a48488965b4a95988855dee11968a12287f3eb58",
+  "score": 13,
+  "difference": {
+    "differing": [
+      "src/main/java/net/datafaker/providers/base/Address.java",
+      "src/main/java/net/datafaker/providers/base/BaseFaker.java",
+      "src/main/java/net/datafaker/providers/base/Drone.java",
+      "src/main/java/net/datafaker/providers/base/Locality.java",
+      "src/main/java/net/datafaker/providers/base/Mbti.java",
+      "src/main/java/net/datafaker/providers/base/ProviderRegistration.java",
+      "src/main/java/net/datafaker/providers/base/Text.java",
+      "src/main/java/net/datafaker/providers/entertainment/OscarMovie.java",
+      "src/main/java/net/datafaker/service/FakeValues.java",
+      "src/main/java/net/datafaker/service/FakeValuesService.java"
+    ],
+    "snapshot_only": [
+      "src/main/java/net/datafaker/annotations/Deterministic.java",
+      "src/main/java/net/datafaker/annotations/FakeForSchema.java",
+      "src/main/java/net/datafaker/annotations/FakeResolver.java"
+    ],
+    "commit_only": []
+  },
+  "phase": "whole first-parent history",
+  "date": "2023-02-12T11:48:26+11:00",
+  "exact": false,
+  "snapshot_root": "src/main",
+  "upstream_root": "src/main",
+  "snapshot_files": 593,
+  "candidate_commits_checked": 2473,
+  "unique_source_trees_checked": 1214,
+  "snapshot_versions": [
+    "1.9.0",
+    "7"
+  ],
+  "version_candidates": 0,
+  "nearest_tag_before": [
+    "v1.8.0"
+  ],
+  "nearest_tag_after": [
+    "v2.0.0"
+  ],
+  "elapsed_seconds": 23.297
+}

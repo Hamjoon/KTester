@@ -1,0 +1,52 @@
+{
+  "project": "jdom2",
+  "sha": "91d8b6bd0ff1112c5a6acfea141b1ede96f7626f",
+  "score": 14,
+  "difference": {
+    "differing": [
+      "org/jdom2/Element.java",
+      "org/jdom2/Verifier.java",
+      "org/jdom2/input/sax/TextBuffer.java",
+      "org/jdom2/output/Format.java",
+      "org/jdom2/output/XMLOutputter.java",
+      "org/jdom2/output/support/AbstractStAXStreamProcessor.java",
+      "org/jdom2/output/support/StAXStreamProcessor.java",
+      "org/jdom2/util/NamespaceStack.java"
+    ],
+    "snapshot_only": [],
+    "commit_only": [
+      "org/jdom2/input/StAXStreamWriter.java",
+      "org/jdom2/output/StAXStreamReader.java",
+      "org/jdom2/output/support/AbstractStAXStreamReader.java",
+      "org/jdom2/output/support/AbstractStAXStreamReaderProcessor.java",
+      "org/jdom2/output/support/StAXStreamReaderProcessor.java",
+      "org/jdom2/util/JDOMNamespaceContext.java"
+    ]
+  },
+  "phase": "whole first-parent history",
+  "date": "2015-11-14T08:27:11-05:00",
+  "exact": false,
+  "snapshot_root": "src/main",
+  "upstream_root": "core/src/java",
+  "snapshot_files": 146,
+  "candidate_commits_checked": 1618,
+  "unique_source_trees_checked": 934,
+  "snapshot_versions": [
+    "2.0.6",
+    null
+  ],
+  "version_candidates": 0,
+  "nearest_tag_before": [
+    "JDOM-2.0.4"
+  ],
+  "nearest_tag_after": [
+    "JDOM-2.0.6.1"
+  ],
+  "elapsed_seconds": 15.696,
+  "layout_note": "No literal src/main tree in upstream: authors relocated core/src/java to src/main/java and supplied a Maven pom. Counts shown separately for relocated source comparison; never an exact literal tree match.",
+  "literal_difference": {
+    "differing": 0,
+    "snapshot_only": 146,
+    "commit_only": 0
+  }
+}

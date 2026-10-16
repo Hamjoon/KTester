@@ -1,0 +1,32 @@
+{
+  "project": "commons-collections",
+  "sha": "2f8305d6a268d51e4b41e183f6d8b61c3c1ef99b",
+  "score": 0,
+  "difference": {
+    "differing": [],
+    "snapshot_only": [],
+    "commit_only": []
+  },
+  "phase": "version/release window",
+  "date": "2024-03-31T16:00:27Z",
+  "exact": true,
+  "snapshot_root": "src/main",
+  "upstream_root": "src/main",
+  "snapshot_files": 352,
+  "candidate_commits_checked": 1,
+  "unique_source_trees_checked": 1,
+  "snapshot_versions": [
+    "4.5.0-M1",
+    "67"
+  ],
+  "version_candidates": 1,
+  "nearest_tag_before": [
+    "commons-collections-4.5.0-M1-RC1",
+    "rel/commons-collections-4.5.0-M1"
+  ],
+  "nearest_tag_after": [
+    "commons-collections-4.5.0-M3-RC1",
+    "rel/commons-collections-4.5.0-M3"
+  ],
+  "elapsed_seconds": 3.051
+}

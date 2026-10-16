@@ -1,0 +1,29 @@
+{
+  "project": "batch-processing-gateway",
+  "sha": "2cc812924998ff0e8bd86415f0831fafa406d76d",
+  "score": 2,
+  "difference": {
+    "differing": [
+      "src/main/java/com/apple/spark/core/ApplicationSubmissionHelper.java",
+      "src/main/java/com/apple/spark/rest/ApplicationSubmissionRest.java"
+    ],
+    "snapshot_only": [],
+    "commit_only": []
+  },
+  "phase": "version/release window",
+  "date": "2024-04-17T16:09:09-07:00",
+  "exact": false,
+  "snapshot_root": "src/main",
+  "upstream_root": "src/main",
+  "snapshot_files": 99,
+  "candidate_commits_checked": 33,
+  "unique_source_trees_checked": 17,
+  "snapshot_versions": [
+    "1.1",
+    null
+  ],
+  "version_candidates": 32,
+  "nearest_tag_before": [],
+  "nearest_tag_after": [],
+  "elapsed_seconds": 0.332
+}

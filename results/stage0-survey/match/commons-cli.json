@@ -1,0 +1,32 @@
+{
+  "project": "commons-cli",
+  "sha": "90b3f2e35a13720cd9eca45ca585d984398a1198",
+  "score": 0,
+  "difference": {
+    "differing": [],
+    "snapshot_only": [],
+    "commit_only": []
+  },
+  "phase": "version/release window",
+  "date": "2024-02-26T21:10:03-05:00",
+  "exact": true,
+  "snapshot_root": "src/main",
+  "upstream_root": "src/main",
+  "snapshot_files": 25,
+  "candidate_commits_checked": 1,
+  "unique_source_trees_checked": 1,
+  "snapshot_versions": [
+    "1.7.0-SNAPSHOT",
+    "66"
+  ],
+  "version_candidates": 38,
+  "nearest_tag_before": [
+    "commons-cli-1.5.0",
+    "commons-cli-1.5.0-RC1"
+  ],
+  "nearest_tag_after": [
+    "commons-cli-1.7.0-RC1",
+    "rel/commons-cli-1.7.0"
+  ],
+  "elapsed_seconds": 1.052
+}

@@ -1,0 +1,30 @@
+{
+  "project": "windward",
+  "sha": "edafa0cd601c432151f6aac1723e5ab4fb1e6a09",
+  "score": 0,
+  "difference": {
+    "differing": [],
+    "snapshot_only": [],
+    "commit_only": []
+  },
+  "phase": "version/release window",
+  "date": "2024-04-22T22:23:46+08:00",
+  "exact": true,
+  "snapshot_root": "src/main",
+  "upstream_root": "src/main",
+  "snapshot_files": 95,
+  "candidate_commits_checked": 14,
+  "unique_source_trees_checked": 11,
+  "snapshot_versions": [
+    "1.5.1-SNAPSHOT",
+    null
+  ],
+  "version_candidates": 17,
+  "nearest_tag_before": [
+    "1.5.0-RELEASE"
+  ],
+  "nearest_tag_after": [
+    "1.5.1-RELEASE"
+  ],
+  "elapsed_seconds": 0.911
+}
