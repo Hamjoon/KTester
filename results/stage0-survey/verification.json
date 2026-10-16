@@ -1,0 +1,196 @@
+{
+  "chosen_matches": {
+    "batch-processing-gateway": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 2,
+        "snapshot_only": 0,
+        "commit_only": 0
+      }
+    },
+    "commons-cli": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 0,
+        "snapshot_only": 0,
+        "commit_only": 0
+      }
+    },
+    "commons-codec": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 2,
+        "snapshot_only": 0,
+        "commit_only": 0
+      }
+    },
+    "commons-collections": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 0,
+        "snapshot_only": 0,
+        "commit_only": 0
+      }
+    },
+    "commons-csv": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 2,
+        "snapshot_only": 0,
+        "commit_only": 0
+      }
+    },
+    "datafaker": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 10,
+        "snapshot_only": 3,
+        "commit_only": 0
+      }
+    },
+    "gson": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 2,
+        "snapshot_only": 0,
+        "commit_only": 0
+      }
+    },
+    "jdom2": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 8,
+        "snapshot_only": 0,
+        "commit_only": 6
+      }
+    },
+    "ruler": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 0,
+        "snapshot_only": 52,
+        "commit_only": 0
+      }
+    },
+    "windward": {
+      "independent_archive_equal": true,
+      "difference_counts": {
+        "differing": 0,
+        "snapshot_only": 0,
+        "commit_only": 0
+      }
+    }
+  },
+  "release_tags": {
+    "batch-processing-gateway": [],
+    "commons-cli": [],
+    "commons-codec": [],
+    "commons-collections": [
+      {
+        "tag": "commons-collections-4.5.0-M1-RC1",
+        "sha": "2f8305d6a268d51e4b41e183f6d8b61c3c1ef99b",
+        "on_first_parent": true,
+        "difference_counts": {
+          "differing": 0,
+          "snapshot_only": 0,
+          "commit_only": 0
+        }
+      },
+      {
+        "tag": "rel/commons-collections-4.5.0-M1",
+        "sha": "2f8305d6a268d51e4b41e183f6d8b61c3c1ef99b",
+        "on_first_parent": true,
+        "difference_counts": {
+          "differing": 0,
+          "snapshot_only": 0,
+          "commit_only": 0
+        }
+      }
+    ],
+    "commons-csv": [
+      {
+        "tag": "commons-csv-1.10.0-RC1",
+        "sha": "1bd1fd8e6065da9d07b5a3a1723b059246b14001",
+        "on_first_parent": true,
+        "difference_counts": {
+          "differing": 4,
+          "snapshot_only": 0,
+          "commit_only": 0
+        }
+      },
+      {
+        "tag": "commons-csv-1.10.0-RC2",
+        "sha": "5b99c860986a87f9da664bf47a3a7c0026673123",
+        "on_first_parent": true,
+        "difference_counts": {
+          "differing": 2,
+          "snapshot_only": 0,
+          "commit_only": 0
+        }
+      },
+      {
+        "tag": "rel/commons-csv-1.10.0",
+        "sha": "5b99c860986a87f9da664bf47a3a7c0026673123",
+        "on_first_parent": true,
+        "difference_counts": {
+          "differing": 2,
+          "snapshot_only": 0,
+          "commit_only": 0
+        }
+      }
+    ],
+    "datafaker": [
+      {
+        "tag": "v1.9.0",
+        "sha": "8eda7089e93c6b1e79efe89aa610aa80d4b3d87c",
+        "on_first_parent": false,
+        "difference_counts": {
+          "differing": 1,
+          "snapshot_only": 0,
+          "commit_only": 0
+        }
+      }
+    ],
+    "gson": [
+      {
+        "tag": "gson-parent-2.10.1",
+        "sha": "2ce6a6106c22bf0cce2e39f68b0da2f117d6e66b",
+        "on_first_parent": true,
+        "difference_counts": {
+          "differing": 2,
+          "snapshot_only": 0,
+          "commit_only": 0
+        }
+      }
+    ],
+    "jdom2": [
+      {
+        "tag": "JDOM-2.0.6",
+        "sha": "2e946f814b5ea255c0a5f861a61f911b83bad28a",
+        "on_first_parent": false,
+        "difference_counts": {
+          "differing": 2,
+          "snapshot_only": 0,
+          "commit_only": 0
+        }
+      }
+    ],
+    "ruler": [
+      {
+        "tag": "v1.2.1",
+        "sha": "7d588b1bfa5218259dbbf940baf2ee9cb2c8fcbb",
+        "on_first_parent": true,
+        "difference_counts": {
+          "differing": 0,
+          "snapshot_only": 52,
+          "commit_only": 0
+        }
+      }
+    ],
+    "windward": []
+  },
+  "checks": {
+    "history_partitions_and_java_parse_errors": "passed",
+    "protected_tracked_diff": ""
+  }
+}

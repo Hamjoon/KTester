@@ -92,4 +92,5 @@ if __name__=='__main__':
   if not r['exact']:
    lines+=['### '+r['project'],'',r.get('layout_note','Closest normalized source tree; no exact match in searched history.'),'']
    for k,v in r['difference'].items():lines.append(f"- {k} ({len(v)}): "+', '.join(v[:20]))
+ lines+=['','Ruler retains its unchanged upstream src/main/software tree plus a second snapshot-only copy under src/main/java/software. Subsequent sizes use its actual upstream src/main and src/test roots. See verification.md for release tags off the first-parent line; these can be closer source candidates than the selected first-parent t.']
  (OUT/'snapshot-match.md').write_text('\n'.join(lines)+'\n')

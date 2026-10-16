@@ -3,6 +3,7 @@
 import argparse,json,pathlib,sys,time,types,traceback
 import jpype
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+sys.dont_write_bytecode=True  # Import pipeline modules without writing under code/.
 def start_jvm():
  jpype.startJVM(jpype.getDefaultJVMPath(),'-Xmx4g',classpath=[str(ROOT/'code/Java/project-info-process.jar'),str(ROOT/'code/Java/project-index-builder.jar')])
 def normalize(v):

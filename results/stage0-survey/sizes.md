@@ -16,3 +16,5 @@ All counts: `python3 docker/stage0_count_methods.py`. Parser installed with `pyt
 | windward | 4 / 4 | 8 | 0 / 0 / 0 | 0 / 0 | JUnit 3,JUnit 4 | 251 (243/8/0) | 74 / 102 | 2 / 2 | 0 |
 
 Abstract classes, inherited tests and suite factories (especially commons-collections), JUnit 3 naming and parameterized tests make annotation counts unsuitable as executed-test counts. Full import evidence and JUnit-3-style method counts are in sizes.json.
+
+Ruler uses src/main and src/test directly, as declared by its upstream POM; counts include those roots. Its src/main/java directory is absent upstream.

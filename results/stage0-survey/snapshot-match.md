@@ -68,3 +68,5 @@ Closest normalized source tree; no exact match in searched history.
 - commit_only (0): 
 
 Ruler retains an exact upstream `src/main/software` tree plus a second snapshot-only copy under `src/main/java/software`; the reported snapshot-only files are that added copy. The upstream production root for subsequent size counts is `src/main/software`, and its tests use `src/test/software`.
+
+Release tags off the default first-parent line are compared separately in verification.md. In particular, datafaker v1.9.0 and JDOM-2.0.6 are closer source candidates than any searched first-parent commit. Their exact differences and SHAs are recorded there; the table above intentionally uses a first-parent t for history traversal.

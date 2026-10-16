@@ -10,7 +10,7 @@ Measured second-run extraction/index wall time: 5.847 seconds (comparison time e
 
 Read: code/Java/project-info-process/src/PreProcessor.java, code/procedure/preprocess_project.py, code/preparation.py, the FileStructure configuration in code/settings.py, CodeInfoExtractor.java, and IndexBuilder.java. Only the two packaged Java jars and procedure.preprocess_project are loaded by the driver; no LLM module or settings object is instantiated.
 
-- Fresh upstream commons-cli at 90b3f2e is exported into scratch/extract-check/projects/commons-cli. Snapshot libs/, dependencies.txt, and src/test-original/ are copied there. dataset_info.json initially contains the unchanged commons-cli entry.
+- Input preparation is reproducible with `python3 docker/stage0_prepare_extract.py` (run before the index and DatasetPrepare checks; it restores the initial population). Fresh upstream commons-cli at 90b3f2e is exported into scratch/extract-check/projects/commons-cli. Snapshot libs/, dependencies.txt, and src/test-original/ are copied there. dataset_info.json initially contains the unchanged commons-cli entry.
 - PreProcessor enumerates its input directory as projects and reads each project’s src/main/java, src/test-original/java, and libs/*.jar. It appends json/ and codegraph/ to its output root. Thus the driver passes projects/ and project_index/, correcting the stale path wiring shown in preparation.py, without editing it.
 - The Python graph stages need only DATASET_PATH (containing dataset_info.json) and CODE_INFO_PATH (containing json/ and codegraph/). A SimpleNamespace provides those attributes. dependencies.txt is copied for compatibility but is not read by these stages.
 - IndexBuilder receives group, project_index/json, project_index/lucene. Its code indexes production methods under source, not test methods. Indexed identifiers below are class_fqn#signature.
@@ -28,6 +28,7 @@ JSON comparison sorts object keys and normalizes CRLF to LF; it preserves list o
 | codegraph/commons-cli_invoke.json |  /  | missing generated file |
 
 Structure detail (same report invocation):
+
 - source: author 22, generated 22 entries.
 - test: author 38, generated 38 entries.
 - import_dict: author 371, generated 87 entries.
