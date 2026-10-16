@@ -1,0 +1,124 @@
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+methodName: renderOptions argTypes: StringBuffer int Options int int
+methodName: getValueType argTypes: char
+Dataset preparation completed successfully.
+Time Cost:1689ms
+methodName: renderOptions argTypes: StringBuffer int Options int int
+methodName: getValueType argTypes: char
+methodName: hasOption argTypes: String
+Dataset preparation completed successfully.
+Time Cost:417ms
+{
+  "original_count": 2,
+  "generated_count": 2,
+  "project_fields": {
+    "project-name": true,
+    "project-url": true
+  },
+  "fields": {
+    "HelpFormatter_renderOptions": {
+      "package": {
+        "comparison": "identical",
+        "author_characters": 22,
+        "generated_characters": 22
+      },
+      "id": {
+        "comparison": "identical",
+        "author_characters": 27,
+        "generated_characters": 27
+      },
+      "source-path": {
+        "comparison": "identical",
+        "author_characters": 55,
+        "generated_characters": 55
+      },
+      "test-class": {
+        "comparison": "identical",
+        "author_characters": 55,
+        "generated_characters": 55
+      },
+      "method-name": {
+        "comparison": "identical",
+        "author_characters": 51,
+        "generated_characters": 51
+      },
+      "test-path": {
+        "comparison": "identical",
+        "author_characters": 74,
+        "generated_characters": 74
+      },
+      "focal-method": {
+        "comparison": "line-endings only",
+        "author_characters": 2472,
+        "generated_characters": 2418
+      },
+      "class": {
+        "comparison": "identical",
+        "author_characters": 36,
+        "generated_characters": 36
+      },
+      "class-code": {
+        "comparison": "line-endings only",
+        "author_characters": 6603,
+        "generated_characters": 6549
+      }
+    },
+    "PatternOptionBuilder_getValueType": {
+      "package": {
+        "comparison": "identical",
+        "author_characters": 22,
+        "generated_characters": 22
+      },
+      "id": {
+        "comparison": "identical",
+        "author_characters": 33,
+        "generated_characters": 33
+      },
+      "source-path": {
+        "comparison": "identical",
+        "author_characters": 62,
+        "generated_characters": 62
+      },
+      "test-class": {
+        "comparison": "identical",
+        "author_characters": 61,
+        "generated_characters": 61
+      },
+      "method-name": {
+        "comparison": "identical",
+        "author_characters": 18,
+        "generated_characters": 18
+      },
+      "test-path": {
+        "comparison": "identical",
+        "author_characters": 80,
+        "generated_characters": 80
+      },
+      "focal-method": {
+        "comparison": "line-endings only",
+        "author_characters": 772,
+        "generated_characters": 750
+      },
+      "class": {
+        "comparison": "identical",
+        "author_characters": 43,
+        "generated_characters": 43
+      },
+      "class-code": {
+        "comparison": "line-endings only",
+        "author_characters": 1941,
+        "generated_characters": 1917
+      }
+    }
+  },
+  "enlarged_count": 3,
+  "added_methods": [
+    {
+      "id": "Options_hasOption",
+      "method": "hasOption(String)",
+      "nonempty_focal_method": true,
+      "nonempty_class_code": true
+    }
+  ],
+  "seconds": 2.483
+}
