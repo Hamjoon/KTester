@@ -1,0 +1,222 @@
+[
+  {
+    "group": "Base64.isBase64(byte)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 61
+          }
+        ],
+        "expected": true,
+        "description": "Octet equals PAD_DEFAULT ('='). The method should return true via the first OR condition."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 65
+          }
+        ],
+        "expected": true,
+        "description": "Octet is a valid Base64 character ('A'). It is within the decode table range and DECODE_TABLE[65] = 0 (not -1), so the method returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 122
+          }
+        ],
+        "expected": true,
+        "description": "Octet is the last lowercase Base64 character ('z'). It is in range and maps to 51, therefore the method returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 32
+          }
+        ],
+        "expected": false,
+        "description": "Octet is a space character, which is within the table range but maps to -1. The method should fall through to false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 0
+          }
+        ],
+        "expected": false,
+        "description": "Octet is the null byte (0). It is in range but DECODE_TABLE[0] = -1, so the method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": -1
+          }
+        ],
+        "expected": false,
+        "description": "Octet is negative. The first part of the second condition (octet >= 0) fails, leading to a false result."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 127
+          }
+        ],
+        "expected": false,
+        "description": "Octet is the highest possible byte value (DEL). It is within the array length but maps to -1, so the method returns false."
+      }
+    ]
+  },
+  {
+    "group": "Base64.isBase64(byte) - additional cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 43
+          }
+        ],
+        "expected": true,
+        "description": "Octet is '+' (ASCII 43), a valid Base64 character mapping to 62. Should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 45
+          }
+        ],
+        "expected": true,
+        "description": "Octet is '-' (ASCII 45), a valid Base64 character (URL\u2011safe variant) mapping to 62. Should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 47
+          }
+        ],
+        "expected": true,
+        "description": "Octet is '/' (ASCII 47), a valid Base64 character mapping to 63. Should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 95
+          }
+        ],
+        "expected": true,
+        "description": "Octet is '_' (ASCII 95), a valid URL\u2011safe Base64 character mapping to 63. Should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 48
+          }
+        ],
+        "expected": true,
+        "description": "Octet is '0' (ASCII 48), a valid Base64 digit mapping to 52. Should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 57
+          }
+        ],
+        "expected": true,
+        "description": "Octet is '9' (ASCII 57), a valid Base64 digit mapping to 61. Should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 64
+          }
+        ],
+        "expected": false,
+        "description": "Octet is '@' (ASCII 64), not part of Base64 alphabet. Should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 91
+          }
+        ],
+        "expected": false,
+        "description": "Octet is '[' (ASCII 91), not part of Base64 alphabet. Should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 93
+          }
+        ],
+        "expected": false,
+        "description": "Octet is ']' (ASCII 93), not part of Base64 alphabet. Should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 124
+          }
+        ],
+        "expected": false,
+        "description": "Octet is '|' (ASCII 124), not part of Base64 alphabet. Should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": -128
+          }
+        ],
+        "expected": false,
+        "description": "Octet is the minimum byte value (-128). Negative values cause the first part of the second condition to fail, returning false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 126
+          }
+        ],
+        "expected": false,
+        "description": "Octet is '~' (ASCII 126), not a Base64 character. Should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 63
+          }
+        ],
+        "expected": false,
+        "description": "Octet is '?' (ASCII 63), not a Base64 character. Should return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 123
+          }
+        ],
+        "expected": false,
+        "description": "Octet is '{' (ASCII 123), not a Base64 character. Should return false."
+      }
+    ]
+  }
+]

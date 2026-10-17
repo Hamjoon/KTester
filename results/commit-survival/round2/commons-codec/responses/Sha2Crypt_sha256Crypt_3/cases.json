@@ -1,0 +1,125 @@
+[
+  {
+    "group": "Null salt handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "cGFzc3dvcmQ="
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "String that starts with \"$5$\" and contains 43\u201144 characters (standard SHA\u2011256 crypt format).",
+        "description": "When salt is null the method must generate an 8\u2011character base\u201164 salt using the supplied Random instance and return a valid SHA\u2011256 crypt string prefixed with \"$5$\"."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "cGFzc3dvcmQ="
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "java.lang.NullPointerException",
+        "description": "If the Random argument is null the call to B64.getRandomSalt will throw NPE; the test verifies that the method propagates this exception."
+      }
+    ]
+  },
+  {
+    "group": "Null keyBytes handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": null
+          },
+          {
+            "parameter": "salt",
+            "value": "$5$validSalt"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "java.lang.NullPointerException",
+        "description": "When the keyBytes argument is null the method should propagate a NullPointerException thrown by the downstream sha2Crypt implementation."
+      }
+    ]
+  },
+  {
+    "group": "Invalid salt format handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "cGFzc3dvcmQ="
+          },
+          {
+            "parameter": "salt",
+            "value": "invalidSaltWithoutPrefix"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "java.lang.IllegalArgumentException",
+        "description": "A salt that does not start with the required \"$5$\" prefix must cause an IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "cGFzc3dvcmQ="
+          },
+          {
+            "parameter": "salt",
+            "value": "$5$"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "java.lang.IllegalArgumentException",
+        "description": "A salt that consists only of the prefix without any actual salt data is invalid and should raise IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "cGFzc3dvcmQ="
+          },
+          {
+            "parameter": "salt",
+            "value": "$5$abc!def"
+          },
+          {
+            "parameter": "random",
+            "value": "new SecureRandom()"
+          }
+        ],
+        "expected": "java.lang.IllegalArgumentException",
+        "description": "A salt containing characters outside the allowed crypt base\u201164 alphabet (e.g., '!') must trigger IllegalArgumentException."
+      }
+    ]
+  }
+]

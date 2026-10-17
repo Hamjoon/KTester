@@ -1,0 +1,15 @@
+{
+    "group": "md5Crypt(byte[]) - Null Handling",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "keyBytes",
+                    "value": null
+                }
+            ],
+            "expected": "IllegalArgumentException",
+            "description": "Passing a null byte array should cause the method to reject the argument and throw IllegalArgumentException as defined by the implementation."
+        }
+    ]
+}

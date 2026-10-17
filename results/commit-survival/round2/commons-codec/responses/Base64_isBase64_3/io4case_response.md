@@ -1,0 +1,124 @@
+{
+    "testCases": [
+        {
+            "group": "Base64.isBase64(byte[]) - Empty array",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "arrayOctet",
+                            "value": ""
+                        }
+                    ],
+                    "expected": true,
+                    "description": "An empty byte array contains no non‑Base64 characters, so the method should return true."
+                }
+            ]
+        },
+        {
+            "group": "Base64.isBase64(byte[]) - Whitespace only",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "arrayOctet",
+                            "value": " \t\r\n  \n"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Array consists solely of whitespace characters (space, tab, CR, LF). Whitespace is ignored by the method, therefore it should return true."
+                }
+            ]
+        },
+        {
+            "group": "Base64.isBase64(byte[]) - Valid Base64 with interleaved whitespace",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "arrayOctet",
+                            "value": "T W F u\n"
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Valid Base64 string \"TWFu\" (\"Man\") with spaces and a newline inserted. Whitespace must be ignored and the method should still return true."
+                }
+            ]
+        },
+        {
+            "group": "Base64.isBase64(byte[]) - Padding character '=' accepted",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "arrayOctet",
+                            "value": "TQ=="
+                        }
+                    ],
+                    "expected": true,
+                    "description": "Base64 padding character '=' is considered a valid Base64 byte. The method should return true for a correctly padded string."
+                }
+            ]
+        },
+        {
+            "group": "Base64.isBase64(byte[]) - Contains invalid character",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "arrayOctet",
+                            "value": "TWFu@"
+                        }
+                    ],
+                    "expected": false,
+                    "description": "The byte '@' is not part of the Base64 alphabet and not whitespace, so the method must return false."
+                }
+            ]
+        },
+        {
+            "group": "Base64.isBase64(byte[]) - Mixed valid and invalid characters",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "arrayOctet",
+                            "value": "AB CD!EF"
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Array contains a mix of valid Base64 characters, whitespace, and an invalid exclamation mark '!'. Presence of any non‑Base64, non‑whitespace byte forces a false result."
+                }
+            ]
+        },
+        {
+            "group": "Base64.isBase64(byte[]) - Null input",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "arrayOctet",
+                            "value": null
+                        }
+                    ],
+                    "expected": "NullPointerException",
+                    "description": "Passing a null reference should cause a NullPointerException when the method attempts to iterate over the array."
+                }
+            ]
+        },
+        {
+            "group": "Base64.isBase64(byte[]) - High‑bit (negative) byte",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "arrayOctet",
+                            "value": "\u00FF"
+                        }
+                    ],
+                    "expected": false,
+                    "description": "Byte value 0xFF (‑1 as a signed byte) is not whitespace and not part of the Base64 alphabet; the method must return false."
+                }
+            ]
+        }
+    ]
+}

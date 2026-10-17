@@ -1,0 +1,125 @@
+[
+  {
+    "group": "hash128x64(byte[]) delegation and edge\u2011case tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{0x01, 0x02, 0x03, 0x04}"
+          }
+        ],
+        "expected": "The method returns the same long[2] array as MurmurHash3.hash128x64(data, 0, data.length, 0).",
+        "description": "Typical non\u2011empty input \u2013 verifies that the one\u2011argument overload forwards the call correctly with offset\u202f0, length\u202f=data.length and seed\u202f0 and returns the exact same 128\u2011bit hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{}"
+          }
+        ],
+        "expected": "The method returns the same long[2] array as MurmurHash3.hash128x64(data, 0, 0, 0) (i.e. the hash of an empty array).",
+        "description": "Empty array \u2013 checks that the overload works for length\u202f0 and that the delegation does not throw or alter the result."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Null input \u2013 the one\u2011argument overload should immediately throw NPE because it tries to read data.length."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[1024]"
+          }
+        ],
+        "expected": "The method returns the same long[2] array as MurmurHash3.hash128x64(data, 0, 1024, 0).",
+        "description": "Large input (1\u202fKB) \u2013 ensures that the delegation works for bigger payloads and does not hit any hidden length\u2011related branches."
+      }
+    ]
+  },
+  {
+    "group": "hash128x64(byte[]) additional edge\u2011case tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{0x00}"
+          }
+        ],
+        "expected": "Returns a long[2] array equal to MurmurHash3.hash128x64(data, 0, 1, 0).",
+        "description": "Single\u2011byte input \u2013 checks that the one\u2011argument overload correctly forwards a length of 1 and produces the same 128\u2011bit hash as the four\u2011argument version."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[16]",
+            "comment": "all bytes are 0"
+          }
+        ],
+        "expected": "Returns a long[2] array equal to MurmurHash3.hash128x64(data, 0, 16, 0).",
+        "description": "Exactly one 16\u2011byte block \u2013 verifies correct handling of a full block boundary."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[15]",
+            "comment": "all bytes are 0"
+          }
+        ],
+        "expected": "Returns a long[2] array equal to MurmurHash3.hash128x64(data, 0, 15, 0).",
+        "description": "Fifteen bytes (one byte short of a full block) \u2013 ensures the tail\u2011processing path yields the same result as the four\u2011argument overload."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[17]",
+            "comment": "all bytes are 0"
+          }
+        ],
+        "expected": "Returns a long[2] array equal to MurmurHash3.hash128x64(data, 0, 17, 0).",
+        "description": "Seventeen bytes (one byte over a full block) \u2013 tests the algorithm\u2019s handling of a second, incomplete block."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{(byte)0xFF, (byte)0x80, (byte)0x7F, (byte)0x00}"
+          }
+        ],
+        "expected": "Returns a long[2] array equal to MurmurHash3.hash128x64(data, 0, 4, 0).",
+        "description": "Array containing negative\u2011valued bytes (signed byte values) \u2013 confirms that the hash treats byte values as unsigned 8\u2011bit data."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{0x01, 0x02, 0x03, 0x04}"
+          }
+        ],
+        "expected": "Two successive calls return different long[2] object references (but equal contents).",
+        "description": "Object\u2011identity test \u2013 ensures the method creates a fresh result array each time rather than reusing a static buffer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "byte[] mutable = new byte[]{0x11, 0x22, 0x33, 0x44}; mutable"
+          }
+        ],
+        "expected": "The hash value returned before mutating the array remains equal to MurmurHash3.hash128x64(original, 0, original.length, 0) after the array is changed.",
+        "description": "Immutability test \u2013 verifies that the computed hash is not affected by later modifications to the original byte array."
+      }
+    ]
+  }
+]

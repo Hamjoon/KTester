@@ -1,0 +1,142 @@
+[
+  {
+    "group": "Base64.isInAlphabet",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": -5
+          }
+        ],
+        "expected": false,
+        "description": "Octet is negative; first condition (octet >= 0) fails, method should short\u2011circuit and return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 10
+          }
+        ],
+        "expected": false,
+        "description": "Octet is within the range of the decode table length, but the decode table entry at that index is -1, causing the final condition to fail and the method to return false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 8
+          }
+        ],
+        "expected": false,
+        "description": "Octet is greater than or equal to decodeTable.length (decodeTable length is 8). The second condition fails, method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 3
+          }
+        ],
+        "expected": true,
+        "description": "Octet is non\u2011negative, less than decodeTable.length, and decodeTable[octet] is not -1. All conditions are satisfied, method should return true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 0
+          }
+        ],
+        "expected": false,
+        "description": "Lowest non\u2011negative octet; NUL (0) is not part of the Base64 alphabet, so decodeTable[0] == -1 and the method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 65
+          }
+        ],
+        "expected": true,
+        "description": "Octet corresponds to ASCII 'A', the first character of the standard Base64 alphabet; decodeTable[65] != -1, method returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 64
+          }
+        ],
+        "expected": false,
+        "description": "Octet is ASCII '@', which is not in the Base64 alphabet; decodeTable[64] == -1, method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 122
+          }
+        ],
+        "expected": true,
+        "description": "Octet is ASCII 'z', a valid Base64 alphabet character; decodeTable[122] != -1, method returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 43
+          }
+        ],
+        "expected": true,
+        "description": "Octet is ASCII '+', a valid Base64 alphabet character; decodeTable[43] != -1, method returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 127
+          }
+        ],
+        "expected": false,
+        "description": "Octet is the highest index within the typical decode table (127); DEL character is not in the alphabet, decodeTable[127] == -1, method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": -128
+          }
+        ],
+        "expected": false,
+        "description": "Minimum byte value; negative octet fails the first condition (octet >= 0) and the method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": -1
+          }
+        ],
+        "expected": false,
+        "description": "Octet -1 (0xFF) is negative; first condition fails, method returns false."
+      }
+    ]
+  },
+  {
+    "group": "Base64.isInAlphabet_nullDecodeTable",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": 0
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "decodeTable field is deliberately set to null (e.g., via reflection) before invoking isInAlphabet; accessing decodeTable.length causes a NullPointerException."
+      }
+    ]
+  }
+]

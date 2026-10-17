@@ -1,0 +1,187 @@
+[
+  {
+    "group": "isInAlphabet - branch coverage",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "-1"
+          }
+        ],
+        "expected": "false",
+        "description": "Octet is negative; the first condition (octet >= 0) fails, so the method must return false without touching decodeTable."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "70"
+          }
+        ],
+        "expected": "false",
+        "description": "Octet is non\u2011negative but greater than or equal to decodeTable.length (the test sets decodeTable length to 64). The second condition fails, so the method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "10"
+          }
+        ],
+        "expected": "false",
+        "description": "Octet is within the valid index range (0\u201163) and decodeTable[10] is deliberately set to -1. The third condition fails, so the method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "0"
+          }
+        ],
+        "expected": "true",
+        "description": "Octet is the lower bound (0) and decodeTable[0] is set to a value other than -1 (e.g., 0). All three conditions are true, so the method returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "63"
+          }
+        ],
+        "expected": "true",
+        "description": "Octet is the upper bound (decodeTable.length\u20111). decodeTable[63] is set to a non\u2011\u20111 value, so the method returns true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "63"
+          }
+        ],
+        "expected": "false",
+        "description": "Octet is the upper bound but decodeTable[63] is set to -1 for this case. The final condition fails, yielding false."
+      }
+    ]
+  },
+  {
+    "group": "isInAlphabet - edge and additional cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "-128"
+          }
+        ],
+        "expected": "false",
+        "description": "Octet is the minimum byte value (-128). The first condition (octet >= 0) fails, so the method must return false regardless of decodeTable."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "0"
+          }
+        ],
+        "expected": "false",
+        "description": "decodeTable is an empty array (length 0). Although octet is non\u2011negative, the second condition (octet < decodeTable.length) fails, yielding false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "0"
+          }
+        ],
+        "expected": "false",
+        "description": "decodeTable length is 1 and decodeTable[0] is set to -1. All three conditions are evaluated; the third fails, so the method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "0"
+          }
+        ],
+        "expected": "true",
+        "description": "decodeTable length is 1 and decodeTable[0] contains a non\u2011\u20111 value (e.g., 42). All conditions are satisfied, resulting in true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "64"
+          }
+        ],
+        "expected": "false",
+        "description": "Octet equals decodeTable.length (64). The second condition (octet < decodeTable.length) fails, so the method returns false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "100"
+          }
+        ],
+        "expected": "false",
+        "description": "decodeTable length is 100; octet is exactly the length, making the second condition fail and returning false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "127"
+          }
+        ],
+        "expected": "false",
+        "description": "decodeTable length is 128 and decodeTable[127] is set to -1. The final condition fails, so false is returned."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "127"
+          }
+        ],
+        "expected": "true",
+        "description": "decodeTable length is 128 and decodeTable[127] holds a non\u2011\u20111 value (e.g., 1). All conditions succeed, yielding true."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "127"
+          }
+        ],
+        "expected": "false",
+        "description": "decodeTable length is 100 (smaller than 128). Octet 127 is >= decodeTable.length, so the second condition fails and the method returns false."
+      }
+    ]
+  },
+  {
+    "group": "isInAlphabet - exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "0"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "decodeTable is null; octet is non\u2011negative, so evaluation proceeds to decodeTable.length, causing a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "octet",
+            "value": "127"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "decodeTable is null and octet is within the positive byte range; the method attempts to read decodeTable.length, resulting in a NullPointerException."
+      }
+    ]
+  }
+]

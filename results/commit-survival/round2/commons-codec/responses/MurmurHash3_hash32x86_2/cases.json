@@ -1,0 +1,127 @@
+[
+  {
+    "group": "Invalid arguments \u2013 expect IndexOutOfBoundsException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{0x01, 0x02}"
+          },
+          {
+            "parameter": "offset",
+            "value": "-1"
+          },
+          {
+            "parameter": "length",
+            "value": "2"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "java.lang.ArrayIndexOutOfBoundsException",
+        "description": "Negative offset should cause an out\u2011of\u2011bounds access when getLittleEndianInt or tail processing reads the array."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{0x01, 0x02}"
+          },
+          {
+            "parameter": "offset",
+            "value": "0"
+          },
+          {
+            "parameter": "length",
+            "value": "5"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "java.lang.ArrayIndexOutOfBoundsException",
+        "description": "Length that exceeds the array size should trigger an exception during block or tail read."
+      }
+    ]
+  },
+  {
+    "group": "Zero\u2011length input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "offset",
+            "value": "0"
+          },
+          {
+            "parameter": "length",
+            "value": "0"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "0",
+        "description": "An empty array with length\u202f0 returns fmix32(seed). With seed\u202f0 the final hash is 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "offset",
+            "value": "0"
+          },
+          {
+            "parameter": "length",
+            "value": "0"
+          },
+          {
+            "parameter": "seed",
+            "value": "12345"
+          }
+        ],
+        "expected": "fmix32(12345)",
+        "description": "Empty input with a non\u2011zero seed should return the result of the final\u2011mix function applied to the seed."
+      }
+    ]
+  },
+  {
+    "group": "Null data \u2013 expect NullPointerException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "null"
+          },
+          {
+            "parameter": "offset",
+            "value": "0"
+          },
+          {
+            "parameter": "length",
+            "value": "0"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "java.lang.NullPointerException",
+        "description": "Passing a null byte array should cause a NullPointerException before any processing occurs."
+      }
+    ]
+  }
+]

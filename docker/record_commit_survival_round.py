@@ -100,6 +100,11 @@ def main():
                 raw_results = ast.literal_eval(line.split(marker, 1)[1])
     if raw_results:
         (project / 'authors-raw-test-results.json').write_text(json.dumps(raw_results, indent=2) + '\n')
+    console_path = KT / 'evaluation/logs' / f'{stage}-console.log'
+    console = console_path.read_text(errors='replace') if console_path.exists() else ''
+    summary_failure = None
+    if run['coverage_rc'] and any("ValueError: could not convert string to float: 'n/a'" in text for text in [console] + [p.read_text(errors='replace') for p in project.glob('*-coverage.log')]):
+        summary_failure = "ValueError: could not convert string to float: 'n/a' in the reference evaluator's branch-coverage parser"
     tests = sum(item.get('test_cases', 0) for item in items)
     passed = sum(item.get('passed_cases', 0) for item in items)
     compiled = sum(item.get('test_cases', 0) for item in items if item.get('error_type') != 'compile error')
@@ -115,6 +120,8 @@ def main():
                 'out_of_memory_occurrences': sum(len(log['out_of_memory_occurrences']) for log in logs),
                 'missing_output_directory_task_ids': output_ids,
                 'authors_evaluator_reference': {'summary_available': bool(summary), 'task_entries': len(items),
+                    'summary_failure': summary_failure,
+                    'na_failure_nonblocking_authorized': args.round >= 2 and summary_failure is not None,
                     'test_cases': tests if summary else None, 'passed_cases': passed if summary else None, 'compiled_cases': compiled if summary else None,
                     'compile_pass_rate': summary.get('compile_pass_rate'), 'execution_pass_rate': summary.get('execution_pass_rate'),
                     'tests_per_produced_class': tests / len(test_files) if test_files and summary else None,

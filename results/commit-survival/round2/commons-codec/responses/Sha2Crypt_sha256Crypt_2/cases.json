@@ -1,0 +1,335 @@
+[
+  {
+    "group": "Null salt handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "null"
+          }
+        ],
+        "expected": "String that matches the pattern \"\\\\$5\\\\$[A-Za-z0-9./]{8}\\\\$[A-Za-z0-9./]{43}\" (i.e., starts with \"$5$\", contains an 8\u2011character random salt and a 43\u2011character base\u201164 hash).",
+        "description": "When salt is null the method must generate a random 8\u2011character salt prefixed with \"$5$\" and return a valid SHA\u2011256 crypt string."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "null"
+          }
+        ],
+        "expected": "String that matches the pattern \"\\\\$5\\\\$[A-Za-z0-9./]{8}\\\\$[A-Za-z0-9./]{43}\".",
+        "description": "Even with an empty password the method must still generate a random salt and produce a correctly formatted result."
+      }
+    ]
+  },
+  {
+    "group": "Custom valid salt",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$mysalt$\""
+          }
+        ],
+        "expected": "String that matches the pattern \"\\\\$5\\\\$mysalt\\\\$[A-Za-z0-9./]{43}\"",
+        "description": "A normal password with an explicit 8\u2011character salt (no rounds) must produce a SHA\u2011256 crypt string that preserves the supplied salt."
+      }
+    ]
+  },
+  {
+    "group": "Custom salt with rounds",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$rounds=12000$mysalt$\""
+          }
+        ],
+        "expected": "String that matches the pattern \"\\\\$5\\\\$rounds=12000\\\\$mysalt\\\\$[A-Za-z0-9./]{43}\"",
+        "description": "When a rounds specification is present the resulting hash must contain the same rounds value and the provided salt."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$rounds=5000$mysalt$\""
+          }
+        ],
+        "expected": "String that matches the pattern \"\\\\$5\\\\$rounds=5000\\\\$mysalt\\\\$[A-Za-z0-9./]{43}\"",
+        "description": "The default round count (5000) must be honoured when explicitly supplied; the output format must reflect the rounds parameter."
+      }
+    ]
+  },
+  {
+    "group": "Salt without prefix",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"mysalt\""
+          }
+        ],
+        "expected": "String that matches the pattern \"\\\\$5\\\\$mysalt\\\\$[A-Za-z0-9./]{43}\"",
+        "description": "If the supplied salt lacks the \"$5$\" prefix the method should prepend it automatically and still produce a valid hash."
+      }
+    ]
+  },
+  {
+    "group": "Invalid salt characters",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$bad*salt$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "A salt containing characters outside the allowed set (A\u2011Z a\u2011z 0\u20119 . /) must cause an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Excessively long salt",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$abcdefghijklmnopqr$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "A salt longer than the maximum allowed length (16 characters) must be rejected with an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Empty salt string",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "An empty salt (not null) is considered malformed and should result in an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Large keyBytes",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[1024 * 1024]",
+            "note": "array filled with zeros"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$large$\""
+          }
+        ],
+        "expected": "String that matches the pattern \"\\\\$5\\\\$large\\\\$[A-Za-z0-9./]{43}\"",
+        "description": "The method must handle a 1\u202fMiB password array without throwing and still return a correctly formatted hash."
+      }
+    ]
+  },
+  {
+    "group": "Null keyBytes",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "null"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$nullkey$\""
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null password byte array should cause a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Unicode password",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"p\u00e4ssw\u00f6rd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$unicode$\""
+          }
+        ],
+        "expected": "String that matches the pattern \"\\\\$5\\\\$unicode\\\\$[A-Za-z0-9./]{43}\"",
+        "description": "A password containing non\u2011ASCII characters must be UTF\u20118 encoded correctly and still produce a valid SHA\u2011256 crypt string."
+      }
+    ]
+  },
+  {
+    "group": "Invalid rounds format non\u2011numeric",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$rounds=abc$mysalt$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "The rounds part contains non\u2011numeric characters; the method must reject the salt and throw IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Rounds below minimum",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$rounds=500$mysalt$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "The specified rounds value is lower than the allowed minimum (1000); the method must throw IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Rounds above maximum",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$rounds=1000000000$mysalt$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "The specified rounds value exceeds the allowed maximum (999999999); the method must reject the salt with IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Missing trailing delimiter",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$mysalt\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "The salt does not end with the required trailing '$' separator; the method must throw IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Empty rounds value",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$rounds=$mysalt$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "The rounds specification is present but the numeric value is missing; the method must treat the salt as malformed and throw IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Whitespace in salt",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$my salt$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "A space character is not part of the allowed salt alphabet; the method must reject the salt with IllegalArgumentException."
+      }
+    ]
+  }
+]

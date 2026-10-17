@@ -1,0 +1,72 @@
+[
+  {
+    "group": "Default / Null line separator",
+    "cases": [
+      {
+        "input": [],
+        "expected": "null",
+        "description": "When the internal `lineSeparator` field is `null` (the default state for a freshly\u2011constructed Base64 instance that is not configured for chunked output), `getLineSeparator()` should return `null`."
+      }
+    ]
+  },
+  {
+    "group": "CRLF line separator (standard chunked mode)",
+    "cases": [
+      {
+        "input": [],
+        "expected": "[13,10]",
+        "description": "When the Base64 object is configured for chunked encoding the implementation sets `lineSeparator` to a CR\u2011LF byte pair (`\\r\\n`). After such configuration, `getLineSeparator()` must return a byte array containing the two bytes 13 and 10."
+      }
+    ]
+  },
+  {
+    "group": "Custom line separator",
+    "cases": [
+      {
+        "input": [],
+        "expected": "[124]",
+        "description": "If a custom line\u2011separator is supplied (e.g., the pipe character `|` whose ASCII code is 124) the internal field should hold exactly that byte. `getLineSeparator()` must return a byte array with the same single element."
+      }
+    ]
+  },
+  {
+    "group": "Multi\u2011byte custom line separator",
+    "cases": [
+      {
+        "input": [],
+        "expected": "[10,9]",
+        "description": "When the Base64 instance is built with a custom two\u2011character line separator \"\\n\\t\" (newline followed by a tab), `getLineSeparator()` must return a byte array containing the corresponding ASCII codes 10 and 9."
+      }
+    ]
+  },
+  {
+    "group": "Empty line separator (no bytes)",
+    "cases": [
+      {
+        "input": [],
+        "expected": "[]",
+        "description": "If the builder is supplied an empty byte array as the line separator, the internal field should store an empty array. `getLineSeparator()` must therefore return an empty byte array rather than null."
+      }
+    ]
+  },
+  {
+    "group": "Explicit null line separator via builder",
+    "cases": [
+      {
+        "input": [],
+        "expected": "null",
+        "description": "Even when the builder is called with `lineSeparator(null)`, the resulting Base64 instance should behave like the default: `getLineSeparator()` returns null."
+      }
+    ]
+  },
+  {
+    "group": "Immutability of returned line separator array",
+    "cases": [
+      {
+        "input": [],
+        "expected": "original unchanged",
+        "description": "`getLineSeparator()` must return a defensive copy. After retrieving the array and modifying its contents, a subsequent call to `getLineSeparator()` should still return the original byte values (e.g., [124] for a pipe separator)."
+      }
+    ]
+  }
+]

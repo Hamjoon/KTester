@@ -1,0 +1,67 @@
+[
+  {
+    "group": "Base64.builder() method tests",
+    "cases": [
+      {
+        "input": [],
+        "expected": "non-null instance of org.apache.commons.codec.binary.Base64$Builder",
+        "description": "Verify that calling Base64.builder() returns a non-null Builder object."
+      },
+      {
+        "input": [],
+        "expected": "two distinct Builder instances on successive calls",
+        "description": "Ensure that each invocation of Base64.builder() creates a new Builder instance (different object references)."
+      },
+      {
+        "input": [],
+        "expected": "instance of Base64.Builder class",
+        "description": "Confirm that the returned object's runtime type is exactly Base64.Builder."
+      }
+    ]
+  },
+  {
+    "group": "Base64.builder() build configuration tests",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Base64 instance where isUrlSafe() returns false and getLineSeparator() returns null (default configuration)",
+        "description": "Validate that a Builder created with Base64.builder() and built without any further configuration produces a Base64 object using the library's default settings (non\u2011URL\u2011safe and no custom line separator)."
+      },
+      {
+        "input": [],
+        "expected": "Base64 instance where isUrlSafe() returns true",
+        "description": "Verify that invoking the urlSafe() option on the Builder (Base64.builder().urlSafe().build()) yields a Base64 object that reports URL\u2011safe mode via isUrlSafe()."
+      },
+      {
+        "input": [],
+        "expected": "Base64 instance whose getLineSeparator() returns a byte array equal to {13,10}",
+        "description": "Check that supplying a custom line separator via withLineSeparator(new byte[]{'\\r','\\n'}) on the Builder results in a Base64 object that returns the same separator from getLineSeparator()."
+      }
+    ]
+  },
+  {
+    "group": "Base64.builder() exception tests",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "Calling withLineSeparator(null) on a Builder should throw NullPointerException because a null line separator is not allowed."
+      },
+      {
+        "input": [],
+        "expected": "IllegalArgumentException",
+        "description": "Calling withLineSeparator(new byte[]{}) (empty array) on a Builder should throw IllegalArgumentException because the line separator cannot be empty."
+      },
+      {
+        "input": [],
+        "expected": "IllegalArgumentException",
+        "description": "Calling withLineSeparator(new byte[]{'A','B','C'}) (array length not a multiple of 2) on a Builder should throw IllegalArgumentException because the line separator must consist of CR/LF pair(s)."
+      },
+      {
+        "input": [],
+        "expected": "IllegalStateException",
+        "description": "Invoking build() on a Builder after calling withLineSeparator(new byte[]{'\\r','\\n','\\r','\\n','\\r'}) (invalid length) should result in IllegalStateException during validation in the build process."
+      }
+    ]
+  }
+]

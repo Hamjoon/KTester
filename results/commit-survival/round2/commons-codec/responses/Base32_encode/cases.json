@@ -1,0 +1,780 @@
+[
+  {
+    "group": "EOF handling \u2013 early exit when context already marked as EOF",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{ }"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, pos=0, buffer=new byte[0]}"
+          }
+        ],
+        "expected": "No change to context.buffer (empty) and method returns immediately.",
+        "description": "When the context already has eof=true the encode method must return without touching the buffer."
+      }
+    ]
+  },
+  {
+    "group": "EOF handling \u2013 no leftover bytes and no line\u2011chunking",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{ }"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=0, lineLength=0, pos=0, buffer=new byte[0]}"
+          }
+        ],
+        "expected": "Method returns after setting context.eof=true; buffer stays empty because there is no leftover data.",
+        "description": "EOF signaled (inAvail < 0) with no pending bytes (modulus==0) and no line\u2011length chunking \u2013 nothing should be emitted."
+      }
+    ]
+  },
+  {
+    "group": "EOF handling \u2013 leftover 1 byte (modulus = 1)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{ }"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=1, lbitWorkArea=0xF0, lineLength=0, pos=0, buffer=new byte[8]}"
+          }
+        ],
+        "expected": "Encoded bytes = \"6=====\" (2 data chars followed by 6 padding chars).",
+        "description": "When EOF is reached with a single leftover byte, the encoder must emit two Base\u201132 characters derived from the high\u2011order 5\u2011bit groups and then seven pad characters."
+      }
+    ]
+  },
+  {
+    "group": "EOF handling \u2013 leftover 2 bytes (modulus = 2)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{ }"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=2, lbitWorkArea=0xF00F, lineLength=0, pos=0, buffer=new byte[8]}"
+          }
+        ],
+        "expected": "Encoded bytes = \"6P4====\" (4 data chars followed by 4 pads).",
+        "description": "Two leftover bytes produce four Base\u201132 characters and four pad characters."
+      }
+    ]
+  },
+  {
+    "group": "EOF handling \u2013 leftover 3 bytes (modulus = 3)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{ }"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=3, lbitWorkArea=0xF00F0F, lineLength=0, pos=0, buffer=new byte[8]}"
+          }
+        ],
+        "expected": "Encoded bytes = \"6P4J2===\" (5 data chars followed by 3 pads).",
+        "description": "Three leftover bytes generate five Base\u201132 characters and three pad characters."
+      }
+    ]
+  },
+  {
+    "group": "EOF handling \u2013 leftover 4 bytes (modulus = 4)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{ }"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=4, lbitWorkArea=0xF00F0F0F, lineLength=0, pos=0, buffer=new byte[8]}"
+          }
+        ],
+        "expected": "Encoded bytes = \"6P4J2L0=\" (7 data chars followed by 1 pad).",
+        "description": "Four leftover bytes produce seven Base\u201132 characters and a single pad character."
+      }
+    ]
+  },
+  {
+    "group": "EOF handling \u2013 illegal modulus (default case)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{ }"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=5, lbitWorkArea=0, lineLength=0, pos=0, buffer=new byte[0]}"
+          }
+        ],
+        "expected": "IllegalStateException with message \"Impossible modulus 5\"",
+        "description": "If the context.modulus is outside the range 0\u20114 when EOF is processed, the method must throw IllegalStateException."
+      }
+    ]
+  },
+  {
+    "group": "Normal encoding \u2013 exact 5\u2011byte block, no line chunking",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=0, lineLength=0, pos=0, buffer=new byte[8]}"
+          }
+        ],
+        "expected": "Encoded bytes = \"AEBAGBA=\" (8 data chars, no padding).",
+        "description": "A full 5\u2011byte input should be turned into exactly eight Base\u201132 characters without any padding."
+      }
+    ]
+  },
+  {
+    "group": "Normal encoding \u2013 line\u2011length chunking (lineLength = 8, separator = \"\\r\\n\")",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=0, lineLength=8, lineSeparator=\"\\r\\n\".getBytes(), pos=0, buffer=new byte[10]}"
+          }
+        ],
+        "expected": "Encoded bytes = \"AEBAGBA=\\r\\n\" (8 data chars followed by CRLF).",
+        "description": "When lineLength is set, after a full block the encoder must insert the line separator."
+      }
+    ]
+  },
+  {
+    "group": "Normal encoding \u2013 handling of negative byte values (b < 0 branch)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{(byte)0xFF,0x00,0x00,0x00,0x00}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=0, lineLength=0, pos=0, buffer=new byte[8]}"
+          }
+        ],
+        "expected": "Encoded bytes = \"7777777=\" (the first byte -1 becomes 255 after adding 256).",
+        "description": "When a byte with the high bit set is read, the code adds 256 to make it unsigned; the resulting encoding must reflect the unsigned value."
+      }
+    ]
+  },
+  {
+    "group": "Normal encoding \u2013 multiple blocks with line\u2011length overflow",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05, 0x06,0x07,0x08,0x09,0x0A}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "10"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=0, lineLength=8, lineSeparator=\"\\r\\n\".getBytes(), pos=0, buffer=new byte[20]}"
+          }
+        ],
+        "expected": "Encoded bytes = \"AEBAGBA=\\r\\nCIFCGEI=\\r\\n\" (two 8\u2011char blocks each followed by CRLF).",
+        "description": "Two consecutive 5\u2011byte blocks exceed the lineLength after the first block, causing a separator to be inserted after each block."
+      }
+    ]
+  },
+  {
+    "group": "Early exit when EOF already true, with pending input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01, 0x02}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "2"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=true, pos=0, buffer=new byte[0] }"
+          }
+        ],
+        "expected": "Context remains unchanged (eof stays true, pos stays 0, buffer stays empty). No data is written.",
+        "description": "When the context is already marked as EOF the method must return immediately, ignoring any supplied input."
+      }
+    ]
+  },
+  {
+    "group": "Empty input with inAvail = 0 (no EOF) \u2013 no output",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[0] }"
+          }
+        ],
+        "expected": "Context.buffer stays empty, pos remains 0, modulus stays 0.",
+        "description": "When there is no data and EOF has not been signaled the encoder should do nothing."
+      }
+    ]
+  },
+  {
+    "group": "Partial block without EOF \u2013 no output until block is full",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "3"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[8] }"
+          }
+        ],
+        "expected": "Context.buffer remains unchanged (no bytes written), context.modulus becomes 3, lbitWorkArea contains the three bytes shifted left appropriately.",
+        "description": "The encoder must wait until it has 5 bytes before emitting any Base\u201132 characters."
+      }
+    ]
+  },
+  {
+    "group": "Partial block followed by EOF \u2013 leftover handling after prior processing",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "3"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[8] }"
+          }
+        ],
+        "expected": "After the first call the buffer is still empty and context.modulus == 3.",
+        "description": "First call processes three bytes; no output is produced yet."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "the same Context instance from the previous call"
+          }
+        ],
+        "expected": "Encoded bytes = \"AEBAG===\" (5 data characters followed by 3 padding characters).",
+        "description": "When EOF is signaled after a partial block of three bytes, the encoder must emit the correct leftover encoding."
+      }
+    ]
+  },
+  {
+    "group": "Buffer expansion \u2013 initial buffer too small",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[2] }"
+          }
+        ],
+        "expected": "Context.buffer length is >=8 after encoding, and the first 8 bytes contain \"AEBAGBA=\".",
+        "description": "ensureBufferSize should allocate a larger buffer when the supplied one cannot hold the encoded block."
+      }
+    ]
+  },
+  {
+    "group": "Custom line separator (space) with lineLength smaller than a block",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32(){ lineLength=4, lineSeparator=\" \".getBytes() }.new Context(){ eof=false, pos=0, buffer=new byte[10] }"
+          }
+        ],
+        "expected": "Encoded bytes = \"AEBAGBA= \" (space added after the block).",
+        "description": "When lineLength is reached (or exceeded) the configured separator (a single space) must be appended."
+      }
+    ]
+  },
+  {
+    "group": "Line separator ignored when lineLength = 0",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32(){ lineLength=0, lineSeparator=\"\\r\\n\".getBytes() }.new Context(){ eof=false, pos=0, buffer=new byte[8] }"
+          }
+        ],
+        "expected": "Encoded bytes = \"AEBAGBA=\" (no CRLF appended).",
+        "description": "A non\u2011zero lineSeparator should have no effect when lineLength is disabled."
+      }
+    ]
+  },
+  {
+    "group": "Large input causing multiple buffer expansions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x00,0x01,0x02,0x03,0x04, 0x05,0x06,0x07,0x08,0x09, 0x0A,0x0B,0x0C,0x0D,0x0E, 0x0F,0x10,0x11,0x12,0x13}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "20"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[4] }"
+          }
+        ],
+        "expected": "Context.buffer length >= 32, containing 32 Base\u201132 characters (no padding) that correspond to the 20\u2011byte input.",
+        "description": "Encoding 20 bytes (four full blocks) should trigger several buffer growths; the final output length must be 4\u202f\u00d7\u202f8 = 32 characters."
+      }
+    ]
+  },
+  {
+    "group": "Multiple negative bytes in one block",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{(byte)0xFF,(byte)0x80,0x00,0x01,0x02}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[8] }"
+          }
+        ],
+        "expected": "Encoded bytes = \"7777777A\" (the first two bytes become 255 and 128, producing '7' characters; the remaining three bytes encode to \"7A\").",
+        "description": "Ensures that the unsigned conversion (b += 256) works for several high\u2011bit bytes within the same block."
+      }
+    ]
+  },
+  {
+    "group": "Modulus wrap\u2011around after more than one block",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05, 0x06}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "6"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[16] }"
+          }
+        ],
+        "expected": "After processing the first five bytes the buffer contains \"AEBAGBA=\" and context.modulus == 0. After the sixth byte the buffer is unchanged (still only the first block) and context.modulus == 1, lbitWorkArea holds the value of the sixth byte shifted left by 0.",
+        "description": "Verifies that after a complete block the modulus resets to 0 and that the next byte starts a new partial block."
+      }
+    ]
+  },
+  {
+    "group": "Null context handling \u2013 expect NullPointerException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01, 0x02}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "2"
+          },
+          {
+            "parameter": "context",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "When the supplied Context object is null the method should throw a NullPointerException on the first access to context.eof."
+      }
+    ]
+  },
+  {
+    "group": "Null input handling \u2013 expect NullPointerException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "null"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "1"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[8] }"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "If the input byte array is null the method must throw a NullPointerException when trying to read input[inPos]."
+      }
+    ]
+  },
+  {
+    "group": "Invalid inPos (negative) \u2013 expect ArrayIndexOutOfBoundsException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01, 0x02, 0x03}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "-1"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "3"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[8] }"
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "A negative inPos causes the array access input[inPos++] to throw an ArrayIndexOutOfBoundsException."
+      }
+    ]
+  },
+  {
+    "group": "inAvail larger than remaining bytes \u2013 expect ArrayIndexOutOfBoundsException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01, 0x02}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32().new Context(){ eof=false, pos=0, buffer=new byte[16] }"
+          }
+        ],
+        "expected": "ArrayIndexOutOfBoundsException",
+        "description": "When inAvail exceeds the actual number of bytes available in the input array the loop reads past the end, causing an ArrayIndexOutOfBoundsException."
+      }
+    ]
+  },
+  {
+    "group": "Null lineSeparator with lineLength > 0 \u2013 expect NullPointerException on EOF handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32(){ lineLength=8, lineSeparator=null }.new Context(){ eof=false, lineLength=8, lineSeparator=null, pos=0, buffer=new byte[10] }"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "After encoding a full block the EOF branch attempts to copy the lineSeparator (which is null) via System.arraycopy, resulting in a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Null encodeTable \u2013 expect NullPointerException during normal encoding",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x01,0x02,0x03,0x04,0x05}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "new Base32(){ /* encodeTable will be set to null via reflection before invoking encode */ }.new Context(){ eof=false, pos=0, buffer=new byte[8] }"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "If the internal encodeTable field is null, any attempt to read encodeTable[...] throws a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Illegal modulus \u2013 negative value triggers IllegalStateException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, modulus=-1, lbitWorkArea=0, lineLength=0, pos=0, buffer=new byte[0]}"
+          }
+        ],
+        "expected": "IllegalStateException with message \"Impossible modulus -1\"",
+        "description": "When EOF is signaled and context.modulus is set to a negative value, the default case of the switch throws IllegalStateException."
+      }
+    ]
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "group": "apr1Crypt_byteArrayString",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'s','e','c','r','e','t'}"
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          }
+        ],
+        "expected": "^\\$apr1\\$[./0-9A-Za-z]{8}\\$[./0-9A-Za-z]{22}$",
+        "description": "When salt is null the method should generate a random 8\u2011character salt and return a string that matches the standard APR\u20111 hash format."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'p','a','s','s','w','o','r','d'}"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"\""
+          }
+        ],
+        "expected": "^\\$apr1\\$[./0-9A-Za-z]{8}\\$[./0-9A-Za-z]{22}$",
+        "description": "An empty salt string is not prefixed, so the method adds the APR\u20111 prefix and then lets md5Crypt generate a random salt; the result must still conform to the APR\u20111 format."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'p','a','s','s','w','o','r','d'}"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"mysalt\""
+          }
+        ],
+        "expected": "^\\$apr1\\$mysalt\\$[./0-9A-Za-z]{22}$",
+        "description": "A salt without the required prefix should be automatically prefixed with \"$apr1$\"; the final hash must contain the original salt text after the prefix."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'p','a','s','s','w','o','r','d'}"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$apr1$mysalt\""
+          }
+        ],
+        "expected": "^\\$apr1\\$mysalt\\$[./0-9A-Za-z]{22}$",
+        "description": "When the supplied salt already starts with the APR\u20111 prefix the method must not add another prefix; the resulting hash should be identical to the previous case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'p','a','s','s','w','o','r','d'}"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$1$mysalt\""
+          }
+        ],
+        "expected": "^\\$apr1\\$\\$1\\$mysalt\\$[./0-9A-Za-z]{22}$",
+        "description": "If the supplied salt starts with a different prefix (e.g., \"$1$\"), the method must still prepend the APR\u20111 prefix, resulting in a double\u2011prefix string \"$apr1$$1$mysalt\" before hashing."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'p','a','s','s','w','o','r','d'}"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"mysalt\""
+          }
+        ],
+        "expected": "same as Md5Crypt.apr1Crypt(new byte[]{'p','a','s','s','w','o','r','d'}, \"$apr1$mysalt\")",
+        "description": "Providing a salt with and without the APR\u20111 prefix must produce identical hashes; this case asserts equality between the two possible calls."
+      }
+    ]
+  },
+  {
+    "group": "apr1Crypt_byteArrayString_exceptions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": null
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null keyBytes array should cause a NullPointerException, irrespective of the salt value (null in this case)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": null
+          },
+          {
+            "parameter": "salt",
+            "value": "\"mysalt\""
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "A null keyBytes array must still trigger a NullPointerException even when a non\u2011null salt is supplied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'s','e','c','r','e','t'}"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$apr1$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Supplying a salt that is exactly the APR\u20111 prefix (i.e., no actual salt characters) should be considered malformed and result in an IllegalArgumentException from the underlying md5Crypt implementation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'s','e','c','r','e','t'}"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$1$invalid$\""
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "A salt that starts with a different prefix leads to a double\u2011prefix string \"$apr1$$1$invalid$\"; this malformed salt should cause an IllegalArgumentException."
+      }
+    ]
+  }
+]

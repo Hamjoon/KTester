@@ -1,0 +1,222 @@
+[
+  {
+    "group": "MurmurHash3.hash32(long, int) \u2013 deterministic behavior and seed sensitivity",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "104729"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., result1). Re\u2011invoking hash32(0L, 104729) must return the same result.",
+        "description": "Verify that the method returns a consistent hash for the zero long value with the default seed."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "Long.MAX_VALUE"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., result2) that is different from the result of case\u202f1.",
+        "description": "Check handling of the maximum long value with a zero seed; result must be repeatable and distinct from the zero\u2011data case."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "Long.MIN_VALUE"
+          },
+          {
+            "parameter": "seed",
+            "value": "-1"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., result3) that differs from results of cases\u202f1 and\u202f2.",
+        "description": "Validate that a negative long value and a negative seed are processed correctly and produce a unique hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0x1122334455667788L"
+          },
+          {
+            "parameter": "seed",
+            "value": "12345"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., result4).",
+        "description": "Typical non\u2011trivial data value with a positive seed; ensures the byte\u2011reversal and two\u2011mix steps are exercised."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0x1122334455667788L"
+          },
+          {
+            "parameter": "seed",
+            "value": "12346"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., result5) that is NOT equal to result4.",
+        "description": "Same data as previous case but with a different seed; verifies that the seed influences the final hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0xFFFFFFFFFFFFFFFFL"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., result6).",
+        "description": "All\u2011bits\u2011set long value with zero seed, exercising the full 64\u2011bit reversal and both mix calls."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., result7) that differs from case\u202f1 (different seed).",
+        "description": "Zero data with zero seed, confirming that changing only the seed changes the hash."
+      }
+    ]
+  },
+  {
+    "group": "MurmurHash3.hash32(long, int) \u2013 additional boundary and seed variations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "1L"
+          },
+          {
+            "parameter": "seed",
+            "value": "Integer.MAX_VALUE"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., resultA) that is reproducible on repeated calls and differs from hashes of other data/seed combos.",
+        "description": "Small positive long with the maximum positive seed tests handling of low\u2011order bits and extreme seed value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "-1L"
+          },
+          {
+            "parameter": "seed",
+            "value": "Integer.MIN_VALUE"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., resultB) distinct from the hash of (-1L, 0) already covered.",
+        "description": "All\u2011bits\u2011set long with the most negative seed verifies correct sign\u2011extension and mixing for extreme seed values."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0x00000000FFFFFFFFL"
+          },
+          {
+            "parameter": "seed",
+            "value": "123"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., resultC) that differs from hashes of data where high and low 32\u2011bit halves are swapped.",
+        "description": "Data where only the low 32 bits are set ensures the first mix step processes non\u2011zero low part while the second mix processes zero high part."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0xFFFFFFFF00000000L"
+          },
+          {
+            "parameter": "seed",
+            "value": "456"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., resultD) distinct from resultC, confirming that high\u2011half\u2011only data is handled correctly.",
+        "description": "Data where only the high 32 bits are set tests the second mix step with a non\u2011zero value while the first mix receives zero."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0x7FFFFFFFFFFFFFFFL"
+          },
+          {
+            "parameter": "seed",
+            "value": "-12345"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., resultE) that is different from the hash of Long.MAX_VALUE with seed 0 (existing case).",
+        "description": "Maximum positive long with a negative seed checks proper handling of signed seeds and ensures seed influences the final hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0x8000000000000000L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., resultF) that differs from the hash of Long.MIN_VALUE with seed -1 (existing case).",
+        "description": "Minimum long value (only the sign bit set) with zero seed validates correct byte\u2011reversal and mixing for this edge pattern."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0x0102030405060708L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., resultG) distinct from hashes of other patterned data.",
+        "description": "Sequential byte pattern tests that the byte\u2011reversal step correctly reorders bytes before mixing."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data",
+            "value": "0x0807060504030201L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "A deterministic 32\u2011bit int value (e.g., resultH) that is not equal to resultG, confirming that different byte orders produce different hashes.",
+        "description": "Reverse sequential byte pattern ensures that the reversal logic is not a no\u2011op and influences the hash."
+      }
+    ]
+  }
+]

@@ -1,0 +1,361 @@
+[
+  {
+    "group": "Null salt handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'s','e','c','r','e','t'}"
+          },
+          {
+            "parameter": "salt",
+            "value": "null"
+          }
+        ],
+        "expected": "Result string starts with \"$6$\" and contains a randomly generated 8\u2011character base\u201164 salt after the prefix (e.g. \"$6$AbCdEfGh$...\")",
+        "description": "When the supplied salt is null the method must generate a random 8\u2011character salt and prepend the SHA\u2011512 prefix. The returned hash must therefore begin with \"$6$\" followed by the random salt and a trailing \"$\" before the hash data."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[0]"
+          },
+          {
+            "parameter": "salt",
+            "value": "null"
+          }
+        ],
+        "expected": "Result string starts with \"$6$\" and contains a random 8\u2011character salt; the hash part is still produced (non\u2011null).",
+        "description": "Even if the password byte array is empty the method should still produce a valid SHA\u2011512\u2011crypt string with a random salt."
+      }
+    ]
+  },
+  {
+    "group": "Provided non\u2011null salt handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$mysalt\""
+          }
+        ],
+        "expected": "Result string equals \"$6$mysalt$\" + a deterministic 86\u2011character hash (e.g. \"$6$mysalt$KjG9rV...$\"), i.e. the returned value is always the same for the same inputs.",
+        "description": "When a non\u2011null salt that already contains the SHA\u2011512 prefix is supplied, the method must use it unchanged and produce a deterministic hash. The returned string must start with the exact salt \"$6$mysalt$\"."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"secret\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"mysalt\""
+          }
+        ],
+        "expected": "Result string starts with \"$6$mysalt$\" (the method will prepend the missing prefix automatically).",
+        "description": "If the caller supplies a salt without the required \"$6$\" prefix, the internal sha2Crypt routine still receives the raw salt; the public method does not modify it, so the resulting hash will contain the raw salt after the prefix added by sha2Crypt. The test verifies that the final string contains \"$6$mysalt$\"."
+      }
+    ]
+  },
+  {
+    "group": "Edge\u2011case salt values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"edge\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"\""
+          }
+        ],
+        "expected": "Result string starts with \"$6$$\" (i.e. an empty salt between the two dollar signs).",
+        "description": "An empty string is a valid (though unusual) salt. The method should forward it unchanged, resulting in a hash that begins with \"$6$$\"."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"test\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$\""
+          }
+        ],
+        "expected": "Result string starts with \"$6$$\" (the provided salt contains only the prefix, no actual salt characters).",
+        "description": "When the supplied salt consists solely of the prefix, the implementation must handle the empty salt part correctly."
+      }
+    ]
+  },
+  {
+    "group": "Invalid arguments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "null"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$any\""
+          }
+        ],
+        "expected": "NullPointerException is thrown",
+        "description": "The method does not guard against a null password byte array; a NPE should be propagated from the underlying MessageDigest usage."
+      }
+    ]
+  },
+  {
+    "group": "Rounds parameter handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"pwd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$rounds=5000$mysalt\""
+          }
+        ],
+        "expected": "Result string starts with \"$6$rounds=5000$mysalt$\" followed by a deterministic 86\u2011character hash (the full string length is 108 characters).",
+        "description": "The salt contains a valid rounds specification; the method must honour the rounds value and include it in the output prefix."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"pwd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$rounds=10000$\""
+          }
+        ],
+        "expected": "Result string starts with \"$6$rounds=10000$$\" (i.e. an empty salt after the rounds specifier) followed by a deterministic hash.",
+        "description": "A rounds specifier is provided but no actual salt characters; the implementation should treat the salt part as empty and still produce a valid hash."
+      }
+    ]
+  },
+  {
+    "group": "Invalid salt patterns",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"pwd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$5$mysalt\""
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (wrong algorithm prefix \u2013 SHA\u2011256 prefix used with SHA\u2011512 method).",
+        "description": "The salt starts with \"$5$\" which is the SHA\u2011256 prefix; sha512Crypt must reject it."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"pwd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$invalid!salt\""
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (salt contains illegal character '!').",
+        "description": "Salt may only contain characters from the crypt base\u201164 alphabet (A\u2011Z, a\u2011z, 0\u20119, '.' and '/'). The exclamation mark is invalid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"pwd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$\" + \"a\".repeat(20)"
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (salt length exceeds the maximum of 16 characters).",
+        "description": "The implementation limits the raw salt to 16 characters; a longer salt must be rejected."
+      }
+    ]
+  },
+  {
+    "group": "Unicode password handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"p\u00e4ssw\u00f6rd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$unicode\""
+          }
+        ],
+        "expected": "Result string starts with \"$6$unicode$\" and is deterministic for the given Unicode password.",
+        "description": "Ensures that the method correctly handles UTF\u20118 encoded passwords containing non\u2011ASCII characters."
+      }
+    ]
+  },
+  {
+    "group": "Deterministic repeatability",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"repeat\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$repeat\""
+          }
+        ],
+        "expected": "Two consecutive calls with the same arguments return exactly the same string.",
+        "description": "Verifies that sha512Crypt is pure (no hidden state) and produces a repeatable result for identical inputs."
+      }
+    ]
+  },
+  {
+    "group": "Salt with trailing dollar sign",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"test\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$mysalt$\""
+          }
+        ],
+        "expected": "Result string starts with \"$6$mysalt$$\" (double dollar sign) followed by a deterministic hash.",
+        "description": "When the supplied salt already ends with a dollar sign, the implementation should treat the salt part as empty after the delimiter and still generate a valid hash."
+      }
+    ]
+  },
+  {
+    "group": "Invalid rounds format",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$rounds=abc$mysalt\""
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (rounds value is not a number)",
+        "description": "The salt contains a rounds specifier with a non\u2011numeric value. The implementation must detect the malformed rounds part and reject the salt."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$rounds=$mysalt\""
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (missing rounds number)",
+        "description": "The rounds specifier is present but the numeric part is omitted. The method should treat this as an invalid salt pattern."
+      }
+    ]
+  },
+  {
+    "group": "Invalid rounds value range",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"pwd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$rounds=500$mysalt\""
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (rounds value below minimum of 1000)",
+        "description": "The rounds number is smaller than the allowed lower bound (1000). The method must reject such a salt."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"pwd\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$rounds=1000000000$mysalt\""
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (rounds value above maximum of 999999999)",
+        "description": "The rounds number exceeds the permitted upper bound. The implementation should throw an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Invalid salt characters (null char)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"test\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$ab\\u0000cd\""
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (salt contains a null character)",
+        "description": "The salt includes the Unicode null character (U+0000), which is not part of the allowed crypt base\u201164 alphabet. The method must reject it."
+      }
+    ]
+  },
+  {
+    "group": "Invalid salt characters (whitespace)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"test\".getBytes(StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "salt",
+            "value": "\"$6$my salt\""
+          }
+        ],
+        "expected": "IllegalArgumentException is thrown (salt contains whitespace)",
+        "description": "Whitespace is not allowed in the crypt salt. Supplying a space should cause the method to throw an IllegalArgumentException."
+      }
+    ]
+  }
+]

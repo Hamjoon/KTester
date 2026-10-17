@@ -1,0 +1,117 @@
+[
+  {
+    "group": "testIsBase64String",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"TWFu\""
+          }
+        ],
+        "expected": "true",
+        "description": "Standard Base64 string without padding should be recognised as valid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"TWE=\""
+          }
+        ],
+        "expected": "true",
+        "description": "Base64 string with a single padding character should be recognised as valid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"TQ==\""
+          }
+        ],
+        "expected": "true",
+        "description": "Base64 string with double padding characters should be recognised as valid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"\""
+          }
+        ],
+        "expected": "true",
+        "description": "Empty string is technically a valid (zero\u2011length) Base64 representation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "null"
+          }
+        ],
+        "expected": "false",
+        "description": "Null input should be treated as not Base64 rather than throwing an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\" TWFu \""
+          }
+        ],
+        "expected": "false",
+        "description": "String containing whitespace characters is not a valid Base64 sequence."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"TWFu\\n\""
+          }
+        ],
+        "expected": "false",
+        "description": "String containing a newline character should be rejected as invalid Base64."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"TWF-\""
+          }
+        ],
+        "expected": "false",
+        "description": "URL\u2011safe Base64 characters ('-' and '_') are not part of the standard Base64 alphabet, thus should be false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"abc$\""
+          }
+        ],
+        "expected": "false",
+        "description": "String containing a non\u2011Base64 character ('$') must be identified as invalid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"TWFuTWFuTWFuTWFuTWFuTWFuTWFuTWFuTWFuTWFu\""
+          }
+        ],
+        "expected": "true",
+        "description": "Longer, correctly padded Base64 string (multiple repetitions) should still be recognised as valid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "base64",
+            "value": "\"====\""
+          }
+        ],
+        "expected": "false",
+        "description": "String consisting solely of padding characters is not a valid Base64 encoding."
+      }
+    ]
+  }
+]

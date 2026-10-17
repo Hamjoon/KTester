@@ -1,0 +1,20 @@
+{
+    "group": "Base64.isUrlSafe()",
+    "cases": [
+        {
+            "input": [],
+            "expected": false,
+            "description": "Verify that a Base64 instance created with the default builder (which defaults to non‑URL‑safe encoding) returns false from isUrlSafe()."
+        },
+        {
+            "input": [],
+            "expected": true,
+            "description": "Verify that a Base64 instance built with `builder().urlSafe(true).build()` returns true from isUrlSafe()."
+        },
+        {
+            "input": [],
+            "expected": false,
+            "description": "Verify that a Base64 instance built with `builder().urlSafe(false).build()` explicitly sets the flag to false and isUrlSafe() returns false."
+        }
+    ]
+}

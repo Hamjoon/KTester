@@ -1,0 +1,414 @@
+[
+  {
+    "group": "Empty input handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": []
+          },
+          {
+            "parameter": "isChunked",
+            "value": false
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 10
+          }
+        ],
+        "expected": "[]",
+        "description": "When the input byte array is empty, the method should return the same empty array without invoking any other logic."
+      }
+    ]
+  },
+  {
+    "group": "Standard encoding without chunking",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              97,
+              110,
+              121
+            ]
+          },
+          {
+            "parameter": "isChunked",
+            "value": false
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 10
+          }
+        ],
+        "expected": "YW55",
+        "description": "Encode a short ASCII payload without chunking or URL\u2011safe mode; the result should be the standard Base64 string \"YW55\"."
+      }
+    ]
+  },
+  {
+    "group": "Chunked encoding with line separators",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97
+            ]
+          },
+          {
+            "parameter": "isChunked",
+            "value": true
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 2000
+          }
+        ],
+        "expected": "contains CRLF at position 76 (i.e., line separator \"\\r\\n\" is inserted)",
+        "description": "Encode 57 bytes of the character 'a' with chunking enabled. Because the encoded output reaches the default line length of 76 characters, a CRLF line separator should be inserted, increasing the total length by 2."
+      }
+    ]
+  },
+  {
+    "group": "URL\u2011safe encoding",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              251,
+              255,
+              254
+            ]
+          },
+          {
+            "parameter": "isChunked",
+            "value": false
+          },
+          {
+            "parameter": "urlSafe",
+            "value": true
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 10
+          }
+        ],
+        "expected": "-__-",
+        "description": "Encode three non\u2011ASCII bytes with URL\u2011safe mode; '+' should become '-', '/' should become '_' resulting in the string \"-__-\"."
+      }
+    ]
+  },
+  {
+    "group": "Maximum size limit satisfied",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "parameter": "isChunked",
+            "value": false
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 8
+          }
+        ],
+        "expected": "AQIDBA==",
+        "description": "The encoded length of a 4\u2011byte array is 8 bytes; providing maxResultSize equal to 8 allows successful encoding."
+      }
+    ]
+  },
+  {
+    "group": "Maximum size limit exceeded",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "parameter": "isChunked",
+            "value": false
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 7
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "When maxResultSize (7) is smaller than the required encoded length (8), the method must throw IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Null input handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": null
+          },
+          {
+            "parameter": "isChunked",
+            "value": false
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 10
+          }
+        ],
+        "expected": null,
+        "description": "A null byte array is considered empty; the method should return null without performing any encoding."
+      }
+    ]
+  },
+  {
+    "group": "Negative maxResultSize",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              10,
+              20,
+              30
+            ]
+          },
+          {
+            "parameter": "isChunked",
+            "value": false
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": -1
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "When maxResultSize is negative, any non\u2011empty input results in an IllegalArgumentException because the calculated encoded length is always greater than a negative limit."
+      }
+    ]
+  },
+  {
+    "group": "Zero maxResultSize with non\u2011empty input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "parameter": "isChunked",
+            "value": false
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 0
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "A maxResultSize of zero cannot accommodate any encoded output; the method must throw IllegalArgumentException for any non\u2011empty binaryData."
+      }
+    ]
+  },
+  {
+    "group": "Maximum size limit exceeded with chunked encoding",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97,
+              97
+            ]
+          },
+          {
+            "parameter": "isChunked",
+            "value": true
+          },
+          {
+            "parameter": "urlSafe",
+            "value": false
+          },
+          {
+            "parameter": "maxResultSize",
+            "value": 70
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "With chunking enabled the encoded output includes line separators, increasing its length. Providing a maxResultSize (70) smaller than this total length forces an IllegalArgumentException."
+      }
+    ]
+  }
+]

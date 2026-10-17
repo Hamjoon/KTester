@@ -1,0 +1,210 @@
+[
+  {
+    "group": "MurmurHash3.hash32(long, long, int) - branch and value coverage",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "MurmurHash3.DEFAULT_SEED"
+          }
+        ],
+        "expected": "deterministic int hash (e.g., 0x5A5A5A5A). The result must be the same on every execution and must not throw an exception.",
+        "description": "Baseline test using the default seed and zero data. Verifies that the method returns a consistent hash value when all inputs are zero."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "deterministic int hash (different from the hash obtained with the default seed). No exception is thrown.",
+        "description": "Checks that changing the seed influences the final hash even when the data payload is all zeros."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "Long.MAX_VALUE"
+          },
+          {
+            "parameter": "data2",
+            "value": "Long.MAX_VALUE"
+          },
+          {
+            "parameter": "seed",
+            "value": "Integer.MAX_VALUE"
+          }
+        ],
+        "expected": "deterministic int hash (non\u2011zero, distinct from previous cases). No exception is thrown.",
+        "description": "Stress test with the maximum positive long values and the maximum positive int seed to ensure the algorithm correctly handles large positive numbers."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "-1L"
+          },
+          {
+            "parameter": "data2",
+            "value": "-1L"
+          },
+          {
+            "parameter": "seed",
+            "value": "-1"
+          }
+        ],
+        "expected": "deterministic int hash (non\u2011zero, distinct from all other cases). No exception is thrown.",
+        "description": "Uses all\u2011bits\u2011set values (\u20111) for both longs and a negative seed to verify that sign\u2011extension and two's\u2011complement handling are correct."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0x0123456789ABCDEFL"
+          },
+          {
+            "parameter": "data2",
+            "value": "0xFEDCBA9876543210L"
+          },
+          {
+            "parameter": "seed",
+            "value": "12345"
+          }
+        ],
+        "expected": "deterministic int hash (non\u2011zero, distinct from previous cases). No exception is thrown.",
+        "description": "Mixed pattern data with a non\u2011default seed to exercise all four calls to mix32 (low/high parts of both longs) and to trigger any internal conditional logic inside mix32/fmix32."
+      }
+    ]
+  },
+  {
+    "group": "MurmurHash3.hash32(long, long, int) - additional edge and order sensitivity",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "Long.MIN_VALUE"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "MurmurHash3.DEFAULT_SEED"
+          }
+        ],
+        "expected": "deterministic int hash (different from all previously listed hashes). No exception is thrown.",
+        "description": "Tests handling of the most negative long value combined with a zero long while using the default seed. This exercises the sign\u2011bit propagation through Long.reverseBytes and the mix steps."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "Long.MIN_VALUE"
+          },
+          {
+            "parameter": "seed",
+            "value": "MurmurHash3.DEFAULT_SEED"
+          }
+        ],
+        "expected": "deterministic int hash (different from the previous case, confirming that the order of the two long arguments matters). No exception is thrown.",
+        "description": "Same values as the previous case but swapped; verifies that hash32 is not commutative with respect to data1 and data2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "Long.MIN_VALUE"
+          },
+          {
+            "parameter": "data2",
+            "value": "Long.MAX_VALUE"
+          },
+          {
+            "parameter": "seed",
+            "value": "Integer.MIN_VALUE"
+          }
+        ],
+        "expected": "deterministic int hash (non\u2011zero, distinct from all other cases). No exception is thrown.",
+        "description": "Combines the extreme negative and positive long values together with the most negative int seed, stressing the algorithm's ability to mix opposite\u2011sign inputs."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0x00000000FFFFFFFFL"
+          },
+          {
+            "parameter": "data2",
+            "value": "0xFFFFFFFF00000000L"
+          },
+          {
+            "parameter": "seed",
+            "value": "12345"
+          }
+        ],
+        "expected": "deterministic int hash (non\u2011zero, distinct from all other cases). No exception is thrown.",
+        "description": "Uses a pattern where only the low 32 bits of the first long and the high 32 bits of the second long are set. This forces mix32 to process distinct low/high halves and checks that no accidental masking occurs."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0x0123456789ABCDEFL"
+          },
+          {
+            "parameter": "data2",
+            "value": "0xFEDCBA9876543210L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "deterministic int hash (different from the case that uses seed 12345, confirming seed sensitivity). No exception is thrown.",
+        "description": "Repeats the mixed\u2011pattern data from an existing test but changes the seed to zero, ensuring that the seed influences the final hash even when the data payload is identical."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0xFFFFFFFFFFFFFFFFL"
+          },
+          {
+            "parameter": "data2",
+            "value": "0x0000000000000000L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "deterministic int hash (non\u2011zero, distinct from all other cases). No exception is thrown.",
+        "description": "All\u2011bits\u2011set long for data1 combined with a zero long for data2 and a zero seed. This checks correct handling of unsigned overflow and the effect of a zero seed on a maximal data value."
+      }
+    ]
+  }
+]

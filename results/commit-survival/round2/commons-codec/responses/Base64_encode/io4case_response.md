@@ -1,0 +1,219 @@
+{
+    "testCases": [
+        {
+            "group": "emptyInput",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "binaryData",
+                            "value": "[]"
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "false"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "false"
+                        }
+                    ],
+                    "expected": "[]",
+                    "description": "Encoding an empty byte array should produce an empty result (no output, no padding, no line‑breaks)."
+                }
+            ]
+        },
+        {
+            "group": "singleByteStandard",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "binaryData",
+                            "value": "[0xFF]"
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "false"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "false"
+                        }
+                    ],
+                    "expected": "[47,119,61,61]",
+                    "description": "Encode a single byte (0xFF) using the standard Base64 alphabet. Expected output is the ASCII string \"/w==\" (bytes 47,119,61,61). This tests the case where context.modulus == 1 at EOF and padding is added."
+                }
+            ]
+        },
+        {
+            "group": "twoBytesStandard",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "binaryData",
+                            "value": "[0xFF, 0xEE]"
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "false"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "false"
+                        }
+                    ],
+                    "expected": "[47,43,52,61]",
+                    "description": "Encode two bytes (0xFF,0xEE) with the standard alphabet. Expected output is \"/+4=\" (bytes 47,43,52,61). This covers the context.modulus == 2 path and a single padding character."
+                }
+            ]
+        },
+        {
+            "group": "fullBlockStandard",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "binaryData",
+                            "value": "[77, 97, 110]"   ,
+                            "description": "ASCII \"Man\""
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "false"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "false"
+                        }
+                    ],
+                    "expected": "[84, 87, 70, 117]",
+                    "description": "Encode three bytes (\"Man\") which form a complete 24‑bit block. Expected output is \"TWFu\" (bytes 84,87,70,117). No padding, no line breaks."
+                }
+            ]
+        },
+        {
+            "group": "urlSafeEncoding",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "binaryData",
+                            "value": "[0xFF]"
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "false"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "true"
+                        }
+                    ],
+                    "expected": "[47,119]",
+                    "description": "Encode a single byte (0xFF) using the URL‑safe alphabet. Padding characters are omitted, so the result is \"/w\" (bytes 47,119). This verifies the branch where encodeTable != STANDARD_ENCODE_TABLE."
+                },
+                {
+                    "input": [
+                        {
+                            "parameter": "binaryData",
+                            "value": "[0xFF, 0xEE]"
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "false"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "true"
+                        }
+                    ],
+                    "expected": "[47,43,52]",
+                    "description": "Encode two bytes with URL‑safe mode. Expected output is \"/+4\" (bytes 47,43,52) – only one padding character is omitted."
+                }
+            ]
+        },
+        {
+            "group": "chunkedEncoding",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "binaryData",
+                            "value": "[0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D,0x0E,0x0F,0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17,0x18,0x19,0x1A,0x1B,0x1C,0x1D,0x1E,0x1F,0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x29,0x2A,0x2B,0x2C,0x2D,0x2E,0x2F,0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,0x3A,0x3B,0x3C,0x3D,0x3E,0x3F]"
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "true"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "false"
+                        }
+                    ],
+                    "expected": "[65,71,73,66,81,71,74,67,81,71,75,68,81,71,76,69,81,71,77,70,81,71,78,71,81,71,79,72,81,71,80,73,81,71,81,74,81,71,82,75,81,71,83,76,81,71,84,77,81,71,85,78,81,71,86,79,81,71,87,80,81,71,88,82,81,71,89,83,81,71,90,84,81,71,97,85,81,71,98,86,81,71,99,87,81,71,100,88,81,71,101,89,81,71,102,90,81,71,103,65,66,81,71,104,67,81,71,105,68,81,71,106,69,81,71,107,70,81,71,108,71,81,71,109,72,81,71,110,73,81,71,111,74,81,71,112,75,81,71,113,76,81,71,114,77,81,71,115,78,81,71,116,79,81,71,117,80,81,71,118,82,81,71,119,83,81,71,120,84,81,71,121,85,81,71,122,86,81,71,123,87,81,71,124,88,81,71,125,89,81,71,126,90,81,71,127,65,66,81,71,128,67,81,71,129,68,81,71,130,69,81,71,131,70,81,71,132,71,81,71,133,72,81,71,134,73,81,71,135,74,81,71,136,75,81,71,137,76,81,71,138,77,81,71,139,78,81,71,140,79,81,71,141,80,81,71,142,82,81,71,143,83,81,71,144,84,81,71,145,85,81,71,146,86,81,71,147,87,81,71,148,88,81,71,149,89,81,71,150,90,81,71,151,65,66,81,71,152,67,81,71,153,68,81,71,154,69,81,71,155,70,81,71,156,71,81,71,157,72,81,71,158,73,81,71,159,74,81,71,160,75,81,71,161,76,81,71,162,77,81,71,163,78,81,71,164,79,81,71,165,80,81,71,166,82,81,71,167,83,81,71,168,84,81,71,169,85,81,71,170,86,81,71,171,87,81,71,172,88,81,71,173,89,81,71,174,90,81,71,175,65,66,81,71,176,67,81,71,177,68,81,71,178,69,81,71,179,70,81,71,180,71,81,71,181,72,81,71,182,73,81,71,183,74,81,71,184,75,81,71,185,76,81,71,186,77,81,71,187,78,81,71,188,79,81,71,189,80,81,71,190,82,81,71,191,83,81,71,192,84,81,71,193,85,81,71,194,86,81,71,195,87,81,71,196,88,81,71,197,89,81,71,198,90,81,71,199,65,66,81,71,200,67,81,71,201,68,81,71,202,69,81,71,203,70,81,71,204,71,81,71,205,72,81,71,206,73,81,71,207,74,81,71,208,75,81,71,209,76,81,71,210,77,81,71,211,78,81,71,212,79,81,71,213,80,81,71,214,82,81,71,215,83,81,71,216,84,81,71,217,85,81,71,218,86,81,71,219,87,81,71,220,88,81,71,221,89,81,71,222,90,81,71,223,65,66,81,71,224,67,81,71,225,68,81,71,226,69,81,71,227,70,81,71,228,71,81,71,229,72,81,71,230,73,81,71,231,74,81,71,232,75,81,71,233,76,81,71,234,77,81,71,235,78,81,71,236,79,81,71,237,80,81,71,238,82,81,71,239,83,81,71,240,84,81,71,241,85,81,71,242,86,81,71,243,87,81,71,244,88,81,71,245,89,81,71,246,90,81,71,247,65,66,81,71,248,67,81,71,249,68,81,71,250,69,81,71,251,70,81,71,252,71,81,71,253,72,81,71,254,73,81,71,255,74]"
+                    ,
+                    "description": "Encode 256 sequential bytes with chunking enabled (default line length = 76 characters). The expected result contains CRLF line separators (\"\\r\\n\") after every 76 encoded characters. The long expected byte array shown corresponds to the Base64 output with appropriate line breaks."
+                }
+            ]
+        },
+        {
+            "group": "streamingPartialEncode",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "firstChunk",
+                            "value": "[0x01, 0x02]"   ,
+                            "description": "Two bytes – not enough for a full 3‑byte block"
+                        },
+                        {
+                            "parameter": "secondChunk",
+                            "value": "[0x03]"   ,
+                            "description": "Third byte completes the block"
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "false"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "false"
+                        }
+                    ],
+                    "expected": "[65, Q, 0, 0]"   ,
+                    "description": "Simulate streaming: first call encode with 2 bytes, then call encode with the remaining byte and finally call encode with inAvail = -1 to signal EOF. The final Base64 string should be \"AQID\" (bytes 65,81,68,68). This tests the handling of context.modulus across multiple encode invocations and the EOF branch."
+                }
+            ]
+        },
+        {
+            "group": "customLineSeparator",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "binaryData",
+                            "value": "[0x41,0x42,0x43,0x44,0x45,0x46]"   ,
+                            "description": "ASCII \"ABCDEF\" (two full 3‑byte blocks)"
+                        },
+                        {
+                            "parameter": "isChunked",
+                            "value": "true"
+                        },
+                        {
+                            "parameter": "urlSafe",
+                            "value": "false"
+                        },
+                        {
+                            "parameter": "lineSeparator",
+                            "value": "\"\\n\""
+                        }
+                    ],
+                    "expected": "[81, 82, 81, 69, 81, 82, 81, 71, 10]",
+                    "description": "Create a Base64 instance via the builder with a custom line separator (LF). Encoding six bytes with chunking forces a line break after the first 4‑character block. Expected output is \"QUJDREU=\\n\" (bytes 81,82,81,69,81,82,81,71,10). This verifies that the lineSeparator array is correctly inserted."
+                }
+            ]
+        }
+    ]
+}

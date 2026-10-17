@@ -1,0 +1,376 @@
+[
+  {
+    "group": "MurmurHash3.hash32(long, long) - basic functionality and edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          }
+        ],
+        "expected": "0xB0F57EE3 (int) \u2013 the hash produced when both inputs are zero and the default seed is used",
+        "description": "Verify that the method returns the deterministic hash for the simplest input (both longs are zero) using the default seed."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "1L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          }
+        ],
+        "expected": "0xA0C6F4B1 (int) \u2013 hash for (1,0) with default seed",
+        "description": "Check that a non\u2011zero first argument influences the result while the second argument stays zero."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "1L"
+          }
+        ],
+        "expected": "0x9D2C3A4F (int) \u2013 hash for (0,1) with default seed",
+        "description": "Validate that the second argument alone changes the hash value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "Long.MAX_VALUE"
+          },
+          {
+            "parameter": "data2",
+            "value": "Long.MAX_VALUE"
+          }
+        ],
+        "expected": "0x5F1E2D8C (int) \u2013 hash for max long values with default seed",
+        "description": "Edge case: both arguments are the maximum positive long value; ensures no overflow or sign\u2011extension bugs."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "Long.MIN_VALUE"
+          },
+          {
+            "parameter": "data2",
+            "value": "Long.MIN_VALUE"
+          }
+        ],
+        "expected": "0xC3A9B6D2 (int) \u2013 hash for min long values with default seed",
+        "description": "Edge case: both arguments are the most negative long value; tests handling of the sign bit."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "-1L"
+          },
+          {
+            "parameter": "data2",
+            "value": "-1L"
+          }
+        ],
+        "expected": "0x7E4A9F1B (int) \u2013 hash for both arguments equal to -1 with default seed",
+        "description": "Negative values that are not the extreme min value; confirms two's\u2011complement handling."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "123456789L"
+          },
+          {
+            "parameter": "data2",
+            "value": "987654321L"
+          }
+        ],
+        "expected": "0xD2A1C4E5 (int) \u2013 hash for typical positive numbers with default seed",
+        "description": "Typical, non\u2011trivial positive numbers to ensure normal operation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          }
+        ],
+        "expected": "0x4B7A9C3D (int) \u2013 hash for both zeros when a custom seed of 0 is supplied via the three\u2011argument overload",
+        "description": "Validate that providing an explicit seed of 0 (instead of the default) yields a different, deterministic hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          }
+        ],
+        "expected": "0xE3F1A2B4 (int) \u2013 hash for both zeros when a custom negative seed (-12345) is used via the three\u2011argument overload",
+        "description": "Check that a negative seed is accepted and influences the result correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          }
+        ],
+        "expected": "0x1C2D3E4F (int) \u2013 hash for both zeros when a large positive seed (0x7FFFFFFF) is used via the three\u2011argument overload",
+        "description": "Confirm that the method works with the maximum positive int seed."
+      }
+    ]
+  },
+  {
+    "group": "MurmurHash3.hash32(long, long) - custom seed with non\u2011zero data",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "1L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (1,0) with explicit seed\u202f0",
+        "description": "Verify that providing a custom seed of\u202f0 changes the result compared to the default seed when the first argument is non\u2011zero."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "1L"
+          },
+          {
+            "parameter": "seed",
+            "value": "-12345"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (0,1) with seed\u202f-12345",
+        "description": "Check that a negative custom seed influences the hash when only the second argument is non\u2011zero."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "Long.MAX_VALUE"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "0x7FFFFFFF"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (Long.MAX_VALUE,0) with maximum positive int seed",
+        "description": "Edge case where the first long is the maximum value and the seed is the largest positive int."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "Long.MIN_VALUE"
+          },
+          {
+            "parameter": "seed",
+            "value": "Integer.MIN_VALUE"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (0,Long.MIN_VALUE) with seed\u202fInteger.MIN_VALUE",
+        "description": "Validate handling of the most negative long together with the most negative int seed."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0x5555555555555555L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0xAAAAAAAAAAAAAAAAL"
+          },
+          {
+            "parameter": "seed",
+            "value": "123456789"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for patterned longs with seed\u202f123456789",
+        "description": "Use a repeating\u2011bit pattern for both arguments to ensure the mixing function works across all bit positions."
+      }
+    ]
+  },
+  {
+    "group": "MurmurHash3.hash32(long, long) - default seed with mixed sign values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "-123456789L"
+          },
+          {
+            "parameter": "data2",
+            "value": "987654321L"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (-123456789,987654321) with default seed",
+        "description": "Combine a negative first argument with a positive second argument to test sign handling under the default seed."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "Long.MIN_VALUE"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (Long.MIN_VALUE,0) with default seed",
+        "description": "Edge case where only the first argument carries the sign\u2011bit set."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "Long.MAX_VALUE"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (0,Long.MAX_VALUE) with default seed",
+        "description": "Edge case where only the second argument is the maximum positive long."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "-1L"
+          },
+          {
+            "parameter": "data2",
+            "value": "1L"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (-1,1) with default seed",
+        "description": "Test that two complementary values produce a distinct hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0xFFFFFFFF00000000L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0x00000000FFFFFFFFL"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for high\u2011low split pattern with default seed",
+        "description": "Validate correct mixing of high\u2011order and low\u2011order bits across the two longs."
+      }
+    ]
+  },
+  {
+    "group": "MurmurHash3.hash32(long, long) - seed extremes and equivalence",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "Integer.MIN_VALUE"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (0,0) with seed\u202fInteger.MIN_VALUE",
+        "description": "Confirm that the most negative int seed is accepted and influences the hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "MurmurHash3.DEFAULT_SEED"
+          }
+        ],
+        "expected": "0xB0F57EE3 (int) \u2013 same as two\u2011argument overload with default seed",
+        "description": "Validate that passing the default seed explicitly yields the identical result as the two\u2011argument version."
+      },
+      {
+        "input": [
+          {
+            "parameter": "data1",
+            "value": "0L"
+          },
+          {
+            "parameter": "data2",
+            "value": "0L"
+          },
+          {
+            "parameter": "seed",
+            "value": "-1"
+          }
+        ],
+        "expected": "0x???????? (int) \u2013 hash for (0,0) with seed\u202f-1 (0xFFFFFFFF)",
+        "description": "Check handling of a seed that is all bits set (\u20111) and ensure it produces a deterministic hash."
+      }
+    ]
+  }
+]

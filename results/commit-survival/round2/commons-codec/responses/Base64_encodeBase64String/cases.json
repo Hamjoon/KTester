@@ -1,0 +1,253 @@
+[
+  {
+    "group": "Null Input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": null
+          }
+        ],
+        "expected": null,
+        "description": "When the input byte array is null, encodeBase64String should return null (the underlying encodeBase64 returns null and newStringUsAscii therefore returns null)."
+      }
+    ]
+  },
+  {
+    "group": "Empty Input",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": []
+          }
+        ],
+        "expected": "",
+        "description": "An empty byte array should produce an empty Base64 string \u2013 no characters, no padding."
+      }
+    ]
+  },
+  {
+    "group": "Single\u2011byte Input (padding = \"==\")",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              0
+            ]
+          }
+        ],
+        "expected": "AA==",
+        "description": "One byte (0x00) is encoded to \"AA==\" \u2013 tests the branch where input length % 3 == 1 causing two padding characters."
+      }
+    ]
+  },
+  {
+    "group": "Two\u2011byte Input (padding = \"=\")",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              0,
+              1
+            ]
+          }
+        ],
+        "expected": "AAE=",
+        "description": "Two bytes (0x00,0x01) are encoded to \"AAE=\" \u2013 tests the branch where input length % 3 == 2 causing one padding character."
+      }
+    ]
+  },
+  {
+    "group": "Three\u2011byte Input (no padding)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "expected": "AAEC",
+        "description": "Three bytes (0x00,0x01,0x02) fill a full Base64 quantum, producing \"AAEC\" with no padding."
+      }
+    ]
+  },
+  {
+    "group": "Typical ASCII String",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              72,
+              101,
+              108,
+              108,
+              111
+            ]
+          }
+        ],
+        "expected": "SGVsbG8=",
+        "description": "Encodes the ASCII string \"Hello\" (bytes 72,101,108,108,111) to its standard Base64 representation. Verifies normal path without chunking."
+      }
+    ]
+  },
+  {
+    "group": "Large Input (multiple quanta)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "expected": "AAECAwQFBgcICQoLDA0ODw==",
+        "description": "A 20\u2011byte array spans several full Base64 quanta (6 groups) and ends with padding. Ensures internal loops handling multiple iterations work correctly."
+      }
+    ]
+  },
+  {
+    "group": "Non\u2011ASCII Bytes (negative signed values)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              255,
+              128,
+              127
+            ]
+          }
+        ],
+        "expected": "/4B/",
+        "description": "Encode a three\u2011byte array containing values > 127 (Java signed bytes -1, -128, 127). The length is a multiple of 3, so no padding is added. Verifies that the method correctly handles signed byte values."
+      }
+    ]
+  },
+  {
+    "group": "All\u2011Zero Triple Repetition (no padding, multiple quanta)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "expected": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "description": "30 zero bytes (10 full Base64 quanta). Each triple of zeros encodes to \"AAAA\"; the final string should be 40 'A' characters with no padding."
+      }
+    ]
+  },
+  {
+    "group": "Very Large Input (10\u202f000 bytes, pattern 0x01\u20110x02\u20110x03)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": "generated: repeat [1,2,3] 3333 times then append [1]"
+          }
+        ],
+        "expected": "length 13336, ends with \"AQ==\"",
+        "description": "Creates a 10\u202f000\u2011byte array by repeating the pattern 0x01,0x02,0x03. The expected Base64 string length is 13\u202f336 characters (\u230810000/3\u2309\u202f\u00d7\u202f4) and the final four characters must be \"AQ==\" (encoding of the single leftover byte 0x01). This tests internal buffer growth and correct handling of a large, non\u2011chunked payload."
+      }
+    ]
+  },
+  {
+    "group": "Full Byte Range (0\u2011255)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": "generated: bytes 0 through 255 inclusive"
+          }
+        ],
+        "expected": "length 344, starts with \"AAEC\", ends with \"//8=\"",
+        "description": "Encodes a 256\u2011byte array containing every possible byte value. The result should be 344 characters long (86 quanta \u00d7 4) with two padding characters. The prefix \"AAEC\" corresponds to the first three bytes (0,1,2) and the suffix \"//8=\" corresponds to the last three bytes (253,254,255)."
+      }
+    ]
+  },
+  {
+    "group": "Alphabet Validation (random data)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "binaryData",
+            "value": "generated: random 57\u2011byte array"
+          }
+        ],
+        "expected": "matches regex ^[A-Za-z0-9+/]*={0,2}$",
+        "description": "Ensures that for any input the returned string contains only characters from the Base64 alphabet (A\u2011Z, a\u2011z, 0\u20119, '+', '/') and at most two trailing '=' padding characters. Uses a 57\u2011byte random payload to exercise multiple encoding blocks."
+      }
+    ]
+  }
+]

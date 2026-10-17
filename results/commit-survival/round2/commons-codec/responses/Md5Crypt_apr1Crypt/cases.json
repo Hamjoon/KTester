@@ -1,0 +1,68 @@
+[
+  {
+    "group": "apr1Crypt_byteArray",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": [
+              112,
+              97,
+              115,
+              115,
+              119,
+              111,
+              114,
+              100
+            ]
+          }
+        ],
+        "expected": "matches regex '^\\\\$apr1\\\\$[A-Za-z0-9./]{8}\\\\$[A-Za-z0-9./]{22}$'",
+        "description": "Typical ASCII password bytes; method should return a valid APR1\u2011MD5 hash string with the correct prefix, an 8\u2011character base\u201164 salt and a 22\u2011character hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": []
+          }
+        ],
+        "expected": "matches regex '^\\\\$apr1\\\\$[A-Za-z0-9./]{8}\\\\$[A-Za-z0-9./]{22}$'",
+        "description": "Empty byte array; still must produce a syntactically correct APR1\u2011MD5 hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": [
+              0,
+              255,
+              16,
+              127,
+              128,
+              200
+            ]
+          }
+        ],
+        "expected": "matches regex '^\\\\$apr1\\\\$[A-Za-z0-9./]{8}\\\\$[A-Za-z0-9./]{22}$'",
+        "description": "Byte array containing null byte, high\u2011order bytes and non\u2011printable characters; hash format must remain valid."
+      }
+    ]
+  },
+  {
+    "group": "apr1Crypt_byteArray_exceptions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": null
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Passing a null byte array should cause the method to throw IllegalArgumentException because the password argument is required."
+      }
+    ]
+  }
+]

@@ -54,3 +54,9 @@ Gary has been asked whether to treat only the known reference-evaluator n/a pars
 ## 2026-10-17 — authorized reference-evaluator exception
 
 Gary explicitly authorized treating the reference evaluator's JaCoCo branch-coverage `n/a` parsing failure as nonblocking for the rest of Part 2, including repeated occurrences. Record each occurrence in the handover and continue independent three-run validation, cumulative de-duplication and matching. Evaluator code and scoring remain unchanged. This overrides ground rule 6 only for this specific reference-evaluator failure. Round 2 proceeds with the prescribed full 52-task invocation and fixed settings.
+
+## 2026-10-17 — round 2 generation archived
+
+Round 2 ran once from 09:38:45 to 10:42:30 UTC (3,825 seconds), with generate_rc=0 and coverage_rc=1. All 52 frameworks and 52 case-generation tasks completed, and all 52 source files exist. No targeted rerun is eligible. No missing output directories recurred. Eight model JSON parsing errors were logged. Post-processing made five repair attempts before the released pipeline caught a Spoon NullPointerException (sourceMethod null during prettyprint); this is a separate deviation, preserved without modifying source, algorithm or scoring.
+
+The reference evaluator again failed to parse branch coverage 'n/a', this time at Base64.decodeInteger. Per Gary's explicit exception this is nonblocking. Its final summary/rates are unavailable; the raw execution dictionary records 23 compiled files, 369 executed test cases and 263 passed cases. No recorded 600-second timeouts or OOMs; the slow SHA-256 class returned failures after about 497 seconds, before its timeout. Archive: results/commit-survival/round2/commons-codec. Provider identity remains unavailable in released logs. Independent three-run validation is next; no denominator is frozen yet.

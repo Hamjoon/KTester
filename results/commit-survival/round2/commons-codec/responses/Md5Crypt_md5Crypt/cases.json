@@ -1,0 +1,480 @@
+[
+  {
+    "group": "Salt handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "password123"
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new java.util.Random(0)"
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$[\\.\\/a-zA-Z0-9]{8}\\$.*'",
+        "description": "When salt is null the method must generate an 8\u2011character random salt using the supplied Random instance; the result should start with the MD5 prefix and the generated salt."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "mySecret"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcd1234$extraInfo"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$abcd1234\\$.*'",
+        "description": "A full hash\u2011like salt string is supplied; the method must extract the first 1\u20118 allowed characters after the prefix (\"abcd1234\") and use it in the output."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "anyKey"
+          },
+          {
+            "parameter": "salt",
+            "value": "invalidSaltWithoutPrefix"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "throws IllegalArgumentException with message containing \"Invalid salt value\"",
+        "description": "The supplied salt does not match the required pattern; the method must throw an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Key length parity (odd vs even)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "oddKey"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$xyz$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$xyz\\$.*'",
+        "description": "Key length 6 (even) \u2013 exercises both branches of the `(ii & 1) == 1` test inside the second while\u2011loop."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "oddKeyLen"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abc$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$abc\\$.*'",
+        "description": "Key length 9 (odd) \u2013 also forces both true and false paths of the `(ii & 1) == 1` condition across iterations."
+      }
+    ]
+  },
+  {
+    "group": "Prefix variations (MD5 vs APR1)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "samplePass"
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          },
+          {
+            "parameter": "prefix",
+            "value": "$apr1$"
+          },
+          {
+            "parameter": "random",
+            "value": "new java.util.Random(12345)"
+          }
+        ],
+        "expected": "returns string matching '^\\$apr1\\$[\\.\\/a-zA-Z0-9]{8}\\$.*'",
+        "description": "Using the APR1 prefix with a null salt; a random 8\u2011character salt must be generated and the result must start with \"$apr1$\"."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "samplePass"
+          },
+          {
+            "parameter": "salt",
+            "value": "$apr1$salty$extra"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$apr1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$apr1\\$salty\\$.*'",
+        "description": "Explicit APR1 salt string; the method must extract \"salty\" and produce an output beginning with that prefix and salt."
+      }
+    ]
+  },
+  {
+    "group": "Empty keyBytes",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": ""
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abc$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$abc\\$.*'",
+        "description": "An empty password (zero\u2011length byte array) with a valid salt. The method should still produce a hash that starts with the supplied prefix and salt."
+      }
+    ]
+  },
+  {
+    "group": "Salt length boundaries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "testPass"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$a$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$a\\$.*'",
+        "description": "Salt contains the minimum allowed length (1 character). The method must accept it and embed it unchanged in the result."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "testPass"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcdefgh$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$abcdefgh\\$.*'",
+        "description": "Salt contains the maximum allowed length (8 characters). The method should use the whole salt without truncation."
+      }
+    ]
+  },
+  {
+    "group": "Special characters in salt",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "specialKey"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$..//ab$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$\\.\\.\\/\\/ab\\$.*'",
+        "description": "Salt includes the allowed special characters '.' and '/' which must be preserved in the output."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "specialKey2"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$./aB9Z9/\\$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$\\.\\/aB9Z9\\/\\$.*'",
+        "description": "Salt uses a full set of allowed characters (including '.' and '/') at the maximum length of 8."
+      }
+    ]
+  },
+  {
+    "group": "Custom prefix handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "customPrefixPass"
+          },
+          {
+            "parameter": "salt",
+            "value": "$my$xyz$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$my$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$my\\$xyz\\$.*'",
+        "description": "A non\u2011standard prefix is supplied. The method must correctly escape the prefix for the regex and produce an output that starts with the custom prefix and extracted salt."
+      }
+    ]
+  },
+  {
+    "group": "Null Random handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "pass"
+          },
+          {
+            "parameter": "salt",
+            "value": null
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "throws NullPointerException",
+        "description": "When both salt and Random are null the method attempts to generate a random salt using a null Random instance, which should result in a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Long salt truncation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "truncateTest"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abcdefghijk$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$abcdefgh\\$.*'",
+        "description": "Salt string longer than 8 characters is supplied; the method must extract only the first 8 allowed characters ('abcdefgh') and ignore the rest."
+      }
+    ]
+  },
+  {
+    "group": "Unicode keyBytes",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "p\u00e4ssw\u00f6rd"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$uni$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "returns string matching '^\\$1\\$uni\\$.*'",
+        "description": "Key bytes contain non\u2011ASCII UTF\u20118 characters. The method should handle them correctly and still produce a valid hash with the given salt."
+      }
+    ]
+  },
+  {
+    "group": "Null argument handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": null
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abc$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "throws NullPointerException",
+        "description": "keyBytes is null \u2013 the method accesses keyBytes.length and later updates the digest, which should result in a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "somePass"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$abc$"
+          },
+          {
+            "parameter": "prefix",
+            "value": null
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "throws NullPointerException",
+        "description": "prefix is null \u2013 it is used in prefix.replace and prefix.getBytes, causing a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Invalid prefix handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "testPass"
+          },
+          {
+            "parameter": "salt",
+            "value": "$1$valid$"
+          },
+          {
+            "parameter": "prefix",
+            "value": "$1$("
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "throws java.util.regex.PatternSyntaxException",
+        "description": "prefix contains an unescaped '(' which makes the generated regular expression invalid; Pattern.compile should throw a PatternSyntaxException."
+      }
+    ]
+  }
+]

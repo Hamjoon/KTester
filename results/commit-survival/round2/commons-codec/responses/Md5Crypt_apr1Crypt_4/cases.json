@@ -1,0 +1,91 @@
+[
+  {
+    "group": "apr1Crypt_byteArray_Random",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": null
+          },
+          {
+            "parameter": "random",
+            "value": "new java.util.Random(0)"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "When the password byte array is null the method should throw a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{'p','a','s','s'}"
+          },
+          {
+            "parameter": "random",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "When the Random instance is null the method should throw a NullPointerException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[0]"
+          },
+          {
+            "parameter": "random",
+            "value": "new java.util.Random(1L)"
+          }
+        ],
+        "expected": "^\\$apr1\\$[A-Za-z0-9./]{8}\\$[A-Za-z0-9./]{22}$",
+        "description": "Empty password with a deterministic Random (seed\u202f=\u202f1) must produce a valid APR\u20111 hash. The result should start with the prefix \"$apr1$\", contain an 8\u2011character Base\u201164 salt and a 22\u2011character hash."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"password\".getBytes(java.nio.charset.StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "random",
+            "value": "new java.util.Random(42L)"
+          }
+        ],
+        "expected": "^\\$apr1\\$[A-Za-z0-9./]{8}\\$[A-Za-z0-9./]{22}$",
+        "description": "Typical non\u2011empty password with a fixed seed (42) must yield a correctly formatted APR\u20111 hash. The exact hash value is deterministic for the given seed, but the test validates the format and length."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "\"samePassword\".getBytes(java.nio.charset.StandardCharsets.UTF_8)"
+          },
+          {
+            "parameter": "random",
+            "value": "sharedRandom = new java.util.Random(12345L); sharedRandom"
+          }
+        ],
+        "expected": "different salts on successive calls",
+        "description": "Using the same Random instance for two consecutive calls must generate two different salts (the Random state advances). The test extracts the 8\u2011character salt from each result and asserts they are not equal."
+      },
+      {
+        "input": [
+          {
+            "parameter": "keyBytes",
+            "value": "new byte[]{(byte)0xFF, (byte)0x00, (byte)0x7F}"
+          },
+          {
+            "parameter": "random",
+            "value": "new java.util.Random(0L)"
+          }
+        ],
+        "expected": "^\\$apr1\\$[A-Za-z0-9./]{8}\\$[A-Za-z0-9./]{22}$",
+        "description": "Password containing non\u2011ASCII bytes (including negative values) must still produce a valid APR\u20111 hash with correct format."
+      }
+    ]
+  }
+]

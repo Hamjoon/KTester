@@ -1,0 +1,220 @@
+{
+  "testCases": [
+    {
+      "group": "testDecodeInvalidModulus",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "input",
+              "value": "[]"
+            },
+            {
+              "parameter": "inPos",
+              "value": "0"
+            },
+            {
+              "parameter": "inAvail",
+              "value": "0"
+            },
+            {
+              "parameter": "context",
+              "value": "Context{modulus=9, lbitWorkArea=0, pos=0, eof=true}"
+            }
+          ],
+          "expected": "IllegalStateException with message containing \"Impossible modulus 9\"",
+          "description": "When the internal modulus field is set to an illegal value (e.g., 9) the decoder reaches the default branch of the switch and throws IllegalStateException."
+        }
+      ]
+    },
+    {
+      "group": "testDecodeValidateTrailingCharacters_mod1",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "input",
+              "value": "[]"
+            },
+            {
+              "parameter": "inPos",
+              "value": "0"
+            },
+            {
+              "parameter": "inAvail",
+              "value": "0"
+            },
+            {
+              "parameter": "context",
+              "value": "Context{modulus=1, lbitWorkArea=0, pos=0, eof=true}"
+            }
+          ],
+          "expected": "IllegalArgumentException (or subclass) thrown by validateTrailingCharacters",
+          "description": "Modulus 1 indicates 5 leftover bits; validateTrailingCharacters should reject non‑zero trailing bits and throw an exception."
+        }
+      ]
+    },
+    {
+      "group": "testDecodeValidateTrailingCharacters_mod3",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "input",
+              "value": "[]"
+            },
+            {
+              "parameter": "inPos",
+              "value": "0"
+            },
+            {
+              "parameter": "inAvail",
+              "value": "0"
+            },
+            {
+              "parameter": "context",
+              "value": "Context{modulus=3, lbitWorkArea=0, pos=0, eof=true}"
+            }
+          ],
+          "expected": "IllegalArgumentException (or subclass) thrown by validateTrailingCharacters",
+          "description": "Modulus 3 corresponds to 15 leftover bits; the decoder calls validateTrailingCharacters which must raise an exception for invalid trailing data."
+        }
+      ]
+    },
+    {
+      "group": "testDecodeValidateTrailingCharacters_mod6",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "input",
+              "value": "[]"
+            },
+            {
+              "parameter": "inPos",
+              "value": "0"
+            },
+            {
+              "parameter": "inAvail",
+              "value": "0"
+            },
+            {
+              "parameter": "context",
+              "value": "Context{modulus=6, lbitWorkArea=0, pos=0, eof=true}"
+            }
+          ],
+          "expected": "IllegalArgumentException (or subclass) thrown by validateTrailingCharacters",
+          "description": "Modulus 6 (30 leftover bits) triggers validateTrailingCharacters which should reject the invalid trailing pattern."
+        }
+      ]
+    },
+    {
+      "group": "testDecodeValidateCharacter_mod2_invalidBits",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "input",
+              "value": "[]"
+            },
+            {
+              "parameter": "inPos",
+              "value": "0"
+            },
+            {
+              "parameter": "inAvail",
+              "value": "0"
+            },
+            {
+              "parameter": "context",
+              "value": "Context{modulus=2, lbitWorkArea=0b11, pos=0, eof=true}"
+            }
+          ],
+          "expected": "IllegalArgumentException thrown by validateCharacter for MASK_2BITS",
+          "description": "With modulus 2 the decoder expects the two least‑significant bits to be zero; setting them to 0b11 causes validateCharacter to throw."
+        }
+      ]
+    },
+    {
+      "group": "testDecodeValidateCharacter_mod4_invalidBits",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "input",
+              "value": "[]"
+            },
+            {
+              "parameter": "inPos",
+              "value": "0"
+            },
+            {
+              "parameter": "inAvail",
+              "value": "0"
+            },
+            {
+              "parameter": "context",
+              "value": "Context{modulus=4, lbitWorkArea=0b1111, pos=0, eof=true}"
+            }
+          ],
+          "expected": "IllegalArgumentException thrown by validateCharacter for MASK_4BITS",
+          "description": "Modulus 4 expects the low 4 bits to be zero; providing non‑zero low 4 bits triggers an exception."
+        }
+      ]
+    },
+    {
+      "group": "testDecodeValidateCharacter_mod5_invalidBits",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "input",
+              "value": "[]"
+            },
+            {
+              "parameter": "inPos",
+              "value": "0"
+            },
+            {
+              "parameter": "inAvail",
+              "value": "0"
+            },
+            {
+              "parameter": "context",
+              "value": "Context{modulus=5, lbitWorkArea=0b1, pos=0, eof=true}"
+            }
+          ],
+          "expected": "IllegalArgumentException thrown by validateCharacter for MASK_1BITS",
+          "description": "Modulus 5 expects the lowest bit to be zero; setting it to 1 causes validateCharacter to raise an exception."
+        }
+      ]
+    },
+    {
+      "group": "testDecodeValidateCharacter_mod7_invalidBits",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "input",
+              "value": "[]"
+            },
+            {
+              "parameter": "inPos",
+              "value": "0"
+            },
+            {
+              "parameter": "inAvail",
+              "value": "0"
+            },
+            {
+              "parameter": "context",
+              "value": "Context{modulus=7, lbitWorkArea=0b111, pos=0, eof=true}"
+            }
+          ],
+          "expected": "IllegalArgumentException thrown by validateCharacter for MASK_3BITS",
+          "description": "Modulus 7 expects the lowest 3 bits to be zero; non‑zero bits cause validateCharacter to throw."
+        }
+      ]
+    }
+  ]
+}

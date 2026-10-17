@@ -1,0 +1,15 @@
+{
+    "group": "Base64.encodeInteger(BigInteger) - Null handling",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "bigInteger",
+                    "value": null
+                }
+            ],
+            "expected": "NullPointerException",
+            "description": "Passing a null argument should trigger Objects.requireNonNull and throw a NullPointerException."
+        }
+    ]
+}
