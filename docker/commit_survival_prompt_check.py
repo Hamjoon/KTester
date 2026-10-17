@@ -19,7 +19,7 @@ if TS.CASE_THEN_CODE:
 FS.PROMPT_PATH = '/work/evaluation/commit-survival-dry-check/<project>'
 dataset = json.loads(Path(FS.DATASET_PATH, 'dataset_info.json').read_text())
 tasks = dataset['commons-codec']['focal-methods']
-assert len(tasks) == len({t['id'] for t in tasks}) == 66
+assert len(tasks) == len({t['id'] for t in tasks}) == 52
 assert Path(FS.DATASET_PATH, dataset['commons-codec']['project-url']).resolve() == Path('/work/data/projects/commons-codec')
 jpype.startJVM(jpype.getDefaultJVMPath(), '-Xmx4g', '-Djava.class.path=' + os.pathsep.join([
     './Java/project-info-process.jar', './Java/project-index-builder.jar']))
