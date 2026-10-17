@@ -32,3 +32,7 @@ The first reduction-helper invocation stopped before any dataset mutation becaus
 Step B passed: all 52 tasks assembled five prompts each (260 prompt files), without a model call. See prompt-check.json and prompt-check-52.txt. Dry-check outputs are isolated from the clean generation output directories. Fixed settings still match; DATASET_PATH and CODE_INFO_PATH are unchanged from the prior preflight. CASES_LIST remains [].
 
 Pre-generation routing conflict found by source inspection: code/tools/llm_api.py:51 hard-codes extra_body={"provider": {"order": ["OpenAI"], "allow_fallbacks": False}}. This conflicts with Part 2's unpinned-provider requirement, while ground rule 2 forbids changes under code/. Gary has been asked whether to permit removing only that routing argument. Generation is not started pending that decision; no round allowance is consumed.
+
+## 2026-10-17 — authorized provider unpin
+
+Gary explicitly authorized removal of only the extra_body provider-routing argument in code/tools/llm_api.py, originally introduced locally in September commit 9c055e13. Commit b61d042e8348a1c8296e4300efecfa43c06ab520 (Unpin OpenRouter provider for gpt-oss-120b) removes exactly that line. No prompt, model, algorithm, temperature, repair, concurrency or scoring setting changed. This resolves the previously recorded routing blocker and is the sole authorized pipeline-code exception. Provider routing is now unpinned. Generation settings, key presence and the clean output directories were rechecked before Step 2.

@@ -1,5 +1,5 @@
 {
-  "status": "preflight-passed-awaiting-provider-resolution",
+  "status": "ready-for-round1",
   "settings": {
     "DATASET_PATH": "../data/commit-survival/commons-codec",
     "CODE_INFO_PATH": "../data/project_index",
@@ -31,10 +31,6 @@
     "data/commit-survival/commons-codec/dataset_info.json": "1d5958b51beb2cb98736cf6e62f9f63ccee38240867a64c1c5e2cdbf0140a158"
   },
   "population_methods": 52,
-  "provider_routing": {
-    "order": [
-      "OpenAI"
-    ],
-    "allow_fallbacks": false
-  }
+  "provider_routing": "unpinned",
+  "provider_unpin_commit": "b61d042e8348a1c8296e4300efecfa43c06ab520"
 }
