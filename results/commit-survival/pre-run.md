@@ -50,3 +50,7 @@ Independent validation at t: 52 files, 24 compiled, 151 listed methods, 126 pass
 The next-round workspace preparation removed 9,857 authorized output files and zero directories, then created 121 missing directories matching preparation.set_file_structure. All 52 task directory sets were verified. Source/test files already copied to generated/round1/ and canonical round 1 archives remain intact. Details are in round2-workspace.json. No round 2 model call has been made.
 
 Gary has been asked whether to treat only the known reference-evaluator n/a parsing failure as nonblocking if it recurs. Ground rule 6 otherwise requires stopping after repeated command failure, while the matching rule requires round 2 and the author's evaluator is reference-only. No evaluation code or scoring change is proposed. Await that decision before starting round 2.
+
+## 2026-10-17 — authorized reference-evaluator exception
+
+Gary explicitly authorized treating the reference evaluator's JaCoCo branch-coverage `n/a` parsing failure as nonblocking for the rest of Part 2, including repeated occurrences. Record each occurrence in the handover and continue independent three-run validation, cumulative de-duplication and matching. Evaluator code and scoring remain unchanged. This overrides ground rule 6 only for this specific reference-evaluator failure. Round 2 proceeds with the prescribed full 52-task invocation and fixed settings.

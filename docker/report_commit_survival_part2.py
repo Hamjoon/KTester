@@ -52,7 +52,11 @@ def main():
         a = g['authors_evaluator_reference']
         lines.append('| ' + ' | '.join(str(x) for x in [g['round'], g['tasks_submitted'], g['test_class_files'], g['timeouts'], g['out_of_memory_occurrences'], g['wall_seconds'], a['compile_pass_rate'], a['execution_pass_rate'], a['tests_per_produced_class']]) + ' |')
     lines += ['', 'Author evaluator values are reference measurements only. The LLM denominator comes from the independent three-run validation at t. generation-summary.json stores exact run windows, return codes, missing class IDs, error records, timeout/OOM task associations and reference counts for each round. Timeout events inferred from a missing JavaRunner return-code record and at least 599 seconds before the next command are explicitly labeled as inferred.', '']
+    lines += ["Gary explicitly authorized treating the reference evaluator's JaCoCo branch-coverage n/a parsing failure as nonblocking for the rest of Part 2, including repeated occurrences. Evaluator code and scoring were not changed. This exception overrides ground rule 6 only for this failure.", '']
     for g in generation:
+        failure = g['authors_evaluator_reference'].get('summary_failure')
+        if failure:
+            lines += [f"Round {g['round']} reference evaluator failure: {failure}. Final evaluator metrics are unavailable; raw execution counts are reference-only. Independent validation continued under the authorized exception.", '']
         lines += [f"- Round {g['round']}: {g['run']['start']} to {g['run']['end']}; generate_rc={g['run']['generate_rc']}; coverage_rc={g['run']['coverage_rc']}; missing class IDs: {', '.join(g['missing_test_class_ids']) or 'none'}."]
     lines += ['', 'Canonical generation archives are under KTester results/commit-survival/roundN/. Relative symlinks at results/commit-survival-roundN/ preserve the prescribed stage paths. The source run_project.sh and its generation/evaluation invocation are unchanged. Raw generation/coverage logs are archived; the repository’s existing ignore rules continue to exclude binary class files and JaCoCo HTML. Generated source files are under generated/roundN/ here, with r2-/r3- filename prefixes for subsequent rounds.', '',
              '## Independent funnel and freeze', '',
