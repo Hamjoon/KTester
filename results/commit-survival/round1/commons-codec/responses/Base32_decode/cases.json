@@ -1,0 +1,600 @@
+[
+  {
+    "group": "Early\u2011exit conditions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "any byte[] (e.g., new byte[]{0x41})"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, pos=0, modulus=0, lbitWorkArea=0}"
+          }
+        ],
+        "expected": "Method returns immediately \u2013 no change to context (eof stays true, pos remains 0).",
+        "description": "When the context is already marked as EOF the decoder must exit without touching the input."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{0x41, 0x42}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-5"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, pos=0, modulus=0, lbitWorkArea=0}"
+          }
+        ],
+        "expected": "Context.eof becomes true; no bytes are written to the output buffer.",
+        "description": "A negative inAvail signals the logical end\u2011of\u2011stream; the decoder must set eof=true and stop processing."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{'='}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, pos=0, modulus=0, lbitWorkArea=0}"
+          }
+        ],
+        "expected": "Context.eof becomes true; loop breaks after the first byte; no output bytes are produced.",
+        "description": "Encountering the padding character ('=') must terminate decoding and set eof."
+      }
+    ]
+  },
+  {
+    "group": "Full\u2011block decoding (modulus reaches 0)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{'A','B','C','D','E','F','G','H'}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "8"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, pos=0, modulus=0, lbitWorkArea=0}"
+          }
+        ],
+        "expected": "After processing the 8 characters context.modulus == 0 and 5 decoded bytes are written to the buffer (buffer[0]\u2011buffer[4]). Context.eof remains false.",
+        "description": "Eight valid Base\u201132 symbols constitute a complete block; the decoder must emit the corresponding 5 bytes."
+      }
+    ]
+  },
+  {
+    "group": "Trailing\u2011character handling (switch on context.modulus)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=1, lbitWorkArea=0x1FL, pos=0}"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown by validateTrailingCharacters().",
+        "description": "Modulus 1 represents a solitary 5\u2011bit chunk \u2013 the decoder must reject it as illegal trailing data."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=2, lbitWorkArea=0x3FL, pos=0}"
+          }
+        ],
+        "expected": "One decoded byte is written: (lbitWorkArea>>2) & 0xFF. Context.pos becomes 1.",
+        "description": "Modulus 2 (10 bits) \u2013 after validation of the two low bits the decoder must output a single byte."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=3, lbitWorkArea=0x7FL, pos=0}"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown by validateTrailingCharacters().",
+        "description": "Modulus 3 (15 bits) is not a valid trailing length; the decoder must treat it as an error."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=4, lbitWorkArea=0xFFFFL, pos=0}"
+          }
+        ],
+        "expected": "Two bytes are emitted: first = (lbitWorkArea>>8)&0xFF, second = lbitWorkArea&0xFF. Context.pos becomes 2.",
+        "description": "Modulus 4 (20 bits) \u2013 after validating the low 4 bits the decoder drops them and outputs two bytes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=5, lbitWorkArea=0x1FFFFFL, pos=0}"
+          }
+        ],
+        "expected": "Three bytes are emitted: (lbitWorkArea>>16)&0xFF, (lbitWorkArea>>8)&0xFF, lbitWorkArea&0xFF. Context.pos becomes 3.",
+        "description": "Modulus 5 (25 bits) \u2013 after validating the single low bit the decoder drops it and writes three bytes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=6, lbitWorkArea=0x3FFFFFL, pos=0}"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown by validateTrailingCharacters().",
+        "description": "Modulus 6 (30 bits) is not a legal trailing length; the decoder must raise an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=7, lbitWorkArea=0x7FFFFFL, pos=0}"
+          }
+        ],
+        "expected": "Four bytes are emitted after validating the low 3 bits and shifting right 3: (lbitWorkArea>>24)&0xFF, (>>16)&0xFF, (>>8)&0xFF, (>>0)&0xFF. Context.pos becomes 4.",
+        "description": "Modulus 7 (35 bits) \u2013 after validating the low 3 bits the decoder drops them and writes four bytes."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=8, lbitWorkArea=0xFFFFFFFFL, pos=0}"
+          }
+        ],
+        "expected": "IllegalStateException with message \"Impossible modulus 8\".",
+        "description": "Any modulus outside 0\u20117 is impossible; the default clause must throw an IllegalStateException."
+      }
+    ]
+  },
+  {
+    "group": "No\u2011trailing processing (modulus == 0 after EOF)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{'A','B','C','D','E','F','G','H'}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "8"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=0, lbitWorkArea=0, pos=0}"
+          }
+        ],
+        "expected": "No additional bytes are written after the loop because modulus == 0; only the 5 bytes emitted inside the loop are present.",
+        "description": "When EOF is true but the accumulated bits form a complete block (modulus 0) the decoder must skip the trailing\u2011character switch."
+      }
+    ]
+  },
+  {
+    "group": "Invalid character handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{(byte)0x41, (byte)0xFF, (byte)0x42}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "3"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, pos=0, modulus=0, lbitWorkArea=0}"
+          }
+        ],
+        "expected": "No bytes are written; context.modulus remains 0 and eof stays false (the 0xFF byte is ignored because decodeTable[0xFF] == -1).",
+        "description": "A byte that is not part of the Base\u201132 alphabet must be ignored; it must not affect the modulus or produce output."
+      }
+    ]
+  },
+  {
+    "group": "Partial block with padding character",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{'A','B','C','D','='}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "5"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, pos=0, modulus=0, lbitWorkArea=0}"
+          }
+        ],
+        "expected": "Two decoded bytes are emitted (the low\u20114\u2011bit validation passes). Context.pos becomes 2, context.eof is true, and context.modulus is 4 before the trailing\u2011character switch.",
+        "description": "Four valid Base\u201132 symbols followed by the padding character should cause the decoder to treat the four symbols as a trailing block (modulus\u202f=\u202f4) and output the corresponding two bytes."
+      }
+    ]
+  },
+  {
+    "group": "EOF signalled by negative inAvail with pending bits",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "-1"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, pos=0, modulus=5, lbitWorkArea=0x1FFFFFL}"
+          }
+        ],
+        "expected": "Three decoded bytes are emitted: (lbitWorkArea>>16)&0xFF, (lbitWorkArea>>8)&0xFF, lbitWorkArea&0xFF. Context.pos becomes 3, eof becomes true.",
+        "description": "A negative inAvail forces EOF; with modulus\u202f=\u202f5 the decoder must execute the case\u20115 branch, validate the low\u20111\u2011bit, drop it and write three bytes."
+      }
+    ]
+  },
+  {
+    "group": "Extra padding characters are ignored after first '='",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{'A','B','C','D','E','F','G','H','=', '=', '=', '='}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "12"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, pos=0, modulus=0, lbitWorkArea=0}"
+          }
+        ],
+        "expected": "Five decoded bytes are emitted (the first eight symbols). The loop stops at the first '=', no further bytes are written, and eof becomes true.",
+        "description": "When padding characters appear after a complete block, decoding must stop at the first '=', ignoring any subsequent padding."
+      }
+    ]
+  },
+  {
+    "group": "Whitespace characters are skipped",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{'A',' ','B','\\n','C','D','E','F','G','H'}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "10"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=false, pos=0, modulus=0, lbitWorkArea=0}"
+          }
+        ],
+        "expected": "Five decoded bytes are emitted (identical to decoding \"ABCDEFGH\"). Whitespace does not affect modulus or output.",
+        "description": "Characters that are not in the Base\u201132 alphabet (e.g., space, newline) must be ignored by the decoder."
+      }
+    ]
+  },
+  {
+    "group": "validateCharacter failure for modulus 4 (low\u2011bits not zero)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=4, lbitWorkArea=0xABCDEFL, pos=0}"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown by validateCharacter (low\u20114\u2011bits are not empty).",
+        "description": "When the trailing block has modulus\u202f=\u202f4 the decoder must verify that the lowest 4 bits are zero; a non\u2011zero value must cause an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "validateCharacter failure for modulus 5 (low\u2011bit not zero)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=5, lbitWorkArea=0x1FFFFFL, pos=0}"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown by validateCharacter (the single low bit is not zero).",
+        "description": "For modulus\u202f=\u202f5 the decoder must ensure the lowest 1 bit is zero; a non\u2011zero bit triggers an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Null argument handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "null"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "1"
+          },
+          {
+            "parameter": "context",
+            "value": "new Context()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null input array should cause a NullPointerException when the method attempts to read input[inPos]."
+      },
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{'A'}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "1"
+          },
+          {
+            "parameter": "context",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null Context should cause a NullPointerException when the method accesses context.eof."
+      }
+    ]
+  },
+  {
+    "group": "validateCharacter failure for modulus 2 (low\u20112\u2011bits not zero)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=2, lbitWorkArea=0x3L, pos=0}"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown by validateCharacter (low\u20112\u2011bits are not zero).",
+        "description": "When the trailing block has modulus\u202f=\u202f2 the decoder must verify that the lowest 2 bits are zero; a non\u2011zero value should trigger an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "validateCharacter failure for modulus 7 (low\u20113\u2011bits not zero)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "input",
+            "value": "new byte[]{}"
+          },
+          {
+            "parameter": "inPos",
+            "value": "0"
+          },
+          {
+            "parameter": "inAvail",
+            "value": "0"
+          },
+          {
+            "parameter": "context",
+            "value": "Context{eof=true, modulus=7, lbitWorkArea=0x7L, pos=0}"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown by validateCharacter (low\u20113\u2011bits are not zero).",
+        "description": "When the trailing block has modulus\u202f=\u202f7 the decoder must verify that the lowest 3 bits are zero; a non\u2011zero value should trigger an IllegalArgumentException."
+      }
+    ]
+  }
+]

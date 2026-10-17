@@ -1,0 +1,193 @@
+{
+    "testCases": [
+        {
+            "group": "testDecode_nullInput_throwsNullPointerException",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "input",
+                            "value": null
+                        },
+                        {
+                            "parameter": "inPos",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "inAvail",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "context",
+                            "value": "new Base64.Context()"
+                        }
+                    ],
+                    "expected": "NullPointerException",
+                    "description": "Calling decode with a null input array should raise a NullPointerException when the method attempts to read from the array."
+                }
+            ]
+        },
+        {
+            "group": "testDecode_nullContext_throwsNullPointerException",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "input",
+                            "value": "new byte[0]"
+                        },
+                        {
+                            "parameter": "inPos",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "inAvail",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "context",
+                            "value": null
+                        }
+                    ],
+                    "expected": "NullPointerException",
+                    "description": "Passing a null Context object should cause a NullPointerException when the method accesses context fields."
+                }
+            ]
+        },
+        {
+            "group": "testDecode_invalidIndices_throwsArrayIndexOutOfBoundsException",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "input",
+                            "value": "new byte[]{0x41, 0x42}"
+                        },
+                        {
+                            "parameter": "inPos",
+                            "value": 2
+                        },
+                        {
+                            "parameter": "inAvail",
+                            "value": 1
+                        },
+                        {
+                            "parameter": "context",
+                            "value": "new Base64.Context()"
+                        }
+                    ],
+                    "expected": "ArrayIndexOutOfBoundsException",
+                    "description": "When inPos points past the end of the input array, the first access input[inPos++] triggers an ArrayIndexOutOfBoundsException."
+                }
+            ]
+        },
+        {
+            "group": "testDecode_modulusInvalid_throwsIllegalStateException",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "input",
+                            "value": "new byte[0]"
+                        },
+                        {
+                            "parameter": "inPos",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "inAvail",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "context",
+                            "value": "new Base64.Context(){ { modulus = 5; eof = true; } }"
+                        }
+                    ],
+                    "expected": "IllegalStateException",
+                    "description": "If the Context.modulus contains a value that is not 0‑3 when EOF processing occurs, the default branch of the switch throws IllegalStateException."
+                }
+            ]
+        },
+        {
+            "group": "testDecode_modulusOne_throwsIllegalArgumentException",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "input",
+                            "value": "new byte[0]"
+                        },
+                        {
+                            "parameter": "inPos",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "inAvail",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "context",
+                            "value": "new Base64.Context(){ { modulus = 1; eof = true; } }"
+                        }
+                    ],
+                    "expected": "IllegalArgumentException",
+                    "description": "When EOF is reached with modulus == 1, validateTrailingCharacter() is invoked. The implementation throws IllegalArgumentException for an illegal trailing character."
+                }
+            ]
+        },
+        {
+            "group": "testDecode_modulusTwo_invalidMask_throwsIllegalArgumentException",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "input",
+                            "value": "new byte[0]"
+                        },
+                        {
+                            "parameter": "inPos",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "inAvail",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "context",
+                            "value": "new Base64.Context(){ { modulus = 2; eof = true; ibitWorkArea = 0xF; } }"
+                        }
+                    ],
+                    "expected": "IllegalArgumentException",
+                    "description": "With modulus == 2 the decoder calls validateCharacter(MASK_4BITS, context). Supplying ibitWorkArea whose low‑4 bits are non‑zero triggers an IllegalArgumentException."
+                }
+            ]
+        },
+        {
+            "group": "testDecode_modulusThree_invalidMask_throwsIllegalArgumentException",
+            "cases": [
+                {
+                    "input": [
+                        {
+                            "parameter": "input",
+                            "value": "new byte[0]"
+                        },
+                        {
+                            "parameter": "inPos",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "inAvail",
+                            "value": 0
+                        },
+                        {
+                            "parameter": "context",
+                            "value": "new Base64.Context(){ { modulus = 3; eof = true; ibitWorkArea = 0x3; } }"
+                        }
+                    ],
+                    "expected": "IllegalArgumentException",
+                    "description": "With modulus == 3 the decoder calls validateCharacter(MASK_2BITS, context). Providing ibitWorkArea whose low‑2 bits are non‑zero causes an IllegalArgumentException."
+                }
+            ]
+        }
+    ]
+}

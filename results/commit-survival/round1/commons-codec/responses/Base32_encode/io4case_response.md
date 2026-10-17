@@ -1,0 +1,124 @@
+{
+  "testCases": [
+    {
+      "group": "Full block encoding without line separator",
+      "cases": [
+        {
+          "input": [
+            { "parameter": "input", "value": "new byte[]{0x68, 0x65, 0x6c, 0x6c, 0x6f}" },
+            { "parameter": "inPos", "value": "0" },
+            { "parameter": "inAvail", "value": "5" },
+            { "parameter": "context", "value": "new Context(eof=false, modulus=0, lbitWorkArea=0, pos=0, currentLinePos=0)" }
+          ],
+          "expected": "Encoded bytes in context buffer equal to the ASCII string \"NBSWY3DP\" (no padding, no line separator). Context.eof remains false, context.modulus ends as 0, context.pos == 8.",
+          "description": "A normal 5‑byte input should produce exactly one Base32 block of 8 characters. No line‑splitting is configured, so the output is written directly."
+        }
+      ]
+    },
+    {
+      "group": "Full block encoding with line separator (chunking)",
+      "cases": [
+        {
+          "input": [
+            { "parameter": "input", "value": "new byte[]{0x68, 0x65, 0x6c, 0x6c, 0x6f}" },
+            { "parameter": "inPos", "value": "0" },
+            { "parameter": "inAvail", "value": "5" },
+            { "parameter": "context", "value": "new Context(eof=false, modulus=0, lbitWorkArea=0, pos=0, currentLinePos=0, lineLength=8, lineSeparator=\"\\r\\n\".getBytes())" }
+          ],
+          "expected": "Encoded bytes equal to \"NBSWY3DP\\r\\n\" (8 Base32 chars followed by CRLF). Context.currentLinePos resets to 0 after the separator.",
+          "description": "When a lineLength of 8 is configured, the encoder must insert the lineSeparator after each full block of 8 encoded bytes."
+        }
+      ]
+    },
+    {
+      "group": "EOF handling – leftover 1 byte (modulus 1)",
+      "cases": [
+        {
+          "input": [
+            { "parameter": "input", "value": "new byte[]{0x61}" },
+            { "parameter": "inPos", "value": "0" },
+            { "parameter": "inAvail", "value": "1" },
+            { "parameter": "context", "value": "new Context(eof=false, modulus=0, lbitWorkArea=0, pos=0, currentLinePos=0)" }
+          ],
+          "expected": "After processing the single byte, a second call with inAvail = -1 (EOF) writes \"ME======\" to the buffer (2 data chars + 6 padding chars). Context.eof becomes true, context.modulus stays 1.",
+          "description": "When the stream ends after only one octet, the encoder must emit two Base32 characters derived from the high‑order 5 bits and the remaining 2 bits, then pad to a full 8‑char block."
+        }
+      ]
+    },
+    {
+      "group": "EOF handling – leftover 2 bytes (modulus 2)",
+      "cases": [
+        {
+          "input": [
+            { "parameter": "input", "value": "new byte[]{0x61, 0x62}" },
+            { "parameter": "inPos", "value": "0" },
+            { "parameter": "inAvail", "value": "2" },
+            { "parameter": "context", "value": "new Context(eof=false, modulus=0, lbitWorkArea=0, pos=0, currentLinePos=0)" }
+          ],
+          "expected": "After a subsequent EOF call (inAvail = -1) the buffer contains \"MFRA====\" (4 data chars + 4 padding chars).",
+          "description": "Two remaining octets should produce four Base32 characters before padding."
+        }
+      ]
+    },
+    {
+      "group": "EOF handling – leftover 3 bytes (modulus 3)",
+      "cases": [
+        {
+          "input": [
+            { "parameter": "input", "value": "new byte[]{0x61, 0x62, 0x63}" },
+            { "parameter": "inPos", "value": "0" },
+            { "parameter": "inAvail", "value": "3" },
+            { "parameter": "context", "value": "new Context(eof=false, modulus=0, lbitWorkArea=0, pos=0, currentLinePos=0)" }
+          ],
+          "expected": "After EOF (inAvail = -1) the buffer contains \"MFRGG===",
+          "description": "Three octets produce five Base32 characters followed by three padding characters."
+        }
+      ]
+    },
+    {
+      "group": "EOF handling – leftover 4 bytes (modulus 4)",
+      "cases": [
+        {
+          "input": [
+            { "parameter": "input", "value": "new byte[]{0x61, 0x62, 0x63, 0x64}" },
+            { "parameter": "inPos", "value": "0" },
+            { "parameter": "inAvail", "value": "4" },
+            { "parameter": "context", "value": "new Context(eof=false, modulus=0, lbitWorkArea=0, pos=0, currentLinePos=0)" }
+          ],
+          "expected": "After EOF (inAvail = -1) the buffer contains \"MFRGGZA=\" (7 data chars + 1 padding char).",
+          "description": "Four octets should yield seven Base32 characters and a single pad character."
+        }
+      ]
+    },
+    {
+      "group": "Negative byte handling (unsigned conversion)",
+      "cases": [
+        {
+          "input": [
+            { "parameter": "input", "value": "new byte[]{(byte)0xFF, (byte)0xEE, (byte)0xDD, (byte)0xCC, (byte)0xBB}" },
+            { "parameter": "inPos", "value": "0" },
+            { "parameter": "inAvail", "value": "5" },
+            { "parameter": "context", "value": "new Context(eof=false, modulus=0, lbitWorkArea=0, pos=0, currentLinePos=0)" }
+          ],
+          "expected": "Encoded output equals \"7777777Z\" (the standard Base32 representation of the unsigned byte sequence 255,238,221,204,187). No exception is thrown.",
+          "description": "Bytes with the high bit set must be treated as unsigned values (added 256) before being shifted into the work area."
+        }
+      ]
+    },
+    {
+      "group": "Line separator not added when currentLinePos < lineLength",
+      "cases": [
+        {
+          "input": [
+            { "parameter": "input", "value": "new byte[]{0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x31, 0x32, 0x33, 0x34}" },
+            { "parameter": "inPos", "value": "0" },
+            { "parameter": "inAvail", "value": "9" },
+            { "parameter": "context", "value": "new Context(eof=false, modulus=0, lbitWorkArea=0, pos=0, currentLinePos=0, lineLength=12, lineSeparator=\"\\n\".getBytes())" }
+          ],
+          "expected": "Buffer contains \"NBSWY3DPGEZDGNBV\" (first 8 chars from the first 5‑byte block, then 8 chars from the next 4‑byte partial block plus padding). No line separator is inserted because currentLinePos never reaches 12.",
+          "description": "When the configured lineLength is larger than the amount of data encoded in a single call, the encoder must not insert a separator."
+        }
+      ]
+    }
+  ]
+}

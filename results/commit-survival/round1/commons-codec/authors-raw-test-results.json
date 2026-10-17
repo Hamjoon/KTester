@@ -1,0 +1,184 @@
+{
+  "org.apache.commons.codec.binary.Base64#decode(byte[], int, int, Context)": {
+    "test_cases": 11,
+    "passed_cases": 7
+  },
+  "org.apache.commons.codec.binary.Base32#decode(byte[], int, int, Context)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#encode(byte[], int, int, Context)": {
+    "test_cases": 12,
+    "passed_cases": 12
+  },
+  "org.apache.commons.codec.binary.Base32#encode(byte[], int, int, Context)": {
+    "test_cases": 23,
+    "passed_cases": 20
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)": {
+    "test_cases": 10,
+    "passed_cases": 9
+  },
+  "org.apache.commons.codec.binary.Base32#builder()": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base32#getLineSeparator()": {
+    "test_cases": 5,
+    "passed_cases": 5
+  },
+  "org.apache.commons.codec.binary.Base32#isInAlphabet(byte)": {
+    "test_cases": 11,
+    "passed_cases": 9
+  },
+  "org.apache.commons.codec.binary.Base64#builder()": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#decodeBase64(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#decodeBase64(String)": {
+    "test_cases": 8,
+    "passed_cases": 6
+  },
+  "org.apache.commons.codec.binary.Base64#decodeInteger(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#encodeBase64(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean, boolean)": {
+    "test_cases": 4,
+    "passed_cases": 3
+  },
+  "org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean, boolean, int)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#encodeBase64Chunked(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#encodeBase64String(byte[])": {
+    "test_cases": 5,
+    "passed_cases": 4
+  },
+  "org.apache.commons.codec.binary.Base64#encodeBase64URLSafe(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#encodeBase64URLSafeString(byte[])": {
+    "test_cases": 4,
+    "passed_cases": 1
+  },
+  "org.apache.commons.codec.binary.Base64#encodeInteger(BigInteger)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#isBase64(byte)": {
+    "test_cases": 8,
+    "passed_cases": 8
+  },
+  "org.apache.commons.codec.binary.Base64#isBase64(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#isBase64(String)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#toIntegerBytes(BigInteger)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#getLineSeparator()": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.binary.Base64#isInAlphabet(byte)": {
+    "test_cases": 4,
+    "passed_cases": 3,
+    "correct_inst_cov": 0.0,
+    "correct_bran_cov": 0.0
+  },
+  "org.apache.commons.codec.binary.Base64#isUrlSafe()": {
+    "test_cases": 5,
+    "passed_cases": 5
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(byte[], Random)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(byte[], String)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(String)": {
+    "test_cases": 5,
+    "passed_cases": 4
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(String, String)": {
+    "test_cases": 6,
+    "passed_cases": 6
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[])": {
+    "test_cases": 4,
+    "passed_cases": 3
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], Random)": {
+    "test_cases": 5,
+    "passed_cases": 5
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String)": {
+    "test_cases": 5,
+    "passed_cases": 4
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash128(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash128x64(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash128x64(byte[], int, int, int)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash32(long)": {
+    "test_cases": 4,
+    "passed_cases": 4
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash32(long, int)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash32(long, long)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash32(long, long, int)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash32x86(byte[])": {
+    "test_cases": 4,
+    "passed_cases": 3
+  },
+  "org.apache.commons.codec.digest.MurmurHash3#hash32x86(byte[], int, int, int)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.Sha2Crypt#sha256Crypt(byte[])": {
+    "test_cases": 3,
+    "passed_cases": 1
+  },
+  "org.apache.commons.codec.digest.Sha2Crypt#sha256Crypt(byte[], String)": {
+    "test_cases": 2,
+    "passed_cases": 1
+  },
+  "org.apache.commons.codec.digest.Sha2Crypt#sha256Crypt(byte[], String, Random)": {
+    "test_cases": 2,
+    "passed_cases": 2
+  },
+  "org.apache.commons.codec.digest.Sha2Crypt#sha512Crypt(byte[])": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.Sha2Crypt#sha512Crypt(byte[], String)": {
+    "error_type": "compile error"
+  },
+  "org.apache.commons.codec.digest.Sha2Crypt#sha512Crypt(byte[], String, Random)": {
+    "test_cases": 3,
+    "passed_cases": 3
+  }
+}

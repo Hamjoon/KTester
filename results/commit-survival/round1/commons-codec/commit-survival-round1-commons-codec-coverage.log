@@ -1,0 +1,2524 @@
+2026-10-17 09:20:08,793 - evaluations.coverage_test - INFO - Start coverage test ...
+2026-10-17 09:20:08,793 - evaluations.coverage_test - INFO - Running tests for project: commons-codec
+2026-10-17 09:20:08,795 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_decode_Test.java
+2026-10-17 09:20:09,169 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_decode_Test
+2026-10-17 09:20:10,230 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:10,230 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base64_decode_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_decode_Test ✔
+│     ├─ decode_withSinglePadding_returnsOneByte() ✔
+│     ├─ testDecode_nullInput_throwsNullPointerException() ✔
+│     ├─ decode_modulusOne_throwsException() ✘ Modulus 1 should cause an IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testDecode_nullContext_throwsNullPointerException() ✔
+│     ├─ testDecode_modulusOne_throwsIllegalArgumentException() ✘ Modulus 1 at EOF should cause IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ decode_withTwoPadding_returnsTwoBytes() ✔
+│     ├─ testDecode_modulusInvalid_throwsIllegalStateException() ✔
+│     ├─ testDecode_modulusThree_invalidMask_throwsIllegalArgumentException() ✘ Invalid low‑2‑bit mask with modulus 3 should cause IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ testDecode_invalidIndices_throwsArrayIndexOutOfBoundsException() ✔
+│     ├─ decode_withoutPadding_returnsExactBytes() ✔
+│     └─ testDecode_modulusTwo_invalidMask_throwsIllegalArgumentException() ✘ Invalid low‑4‑bit mask with modulus 2 should cause IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (4):
+  JUnit Jupiter:Base64_decode_Test:decode_modulusOne_throwsException()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_decode_Test', methodName = 'decode_modulusOne_throwsException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Modulus 1 should cause an IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.codec.binary.Base64_decode_Test.decode_modulusOne_throwsException(Base64_decode_Test.java:117)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:Base64_decode_Test:testDecode_modulusOne_throwsIllegalArgumentException()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_decode_Test', methodName = 'testDecode_modulusOne_throwsIllegalArgumentException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Modulus 1 at EOF should cause IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.codec.binary.Base64_decode_Test.testDecode_modulusOne_throwsIllegalArgumentException(Base64_decode_Test.java:171)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:Base64_decode_Test:testDecode_modulusThree_invalidMask_throwsIllegalArgumentException()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_decode_Test', methodName = 'testDecode_modulusThree_invalidMask_throwsIllegalArgumentException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Invalid low‑2‑bit mask with modulus 3 should cause IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.codec.binary.Base64_decode_Test.testDecode_modulusThree_invalidMask_throwsIllegalArgumentException(Base64_decode_Test.java:199)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:Base64_decode_Test:testDecode_modulusTwo_invalidMask_throwsIllegalArgumentException()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_decode_Test', methodName = 'testDecode_modulusTwo_invalidMask_throwsIllegalArgumentException', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Invalid low‑4‑bit mask with modulus 2 should cause IllegalArgumentException ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.codec.binary.Base64_decode_Test.testDecode_modulusTwo_invalidMask_throwsIllegalArgumentException(Base64_decode_Test.java:185)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 491 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[         7 tests successful      ]
+[         4 tests failed          ]
+
+
+2026-10-17 09:20:10,602 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_decode_Test#decode_withSinglePadding_returnsOneByte --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecode_nullInput_throwsNullPointerException --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecode_nullContext_throwsNullPointerException --select-method org.apache.commons.codec.binary.Base64_decode_Test#decode_withTwoPadding_returnsTwoBytes --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecode_modulusInvalid_throwsIllegalStateException --select-method org.apache.commons.codec.binary.Base64_decode_Test#testDecode_invalidIndices_throwsArrayIndexOutOfBoundsException --select-method org.apache.commons.codec.binary.Base64_decode_Test#decode_withoutPadding_returnsExactBytes
+2026-10-17 09:20:11,612 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_decode_Test ✔
+│     ├─ decode_withSinglePadding_returnsOneByte() ✔
+│     ├─ testDecode_nullInput_throwsNullPointerException() ✔
+│     ├─ testDecode_nullContext_throwsNullPointerException() ✔
+│     ├─ decode_withTwoPadding_returnsTwoBytes() ✔
+│     ├─ testDecode_modulusInvalid_throwsIllegalStateException() ✔
+│     ├─ testDecode_invalidIndices_throwsArrayIndexOutOfBoundsException() ✔
+│     └─ decode_withoutPadding_returnsExactBytes() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 483 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         7 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:11,950 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base32_decode_Test.java
+2026-10-17 09:20:12,296 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base32_decode_Test.java:97: error: cannot find symbol
+        return Base32.builder().setDecodingPolicy(Base32.DecodingPolicy.STRICT).get();
+                                                        ^
+  symbol:   variable DecodingPolicy
+  location: class Base32
+src/test/java/org/apache/commons/codec/binary/Base32_decode_Test.java:130: error: cannot find symbol
+        final Base32 codec = Base32.builder().setLineLength(10).setLineSeparator("\r\n".getBytes(StandardCharsets.US_ASCII)).setDecodingPolicy(Base32.DecodingPolicy.STRICT).get();
+                                                                                                                                                     ^
+  symbol:   variable DecodingPolicy
+  location: class Base32
+2 errors
+
+2026-10-17 09:20:12,298 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encode_Test.java
+2026-10-17 09:20:12,632 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_encode_Test
+2026-10-17 09:20:13,741 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:20:13,741 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encode_Test ✔
+│     ├─ encode_multipleBlocksWithChunking() ✔
+│     ├─ encode_nullInputThrows() ✔
+│     ├─ testEncode_NullLineSeparatorWhenChunked() ✔
+│     ├─ encode_emptyInput() ✔
+│     ├─ encode_twoByteRemainder() ✔
+│     ├─ testEncode_NullInputArray() ✔
+│     ├─ testEncode_NullEncodeTable() ✔
+│     ├─ testEncode_InvalidInPos() ✔
+│     ├─ testEncode_NullContext() ✔
+│     ├─ encode_fullBlock_noPadding() ✔
+│     ├─ encode_oneByteRemainder() ✔
+│     └─ testEncode_InvalidModulusAtEOF() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 519 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:14,174 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_encode_Test#encode_multipleBlocksWithChunking --select-method org.apache.commons.codec.binary.Base64_encode_Test#encode_nullInputThrows --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_NullLineSeparatorWhenChunked --select-method org.apache.commons.codec.binary.Base64_encode_Test#encode_emptyInput --select-method org.apache.commons.codec.binary.Base64_encode_Test#encode_twoByteRemainder --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_NullInputArray --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_NullEncodeTable --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_InvalidInPos --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_NullContext --select-method org.apache.commons.codec.binary.Base64_encode_Test#encode_fullBlock_noPadding --select-method org.apache.commons.codec.binary.Base64_encode_Test#encode_oneByteRemainder --select-method org.apache.commons.codec.binary.Base64_encode_Test#testEncode_InvalidModulusAtEOF
+2026-10-17 09:20:15,532 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encode_Test ✔
+│     ├─ encode_multipleBlocksWithChunking() ✔
+│     ├─ encode_nullInputThrows() ✔
+│     ├─ testEncode_NullLineSeparatorWhenChunked() ✔
+│     ├─ encode_emptyInput() ✔
+│     ├─ encode_twoByteRemainder() ✔
+│     ├─ testEncode_NullInputArray() ✔
+│     ├─ testEncode_NullEncodeTable() ✔
+│     ├─ testEncode_InvalidInPos() ✔
+│     ├─ testEncode_NullContext() ✔
+│     ├─ encode_fullBlock_noPadding() ✔
+│     ├─ encode_oneByteRemainder() ✔
+│     └─ testEncode_InvalidModulusAtEOF() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 689 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:16,178 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base32_encode_Test.java
+2026-10-17 09:20:16,567 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base32_encode_Test
+2026-10-17 09:20:17,666 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:17,666 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base32_encode_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_encode_Test ✔
+│     ├─ encodeEofLeftoverOneByte() ✔
+│     ├─ encodeBase32HexVariant() ✔
+│     ├─ encodeFullBlockNoSeparator() ✘ Context position should be at the end of the block ==> expected: <8> but was: <0>
+│     ├─ encodeNullContext() ✔
+│     ├─ encodeEofLeftoverFourBytes() ✔
+│     ├─ encodeInvalidModulusThrows() ✔
+│     ├─ encodeEofHandling() ✔
+│     ├─ encodeEofEarlyReturn() ✔
+│     ├─ encodeSingleChar() ✔
+│     ├─ encodeInputArrayIndexOutOfBounds() ✔
+│     ├─ encodeEofLeftoverThreeBytes() ✔
+│     ├─ encodeWithChunking() ✔
+│     ├─ encodeNegativeBytes() ✘ array contents differ at index [4], expected: <53> but was: <51>
+│     ├─ encodeEofLeftoverTwoBytes() ✔
+│     ├─ encodeFullBlockWithChunking() ✔
+│     ├─ encodeNoSeparatorWhenLineLengthNotReached() ✘ array contents differ at index [8], expected: <71> but was: <10>
+│     ├─ encodeNullInputArray() ✔
+│     ├─ encodeNullLineSeparatorThrows() ✔
+│     ├─ encodeCustomPadding() ✔
+│     ├─ encodeRfcVectors() ✔
+│     ├─ encodeIncrementallyMatchesBulk() ✔
+│     ├─ encodeNegativeModulusThrows() ✔
+│     └─ encodeEmpty() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:Base32_encode_Test:encodeFullBlockNoSeparator()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_encode_Test', methodName = 'encodeFullBlockNoSeparator', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Context position should be at the end of the block ==> expected: <8> but was: <0>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+       org.apache.commons.codec.binary.Base32_encode_Test.encodeFullBlockNoSeparator(Base32_encode_Test.java:190)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:Base32_encode_Test:encodeNegativeBytes()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_encode_Test', methodName = 'encodeNegativeBytes', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: array contents differ at index [4], expected: <53> but was: <51>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:209)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:63)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:59)
+       org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1229)
+       org.apache.commons.codec.binary.Base32_encode_Test.encodeNegativeBytes(Base32_encode_Test.java:297)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+  JUnit Jupiter:Base32_encode_Test:encodeNoSeparatorWhenLineLengthNotReached()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_encode_Test', methodName = 'encodeNoSeparatorWhenLineLengthNotReached', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: array contents differ at index [8], expected: <71> but was: <10>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:209)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:63)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:59)
+       org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1229)
+       org.apache.commons.codec.binary.Base32_encode_Test.encodeNoSeparatorWhenLineLengthNotReached(Base32_encode_Test.java:316)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       [...]
+
+Test run finished after 503 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        23 tests found           ]
+[         0 tests skipped         ]
+[        23 tests started         ]
+[         0 tests aborted         ]
+[        20 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-10-17 09:20:17,994 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeEofLeftoverOneByte --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeBase32HexVariant --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeNullContext --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeEofLeftoverFourBytes --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeInvalidModulusThrows --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeEofHandling --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeEofEarlyReturn --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeSingleChar --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeInputArrayIndexOutOfBounds --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeEofLeftoverThreeBytes --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeWithChunking --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeEofLeftoverTwoBytes --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeFullBlockWithChunking --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeNullInputArray --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeNullLineSeparatorThrows --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeCustomPadding --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeRfcVectors --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeIncrementallyMatchesBulk --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeNegativeModulusThrows --select-method org.apache.commons.codec.binary.Base32_encode_Test#encodeEmpty
+2026-10-17 09:20:19,020 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_encode_Test ✔
+│     ├─ encodeEofLeftoverOneByte() ✔
+│     ├─ encodeBase32HexVariant() ✔
+│     ├─ encodeNullContext() ✔
+│     ├─ encodeEofLeftoverFourBytes() ✔
+│     ├─ encodeInvalidModulusThrows() ✔
+│     ├─ encodeEofHandling() ✔
+│     ├─ encodeEofEarlyReturn() ✔
+│     ├─ encodeSingleChar() ✔
+│     ├─ encodeInputArrayIndexOutOfBounds() ✔
+│     ├─ encodeEofLeftoverThreeBytes() ✔
+│     ├─ encodeWithChunking() ✔
+│     ├─ encodeEofLeftoverTwoBytes() ✔
+│     ├─ encodeFullBlockWithChunking() ✔
+│     ├─ encodeNullInputArray() ✔
+│     ├─ encodeNullLineSeparatorThrows() ✔
+│     ├─ encodeCustomPadding() ✔
+│     ├─ encodeRfcVectors() ✔
+│     ├─ encodeIncrementallyMatchesBulk() ✔
+│     ├─ encodeNegativeModulusThrows() ✔
+│     └─ encodeEmpty() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 494 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        20 tests found           ]
+[         0 tests skipped         ]
+[        20 tests started         ]
+[         0 tests aborted         ]
+[        20 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:19,368 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_Test.java
+2026-10-17 09:20:19,713 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test
+2026-10-17 09:20:20,753 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:20,753 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_Test ✔
+│     ├─ md5Crypt_NullRandomWhenSaltIsNull_ThrowsNullPointerException() ✔
+│     ├─ md5Crypt_WithInvalidSalt_ThrowsIllegalArgumentException() ✔
+│     ├─ md5Crypt_InvalidSaltScenarios_ThrowsIllegalArgumentException(byte[], String, Str... ✔
+│     │  ├─ 1: Salt contains prefix but no characters (length 0) ✔
+│     │  ├─ 2: Salt has >8 characters after prefix ✘ Salt has >8 characters after prefix ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     │  └─ 3: Salt uses a different prefix than the supplied prefix ✔
+│     ├─ md5Crypt_WithExplicitSaltAndPrefix_ProducesExpectedStructure() ✔
+│     ├─ md5Crypt_ZeroesOutPasswordArrayAfterProcessing() ✔
+│     ├─ md5Crypt_WithNullSalt_GeneratesRandomSaltAndMatchesPattern() ✔
+│     ├─ md5Crypt_NullKeyBytes_ThrowsNullPointerException() ✔
+│     └─ md5Crypt_NullPrefix_ThrowsNullPointerException() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Md5Crypt_md5Crypt_Test:md5Crypt_InvalidSaltScenarios_ThrowsIllegalArgumentException(byte[], String, String):2: Salt has >8 characters after prefix
+    MethodSource [className = 'org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test', methodName = 'md5Crypt_InvalidSaltScenarios_ThrowsIllegalArgumentException', methodParameterTypes = '[B, java.lang.String, java.lang.String']
+    => org.opentest4j.AssertionFailedError: Salt has >8 characters after prefix ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test.md5Crypt_InvalidSaltScenarios_ThrowsIllegalArgumentException(Md5Crypt_md5Crypt_Test.java:150)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+
+Test run finished after 501 ms
+[         5 containers found      ]
+[         0 containers skipped    ]
+[         5 containers started    ]
+[         0 containers aborted    ]
+[         5 containers successful ]
+[         0 containers failed     ]
+[        10 tests found           ]
+[         0 tests skipped         ]
+[        10 tests started         ]
+[         0 tests aborted         ]
+[         9 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:20:21,090 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#md5Crypt_NullRandomWhenSaltIsNull_ThrowsNullPointerException --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#md5Crypt_WithInvalidSalt_ThrowsIllegalArgumentException --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#md5Crypt_WithExplicitSaltAndPrefix_ProducesExpectedStructure --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#md5Crypt_ZeroesOutPasswordArrayAfterProcessing --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#md5Crypt_WithNullSalt_GeneratesRandomSaltAndMatchesPattern --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#md5Crypt_NullKeyBytes_ThrowsNullPointerException --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_Test#md5Crypt_NullPrefix_ThrowsNullPointerException
+2026-10-17 09:20:22,092 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_Test ✔
+│     ├─ md5Crypt_NullRandomWhenSaltIsNull_ThrowsNullPointerException() ✔
+│     ├─ md5Crypt_WithInvalidSalt_ThrowsIllegalArgumentException() ✔
+│     ├─ md5Crypt_WithExplicitSaltAndPrefix_ProducesExpectedStructure() ✔
+│     ├─ md5Crypt_ZeroesOutPasswordArrayAfterProcessing() ✔
+│     ├─ md5Crypt_WithNullSalt_GeneratesRandomSaltAndMatchesPattern() ✔
+│     ├─ md5Crypt_NullKeyBytes_ThrowsNullPointerException() ✔
+│     └─ md5Crypt_NullPrefix_ThrowsNullPointerException() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 475 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         7 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:22,436 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base32_builder_Test.java
+2026-10-17 09:20:22,725 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base32_builder_Test.java:8: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base32_builder_Test.java:8: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+src/test/java/org/apache/commons/codec/binary/Base32_builder_Test.java:69: error: method setLineSeparator in class AbstractBuilder<T,B> cannot be applied to given types;
+                .setLineSeparator('\r', '\n')
+                ^
+  required: byte[]
+  found:    char,char
+  reason: varargs mismatch; possible lossy conversion from char to byte
+  where T,B are type-variables:
+    T extends Object declared in class AbstractBuilder
+    B extends AbstractBuilder<T,B> declared in class AbstractBuilder
+src/test/java/org/apache/commons/codec/binary/Base32_builder_Test.java:92: error: incompatible types: possible lossy conversion from char to byte
+                .setPadding('#')
+                            ^
+src/test/java/org/apache/commons/codec/binary/Base32_builder_Test.java:111: error: cannot find symbol
+                .setUseHex(true)               // switch to the "base32hex" alphabet
+                ^
+  symbol:   method setUseHex(boolean)
+  location: variable builder of type Builder
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+5 errors
+
+2026-10-17 09:20:22,726 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base32_getLineSeparator_Test.java
+2026-10-17 09:20:23,026 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base32_getLineSeparator_Test
+2026-10-17 09:20:23,511 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:20:23,511 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_getLineSeparator_Test ✔
+│     ├─ lineSeparatorContainingAlphabetChar_throws() ✔
+│     ├─ zeroLineLengthIgnoresProvidedSeparator() ✔
+│     ├─ positiveLineLengthNullSeparator_throws() ✔
+│     ├─ customLineSeparator_isStoredAndCloned() ✔
+│     └─ defaultConstructor_hasNoLineSeparator() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 51 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:23,840 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base32_getLineSeparator_Test#lineSeparatorContainingAlphabetChar_throws --select-method org.apache.commons.codec.binary.Base32_getLineSeparator_Test#zeroLineLengthIgnoresProvidedSeparator --select-method org.apache.commons.codec.binary.Base32_getLineSeparator_Test#positiveLineLengthNullSeparator_throws --select-method org.apache.commons.codec.binary.Base32_getLineSeparator_Test#customLineSeparator_isStoredAndCloned --select-method org.apache.commons.codec.binary.Base32_getLineSeparator_Test#defaultConstructor_hasNoLineSeparator
+2026-10-17 09:20:24,394 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_getLineSeparator_Test ✔
+│     ├─ lineSeparatorContainingAlphabetChar_throws() ✔
+│     ├─ zeroLineLengthIgnoresProvidedSeparator() ✔
+│     ├─ positiveLineLengthNullSeparator_throws() ✔
+│     ├─ customLineSeparator_isStoredAndCloned() ✔
+│     └─ defaultConstructor_hasNoLineSeparator() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 72 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:24,759 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base32_isInAlphabet_Test.java
+2026-10-17 09:20:25,067 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base32_isInAlphabet_Test
+2026-10-17 09:20:26,096 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:26,097 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base32_isInAlphabet_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_isInAlphabet_Test ✔
+│     ├─ testStandardAlphabet_InvalidCharacter_NotInTable() ✔
+│     ├─ testStandardAlphabet_PaddingCharacter() ✔
+│     ├─ testStandardAlphabet_InvalidCharacter_LowerCase() ✘ 'a' should NOT be recognised as part of the standard Base32 alphabet ==> expected: <false> but was: <true>
+│     ├─ testHexAlphabet_InvalidCharacter_NotInTable() ✔
+│     ├─ testHexAlphabet_NegativeOctet() ✔
+│     ├─ testHexAlphabet_ValidCharacter_Zero() ✔
+│     ├─ testStandardAlphabet_NegativeOctet() ✔
+│     ├─ testStandardAlphabet_ValidCharacter() ✔
+│     ├─ testHexAlphabet_InvalidCharacter_LowerCase() ✘ 'a' should NOT be recognised as part of the Base32hex alphabet ==> expected: <false> but was: <true>
+│     ├─ testHexAlphabet_ValidCharacter_Ten() ✔
+│     └─ testStandardAlphabet_OctetBeyondDecodeTable() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:Base32_isInAlphabet_Test:testStandardAlphabet_InvalidCharacter_LowerCase()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_isInAlphabet_Test', methodName = 'testStandardAlphabet_InvalidCharacter_LowerCase', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: 'a' should NOT be recognised as part of the standard Base32 alphabet ==> expected: <false> but was: <true>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+       org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+       org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+       org.apache.commons.codec.binary.Base32_isInAlphabet_Test.testStandardAlphabet_InvalidCharacter_LowerCase(Base32_isInAlphabet_Test.java:76)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:Base32_isInAlphabet_Test:testHexAlphabet_InvalidCharacter_LowerCase()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base32_isInAlphabet_Test', methodName = 'testHexAlphabet_InvalidCharacter_LowerCase', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: 'a' should NOT be recognised as part of the Base32hex alphabet ==> expected: <false> but was: <true>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+       org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+       org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+       org.apache.commons.codec.binary.Base32_isInAlphabet_Test.testHexAlphabet_InvalidCharacter_LowerCase(Base32_isInAlphabet_Test.java:143)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 486 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[         9 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-10-17 09:20:26,426 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testStandardAlphabet_InvalidCharacter_NotInTable --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testStandardAlphabet_PaddingCharacter --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testHexAlphabet_InvalidCharacter_NotInTable --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testHexAlphabet_NegativeOctet --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testHexAlphabet_ValidCharacter_Zero --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testStandardAlphabet_NegativeOctet --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testStandardAlphabet_ValidCharacter --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testHexAlphabet_ValidCharacter_Ten --select-method org.apache.commons.codec.binary.Base32_isInAlphabet_Test#testStandardAlphabet_OctetBeyondDecodeTable
+2026-10-17 09:20:27,490 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base32_isInAlphabet_Test ✔
+│     ├─ testStandardAlphabet_InvalidCharacter_NotInTable() ✔
+│     ├─ testStandardAlphabet_PaddingCharacter() ✔
+│     ├─ testHexAlphabet_InvalidCharacter_NotInTable() ✔
+│     ├─ testHexAlphabet_NegativeOctet() ✔
+│     ├─ testHexAlphabet_ValidCharacter_Zero() ✔
+│     ├─ testStandardAlphabet_NegativeOctet() ✔
+│     ├─ testStandardAlphabet_ValidCharacter() ✔
+│     ├─ testHexAlphabet_ValidCharacter_Ten() ✔
+│     └─ testStandardAlphabet_OctetBeyondDecodeTable() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 524 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         9 tests found           ]
+[         0 tests skipped         ]
+[         9 tests started         ]
+[         0 tests aborted         ]
+[         9 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:27,872 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_builder_Test.java
+2026-10-17 09:20:28,163 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_builder_Test.java:129: error: method setLineSeparator in class AbstractBuilder<T,B> cannot be applied to given types;
+                .setLineSeparator('\r', '\n')         // CRLF separator
+                ^
+  required: byte[]
+  found:    char,char
+  reason: varargs mismatch; possible lossy conversion from char to byte
+  where T,B are type-variables:
+    T extends Object declared in class AbstractBuilder
+    B extends AbstractBuilder<T,B> declared in class AbstractBuilder
+1 error
+
+2026-10-17 09:20:28,164 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_decodeBase64_Test.java
+2026-10-17 09:20:28,433 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_decodeBase64_Test.java:14: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_decodeBase64_Test.java:14: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+src/test/java/org/apache/commons/codec/binary/Base64_decodeBase64_Test.java:73: error: reference to decodeBase64 is ambiguous
+        byte[] decoded = Base64.decodeBase64(null);
+                               ^
+  both method decodeBase64(byte[]) in Base64 and method decodeBase64(String) in Base64 match
+3 errors
+
+2026-10-17 09:20:28,435 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_decodeBase64_2_Test.java
+2026-10-17 09:20:28,986 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_decodeBase64_2_Test
+2026-10-17 09:20:30,360 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:30,360 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base64_decodeBase64_2_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_decodeBase64_2_Test ✔
+│     ├─ decodeBase64_emptyString_returnsEmptyArray() ✔
+│     ├─ decodeBase64_nullInput_returnsNull() ✔
+│     ├─ decodeBase64_stringWithMixedStandardAndUrlSafeChars_isHandledLeniently() ✘ Mixed standard/URL‑safe characters were not decoded as expected ==> array contents differ at index [11], expected: <-65> but was: <-2>
+│     ├─ decodeBase64_urlSafeString_isDecodedCorrectly() ✔
+│     ├─ decodeBase64_stringWithLineBreaks_isHandledCorrectly() ✔
+│     ├─ decodeBase64_validString_returnsOriginalBytes() ✔
+│     ├─ decodeBase64_stringWithPadding_isProcessedCorrectly() ✔
+│     └─ decodeBase64_stringWithInvalidCharacters_isLenient() ✘ Result should be empty when input contains no valid Base64 chars ==> expected: <0> but was: <3>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:Base64_decodeBase64_2_Test:decodeBase64_stringWithMixedStandardAndUrlSafeChars_isHandledLeniently()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_decodeBase64_2_Test', methodName = 'decodeBase64_stringWithMixedStandardAndUrlSafeChars_isHandledLeniently', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Mixed standard/URL‑safe characters were not decoded as expected ==> array contents differ at index [11], expected: <-65> but was: <-2>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:209)
+       org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:67)
+       org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1247)
+       org.apache.commons.codec.binary.Base64_decodeBase64_2_Test.decodeBase64_stringWithMixedStandardAndUrlSafeChars_isHandledLeniently(Base64_decodeBase64_2_Test.java:165)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+  JUnit Jupiter:Base64_decodeBase64_2_Test:decodeBase64_stringWithInvalidCharacters_isLenient()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_decodeBase64_2_Test', methodName = 'decodeBase64_stringWithInvalidCharacters_isLenient', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Result should be empty when input contains no valid Base64 chars ==> expected: <0> but was: <3>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+       org.apache.commons.codec.binary.Base64_decodeBase64_2_Test.decodeBase64_stringWithInvalidCharacters_isLenient(Base64_decodeBase64_2_Test.java:95)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 633 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-10-17 09:20:30,845 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_decodeBase64_2_Test#decodeBase64_emptyString_returnsEmptyArray --select-method org.apache.commons.codec.binary.Base64_decodeBase64_2_Test#decodeBase64_nullInput_returnsNull --select-method org.apache.commons.codec.binary.Base64_decodeBase64_2_Test#decodeBase64_urlSafeString_isDecodedCorrectly --select-method org.apache.commons.codec.binary.Base64_decodeBase64_2_Test#decodeBase64_stringWithLineBreaks_isHandledCorrectly --select-method org.apache.commons.codec.binary.Base64_decodeBase64_2_Test#decodeBase64_validString_returnsOriginalBytes --select-method org.apache.commons.codec.binary.Base64_decodeBase64_2_Test#decodeBase64_stringWithPadding_isProcessedCorrectly
+2026-10-17 09:20:32,166 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_decodeBase64_2_Test ✔
+│     ├─ decodeBase64_emptyString_returnsEmptyArray() ✔
+│     ├─ decodeBase64_nullInput_returnsNull() ✔
+│     ├─ decodeBase64_urlSafeString_isDecodedCorrectly() ✔
+│     ├─ decodeBase64_stringWithLineBreaks_isHandledCorrectly() ✔
+│     ├─ decodeBase64_validString_returnsOriginalBytes() ✔
+│     └─ decodeBase64_stringWithPadding_isProcessedCorrectly() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 621 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:32,581 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_decodeInteger_Test.java
+2026-10-17 09:20:32,893 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_decodeInteger_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_decodeInteger_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:20:32,895 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_Test.java
+2026-10-17 09:20:33,067 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_Test.java:6: error: ';' expected
+import java.util.Base64 as JdkBase64; // JDK encoder for expected results
+                       ^
+1 error
+
+2026-10-17 09:20:33,068 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_2_Test.java
+2026-10-17 09:20:33,408 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_2_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_2_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_2_Test.java:59: error: cannot find symbol
+        byte[] data = "Apache Commons Codec".getBytes(StandardCharsets.UTF_8);
+                                                      ^
+  symbol:   variable StandardCharsets
+  location: class Base64_encodeBase64_2_Test
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_2_Test.java:60: error: cannot find symbol
+        byte[] expected = "QXBwYWNoIENvbW1vbnMgQ29kZWM=".getBytes(StandardCharsets.US_ASCII);
+                                                                  ^
+  symbol:   variable StandardCharsets
+  location: class Base64_encodeBase64_2_Test
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_2_Test.java:91: error: cannot find symbol
+        String chunkedStr = new String(chunked, StandardCharsets.US_ASCII);
+                                                ^
+  symbol:   variable StandardCharsets
+  location: class Base64_encodeBase64_2_Test
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_2_Test.java:96: error: cannot find symbol
+        assertArrayEquals(nonChunked, stripped.getBytes(StandardCharsets.US_ASCII));
+                                                        ^
+  symbol:   variable StandardCharsets
+  location: class Base64_encodeBase64_2_Test
+6 errors
+
+2026-10-17 09:20:33,409 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_3_Test.java
+2026-10-17 09:20:33,725 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_encodeBase64_3_Test
+2026-10-17 09:20:34,232 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:34,232 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base64_encodeBase64_3_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encodeBase64_3_Test ✔
+│     ├─ encodeBase64_chunked_insertsCRLFEvery76Chars() ✘ Chunked encoding should be identical to java.util.Base64 MIME encoder ==> expected: <AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4
+│     │        OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3Bx
+│     │        cnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmq
+│     │        q6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsc=> but was: <AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4
+│     │        OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3Bx
+│     │        cnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmq
+│     │        q6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsc=
+│     │        >
+│     ├─ encodeBase64_noChunk_noUrlSafe_standardAlphabet() ✔
+│     ├─ encodeBase64_urlSafe_replacesPlusSlashWithMinusUnderscore() ✔
+│     └─ encodeBase64_nullInput_returnsNull() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Base64_encodeBase64_3_Test:encodeBase64_chunked_insertsCRLFEvery76Chars()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_encodeBase64_3_Test', methodName = 'encodeBase64_chunked_insertsCRLFEvery76Chars', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Chunked encoding should be identical to java.util.Base64 MIME encoder ==> expected: <AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4
+OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3Bx
+cnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmq
+q6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsc=> but was: <AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4
+OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3Bx
+cnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmq
+q6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsc=
+>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.binary.Base64_encodeBase64_3_Test.encodeBase64_chunked_insertsCRLFEvery76Chars(Base64_encodeBase64_3_Test.java:71)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 56 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:20:34,588 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_encodeBase64_3_Test#encodeBase64_noChunk_noUrlSafe_standardAlphabet --select-method org.apache.commons.codec.binary.Base64_encodeBase64_3_Test#encodeBase64_urlSafe_replacesPlusSlashWithMinusUnderscore --select-method org.apache.commons.codec.binary.Base64_encodeBase64_3_Test#encodeBase64_nullInput_returnsNull
+2026-10-17 09:20:35,208 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encodeBase64_3_Test ✔
+│     ├─ encodeBase64_noChunk_noUrlSafe_standardAlphabet() ✔
+│     ├─ encodeBase64_urlSafe_replacesPlusSlashWithMinusUnderscore() ✔
+│     └─ encodeBase64_nullInput_returnsNull() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 62 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:35,615 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_4_Test.java
+2026-10-17 09:20:35,944 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_4_Test.java:20: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64_4_Test.java:20: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:20:35,946 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64Chunked_Test.java
+2026-10-17 09:20:36,261 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64Chunked_Test.java:17: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64Chunked_Test.java:17: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:20:36,262 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64String_Test.java
+2026-10-17 09:20:36,547 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_encodeBase64String_Test
+2026-10-17 09:20:37,566 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:37,566 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base64_encodeBase64String_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encodeBase64String_Test ✔
+│     ├─ encodeBase64String_noChunking() ✔
+│     ├─ encodeBase64String_emptyArray() ✔
+│     ├─ encodeBase64String_binaryData() ✘ Base64 encoding of binary data mismatch ==> expected: <AP9aEw==> but was: <AP96Ew==>
+│     ├─ encodeBase64String_simpleAscii() ✔
+│     └─ encodeBase64String_nullInput() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Base64_encodeBase64String_Test:encodeBase64String_binaryData()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_encodeBase64String_Test', methodName = 'encodeBase64String_binaryData', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Base64 encoding of binary data mismatch ==> expected: <AP9aEw==> but was: <AP96Ew==>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.binary.Base64_encodeBase64String_Test.encodeBase64String_binaryData(Base64_encodeBase64String_Test.java:90)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 476 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:20:37,919 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_encodeBase64String_Test#encodeBase64String_noChunking --select-method org.apache.commons.codec.binary.Base64_encodeBase64String_Test#encodeBase64String_emptyArray --select-method org.apache.commons.codec.binary.Base64_encodeBase64String_Test#encodeBase64String_simpleAscii --select-method org.apache.commons.codec.binary.Base64_encodeBase64String_Test#encodeBase64String_nullInput
+2026-10-17 09:20:39,346 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encodeBase64String_Test ✔
+│     ├─ encodeBase64String_noChunking() ✔
+│     ├─ encodeBase64String_emptyArray() ✔
+│     ├─ encodeBase64String_simpleAscii() ✔
+│     └─ encodeBase64String_nullInput() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 521 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:39,783 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64URLSafe_Test.java
+2026-10-17 09:20:40,166 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64URLSafe_Test.java:21: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64URLSafe_Test.java:21: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:20:40,167 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeBase64URLSafeString_Test.java
+2026-10-17 09:20:40,499 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test
+2026-10-17 09:20:41,606 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:41,606 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encodeBase64URLSafeString_Test ✔
+│     ├─ testEncodeBase64URLSafeString_nullInput() ✘ Passing null should throw NullPointerException ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+│     ├─ testEncodeBase64URLSafeString_emptyArray() ✔
+│     ├─ testEncodeBase64URLSafeString_urlSafeCharacters() ✘ URL‑safe conversion of '+' and '/' failed ==> expected: <-_7_> but was: <--__>
+│     └─ testEncodeBase64URLSafeString_asciiPayload() ✘ URL‑safe Base64 string does not match expected value ==> expected: <SGVsbG8=> but was: <SGVsbG8>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (3):
+  JUnit Jupiter:Base64_encodeBase64URLSafeString_Test:testEncodeBase64URLSafeString_nullInput()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test', methodName = 'testEncodeBase64URLSafeString_nullInput', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Passing null should throw NullPointerException ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+       org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test.testEncodeBase64URLSafeString_nullInput(Base64_encodeBase64URLSafeString_Test.java:95)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       [...]
+  JUnit Jupiter:Base64_encodeBase64URLSafeString_Test:testEncodeBase64URLSafeString_urlSafeCharacters()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test', methodName = 'testEncodeBase64URLSafeString_urlSafeCharacters', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: URL‑safe conversion of '+' and '/' failed ==> expected: <-_7_> but was: <--__>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test.testEncodeBase64URLSafeString_urlSafeCharacters(Base64_encodeBase64URLSafeString_Test.java:74)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+  JUnit Jupiter:Base64_encodeBase64URLSafeString_Test:testEncodeBase64URLSafeString_asciiPayload()
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test', methodName = 'testEncodeBase64URLSafeString_asciiPayload', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: URL‑safe Base64 string does not match expected value ==> expected: <SGVsbG8=> but was: <SGVsbG8>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test.testEncodeBase64URLSafeString_asciiPayload(Base64_encodeBase64URLSafeString_Test.java:58)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 514 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         3 tests failed          ]
+
+
+2026-10-17 09:20:41,967 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_encodeBase64URLSafeString_Test#testEncodeBase64URLSafeString_emptyArray
+2026-10-17 09:20:43,026 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_encodeBase64URLSafeString_Test ✔
+│     └─ testEncodeBase64URLSafeString_emptyArray() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 519 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:43,394 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_encodeInteger_Test.java
+2026-10-17 09:20:43,695 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_encodeInteger_Test.java:29: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_encodeInteger_Test.java:29: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:20:43,697 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_isBase64_Test.java
+2026-10-17 09:20:44,034 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_isBase64_Test
+2026-10-17 09:20:44,652 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:20:44,652 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_isBase64_Test ✔
+│     ├─ testStandardAlphabetCharactersAreBase64() ✔
+│     ├─ testNegativeByteValuesAreNotBase64() ✔
+│     ├─ testPaddingCharacterIsBase64() ✔
+│     ├─ testWhitespaceCharactersAreNotBase64() ✔
+│     ├─ testInvalidCharactersAreNotBase64() ✔
+│     ├─ testHighByteValuesAreNotBase64() ✔
+│     ├─ testUrlSafeCharactersAreBase64() ✔
+│     └─ testIsBase64ArrayIgnoresWhitespace() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 55 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:45,051 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_isBase64_Test#testStandardAlphabetCharactersAreBase64 --select-method org.apache.commons.codec.binary.Base64_isBase64_Test#testNegativeByteValuesAreNotBase64 --select-method org.apache.commons.codec.binary.Base64_isBase64_Test#testPaddingCharacterIsBase64 --select-method org.apache.commons.codec.binary.Base64_isBase64_Test#testWhitespaceCharactersAreNotBase64 --select-method org.apache.commons.codec.binary.Base64_isBase64_Test#testInvalidCharactersAreNotBase64 --select-method org.apache.commons.codec.binary.Base64_isBase64_Test#testHighByteValuesAreNotBase64 --select-method org.apache.commons.codec.binary.Base64_isBase64_Test#testUrlSafeCharactersAreBase64 --select-method org.apache.commons.codec.binary.Base64_isBase64_Test#testIsBase64ArrayIgnoresWhitespace
+2026-10-17 09:20:45,716 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_isBase64_Test ✔
+│     ├─ testStandardAlphabetCharactersAreBase64() ✔
+│     ├─ testNegativeByteValuesAreNotBase64() ✔
+│     ├─ testPaddingCharacterIsBase64() ✔
+│     ├─ testWhitespaceCharactersAreNotBase64() ✔
+│     ├─ testInvalidCharactersAreNotBase64() ✔
+│     ├─ testHighByteValuesAreNotBase64() ✔
+│     ├─ testUrlSafeCharactersAreBase64() ✔
+│     └─ testIsBase64ArrayIgnoresWhitespace() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 62 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:46,129 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_isBase64_3_Test.java
+2026-10-17 09:20:46,446 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_isBase64_3_Test.java:22: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_isBase64_3_Test.java:22: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+src/test/java/org/apache/commons/codec/binary/Base64_isBase64_3_Test.java:90: error: reference to isBase64 is ambiguous
+        assertThrows(NullPointerException.class, () -> Base64.isBase64(null));
+                                                             ^
+  both method isBase64(byte[]) in Base64 and method isBase64(String) in Base64 match
+3 errors
+
+2026-10-17 09:20:46,448 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_isBase64_2_Test.java
+2026-10-17 09:20:46,738 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_isBase64_2_Test.java:77: error: reference to isBase64 is ambiguous
+        assertFalse(Base64.isBase64(null), "Null input should return false");
+                          ^
+  both method isBase64(byte[]) in Base64 and method isBase64(String) in Base64 match
+1 error
+
+2026-10-17 09:20:46,740 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_toIntegerBytes_Test.java
+2026-10-17 09:20:47,052 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_toIntegerBytes_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/binary/Base64_toIntegerBytes_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:20:47,054 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_getLineSeparator_Test.java
+2026-10-17 09:20:47,343 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/binary/Base64_getLineSeparator_Test.java:151: error: method setLineSeparator in class AbstractBuilder<T,B> cannot be applied to given types;
+                .setLineSeparator((char) '~', (char) '~')
+                ^
+  required: byte[]
+  found:    char,char
+  reason: varargs mismatch; possible lossy conversion from char to byte
+  where T,B are type-variables:
+    T extends Object declared in class AbstractBuilder
+    B extends AbstractBuilder<T,B> declared in class AbstractBuilder
+1 error
+
+2026-10-17 09:20:47,345 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_isInAlphabet_Test.java
+2026-10-17 09:20:47,614 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_isInAlphabet_Test
+2026-10-17 09:20:48,102 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:48,102 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.binary.Base64_isInAlphabet_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_isInAlphabet_Test ✔
+│     ├─ Standard Base64: alphabet characters return true ✔
+│     ├─ URL‑safe Base64: byte not in alphabet returns false ✘ expected: <false> but was: <true>
+│     ├─ URL‑safe Base64: alphabet characters return true ✔
+│     └─ Standard Base64: byte outside the decode table range returns false ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Base64_isInAlphabet_Test:URL‑safe Base64: byte not in alphabet returns false
+    MethodSource [className = 'org.apache.commons.codec.binary.Base64_isInAlphabet_Test', methodName = 'testIsInAlphabet_UrlSafeAlphabet_InvalidBytes', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+       org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+       org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
+       org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:231)
+       org.apache.commons.codec.binary.Base64_isInAlphabet_Test.testIsInAlphabet_UrlSafeAlphabet_InvalidBytes(Base64_isInAlphabet_Test.java:106)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       [...]
+
+Test run finished after 54 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:20:48,448 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/binary/Base64_isUrlSafe_Test.java
+2026-10-17 09:20:48,723 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.binary.Base64_isUrlSafe_Test
+2026-10-17 09:20:49,738 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:20:49,738 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_isUrlSafe_Test ✔
+│     ├─ defaultConstructor_isNotUrlSafe() ✔
+│     ├─ builderUrlSafeSetting() ✔
+│     ├─ lineLengthSeparatorConstructor_behaviour() ✔
+│     ├─ builderDefaultIsNotUrlSafe() ✔
+│     └─ booleanConstructor_behaviour() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 475 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:50,095 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.binary.Base64_isUrlSafe_Test#defaultConstructor_isNotUrlSafe --select-method org.apache.commons.codec.binary.Base64_isUrlSafe_Test#builderUrlSafeSetting --select-method org.apache.commons.codec.binary.Base64_isUrlSafe_Test#lineLengthSeparatorConstructor_behaviour --select-method org.apache.commons.codec.binary.Base64_isUrlSafe_Test#builderDefaultIsNotUrlSafe --select-method org.apache.commons.codec.binary.Base64_isUrlSafe_Test#booleanConstructor_behaviour
+2026-10-17 09:20:51,172 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Base64_isUrlSafe_Test ✔
+│     ├─ defaultConstructor_isNotUrlSafe() ✔
+│     ├─ builderUrlSafeSetting() ✔
+│     ├─ lineLengthSeparatorConstructor_behaviour() ✔
+│     ├─ builderDefaultIsNotUrlSafe() ✔
+│     └─ booleanConstructor_behaviour() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 508 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:51,511 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_Test.java
+2026-10-17 09:20:51,798 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_Test.java:11: error: cannot find symbol
+@ExtendWith(MockitoExtension.class) // kept from the template; not used directly
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_Test.java:11: error: cannot find symbol
+@ExtendWith(MockitoExtension.class) // kept from the template; not used directly
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:20:51,800 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_4_Test.java
+2026-10-17 09:20:52,163 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_4_Test.java:85: error: reference to apr1Crypt is ambiguous
+                () -> Md5Crypt.apr1Crypt(SAMPLE_KEY, null),
+                              ^
+  both method apr1Crypt(byte[],Random) in Md5Crypt and method apr1Crypt(byte[],String) in Md5Crypt match
+1 error
+
+2026-10-17 09:20:52,165 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_5_Test.java
+2026-10-17 09:20:52,508 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_5_Test.java:55: error: reference to apr1Crypt is ambiguous
+            String result = Md5Crypt.apr1Crypt(sampleKey, null);
+                                    ^
+  both method apr1Crypt(byte[],Random) in Md5Crypt and method apr1Crypt(byte[],String) in Md5Crypt match
+1 error
+
+2026-10-17 09:20:52,509 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_2_Test.java
+2026-10-17 09:20:52,819 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_2_Test
+2026-10-17 09:20:53,917 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:20:53,917 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_2_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_apr1Crypt_2_Test ✔
+│     ├─ testApr1CryptNullInput() ✔
+│     ├─ testApr1CryptWithFixedRandom() ✘ Hashes differ when using the same deterministic Random instance ==> expected: <$apr1$LUvup0I5$yrP4tjoOaXgWAcdHxzrUu/> but was: <$apr1$LUvup0I5$04MuuZl1hXatIYTRY1gE7.>
+│     ├─ testApr1CryptEmptySalt() ✔
+│     ├─ testApr1CryptWithExplicitSalt() ✔
+│     └─ testApr1CryptStringFormat() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Md5Crypt_apr1Crypt_2_Test:testApr1CryptWithFixedRandom()
+    MethodSource [className = 'org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_2_Test', methodName = 'testApr1CryptWithFixedRandom', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Hashes differ when using the same deterministic Random instance ==> expected: <$apr1$LUvup0I5$yrP4tjoOaXgWAcdHxzrUu/> but was: <$apr1$LUvup0I5$04MuuZl1hXatIYTRY1gE7.>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_2_Test.testApr1CryptWithFixedRandom(Md5Crypt_apr1Crypt_2_Test.java:93)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 538 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:20:54,283 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_2_Test#testApr1CryptNullInput --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_2_Test#testApr1CryptEmptySalt --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_2_Test#testApr1CryptWithExplicitSalt --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_2_Test#testApr1CryptStringFormat
+2026-10-17 09:20:55,323 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_apr1Crypt_2_Test ✔
+│     ├─ testApr1CryptNullInput() ✔
+│     ├─ testApr1CryptEmptySalt() ✔
+│     ├─ testApr1CryptWithExplicitSalt() ✔
+│     └─ testApr1CryptStringFormat() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 491 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:55,662 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_apr1Crypt_3_Test.java
+2026-10-17 09:20:55,971 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_3_Test
+2026-10-17 09:20:57,016 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:20:57,016 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_apr1Crypt_3_Test ✔
+│     ├─ testApr1CryptNullPassword() ✔
+│     ├─ testApr1CryptNullSaltGeneratesRandomSalt() ✔
+│     ├─ testApr1CryptEmptySalt() ✔
+│     ├─ testApr1CryptSaltTruncation() ✔
+│     ├─ testApr1CryptProducesValidHash() ✔
+│     └─ testApr1CryptSaltWithDollarSign() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 476 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:57,374 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_3_Test#testApr1CryptNullPassword --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_3_Test#testApr1CryptNullSaltGeneratesRandomSalt --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_3_Test#testApr1CryptEmptySalt --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_3_Test#testApr1CryptSaltTruncation --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_3_Test#testApr1CryptProducesValidHash --select-method org.apache.commons.codec.digest.Md5Crypt_apr1Crypt_3_Test#testApr1CryptSaltWithDollarSign
+2026-10-17 09:20:58,451 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_apr1Crypt_3_Test ✔
+│     ├─ testApr1CryptNullPassword() ✔
+│     ├─ testApr1CryptNullSaltGeneratesRandomSalt() ✔
+│     ├─ testApr1CryptEmptySalt() ✔
+│     ├─ testApr1CryptSaltTruncation() ✔
+│     ├─ testApr1CryptProducesValidHash() ✔
+│     └─ testApr1CryptSaltWithDollarSign() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 538 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:20:58,809 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_2_Test.java
+2026-10-17 09:20:59,120 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Md5Crypt_md5Crypt_2_Test
+2026-10-17 09:21:00,223 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:21:00,234 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.Md5Crypt_md5Crypt_2_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_2_Test ✔
+│     ├─ testMd5CryptNullByteArrayThrowsNPE() ✔
+│     ├─ testMd5CryptConsistentWithExplicitSalt() ✘ With an explicit salt the hash must be deterministic ==> expected: <$1$mysalt$4Lz7hS.y2V54mV2gJXEKR/> but was: <$1$mysalt$2df.w5KOTs1StUg2t6YLe/>
+│     ├─ testMd5CryptReturnsValidFormat() ✔
+│     └─ testMd5CryptZeroesOutInputBuffer() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Md5Crypt_md5Crypt_2_Test:testMd5CryptConsistentWithExplicitSalt()
+    MethodSource [className = 'org.apache.commons.codec.digest.Md5Crypt_md5Crypt_2_Test', methodName = 'testMd5CryptConsistentWithExplicitSalt', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: With an explicit salt the hash must be deterministic ==> expected: <$1$mysalt$4Lz7hS.y2V54mV2gJXEKR/> but was: <$1$mysalt$2df.w5KOTs1StUg2t6YLe/>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.digest.Md5Crypt_md5Crypt_2_Test.testMd5CryptConsistentWithExplicitSalt(Md5Crypt_md5Crypt_2_Test.java:77)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 539 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:21:00,916 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_2_Test#testMd5CryptNullByteArrayThrowsNPE --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_2_Test#testMd5CryptReturnsValidFormat --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_2_Test#testMd5CryptZeroesOutInputBuffer
+2026-10-17 09:21:02,530 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_2_Test ✔
+│     ├─ testMd5CryptNullByteArrayThrowsNPE() ✔
+│     ├─ testMd5CryptReturnsValidFormat() ✔
+│     └─ testMd5CryptZeroesOutInputBuffer() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 614 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:02,921 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_3_Test.java
+2026-10-17 09:21:03,289 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Md5Crypt_md5Crypt_3_Test
+2026-10-17 09:21:04,472 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:21:04,472 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_3_Test ✔
+│     ├─ testMd5CryptZeroesInput() ✔
+│     ├─ testMd5CryptEmptyPassword() ✔
+│     ├─ testMd5CryptNullRandomThrows() ✔
+│     ├─ testMd5CryptNullKeyThrows() ✔
+│     └─ testMd5CryptGeneratesSaltOfCorrectLength() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 572 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:04,848 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_3_Test#testMd5CryptZeroesInput --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_3_Test#testMd5CryptEmptyPassword --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_3_Test#testMd5CryptNullRandomThrows --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_3_Test#testMd5CryptNullKeyThrows --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_3_Test#testMd5CryptGeneratesSaltOfCorrectLength
+2026-10-17 09:21:06,003 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_3_Test ✔
+│     ├─ testMd5CryptZeroesInput() ✔
+│     ├─ testMd5CryptEmptyPassword() ✔
+│     ├─ testMd5CryptNullRandomThrows() ✔
+│     ├─ testMd5CryptNullKeyThrows() ✔
+│     └─ testMd5CryptGeneratesSaltOfCorrectLength() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 530 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:06,372 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_4_Test.java
+2026-10-17 09:21:06,676 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_4_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_4_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:21:06,677 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Md5Crypt_md5Crypt_5_Test.java
+2026-10-17 09:21:06,986 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Md5Crypt_md5Crypt_5_Test
+2026-10-17 09:21:08,056 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:21:08,057 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.Md5Crypt_md5Crypt_5_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_5_Test ✔
+│     ├─ md5CryptWithEmptySaltThrows() ✔
+│     ├─ md5CryptZeroesInputArray() ✔
+│     ├─ md5CryptWithExplicitPrefixAndSalt() ✘ Invalid salt value: abcd
+│     ├─ md5CryptWithNullSaltUsesGeneratedSalt() ✔
+│     └─ md5CryptWithNullPasswordThrows() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Md5Crypt_md5Crypt_5_Test:md5CryptWithExplicitPrefixAndSalt()
+    MethodSource [className = 'org.apache.commons.codec.digest.Md5Crypt_md5Crypt_5_Test', methodName = 'md5CryptWithExplicitPrefixAndSalt', methodParameterTypes = '']
+    => java.lang.IllegalArgumentException: Invalid salt value: abcd
+       org.apache.commons.codec.digest.Md5Crypt.md5Crypt(Md5Crypt.java:286)
+       org.apache.commons.codec.digest.Md5Crypt.md5Crypt(Md5Crypt.java:249)
+       org.apache.commons.codec.digest.Md5Crypt_md5Crypt_5_Test.md5CryptWithExplicitPrefixAndSalt(Md5Crypt_md5Crypt_5_Test.java:49)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+
+Test run finished after 501 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:21:08,407 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_5_Test#md5CryptWithEmptySaltThrows --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_5_Test#md5CryptZeroesInputArray --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_5_Test#md5CryptWithNullSaltUsesGeneratedSalt --select-method org.apache.commons.codec.digest.Md5Crypt_md5Crypt_5_Test#md5CryptWithNullPasswordThrows
+2026-10-17 09:21:09,678 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Md5Crypt_md5Crypt_5_Test ✔
+│     ├─ md5CryptWithEmptySaltThrows() ✔
+│     ├─ md5CryptZeroesInputArray() ✔
+│     ├─ md5CryptWithNullSaltUsesGeneratedSalt() ✔
+│     └─ md5CryptWithNullPasswordThrows() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 594 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:10,408 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128_Test.java
+2026-10-17 09:21:10,800 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128_Test.java:25: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128_Test.java:25: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+Note: src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128_Test.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+2 errors
+
+2026-10-17 09:21:10,803 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64_Test.java
+2026-10-17 09:21:11,135 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64_Test.java:7: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64_Test.java:7: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:21:11,136 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64_2_Test.java
+2026-10-17 09:21:11,490 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64_2_Test.java:46: error: incompatible types: possible lossy conversion from int to byte
+        (byte) 196, (byte) 209, 14, 36, (byte) 139, (byte) 228, 154, 31,
+                                                                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash128x64_2_Test.java:47: error: incompatible types: possible lossy conversion from int to byte
+        (byte) 175, (byte) 202, (byte) 236, 161, 3, (byte) 162, (byte) 190, (byte) 254,
+                                            ^
+2 errors
+
+2026-10-17 09:21:11,492 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_Test.java
+2026-10-17 09:21:11,830 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.MurmurHash3_hash32_Test
+2026-10-17 09:21:12,918 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:21:12,918 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ MurmurHash3_hash32_Test ✔
+│     ├─ testDifferentSeedsYieldDifferentResults() ✔
+│     ├─ testDeterminism() ✔
+│     ├─ testHash32DelegatesToTwoArgMethod() ✔
+│     └─ testRandomValues() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 528 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:13,342 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.MurmurHash3_hash32_Test#testDifferentSeedsYieldDifferentResults --select-method org.apache.commons.codec.digest.MurmurHash3_hash32_Test#testDeterminism --select-method org.apache.commons.codec.digest.MurmurHash3_hash32_Test#testHash32DelegatesToTwoArgMethod --select-method org.apache.commons.codec.digest.MurmurHash3_hash32_Test#testRandomValues
+2026-10-17 09:21:14,644 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ MurmurHash3_hash32_Test ✔
+│     ├─ testDifferentSeedsYieldDifferentResults() ✔
+│     ├─ testDeterminism() ✔
+│     ├─ testHash32DelegatesToTwoArgMethod() ✔
+│     └─ testRandomValues() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 674 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:15,049 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_2_Test.java
+2026-10-17 09:21:15,462 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_2_Test.java:20: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_2_Test.java:20: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:21:15,464 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_3_Test.java
+2026-10-17 09:21:15,795 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_3_Test.java:97: error: cannot find symbol
+        long data1 = ThreadLocalRandom.current().nextLong();
+                     ^
+  symbol:   variable ThreadLocalRandom
+  location: class MurmurHash3_hash32_3_Test
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_3_Test.java:98: error: cannot find symbol
+        long data2 = ThreadLocalRandom.current().nextLong();
+                     ^
+  symbol:   variable ThreadLocalRandom
+  location: class MurmurHash3_hash32_3_Test
+2 errors
+
+2026-10-17 09:21:15,797 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_4_Test.java
+2026-10-17 09:21:16,171 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_4_Test.java:14: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32_4_Test.java:14: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:21:16,173 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_Test.java
+2026-10-17 09:21:16,526 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.MurmurHash3_hash32x86_Test
+2026-10-17 09:21:17,075 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:21:17,075 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.MurmurHash3_hash32x86_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ MurmurHash3_hash32x86_Test ✔
+│     ├─ testHashOfEmptyArrayIsZero() ✔
+│     ├─ testHashOfKnownSmallArray() ✘ Hash of the known small array does not match the reference value ==> expected: <-1326088477> but was: <-188683207>
+│     ├─ testNullInputThrowsNPE() ✔
+│     └─ testConvenienceMethodDelegatesCorrectly() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:MurmurHash3_hash32x86_Test:testHashOfKnownSmallArray()
+    MethodSource [className = 'org.apache.commons.codec.digest.MurmurHash3_hash32x86_Test', methodName = 'testHashOfKnownSmallArray', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Hash of the known small array does not match the reference value ==> expected: <-1326088477> but was: <-188683207>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+       org.apache.commons.codec.digest.MurmurHash3_hash32x86_Test.testHashOfKnownSmallArray(MurmurHash3_hash32x86_Test.java:131)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 61 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:21:17,437 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.MurmurHash3_hash32x86_Test#testHashOfEmptyArrayIsZero --select-method org.apache.commons.codec.digest.MurmurHash3_hash32x86_Test#testNullInputThrowsNPE --select-method org.apache.commons.codec.digest.MurmurHash3_hash32x86_Test#testConvenienceMethodDelegatesCorrectly
+2026-10-17 09:21:18,031 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ MurmurHash3_hash32x86_Test ✔
+│     ├─ testHashOfEmptyArrayIsZero() ✔
+│     ├─ testNullInputThrowsNPE() ✔
+│     └─ testConvenienceMethodDelegatesCorrectly() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 50 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:18,389 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java
+2026-10-17 09:21:18,741 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:11: error: incompatible types: possible lossy conversion from int to byte
+            38,  40, -132, -4, -71,  28,  63,  13, -43, -84,  85, -58, 118,  74, 109, -99,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:13: error: incompatible types: possible lossy conversion from int to byte
+           -82, 141, 122,  12,  60, 116, -56, -114,   6, -89,  59, -16,  33,  29, -91,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:15: error: incompatible types: possible lossy conversion from int to byte
+           -123,  80, -127, 127,  57, -57,   5, -92, 151,  49,  26, -76, -53,  83, 108,
+                                                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:16: error: incompatible types: possible lossy conversion from int to byte
+            39, -130, -48,  42, -50, 178,  19,  69, -33,  71, -25, -106, 125, -45, -24,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:16: error: incompatible types: possible lossy conversion from int to byte
+            39, -130, -48,  42, -50, 178,  19,  69, -33,  71, -25, -106, 125, -45, -24,
+                                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:17: error: incompatible types: possible lossy conversion from int to byte
+           -67, 211, -24, -67,  55,  44,  82,  48, -35,  43, -64, -15, 103, -101,  27,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:19: error: incompatible types: possible lossy conversion from int to byte
+           113, 100, -113,  89, -11,  227, 120, -96, 160, -103, 153, -111,  45, -38,
+                                      ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:19: error: incompatible types: possible lossy conversion from int to byte
+           113, 100, -113,  89, -11,  227, 120, -96, 160, -103, 153, -111,  45, -38,
+                                                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:19: error: incompatible types: possible lossy conversion from int to byte
+           113, 100, -113,  89, -11,  227, 120, -96, 160, -103, 153, -111,  45, -38,
+                                                                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:20: error: incompatible types: possible lossy conversion from int to byte
+           -88, 168, -23, -27,  67,  22, -74,  98, -119, -128, -121,  11, -42,  66,  73,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:21: error: incompatible types: possible lossy conversion from int to byte
+           -85, -68, -86, 131, -49,  79, 106,  24,  75, -19, -62,   7, -127, -31,  81,
+                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:22: error: incompatible types: possible lossy conversion from int to byte
+          -8, -14,  16,  25, -120, -109,  97,  52,  10, -75,  17, -51, 205,  58, 101,
+                                                                       ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:23: error: incompatible types: possible lossy conversion from int to byte
+            68, -26,   1,  37,   0, -34,  88, -126, 130, -108, -32,  47,  50, -59,  34,
+                                                    ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:24: error: incompatible types: possible lossy conversion from int to byte
+           -44, 196, 209,  14,  36, -117, -28, 154,  31, -81, -54, -20, 161,   3, -94,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:24: error: incompatible types: possible lossy conversion from int to byte
+           -44, 196, 209,  14,  36, -117, -28, 154,  31, -81, -54, -20, 161,   3, -94,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:24: error: incompatible types: possible lossy conversion from int to byte
+           -44, 196, 209,  14,  36, -117, -28, 154,  31, -81, -54, -20, 161,   3, -94,
+                                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:24: error: incompatible types: possible lossy conversion from int to byte
+           -44, 196, 209,  14,  36, -117, -28, 154,  31, -81, -54, -20, 161,   3, -94,
+                                                                        ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:26: error: incompatible types: possible lossy conversion from int to byte
+          201,  90, -107, -30,  56, -17, -18, -21, 112,  87,  18, 121, 115, -118, 123,
+          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+           ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                    ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                         ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                              ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                                   ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                                        ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                                             ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                                                  ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                                                       ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:36: error: incompatible types: possible lossy conversion from int to byte
+           128, 128, 132, 132, 136, 136, 140, 140, 144, 144, 148, 148, 152, 152,
+                                                                            ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+           ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                    ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                         ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                              ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                                   ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                                        ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                                             ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                                                  ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                                                       ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:37: error: incompatible types: possible lossy conversion from int to byte
+           156, 156, 160, 160, 164, 164, 168, 168, 172, 172, 176, 176, 180, 180,
+                                                                            ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+           ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                    ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                         ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                              ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                                   ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                                        ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                                             ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                                                  ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                                                       ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:38: error: incompatible types: possible lossy conversion from int to byte
+           184, 184, 188, 188, 192, 192, 196, 196, 200, 200, 204, 204, 208, 208,
+                                                                            ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+           ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                    ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                         ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                              ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                                   ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                                        ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                                             ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                                                  ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                                                       ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:39: error: incompatible types: possible lossy conversion from int to byte
+           212, 212, 216, 216, 220, 220, 224, 224, 228, 228, 232, 232, 236, 236,
+                                                                            ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:40: error: incompatible types: possible lossy conversion from int to byte
+           240, 240, 244, 244, 248, 248, 252, 252, -128, -124, -120, -116, -112,
+           ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:40: error: incompatible types: possible lossy conversion from int to byte
+           240, 240, 244, 244, 248, 248, 252, 252, -128, -124, -120, -116, -112,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:40: error: incompatible types: possible lossy conversion from int to byte
+           240, 240, 244, 244, 248, 248, 252, 252, -128, -124, -120, -116, -112,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:40: error: incompatible types: possible lossy conversion from int to byte
+           240, 240, 244, 244, 248, 248, 252, 252, -128, -124, -120, -116, -112,
+                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:40: error: incompatible types: possible lossy conversion from int to byte
+           240, 240, 244, 244, 248, 248, 252, 252, -128, -124, -120, -116, -112,
+                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:40: error: incompatible types: possible lossy conversion from int to byte
+           240, 240, 244, 244, 248, 248, 252, 252, -128, -124, -120, -116, -112,
+                                    ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:40: error: incompatible types: possible lossy conversion from int to byte
+           240, 240, 244, 244, 248, 248, 252, 252, -128, -124, -120, -116, -112,
+                                         ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:40: error: incompatible types: possible lossy conversion from int to byte
+           240, 240, 244, 244, 248, 248, 252, 252, -128, -124, -120, -116, -112,
+                                              ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                    ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                         ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                              ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                                   ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                                        ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                                             ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                                                  ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                                                       ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:45: error: incompatible types: possible lossy conversion from int to byte
+           120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172,
+                                                                            ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:46: error: incompatible types: possible lossy conversion from int to byte
+           176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228,
+           ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:46: error: incompatible types: possible lossy conversion from int to byte
+           176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228,
+                ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:46: error: incompatible types: possible lossy conversion from int to byte
+           176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228,
+                     ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:46: error: incompatible types: possible lossy conversion from int to byte
+           176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228,
+                          ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:46: error: incompatible types: possible lossy conversion from int to byte
+           176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228,
+                               ^
+src/test/java/org/apache/commons/codec/digest/MurmurHash3_hash32x86_2_Test.java:46: error: incompatible types: possible lossy conversion from int to byte
+           176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228,
+                                    ^
+100 errors
+only showing the first 100 errors, of 115 total; use -Xmaxerrs if you would like to see more
+
+2026-10-17 09:21:18,743 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha256Crypt_Test.java
+2026-10-17 09:21:19,048 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_Test
+2026-10-17 09:21:19,731 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:21:19,731 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha256Crypt_Test ✔
+│     ├─ testSha256Crypt_NoSalt() ✔
+│     ├─ testSha256Crypt_WithExplicitSalt() ✘ Invalid salt value: mysalt123
+│     └─ testSha256Crypt_DeterministicWithSameSalt() ✘ Invalid salt value: deterministicSalt
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (2):
+  JUnit Jupiter:Sha2Crypt_sha256Crypt_Test:testSha256Crypt_WithExplicitSalt()
+    MethodSource [className = 'org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_Test', methodName = 'testSha256Crypt_WithExplicitSalt', methodParameterTypes = '']
+    => java.lang.IllegalArgumentException: Invalid salt value: mysalt123
+       org.apache.commons.codec.digest.Sha2Crypt.sha2Crypt(Sha2Crypt.java:184)
+       org.apache.commons.codec.digest.Sha2Crypt.sha256Crypt(Sha2Crypt.java:114)
+       org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_Test.testSha256Crypt_WithExplicitSalt(Sha2Crypt_sha256Crypt_Test.java:55)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+  JUnit Jupiter:Sha2Crypt_sha256Crypt_Test:testSha256Crypt_DeterministicWithSameSalt()
+    MethodSource [className = 'org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_Test', methodName = 'testSha256Crypt_DeterministicWithSameSalt', methodParameterTypes = '']
+    => java.lang.IllegalArgumentException: Invalid salt value: deterministicSalt
+       org.apache.commons.codec.digest.Sha2Crypt.sha2Crypt(Sha2Crypt.java:184)
+       org.apache.commons.codec.digest.Sha2Crypt.sha256Crypt(Sha2Crypt.java:114)
+       org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_Test.testSha256Crypt_DeterministicWithSameSalt(Sha2Crypt_sha256Crypt_Test.java:72)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       [...]
+
+Test run finished after 83 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         2 tests failed          ]
+
+
+2026-10-17 09:21:20,095 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_Test#testSha256Crypt_NoSalt
+2026-10-17 09:21:20,889 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha256Crypt_Test ✔
+│     └─ testSha256Crypt_NoSalt() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 97 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:21,371 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha256Crypt_2_Test.java
+2026-10-17 09:21:21,730 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_2_Test
+2026-10-17 09:21:22,863 - evaluations.coverage_test - INFO - return code: 1
+2026-10-17 09:21:22,863 - evaluations.coverage_test - INFO - test case failed in org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_2_Test, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha256Crypt_2_Test ✔
+│     ├─ testSha256Crypt_WithNullSalt_GeneratesHashWithPrefix() ✔
+│     └─ testSha256Crypt_WithExplicitSalt_IsDeterministic() ✘ Hash must be deterministic for the same input and salt ==> expected: <$5$testsalt$B.FyXnXKXs71CiIl9DJOqirssL3QaqQnWKwm6EZPEw3> but was: <$5$testsalt$6pH3q74zv8jtAlHTq8UoXwyblkMkFOJhk95egef530A>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (1):
+  JUnit Jupiter:Sha2Crypt_sha256Crypt_2_Test:testSha256Crypt_WithExplicitSalt_IsDeterministic()
+    MethodSource [className = 'org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_2_Test', methodName = 'testSha256Crypt_WithExplicitSalt_IsDeterministic', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Hash must be deterministic for the same input and salt ==> expected: <$5$testsalt$B.FyXnXKXs71CiIl9DJOqirssL3QaqQnWKwm6EZPEw3> but was: <$5$testsalt$6pH3q74zv8jtAlHTq8UoXwyblkMkFOJhk95egef530A>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+       org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_2_Test.testSha256Crypt_WithExplicitSalt_IsDeterministic(Sha2Crypt_sha256Crypt_2_Test.java:94)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+       java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       [...]
+
+Test run finished after 510 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         1 tests failed          ]
+
+
+2026-10-17 09:21:23,238 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_2_Test#testSha256Crypt_WithNullSalt_GeneratesHashWithPrefix
+2026-10-17 09:21:24,402 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha256Crypt_2_Test ✔
+│     └─ testSha256Crypt_WithNullSalt_GeneratesHashWithPrefix() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 591 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         1 tests found           ]
+[         0 tests skipped         ]
+[         1 tests started         ]
+[         0 tests aborted         ]
+[         1 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:24,773 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha256Crypt_3_Test.java
+2026-10-17 09:21:25,124 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_3_Test
+2026-10-17 09:21:26,226 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:21:26,227 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha256Crypt_3_Test ✔
+│     ├─ testSha256Crypt_WithNullSaltGeneratesRandomSalt() ✔
+│     └─ testSha256Crypt_WithExplicitSalt() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 513 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:26,569 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_3_Test#testSha256Crypt_WithNullSaltGeneratesRandomSalt --select-method org.apache.commons.codec.digest.Sha2Crypt_sha256Crypt_3_Test#testSha256Crypt_WithExplicitSalt
+2026-10-17 09:21:27,793 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha256Crypt_3_Test ✔
+│     ├─ testSha256Crypt_WithNullSaltGeneratesRandomSalt() ✔
+│     └─ testSha256Crypt_WithExplicitSalt() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 525 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         2 tests found           ]
+[         0 tests skipped         ]
+[         2 tests started         ]
+[         0 tests aborted         ]
+[         2 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:28,173 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha512Crypt_Test.java
+2026-10-17 09:21:28,490 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha512Crypt_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+ ^
+  symbol: class ExtendWith
+src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha512Crypt_Test.java:10: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+2 errors
+
+2026-10-17 09:21:28,492 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha512Crypt_2_Test.java
+2026-10-17 09:21:28,835 - evaluations.coverage_test - ERROR - error occured in compile test class, info:
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha512Crypt_2_Test.java:24: error: cannot find symbol
+@ExtendWith(MockitoExtension.class)
+            ^
+  symbol: class MockitoExtension
+1 error
+
+2026-10-17 09:21:28,836 - evaluations.coverage_test - INFO - javac -cp @dependencies.txt -d target/test-classes src/test/java/org/apache/commons/codec/digest/Sha2Crypt_sha512Crypt_3_Test.java
+2026-10-17 09:21:29,150 - evaluations.coverage_test - INFO - Running single unit test, testclass: org.apache.commons.codec.digest.Sha2Crypt_sha512Crypt_3_Test
+2026-10-17 09:21:30,293 - evaluations.coverage_test - INFO - return code: 0
+2026-10-17 09:21:30,293 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha512Crypt_3_Test ✔
+│     ├─ sha512Crypt_WithExplicitSalt_ReturnsCorrectlyPrefixedHash() ✔
+│     ├─ sha512Crypt_WithEmptyKey_ProducesNonNullHash() ✔
+│     └─ sha512Crypt_WithNullSalt_GeneratesRandomSaltAndValidFormat() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 568 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:30,821 - evaluations.coverage_test - INFO - java -javaagent:/work/code/./dependencies/jacocoagent.jar=destfile=target/jacoco.exec -cp libs/*:target/test-classes:target/classes:/work/code/./dependencies/* org.junit.platform.console.ConsoleLauncher --disable-banner --disable-ansi-colors --fail-if-no-tests --select-method org.apache.commons.codec.digest.Sha2Crypt_sha512Crypt_3_Test#sha512Crypt_WithExplicitSalt_ReturnsCorrectlyPrefixedHash --select-method org.apache.commons.codec.digest.Sha2Crypt_sha512Crypt_3_Test#sha512Crypt_WithEmptyKey_ProducesNonNullHash --select-method org.apache.commons.codec.digest.Sha2Crypt_sha512Crypt_3_Test#sha512Crypt_WithNullSalt_GeneratesRandomSaltAndValidFormat
+2026-10-17 09:21:32,030 - evaluations.coverage_test - INFO - test execution info: ╷
+├─ JUnit Jupiter ✔
+│  └─ Sha2Crypt_sha512Crypt_3_Test ✔
+│     ├─ sha512Crypt_WithExplicitSalt_ReturnsCorrectlyPrefixedHash() ✔
+│     ├─ sha512Crypt_WithEmptyKey_ProducesNonNullHash() ✔
+│     └─ sha512Crypt_WithNullSalt_GeneratesRandomSaltAndValidFormat() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 589 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         3 tests found           ]
+[         0 tests skipped         ]
+[         3 tests started         ]
+[         0 tests aborted         ]
+[         3 tests successful      ]
+[         0 tests failed          ]
+
+
+2026-10-17 09:21:32,387 - evaluations.coverage_test - INFO - {'org.apache.commons.codec.binary.Base64#decode(byte[], int, int, Context)': {'test_cases': 11, 'passed_cases': 7}, 'org.apache.commons.codec.binary.Base32#decode(byte[], int, int, Context)': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#encode(byte[], int, int, Context)': {'test_cases': 12, 'passed_cases': 12}, 'org.apache.commons.codec.binary.Base32#encode(byte[], int, int, Context)': {'test_cases': 23, 'passed_cases': 20}, 'org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)': {'test_cases': 10, 'passed_cases': 9}, 'org.apache.commons.codec.binary.Base32#builder()': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base32#getLineSeparator()': {'test_cases': 5, 'passed_cases': 5}, 'org.apache.commons.codec.binary.Base32#isInAlphabet(byte)': {'test_cases': 11, 'passed_cases': 9}, 'org.apache.commons.codec.binary.Base64#builder()': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#decodeBase64(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#decodeBase64(String)': {'test_cases': 8, 'passed_cases': 6}, 'org.apache.commons.codec.binary.Base64#decodeInteger(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#encodeBase64(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean)': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean, boolean)': {'test_cases': 4, 'passed_cases': 3}, 'org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean, boolean, int)': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#encodeBase64Chunked(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#encodeBase64String(byte[])': {'test_cases': 5, 'passed_cases': 4}, 'org.apache.commons.codec.binary.Base64#encodeBase64URLSafe(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#encodeBase64URLSafeString(byte[])': {'test_cases': 4, 'passed_cases': 1}, 'org.apache.commons.codec.binary.Base64#encodeInteger(BigInteger)': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#isBase64(byte)': {'test_cases': 8, 'passed_cases': 8}, 'org.apache.commons.codec.binary.Base64#isBase64(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#isBase64(String)': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#toIntegerBytes(BigInteger)': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#getLineSeparator()': {'error_type': 'compile error'}, 'org.apache.commons.codec.binary.Base64#isInAlphabet(byte)': {'test_cases': 4, 'passed_cases': 3, 'correct_inst_cov': 0.0, 'correct_bran_cov': 0.0}, 'org.apache.commons.codec.binary.Base64#isUrlSafe()': {'test_cases': 5, 'passed_cases': 5}, 'org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(byte[], Random)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(byte[], String)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(String)': {'test_cases': 5, 'passed_cases': 4}, 'org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(String, String)': {'test_cases': 6, 'passed_cases': 6}, 'org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[])': {'test_cases': 4, 'passed_cases': 3}, 'org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], Random)': {'test_cases': 5, 'passed_cases': 5}, 'org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String)': {'test_cases': 5, 'passed_cases': 4}, 'org.apache.commons.codec.digest.MurmurHash3#hash128(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.MurmurHash3#hash128x64(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.MurmurHash3#hash128x64(byte[], int, int, int)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.MurmurHash3#hash32(long)': {'test_cases': 4, 'passed_cases': 4}, 'org.apache.commons.codec.digest.MurmurHash3#hash32(long, int)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.MurmurHash3#hash32(long, long)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.MurmurHash3#hash32(long, long, int)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.MurmurHash3#hash32x86(byte[])': {'test_cases': 4, 'passed_cases': 3}, 'org.apache.commons.codec.digest.MurmurHash3#hash32x86(byte[], int, int, int)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.Sha2Crypt#sha256Crypt(byte[])': {'test_cases': 3, 'passed_cases': 1}, 'org.apache.commons.codec.digest.Sha2Crypt#sha256Crypt(byte[], String)': {'test_cases': 2, 'passed_cases': 1}, 'org.apache.commons.codec.digest.Sha2Crypt#sha256Crypt(byte[], String, Random)': {'test_cases': 2, 'passed_cases': 2}, 'org.apache.commons.codec.digest.Sha2Crypt#sha512Crypt(byte[])': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.Sha2Crypt#sha512Crypt(byte[], String)': {'error_type': 'compile error'}, 'org.apache.commons.codec.digest.Sha2Crypt#sha512Crypt(byte[], String, Random)': {'test_cases': 3, 'passed_cases': 3}}
+2026-10-17 09:21:32,387 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base64_decode/org.apache.commons.codec.binary/Base64.html, method: decode(byte[], int, int, Context)
+2026-10-17 09:21:32,396 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base64_decode_correct/org.apache.commons.codec.binary/Base64.html, method: decode(byte[], int, int, Context)
+2026-10-17 09:21:32,404 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base64_encode/org.apache.commons.codec.binary/Base64.html, method: encode(byte[], int, int, Context)
+2026-10-17 09:21:32,408 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base64_encode_correct/org.apache.commons.codec.binary/Base64.html, method: encode(byte[], int, int, Context)
+2026-10-17 09:21:32,413 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base32_encode/org.apache.commons.codec.binary/Base32.html, method: encode(byte[], int, int, Context)
+2026-10-17 09:21:32,415 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base32_encode_correct/org.apache.commons.codec.binary/Base32.html, method: encode(byte[], int, int, Context)
+2026-10-17 09:21:32,418 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Md5Crypt_md5Crypt/org.apache.commons.codec.digest/Md5Crypt.html, method: md5Crypt(byte[], String, String, Random)
+2026-10-17 09:21:32,420 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Md5Crypt_md5Crypt_correct/org.apache.commons.codec.digest/Md5Crypt.html, method: md5Crypt(byte[], String, String, Random)
+2026-10-17 09:21:32,424 - tools.execute_test - INFO - Extracting coverage for class: /work/code/../evaluation/commons-codec/reports/jacoco-report-html/Base32_getLineSeparator/org.apache.commons.codec.binary/Base32.html, method: getLineSeparator()
+2026-10-17 09:21:32,428 - STDERR - ERROR - Traceback (most recent call last):
+2026-10-17 09:21:32,429 - STDERR - ERROR -   File "/work/code/evaluation.py", line 68, in <module>
+2026-10-17 09:21:32,429 - STDERR - ERROR -     run(args.operation)
+2026-10-17 09:21:32,429 - STDERR - ERROR -     ~~~^^^^^^^^^^^^^^^^
+2026-10-17 09:21:32,429 - STDERR - ERROR -   File "/work/code/evaluation.py", line 42, in run
+2026-10-17 09:21:32,429 - STDERR - ERROR -     test_coverage(FS, TS, dataset_info)
+2026-10-17 09:21:32,429 - STDERR - ERROR -     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17 09:21:32,429 - STDERR - ERROR -   File "/work/code/evaluations/coverage_test.py", line 256, in test_coverage
+2026-10-17 09:21:32,429 - STDERR - ERROR -     coverage_data = calculator.generate_project_summary(test_result, filter=True)
+2026-10-17 09:21:32,429 - STDERR - ERROR -   File "/work/code/evaluations/coverage_test.py", line 156, in generate_project_summary
+2026-10-17 09:21:32,429 - STDERR - ERROR -     cov_score = self.extract_single_coverage(html_path, method)
+2026-10-17 09:21:32,429 - STDERR - ERROR -   File "/work/code/tools/execute_test.py", line 176, in extract_single_coverage
+2026-10-17 09:21:32,429 - STDERR - ERROR -     branch_cov = float(tds[4].string.replace("%", ""))/100
+2026-10-17 09:21:32,429 - STDERR - ERROR -                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17 09:21:32,429 - STDERR - ERROR - ValueError: could not convert string to float: 'n/a'
