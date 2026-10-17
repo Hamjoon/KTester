@@ -1,0 +1,4 @@
+services:
+  ktester:
+    volumes:
+      - /Users/donggi/_projects/experiment-projects/commons-codec:/repo
