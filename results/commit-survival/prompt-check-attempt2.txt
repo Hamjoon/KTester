@@ -1,0 +1,13 @@
+time="2026-10-17T16:45:19+09:00" level=warning msg="Found orphan containers (ktester-stage4c, ktester-stage4b, ktester-stage4) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container docker-ktester-run-71fbeb64ce1e Creating
+ Container docker-ktester-run-71fbeb64ce1e Created
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+Traceback (most recent call last):
+  File "/work/docker/commit_survival_prompt_check.py", line 27, in <module>
+    generate_prompt.generate_init_prompts(FS, TS, dataset)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/work/code/procedure/generate_prompt.py", line 30, in generate_init_prompts
+    construct_context = searcher.collect_construct_context(test_info["class"], test_info["method-name"], test_info["source-path"])
+  File "/work/code/tools/code_search.py", line 180, in collect_construct_context
+    raise ValueError(f"Method `{method_name}` not found in class `{class_name}`")
+ValueError: Method `isArrayByteBase64(byte[])` not found in class `org.apache.commons.codec.binary.Base64`

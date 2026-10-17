@@ -1,0 +1,120 @@
+{
+  "tasks": 66,
+  "matched": 52,
+  "missing": [
+    {
+      "id": "Base64_isArrayByteBase64",
+      "class": "org.apache.commons.codec.binary.Base64",
+      "method": "isArrayByteBase64(byte[])",
+      "indexed_candidates": []
+    },
+    {
+      "id": "MurmurHash3_hash128_3",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash128(byte[], int, int, int)",
+      "indexed_candidates": [
+        "public static long[] hash128(byte[])"
+      ]
+    },
+    {
+      "id": "MurmurHash3_hash128_2",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash128(String)",
+      "indexed_candidates": [
+        "public static long[] hash128(byte[])"
+      ]
+    },
+    {
+      "id": "MurmurHash3_hash32",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash32(byte[])",
+      "indexed_candidates": [
+        "public static int hash32(long)",
+        "public static int hash32(long, int)",
+        "public static int hash32(long, long)",
+        "public static int hash32(long, long, int)"
+      ]
+    },
+    {
+      "id": "MurmurHash3_hash32_4",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash32(byte[], int)",
+      "indexed_candidates": [
+        "public static int hash32(long)",
+        "public static int hash32(long, int)",
+        "public static int hash32(long, long)",
+        "public static int hash32(long, long, int)"
+      ]
+    },
+    {
+      "id": "MurmurHash3_hash32_7",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash32(byte[], int, int)",
+      "indexed_candidates": [
+        "public static int hash32(long)",
+        "public static int hash32(long, int)",
+        "public static int hash32(long, long)",
+        "public static int hash32(long, long, int)"
+      ]
+    },
+    {
+      "id": "MurmurHash3_hash32_9",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash32(byte[], int, int, int)",
+      "indexed_candidates": [
+        "public static int hash32(long)",
+        "public static int hash32(long, int)",
+        "public static int hash32(long, long)",
+        "public static int hash32(long, long, int)"
+      ]
+    },
+    {
+      "id": "MurmurHash3_hash32_2",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash32(String)",
+      "indexed_candidates": [
+        "public static int hash32(long)",
+        "public static int hash32(long, int)",
+        "public static int hash32(long, long)",
+        "public static int hash32(long, long, int)"
+      ]
+    },
+    {
+      "id": "MurmurHash3_hash64",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash64(byte[])",
+      "indexed_candidates": []
+    },
+    {
+      "id": "MurmurHash3_hash64_5",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash64(byte[], int, int)",
+      "indexed_candidates": []
+    },
+    {
+      "id": "MurmurHash3_hash64_6",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash64(byte[], int, int, int)",
+      "indexed_candidates": []
+    },
+    {
+      "id": "MurmurHash3_hash64_2",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash64(int)",
+      "indexed_candidates": []
+    },
+    {
+      "id": "MurmurHash3_hash64_3",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash64(long)",
+      "indexed_candidates": []
+    },
+    {
+      "id": "MurmurHash3_hash64_4",
+      "class": "org.apache.commons.codec.digest.MurmurHash3",
+      "method": "hash64(short)",
+      "indexed_candidates": []
+    }
+  ],
+  "index_unchanged": true
+}

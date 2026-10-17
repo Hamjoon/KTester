@@ -1,0 +1,33 @@
+{
+  "status": "blocked-before-generation",
+  "settings": {
+    "DATASET_PATH": "../data/commit-survival/commons-codec",
+    "CODE_INFO_PATH": "../data/project_index",
+    "MODEL": "openai/gpt-oss-120b",
+    "TEMPERATURE": 0.5,
+    "PROJECTS": [
+      "jdom2"
+    ],
+    "CASES_LIST": [],
+    "PROMPT_LIST": [
+      "condition",
+      "io",
+      "exception"
+    ],
+    "CASE_THEN_CODE": true,
+    "MAX_WORKERS": 8,
+    "FIX_TRIES": 5
+  },
+  "api_key": "present",
+  "model_calls": 0,
+  "generation_rounds": 0,
+  "prompt_check_attempts": 2,
+  "error": "ValueError: Method `isArrayByteBase64(byte[])` not found in class `org.apache.commons.codec.binary.Base64`",
+  "matched_index_methods": 52,
+  "missing_index_methods": 14,
+  "protected_sha256": {
+    "data/project_index/json/commons-codec.json": "8abf50757e6194a4b4b23de06023d2cc134d04e7008892311cb13cdce2d0469c",
+    "data/project_index/codegraph/commons-codec_invoke.json": "e3f581b0b95a7e24f72ddda5ad748ef039c7c87fef6edaece5ed5b9c0374ebba",
+    "data/commit-survival/commons-codec/dataset_info.json": "2c76f9695a84dcfb01d9daab7cf9b916f2803bace58f0dc0ef494e50c30df91f"
+  }
+}
