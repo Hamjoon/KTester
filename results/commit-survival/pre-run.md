@@ -20,3 +20,15 @@ The second traceback (trailing whitespace normalized) is preserved in prompt-che
 Ground rule 6 requires stopping after two failures for the same reason. No generation round was started; no model calls or provider metadata exist; no generated tests, evaluator measurements, three-run validation, de-duplication, or denominator freeze were produced. The developer denominator remains 143; the LLM denominator is not established. Existing replication archives and unrelated untracked files were left untouched.
 
 Resume requires Gary's decision on how to resolve index/population compatibility while respecting the unchanged-index and unchanged-algorithm requirements. Do not silently reduce the 66-method population, rebuild or patch the index, or alter prompts or code. Re-run the prompt-only preflight after an approved resolution, then resume Step 1.5 / Step 2.
+
+## 2026-10-17 — Part 2 addendum: 52-method preflight
+
+Step A is complete and committed: KTester a21fe8e; commons-codec 126cf005. Previous 66-method files are preserved under population-66/ in both repositories. Source annotations confirm all 14 missing methods are deprecated in both the snapshot and upstream cd16988; none of the 52 retained methods is deprecated. All retained signatures match the authors' unchanged index. Class counts: Base32 5, Base64 22, Md5Crypt 10, MurmurHash3 9, Sha2Crypt 6.
+
+DatasetPrepare used the unmodified jars and existing snapshot symlink. Raw output has 39 unique IDs; the existing renumbering algorithm yields 52 unique IDs, changing 13 and preserving 39. Every previously unique entry, all non-naming fields and the five original focal entries are preserved. Code fields are nonempty and class/path naming checks pass. Validation and exact exclusions are in data/commit-survival/commons-codec/.
+
+The first reduction-helper invocation stopped before any dataset mutation because a whole-file equality assertion was too strict: Base32/Base64 contain comment differences. The corrected check compares every parsed method declaration after comment removal and verifies deprecation annotations in both sources. The second invocation passed. Source, index, author dataset, jars and settings hashes were unchanged through extraction. No Java or pipeline code was edited.
+
+Step B passed: all 52 tasks assembled five prompts each (260 prompt files), without a model call. See prompt-check.json and prompt-check-52.txt. Dry-check outputs are isolated from the clean generation output directories. Fixed settings still match; DATASET_PATH and CODE_INFO_PATH are unchanged from the prior preflight. CASES_LIST remains [].
+
+Pre-generation routing conflict found by source inspection: code/tools/llm_api.py:51 hard-codes extra_body={"provider": {"order": ["OpenAI"], "allow_fallbacks": False}}. This conflicts with Part 2's unpinned-provider requirement, while ground rule 2 forbids changes under code/. Gary has been asked whether to permit removing only that routing argument. Generation is not started pending that decision; no round allowance is consumed.

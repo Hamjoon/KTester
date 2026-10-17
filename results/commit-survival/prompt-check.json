@@ -1,0 +1,13 @@
+{
+  "tasks": 52,
+  "prompts_per_task": 5,
+  "prompt_list": [
+    "condition4case",
+    "io4case",
+    "exception4case",
+    "gencode"
+  ],
+  "case_then_code": true,
+  "model_calls": 0,
+  "status": "passed"
+}

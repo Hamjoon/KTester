@@ -1,0 +1,57 @@
+time="2026-10-17T17:11:29+09:00" level=warning msg="Found orphan containers (ktester-stage4c, ktester-stage4b, ktester-stage4) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container docker-ktester-run-aba48264766c Creating
+ Container docker-ktester-run-aba48264766c Created
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+10 results found.
+10 results found.
+9 results found.
+9 results found.
+6 results found.
+2 results found.
+3 results found.
+2 results found.
+2 results found.
+4 results found.
+4 results found.
+2 results found.
+4 results found.
+3 results found.
+3 results found.
+5 results found.
+4 results found.
+6 results found.
+3 results found.
+6 results found.
+7 results found.
+2 results found.
+3 results found.
+2 results found.
+2 results found.
+3 results found.
+2 results found.
+2 results found.
+5 results found.
+6 results found.
+6 results found.
+5 results found.
+5 results found.
+6 results found.
+7 results found.
+5 results found.
+4 results found.
+2 results found.
+2 results found.
+2 results found.
+4 results found.
+5 results found.
+4 results found.
+5 results found.
+2 results found.
+7 results found.
+3 results found.
+7 results found.
+6 results found.
+3 results found.
+7 results found.
+6 results found.
+{"tasks": 52, "prompts_per_task": 5, "prompt_list": ["condition4case", "io4case", "exception4case", "gencode"], "case_then_code": true, "model_calls": 0, "status": "passed"}
