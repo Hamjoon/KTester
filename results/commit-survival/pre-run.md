@@ -36,3 +36,17 @@ Pre-generation routing conflict found by source inspection: code/tools/llm_api.p
 ## 2026-10-17 — authorized provider unpin
 
 Gary explicitly authorized removal of only the extra_body provider-routing argument in code/tools/llm_api.py, originally introduced locally in September commit 9c055e13. Commit b61d042e8348a1c8296e4300efecfa43c06ab520 (Unpin OpenRouter provider for gpt-oss-120b) removes exactly that line. No prompt, model, algorithm, temperature, repair, concurrency or scoring setting changed. This resolves the previously recorded routing blocker and is the sole authorized pipeline-code exception. Provider routing is now unpinned. Generation settings, key presence and the clean output directories were rechecked before Step 2.
+
+## 2026-10-17 — round 1 measured; round 2 workspace prepared
+
+Round 1 ran once from 08:16:22 to 09:21:32 UTC (3,910 seconds) and produced all 52 class files, so no targeted rerun was eligible. Archive commit: 87c7fc3; generated-source commit in commons-codec: 624e36ed. Canonical archive: results/commit-survival/round1/commons-codec; prescribed stage path is retained as a relative symlink.
+
+Five tasks completed full case generation. The other 47 hit missing per-task response directories; post-processing later stopped at Base32_builder's missing fix directory. The run was left unchanged until it ended. There were five logged JSON parsing errors and no recorded 600-second timeouts or OOMs. Providers were not logged by the released client.
+
+The reference evaluator executed tests but exited 1 when its JaCoCo parser tried converting branch coverage 'n/a' to float at Base32.getLineSeparator. Its final summary is unavailable. The raw log dictionary was recovered without changing scoring: 24 compiled files, 153 executed test cases, 128 passed cases. Full evidence and traceback are archived.
+
+Independent validation at t: 52 files, 24 compiled, 151 listed methods, 126 pass all three runs, zero duplicate bodies, 126 unique methods versus 143 developer methods (shortfall 17). Per-round measurement commit in commons-codec: 199261b3. The denominator has not been frozen because another round is required by the matching rule.
+
+The next-round workspace preparation removed 9,857 authorized output files and zero directories, then created 121 missing directories matching preparation.set_file_structure. All 52 task directory sets were verified. Source/test files already copied to generated/round1/ and canonical round 1 archives remain intact. Details are in round2-workspace.json. No round 2 model call has been made.
+
+Gary has been asked whether to treat only the known reference-evaluator n/a parsing failure as nonblocking if it recurs. Ground rule 6 otherwise requires stopping after repeated command failure, while the matching rule requires round 2 and the author's evaluator is reference-only. No evaluation code or scoring change is proposed. Await that decision before starting round 2.
