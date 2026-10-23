@@ -1,4 +1,7 @@
 services:
   ktester:
+    env_file: [.env]
     volumes:
-      - /Users/donggi/_projects/experiment-projects/commons-codec:/repo
+      - /Users/donggi/_projects/experiment-projects/json-schema-validator:/repo
+      - /Users/donggi/_projects/experiment-projects/jsoup:/jsoup:ro
+      - /Users/donggi/_projects/experiment-projects/commons-codec:/codec:ro

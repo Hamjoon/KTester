@@ -1,0 +1,9287 @@
+{
+  "com.networknt.org.apache.commons.validator.routines.InetAddressValidator": {
+    "getInstance()": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/EmailValidator.java",
+          "lines": [
+            [
+              202,
+              208
+            ],
+            216
+          ]
+        }
+      ]
+    ],
+    "getValidInet6AddressPart(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/InetAddressValidator.java",
+          "lines": [
+            [
+              169,
+              170
+            ],
+            229
+          ]
+        }
+      ]
+    ],
+    "isValid(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/EmailValidator.java",
+          "lines": [
+            [
+              202,
+              209
+            ],
+            216
+          ]
+        }
+      ]
+    ],
+    "isValidInet4Address(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/InetAddressValidator.java",
+          "lines": [
+            [
+              117,
+              119
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/InetAddressValidator.java",
+          "lines": [
+            [
+              169,
+              207
+            ],
+            229
+          ]
+        }
+      ]
+    ],
+    "isValidInet6Address(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/InetAddressValidator.java",
+          "lines": [
+            [
+              117,
+              119
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.org.apache.commons.validator.routines.RegexValidator": {
+    "isValid(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              291,
+              306
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              270,
+              287
+            ]
+          ]
+        }
+      ]
+    ],
+    "match(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/InetAddressValidator.java",
+          "lines": [
+            [
+              127,
+              129
+            ],
+            160
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              270,
+              282
+            ],
+            287
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              291,
+              303
+            ],
+            306
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.org.apache.commons.validator.routines.EmailValidator": {
+    "getInstance(boolean, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/EmailValidator.java",
+          "lines": [
+            [
+              119,
+              121
+            ]
+          ]
+        }
+      ]
+    ],
+    "isValid(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/format/IdnEmailFormat.java",
+          "lines": [
+            [
+              13,
+              16
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/format/EmailFormat.java",
+          "lines": [
+            [
+              29,
+              32
+            ]
+          ]
+        }
+      ]
+    ],
+    "isValidDomain(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/format/IPv6AwareEmailValidator.java",
+          "lines": [
+            [
+              27,
+              30
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/EmailValidator.java",
+          "lines": [
+            [
+              170,
+              189
+            ],
+            194
+          ]
+        }
+      ]
+    ],
+    "isValidUser(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/EmailValidator.java",
+          "lines": [
+            [
+              170,
+              185
+            ],
+            194
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.org.apache.commons.validator.routines.DomainValidator": {
+    "isValid(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/EmailValidator.java",
+          "lines": [
+            [
+              202,
+              213
+            ],
+            [
+              215,
+              216
+            ]
+          ]
+        }
+      ]
+    ],
+    "isValidTld(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/EmailValidator.java",
+          "lines": [
+            [
+              202,
+              213
+            ],
+            216
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              270,
+              284
+            ],
+            287
+          ]
+        }
+      ]
+    ],
+    "isValidInfrastructureTld(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              319,
+              323
+            ],
+            326
+          ]
+        }
+      ]
+    ],
+    "isValidGenericTld(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              319,
+              324
+            ],
+            326
+          ]
+        }
+      ]
+    ],
+    "isValidCountryCodeTld(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              319,
+              326
+            ]
+          ]
+        }
+      ]
+    ],
+    "isValidLocalTld(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              319,
+              320
+            ],
+            326
+          ]
+        }
+      ]
+    ],
+    "chompLeadingDot(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              335,
+              336
+            ],
+            338
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              347,
+              348
+            ],
+            351
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              360,
+              361
+            ],
+            364
+          ]
+        }
+      ]
+    ],
+    "unicodeToASCII(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              335,
+              336
+            ],
+            338
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              347,
+              348
+            ],
+            351
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              360,
+              361
+            ],
+            364
+          ]
+        }
+      ]
+    ],
+    "isOnlyASCII(String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              2246,
+              2247
+            ],
+            2277
+          ]
+        }
+      ]
+    ],
+    "arrayContains(String[], String)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              335,
+              338
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              347,
+              351
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              360,
+              364
+            ]
+          ]
+        }
+      ]
+    ],
+    "DomainValidator(boolean, List)": [
+      [
+        {
+          "file_path": "com/networknt/org/apache/commons/validator/routines/DomainValidator.java",
+          "lines": [
+            [
+              165,
+              168
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.org.apache.commons.validator.routines.DomainValidator.LazyHolder": {},
+  "com.networknt.org.apache.commons.validator.routines.DomainValidator.Item": {},
+  "com.networknt.org.apache.commons.validator.routines.DomainValidator.IDNBUGHOLDER": {},
+  "com.networknt.org.apache.commons.validator.routines.DomainValidator.ArrayType": {},
+  "com.networknt.schema.CollectorContext": {
+    "enterDynamicScope()": [
+      [
+        {
+          "file_path": "com/networknt/schema/NotValidator.java",
+          "lines": [
+            [
+              38,
+              43
+            ],
+            57
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              41,
+              46
+            ],
+            61,
+            121
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              146,
+              152
+            ],
+            171
+          ]
+        }
+      ]
+    ],
+    "enterDynamicScope(JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              62,
+              64
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              389
+            ],
+            441
+          ]
+        }
+      ]
+    ],
+    "exitDynamicScope()": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              41,
+              48
+            ],
+            84
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              41,
+              48
+            ],
+            84
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/NotValidator.java",
+          "lines": [
+            [
+              38,
+              52
+            ],
+            57
+          ]
+        }
+      ]
+    ],
+    "getDynamicScope()": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              121,
+              123
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              130,
+              132
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              94,
+              96
+            ],
+            114
+          ]
+        }
+      ]
+    ],
+    "getOutermostSchema()": [
+      [
+        {
+          "file_path": "com/networknt/schema/RecursiveRefValidator.java",
+          "lines": [
+            [
+              45,
+              55
+            ],
+            71
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RecursiveRefValidator.java",
+          "lines": [
+            [
+              73,
+              83
+            ],
+            101
+          ]
+        }
+      ]
+    ],
+    "getEvaluatedItems()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              93,
+              94
+            ],
+            136
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              103,
+              105
+            ],
+            107
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ContainsValidator.java",
+          "lines": [
+            [
+              68,
+              74
+            ],
+            103
+          ]
+        }
+      ]
+    ],
+    "getEvaluatedProperties()": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              102,
+              104
+            ],
+            106
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AdditionalPropertiesValidator.java",
+          "lines": [
+            [
+              66,
+              79
+            ],
+            113
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              41,
+              54
+            ],
+            75,
+            84
+          ]
+        }
+      ]
+    ],
+    "add(String, Object)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              574,
+              583
+            ],
+            585
+          ]
+        }
+      ]
+    ],
+    "get(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              123,
+              124
+            ],
+            127
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              574,
+              577
+            ],
+            585
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              41,
+              47
+            ],
+            104
+          ]
+        }
+      ]
+    ],
+    "loadCollectors()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              469,
+              481
+            ],
+            486
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              516,
+              528
+            ],
+            533
+          ]
+        }
+      ]
+    ],
+    "newScope(JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              72,
+              74
+            ],
+            76
+          ]
+        }
+      ]
+    ],
+    "CollectorContext(boolean, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              642,
+              647
+            ],
+            650
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.CollectorContext.Scope": {
+    "getContainingSchema()": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              72,
+              74
+            ],
+            76
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              94,
+              96
+            ],
+            106,
+            114
+          ]
+        }
+      ]
+    ],
+    "getEvaluatedItems()": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              121,
+              123
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              310,
+              311
+            ],
+            314
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              400
+            ],
+            441
+          ]
+        }
+      ]
+    ],
+    "getEvaluatedProperties()": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              130,
+              132
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              310,
+              312
+            ],
+            314
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              404
+            ],
+            441
+          ]
+        }
+      ]
+    ],
+    "mergeWith(Scope)": [
+      [
+        {
+          "file_path": "com/networknt/schema/NotValidator.java",
+          "lines": [
+            [
+              38,
+              54
+            ],
+            57
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              395
+            ],
+            441
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              146,
+              167
+            ],
+            171
+          ]
+        }
+      ]
+    ],
+    "Scope(boolean, boolean, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              218,
+              220
+            ]
+          ]
+        }
+      ]
+    ],
+    "Scope(boolean, boolean, boolean, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              222,
+              224
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.JsonType": {
+    "toString()": [
+      [
+        {
+          "file_path": "com/networknt/schema/TypeValidator.java",
+          "lines": [
+            [
+              52,
+              62
+            ],
+            76
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnionTypeValidator.java",
+          "lines": [
+            [
+              64,
+              80
+            ],
+            84
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              79
+            ],
+            150
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ContainsValidator": {
+    "boundsViolated(String, String, int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ContainsValidator.java",
+          "lines": [
+            [
+              68,
+              91
+            ],
+            98,
+            103
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.FormatValidator": {
+    "FormatValidator(String, JsonNode, JsonSchema, ValidationContext, Format, ValidatorTypeCode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatKeyword.java",
+          "lines": [
+            [
+              42,
+              49
+            ],
+            [
+              66,
+              67
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.PatternPropertiesValidator": {},
+  "com.networknt.schema.TrueValidator": {},
+  "com.networknt.schema.MaxItemsValidator": {},
+  "com.networknt.schema.MinimumValidator": {},
+  "com.networknt.schema.Version4": {
+    "getInstance()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              168,
+              170
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.Format": {
+    "getName()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              123,
+              124
+            ],
+            126
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/FormatValidator.java",
+          "lines": [
+            [
+              39,
+              50
+            ],
+            53,
+            56,
+            61,
+            65,
+            70
+          ]
+        }
+      ]
+    ],
+    "matches(ExecutionContext, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatValidator.java",
+          "lines": [
+            [
+              39,
+              60
+            ],
+            70
+          ]
+        }
+      ]
+    ],
+    "getErrorMessageDescription()": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatValidator.java",
+          "lines": [
+            [
+              39,
+              53
+            ],
+            56,
+            61,
+            70
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.OneOfValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              129,
+              133
+            ],
+            140
+          ]
+        }
+      ]
+    ],
+    "resetValidatorState(CollectorContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              41,
+              112
+            ],
+            121
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.walk.JsonSchemaWalkListener": {
+    "onWalkStart(WalkEvent)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              22,
+              26
+            ],
+            36
+          ]
+        }
+      ]
+    ],
+    "onWalkEnd(WalkEvent, Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              38,
+              42
+            ],
+            45
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.walk.DefaultKeywordWalkListenerRunner": {
+    "getKeywordName(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultKeywordWalkListenerRunner.java",
+          "lines": [
+            [
+              21,
+              26
+            ],
+            40
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultKeywordWalkListenerRunner.java",
+          "lines": [
+            [
+              42,
+              48
+            ],
+            58
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.walk.WalkFlow": {},
+  "com.networknt.schema.walk.JsonSchemaWalker": {
+    "walk(ExecutionContext, JsonNode, JsonNode, String, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              535,
+              552
+            ],
+            570
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.walk.WalkEvent": {
+    "getRefSchema(URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/WalkEvent.java",
+          "lines": [
+            [
+              63,
+              67
+            ],
+            69
+          ]
+        }
+      ]
+    ],
+    "builder()": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.walk.WalkEvent.WalkEventBuilder": {
+    "executionContext(ExecutionContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "schemaPath(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "schemaNode(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "parentSchema(JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "keyWordName(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "node(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "rootNode(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "at(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "currentJsonSchemaFactory(JsonSchemaFactory)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "validationContext(ValidationContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "build()": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/AbstractWalkListenerRunner.java",
+          "lines": [
+            [
+              14,
+              17
+            ],
+            20
+          ]
+        }
+      ]
+    ],
+    "WalkEventBuilder()": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/WalkEvent.java",
+          "lines": [
+            [
+              139,
+              141
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.walk.WalkListenerRunner": {
+    "runPreWalkListeners(ExecutionContext, String, JsonNode, JsonNode, String, String, JsonNode, JsonSchema, ValidationContext, JsonSchemaFactory)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              184,
+              186
+            ],
+            196
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PrefixItemsValidator.java",
+          "lines": [
+            [
+              104,
+              106
+            ],
+            133
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator202012.java",
+          "lines": [
+            [
+              110,
+              112
+            ],
+            139
+          ]
+        }
+      ]
+    ],
+    "runPostWalkListeners(ExecutionContext, String, JsonNode, JsonNode, String, String, JsonNode, JsonSchema, ValidationContext, JsonSchemaFactory, Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              184,
+              192
+            ],
+            196
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              141,
+              153
+            ],
+            157
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PrefixItemsValidator.java",
+          "lines": [
+            [
+              104,
+              120
+            ],
+            133
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.walk.DefaultPropertyWalkListenerRunner": {
+    "DefaultPropertyWalkListenerRunner(List)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              47
+            ],
+            101
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              103,
+              112
+            ],
+            118
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.walk.DefaultItemWalkListenerRunner": {},
+  "com.networknt.schema.walk.AbstractWalkListenerRunner": {
+    "constructWalkEvent(ExecutionContext, String, JsonNode, JsonNode, String, String, JsonNode, JsonSchema, ValidationContext, JsonSchemaFactory)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultPropertyWalkListenerRunner.java",
+          "lines": [
+            [
+              20,
+              24
+            ],
+            27
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultPropertyWalkListenerRunner.java",
+          "lines": [
+            [
+              29,
+              33
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultItemWalkListenerRunner.java",
+          "lines": [
+            [
+              20,
+              24
+            ],
+            27
+          ]
+        }
+      ]
+    ],
+    "runPreWalkListeners(List, WalkEvent)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultPropertyWalkListenerRunner.java",
+          "lines": [
+            [
+              20,
+              27
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultItemWalkListenerRunner.java",
+          "lines": [
+            [
+              20,
+              27
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultKeywordWalkListenerRunner.java",
+          "lines": [
+            [
+              21,
+              32
+            ],
+            37,
+            40
+          ]
+        }
+      ]
+    ],
+    "runPostWalkListeners(List, WalkEvent, Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultPropertyWalkListenerRunner.java",
+          "lines": [
+            [
+              29,
+              35
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultItemWalkListenerRunner.java",
+          "lines": [
+            [
+              29,
+              36
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/walk/DefaultKeywordWalkListenerRunner.java",
+          "lines": [
+            [
+              42,
+              53
+            ],
+            [
+              57,
+              58
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.SchemaValidatorsConfig": {
+    "disableUnevaluatedItems()": [
+      [
+        {
+          "file_path": "com/networknt/schema/SchemaValidatorsConfig.java",
+          "lines": [
+            [
+              152,
+              153
+            ],
+            156
+          ]
+        }
+      ]
+    ],
+    "disableUnevaluatedProperties()": [
+      [
+        {
+          "file_path": "com/networknt/schema/SchemaValidatorsConfig.java",
+          "lines": [
+            [
+              152,
+              154
+            ],
+            156
+          ]
+        }
+      ]
+    ],
+    "enableUnevaluatedItems()": [
+      [
+        {
+          "file_path": "com/networknt/schema/SchemaValidatorsConfig.java",
+          "lines": [
+            [
+              168,
+              169
+            ],
+            172
+          ]
+        }
+      ]
+    ],
+    "enableUnevaluatedProperties()": [
+      [
+        {
+          "file_path": "com/networknt/schema/SchemaValidatorsConfig.java",
+          "lines": [
+            [
+              168,
+              170
+            ],
+            172
+          ]
+        }
+      ]
+    ],
+    "isUnevaluatedItemsAnalysisDisabled()": [
+      [
+        {
+          "file_path": "com/networknt/schema/SchemaValidatorsConfig.java",
+          "lines": [
+            [
+              188,
+              190
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              642,
+              647
+            ],
+            650
+          ]
+        }
+      ]
+    ],
+    "isUnevaluatedPropertiesAnalysisDisabled()": [
+      [
+        {
+          "file_path": "com/networknt/schema/SchemaValidatorsConfig.java",
+          "lines": [
+            [
+              196,
+              198
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              642,
+              648
+            ],
+            650
+          ]
+        }
+      ]
+    ],
+    "isTypeLoose()": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              147,
+              150
+            ],
+            156
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/EnumValidator.java",
+          "lines": [
+            [
+              80,
+              85
+            ],
+            90
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              71,
+              77
+            ],
+            91
+          ]
+        }
+      ]
+    ],
+    "getUriTranslator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              405
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "isHandleNullableField()": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              63,
+              65
+            ],
+            69
+          ]
+        }
+      ]
+    ],
+    "isEcma262Validator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/regex/RegularExpression.java",
+          "lines": [
+            [
+              8,
+              10
+            ],
+            13
+          ]
+        }
+      ]
+    ],
+    "isJavaSemantics()": [
+      [
+        {
+          "file_path": "com/networknt/schema/TypeFactory.java",
+          "lines": [
+            [
+              59,
+              76
+            ],
+            90
+          ]
+        }
+      ]
+    ],
+    "isCustomMessageSupported()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              348,
+              349
+            ],
+            358
+          ]
+        }
+      ]
+    ],
+    "getPropertyWalkListeners()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              47
+            ],
+            101
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              103,
+              112
+            ],
+            118
+          ]
+        }
+      ]
+    ],
+    "getExecutionContextSupplier()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              642,
+              645
+            ],
+            650
+          ]
+        }
+      ]
+    ],
+    "isLosslessNarrowing()": [
+      [
+        {
+          "file_path": "com/networknt/schema/TypeFactory.java",
+          "lines": [
+            [
+              59,
+              78
+            ],
+            90
+          ]
+        }
+      ]
+    ],
+    "isOpenAPI3StyleDiscriminators()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              57
+            ],
+            99,
+            104,
+            133,
+            139,
+            150
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              41,
+              64
+            ],
+            104
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              411
+            ],
+            441
+          ]
+        }
+      ]
+    ],
+    "doLoadCollectors()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              469,
+              479
+            ],
+            486
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              516,
+              526
+            ],
+            533
+          ]
+        }
+      ]
+    ],
+    "isStrict(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatKeyword.java",
+          "lines": [
+            [
+              42,
+              54
+            ],
+            67
+          ]
+        }
+      ]
+    ],
+    "getResourceBundle()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              133,
+              145
+            ],
+            151
+          ]
+        }
+      ]
+    ],
+    "SchemaValidatorsConfig()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              462,
+              464
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationContext.java",
+          "lines": [
+            [
+              81,
+              83
+            ],
+            86
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ValidationResult": {
+    "getExecutionContext()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationResult.java",
+          "lines": [
+            [
+              39,
+              41
+            ]
+          ]
+        }
+      ]
+    ],
+    "ValidationResult(Set, ExecutionContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              469,
+              484
+            ],
+            486
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              516,
+              531
+            ],
+            533
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.MinLengthValidator": {},
+  "com.networknt.schema.PathType.JSONPath": {},
+  "com.networknt.schema.PathType": {
+    "append(String, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              267,
+              269
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              46,
+              48
+            ],
+            52
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              86,
+              90
+            ],
+            94
+          ]
+        }
+      ]
+    ],
+    "append(String, int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              278,
+              280
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              37,
+              40
+            ],
+            44
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              86,
+              91
+            ],
+            95
+          ]
+        }
+      ]
+    ],
+    "getRoot()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonValidator.java",
+          "lines": [
+            [
+              37,
+              39
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              256,
+              258
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AbstractJsonValidator.java",
+          "lines": [
+            [
+              25,
+              27
+            ]
+          ]
+        }
+      ]
+    ],
+    "convertToJsonPointer(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              41,
+              67
+            ],
+            84
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              41,
+              67
+            ],
+            84
+          ]
+        }
+      ]
+    ],
+    "fromLegacy(String)": [],
+    "fromJsonPath(String)": [],
+    "parseShorthand(StringBuilder, String, int)": [],
+    "parseSelector(StringBuilder, String, int)": [],
+    "parseQuote(StringBuilder, String, int)": []
+  },
+  "com.networknt.schema.MinPropertiesValidator": {},
+  "com.networknt.schema.DependentRequired": {},
+  "com.networknt.schema.RequiredValidator": {},
+  "com.networknt.schema.UnionTypeValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/TypeValidator.java",
+          "lines": [
+            [
+              52,
+              57
+            ],
+            76
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.DependenciesValidator": {},
+  "com.networknt.schema.FalseValidator": {},
+  "com.networknt.schema.ReadOnlyValidator": {},
+  "com.networknt.schema.ExclusiveMaximumValidator": {},
+  "com.networknt.schema.FormatKeyword": {
+    "getFormats()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              209,
+              218
+            ]
+          ]
+        }
+      ]
+    ],
+    "getValue()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              92,
+              107
+            ],
+            109
+          ]
+        }
+      ]
+    ],
+    "FormatKeyword(ValidatorTypeCode, Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              92,
+              106
+            ],
+            109
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.MultipleOfValidator": {},
+  "com.networknt.schema.JsonSchemaException": {
+    "JsonSchemaException(ValidationMessage)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              34
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              133,
+              143
+            ],
+            151
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              51
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "JsonSchemaException(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/SpecVersionDetector.java",
+          "lines": [
+            [
+              59,
+              61
+            ],
+            63
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              345,
+              348
+            ],
+            353
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              166,
+              170
+            ],
+            178,
+            184
+          ]
+        }
+      ]
+    ],
+    "JsonSchemaException(Throwable)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              374,
+              380
+            ],
+            382
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              388,
+              394
+            ],
+            396
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              412
+            ],
+            458,
+            460
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.JsonSchemaVersion": {
+    "getInstance()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              285,
+              287
+            ],
+            292
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.UnevaluatedItemsValidator": {
+    "allPaths(JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              41,
+              50
+            ],
+            84
+          ]
+        }
+      ]
+    ],
+    "reportUnevaluatedPaths(Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              41,
+              62
+            ],
+            77,
+            84
+          ]
+        }
+      ]
+    ],
+    "unevaluatedPaths(CollectorContext, Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              41,
+              58
+            ],
+            84
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.Collector": {
+    "combine(Object)": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              196,
+              200
+            ],
+            202
+          ]
+        }
+      ]
+    ],
+    "collect()": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              207,
+              212
+            ],
+            216
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.Version202012": {
+    "getInstance()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              184,
+              186
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.TypeFactory": {
+    "getSchemaNodeType(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              158,
+              177
+            ],
+            180
+          ]
+        }
+      ]
+    ],
+    "getValueNodeType(JsonNode, SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/EnumValidator.java",
+          "lines": [
+            [
+              97,
+              98
+            ],
+            108
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              73
+            ],
+            130
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/MinLengthValidator.java",
+          "lines": [
+            [
+              40,
+              43
+            ],
+            53
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.IfValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/IfValidator.java",
+          "lines": [
+            [
+              110,
+              113
+            ],
+            127
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.MaxPropertiesValidator": {},
+  "com.networknt.schema.RefValidator": {
+    "getJsonSchemaRef(JsonSchema, ValidationContext, String, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              55,
+              84
+            ],
+            [
+              101,
+              102
+            ]
+          ]
+        }
+      ]
+    ],
+    "determineSchemaUri(URIFactory, JsonSchema, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              55,
+              71
+            ],
+            102
+          ]
+        }
+      ]
+    ],
+    "determineSchemaUrn(URNFactory, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              55,
+              78
+            ],
+            102
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.AllOfValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              106,
+              109
+            ],
+            116
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ItemsValidator": {
+    "doValidate(ExecutionContext, Set, int, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              71,
+              84
+            ],
+            88,
+            91
+          ]
+        }
+      ]
+    ],
+    "doWalk(ExecutionContext, HashSet, int, JsonNode, JsonNode, String, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              138,
+              153
+            ],
+            157,
+            160
+          ]
+        }
+      ]
+    ],
+    "walkSchema(ExecutionContext, JsonSchema, JsonNode, JsonNode, String, boolean, Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              162,
+              166
+            ],
+            172,
+            177,
+            182
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              138,
+              153
+            ],
+            157,
+            160
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.PropertiesValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              103,
+              110
+            ],
+            118
+          ]
+        }
+      ]
+    ],
+    "applyPropertyDefaults(ObjectNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              103,
+              107
+            ],
+            118
+          ]
+        }
+      ]
+    ],
+    "getDefaultNode(Entry)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              120,
+              124
+            ],
+            134
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              103,
+              107
+            ],
+            118
+          ]
+        }
+      ]
+    ],
+    "walkSchema(ExecutionContext, Entry, JsonNode, JsonNode, String, boolean, Set, WalkListenerRunner)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              73
+            ],
+            101
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              103,
+              114
+            ],
+            118
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.NotAllowedValidator": {},
+  "com.networknt.schema.JsonValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonValidator.java",
+          "lines": [
+            [
+              37,
+              39
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AbstractJsonValidator.java",
+          "lines": [
+            [
+              25,
+              27
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              227,
+              230
+            ]
+          ]
+        }
+      ]
+    ],
+    "preloadJsonSchema()": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnionTypeValidator.java",
+          "lines": [
+            [
+              86,
+              89
+            ],
+            91
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              624,
+              628
+            ],
+            631
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ExecutionContext": {
+    "getCollectorContext()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationResult.java",
+          "lines": [
+            [
+              39,
+              41
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              93,
+              94
+            ],
+            136
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              146,
+              148
+            ],
+            171
+          ]
+        }
+      ]
+    ],
+    "ExecutionContext(CollectorContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              642,
+              650
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.utils.StringUtils": {
+    "isBlank(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              157,
+              161
+            ]
+          ]
+        }
+      ]
+    ],
+    "isNotBlank(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              157,
+              159
+            ],
+            161
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              90,
+              94
+            ],
+            98
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              218
+            ],
+            227
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.utils.StringChecker": {
+    "isInteger(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              112
+            ],
+            130
+          ]
+        }
+      ]
+    ],
+    "isBoolean(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              116
+            ],
+            130
+          ]
+        }
+      ]
+    ],
+    "isNumeric(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              147,
+              152
+            ],
+            156
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              120
+            ],
+            130
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.utils.UCDLoader": {
+    "loadMapping(String, Function)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/UnicodeDatabase.java",
+          "lines": [
+            [
+              88,
+              90
+            ],
+            101
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              370,
+              372
+            ],
+            393
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.utils.UnicodeDatabase": {
+    "isArabicIndicDigit(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              354,
+              356
+            ],
+            360
+          ]
+        }
+      ]
+    ],
+    "isExtendedArabicIndicDigit(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              362,
+              364
+            ],
+            368
+          ]
+        }
+      ]
+    ],
+    "isGreek(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              227,
+              233
+            ],
+            236
+          ]
+        }
+      ]
+    ],
+    "isHebrew(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              246,
+              252
+            ],
+            255
+          ]
+        }
+      ]
+    ],
+    "isKatakana(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              265,
+              271
+            ],
+            274
+          ]
+        }
+      ]
+    ],
+    "isJoinTypeDual(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              324,
+              339
+            ],
+            349,
+            352
+          ]
+        }
+      ]
+    ],
+    "isJoinTypeLeft(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              324,
+              339
+            ],
+            352
+          ]
+        }
+      ]
+    ],
+    "isJoinTypeRight(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              324,
+              349
+            ],
+            352
+          ]
+        }
+      ]
+    ],
+    "isJoinTypeTransparent(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              324,
+              335
+            ],
+            345,
+            352
+          ]
+        }
+      ]
+    ],
+    "loadJoiningTypes()": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/UnicodeDatabase.java",
+          "lines": [
+            [
+              63,
+              64
+            ],
+            66
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/UnicodeDatabase.java",
+          "lines": [
+            [
+              68,
+              69
+            ],
+            71
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/UnicodeDatabase.java",
+          "lines": [
+            [
+              73,
+              74
+            ],
+            76
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.utils.RFC5892": {
+    "isValid(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/format/IdnHostnameFormat.java",
+          "lines": [
+            [
+              10,
+              14
+            ]
+          ]
+        }
+      ]
+    ],
+    "isACE(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              90,
+              97
+            ],
+            147
+          ]
+        }
+      ]
+    ],
+    "isCombiningMark(int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/RFC5892.java",
+          "lines": [
+            [
+              90,
+              114
+            ],
+            147
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.utils.JsonNodeUtil": {
+    "visitNode(PathType, String, JsonNode, Collection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              23,
+              25
+            ],
+            27
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              37,
+              42
+            ],
+            44
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              33
+            ],
+            35
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              23,
+              25
+            ],
+            27
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              37,
+              42
+            ],
+            44
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              33
+            ],
+            35
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              37,
+              42
+            ],
+            44
+          ]
+        }
+      ]
+    ],
+    "visitArray(PathType, String, JsonNode, Collection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              33
+            ],
+            35
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              23,
+              25
+            ],
+            27
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              33
+            ],
+            35
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              37,
+              42
+            ],
+            44
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              33
+            ],
+            35
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              33
+            ],
+            35
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              46,
+              50
+            ],
+            52
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              31
+            ],
+            35
+          ]
+        }
+      ]
+    ],
+    "visitObject(PathType, String, JsonNode, Collection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              31
+            ],
+            35
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              23,
+              25
+            ],
+            27
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              31
+            ],
+            35
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              37,
+              42
+            ],
+            44
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              33
+            ],
+            35
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              31
+            ],
+            35
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              46,
+              50
+            ],
+            52
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              29,
+              31
+            ],
+            35
+          ]
+        }
+      ]
+    ],
+    "isNodeNullable(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              63,
+              66
+            ],
+            69
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              94
+            ],
+            130
+          ]
+        }
+      ]
+    ],
+    "isNodeNullable(JsonNode, SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              93
+            ],
+            130
+          ]
+        }
+      ]
+    ],
+    "equalsToSchemaType(JsonNode, JsonType, JsonSchema, ValidationContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/TypeValidator.java",
+          "lines": [
+            [
+              48,
+              50
+            ]
+          ]
+        }
+      ]
+    ],
+    "detectVersion(ValidationContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              85
+            ],
+            130
+          ]
+        }
+      ]
+    ],
+    "isNumber(JsonNode, SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/MinimumValidator.java",
+          "lines": [
+            [
+              116,
+              119
+            ],
+            128
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ExclusiveMaximumValidator.java",
+          "lines": [
+            [
+              100,
+              103
+            ],
+            112
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/MaximumValidator.java",
+          "lines": [
+            [
+              109,
+              112
+            ],
+            121
+          ]
+        }
+      ]
+    ],
+    "isEnumObjectSchema(JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              102
+            ],
+            130
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.NotValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/NotValidator.java",
+          "lines": [
+            [
+              59,
+              62
+            ],
+            70
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ErrorMessageType": {
+    "getErrorCode()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ErrorMessageType.java",
+          "lines": [
+            [
+              37,
+              39
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            138
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              144,
+              146
+            ],
+            149
+          ]
+        }
+      ]
+    ],
+    "getCustomMessage()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              140,
+              142
+            ]
+          ]
+        }
+      ]
+    ],
+    "getErrorCodeValue()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              31
+            ],
+            37
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.regex.JoniRegularExpression": {
+    "JoniRegularExpression(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/regex/RegularExpression.java",
+          "lines": [
+            [
+              8,
+              11
+            ],
+            13
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.regex.JDKRegularExpression": {
+    "JDKRegularExpression(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/regex/RegularExpression.java",
+          "lines": [
+            [
+              8,
+              13
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.regex.RegularExpression": {
+    "matches(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PatternValidator.java",
+          "lines": [
+            [
+              47,
+              49
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PatternPropertiesValidator.java",
+          "lines": [
+            [
+              44,
+              58
+            ],
+            68
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AdditionalPropertiesValidator.java",
+          "lines": [
+            [
+              115,
+              135
+            ],
+            153
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.RecursiveRefValidator": {},
+  "com.networknt.schema.MaximumValidator": {},
+  "com.networknt.schema.EnumValidator": {
+    "isTypeLooseContainsInEnum(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/EnumValidator.java",
+          "lines": [
+            [
+              80,
+              85
+            ],
+            90
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.DependentSchemas": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/DependentSchemas.java",
+          "lines": [
+            [
+              65,
+              68
+            ],
+            74
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.SpecVersion": {},
+  "com.networknt.schema.SpecVersion.VersionFlag": {
+    "getVersionFlagValue()": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            137
+          ]
+        }
+      ]
+    ],
+    "fromId(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/SpecVersionDetector.java",
+          "lines": [
+            [
+              108,
+              110
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/SpecVersionDetector.java",
+          "lines": [
+            [
+              72,
+              78
+            ],
+            81
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.PatternValidator": {
+    "matches(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PatternValidator.java",
+          "lines": [
+            [
+              51,
+              61
+            ],
+            72
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.JsonSchemaRef": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              146,
+              160
+            ],
+            171
+          ]
+        }
+      ]
+    ],
+    "getSchema()": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              205,
+              208
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              146,
+              158
+            ],
+            171
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              173,
+              185
+            ],
+            198
+          ]
+        }
+      ]
+    ],
+    "walk(ExecutionContext, JsonNode, JsonNode, String, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              173,
+              187
+            ],
+            198
+          ]
+        }
+      ]
+    ],
+    "JsonSchemaRef(JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              104,
+              113
+            ],
+            119
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              55,
+              94
+            ],
+            99,
+            102
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.PrefixItemsValidator": {
+    "doWalk(ExecutionContext, Set, int, JsonNode, JsonNode, String, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PrefixItemsValidator.java",
+          "lines": [
+            [
+              80,
+              93
+            ],
+            98
+          ]
+        }
+      ]
+    ],
+    "walkSchema(ExecutionContext, JsonSchema, JsonNode, JsonNode, String, boolean, Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PrefixItemsValidator.java",
+          "lines": [
+            [
+              100,
+              102
+            ]
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/PrefixItemsValidator.java",
+          "lines": [
+            [
+              80,
+              93
+            ],
+            98
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.MinItemsValidator": {},
+  "com.networknt.schema.SpecVersionDetector": {
+    "detectOptionalVersion(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/SpecVersionDetector.java",
+          "lines": [
+            [
+              59,
+              60
+            ],
+            63
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/SpecVersionDetector.java",
+          "lines": [
+            [
+              86,
+              88
+            ],
+            95
+          ]
+        }
+      ]
+    ],
+    "detectOptionalVersion(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            137
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              355,
+              357
+            ],
+            361
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationContext.java",
+          "lines": [
+            [
+              119,
+              122
+            ]
+          ]
+        }
+      ]
+    ],
+    "detectVersionFromPath(Path)": [
+      [
+        {
+          "file_path": "com/networknt/schema/SpecVersionDetector.java",
+          "lines": [
+            [
+              86,
+              89
+            ],
+            95
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ApplyDefaultsStrategy": {
+    "shouldApplyPropertyDefaults()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              103,
+              106
+            ],
+            118
+          ]
+        }
+      ]
+    ],
+    "shouldApplyPropertyDefaultsIfNull()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              120,
+              129
+            ],
+            134
+          ]
+        }
+      ]
+    ],
+    "shouldApplyArrayDefaults()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PrefixItemsValidator.java",
+          "lines": [
+            [
+              80,
+              84
+            ],
+            98
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              138,
+              144
+            ],
+            160
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator202012.java",
+          "lines": [
+            [
+              84,
+              91
+            ],
+            108
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.PropertyNamesValidator": {},
+  "com.networknt.schema.ItemsValidator202012": {
+    "walkSchema(ExecutionContext, JsonSchema, JsonNode, JsonNode, String, boolean, Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator202012.java",
+          "lines": [
+            [
+              84,
+              101
+            ],
+            104,
+            108
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.MaxLengthValidator": {},
+  "com.networknt.schema.BaseJsonValidator": {
+    "obtainSubSchemaNode(JsonNode, ValidationContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              223,
+              225
+            ]
+          ]
+        }
+      ]
+    ],
+    "debug(Logger, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatValidator.java",
+          "lines": [
+            [
+              39,
+              40
+            ],
+            70
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PatternPropertiesValidator.java",
+          "lines": [
+            [
+              44,
+              45
+            ],
+            68
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/TrueValidator.java",
+          "lines": [
+            [
+              31,
+              32
+            ],
+            35
+          ]
+        }
+      ]
+    ],
+    "checkDiscriminatorMatch(DiscriminatorContext, ObjectNode, String, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              41,
+              85
+            ],
+            104
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              434
+            ],
+            441
+          ]
+        }
+      ]
+    ],
+    "registerAndMergeDiscriminator(DiscriminatorContext, ObjectNode, JsonSchema, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              41,
+              76
+            ],
+            104
+          ]
+        }
+      ]
+    ],
+    "checkForImplicitDiscriminatorMappingMatch(DiscriminatorContext, String, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              99,
+              110
+            ],
+            120,
+            125
+          ]
+        }
+      ]
+    ],
+    "checkForExplicitDiscriminatorMappingMatch(DiscriminatorContext, String, JsonNode, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              99,
+              114
+            ],
+            125
+          ]
+        }
+      ]
+    ],
+    "noExplicitDiscriminatorKeyOverride(JsonNode, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              99,
+              119
+            ],
+            125
+          ]
+        }
+      ]
+    ],
+    "getSchemaPath()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              587,
+              590
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              184,
+              187
+            ],
+            193,
+            196
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              141,
+              147
+            ],
+            154,
+            157
+          ]
+        }
+      ]
+    ],
+    "getSchemaNode()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ContainsValidator.java",
+          "lines": [
+            [
+              110,
+              112
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              232,
+              233
+            ],
+            238
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/MinMaxContainsValidator.java",
+          "lines": [
+            [
+              46,
+              48
+            ]
+          ]
+        }
+      ]
+    ],
+    "getParentSchema()": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              232,
+              233
+            ],
+            238
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              236,
+              239
+            ],
+            242
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              227,
+              231
+            ],
+            234
+          ]
+        }
+      ]
+    ],
+    "fetchSubSchemaNode(ValidationContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              244,
+              245
+            ],
+            250
+          ]
+        }
+      ]
+    ],
+    "validate(ExecutionContext, JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              450,
+              452
+            ]
+          ]
+        }
+      ]
+    ],
+    "preloadJsonSchemas(Collection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PatternPropertiesValidator.java",
+          "lines": [
+            [
+              70,
+              73
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/DependenciesValidator.java",
+          "lines": [
+            [
+              77,
+              80
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              118,
+              121
+            ]
+          ]
+        }
+      ]
+    ],
+    "getPathType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              86,
+              87
+            ],
+            95
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              86,
+              87
+            ],
+            94
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              41,
+              67
+            ],
+            84
+          ]
+        }
+      ]
+    ],
+    "atRoot()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              454,
+              456
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              488,
+              490
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              504,
+              506
+            ]
+          ]
+        }
+      ]
+    ],
+    "atPath(String, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              141,
+              146
+            ],
+            151,
+            154,
+            157
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertyNamesValidator.java",
+          "lines": [
+            [
+              36,
+              43
+            ],
+            54
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AdditionalPropertiesValidator.java",
+          "lines": [
+            [
+              66,
+              79
+            ],
+            104,
+            106,
+            113
+          ]
+        }
+      ]
+    ],
+    "atPath(String, int)": [
+      [
+        {
+          "file_path": "com/networknt/schema/PrefixItemsValidator.java",
+          "lines": [
+            [
+              100,
+              102
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              93,
+              95
+            ],
+            136
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              162,
+              166
+            ],
+            172,
+            177,
+            182
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.JsonMetaSchema": {
+    "pattern(String, String, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              46,
+              48
+            ]
+          ]
+        }
+      ]
+    ],
+    "builder(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              209,
+              214
+            ],
+            218
+          ]
+        }
+      ]
+    ],
+    "getIdKeyword()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              270
+            ],
+            321
+          ]
+        }
+      ]
+    ],
+    "readId(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              483,
+              484
+            ],
+            491
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationContext.java",
+          "lines": [
+            [
+              65,
+              67
+            ]
+          ]
+        }
+      ]
+    ],
+    "getNodeByFragmentRef(String, JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              228,
+              240
+            ],
+            247
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              196,
+              217
+            ],
+            224
+          ]
+        }
+      ]
+    ],
+    "readText(JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              224,
+              226
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              228,
+              233
+            ],
+            247
+          ]
+        }
+      ]
+    ],
+    "getUri()": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              132,
+              133
+            ],
+            137
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              130,
+              131
+            ],
+            133
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationContext.java",
+          "lines": [
+            [
+              119,
+              120
+            ],
+            122
+          ]
+        }
+      ]
+    ],
+    "newValidator(ValidationContext, String, String, JsonNode, JsonSchema, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationContext.java",
+          "lines": [
+            [
+              60,
+              63
+            ]
+          ]
+        }
+      ]
+    ],
+    "JsonMetaSchema(String, String, Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              141,
+              145
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.JsonMetaSchema.Builder": {
+    "createKeywordsMap(Map, Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              141,
+              143
+            ],
+            145
+          ]
+        }
+      ]
+    ],
+    "addKeywords(Collection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/Version4.java",
+          "lines": [
+            [
+              13,
+              14
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version6.java",
+          "lines": [
+            [
+              14,
+              15
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version202012.java",
+          "lines": [
+            [
+              13,
+              15
+            ],
+            39
+          ]
+        }
+      ]
+    ],
+    "addFormat(Format)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              128,
+              130
+            ],
+            133
+          ]
+        }
+      ]
+    ],
+    "addFormats(Collection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/Version4.java",
+          "lines": [
+            [
+              13,
+              14
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version6.java",
+          "lines": [
+            [
+              14,
+              15
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version202012.java",
+          "lines": [
+            [
+              13,
+              15
+            ],
+            39
+          ]
+        }
+      ]
+    ],
+    "idKeyword(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/Version4.java",
+          "lines": [
+            [
+              13,
+              14
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version6.java",
+          "lines": [
+            [
+              14,
+              15
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version202012.java",
+          "lines": [
+            [
+              13,
+              15
+            ],
+            39
+          ]
+        }
+      ]
+    ],
+    "build()": [
+      [
+        {
+          "file_path": "com/networknt/schema/Version4.java",
+          "lines": [
+            [
+              13,
+              14
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version6.java",
+          "lines": [
+            [
+              14,
+              15
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version202012.java",
+          "lines": [
+            [
+              13,
+              15
+            ],
+            39
+          ]
+        }
+      ]
+    ],
+    "Builder(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/Version4.java",
+          "lines": [
+            [
+              13,
+              14
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              200,
+              202
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version6.java",
+          "lines": [
+            [
+              14,
+              15
+            ],
+            30
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ValidationMessage": {
+    "setCode(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              204
+            ],
+            227
+          ]
+        }
+      ]
+    ],
+    "getPath()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertyNamesValidator.java",
+          "lines": [
+            [
+              36,
+              45
+            ],
+            50,
+            54
+          ]
+        }
+      ]
+    ],
+    "setPath(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              205
+            ],
+            227
+          ]
+        }
+      ]
+    ],
+    "setSchemaPath(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              206
+            ],
+            227
+          ]
+        }
+      ]
+    ],
+    "setArguments(String[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              207
+            ],
+            227
+          ]
+        }
+      ]
+    ],
+    "setDetails(Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              208
+            ],
+            227
+          ]
+        }
+      ]
+    ],
+    "getMessage()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertyNamesValidator.java",
+          "lines": [
+            [
+              36,
+              46
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "setMessage(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              219
+            ],
+            221,
+            227
+          ]
+        }
+      ]
+    ],
+    "getType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              126
+            ],
+            150
+          ]
+        }
+      ]
+    ],
+    "setType(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              203
+            ],
+            227
+          ]
+        }
+      ]
+    ],
+    "ofWithCustom(String, ErrorMessageType, MessageFormat, String, String, String, String[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              140,
+              142
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              32
+            ],
+            37
+          ]
+        }
+      ]
+    ],
+    "of(String, ErrorMessageType, MessageFormat, String, String, String[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              133,
+              143
+            ],
+            151
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              283
+            ],
+            321
+          ]
+        }
+      ]
+    ],
+    "ValidationMessage()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              201,
+              202
+            ],
+            227
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ValidationMessage.Builder": {
+    "type(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            138
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              144,
+              146
+            ],
+            149
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              41
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "code(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            138
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              144,
+              146
+            ],
+            149
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              41
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "path(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            138
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              144,
+              146
+            ],
+            149
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              41
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "schemaPath(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            138
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              144,
+              146
+            ],
+            149
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              41
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "arguments(String[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            138
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              41
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "details(Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              144,
+              146
+            ],
+            149
+          ]
+        }
+      ]
+    ],
+    "format(MessageFormat)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            138
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              144,
+              146
+            ],
+            149
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              41
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "customMessage(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              134
+            ],
+            138
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              41
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "build()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              41
+            ],
+            54
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              144,
+              149
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessage.java",
+          "lines": [
+            [
+              132,
+              138
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.UnevaluatedPropertiesValidator": {
+    "allPaths(JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              41,
+              50
+            ],
+            84
+          ]
+        }
+      ]
+    ],
+    "reportUnevaluatedPaths(Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              41,
+              62
+            ],
+            77,
+            84
+          ]
+        }
+      ]
+    ],
+    "unevaluatedPaths(CollectorContext, Set)": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              41,
+              58
+            ],
+            84
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.JsonSchema": {
+    "from(ValidationContext, String, URI, JsonNode, JsonSchema, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              336,
+              338
+            ]
+          ]
+        }
+      ]
+    ],
+    "getValidationContext()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              125,
+              127
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              146,
+              158
+            ],
+            171
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              173,
+              185
+            ],
+            198
+          ]
+        }
+      ]
+    ],
+    "getCurrentUri()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              332,
+              334
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              121,
+              123
+            ],
+            134
+          ]
+        }
+      ]
+    ],
+    "getRefSchemaNode(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              166,
+              168
+            ],
+            184
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              244,
+              247
+            ],
+            250
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              104,
+              108
+            ],
+            119
+          ]
+        }
+      ]
+    ],
+    "findLexicalRoot()": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              94,
+              101
+            ],
+            [
+              113,
+              114
+            ]
+          ]
+        }
+      ]
+    ],
+    "findAncestor()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              196,
+              197
+            ],
+            224
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              236,
+              239
+            ],
+            242
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              55,
+              94
+            ],
+            99,
+            102
+          ]
+        }
+      ]
+    ],
+    "handleNullNode(String, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              196,
+              214
+            ],
+            219,
+            224
+          ]
+        }
+      ]
+    ],
+    "read(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              386
+            ],
+            441
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              535,
+              539
+            ],
+            570
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              624,
+              627
+            ],
+            631
+          ]
+        }
+      ]
+    ],
+    "activeDialect()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              314
+            ],
+            321
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              386
+            ],
+            441
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              314
+            ],
+            321
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              535,
+              539
+            ],
+            570
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              314
+            ],
+            321
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              624,
+              627
+            ],
+            631
+          ]
+        }
+      ]
+    ],
+    "getCustomMessage(JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              260
+            ],
+            264,
+            278,
+            321
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              386
+            ],
+            441
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              260
+            ],
+            264,
+            278,
+            321
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              535,
+              539
+            ],
+            570
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              260
+            ],
+            264,
+            278,
+            321
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              624,
+              627
+            ],
+            631
+          ]
+        }
+      ]
+    ],
+    "getMessageNode(JsonNode, JsonSchema, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              360,
+              369
+            ],
+            373
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              360,
+              369
+            ],
+            373
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              348,
+              353
+            ],
+            358
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              260
+            ],
+            264,
+            278,
+            321
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              386
+            ],
+            441
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              348,
+              353
+            ],
+            358
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              260
+            ],
+            264,
+            278,
+            321
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              608,
+              610
+            ],
+            613
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              535,
+              539
+            ],
+            570
+          ]
+        }
+      ]
+    ],
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaRef.java",
+          "lines": [
+            [
+              36,
+              38
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertyNamesValidator.java",
+          "lines": [
+            [
+              36,
+              43
+            ],
+            54
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/NotValidator.java",
+          "lines": [
+            [
+              38,
+              46
+            ],
+            57
+          ]
+        }
+      ]
+    ],
+    "validateAndCollect(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              454,
+              456
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              488,
+              490
+            ]
+          ]
+        }
+      ]
+    ],
+    "walk(ExecutionContext, JsonNode, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              508,
+              510
+            ]
+          ]
+        }
+      ]
+    ],
+    "walk(ExecutionContext, JsonNode, JsonNode, String, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaRef.java",
+          "lines": [
+            [
+              44,
+              46
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              184,
+              190
+            ],
+            196
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/NotValidator.java",
+          "lines": [
+            [
+              59,
+              65
+            ],
+            70
+          ]
+        }
+      ]
+    ],
+    "walkAtNodeInternal(ExecutionContext, JsonNode, JsonNode, String, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              504,
+              506
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              512,
+              514
+            ]
+          ]
+        }
+      ]
+    ],
+    "setValidatorState(ExecutionContext, boolean, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              384
+            ],
+            441
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              469,
+              475
+            ],
+            486
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              454,
+              456
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              469,
+              475
+            ],
+            486
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              488,
+              490
+            ]
+          ]
+        }
+      ]
+    ],
+    "toString()": [
+      [
+        {
+          "file_path": "com/networknt/schema/NotValidator.java",
+          "lines": [
+            [
+              59,
+              67
+            ],
+            70
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/NotValidator.java",
+          "lines": [
+            [
+              38,
+              48
+            ],
+            57
+          ]
+        }
+      ]
+    ],
+    "hasRequiredValidator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              84
+            ],
+            101
+          ]
+        }
+      ]
+    ],
+    "getRequiredValidator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              85
+            ],
+            101
+          ]
+        }
+      ]
+    ],
+    "hasTypeValidator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              74
+            ],
+            150
+          ]
+        }
+      ]
+    ],
+    "getTypeValidator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              75
+            ],
+            150
+          ]
+        }
+      ]
+    ],
+    "getValidators()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              386
+            ],
+            441
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              535,
+              539
+            ],
+            570
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              624,
+              627
+            ],
+            631
+          ]
+        }
+      ]
+    ],
+    "initializeValidators()": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              205,
+              208
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertyNamesValidator.java",
+          "lines": [
+            [
+              57,
+              60
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator202012.java",
+          "lines": [
+            [
+              145,
+              148
+            ]
+          ]
+        }
+      ]
+    ],
+    "isDynamicAnchor()": [
+      [
+        {
+          "file_path": "com/networknt/schema/CollectorContext.java",
+          "lines": [
+            [
+              94,
+              102
+            ],
+            107,
+            114
+          ]
+        }
+      ]
+    ],
+    "createExecutionContext()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              450,
+              452
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              488,
+              490
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              508,
+              510
+            ]
+          ]
+        }
+      ]
+    ],
+    "JsonSchema(ValidationContext, String, URI, JsonNode, JsonSchema, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              64,
+              66
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.format.IdnHostnameFormat": {},
+  "com.networknt.schema.format.UriReferenceFormat": {},
+  "com.networknt.schema.format.IriFormat": {},
+  "com.networknt.schema.format.IPv6AwareEmailValidator": {},
+  "com.networknt.schema.format.AbstractFormat": {
+    "matches(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/format/AbstractFormat.java",
+          "lines": [
+            [
+              28,
+              31
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.format.DateTimeValidator": {
+    "isLegalDateTime(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/format/DateTimeValidator.java",
+          "lines": [
+            [
+              48,
+              58
+            ],
+            62
+          ]
+        }
+      ]
+    ],
+    "DateTimeValidator(String, JsonNode, JsonSchema, ValidationContext, ValidatorTypeCode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatKeyword.java",
+          "lines": [
+            [
+              42,
+              61
+            ],
+            67
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.format.PatternFormat": {
+    "PatternFormat(String, String, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              42,
+              44
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.format.IdnEmailFormat": {},
+  "com.networknt.schema.format.UriFormat": {},
+  "com.networknt.schema.format.EmailFormat": {},
+  "com.networknt.schema.format.TimeFormat": {},
+  "com.networknt.schema.format.BaseFormat": {},
+  "com.networknt.schema.format.DateFormat": {},
+  "com.networknt.schema.format.IriReferenceFormat": {},
+  "com.networknt.schema.format.AbstractRFC3986Format": {
+    "validate(URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/format/AbstractRFC3986Format.java",
+          "lines": [
+            [
+              11,
+              15
+            ],
+            19
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.format.RegexFormat": {},
+  "com.networknt.schema.format.DurationFormat": {
+    "DurationFormat(boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatKeyword.java",
+          "lines": [
+            [
+              42,
+              54
+            ],
+            67
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.UniqueItemsValidator": {},
+  "com.networknt.schema.MinMaxContainsValidator": {},
+  "com.networknt.schema.VersionCode": {
+    "getVersions()": []
+  },
+  "com.networknt.schema.ValidatorTypeCode": {
+    "getNonFormatKeywords(VersionFlag)": [
+      [
+        {
+          "file_path": "com/networknt/schema/Version4.java",
+          "lines": [
+            [
+              13,
+              17
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version6.java",
+          "lines": [
+            [
+              14,
+              18
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version202012.java",
+          "lines": [
+            [
+              13,
+              18
+            ],
+            39
+          ]
+        }
+      ]
+    ],
+    "getValue()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              209,
+              210
+            ],
+            218
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              72,
+              74
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              76,
+              78
+            ]
+          ]
+        }
+      ]
+    ],
+    "setCustomMessage(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatKeyword.java",
+          "lines": [
+            [
+              74,
+              77
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/FormatKeyword.java",
+          "lines": [
+            [
+              42,
+              60
+            ],
+            67
+          ]
+        }
+      ]
+    ],
+    "getCustomMessage()": [
+      [
+        {
+          "file_path": "com/networknt/schema/FormatKeyword.java",
+          "lines": [
+            [
+              42,
+              60
+            ],
+            67
+          ]
+        }
+      ]
+    ],
+    "getErrorCodeKey()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              100,
+              104
+            ]
+          ]
+        }
+      ]
+    ],
+    "getVersionCode()": [],
+    "getErrorCodeValue()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              133,
+              145
+            ],
+            151
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ValidationMessageHandler": {
+    "buildValidationMessage(String, String[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedItemsValidator.java",
+          "lines": [
+            [
+              97,
+              101
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/UnevaluatedPropertiesValidator.java",
+          "lines": [
+            [
+              96,
+              100
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/FalseValidator.java",
+          "lines": [
+            [
+              32,
+              36
+            ],
+            38
+          ]
+        }
+      ]
+    ],
+    "constructValidationMessage(String, String, String[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/ContainsValidator.java",
+          "lines": [
+            [
+              110,
+              112
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/MinMaxContainsValidator.java",
+          "lines": [
+            [
+              46,
+              48
+            ]
+          ]
+        }
+      ]
+    ],
+    "getValidatorType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              32
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              47
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "getErrorMessageType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              32
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              42
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "isApplicator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              33
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              50
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "isPartOfAnyOfMultipleType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              64,
+              65
+            ],
+            69
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              33
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              64,
+              65
+            ],
+            69
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              50
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "isPartOfIfMultipleType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              64,
+              66
+            ],
+            69
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              33
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              64,
+              66
+            ],
+            69
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              50
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "isPartOfNotMultipleType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              64,
+              67
+            ],
+            69
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              30,
+              33
+            ],
+            37
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              64,
+              67
+            ],
+            69
+          ]
+        },
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              39,
+              50
+            ],
+            54
+          ]
+        }
+      ]
+    ],
+    "isPartOfOneOfMultipleType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              64,
+              69
+            ]
+          ]
+        }
+      ]
+    ],
+    "parseErrorCode(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              100,
+              104
+            ]
+          ]
+        }
+      ]
+    ],
+    "updateValidatorType(ValidatorTypeCode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ContainsValidator.java",
+          "lines": [
+            [
+              68,
+              89
+            ],
+            96,
+            103
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ValidatorState": {
+    "setMatchedNode(boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              123,
+              127
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              63
+            ],
+            80,
+            91,
+            101
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              41,
+              64
+            ],
+            109,
+            121
+          ]
+        }
+      ]
+    ],
+    "hasMatchedNode()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              61
+            ],
+            92,
+            150
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              41,
+              75
+            ],
+            121
+          ]
+        }
+      ]
+    ],
+    "isComplexValidator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              60
+            ],
+            62,
+            79,
+            89,
+            101
+          ]
+        }
+      ]
+    ],
+    "setComplexValidator(boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              123,
+              125
+            ],
+            127
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              41,
+              53
+            ],
+            121
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              66
+            ],
+            77,
+            101
+          ]
+        }
+      ]
+    ],
+    "isWalkEnabled()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              41,
+              56
+            ],
+            104
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              41,
+              66
+            ],
+            121
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              68
+            ],
+            101
+          ]
+        }
+      ]
+    ],
+    "setWalkEnabled(boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              574,
+              581
+            ],
+            585
+          ]
+        }
+      ]
+    ],
+    "isValidationEnabled()": [
+      [
+        {
+          "file_path": "com/networknt/schema/OneOfValidator.java",
+          "lines": [
+            [
+              41,
+              69
+            ],
+            121
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              42,
+              73
+            ],
+            101
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AdditionalPropertiesValidator.java",
+          "lines": [
+            [
+              115,
+              146
+            ],
+            153
+          ]
+        }
+      ]
+    ],
+    "setValidationEnabled(boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              574,
+              582
+            ],
+            585
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.AbstractCollector": {},
+  "com.networknt.schema.Version201909": {
+    "getInstance()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              180,
+              182
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.NonValidationKeyword": {
+    "NonValidationKeyword(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/Version6.java",
+          "lines": [
+            [
+              14,
+              27
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version4.java",
+          "lines": [
+            [
+              13,
+              27
+            ],
+            30
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/Version7.java",
+          "lines": [
+            [
+              12,
+              33
+            ],
+            36
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.NonValidationKeyword.Validator": {},
+  "com.networknt.schema.JsonSchemaFactory": {
+    "builder()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              307
+            ],
+            324
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              285,
+              288
+            ],
+            292
+          ]
+        }
+      ]
+    ],
+    "checkVersion(VersionFlag)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              285,
+              286
+            ],
+            292
+          ]
+        }
+      ]
+    ],
+    "newJsonSchema(URI, JsonNode, SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              466,
+              468
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              471,
+              473
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              475,
+              477
+            ]
+          ]
+        }
+      ]
+    ],
+    "create(ValidationContext, String, JsonNode, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationContext.java",
+          "lines": [
+            [
+              56,
+              58
+            ]
+          ]
+        }
+      ]
+    ],
+    "doCreate(ValidationContext, String, URI, JsonNode, JsonSchema, boolean)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              326,
+              330
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              332,
+              334
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              439
+            ],
+            443,
+            460
+          ]
+        }
+      ]
+    ],
+    "createValidationContext(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              326,
+              327
+            ],
+            330
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              441
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "findMetaSchemaForSchema(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              340,
+              341
+            ],
+            343
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              434
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "getUriTranslator()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              405
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "getSchema(String, SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              384,
+              386
+            ]
+          ]
+        }
+      ]
+    ],
+    "getSchema(InputStream, SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              398,
+              400
+            ]
+          ]
+        }
+      ]
+    ],
+    "getSchema(URI, SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/WalkEvent.java",
+          "lines": [
+            [
+              59,
+              61
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              462,
+              464
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/walk/WalkEvent.java",
+          "lines": [
+            [
+              63,
+              65
+            ],
+            69
+          ]
+        }
+      ]
+    ],
+    "idMatchesSourceUri(JsonMetaSchema, JsonNode, URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              437
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "isYaml(URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              428
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "normalizeMetaSchemaUri(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              130,
+              131
+            ],
+            133
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/SpecVersionDetector.java",
+          "lines": [
+            [
+              72,
+              76
+            ],
+            81
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              345,
+              350
+            ],
+            353
+          ]
+        }
+      ]
+    ],
+    "JsonSchemaFactory(ObjectMapper, YAMLMapper, String, URISchemeFactory, URISchemeFetcher, URNFactory, Map, Map, boolean, CompositeURITranslator)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              188,
+              190
+            ],
+            202
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.JsonSchemaFactory.Builder": {
+    "objectMapper(ObjectMapper)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              307
+            ],
+            324
+          ]
+        }
+      ]
+    ],
+    "yamlMapper(YAMLMapper)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              307
+            ],
+            324
+          ]
+        }
+      ]
+    ],
+    "defaultMetaSchemaURI(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              307
+            ],
+            324
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              285,
+              288
+            ],
+            292
+          ]
+        }
+      ]
+    ],
+    "uriFactory(URIFactory, String[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              318
+            ],
+            324
+          ]
+        }
+      ]
+    ],
+    "uriFactory(URIFactory, Iterable)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              101,
+              103
+            ]
+          ]
+        }
+      ]
+    ],
+    "uriFetcher(URIFetcher, String[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              321
+            ],
+            324
+          ]
+        }
+      ]
+    ],
+    "uriFetcher(URIFetcher, Iterable)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              119,
+              121
+            ]
+          ]
+        }
+      ]
+    ],
+    "addMetaSchema(JsonMetaSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              135,
+              137
+            ],
+            140
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              285,
+              288
+            ],
+            292
+          ]
+        }
+      ]
+    ],
+    "addMetaSchemas(Collection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              307
+            ],
+            324
+          ]
+        }
+      ]
+    ],
+    "addUriTranslator(URITranslator)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              315
+            ],
+            324
+          ]
+        }
+      ]
+    ],
+    "build()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              285,
+              288
+            ],
+            292
+          ]
+        }
+      ]
+    ],
+    "Builder()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              269,
+              271
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ThresholdMixin": {
+    "crossesThreshold(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/MinimumValidator.java",
+          "lines": [
+            [
+              116,
+              124
+            ],
+            128
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ExclusiveMaximumValidator.java",
+          "lines": [
+            [
+              100,
+              108
+            ],
+            112
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/MaximumValidator.java",
+          "lines": [
+            [
+              109,
+              117
+            ],
+            121
+          ]
+        }
+      ]
+    ],
+    "thresholdValue()": [
+      [
+        {
+          "file_path": "com/networknt/schema/MinimumValidator.java",
+          "lines": [
+            [
+              116,
+              125
+            ],
+            128
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ExclusiveMaximumValidator.java",
+          "lines": [
+            [
+              100,
+              109
+            ],
+            112
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/MaximumValidator.java",
+          "lines": [
+            [
+              109,
+              118
+            ],
+            121
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.Version6": {
+    "getInstance()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              172,
+              174
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ExclusiveMinimumValidator": {},
+  "com.networknt.schema.AbstractKeyword": {},
+  "com.networknt.schema.I18nSupport": {},
+  "com.networknt.schema.uri.URITranslator": {
+    "translate(URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              409
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "map(URI, URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URITranslator.java",
+          "lines": [
+            [
+              28,
+              30
+            ]
+          ]
+        }
+      ]
+    ],
+    "map(Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              370,
+              372
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/SchemaValidatorsConfig.java",
+          "lines": [
+            [
+              239,
+              242
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.URITranslator.CompositeURITranslator": {
+    "with(URITranslator)": [
+      [
+        {
+          "file_path": "com/networknt/schema/SchemaValidatorsConfig.java",
+          "lines": [
+            [
+              239,
+              240
+            ],
+            242
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              370,
+              372
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              405
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "CompositeURITranslator(URITranslator[])": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URITranslator.java",
+          "lines": [
+            [
+              56,
+              58
+            ]
+          ]
+        }
+      ]
+    ],
+    "CompositeURITranslator(Collection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URITranslator.java",
+          "lines": [
+            [
+              78,
+              80
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.URITranslator.MappingURITranslator": {
+    "MappingURITranslator(Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URITranslator.java",
+          "lines": [
+            [
+              47,
+              49
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.URITranslator.PrefixReplacer": {
+    "PrefixReplacer(String, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URITranslator.java",
+          "lines": [
+            [
+              69,
+              71
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.ClasspathURLStreamHandler": {},
+  "com.networknt.schema.uri.ClasspathURLStreamHandler.ClassPathURLConnection": {
+    "connect()": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/ClasspathURLStreamHandler.java",
+          "lines": [
+            [
+              63,
+              66
+            ],
+            69
+          ]
+        }
+      ]
+    ],
+    "getResourceAsStream(URL)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/ClasspathURLStreamHandler.java",
+          "lines": [
+            [
+              63,
+              69
+            ]
+          ]
+        }
+      ]
+    ],
+    "ClassPathURLConnection(URL)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/ClasspathURLStreamHandler.java",
+          "lines": [
+            [
+              37,
+              40
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.URNURIFactory": {},
+  "com.networknt.schema.uri.ClasspathURLFactory": {
+    "convert(URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/ClasspathURLFetcher.java",
+          "lines": [
+            [
+              36,
+              39
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/uri/ClasspathURLFactory.java",
+          "lines": [
+            [
+              52,
+              55
+            ],
+            61
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.ClasspathURLFetcher": {},
+  "com.networknt.schema.uri.URLFetcher": {
+    "openConnectionCheckRedirects(URLConnection)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URLFetcher.java",
+          "lines": [
+            [
+              41,
+              45
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.URLFactory": {},
+  "com.networknt.schema.uri.URIFactory": {
+    "create(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              121,
+              126
+            ],
+            134
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URISchemeFactory.java",
+          "lines": [
+            [
+              62,
+              71
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              56,
+              74
+            ],
+            80
+          ]
+        }
+      ]
+    ],
+    "create(URI, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              121,
+              128
+            ],
+            134
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              133,
+              141
+            ],
+            151
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URISchemeFactory.java",
+          "lines": [
+            [
+              78,
+              90
+            ],
+            100
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.URIFetcher": {
+    "fetch(URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URISchemeFetcher.java",
+          "lines": [
+            [
+              44,
+              50
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.URISchemeFetcher": {
+    "getURIFetchers()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              320
+            ],
+            324
+          ]
+        }
+      ]
+    ],
+    "fetch(URI)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              425
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "URISchemeFetcher(Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              188,
+              195
+            ],
+            202
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.uri.URISchemeFactory": {
+    "getURIFactories()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              306,
+              317
+            ],
+            324
+          ]
+        }
+      ]
+    ],
+    "getScheme(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URISchemeFactory.java",
+          "lines": [
+            [
+              62,
+              64
+            ],
+            71
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URISchemeFactory.java",
+          "lines": [
+            [
+              78,
+              85
+            ],
+            100
+          ]
+        }
+      ]
+    ],
+    "getFactory(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URISchemeFactory.java",
+          "lines": [
+            [
+              62,
+              69
+            ],
+            71
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URISchemeFactory.java",
+          "lines": [
+            [
+              78,
+              89
+            ],
+            98,
+            100
+          ]
+        }
+      ]
+    ],
+    "create(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/uri/URISchemeFactory.java",
+          "lines": [
+            [
+              78,
+              81
+            ],
+            100
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              409
+            ],
+            460
+          ]
+        }
+      ]
+    ],
+    "URISchemeFactory(Map)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              188,
+              194
+            ],
+            202
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.CustomErrorMessageType": {
+    "of(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationMessageHandler.java",
+          "lines": [
+            [
+              90,
+              95
+            ],
+            98
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              285
+            ],
+            321
+          ]
+        }
+      ]
+    ],
+    "CustomErrorMessageType(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/CustomErrorMessageType.java",
+          "lines": [
+            [
+              25,
+              27
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ConstValidator": {},
+  "com.networknt.schema.urn.URNFactory": {
+    "create(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              136,
+              139
+            ],
+            144
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.AbstractJsonValidator": {},
+  "com.networknt.schema.WriteOnlyValidator": {},
+  "com.networknt.schema.Version7": {
+    "getInstance()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              176,
+              178
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.Keyword": {
+    "getValue()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              111,
+              112
+            ],
+            114
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              116,
+              118
+            ],
+            121
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              92,
+              103
+            ],
+            109
+          ]
+        }
+      ]
+    ],
+    "setCustomMessage(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              265,
+              276
+            ],
+            291
+          ]
+        }
+      ]
+    ],
+    "newValidator(String, JsonNode, JsonSchema, ValidationContext)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonMetaSchema.java",
+          "lines": [
+            [
+              265,
+              277
+            ],
+            291
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.AnyOfValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              152,
+              155
+            ],
+            161
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.TypeValidator": {
+    "getSchemaType()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              79
+            ],
+            150
+          ]
+        }
+      ]
+    ],
+    "equalsToSchemaType(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/TypeValidator.java",
+          "lines": [
+            [
+              52,
+              60
+            ],
+            76
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              78
+            ],
+            150
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ValidationContext": {
+    "newSchema(String, JsonNode, JsonSchema)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              125,
+              127
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              104,
+              112
+            ],
+            119
+          ]
+        }
+      ]
+    ],
+    "newValidator(String, String, JsonNode, JsonSchema, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              261
+            ],
+            265,
+            294,
+            321
+          ]
+        }
+      ]
+    ],
+    "resolveSchemaId(JsonNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              133,
+              134
+            ],
+            151
+          ]
+        }
+      ]
+    ],
+    "getURIFactory()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              133,
+              141
+            ],
+            151
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              55,
+              71
+            ],
+            102
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              56,
+              74
+            ],
+            80
+          ]
+        }
+      ]
+    ],
+    "getURNFactory()": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              55,
+              74
+            ],
+            78,
+            102
+          ]
+        }
+      ]
+    ],
+    "getJsonSchemaFactory()": [
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationContext.java",
+          "lines": [
+            [
+              56,
+              58
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ItemsValidator.java",
+          "lines": [
+            [
+              184,
+              188
+            ],
+            194,
+            196
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/PropertiesValidator.java",
+          "lines": [
+            [
+              141,
+              148
+            ],
+            155,
+            157
+          ]
+        }
+      ]
+    ],
+    "getConfig()": [
+      [
+        {
+          "file_path": "com/networknt/schema/walk/WalkEvent.java",
+          "lines": [
+            [
+              59,
+              61
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              71,
+              72
+            ],
+            130
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/EnumValidator.java",
+          "lines": [
+            [
+              97,
+              98
+            ],
+            108
+          ]
+        }
+      ]
+    ],
+    "setConfig(SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              326,
+              328
+            ],
+            330
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              146,
+              158
+            ],
+            171
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              173,
+              185
+            ],
+            198
+          ]
+        }
+      ]
+    ],
+    "setReferenceParsingInProgress(String, JsonSchemaRef)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              104,
+              114
+            ],
+            119
+          ]
+        }
+      ]
+    ],
+    "getReferenceParsingInProgress(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/RefValidator.java",
+          "lines": [
+            [
+              104,
+              110
+            ],
+            119
+          ]
+        }
+      ]
+    ],
+    "getCurrentDiscriminatorContext()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              41,
+              70
+            ],
+            104
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              414
+            ],
+            441
+          ]
+        }
+      ]
+    ],
+    "enterDiscriminatorContext(DiscriminatorContext, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              58
+            ],
+            150
+          ]
+        }
+      ]
+    ],
+    "leaveDiscriminatorContextImmediately(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              140
+            ],
+            150
+          ]
+        }
+      ]
+    ],
+    "getMetaSchema()": [
+      [
+        {
+          "file_path": "com/networknt/schema/utils/JsonNodeUtil.java",
+          "lines": [
+            [
+              132,
+              133
+            ],
+            137
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/ValidationContext.java",
+          "lines": [
+            [
+              119,
+              120
+            ],
+            122
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              256,
+              270
+            ],
+            321
+          ]
+        }
+      ]
+    ],
+    "activeDialect()": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              323,
+              324
+            ],
+            328
+          ]
+        }
+      ]
+    ],
+    "ValidationContext(URIFactory, URNFactory, JsonMetaSchema, JsonSchemaFactory, SchemaValidatorsConfig)": [
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              340,
+              343
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchemaFactory.java",
+          "lines": [
+            [
+              402,
+              438
+            ],
+            460
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.ValidationContext.DiscriminatorContext": {
+    "registerDiscriminator(String, ObjectNode)": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              136,
+              174
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              424
+            ],
+            441
+          ]
+        }
+      ]
+    ],
+    "getDiscriminatorForPath(String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              136,
+              141
+            ],
+            174
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AllOfValidator.java",
+          "lines": [
+            [
+              41,
+              73
+            ],
+            104
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/JsonSchema.java",
+          "lines": [
+            [
+              377,
+              418
+            ],
+            441
+          ]
+        }
+      ]
+    ],
+    "markMatch()": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              176,
+              180
+            ],
+            182
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              99,
+              104
+            ],
+            125
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              184,
+              193
+            ],
+            197
+          ]
+        }
+      ]
+    ],
+    "isDiscriminatorMatchFound()": [
+      [
+        {
+          "file_path": "com/networknt/schema/BaseJsonValidator.java",
+          "lines": [
+            [
+              99,
+              118
+            ],
+            125
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              105
+            ],
+            150
+          ]
+        }
+      ]
+    ],
+    "isActive()": [
+      [
+        {
+          "file_path": "com/networknt/schema/AnyOfValidator.java",
+          "lines": [
+            [
+              49,
+              133
+            ],
+            150
+          ]
+        }
+      ]
+    ]
+  },
+  "com.networknt.schema.AdditionalPropertiesValidator": {
+    "validate(ExecutionContext, JsonNode, JsonNode, String)": [
+      [
+        {
+          "file_path": "com/networknt/schema/AdditionalPropertiesValidator.java",
+          "lines": [
+            [
+              115,
+              118
+            ],
+            153
+          ]
+        }
+      ]
+    ]
+  }
+}
