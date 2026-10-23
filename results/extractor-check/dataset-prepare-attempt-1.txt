@@ -1,0 +1,40 @@
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+methodName: addOption argTypes: Option
+methodName: addOption argTypes: String String
+methodName: addOption argTypes: String String boolean String
+methodName: addOption argTypes: String boolean String
+methodName: addOptionGroup argTypes: OptionGroup
+methodName: addOptions argTypes: Options
+methodName: addRequiredOption argTypes: String String boolean String
+methodName: getMatchingOptions argTypes: String
+methodName: getOption argTypes: String
+methodName: getOptionGroup argTypes: Option
+methodName: getOptionGroups argTypes: 
+methodName: getOptions argTypes: 
+methodName: getRequiredOptions argTypes: 
+methodName: hasLongOption argTypes: String
+methodName: hasOption argTypes: String
+methodName: hasShortOption argTypes: String
+methodName: helpOptions argTypes: 
+methodName: toString argTypes: 
+Dataset preparation completed successfully.
+Time Cost:1263ms
+{
+  "attempt": 1,
+  "class": "org.apache.commons.cli.Options",
+  "requested_method_count": 18,
+  "generated_method_count": 18,
+  "unique_id_count": 16,
+  "id_collisions": {
+    "Options_addOption_2": [
+      "addOption(String, String)",
+      "addOption(String, String, boolean, String)",
+      "addOption(String, boolean, String)"
+    ]
+  },
+  "missing_methods": [],
+  "unexpected_methods": [],
+  "empty_fields": [],
+  "seconds": 1.562,
+  "extraction_succeeded": true
+}

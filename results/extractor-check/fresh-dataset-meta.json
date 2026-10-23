@@ -1,0 +1,26 @@
+[
+  {
+    "project_name": "commons-cli",
+    "put_path": "/root/experiments/puts/commons-cli",
+    "method_name_to_idx": {
+      "org.apache.commons.cli.Options.addOption(Option)": 0,
+      "org.apache.commons.cli.Options.addOption(String, String)": 1,
+      "org.apache.commons.cli.Options.addOption(String, String, boolean, String)": 2,
+      "org.apache.commons.cli.Options.addOption(String, boolean, String)": 3,
+      "org.apache.commons.cli.Options.addOptionGroup(OptionGroup)": 4,
+      "org.apache.commons.cli.Options.addOptions(Options)": 5,
+      "org.apache.commons.cli.Options.addRequiredOption(String, String, boolean, String)": 6,
+      "org.apache.commons.cli.Options.getMatchingOptions(String)": 7,
+      "org.apache.commons.cli.Options.getOption(String)": 8,
+      "org.apache.commons.cli.Options.getOptionGroup(Option)": 9,
+      "org.apache.commons.cli.Options.getOptionGroups()": 10,
+      "org.apache.commons.cli.Options.getOptions()": 11,
+      "org.apache.commons.cli.Options.getRequiredOptions()": 12,
+      "org.apache.commons.cli.Options.hasLongOption(String)": 13,
+      "org.apache.commons.cli.Options.hasOption(String)": 14,
+      "org.apache.commons.cli.Options.hasShortOption(String)": 15,
+      "org.apache.commons.cli.Options.helpOptions()": 16,
+      "org.apache.commons.cli.Options.toString()": 17
+    }
+  }
+]

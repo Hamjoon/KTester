@@ -1,0 +1,62 @@
+{
+  "run1-baseline": {
+    "java_error_lines": 777,
+    "junit_assert_warnings": 774,
+    "unreachable_counter_prints": 0,
+    "messages": {
+      "Error: Unsolved symbol : org.junit.Assert": 774,
+      "Error: Unsolved symbol in Assert.assertEquals(o.getOpt(), insertedOrder.get(i)) : Assert": 1,
+      "Error: Unsolved symbol in Assert.assertEquals(o.getOpt(), sortOrder.get(i)) : Assert": 1,
+      "Error: com.github.javaparser.resolution.types.ResolvedWildcard": 1
+    }
+  },
+  "run2-patched": {
+    "java_error_lines": 777,
+    "junit_assert_warnings": 774,
+    "unreachable_counter_prints": 1,
+    "messages": {
+      "Error: Unsolved symbol : org.junit.Assert": 774,
+      "Error: Unsolved symbol in Assert.assertEquals(o.getOpt(), insertedOrder.get(i)) : Assert": 1,
+      "Error: Unsolved symbol in Assert.assertEquals(o.getOpt(), sortOrder.get(i)) : Assert": 1,
+      "Error: com.github.javaparser.resolution.types.ResolvedWildcard": 1
+    }
+  },
+  "run3-with-junit": {
+    "java_error_lines": 1,
+    "junit_assert_warnings": 0,
+    "unreachable_counter_prints": 1,
+    "messages": {
+      "Error: com.github.javaparser.resolution.types.ResolvedWildcard": 1
+    }
+  },
+  "run4-fresh": {
+    "java_error_lines": 70,
+    "junit_assert_warnings": 0,
+    "unreachable_counter_prints": 1,
+    "messages": {
+      "Error: Ambiguous method call: cannot find a most applicable method: MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=TypeVariable {ReflectionTypeParameter{typeVariable=T}}}}}}]}, MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=ReferenceType{org.apache.commons.cli.Option, typeParametersMap=TypeParametersMap{nameToValue={}}}}}}}]}. First declared in java.lang.Iterable": 4,
+      "Error: No data of this type found. Use containsData to check for this first.": 1,
+      "Error: Unknown node type: ConditionalExpr": 2,
+      "Error: Unsolved symbol : We are unable to find the value declaration corresponding to CommandLine.Builder": 2,
+      "Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction": 9,
+      "Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment": 26,
+      "Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).build() : DefaultParser.builder().setDeprecatedHandler(handler::add)": 1,
+      "Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get() : DefaultParser.builder().setDeprecatedHandler(handler::add)": 5,
+      "Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get().parse(options, args) : DefaultParser.builder().setDeprecatedHandler(handler::add).get()": 5,
+      "Error: Unsolved symbol in o.getArgName() : o": 1,
+      "Error: Unsolved symbol in o.getLongOpt() : o": 1,
+      "Error: Unsolved symbol in o.getOpt() : o": 1,
+      "Error: Unsolved symbol in o.isRequired() : o": 1,
+      "Error: Unsolved symbol in o.toOptional(buff.toString()) : o": 1,
+      "Error: Unsolved symbol in opt.getKey() : opt": 2,
+      "Error: Unsolved symbol in option.getKey() : option": 1,
+      "Error: Unsolved symbol in option.setRequired(false) : option": 1,
+      "Error: Unsolved symbol in org.apache : org": 1,
+      "Error: Unsolved symbol in org.apache.commons : org.apache": 1,
+      "Error: Unsolved symbol in org.apache.commons.cli : org.apache.commons": 1,
+      "Error: Unsolved symbol in org.apache.commons.cli.help : org.apache.commons.cli": 1,
+      "Error: Unsolved symbol in org.apache.commons.cli.help.HelpFormatter : org.apache.commons.cli.help": 1,
+      "Error: com.github.javaparser.resolution.types.ResolvedWildcard": 1
+    }
+  }
+}

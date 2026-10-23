@@ -1,0 +1,2 @@
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+{"verification": "passed", "report": "results/extractor-check/README.md", "handover": "docs/handover-extractor-check.md"}

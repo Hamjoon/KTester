@@ -1,0 +1,19 @@
+{
+  "attempt": 1,
+  "class": "org.apache.commons.cli.Options",
+  "requested_method_count": 18,
+  "generated_method_count": 18,
+  "unique_id_count": 16,
+  "id_collisions": {
+    "Options_addOption_2": [
+      "addOption(String, String)",
+      "addOption(String, String, boolean, String)",
+      "addOption(String, boolean, String)"
+    ]
+  },
+  "missing_methods": [],
+  "unexpected_methods": [],
+  "empty_fields": [],
+  "seconds": 1.562,
+  "extraction_succeeded": true
+}

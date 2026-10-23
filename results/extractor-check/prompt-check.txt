@@ -1,0 +1,41 @@
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+7 results found.
+9 results found.
+4 results found.
+{
+  "status": "passed",
+  "methods": [
+    {
+      "method": "getOption(String)",
+      "id": "Options_getOption",
+      "construct_context": "results/extractor-check/prompts/commons-cli/Options_getOption/init_context.json",
+      "invoke_examples_present": true,
+      "invoke_example_count": 3
+    },
+    {
+      "method": "hasOption(String)",
+      "id": "Options_hasOption",
+      "construct_context": "results/extractor-check/prompts/commons-cli/Options_hasOption/init_context.json",
+      "invoke_examples_present": true,
+      "invoke_example_count": 1
+    },
+    {
+      "method": "getRequiredOptions()",
+      "id": "Options_getRequiredOptions",
+      "construct_context": "results/extractor-check/prompts/commons-cli/Options_getRequiredOptions/init_context.json",
+      "invoke_examples_present": true,
+      "invoke_example_count": 1
+    }
+  ],
+  "tasks": 3,
+  "prompts_per_task": 5,
+  "prompt_list": [
+    "condition4case",
+    "io4case",
+    "exception4case",
+    "gencode"
+  ],
+  "case_then_code": true,
+  "model_calls": 0,
+  "selection": "Fixed distinct method names with unique released IDs, avoiding addOption ID collisions."
+}

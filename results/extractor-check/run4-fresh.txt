@@ -1,0 +1,515 @@
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+process project: commons-cli
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to CommandLine.Builder
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to CommandLine.Builder
+Error: Unsolved symbol in option.setRequired(false) : option
+Error: Unsolved symbol in option.getKey() : option
+Error: Ambiguous method call: cannot find a most applicable method: MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=TypeVariable {ReflectionTypeParameter{typeVariable=T}}}}}}]}, MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=ReferenceType{org.apache.commons.cli.Option, typeParametersMap=TypeParametersMap{nameToValue={}}}}}}}]}. First declared in java.lang.Iterable
+Error: Ambiguous method call: cannot find a most applicable method: MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=TypeVariable {ReflectionTypeParameter{typeVariable=T}}}}}}]}, MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=ReferenceType{org.apache.commons.cli.Option, typeParametersMap=TypeParametersMap{nameToValue={}}}}}}}]}. First declared in java.lang.Iterable
+Error: Unsolved symbol in opt.getKey() : opt
+Error: Unsolved symbol in opt.getKey() : opt
+Error: Ambiguous method call: cannot find a most applicable method: MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=TypeVariable {ReflectionTypeParameter{typeVariable=T}}}}}}]}, MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=ReferenceType{org.apache.commons.cli.Option, typeParametersMap=TypeParametersMap{nameToValue={}}}}}}}]}. First declared in java.lang.Iterable
+Error: Ambiguous method call: cannot find a most applicable method: MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=TypeVariable {ReflectionTypeParameter{typeVariable=T}}}}}}]}, MethodUsage{declaration=ReflectionMethodDeclaration{method=public default void java.lang.Iterable.forEach(java.util.function.Consumer)}, paramTypes=[ReferenceType{java.util.function.Consumer, typeParametersMap=TypeParametersMap{nameToValue={java.util.function.Consumer.T=WildcardUsage{type=SUPER, boundedType=ReferenceType{org.apache.commons.cli.Option, typeParametersMap=TypeParametersMap{nameToValue={}}}}}}}]}. First declared in java.lang.Iterable
+Error: No data of this type found. Use containsData to check for this first.
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol in o.getArgName() : o
+Error: Unknown node type: ConditionalExpr
+Error: Unknown node type: ConditionalExpr
+Error: Unsolved symbol in o.getOpt() : o
+Error: Unsolved symbol in o.getLongOpt() : o
+Error: Unsolved symbol in o.isRequired() : o
+Error: Unsolved symbol in o.toOptional(buff.toString()) : o
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).build() : DefaultParser.builder().setDeprecatedHandler(handler::add)
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to DefaultParser.NonOptionAction
+Error: com.github.javaparser.resolution.types.ResolvedWildcard
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get().parse(options, args) : DefaultParser.builder().setDeprecatedHandler(handler::add).get()
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get() : DefaultParser.builder().setDeprecatedHandler(handler::add)
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get().parse(options, args) : DefaultParser.builder().setDeprecatedHandler(handler::add).get()
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get() : DefaultParser.builder().setDeprecatedHandler(handler::add)
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get().parse(options, args) : DefaultParser.builder().setDeprecatedHandler(handler::add).get()
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get() : DefaultParser.builder().setDeprecatedHandler(handler::add)
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get().parse(options, args) : DefaultParser.builder().setDeprecatedHandler(handler::add).get()
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get() : DefaultParser.builder().setDeprecatedHandler(handler::add)
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get().parse(options, args) : DefaultParser.builder().setDeprecatedHandler(handler::add).get()
+Error: Unsolved symbol in DefaultParser.builder().setDeprecatedHandler(handler::add).get() : DefaultParser.builder().setDeprecatedHandler(handler::add)
+Error: Unsolved symbol in org.apache.commons.cli.help.HelpFormatter : org.apache.commons.cli.help
+Error: Unsolved symbol in org.apache.commons.cli.help : org.apache.commons.cli
+Error: Unsolved symbol in org.apache.commons.cli : org.apache.commons
+Error: Unsolved symbol in org.apache.commons : org.apache
+Error: Unsolved symbol in org.apache : org
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Error: Unsolved symbol : We are unable to find the value declaration corresponding to TextStyle.Alignment
+Time Cost:4203ms
+call_chains of  org.apache.commons.cli.OptionValidator#isValidChar(char) :  [[('org.apache.commons.cli.OptionValidator#validate(String)', [138])]]
+call_chains of  org.apache.commons.cli.OptionValidator#isValidOpt(char) :  [[('org.apache.commons.cli.OptionValidator#validate(String)', [131])]]
+call_chains of  org.apache.commons.cli.OptionValidator#search(char[], char) :  [[('org.apache.commons.cli.OptionValidator#isValidChar(char)', [51]), ('org.apache.commons.cli.OptionValidator#validate(String)', [138])], [('org.apache.commons.cli.OptionValidator#isValidOpt(char)', [73]), ('org.apache.commons.cli.OptionValidator#validate(String)', [131])]]
+call_chains of  org.apache.commons.cli.TypeHandler#createValueUnchecked(String, Class) :  [[('org.apache.commons.cli.TypeHandler#createDate(String)', [70])], [('org.apache.commons.cli.TypeHandler#createFile(String)', [90])]]
+call_chains of  org.apache.commons.cli.TypeHandler#putDefaultMap(Map) :  [[('org.apache.commons.cli.TypeHandler#createDefaultMap()', [80])]]
+call_chains of  org.apache.commons.cli.Option#add(String) :  [[('org.apache.commons.cli.Option#processValue(String)', [869, 861])]]
+call_chains of  org.apache.commons.cli.Option#Option(Builder) :  [[('org.apache.commons.cli.Option.Builder#get()', [194])]]
+call_chains of  org.apache.commons.cli.Option.Builder#toType(Class) :  [[('org.apache.commons.cli.Option#setType(Class)', [956])], [('org.apache.commons.cli.Option.Builder#type(Class)', [314])]]
+call_chains of  org.apache.commons.cli.Option.Builder#Builder(String) :  [[('org.apache.commons.cli.Option#builder(String)', [385])]]
+call_chains of  org.apache.commons.cli.CommandLine#first(String[]) :  [[('org.apache.commons.cli.CommandLine#getOptionValue(Option)', [386])], [('org.apache.commons.cli.CommandLine#getOptionValue(OptionGroup)', [422])]]
+call_chains of  org.apache.commons.cli.CommandLine#get(Supplier) :  [[('org.apache.commons.cli.CommandLine#getOptionValue(Option, Supplier)', [411])], [('org.apache.commons.cli.CommandLine#getOptionValue(OptionGroup, Supplier)', [447])], [('org.apache.commons.cli.CommandLine#getParsedOptionValue(Option, Supplier)', [612, 617])]]
+call_chains of  org.apache.commons.cli.CommandLine#handleDeprecated(Option) :  [[('org.apache.commons.cli.CommandLine#getOptionValues(Option)', [508])], [('org.apache.commons.cli.CommandLine#hasOption(Option)', [976])]]
+call_chains of  org.apache.commons.cli.CommandLine#processPropertiesFromValues(Properties, List) :  [[('org.apache.commons.cli.CommandLine#getOptionProperties(Option)', [310])], [('org.apache.commons.cli.CommandLine#getOptionProperties(String)', [330])]]
+call_chains of  org.apache.commons.cli.CommandLine#resolveOption(String) :  [[('org.apache.commons.cli.CommandLine#getOptionCount(String)', [263])], [('org.apache.commons.cli.CommandLine#getOptionValue(String)', [457])], [('org.apache.commons.cli.CommandLine#getOptionValue(String, String)', [468])]]
+call_chains of  org.apache.commons.cli.CommandLine#CommandLine(List, List, Consumer) :  [[('org.apache.commons.cli.CommandLine.Builder#get()', [120])]]
+call_chains of  org.apache.commons.cli.DefaultParser#checkRequiredArgs() :  [[('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [756])], [('org.apache.commons.cli.DefaultParser#handleOption(Option)', [479]), ('org.apache.commons.cli.DefaultParser#handleConcatenatedOptions(String)', [399])], [('org.apache.commons.cli.DefaultParser#handleOption(Option)', [479]), ('org.apache.commons.cli.DefaultParser#handleProperties(Properties)', [515]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [758])]]
+call_chains of  org.apache.commons.cli.DefaultParser#getLongPrefix(String) :  [[('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [551]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])], [('org.apache.commons.cli.DefaultParser#isLongOption(String)', [677]), ('org.apache.commons.cli.DefaultParser#isOption(String)', [704]), ('org.apache.commons.cli.DefaultParser#isArgument(String)', [648]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [606]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#getMatchingLongOptions(String) :  [[('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [546]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])], [('org.apache.commons.cli.DefaultParser#handleLongOptionWithEqual(String)', [438]), ('org.apache.commons.cli.DefaultParser#handleLongOption(String)', [421]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [609]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])], [('org.apache.commons.cli.DefaultParser#handleLongOptionWithEqual(String)', [438]), ('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [588]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#handleLongOption(String) :  [[('org.apache.commons.cli.DefaultParser#handleToken(String)', [609]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#handleLongOptionWithEqual(String) :  [[('org.apache.commons.cli.DefaultParser#handleLongOption(String)', [421]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [609]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])], [('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [588]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#handleLongOptionWithoutEqual(String) :  [[('org.apache.commons.cli.DefaultParser#handleLongOption(String)', [419]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [609]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])], [('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [548]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#handleOption(Option) :  [[('org.apache.commons.cli.DefaultParser#handleConcatenatedOptions(String)', [399])], [('org.apache.commons.cli.DefaultParser#handleProperties(Properties)', [515]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [758])], [('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [545, 582, 553, 538, 558, 574]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#handleProperties(Properties) :  [[('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [758])]]
+call_chains of  org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String) :  [[('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#handleToken(String) :  [[('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#isArgument(String) :  [[('org.apache.commons.cli.DefaultParser#handleToken(String)', [606]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#isJavaProperty(String) :  [[('org.apache.commons.cli.DefaultParser#checkRequiredArgs()', [320]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [756])], [('org.apache.commons.cli.DefaultParser#checkRequiredArgs()', [320]), ('org.apache.commons.cli.DefaultParser#handleOption(Option)', [479]), ('org.apache.commons.cli.DefaultParser#handleConcatenatedOptions(String)', [399])], [('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [580, 556]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#isLongOption(String) :  [[('org.apache.commons.cli.DefaultParser#isOption(String)', [704]), ('org.apache.commons.cli.DefaultParser#isArgument(String)', [648]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [606]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#isNegativeNumber(String) :  [[('org.apache.commons.cli.DefaultParser#isArgument(String)', [648]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [606]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#isOption(String) :  [[('org.apache.commons.cli.DefaultParser#isArgument(String)', [648]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [606]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#isShortOption(String) :  [[('org.apache.commons.cli.DefaultParser#isOption(String)', [704]), ('org.apache.commons.cli.DefaultParser#isArgument(String)', [648]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [606]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#stripLeadingAndTrailingQuotesDefaultOff(String) :  [[('org.apache.commons.cli.DefaultParser#handleConcatenatedOptions(String)', [402])], [('org.apache.commons.cli.DefaultParser#handleProperties(Properties)', [509]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [758])], [('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [554, 559]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#stripLeadingAndTrailingQuotesDefaultOn(String) :  [[('org.apache.commons.cli.DefaultParser#handleToken(String)', [607]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#updateRequiredOptions(Option) :  [[('org.apache.commons.cli.DefaultParser#handleOption(Option)', [481]), ('org.apache.commons.cli.DefaultParser#handleConcatenatedOptions(String)', [399])], [('org.apache.commons.cli.DefaultParser#handleOption(Option)', [481]), ('org.apache.commons.cli.DefaultParser#handleProperties(Properties)', [515]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [758])], [('org.apache.commons.cli.DefaultParser#handleOption(Option)', [481]), ('org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)', [545, 582, 553, 538, 558, 574]), ('org.apache.commons.cli.DefaultParser#handleToken(String)', [611]), ('org.apache.commons.cli.DefaultParser#parse(Options, Properties, NonOptionAction, String[])', [752])]]
+call_chains of  org.apache.commons.cli.DefaultParser#DefaultParser(boolean, Boolean, Consumer) :  [[('org.apache.commons.cli.DefaultParser.Builder#get()', [91])]]
+call_chains of  org.apache.commons.cli.DefaultParser.Builder#Builder() :  [[('org.apache.commons.cli.DefaultParser#builder()', [185])]]
+call_chains of  org.apache.commons.cli.DeprecatedAttributes#DeprecatedAttributes(String, String, boolean) :  [[('org.apache.commons.cli.DeprecatedAttributes.Builder#get()', [69])]]
+call_chains of  org.apache.commons.cli.help.TextStyle#TextStyle(Builder) :  [[('org.apache.commons.cli.help.TextStyle.Builder#get()', [95])]]
+call_chains of  org.apache.commons.cli.help.TextStyle.Builder#Builder() :  [[('org.apache.commons.cli.help.TextStyle#builder()', [243])]]
+call_chains of  org.apache.commons.cli.help.OptionFormatter#OptionFormatter(Option, Builder) :  [[('org.apache.commons.cli.help.OptionFormatter.Builder#build(Option)', [102])]]
+call_chains of  org.apache.commons.cli.help.OptionFormatter.Builder#Builder() :  [[('org.apache.commons.cli.help.OptionFormatter#builder()', [301])], [('org.apache.commons.cli.help.OptionFormatter#from(Option)', [311])]]
+call_chains of  org.apache.commons.cli.help.TextHelpAppendable#printQueue(Queue) :  [[('org.apache.commons.cli.help.TextHelpAppendable#appendHeader(int, CharSequence)', [213])], [('org.apache.commons.cli.help.TextHelpAppendable#appendList(boolean, Collection)', [226])], [('org.apache.commons.cli.help.TextHelpAppendable#appendParagraph(CharSequence)', [237])]]
+call_chains of  org.apache.commons.cli.help.TextHelpAppendable#resize(int, double) :  [[('org.apache.commons.cli.help.TextHelpAppendable#resize(Builder, double)', [400, 396])]]
+UNREACHABLE_TARGETS=596
+Processing file: /work/scratch/extractor-check/cli-fresh/project_index/json/commons-cli.json, project: commons-cli
+{
+  "status": "completed",
+  "seconds": 4.746,
+  "unreachable_targets": 596,
+  "json": {
+    "source": {
+      "classes": 40,
+      "methods": 370,
+      "constructors": 43
+    },
+    "test": {
+      "classes": 62,
+      "methods": 518,
+      "constructors": 7
+    }
+  },
+  "invoke_classes": 40,
+  "invoke_method_keys": 227,
+  "invoke_examples": 396,
+  "lucene": {
+    "document_count": 370,
+    "identifiers": [
+      "org.apache.commons.cli.AlreadySelectedException#public Option getOption()",
+      "org.apache.commons.cli.AlreadySelectedException#public OptionGroup getOptionGroup()",
+      "org.apache.commons.cli.AmbiguousOptionException#private static String createMessage(String, Collection<String>)",
+      "org.apache.commons.cli.AmbiguousOptionException#public Collection<String> getMatchingOptions()",
+      "org.apache.commons.cli.CommandLine#private Option resolveOption(String)",
+      "org.apache.commons.cli.CommandLine#private String first(String[])",
+      "org.apache.commons.cli.CommandLine#private T get(Supplier<T>)",
+      "org.apache.commons.cli.CommandLine#private void handleDeprecated(Option)",
+      "org.apache.commons.cli.CommandLine#private void processPropertiesFromValues(Properties, List<String>)",
+      "org.apache.commons.cli.CommandLine#protected void addArg(String)",
+      "org.apache.commons.cli.CommandLine#protected void addOption(Option)",
+      "org.apache.commons.cli.CommandLine#public Iterator<Option> iterator()",
+      "org.apache.commons.cli.CommandLine#public List<String> getArgList()",
+      "org.apache.commons.cli.CommandLine#public Option[] getOptions()",
+      "org.apache.commons.cli.CommandLine#public Properties getOptionProperties(Option)",
+      "org.apache.commons.cli.CommandLine#public Properties getOptionProperties(String)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(Option)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(Option, String)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(Option, Supplier<String>)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(OptionGroup)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(OptionGroup, String)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(OptionGroup, Supplier<String>)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(String)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(String, String)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(String, Supplier<String>)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(char)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(char, String)",
+      "org.apache.commons.cli.CommandLine#public String getOptionValue(char, Supplier<String>)",
+      "org.apache.commons.cli.CommandLine#public String[] getArgs()",
+      "org.apache.commons.cli.CommandLine#public String[] getOptionValues(Option)",
+      "org.apache.commons.cli.CommandLine#public String[] getOptionValues(OptionGroup)",
+      "org.apache.commons.cli.CommandLine#public String[] getOptionValues(String)",
+      "org.apache.commons.cli.CommandLine#public String[] getOptionValues(char)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(Option)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(Option, Supplier<T>)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(Option, T)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(OptionGroup)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(OptionGroup, Supplier<T>)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(OptionGroup, T)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(String)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(String, Supplier<T>)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(String, T)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(char)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(char, Supplier<T>)",
+      "org.apache.commons.cli.CommandLine#public T getParsedOptionValue(char, T)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(Option)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(Option, Supplier<T[]>)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(Option, T[])",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(OptionGroup)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(OptionGroup, Supplier<T[]>)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(OptionGroup, T[])",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(String)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(String, Supplier<T[]>)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(String, T[])",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(char)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(char, Supplier<T[]>)",
+      "org.apache.commons.cli.CommandLine#public T[] getParsedOptionValues(char, T[])",
+      "org.apache.commons.cli.CommandLine#public boolean hasOption(Option)",
+      "org.apache.commons.cli.CommandLine#public boolean hasOption(OptionGroup)",
+      "org.apache.commons.cli.CommandLine#public boolean hasOption(String)",
+      "org.apache.commons.cli.CommandLine#public boolean hasOption(char)",
+      "org.apache.commons.cli.CommandLine#public int getOptionCount(Option)",
+      "org.apache.commons.cli.CommandLine#public int getOptionCount(String)",
+      "org.apache.commons.cli.CommandLine#public int getOptionCount(char)",
+      "org.apache.commons.cli.CommandLine#public static Builder builder()",
+      "org.apache.commons.cli.CommandLine.Builder#public Builder addArg(String)",
+      "org.apache.commons.cli.CommandLine.Builder#public Builder addOption(Option)",
+      "org.apache.commons.cli.CommandLine.Builder#public Builder setDeprecatedHandler(Consumer<Option>)",
+      "org.apache.commons.cli.CommandLine.Builder#public CommandLine get()",
+      "org.apache.commons.cli.CommandLineParser# abstract CommandLine parse(Options, String[])",
+      "org.apache.commons.cli.CommandLineParser# abstract CommandLine parse(Options, String[], boolean)",
+      "org.apache.commons.cli.Converter# abstract T apply(String)",
+      "org.apache.commons.cli.DefaultParser# static int indexOfEqual(String)",
+      "org.apache.commons.cli.DefaultParser#private List<String> getMatchingLongOptions(String)",
+      "org.apache.commons.cli.DefaultParser#private String getLongPrefix(String)",
+      "org.apache.commons.cli.DefaultParser#private String stripLeadingAndTrailingQuotesDefaultOff(String)",
+      "org.apache.commons.cli.DefaultParser#private String stripLeadingAndTrailingQuotesDefaultOn(String)",
+      "org.apache.commons.cli.DefaultParser#private boolean isArgument(String)",
+      "org.apache.commons.cli.DefaultParser#private boolean isJavaProperty(String)",
+      "org.apache.commons.cli.DefaultParser#private boolean isLongOption(String)",
+      "org.apache.commons.cli.DefaultParser#private boolean isNegativeNumber(String)",
+      "org.apache.commons.cli.DefaultParser#private boolean isOption(String)",
+      "org.apache.commons.cli.DefaultParser#private boolean isShortOption(String)",
+      "org.apache.commons.cli.DefaultParser#private void checkRequiredArgs()",
+      "org.apache.commons.cli.DefaultParser#private void handleLongOption(String)",
+      "org.apache.commons.cli.DefaultParser#private void handleLongOptionWithEqual(String)",
+      "org.apache.commons.cli.DefaultParser#private void handleLongOptionWithoutEqual(String)",
+      "org.apache.commons.cli.DefaultParser#private void handleOption(Option)",
+      "org.apache.commons.cli.DefaultParser#private void handleProperties(Properties)",
+      "org.apache.commons.cli.DefaultParser#private void handleShortAndLongOption(String)",
+      "org.apache.commons.cli.DefaultParser#private void handleToken(String)",
+      "org.apache.commons.cli.DefaultParser#private void updateRequiredOptions(Option)",
+      "org.apache.commons.cli.DefaultParser#protected void addArg(String)",
+      "org.apache.commons.cli.DefaultParser#protected void checkRequiredOptions()",
+      "org.apache.commons.cli.DefaultParser#protected void handleConcatenatedOptions(String)",
+      "org.apache.commons.cli.DefaultParser#protected void handleUnknownToken(String)",
+      "org.apache.commons.cli.DefaultParser#public CommandLine parse(Options, Properties, NonOptionAction, String[])",
+      "org.apache.commons.cli.DefaultParser#public CommandLine parse(Options, String[])",
+      "org.apache.commons.cli.DefaultParser#public CommandLine parse(Options, String[], Properties)",
+      "org.apache.commons.cli.DefaultParser#public CommandLine parse(Options, String[], Properties, boolean)",
+      "org.apache.commons.cli.DefaultParser#public CommandLine parse(Options, String[], boolean)",
+      "org.apache.commons.cli.DefaultParser#public static Builder builder()",
+      "org.apache.commons.cli.DefaultParser.Builder#public Builder setAllowPartialMatching(boolean)",
+      "org.apache.commons.cli.DefaultParser.Builder#public Builder setDeprecatedHandler(Consumer<Option>)",
+      "org.apache.commons.cli.DefaultParser.Builder#public Builder setStripLeadingAndTrailingQuotes(Boolean)",
+      "org.apache.commons.cli.DefaultParser.Builder#public DefaultParser get()",
+      "org.apache.commons.cli.DeprecatedAttributes#private String toEmpty(String)",
+      "org.apache.commons.cli.DeprecatedAttributes#public String getDescription()",
+      "org.apache.commons.cli.DeprecatedAttributes#public String getSince()",
+      "org.apache.commons.cli.DeprecatedAttributes#public String toString()",
+      "org.apache.commons.cli.DeprecatedAttributes#public boolean isForRemoval()",
+      "org.apache.commons.cli.DeprecatedAttributes#public static Builder builder()",
+      "org.apache.commons.cli.DeprecatedAttributes.Builder#public Builder setDescription(String)",
+      "org.apache.commons.cli.DeprecatedAttributes.Builder#public Builder setForRemoval(boolean)",
+      "org.apache.commons.cli.DeprecatedAttributes.Builder#public Builder setSince(String)",
+      "org.apache.commons.cli.DeprecatedAttributes.Builder#public DeprecatedAttributes get()",
+      "org.apache.commons.cli.HelpFormatter.Builder#public Builder setPrintWriter(PrintWriter)",
+      "org.apache.commons.cli.HelpFormatter.Builder#public Builder setShowDeprecated(Function<Option, String>)",
+      "org.apache.commons.cli.HelpFormatter.Builder#public Builder setShowDeprecated(boolean)",
+      "org.apache.commons.cli.HelpFormatter.Builder#public Builder setShowSince(boolean)",
+      "org.apache.commons.cli.HelpFormatter.Builder#public HelpFormatter get()",
+      "org.apache.commons.cli.HelpFormatter.OptionComparator#public int compare(Option, Option)",
+      "org.apache.commons.cli.MissingArgumentException#public Option getOption()",
+      "org.apache.commons.cli.MissingOptionException#private static String createMessage(List<?>)",
+      "org.apache.commons.cli.MissingOptionException#public List getMissingOptions()",
+      "org.apache.commons.cli.Option# String toDeprecatedString()",
+      "org.apache.commons.cli.Option# boolean acceptsArg()",
+      "org.apache.commons.cli.Option# boolean isValuesEmpty()",
+      "org.apache.commons.cli.Option# boolean requiresArg()",
+      "org.apache.commons.cli.Option# void clearValues()",
+      "org.apache.commons.cli.Option# void processValue(String)",
+      "org.apache.commons.cli.Option#private void add(String)",
+      "org.apache.commons.cli.Option#public Converter<?, ?> getConverter()",
+      "org.apache.commons.cli.Option#public DeprecatedAttributes getDeprecated()",
+      "org.apache.commons.cli.Option#public List<String> getValuesList()",
+      "org.apache.commons.cli.Option#public Object clone()",
+      "org.apache.commons.cli.Option#public Object getType()",
+      "org.apache.commons.cli.Option#public String getArgName()",
+      "org.apache.commons.cli.Option#public String getDescription()",
+      "org.apache.commons.cli.Option#public String getKey()",
+      "org.apache.commons.cli.Option#public String getLongOpt()",
+      "org.apache.commons.cli.Option#public String getOpt()",
+      "org.apache.commons.cli.Option#public String getSince()",
+      "org.apache.commons.cli.Option#public String getValue()",
+      "org.apache.commons.cli.Option#public String getValue(String)",
+      "org.apache.commons.cli.Option#public String getValue(int)",
+      "org.apache.commons.cli.Option#public String toString()",
+      "org.apache.commons.cli.Option#public String[] getValues()",
+      "org.apache.commons.cli.Option#public boolean equals(Object)",
+      "org.apache.commons.cli.Option#public boolean hasArg()",
+      "org.apache.commons.cli.Option#public boolean hasArgName()",
+      "org.apache.commons.cli.Option#public boolean hasArgs()",
+      "org.apache.commons.cli.Option#public boolean hasLongOpt()",
+      "org.apache.commons.cli.Option#public boolean hasOptionalArg()",
+      "org.apache.commons.cli.Option#public boolean hasValueSeparator()",
+      "org.apache.commons.cli.Option#public boolean isDeprecated()",
+      "org.apache.commons.cli.Option#public boolean isRequired()",
+      "org.apache.commons.cli.Option#public char getValueSeparator()",
+      "org.apache.commons.cli.Option#public int getArgs()",
+      "org.apache.commons.cli.Option#public int getId()",
+      "org.apache.commons.cli.Option#public int hashCode()",
+      "org.apache.commons.cli.Option#public static Builder builder()",
+      "org.apache.commons.cli.Option#public static Builder builder(String)",
+      "org.apache.commons.cli.Option#public void setArgName(String)",
+      "org.apache.commons.cli.Option#public void setArgs(int)",
+      "org.apache.commons.cli.Option#public void setConverter(Converter<?, ?>)",
+      "org.apache.commons.cli.Option#public void setDescription(String)",
+      "org.apache.commons.cli.Option#public void setLongOpt(String)",
+      "org.apache.commons.cli.Option#public void setOptionalArg(boolean)",
+      "org.apache.commons.cli.Option#public void setRequired(boolean)",
+      "org.apache.commons.cli.Option#public void setType(Class<?>)",
+      "org.apache.commons.cli.Option#public void setValueSeparator(char)",
+      "org.apache.commons.cli.Option.Builder#private static Class<?> toType(Class<?>)",
+      "org.apache.commons.cli.Option.Builder#public Builder argName(String)",
+      "org.apache.commons.cli.Option.Builder#public Builder converter(Converter<?, ?>)",
+      "org.apache.commons.cli.Option.Builder#public Builder deprecated()",
+      "org.apache.commons.cli.Option.Builder#public Builder deprecated(DeprecatedAttributes)",
+      "org.apache.commons.cli.Option.Builder#public Builder desc(String)",
+      "org.apache.commons.cli.Option.Builder#public Builder hasArg()",
+      "org.apache.commons.cli.Option.Builder#public Builder hasArg(boolean)",
+      "org.apache.commons.cli.Option.Builder#public Builder hasArgs()",
+      "org.apache.commons.cli.Option.Builder#public Builder longOpt(String)",
+      "org.apache.commons.cli.Option.Builder#public Builder numberOfArgs(int)",
+      "org.apache.commons.cli.Option.Builder#public Builder option(String)",
+      "org.apache.commons.cli.Option.Builder#public Builder optionalArg(boolean)",
+      "org.apache.commons.cli.Option.Builder#public Builder required()",
+      "org.apache.commons.cli.Option.Builder#public Builder required(boolean)",
+      "org.apache.commons.cli.Option.Builder#public Builder since(String)",
+      "org.apache.commons.cli.Option.Builder#public Builder type(Class<?>)",
+      "org.apache.commons.cli.Option.Builder#public Builder valueSeparator()",
+      "org.apache.commons.cli.Option.Builder#public Builder valueSeparator(char)",
+      "org.apache.commons.cli.Option.Builder#public Option get()",
+      "org.apache.commons.cli.OptionGroup#public Collection<Option> getOptions()",
+      "org.apache.commons.cli.OptionGroup#public Collection<String> getNames()",
+      "org.apache.commons.cli.OptionGroup#public OptionGroup addOption(Option)",
+      "org.apache.commons.cli.OptionGroup#public String getSelected()",
+      "org.apache.commons.cli.OptionGroup#public String toString()",
+      "org.apache.commons.cli.OptionGroup#public boolean isRequired()",
+      "org.apache.commons.cli.OptionGroup#public boolean isSelected()",
+      "org.apache.commons.cli.OptionGroup#public void setRequired(boolean)",
+      "org.apache.commons.cli.OptionGroup#public void setSelected(Option)",
+      "org.apache.commons.cli.OptionValidator# static String validate(String)",
+      "org.apache.commons.cli.OptionValidator#private static boolean isValidChar(char)",
+      "org.apache.commons.cli.OptionValidator#private static boolean isValidOpt(char)",
+      "org.apache.commons.cli.OptionValidator#private static boolean search(char[], char)",
+      "org.apache.commons.cli.Options# Collection<OptionGroup> getOptionGroups()",
+      "org.apache.commons.cli.Options# List<Option> helpOptions()",
+      "org.apache.commons.cli.Options#public Collection<Option> getOptions()",
+      "org.apache.commons.cli.Options#public List<?> getRequiredOptions()",
+      "org.apache.commons.cli.Options#public List<String> getMatchingOptions(String)",
+      "org.apache.commons.cli.Options#public Option getOption(String)",
+      "org.apache.commons.cli.Options#public OptionGroup getOptionGroup(Option)",
+      "org.apache.commons.cli.Options#public Options addOption(Option)",
+      "org.apache.commons.cli.Options#public Options addOption(String, String)",
+      "org.apache.commons.cli.Options#public Options addOption(String, String, boolean, String)",
+      "org.apache.commons.cli.Options#public Options addOption(String, boolean, String)",
+      "org.apache.commons.cli.Options#public Options addOptionGroup(OptionGroup)",
+      "org.apache.commons.cli.Options#public Options addOptions(Options)",
+      "org.apache.commons.cli.Options#public Options addRequiredOption(String, String, boolean, String)",
+      "org.apache.commons.cli.Options#public String toString()",
+      "org.apache.commons.cli.Options#public boolean hasLongOption(String)",
+      "org.apache.commons.cli.Options#public boolean hasOption(String)",
+      "org.apache.commons.cli.Options#public boolean hasShortOption(String)",
+      "org.apache.commons.cli.ParseException#public static ParseException wrap(Throwable)",
+      "org.apache.commons.cli.PatternOptionBuilder# static T unsupported()",
+      "org.apache.commons.cli.PatternOptionBuilder#public static Class<?> getValueType(char)",
+      "org.apache.commons.cli.PatternOptionBuilder#public static Options parsePattern(String)",
+      "org.apache.commons.cli.PatternOptionBuilder#public static boolean isValueCode(char)",
+      "org.apache.commons.cli.TypeHandler#private static Map<Class<?>, Converter<?, ? extends Throwable>> putDefaultMap(Map<Class<?>, Converter<?, ? extends Throwable>>)",
+      "org.apache.commons.cli.TypeHandler#private static T createValueUnchecked(String, Class<T>)",
+      "org.apache.commons.cli.TypeHandler#public Converter<T, ?> getConverter(Class<T>)",
+      "org.apache.commons.cli.TypeHandler#public static Class<?> createClass(String)",
+      "org.apache.commons.cli.TypeHandler#public static Date createDate(String)",
+      "org.apache.commons.cli.TypeHandler#public static File createFile(String)",
+      "org.apache.commons.cli.TypeHandler#public static Map<Class<?>, Converter<?, ? extends Throwable>> createDefaultMap()",
+      "org.apache.commons.cli.TypeHandler#public static T createValue(String, Class<T>)",
+      "org.apache.commons.cli.TypeHandler#public static TypeHandler getDefault()",
+      "org.apache.commons.cli.TypeHandler#public static URL createURL(String)",
+      "org.apache.commons.cli.UnrecognizedOptionException#public String getOption()",
+      "org.apache.commons.cli.Util# static String stripLeadingAndTrailingQuotes(String)",
+      "org.apache.commons.cli.Util# static String stripLeadingHyphens(String)",
+      "org.apache.commons.cli.Util# static boolean isEmpty(Object[])",
+      "org.apache.commons.cli.Util# static boolean isEmpty(String)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#protected Comparator<Option> getComparator()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#protected HelpAppendable getHelpAppendable()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#protected OptionFormatter.Builder getOptionFormatBuilder()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#protected String getOptionGroupSeparator()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#protected String toSyntaxOptions(Iterable<Option>, Function<Option, OptionGroup>)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#protected abstract TableDefinition getTableDefinition(Iterable<Option>)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public List<Option> sort(Iterable<Option>)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public List<Option> sort(Options)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public String toSyntaxOptions(Iterable<Option>)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public String toSyntaxOptions(OptionGroup)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public String toSyntaxOptions(Options)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public final HelpAppendable getSerializer()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public final OptionFormatter getOptionFormatter(Option)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public final String getSyntaxPrefix()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public final String toArgName(String)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public final void printOptions(Iterable<Option>)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public final void printOptions(Options)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public final void printOptions(TableDefinition)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public final void setSyntaxPrefix(String)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public void printHelp(String, Options)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public void printHelp(String, String, Iterable<Option>, String, boolean)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter#public void printHelp(String, String, Options, String, boolean)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#protected B asThis()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#protected Comparator<Option> getComparator()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#protected HelpAppendable getHelpAppendable()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#protected OptionFormatter.Builder getOptionFormatBuilder()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#protected String getOptionGroupSeparator()",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#public B setComparator(Comparator<Option>)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#public B setHelpAppendable(HelpAppendable)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#public B setOptionFormatBuilder(OptionFormatter.Builder)",
+      "org.apache.commons.cli.help.AbstractHelpFormatter.Builder#public B setOptionGroupSeparator(String)",
+      "org.apache.commons.cli.help.FilterHelpAppendable#public FilterHelpAppendable append(CharSequence)",
+      "org.apache.commons.cli.help.FilterHelpAppendable#public FilterHelpAppendable append(CharSequence, int, int)",
+      "org.apache.commons.cli.help.FilterHelpAppendable#public FilterHelpAppendable append(char)",
+      "org.apache.commons.cli.help.HelpAppendable# abstract void appendHeader(int, CharSequence)",
+      "org.apache.commons.cli.help.HelpAppendable# abstract void appendList(boolean, Collection<CharSequence>)",
+      "org.apache.commons.cli.help.HelpAppendable# abstract void appendParagraph(CharSequence)",
+      "org.apache.commons.cli.help.HelpAppendable# abstract void appendTable(TableDefinition)",
+      "org.apache.commons.cli.help.HelpAppendable# abstract void appendTitle(CharSequence)",
+      "org.apache.commons.cli.help.HelpAppendable# void appendFormat(String, Object[])",
+      "org.apache.commons.cli.help.HelpAppendable# void appendParagraphFormat(String, Object[])",
+      "org.apache.commons.cli.help.HelpFormatter#public TableDefinition getTableDefinition(Iterable<Option>)",
+      "org.apache.commons.cli.help.HelpFormatter#public static Builder builder()",
+      "org.apache.commons.cli.help.HelpFormatter.Builder#public Builder setShowSince(boolean)",
+      "org.apache.commons.cli.help.HelpFormatter.Builder#public HelpFormatter get()",
+      "org.apache.commons.cli.help.OptionFormatter#public String getArgName()",
+      "org.apache.commons.cli.help.OptionFormatter#public String getBothOpt()",
+      "org.apache.commons.cli.help.OptionFormatter#public String getDescription()",
+      "org.apache.commons.cli.help.OptionFormatter#public String getLongOpt()",
+      "org.apache.commons.cli.help.OptionFormatter#public String getOpt()",
+      "org.apache.commons.cli.help.OptionFormatter#public String getSince()",
+      "org.apache.commons.cli.help.OptionFormatter#public String toOptional(String)",
+      "org.apache.commons.cli.help.OptionFormatter#public String toSyntaxOption()",
+      "org.apache.commons.cli.help.OptionFormatter#public String toSyntaxOption(boolean)",
+      "org.apache.commons.cli.help.OptionFormatter#public boolean isRequired()",
+      "org.apache.commons.cli.help.OptionFormatter#public static Builder builder()",
+      "org.apache.commons.cli.help.OptionFormatter#public static OptionFormatter from(Option)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setArgumentNameDelimiters(String, String)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setDefaultArgName(String)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setDeprecatedFormatFunction(Function<Option, String>)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setLongOptPrefix(String)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setOptArgSeparator(String)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setOptPrefix(String)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setOptSeparator(String)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setOptionalDelimiters(String, String)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public Builder setSyntaxFormatFunction(BiFunction<OptionFormatter, Boolean, String>)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public OptionFormatter build(Option)",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public OptionFormatter get()",
+      "org.apache.commons.cli.help.OptionFormatter.Builder#public String toArgName(String)",
+      "org.apache.commons.cli.help.TableDefinition# abstract Iterable<List<String>> rows()",
+      "org.apache.commons.cli.help.TableDefinition# abstract List<String> headers()",
+      "org.apache.commons.cli.help.TableDefinition# abstract List<TextStyle> columnTextStyles()",
+      "org.apache.commons.cli.help.TableDefinition# abstract String caption()",
+      "org.apache.commons.cli.help.TableDefinition# static TableDefinition from(String, List<TextStyle>, List<String>, Iterable<List<String>>)",
+      "org.apache.commons.cli.help.TextHelpAppendable#private int resize(int, double)",
+      "org.apache.commons.cli.help.TextHelpAppendable#private void printQueue(Queue<String>)",
+      "org.apache.commons.cli.help.TextHelpAppendable#protected List<Queue<String>> makeColumnQueues(List<String>, List<TextStyle>)",
+      "org.apache.commons.cli.help.TextHelpAppendable#protected Queue<String> makeColumnQueue(CharSequence, TextStyle)",
+      "org.apache.commons.cli.help.TextHelpAppendable#protected TableDefinition adjustTableFormat(TableDefinition)",
+      "org.apache.commons.cli.help.TextHelpAppendable#protected TextStyle.Builder resize(TextStyle.Builder, double)",
+      "org.apache.commons.cli.help.TextHelpAppendable#protected static TextHelpAppendable systemOut()",
+      "org.apache.commons.cli.help.TextHelpAppendable#protected void writeColumnQueues(List<Queue<String>>, List<TextStyle>)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public TextStyle.Builder getTextStyleBuilder()",
+      "org.apache.commons.cli.help.TextHelpAppendable#public int getIndent()",
+      "org.apache.commons.cli.help.TextHelpAppendable#public int getLeftPad()",
+      "org.apache.commons.cli.help.TextHelpAppendable#public int getMaxWidth()",
+      "org.apache.commons.cli.help.TextHelpAppendable#public static int indexOfWrap(CharSequence, int, int)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void appendHeader(int, CharSequence)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void appendList(boolean, Collection<CharSequence>)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void appendParagraph(CharSequence)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void appendTable(TableDefinition)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void appendTitle(CharSequence)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void printWrapped(String)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void printWrapped(String, TextStyle)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void setIndent(int)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void setLeftPad(int)",
+      "org.apache.commons.cli.help.TextHelpAppendable#public void setMaxWidth(int)",
+      "org.apache.commons.cli.help.TextStyle#public Alignment getAlignment()",
+      "org.apache.commons.cli.help.TextStyle#public CharSequence pad(boolean, CharSequence)",
+      "org.apache.commons.cli.help.TextStyle#public String toString()",
+      "org.apache.commons.cli.help.TextStyle#public boolean isScalable()",
+      "org.apache.commons.cli.help.TextStyle#public int getIndent()",
+      "org.apache.commons.cli.help.TextStyle#public int getLeftPad()",
+      "org.apache.commons.cli.help.TextStyle#public int getMaxWidth()",
+      "org.apache.commons.cli.help.TextStyle#public int getMinWidth()",
+      "org.apache.commons.cli.help.TextStyle#public static Builder builder()",
+      "org.apache.commons.cli.help.TextStyle.Builder#public Builder setAlignment(Alignment)",
+      "org.apache.commons.cli.help.TextStyle.Builder#public Builder setIndent(int)",
+      "org.apache.commons.cli.help.TextStyle.Builder#public Builder setLeftPad(int)",
+      "org.apache.commons.cli.help.TextStyle.Builder#public Builder setMaxWidth(int)",
+      "org.apache.commons.cli.help.TextStyle.Builder#public Builder setMinWidth(int)",
+      "org.apache.commons.cli.help.TextStyle.Builder#public Builder setScalable(boolean)",
+      "org.apache.commons.cli.help.TextStyle.Builder#public Builder setTextStyle(TextStyle)",
+      "org.apache.commons.cli.help.TextStyle.Builder#public TextStyle get()",
+      "org.apache.commons.cli.help.TextStyle.Builder#public boolean isScalable()",
+      "org.apache.commons.cli.help.TextStyle.Builder#public int getIndent()",
+      "org.apache.commons.cli.help.TextStyle.Builder#public int getLeftPad()",
+      "org.apache.commons.cli.help.TextStyle.Builder#public int getMaxWidth()",
+      "org.apache.commons.cli.help.TextStyle.Builder#public int getMinWidth()",
+      "org.apache.commons.cli.help.Util# static String ltrim(String)",
+      "org.apache.commons.cli.help.Util# static String repeat(int, char)",
+      "org.apache.commons.cli.help.Util# static String repeatSpace(int)",
+      "org.apache.commons.cli.help.Util# static String rtrim(String)",
+      "org.apache.commons.cli.help.Util# static T defaultValue(T, T)",
+      "org.apache.commons.cli.help.Util# static boolean isEmpty(CharSequence)",
+      "org.apache.commons.cli.help.Util# static boolean isWhitespace(char)",
+      "org.apache.commons.cli.help.Util# static int indexOfNonWhitespace(CharSequence, int)"
+    ]
+  },
+  "json_total_classes": 102,
+  "json_total_methods": 888
+}

@@ -1,0 +1,3 @@
+Cloning into '/work/scratch/extractor-check/cli-fresh/projects/commons-cli'...
+HEAD is now at 58c64b52 Bump github/codeql-action from 4.38.2 to 4.38.33
+{"attempt": 1, "command": ["mvn", "-q", "dependency:copy-dependencies", "-DoutputDirectory=libs"], "exit_code": 0, "seconds": 4.598, "log": "results/extractor-check/fresh-maven-attempt-1.txt"}

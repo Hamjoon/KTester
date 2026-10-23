@@ -1,0 +1,8 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  375k  100  375k    0     0  4240k      0 --:--:-- --:--:-- --:--:-- 4267k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 45024  100 45024    0     0   667k      0 --:--:-- --:--:-- --:--:--  676k
+8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3  scratch/extractor-check/cli-snapshot/projects/commons-cli/libs/junit-4.13.2.jar
+66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9  scratch/extractor-check/cli-snapshot/projects/commons-cli/libs/hamcrest-core-1.3.jar

@@ -1,0 +1,47 @@
+diff --git a/code/procedure/preprocess_project.py b/code/procedure/preprocess_project.py
+index 2ea3a110..13fa7ee2 100644
+--- a/code/procedure/preprocess_project.py
++++ b/code/procedure/preprocess_project.py
+@@ -6,6 +6,8 @@ from networkx import DiGraph
+ 
+ import tools.io_utils as io_utils
+ 
++UNREACHABLE_TARGETS = 0
++
+ 
+ def process_signature(osig, return_type=None):
+         if return_type:
+@@ -188,6 +190,7 @@ class InvokePatternExtractor:
+         return (ordered_lines, length)
+ 
+     def _get_lines_from_cfg(self, cfg:DiGraph, target_lines):
++        global UNREACHABLE_TARGETS
+         visited = set(target_lines)
+         # find the node with kind="BEGIN"
+         start_node = None
+@@ -201,10 +204,13 @@ class InvokePatternExtractor:
+         if start_node is None:
+             return list(visited)
+         for target in target_nodes:
+-            paths = nx.all_shortest_paths(cfg, start_node, target)
+-            for path in paths:
+-                for node in path:
+-                    visited.update(cfg.nodes[node]["lines"])
++            try:
++                paths = nx.all_shortest_paths(cfg, start_node, target)
++                for path in paths:
++                    for node in path:
++                        visited.update(cfg.nodes[node]["lines"])
++            except nx.NetworkXNoPath:
++                UNREACHABLE_TARGETS += 1
+         return list(visited)
+ 
+     def _equal_sig(self, candidate, target):
+@@ -329,4 +335,5 @@ def extract_invoke_patterns(file_structure):
+         extractor = InvokePatternExtractor(code_info, calling_graph, method_cfg)
+         invoke_patterns = extractor.extract_invoke_pattern()
+         io_utils.write_json(f"{code_info_path}/codegraph/{pj_name}_invoke.json", invoke_patterns)
+-    return
+\ No newline at end of file
++    print(f"UNREACHABLE_TARGETS={UNREACHABLE_TARGETS}")
++    return

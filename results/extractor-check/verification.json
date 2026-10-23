@@ -1,0 +1,40 @@
+{
+  "baseline_expected_failure": true,
+  "patched_snapshot_completed": true,
+  "junit_snapshot_completed": true,
+  "fresh_index_completed": true,
+  "mixed_reachability": {
+    "lines": [
+      0,
+      10,
+      20,
+      30,
+      99
+    ],
+    "unreachable_targets": 1,
+    "passed": true
+  },
+  "no_begin_behavior": {
+    "lines": [
+      30,
+      99
+    ],
+    "passed": true
+  },
+  "parsed_python_files": [
+    "docker/extractor_check_build_index.py",
+    "docker/extractor_check_compare.py",
+    "docker/extractor_check_dataset_prepare.py",
+    "docker/extractor_check_fresh_index.py",
+    "docker/extractor_check_fresh_prepare.py",
+    "docker/extractor_check_prepare.py",
+    "docker/extractor_check_prompt_check.py",
+    "docker/extractor_check_report.py",
+    "code/procedure/preprocess_project.py"
+  ],
+  "invoke_output_identical_before_after_junit": true,
+  "prompt_check_passed": true,
+  "model_calls": 0,
+  "source_whitespace_check_passed": true,
+  "raw_artifact_whitespace": "Full artifact diff check flags original trailing whitespace in captured prompts, DatasetPrepare stdout, and patch.diff context. These evidence files are intentionally preserved."
+}
