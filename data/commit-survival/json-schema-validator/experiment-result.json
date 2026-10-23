@@ -1,0 +1,99 @@
+{
+  "status": "completed",
+  "fork_commit": "c4c624a7ce2675c7c91d4c03917d25394c4bdf10",
+  "fork_branch": "experiment/2026-10-week4-jsv-commit-survival",
+  "anchor": {
+    "tag": "1.1.0",
+    "sha": "0c14a7a8664334fd10108895f84d8232f6c34019",
+    "origin_master": "1b57102e7c13acbfc9c82be20693efafb3983256",
+    "n": 229,
+    "started": "2026-10-23T14:03:58.795809+00:00",
+    "deviations": [
+      "Tag 1.1.0 was absent locally and fetched from networknt; upstream remote was absent."
+    ],
+    "key_check": "KEY_OK (value never logged)",
+    "ktester_base": "e37e51c82a5b7f3d9715d52ada5bf47bff56586e",
+    "date": "2023-12-15T14:09:28-05:00"
+  },
+  "denominators": {
+    "dev": 10,
+    "ktester": 32,
+    "ouedraogo": 23
+  },
+  "model_rounds": {
+    "ktester-round1-retry": {
+      "round": 1,
+      "status": "completed",
+      "error_type": null,
+      "seconds": 6078.768,
+      "model_calls": 182,
+      "model": "openai/gpt-oss-120b",
+      "temperature": 0.5,
+      "fix_tries": 5,
+      "workers": 8,
+      "prompts_unmodified": true,
+      "provider_pinned": false,
+      "pipeline_status": "generation-completed-repair-incomplete",
+      "repair_stopped_at_target": 8,
+      "repair_targets": 29,
+      "repair_error": "java.lang.NullPointerException: sourceMethod is null in Spoon CtMethod.prettyprint; caught and logged by author post_process.py"
+    },
+    "ktester-round1": {
+      "round": 1,
+      "status": "failed",
+      "error_type": "ValueError",
+      "seconds": 0.174,
+      "model_calls": 0,
+      "model": "openai/gpt-oss-120b",
+      "temperature": 0.5,
+      "fix_tries": 5,
+      "workers": 8,
+      "prompts_unmodified": true,
+      "provider_pinned": false
+    },
+    "ouedraogo-round1": {
+      "round": 1,
+      "seconds": 611.017,
+      "prompts": 25,
+      "model_calls": 25,
+      "extracted": 25,
+      "model": "openai/gpt-oss-120b",
+      "temperature": 0.7,
+      "max_tokens": 16384,
+      "workers": 2,
+      "provider_pinned": false
+    }
+  },
+  "phase_seconds": {
+    "build-check": 2116.423,
+    "developer-baseline": 84.09,
+    "phase-a": 713.033,
+    "phase-b": 499.982,
+    "anchor_build": 14.864,
+    "ktester_index": 4.547,
+    "scope_and_dataset_preparation": null,
+    "final_anchor_control": 15.370000000000001,
+    "ktester-round1-retry": 6078.768,
+    "ktester-round1": 0.174,
+    "ouedraogo-round1": 611.017,
+    "ktester-round1-retry-screening": 23.778,
+    "ouedraogo-round1-screening": 9.321
+  },
+  "verification": {
+    "survival_records": 687,
+    "coverage_records": 543,
+    "frozen_denominators_unchanged": true,
+    "source_fingerprints_match": true,
+    "coverage_selections_match_alive_entering": true,
+    "phase_a_flaky_pass_records": 1,
+    "instrumented_state_differences": [],
+    "first_failure_kinds": {
+      "compile-fail": 64,
+      "error": 1
+    }
+  },
+  "final_summary_sha256": "846339e36ac81b867d0554472ed055f568cdeb98d36da6b8b0401b8f3d684f63",
+  "report": "/repo/experiments/commit-survival/README.md",
+  "author_code_modified": false,
+  "pushed": false
+}
