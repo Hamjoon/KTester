@@ -1,6 +1,6 @@
 {
   "status": "completed",
-  "fork_commit": "510b87d4569237c2d6da4287b327afe9f940938e",
+  "fork_commit": "25b79dfd8350ea1160117b846634a3d59a724806",
   "fork_branch": "experiment/2026-10-week4-jsv-commit-survival",
   "anchor": {
     "tag": "1.1.0",
