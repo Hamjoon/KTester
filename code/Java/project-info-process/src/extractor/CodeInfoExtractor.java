@@ -347,7 +347,7 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
                             classInfo.entrySet()
                                     .forEach(entry -> source_json.add(entry.getKey(), entry.getValue()));
                         }
-                    } catch (IOException e) {
+                    } catch (IOException | StackOverflowError e) {
                         System.out.println("Error: " + e.getMessage());
                     }
                 });
@@ -364,7 +364,7 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
                             if (classInfo != null) {
                                 classInfo.entrySet().forEach(entry -> test_json.add(entry.getKey(), entry.getValue()));
                             }
-                        } catch (IOException e) {
+                        } catch (IOException | StackOverflowError e) {
                             System.out.println("Error: " + e.getMessage());
                         }
                     });

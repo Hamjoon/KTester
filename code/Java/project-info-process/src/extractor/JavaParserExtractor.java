@@ -144,7 +144,7 @@ public class JavaParserExtractor {
                 args.add(arg_info);
             }
             qualified_sig = qualified_name + "#" + method_sig;
-        } catch (Exception e) {
+        } catch (Exception | StackOverflowError e) {
             for (int i = 0; i < arg_count; i++) {
                 String arg_type = "unresolved";
                 String arg_name = arguments.get(i).toString();
@@ -185,7 +185,7 @@ public class JavaParserExtractor {
                 args.add(arg_info);
             }
             qualified_sig = qualified_name + "#" + method_sig;
-        } catch (Exception e) {
+        } catch (Exception | StackOverflowError e) {
             for (int i = 0; i < arg_count; i++) {
                 String arg_type = "unresolved";
                 String arg_name = arguments.get(i).toString();
@@ -212,7 +212,7 @@ public class JavaParserExtractor {
             } else if (rsv_field.isEnumConstant()) {
                 field_name = field_type + "." + field_name;
             }
-        } catch (Exception e) {
+        } catch (Exception | StackOverflowError e) {
             System.out.println("Error: " + e.getMessage());
         }
         VariableInfo field_info = new VariableInfo(field_name, field_type);
@@ -235,7 +235,7 @@ public class JavaParserExtractor {
                 VariableInfo field_info = new VariableInfo(field_name, field_type);
                 return field_info;
             }
-        } catch (Exception e) {
+        } catch (Exception | StackOverflowError e) {
             return null;
         }
         return var_info;
@@ -246,7 +246,7 @@ public class JavaParserExtractor {
         try {
             ResolvedType resolvedType = expr.calculateResolvedType();
             fqn = resolvedType.describe();
-        } catch (Exception e) {
+        } catch (Exception | StackOverflowError e) {
             fqn = simple;
             System.out.println("Error: " + e.getMessage());
         }
@@ -258,7 +258,7 @@ public class JavaParserExtractor {
         try {
             ResolvedType resolvedType = type.resolve();
             fqn = resolvedType.describe();
-        } catch (Exception e) {
+        } catch (Exception | StackOverflowError e) {
             System.out.println("Error: " + e.getMessage());
             fqn = type.toString();
         }
