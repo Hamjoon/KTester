@@ -1,0 +1,18 @@
+services:
+  ktester:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ktester-replication:latest
+    working_dir: /work/code
+    volumes:
+      - ..:/work
+      - ktester-m2:/root/.m2
+    environment:
+      - _JAVA_OPTIONS=-Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+    tty: true
+    stdin_open: true
+    mem_limit: 12g
+
+volumes:
+  ktester-m2:

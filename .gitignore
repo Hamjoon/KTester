@@ -188,3 +188,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Local run files
+docker/.env
+.DS_Store

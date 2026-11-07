@@ -1,0 +1,8 @@
+# Mounts the ta4j clone at /repo for the KTester generator (test-survival, ta4j-core experiment).
+# Use together with compose.yml:
+#   docker compose -f compose.yml -f compose.ta4j.yml run --rm ktester ...
+services:
+  ktester:
+    env_file: [.env]
+    volumes:
+      - /Users/donggi/_projects/experiment-projects/ta4j:/repo
