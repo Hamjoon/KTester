@@ -1,8 +1,0 @@
-# Mounts the dnsjava clone at /repo for the KTester generator (test-survival, dnsjava experiment).
-# Use together with compose.yml:
-#   docker compose -f compose.yml -f compose.dnsjava.yml run --rm ktester ...
-services:
-  ktester:
-    env_file: [.env]
-    volumes:
-      - /Users/donggi/_projects/experiment-projects/dnsjava:/repo
