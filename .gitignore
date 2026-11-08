@@ -199,3 +199,8 @@ results/**/jacoco-report-html/
 # Commit-survival survey workspaces
 scratch/
 !docs/handover-stage0-commit-survival.md
+
+docs/cc-instructions-*.md
+docs/handover-*.md
+Claude outputs/
+.DS_Store
