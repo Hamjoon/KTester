@@ -1,0 +1,40 @@
+# KTester runtime with JDK 21 instead of 17, for projects whose later commits need
+# release 21 to build (logback 1.5 compiles src/main/java21). Same layout as Dockerfile.
+# Build: docker build -f docker/Dockerfile.jdk21 -t ktester-replication:jdk21 .
+FROM eclipse-temurin:21-jdk AS jdk
+
+FROM python:3.13-slim-bookworm
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        git unzip p7zip-full curl ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+# Debian bookworm has no JDK 21 package; take Eclipse Temurin 21 for the build architecture.
+COPY --from=jdk /opt/java/openjdk /usr/lib/jvm/java-21
+ENV JAVA_HOME=/usr/lib/jvm/java-21
+ENV PATH=/usr/lib/jvm/java-21/bin:$PATH
+RUN ln -s /usr/lib/jvm/java-21/bin/java /usr/local/bin/java \
+    && ln -s /usr/lib/jvm/java-21/bin/javac /usr/local/bin/javac
+
+# Maven 3.9.9 (the version used in the paper)
+ARG MAVEN_VERSION=3.9.9
+RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
+    | tar -xz -C /opt \
+    && ln -s /opt/apache-maven-${MAVEN_VERSION} /opt/maven
+ENV MAVEN_HOME=/opt/maven
+ENV PATH=/opt/maven/bin:$PATH
+RUN ln -s /opt/maven/bin/mvn /usr/local/bin/mvn
+
+# The README asks for an English JVM locale (the code parses javac/JUnit output).
+ENV _JAVA_OPTIONS="-Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8"
+# On JDK 21 the Lucene 9.12.1 bundled in project-index-builder.jar looks for its
+# MemorySegment provider, which that jar does not contain, and the index step fails
+# with "MemorySegmentIndexInputProvider is missing in Lucene JAR file". Keep the
+# byte-buffer MMapDirectory that JDK 17 uses. JAVA_TOOL_OPTIONS, because compose.yml
+# replaces _JAVA_OPTIONS.
+ENV JAVA_TOOL_OPTIONS="-Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false"
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /work
+COPY code/requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt lxml==6.1.3
+CMD ["bash"]
