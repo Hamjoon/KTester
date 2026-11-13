@@ -12,6 +12,10 @@ services:
       - _JAVA_OPTIONS=-Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
     tty: true
     stdin_open: true
+    # Safe default for any machine (fits the MacBook's ~11.7GB Docker VM).
+    # Raise it per machine with an override file kept outside this repo,
+    # e.g. /opt/experiment/setup/ktester-lab.compose.yml (lab container, 48g).
+    # Do not remove the limit: an unbounded container can exhaust host memory.
     mem_limit: 12g
 
 volumes:
