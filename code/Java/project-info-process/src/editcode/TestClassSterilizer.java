@@ -140,21 +140,17 @@ public class TestClassSterilizer {
     }
 
     protected void mergeMethods(CtClass<?> target, CtClass<?> source) {
-        HashSet<String> methodNames = new HashSet<String>();
+        HashMap<String, CtMethod<?>> methods = new HashMap<>();
         for (CtMethod<?> method : target.getMethods()) {
-            methodNames.add(method.getSimpleName());
+            methods.put(method.getSignature(), method);
         }
         for (CtMethod<?> method : source.getMethods()) {
-            if (!methodNames.contains(method.getSimpleName())) {
-                methodNames.add(method.getSimpleName());
-                target.addMethod(method.clone());
-            } else {
-                CtMethod<?> targetMethod = target.getMethod(method.getSimpleName());
-                CtMethod<?> sourceMethod = source.getMethod(method.getSimpleName());
-                if (sourceMethod.prettyprint().length() > targetMethod.prettyprint().length()) {
-                    target.removeMethod(targetMethod);
-                    target.addMethod(method.clone());
-                }
+            CtMethod<?> previous = methods.get(method.getSignature());
+            if (previous == null || method.prettyprint().length() > previous.prettyprint().length()) {
+                if (previous != null) target.removeMethod(previous);
+                CtMethod<?> replacement = method.clone();
+                target.addMethod(replacement);
+                methods.put(method.getSignature(), replacement);
             }
         }
     }
