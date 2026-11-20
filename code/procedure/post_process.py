@@ -310,7 +310,10 @@ def verify_test_classes(file_structure, task_setting, dataset_info):
             context_path = f"{project_prompt}/{tid}/usage_context.json"
             case_prompt_path = f"{project_fix}/{tid}/repair_prompt"
             case_response_path = f"{project_fix}/{tid}/repair_response"
-            code_repair.check_test_class(ts_info, case_prompt_path, case_response_path, context_path)
+            try:
+                code_repair.check_test_class(ts_info, case_prompt_path, case_response_path, context_path)
+            except Exception:
+                logger.exception("Skipping test class %s in post process", ts_info["test-class"])
         return project_path
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=mworker) as executor:
