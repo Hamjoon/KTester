@@ -1,0 +1,49 @@
+name: KTester runtime CI
+
+on:
+  pull_request:
+    branches: [tool/ktester-runtime]
+  push:
+    branches: [tool/ktester-runtime]
+
+permissions:
+  contents: read
+
+jobs:
+  runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+
+      - name: Check Python syntax
+        run: python -m compileall -q -f code
+
+      - uses: actions/setup-java@d1374f8ac74474200d16ef8ecee22c7ae7a51880 # v6.3.0
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compile project-info-process
+        # The module has no build file. Its committed fat jar supplies the dependencies.
+        run: |
+          mapfile -d '' sources < <(find code/Java/project-info-process/src -type f -name '*.java' -print0)
+          javac --release 17 -proc:none -cp code/Java/project-info-process.jar \
+            -d "$RUNNER_TEMP/classes" "${sources[@]}"
+
+      - name: Check committed runtime jar
+        env:
+          # PR checkout is the test merge, so comparing to its base isolates the PR changes.
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [[ "$BASE" == 0000000000000000000000000000000000000000 ]]; then
+            BASE=$(git hash-object -w -t tree /dev/null)
+          fi
+          python .github/scripts/check-runtime-jar.py "$BASE" "$RUNNER_TEMP/classes"
